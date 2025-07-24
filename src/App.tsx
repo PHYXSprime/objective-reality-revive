@@ -32,7 +32,6 @@ const App = () => (
           <Navigation />
           <Routes>
             <Route path="/" element={<Index />} />
-            <Route path="/epistemology" element={<Epistemology />} />
             <Route path="/challenges" element={<Challenges />} />
             <Route path="/solutions" element={<Solutions />} />
             <Route path="/street-epistemology" element={<StreetEpistemology />} />

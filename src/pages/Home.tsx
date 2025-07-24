@@ -9,13 +9,6 @@ export default function Home() {
 
   const features = [
     {
-      icon: Brain,
-      title: "Epistemology",
-      description: "How can we know if something is actually true?",
-      link: '/epistemology',
-      color: 'text-indigo-600 dark:text-indigo-400',
-    },
-    {
       icon: AlertTriangle,
       title: "Challenges",
       description: "Barriers that separate us from objective reality",
@@ -54,17 +47,22 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-background">
-      {/* Hero Section */}
+      {/* Hero Section with Epistemology */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
+          <div className="mb-8 p-6 bg-muted/30 rounded-lg">
+            <h2 className="text-2xl font-bold text-foreground mb-4">
+              ....wake up Neo! ..................  wake up...
+            </h2>
+          </div>
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
             {t('home.title')}
           </h1>
-          <p className="text-xl sm:text-2xl text-muted-foreground mb-8 max-w-3xl mx-auto">
-            {t('home.subtitle')}
-          </p>
-          <p className="text-lg text-muted-foreground mb-12 max-w-2xl mx-auto">
-            {t('home.description')}
+          <h2 className="text-2xl sm:text-3xl text-muted-foreground mb-6">
+            How can we know if something is actually true?
+          </h2>
+          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
+            The short answer is: we can never be 100% sure of anything. Therefore, the best thing to do is to give every piece of information or belief a value of confidence that adjusts with every new piece of information we gain.
           </p>
         </div>
       </section>

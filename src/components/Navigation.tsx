@@ -17,8 +17,6 @@ export function Navigation() {
   const location = useLocation();
 
   const navItems = [
-    { path: '/', label: t('nav.home') },
-    { path: '/epistemology', label: t('nav.epistemology') },
     { path: '/challenges', label: t('nav.challenges') },
     { path: '/solutions', label: t('nav.solutions') },
     { path: '/cognitive-biases', label: t('nav.cognitive-biases') },
