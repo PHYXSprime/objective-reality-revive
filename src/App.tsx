@@ -42,7 +42,7 @@ const App = () => (
             backgroundRepeat: 'repeat',
             backgroundSize: '300px 150px',
             animation: 'stars 300s linear infinite',
-            zIndex: -2
+            zIndex: 1
           }}
         />
         
@@ -57,30 +57,33 @@ const App = () => (
             animation: 'earthFloat 120s ease-in-out infinite',
             filter: 'blur(0.5px) drop-shadow(0 0 50px rgba(66, 153, 225, 0.6))',
             transformOrigin: 'center',
-            zIndex: -1
+            zIndex: 2
           }}
         />
         
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Navigation />
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/challenges" element={<Challenges />} />
-            <Route path="/solutions" element={<Solutions />} />
-            <Route path="/street-epistemology" element={<StreetEpistemology />} />
-            <Route path="/socratic-questioning" element={<SocraticQuestioning />} />
-            <Route path="/scientific-method" element={<ScientificMethod />} />
-            <Route path="/comedians" element={<Comedians />} />
-            <Route path="/cognitive-biases" element={<CognitiveBiases />} />
-            <Route path="/logical-fallacies" element={<LogicalFallacies />} />
-            <Route path="/consciousness" element={<Consciousness />} />
-            <Route path="/consensus" element={<ScientificConsensus />} />
-            <Route path="/censorship" element={<Censorship />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </BrowserRouter>
+        {/* Content wrapper with higher z-index */}
+        <div className="relative" style={{ zIndex: 10 }}>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Navigation />
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/challenges" element={<Challenges />} />
+              <Route path="/solutions" element={<Solutions />} />
+              <Route path="/street-epistemology" element={<StreetEpistemology />} />
+              <Route path="/socratic-questioning" element={<SocraticQuestioning />} />
+              <Route path="/scientific-method" element={<ScientificMethod />} />
+              <Route path="/comedians" element={<Comedians />} />
+              <Route path="/cognitive-biases" element={<CognitiveBiases />} />
+              <Route path="/logical-fallacies" element={<LogicalFallacies />} />
+              <Route path="/consciousness" element={<Consciousness />} />
+              <Route path="/consensus" element={<ScientificConsensus />} />
+              <Route path="/censorship" element={<Censorship />} />
+              <Route path="*" element={<NotFound />} />
+            </Routes>
+          </BrowserRouter>
+        </div>
       </LanguageProvider>
     </TooltipProvider>
   </QueryClientProvider>
