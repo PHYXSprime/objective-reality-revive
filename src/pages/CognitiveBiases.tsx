@@ -23,10 +23,10 @@ export default function CognitiveBiases() {
   // Generate categories dynamically from the data
   const uniqueCategories = [...new Set(cognitiveBiases.map(bias => bias.category))];
   const categories = [
-    { value: 'all', label: 'All Categories' },
+    { value: 'all', label: t('filter.all') },
     ...uniqueCategories.map(category => ({ 
       value: category, 
-      label: category.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) // Simple formatting instead of translation
+      label: t(`category.${category}`)
     }))
   ];
 
@@ -68,7 +68,7 @@ export default function CognitiveBiases() {
           <div className="relative flex-1">
             <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
             <Input
-              placeholder="Search cognitive biases..."
+              placeholder={t('search.placeholder')}
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
               className="pl-10 bg-background border-border"
@@ -77,7 +77,7 @@ export default function CognitiveBiases() {
           <Select value={selectedCategory} onValueChange={setSelectedCategory}>
             <SelectTrigger className="w-[200px]">
               <Filter className="h-4 w-4 mr-2" />
-              <SelectValue placeholder="Filter by category" />
+              <SelectValue placeholder={t('filter.by_category')} />
             </SelectTrigger>
             <SelectContent className="z-[9999]">
               {categories.map((category) => (
@@ -90,13 +90,9 @@ export default function CognitiveBiases() {
         </div>
 
         {/* Results Count */}
-        <div className="mb-6 flex justify-between items-center">
+        <div className="mb-6">
           <p className="text-muted-foreground">
-            Showing {filteredBiases.length} of {cognitiveBiases.length} cognitive biases
-          </p>
-          {/* Debug info */}
-          <p className="text-xs text-muted-foreground">
-            Categories available: {categories.length} | Current: {selectedCategory}
+            {t('showing_results').replace('{count}', filteredBiases.length.toString()).replace('{total}', cognitiveBiases.length.toString())}
           </p>
         </div>
 
@@ -119,7 +115,7 @@ export default function CognitiveBiases() {
                   {bias.definition}
                 </CardDescription>
                 <div>
-                  <h4 className="font-medium text-sm text-foreground mb-2">Example:</h4>
+                  <h4 className="font-medium text-sm text-foreground mb-2">{t('example')}:</h4>
                   <p className="text-sm text-muted-foreground italic leading-relaxed">
                     {bias.example}
                   </p>
@@ -133,7 +129,7 @@ export default function CognitiveBiases() {
         {filteredBiases.length === 0 && (
           <div className="text-center py-12">
             <p className="text-muted-foreground text-lg">
-              No cognitive biases found matching your search criteria.
+              {t('no_results')}
             </p>
             <Button
               variant="outline"
@@ -143,7 +139,7 @@ export default function CognitiveBiases() {
                 setSelectedCategory('all');
               }}
             >
-              Clear Filters
+              {t('clear_filters')}
             </Button>
           </div>
         )}

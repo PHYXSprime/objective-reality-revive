@@ -17,10 +17,11 @@ export function Navigation() {
   const location = useLocation();
 
   const navItems = [
-    { path: '/consciousness', label: t('nav.consciousness') },
+    { path: '/epistemology', label: t('nav.epistemology') },
+    { path: '/challenges', label: t('nav.challenges') },
     { path: '/cognitive-biases', label: t('nav.cognitive-biases') },
     { path: '/logical-fallacies', label: t('nav.logical-fallacies') },
-    { path: '/challenges', label: t('nav.challenges') },
+    { path: '/consciousness', label: t('nav.consciousness') },
     { path: '/solutions', label: t('nav.solutions') },
   ];
 

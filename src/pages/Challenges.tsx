@@ -94,10 +94,10 @@ export default function Challenges() {
         <Card className="mb-12 glass-card">
           <CardHeader className="text-center">
             <CardTitle className="text-4xl font-bold">
-              Challenges to Objective Reality
+              {t('challenges.title')}
             </CardTitle>
             <CardDescription className="text-xl max-w-4xl mx-auto">
-              The challenges that divide us from objective reality are many. Understanding these barriers is the first step toward overcoming them and developing clearer, more accurate thinking.
+              {t('challenges.description')}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -118,7 +118,7 @@ export default function Challenges() {
               <CardContent>
                 <Button asChild variant="outline" className="w-full">
                   <Link to={challenge.link}>
-                    Learn More
+                    {t('learn_more')}
                   </Link>
                 </Button>
               </CardContent>
@@ -129,36 +129,32 @@ export default function Challenges() {
         {/* Why This Matters */}
         <Card className="mb-12 glass-card">
           <CardHeader>
-            <CardTitle className="text-2xl">Why Understanding These Challenges Matters</CardTitle>
+            <CardTitle className="text-2xl">{t('challenges.why.title')}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h4 className="font-semibold text-foreground mb-3">Personal Growth</h4>
+                <h4 className="font-semibold text-foreground mb-3">{t('challenges.personal.title')}</h4>
                 <p className="text-muted-foreground">
-                  Recognizing these challenges in yourself leads to better decision-making, 
-                  reduced susceptibility to manipulation, and more accurate beliefs about reality.
+                  {t('challenges.personal.description')}
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-foreground mb-3">Societal Progress</h4>
+                <h4 className="font-semibold text-foreground mb-3">{t('challenges.societal.title')}</h4>
                 <p className="text-muted-foreground">
-                  When more people understand these barriers, society becomes more resilient 
-                  to misinformation, propaganda, and collective delusions.
+                  {t('challenges.societal.description')}
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-foreground mb-3">Better Discourse</h4>
+                <h4 className="font-semibold text-foreground mb-3">{t('challenges.discourse.title')}</h4>
                 <p className="text-muted-foreground">
-                  Understanding these challenges improves the quality of debates and discussions, 
-                  leading to more productive conversations and better collective outcomes.
+                  {t('challenges.discourse.description')}
                 </p>
               </div>
               <div>
-                <h4 className="font-semibold text-foreground mb-3">Scientific Progress</h4>
+                <h4 className="font-semibold text-foreground mb-3">{t('challenges.scientific.title')}</h4>
                 <p className="text-muted-foreground">
-                  Awareness of these biases and fallacies helps scientists and researchers 
-                  design better studies and reach more reliable conclusions.
+                  {t('challenges.scientific.description')}
                 </p>
               </div>
             </div>
@@ -169,20 +165,20 @@ export default function Challenges() {
         <div className="grid md:grid-cols-2 gap-6">
           <Card className="glass-card">
             <CardHeader>
-              <CardTitle>Start Your Journey</CardTitle>
+              <CardTitle>{t('challenges.start_journey')}</CardTitle>
               <CardDescription>
-                Begin by exploring the most fundamental challenges to clear thinking.
+                {t('challenges.start_journey.description')}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <Button asChild className="w-full">
                 <Link to="/cognitive-biases">
-                  Explore Cognitive Biases
+                  {t('challenges.explore_biases')}
                 </Link>
               </Button>
               <Button asChild variant="outline" className="w-full">
                 <Link to="/logical-fallacies">
-                  Study Logical Fallacies
+                  {t('challenges.study_fallacies')}
                 </Link>
               </Button>
             </CardContent>
@@ -190,20 +186,20 @@ export default function Challenges() {
 
           <Card className="glass-card">
             <CardHeader>
-              <CardTitle>Advanced Topics</CardTitle>
+              <CardTitle>{t('challenges.advanced_topics')}</CardTitle>
               <CardDescription>
-                Dive deeper into systemic and cultural barriers to objective thinking.
+                {t('challenges.advanced_topics.description')}
               </CardDescription>
             </CardHeader>
             <CardContent className="space-y-4">
               <Button asChild variant="outline" className="w-full">
                 <Link to="/consensus">
-                  Scientific Consensus
+                  {t('challenges.scientific_consensus')}
                 </Link>
               </Button>
               <Button asChild variant="outline" className="w-full">
                 <Link to="/censorship">
-                  Information Suppression
+                  {t('challenges.information_suppression')}
                 </Link>
               </Button>
             </CardContent>
