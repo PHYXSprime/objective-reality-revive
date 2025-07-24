@@ -80,12 +80,11 @@ export default function LogicalFallacies() {
                 {categories.find(cat => cat.value === selectedCategory)?.label}
               </Button>
             </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="z-50 min-w-[200px] bg-card border border-border shadow-lg rounded-lg">
+            <DropdownMenuContent align="end" className="z-50 min-w-[200px]">
               {categories.map((category) => (
                 <DropdownMenuItem
                   key={category.value}
                   onClick={() => setSelectedCategory(category.value)}
-                  className="cursor-pointer hover:bg-accent hover:text-accent-foreground"
                 >
                   {category.label}
                 </DropdownMenuItem>
