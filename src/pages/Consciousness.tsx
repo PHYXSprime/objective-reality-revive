@@ -49,14 +49,16 @@ export default function Consciousness() {
     <div className="min-h-screen py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-4">
-            {t('consciousness.title')}
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl mb-6">
-            {t('consciousness.description')}
-          </p>
-        </div>
+        <Card className="glass-card mb-8">
+          <CardHeader>
+            <CardTitle className="text-4xl font-bold">
+              {t('consciousness.title')}
+            </CardTitle>
+            <CardDescription className="text-xl max-w-3xl">
+              {t('consciousness.description')}
+            </CardDescription>
+          </CardHeader>
+        </Card>
 
         {/* David Heggli's Digital Twins Study */}
         <Card className="mb-12 border-primary/20 glass-card">
@@ -142,15 +144,17 @@ export default function Consciousness() {
         </Card>
 
         {/* Consciousness Levels */}
-        <div className="mb-8">
-          <h2 className="text-2xl font-bold text-foreground mb-4">
-            Levels of Consciousness Development
-          </h2>
-          <p className="text-muted-foreground mb-8">
-            Understanding the stages of human consciousness development helps us recognize different 
-            worldviews and approaches to complex problems.
-          </p>
-        </div>
+        <Card className="glass-card mb-8">
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold">
+              Levels of Consciousness Development
+            </CardTitle>
+            <CardDescription className="text-muted-foreground">
+              Understanding the stages of human consciousness development helps us recognize different 
+              worldviews and approaches to complex problems.
+            </CardDescription>
+          </CardHeader>
+        </Card>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {consciousnessLevels.map((level, index) => (
@@ -181,15 +185,17 @@ export default function Consciousness() {
         </div>
 
         {/* Note */}
-        <div className="mt-12 p-6 bg-muted/50 rounded-lg">
-          <p className="text-sm text-muted-foreground">
-            <strong>Note:</strong> This consciousness framework is based on developmental psychology research 
-            and integral theory. It's important to understand that these levels are not hierarchical in terms 
-            of human worth, but rather represent different ways of making sense of complex situations. 
-            Each level has its own strengths and limitations, and healthy development involves integrating 
-            insights from multiple levels.
-          </p>
-        </div>
+        <Card className="mt-12 glass-card">
+          <CardContent className="p-6">
+            <p className="text-sm text-muted-foreground">
+              <strong>Note:</strong> This consciousness framework is based on developmental psychology research 
+              and integral theory. It's important to understand that these levels are not hierarchical in terms 
+              of human worth, but rather represent different ways of making sense of complex situations. 
+              Each level has its own strengths and limitations, and healthy development involves integrating 
+              insights from multiple levels.
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );

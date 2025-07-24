@@ -36,51 +36,59 @@ export default function Epistemology() {
     <div className="min-h-screen py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-foreground mb-6">
-            Epistemology
-          </h1>
-          <p className="text-2xl text-muted-foreground mb-4">
-            How can we know if something is actually true?
-          </p>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-            The short answer is: we can never be 100% sure of anything. Therefore, the best thing to do is to give every piece of information or belief a value of confidence that adjusts with every new piece of information we gain.
-          </p>
-        </div>
+        <Card className="mb-12 glass-card">
+          <CardHeader className="text-center">
+            <CardTitle className="text-4xl font-bold">
+              Epistemology
+            </CardTitle>
+            <CardDescription className="text-2xl mb-4">
+              How can we know if something is actually true?
+            </CardDescription>
+            <CardDescription className="text-lg max-w-4xl mx-auto">
+              The short answer is: we can never be 100% sure of anything. Therefore, the best thing to do is to give every piece of information or belief a value of confidence that adjusts with every new piece of information we gain.
+            </CardDescription>
+          </CardHeader>
+        </Card>
 
         {/* Neo Quote */}
-        <div className="bg-muted/30 p-8 rounded-lg mb-12 text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-4">
-            ....wake up Neo! ..................  wake up...
-          </h2>
-        </div>
+        <Card className="glass-card mb-12">
+          <CardContent className="p-8 text-center">
+            <h2 className="text-3xl font-bold text-foreground text-glow-accent">
+              ....wake up Neo! ..................  wake up...
+            </h2>
+          </CardContent>
+        </Card>
 
         {/* Main Content */}
-        <div className="grid lg:grid-cols-2 gap-12 mb-12">
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-foreground">
-              The Reality of Human Cognition
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              Once we've accepted that our brains haven't developed to map reality as perfectly as possible – but as fast as possible and just good enough to survive and not waste too much energy on the quality of the result – we can find ways to work around the shortcomings of our brains.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              In today's highly developed, sophisticated world, most of the time we don't run the risk of being attacked by a wild animal and eventually dying – however, wrong or sub-optimal decisions taken hastily could have devastating results.
-            </p>
-          </div>
-          
-          <div className="space-y-6">
-            <h3 className="text-2xl font-semibold text-foreground">
-              Aviation Experience
-            </h3>
-            <p className="text-muted-foreground leading-relaxed">
-              My personal experience as an airline pilot with over 15,000 hours of flying experience and 14,000 landings has taught me how limited and vulnerable to errors our brains actually are. This is why we work in a team of two in the cockpit where all actions are performed in a closed loop principle.
-            </p>
-            <p className="text-muted-foreground leading-relaxed">
-              This closed loop principle has proven to be VERY effective in reducing human error on the list of aviation related accidents. And yet, human error is way above any other category for aircraft related deaths and injuries, while accidents due to technical malfunctions are asymptotically trending towards zero.
-            </p>
-          </div>
-        </div>
+        <Card className="glass-card mb-12">
+          <CardContent className="p-8">
+            <div className="grid lg:grid-cols-2 gap-8">
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-foreground">
+                  The Reality of Human Cognition
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  Once we've accepted that our brains haven't developed to map reality as perfectly as possible – but as fast as possible and just good enough to survive and not waste too much energy on the quality of the result – we can find ways to work around the shortcomings of our brains.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  In today's highly developed, sophisticated world, most of the time we don't run the risk of being attacked by a wild animal and eventually dying – however, wrong or sub-optimal decisions taken hastily could have devastating results.
+                </p>
+              </div>
+              
+              <div className="space-y-6">
+                <h3 className="text-2xl font-semibold text-foreground">
+                  Aviation Experience
+                </h3>
+                <p className="text-muted-foreground leading-relaxed">
+                  My personal experience as an airline pilot with over 15,000 hours of flying experience and 14,000 landings has taught me how limited and vulnerable to errors our brains actually are. This is why we work in a team of two in the cockpit where all actions are performed in a closed loop principle.
+                </p>
+                <p className="text-muted-foreground leading-relaxed">
+                  This closed loop principle has proven to be VERY effective in reducing human error on the list of aviation related accidents. And yet, human error is way above any other category for aircraft related deaths and injuries, while accidents due to technical malfunctions are asymptotically trending towards zero.
+                </p>
+              </div>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Core Principles */}
         <div className="mb-12">
@@ -139,14 +147,16 @@ export default function Epistemology() {
         </Card>
 
         {/* Call to Action */}
-        <div className="text-center bg-muted/30 p-8 rounded-lg">
-          <h3 className="text-2xl font-bold text-foreground mb-4">
-            The Path to Better Decision Making
-          </h3>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
-            By understanding the limitations of human cognition and implementing systematic approaches to verification and error reduction, we can make significantly better decisions and develop a more accurate understanding of reality.
-          </p>
-        </div>
+        <Card className="glass-card">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl font-bold">
+              The Path to Better Decision Making
+            </CardTitle>
+            <CardDescription className="text-muted-foreground max-w-3xl mx-auto">
+              By understanding the limitations of human cognition and implementing systematic approaches to verification and error reduction, we can make significantly better decisions and develop a more accurate understanding of reality.
+            </CardDescription>
+          </CardHeader>
+        </Card>
       </div>
     </div>
   );

@@ -98,16 +98,18 @@ export default function ScientificMethod() {
     <div className="min-h-screen py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-foreground mb-6">
-            The Scientific Method
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
-            An empirical method of acquiring knowledge that has characterized the development 
-            of science since at least the 17th century. It involves careful observation and 
-            rigorous skepticism about what is observed.
-          </p>
-        </div>
+        <Card className="mb-12 glass-card">
+          <CardHeader className="text-center">
+            <CardTitle className="text-4xl font-bold">
+              The Scientific Method
+            </CardTitle>
+            <CardDescription className="text-xl max-w-4xl mx-auto">
+              An empirical method of acquiring knowledge that has characterized the development 
+              of science since at least the 17th century. It involves careful observation and 
+              rigorous skepticism about what is observed.
+            </CardDescription>
+          </CardHeader>
+        </Card>
 
         {/* Key Difference from Dogma */}
         <Card className="mb-12 border-green-200 dark:border-green-800 glass-card">
@@ -149,9 +151,13 @@ export default function ScientificMethod() {
 
         {/* The Scientific Method Steps */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-            The Scientific Method Process
-          </h2>
+          <Card className="glass-card mb-8">
+            <CardHeader className="text-center">
+              <CardTitle className="text-3xl font-bold">
+                The Scientific Method Process
+              </CardTitle>
+            </CardHeader>
+          </Card>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {methodSteps.map((step, index) => (
               <Card key={index} className="relative glass-card">
@@ -292,16 +298,18 @@ export default function ScientificMethod() {
         </Card>
 
         {/* Call to Action */}
-        <div className="text-center bg-muted/30 p-8 rounded-lg">
-          <h3 className="text-2xl font-bold text-foreground mb-4">
-            Embrace Scientific Thinking
-          </h3>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
-            Apply scientific principles to your daily life: base beliefs on evidence, remain open 
-            to new information, question assumptions, and always be ready to update your understanding 
-            when presented with better evidence. This is the path to more accurate beliefs and better decisions.
-          </p>
-        </div>
+        <Card className="glass-card">
+          <CardHeader className="text-center">
+            <CardTitle className="text-2xl font-bold">
+              Embrace Scientific Thinking
+            </CardTitle>
+            <CardDescription className="text-muted-foreground max-w-3xl mx-auto">
+              Apply scientific principles to your daily life: base beliefs on evidence, remain open 
+              to new information, question assumptions, and always be ready to update your understanding 
+              when presented with better evidence. This is the path to more accurate beliefs and better decisions.
+            </CardDescription>
+          </CardHeader>
+        </Card>
       </div>
     </div>
   );

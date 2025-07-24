@@ -91,14 +91,16 @@ export default function Challenges() {
     <div className="min-h-screen py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-foreground mb-6">
-            Challenges to Objective Reality
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-            The challenges that divide us from objective reality are many. Understanding these barriers is the first step toward overcoming them and developing clearer, more accurate thinking.
-          </p>
-        </div>
+        <Card className="mb-12 glass-card">
+          <CardHeader className="text-center">
+            <CardTitle className="text-4xl font-bold">
+              Challenges to Objective Reality
+            </CardTitle>
+            <CardDescription className="text-xl max-w-4xl mx-auto">
+              The challenges that divide us from objective reality are many. Understanding these barriers is the first step toward overcoming them and developing clearer, more accurate thinking.
+            </CardDescription>
+          </CardHeader>
+        </Card>
 
         {/* Challenges Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">

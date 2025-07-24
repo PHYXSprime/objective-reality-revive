@@ -55,15 +55,19 @@ export default function Home() {
               ....wake up Neo! ..................  wake up...
             </h2>
           </div>
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground mb-6">
-            {t('home.title')}
-          </h1>
-          <h2 className="text-2xl sm:text-3xl text-muted-foreground mb-6">
-            How can we know if something is actually true?
-          </h2>
-          <p className="text-lg text-muted-foreground mb-8 max-w-3xl mx-auto">
-            The short answer is: we can never be 100% sure of anything. Therefore, the best thing to do is to give every piece of information or belief a value of confidence that adjusts with every new piece of information we gain.
-          </p>
+          <Card className="glass-card p-8 mb-8">
+            <CardContent className="text-center space-y-6">
+              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
+                {t('home.title')}
+              </h1>
+              <h2 className="text-2xl sm:text-3xl text-muted-foreground">
+                How can we know if something is actually true?
+              </h2>
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+                The short answer is: we can never be 100% sure of anything. Therefore, the best thing to do is to give every piece of information or belief a value of confidence that adjusts with every new piece of information we gain.
+              </p>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
@@ -98,81 +102,89 @@ export default function Home() {
 
       {/* Additional Info Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-8">
-            Understanding Human Reasoning
-          </h2>
-          <div className="grid md:grid-cols-2 gap-8 text-left">
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-foreground">
-                Why It Matters
-              </h3>
-              <p className="text-muted-foreground">
-                Cognitive biases and logical fallacies are systematic patterns that affect our thinking. 
-                By understanding these patterns, we can make better decisions, improve our reasoning, 
-                and develop a more accurate understanding of reality.
-              </p>
-            </div>
-            <div>
-              <h3 className="text-xl font-semibold mb-4 text-foreground">
-                Our Approach
-              </h3>
-              <p className="text-muted-foreground">
-                This resource provides comprehensive, categorized information about cognitive biases 
-                and logical fallacies with real-world examples. Each entry includes clear definitions 
-                and practical illustrations to help you recognize these patterns in everyday life.
-              </p>
-            </div>
-          </div>
+        <div className="max-w-4xl mx-auto">
+          <Card className="glass-card">
+            <CardHeader className="text-center">
+              <CardTitle className="text-3xl font-bold">
+                Understanding Human Reasoning
+              </CardTitle>
+            </CardHeader>
+            <CardContent>
+              <div className="grid md:grid-cols-2 gap-8">
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-foreground">
+                    Why It Matters
+                  </h3>
+                  <p className="text-muted-foreground">
+                    Cognitive biases and logical fallacies are systematic patterns that affect our thinking. 
+                    By understanding these patterns, we can make better decisions, improve our reasoning, 
+                    and develop a more accurate understanding of reality.
+                  </p>
+                </div>
+                <div>
+                  <h3 className="text-xl font-semibold mb-4 text-foreground">
+                    Our Approach
+                  </h3>
+                  <p className="text-muted-foreground">
+                    This resource provides comprehensive, categorized information about cognitive biases 
+                    and logical fallacies with real-world examples. Each entry includes clear definitions 
+                    and practical illustrations to help you recognize these patterns in everyday life.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
       {/* Epistemology Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-6xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Epistemology: The Foundation
-            </h2>
-            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
-              Once we've accepted that our brains haven't developed to map reality as perfectly as possible – 
-              but as fast as possible and just good enough to survive – we can find ways to work around our limitations.
-            </p>
-          </div>
-
-          {/* Aviation Experience */}
-          <div className="grid lg:grid-cols-2 gap-12 mb-12">
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-foreground">
-                Lessons from Aviation
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                My personal experience as an airline pilot with over 15,000 hours of flying experience and 14,000 landings 
-                has taught me how limited and vulnerable to errors our brains actually are. This is why we work in a team 
-                of two in the cockpit where all actions are performed in a closed loop principle.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                This closed loop principle has proven to be VERY effective in reducing human error. And yet, human error 
-                is way above any other category for aircraft related deaths and injuries, while accidents due to 
-                technical malfunctions are asymptotically trending towards zero.
-              </p>
-            </div>
-            
-            <div className="space-y-6">
-              <h3 className="text-2xl font-semibold text-foreground">
-                Modern Consequences
-              </h3>
-              <p className="text-muted-foreground leading-relaxed">
-                In today's highly developed, sophisticated world, most of the time we don't run the risk of being 
-                attacked by a wild animal and eventually dying – however, wrong or sub-optimal decisions taken 
-                hastily could have devastating results.
-              </p>
-              <p className="text-muted-foreground leading-relaxed">
-                By removing our ego from the equation and giving every belief a confidence level that adjusts with 
-                new information, we can make significantly better decisions.
-              </p>
-            </div>
-          </div>
+          <Card className="glass-card mb-12">
+            <CardHeader className="text-center">
+              <CardTitle className="text-3xl font-bold">
+                Epistemology: The Foundation
+              </CardTitle>
+              <CardDescription className="text-lg max-w-3xl mx-auto">
+                Once we've accepted that our brains haven't developed to map reality as perfectly as possible – 
+                but as fast as possible and just good enough to survive – we can find ways to work around our limitations.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="grid lg:grid-cols-2 gap-8">
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-semibold text-foreground">
+                    Lessons from Aviation
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    My personal experience as an airline pilot with over 15,000 hours of flying experience and 14,000 landings 
+                    has taught me how limited and vulnerable to errors our brains actually are. This is why we work in a team 
+                    of two in the cockpit where all actions are performed in a closed loop principle.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    This closed loop principle has proven to be VERY effective in reducing human error. And yet, human error 
+                    is way above any other category for aircraft related deaths and injuries, while accidents due to 
+                    technical malfunctions are asymptotically trending towards zero.
+                  </p>
+                </div>
+                
+                <div className="space-y-6">
+                  <h3 className="text-2xl font-semibold text-foreground">
+                    Modern Consequences
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed">
+                    In today's highly developed, sophisticated world, most of the time we don't run the risk of being 
+                    attacked by a wild animal and eventually dying – however, wrong or sub-optimal decisions taken 
+                    hastily could have devastating results.
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    By removing our ego from the equation and giving every belief a confidence level that adjusts with 
+                    new information, we can make significantly better decisions.
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
 
           {/* Core Principles */}
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
@@ -222,26 +234,32 @@ export default function Home() {
 
       {/* Call to Action */}
       <section className="py-16 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-3xl font-bold text-foreground mb-8">
-            Start Your Journey to Clearer Thinking
-          </h2>
-          <p className="text-muted-foreground max-w-3xl mx-auto mb-8">
-            By understanding cognitive biases, logical fallacies, and the principles of sound reasoning, 
-            you can make better decisions and develop a more accurate understanding of reality.
-          </p>
-          <div className="flex gap-4 justify-center">
-            <Button asChild size="lg">
-              <Link to="/consciousness">
-                Explore Consciousness Levels
-              </Link>
-            </Button>
-            <Button asChild variant="outline" size="lg">
-              <Link to="/cognitive-biases">
-                Study Cognitive Biases
-              </Link>
-            </Button>
-          </div>
+        <div className="max-w-4xl mx-auto">
+          <Card className="glass-card">
+            <CardHeader className="text-center">
+              <CardTitle className="text-3xl font-bold">
+                Start Your Journey to Clearer Thinking
+              </CardTitle>
+              <CardDescription className="text-muted-foreground max-w-3xl mx-auto">
+                By understanding cognitive biases, logical fallacies, and the principles of sound reasoning, 
+                you can make better decisions and develop a more accurate understanding of reality.
+              </CardDescription>
+            </CardHeader>
+            <CardContent>
+              <div className="flex gap-4 justify-center">
+                <Button asChild size="lg">
+                  <Link to="/consciousness">
+                    Explore Consciousness Levels
+                  </Link>
+                </Button>
+                <Button asChild variant="outline" size="lg">
+                  <Link to="/cognitive-biases">
+                    Study Cognitive Biases
+                  </Link>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
     </div>

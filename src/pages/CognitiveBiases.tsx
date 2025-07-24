@@ -47,14 +47,16 @@ export default function CognitiveBiases() {
     <div className="min-h-screen py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-4">
-            {t('biases.title')}
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl">
-            {t('biases.description')}
-          </p>
-        </div>
+        <Card className="mb-8 glass-card">
+          <CardHeader>
+            <CardTitle className="text-4xl font-bold">
+              {t('biases.title')}
+            </CardTitle>
+            <CardDescription className="text-xl max-w-3xl">
+              {t('biases.description')}
+            </CardDescription>
+          </CardHeader>
+        </Card>
 
         {/* Search and Filter Controls */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8">

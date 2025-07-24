@@ -47,14 +47,16 @@ export default function LogicalFallacies() {
     <div className="min-h-screen py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-4xl font-bold text-foreground mb-4">
-            {t('fallacies.title')}
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-3xl">
-            {t('fallacies.description')}
-          </p>
-        </div>
+        <Card className="mb-8 glass-card">
+          <CardHeader>
+            <CardTitle className="text-4xl font-bold">
+              {t('fallacies.title')}
+            </CardTitle>
+            <CardDescription className="text-xl max-w-3xl">
+              {t('fallacies.description')}
+            </CardDescription>
+          </CardHeader>
+        </Card>
 
         {/* Search and Filter Controls */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
