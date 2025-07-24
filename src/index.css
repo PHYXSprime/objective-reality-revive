@@ -120,21 +120,21 @@
   body::after {
     content: '';
     position: fixed;
-    bottom: -50%;
-    right: -20%;
-    width: 120vw;
-    height: 120vw;
-    background: 
-      radial-gradient(circle at 30% 30%, 
-        hsl(217 91% 60% / 0.3) 0%,
-        hsl(120 50% 40% / 0.3) 25%,
-        hsl(200 80% 35% / 0.4) 45%,
-        hsl(240 10% 3.9% / 0.8) 70%,
-        transparent 100%);
+    bottom: -40%;
+    left: 50%;
+    width: 80vw;
+    height: 80vw;
+    max-width: 800px;
+    max-height: 800px;
+    background-image: url('/earth-from-space-night-bg2.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
     border-radius: 50%;
-    animation: earthRotate 300s linear infinite;
+    animation: earthFloat 60s ease-in-out infinite;
     z-index: -1;
-    filter: blur(1px);
+    filter: blur(0.5px);
+    transform-origin: center;
   }
 
   @keyframes stars {
@@ -142,9 +142,34 @@
     to { transform: translateX(-200px); }
   }
 
-  @keyframes earthRotate {
-    from { transform: rotate(0deg); }
-    to { transform: rotate(360deg); }
+  @keyframes earthFloat {
+    0% { 
+      transform: translateX(-50%) translateY(0px) rotate(0deg); 
+    }
+    12.5% { 
+      transform: translateX(-30%) translateY(-20px) rotate(45deg); 
+    }
+    25% { 
+      transform: translateX(-50%) translateY(-30px) rotate(90deg); 
+    }
+    37.5% { 
+      transform: translateX(-70%) translateY(-20px) rotate(135deg); 
+    }
+    50% { 
+      transform: translateX(-50%) translateY(0px) rotate(180deg); 
+    }
+    62.5% { 
+      transform: translateX(-30%) translateY(20px) rotate(225deg); 
+    }
+    75% { 
+      transform: translateX(-50%) translateY(30px) rotate(270deg); 
+    }
+    87.5% { 
+      transform: translateX(-70%) translateY(20px) rotate(315deg); 
+    }
+    100% { 
+      transform: translateX(-50%) translateY(0px) rotate(360deg); 
+    }
   }
 
   @keyframes float {
