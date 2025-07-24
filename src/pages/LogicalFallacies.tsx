@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Search, Filter } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { logicalFallacies } from '@/data/logicalFallacies';
+import { logicalFallaciesTranslations } from '@/data/logicalFallacies.de';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -16,9 +17,23 @@ import {
 import { ChallengeNavigation } from '@/components/ChallengeNavigation';
 
 export default function LogicalFallacies() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  // Helper function to get translated content
+  const getTranslatedFallacy = (fallacy: any) => {
+    if (language === 'de' && logicalFallaciesTranslations.de[fallacy.name]) {
+      const translation = logicalFallaciesTranslations.de[fallacy.name];
+      return {
+        name: translation.name,
+        definition: translation.definition,
+        example: translation.example,
+        category: fallacy.category
+      };
+    }
+    return fallacy;
+  };
 
   // Generate categories dynamically from the data
   const uniqueCategories = [...new Set(logicalFallacies.map(fallacy => fallacy.category))];
@@ -31,8 +46,9 @@ export default function LogicalFallacies() {
   ];
 
   const filteredFallacies = logicalFallacies.filter(fallacy => {
-    const matchesSearch = fallacy.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         fallacy.definition.toLowerCase().includes(searchTerm.toLowerCase());
+    const translatedFallacy = getTranslatedFallacy(fallacy);
+    const matchesSearch = translatedFallacy.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         translatedFallacy.definition.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || fallacy.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
@@ -100,31 +116,34 @@ export default function LogicalFallacies() {
 
         {/* Fallacies Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {filteredFallacies.map((fallacy, index) => (
-            <Card key={index} className="h-full glass-card float-card hover:glow-primary transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <CardTitle className="text-lg leading-tight">
-                    {fallacy.name}
-                  </CardTitle>
-                  <Badge className={getCategoryColor(fallacy.category)}>
-                    {t(`category.${fallacy.category}`)}
-                  </Badge>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <CardDescription className="text-sm leading-relaxed">
-                  {fallacy.definition}
-                </CardDescription>
-                <div>
-                  <h4 className="font-medium text-sm text-foreground mb-2">{t('example')}:</h4>
-                  <p className="text-sm text-muted-foreground italic leading-relaxed">
-                    {fallacy.example}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+          {filteredFallacies.map((fallacy, index) => {
+            const translatedFallacy = getTranslatedFallacy(fallacy);
+            return (
+              <Card key={index} className="h-full glass-card float-card hover:glow-primary transition-all duration-300">
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <CardTitle className="text-lg leading-tight">
+                      {translatedFallacy.name}
+                    </CardTitle>
+                    <Badge className={getCategoryColor(fallacy.category)}>
+                      {t(`category.${fallacy.category}`)}
+                    </Badge>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <CardDescription className="text-sm leading-relaxed">
+                    {translatedFallacy.definition}
+                  </CardDescription>
+                  <div>
+                    <h4 className="font-medium text-sm text-foreground mb-2">{t('example')}:</h4>
+                    <p className="text-sm text-muted-foreground italic leading-relaxed">
+                      {translatedFallacy.example}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
         {/* No Results */}
