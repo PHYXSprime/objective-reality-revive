@@ -85,7 +85,7 @@
   }
 
   html {
-    background-color: hsl(var(--background));
+    background-color: transparent; /* Remove black layer */
     scroll-behavior: smooth;
   }
 
