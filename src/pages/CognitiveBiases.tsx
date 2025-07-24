@@ -24,7 +24,7 @@ export default function CognitiveBiases() {
     { value: 'all', label: 'All Categories' },
     ...uniqueCategories.map(category => ({ 
       value: category, 
-      label: t(`category.${category}`) 
+      label: category.replace(/_/g, ' ').replace(/\b\w/g, l => l.toUpperCase()) // Simple formatting instead of translation
     }))
   ];
 
