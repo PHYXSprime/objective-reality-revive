@@ -18,14 +18,14 @@ export default function LogicalFallacies() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
+  // Generate categories dynamically from the data
+  const uniqueCategories = [...new Set(logicalFallacies.map(fallacy => fallacy.category))];
   const categories = [
     { value: 'all', label: 'All Categories' },
-    { value: 'relevance', label: t('category.relevance') },
-    { value: 'presumption', label: t('category.presumption') },
-    { value: 'weak_inference', label: t('category.weak_inference') },
-    { value: 'causal', label: t('category.causal') },
-    { value: 'formal', label: t('category.formal') },
-    { value: 'conditional', label: t('category.conditional') },
+    ...uniqueCategories.map(category => ({ 
+      value: category, 
+      label: t(`category.${category}`) 
+    }))
   ];
 
   const filteredFallacies = logicalFallacies.filter(fallacy => {

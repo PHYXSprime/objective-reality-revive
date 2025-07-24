@@ -106,21 +106,23 @@ export default function SocraticQuestioning() {
     <div className="min-h-screen py-8">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-foreground mb-6">
-            Socratic Questioning
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
-            A form of disciplined questioning that can be used to pursue thought in many directions 
-            and for many purposes. The foundation of critical thinking for over 2,000 years.
-          </p>
-        </div>
+        <Card className="glass-card mb-8">
+          <CardHeader>
+            <CardTitle className="text-4xl font-bold">
+              Socratic Questioning
+            </CardTitle>
+            <CardDescription className="text-xl max-w-3xl">
+              A form of disciplined questioning that can be used to pursue thought in many directions 
+              and for many purposes. The foundation of critical thinking for over 2,000 years.
+            </CardDescription>
+          </CardHeader>
+        </Card>
 
         {/* Key Distinction */}
-        <Card className="mb-12 border-green-200 dark:border-green-800">
+        <Card className="mb-12 border-primary/20 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
-              <Target className="h-6 w-6 text-green-600" />
+              <Target className="h-6 w-6 text-primary" />
               <CardTitle className="text-2xl">What Makes It Different</CardTitle>
             </div>
           </CardHeader>
@@ -134,10 +136,10 @@ export default function SocraticQuestioning() {
         </Card>
 
         {/* Purposes */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
-              <Lightbulb className="h-6 w-6 text-blue-600" />
+              <Lightbulb className="h-6 w-6 text-primary" />
               <CardTitle className="text-2xl">Purposes of Socratic Questioning</CardTitle>
             </div>
           </CardHeader>
@@ -145,7 +147,7 @@ export default function SocraticQuestioning() {
             <div className="grid md:grid-cols-2 gap-4">
               {purposes.map((purpose, index) => (
                 <div key={index} className="flex items-start gap-3">
-                  <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0" />
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-2 flex-shrink-0" />
                   <span className="text-muted-foreground">{purpose}</span>
                 </div>
               ))}
@@ -154,10 +156,10 @@ export default function SocraticQuestioning() {
         </Card>
 
         {/* Theoretical Foundations */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
-              <Brain className="h-6 w-6 text-purple-600" />
+              <Brain className="h-6 w-6 text-primary" />
               <CardTitle className="text-2xl">Five Theoretical Foundations</CardTitle>
             </div>
           </CardHeader>
@@ -174,95 +176,121 @@ export default function SocraticQuestioning() {
         </Card>
 
         {/* Question Categories */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-            Six Types of Socratic Questions
-          </h2>
-          <div className="grid lg:grid-cols-2 gap-6">
-            {questionTypes.map((type, index) => (
-              <Card key={index} className="h-full">
-                <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <HelpCircle className={`h-5 w-5 ${type.color}`} />
-                    <CardTitle className="text-lg">{type.category}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <ul className="space-y-2">
-                    {type.questions.map((question, qIndex) => (
-                      <li key={qIndex} className="text-sm text-muted-foreground">
-                        • {question}
-                      </li>
-                    ))}
-                  </ul>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        <Card className="glass-card mb-8">
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold">
+              Six Types of Socratic Questions
+            </CardTitle>
+            <CardDescription className="text-muted-foreground">
+              Each type of question serves a specific purpose in critical thinking and systematic inquiry.
+            </CardDescription>
+          </CardHeader>
+        </Card>
+
+        <div className="grid lg:grid-cols-2 gap-6 mb-12">
+          {questionTypes.map((type, index) => (
+            <Card key={index} className="h-full glass-card">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <HelpCircle className="h-5 w-5 text-primary" />
+                  <CardTitle className="text-lg">{type.category}</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <ul className="space-y-2">
+                  {type.questions.map((question, qIndex) => (
+                    <li key={qIndex} className="text-sm text-muted-foreground flex items-center gap-2">
+                      <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
+                      {question}
+                    </li>
+                  ))}
+                </ul>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* How to Use */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Card>
+          <Card className="glass-card">
             <CardHeader>
               <div className="flex items-center gap-3">
-                <Search className="h-6 w-6 text-indigo-600" />
+                <Search className="h-6 w-6 text-primary" />
                 <CardTitle>The Questioning Process</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
               <div className="space-y-4">
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">1. Start with Clarification</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Ensure you understand exactly what is being claimed or argued.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-medium text-foreground">1. Start with Clarification</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Ensure you understand exactly what is being claimed or argued.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">2. Examine Assumptions</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Identify and question the underlying assumptions being made.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-medium text-foreground">2. Examine Assumptions</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Identify and question the underlying assumptions being made.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">3. Explore Evidence</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Look at what evidence supports or contradicts the position.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-medium text-foreground">3. Explore Evidence</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Look at what evidence supports or contradicts the position.
+                    </p>
+                  </div>
                 </div>
-                <div>
-                  <h4 className="font-semibold text-foreground mb-2">4. Consider Alternatives</h4>
-                  <p className="text-sm text-muted-foreground">
-                    Examine different perspectives and possibilities.
-                  </p>
+                <div className="flex items-start gap-3">
+                  <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1 flex-shrink-0" />
+                  <div>
+                    <h4 className="font-medium text-foreground">4. Consider Alternatives</h4>
+                    <p className="text-sm text-muted-foreground">
+                      Examine different perspectives and possibilities.
+                    </p>
+                  </div>
                 </div>
               </div>
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="glass-card">
             <CardHeader>
               <div className="flex items-center gap-3">
-                <Users className="h-6 w-6 text-green-600" />
+                <Users className="h-6 w-6 text-primary" />
                 <CardTitle>Best Practices</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-3 text-muted-foreground">
-                <li>• Ask questions genuinely, not to trap or embarrass</li>
-                <li>• Build on previous questions and answers</li>
-                <li>• Allow time for thoughtful responses</li>
-                <li>• Model the thinking you want to encourage</li>
-                <li>• Focus on understanding, not winning</li>
-                <li>• Be patient with the process</li>
-                <li>• Question your own assumptions too</li>
+              <ul className="space-y-3">
+                {[
+                  "Ask questions genuinely, not to trap or embarrass",
+                  "Build on previous questions and answers", 
+                  "Allow time for thoughtful responses",
+                  "Model the thinking you want to encourage",
+                  "Focus on understanding, not winning",
+                  "Be patient with the process",
+                  "Question your own assumptions too"
+                ].map((practice, index) => (
+                  <li key={index} className="text-sm text-muted-foreground flex items-center gap-2">
+                    <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
+                    {practice}
+                  </li>
+                ))}
               </ul>
             </CardContent>
           </Card>
         </div>
 
         {/* Example in Action */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card">
           <CardHeader>
             <CardTitle className="text-2xl">Example: Questioning a Common Belief</CardTitle>
             <CardDescription>

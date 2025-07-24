@@ -18,12 +18,14 @@ export default function CognitiveBiases() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
+  // Generate categories dynamically from the data
+  const uniqueCategories = [...new Set(cognitiveBiases.map(bias => bias.category))];
   const categories = [
     { value: 'all', label: 'All Categories' },
-    { value: 'too_much_information', label: t('category.too_much_information') },
-    { value: 'not_enough_meaning', label: t('category.not_enough_meaning') },
-    { value: 'need_to_act_fast', label: t('category.need_to_act_fast') },
-    { value: 'what_to_remember', label: t('category.what_to_remember') },
+    ...uniqueCategories.map(category => ({ 
+      value: category, 
+      label: t(`category.${category}`) 
+    }))
   ];
 
   const filteredBiases = cognitiveBiases.filter(bias => {
