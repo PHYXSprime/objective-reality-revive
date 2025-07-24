@@ -7,11 +7,12 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuTrigger,
-} from '@/components/ui/dropdown-menu';
+  Select,
+  SelectContent,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from '@/components/ui/select';
 
 export default function CognitiveBiases() {
   const { t } = useLanguage();
@@ -71,17 +72,19 @@ export default function CognitiveBiases() {
               className="pl-10 bg-background border-border"
             />
           </div>
-          <select 
-            value={selectedCategory} 
-            onChange={(e) => setSelectedCategory(e.target.value)}
-            className="px-3 py-2 border border-border rounded-md bg-background text-foreground"
-          >
-            {categories.map((category) => (
-              <option key={category.value} value={category.value}>
-                {category.label} ({category.value})
-              </option>
-            ))}
-          </select>
+          <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+            <SelectTrigger className="w-[200px]">
+              <Filter className="h-4 w-4 mr-2" />
+              <SelectValue placeholder="Filter by category" />
+            </SelectTrigger>
+            <SelectContent>
+              {categories.map((category) => (
+                <SelectItem key={category.value} value={category.value}>
+                  {category.label}
+                </SelectItem>
+              ))}
+            </SelectContent>
+          </Select>
         </div>
 
         {/* Results Count */}
