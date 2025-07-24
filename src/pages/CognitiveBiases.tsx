@@ -13,6 +13,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from '@/components/ui/select';
+import { ChallengeNavigation } from '@/components/ChallengeNavigation';
 
 export default function CognitiveBiases() {
   const { t } = useLanguage();
@@ -47,7 +48,8 @@ export default function CognitiveBiases() {
   };
 
   return (
-    <div className="min-h-screen py-8">
+    <div className="min-h-screen py-8 pr-20">
+      <ChallengeNavigation />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <Card className="mb-8 glass-card">

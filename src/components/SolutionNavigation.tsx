@@ -47,7 +47,8 @@ export function SolutionNavigation() {
       className={cn(
         "fixed right-4 top-1/2 -translate-y-1/2 z-40 transition-all duration-300",
         "glass-nav rounded-xl border border-border/50 shadow-lg",
-        isExpanded ? "w-64" : "w-14"
+        isExpanded ? "w-64 opacity-100" : "w-10 opacity-70",
+        "backdrop-blur-md"
       )}
       onMouseEnter={() => setIsExpanded(true)}
       onMouseLeave={() => setIsExpanded(false)}

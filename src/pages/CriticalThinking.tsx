@@ -1,11 +1,13 @@
 import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { SolutionNavigation } from '@/components/SolutionNavigation';
 
 export default function CriticalThinking() {
   const { t } = useLanguage();
 
   return (
-    <div className="min-h-screen py-8">
+    <div className="min-h-screen py-8 pr-20">
+      <SolutionNavigation />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <Card className="mb-8 glass-card">

@@ -2,6 +2,7 @@ import { Shield, Eye, AlertTriangle, MessageSquare, Zap, Filter } from 'lucide-r
 import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Alert, AlertDescription } from '@/components/ui/alert';
+import { ChallengeNavigation } from '@/components/ChallengeNavigation';
 
 export default function Censorship() {
   const { t } = useLanguage();
@@ -65,7 +66,8 @@ export default function Censorship() {
   ];
 
   return (
-    <div className="min-h-screen py-8">
+    <div className="min-h-screen py-8 pr-20">
+      <ChallengeNavigation />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center">

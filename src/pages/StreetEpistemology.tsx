@@ -55,7 +55,7 @@ export default function StreetEpistemology() {
   ];
 
   return (
-    <div className="min-h-screen py-8">
+    <div className="min-h-screen py-8 pr-20">
       <SolutionNavigation />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}

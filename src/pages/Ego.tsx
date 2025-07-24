@@ -1,6 +1,7 @@
 import { Crown, User, Heart, Brain, AlertTriangle, Target, Users, Eye } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { ChallengeNavigation } from '@/components/ChallengeNavigation';
 
 export default function Ego() {
   const { t } = useLanguage();
@@ -123,7 +124,8 @@ export default function Ego() {
   ];
 
   return (
-    <div className="min-h-screen py-8">
+    <div className="min-h-screen py-8 pr-20">
+      <ChallengeNavigation />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center">
