@@ -64,26 +64,30 @@ export default function Solutions() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-foreground mb-6">
-            Solutions
-          </h1>
-          <h2 className="text-2xl text-muted-foreground mb-8">
-            ...so what can we do about it?!
-          </h2>
-          <p className="text-lg text-muted-foreground max-w-4xl mx-auto">
-            Now that we understand the challenges to objective reality, let's explore the practical tools 
-            and methods we can use to overcome cognitive biases, think more clearly, and help others do the same.
-          </p>
+          <div className="glass-card rounded-2xl p-8 max-w-4xl mx-auto mb-8">
+            <h1 className="text-4xl font-bold text-foreground mb-6">
+              Solutions
+            </h1>
+            <h2 className="text-2xl text-muted-foreground mb-8">
+              ...so what can we do about it?!
+            </h2>
+            <p className="text-lg text-muted-foreground">
+              Now that we understand the challenges to objective reality, let's explore the practical tools 
+              and methods we can use to overcome cognitive biases, think more clearly, and help others do the same.
+            </p>
+          </div>
         </div>
 
         {/* Solutions Grid */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-            Practical Tools & Methods
-          </h2>
+          <div className="glass-card rounded-2xl p-6 text-center mb-8 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Practical Tools & Methods
+            </h2>
+          </div>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
             {solutions.map((solution, index) => (
-              <Card key={index} className="h-full transition-transform hover:scale-105">
+              <Card key={index} className="h-full glass-card rounded-2xl transition-transform hover:scale-105">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-4">
                     <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center`}>
@@ -116,7 +120,7 @@ export default function Solutions() {
         </div>
 
         {/* Personal Action Plan */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card rounded-2xl">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Target className="h-6 w-6 text-indigo-600" />
@@ -155,7 +159,7 @@ export default function Solutions() {
         </Card>
 
         {/* Core Philosophy */}
-        <Card className="mb-12 border-primary/20">
+        <Card className="mb-12 glass-card rounded-2xl border-primary/20">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Users className="h-6 w-6 text-primary" />
@@ -199,7 +203,7 @@ export default function Solutions() {
 
         {/* Getting Started */}
         <div className="grid md:grid-cols-2 gap-6">
-          <Card>
+           <Card className="glass-card rounded-2xl">
             <CardHeader>
               <CardTitle>Start Your Journey</CardTitle>
               <CardDescription>
@@ -220,7 +224,7 @@ export default function Solutions() {
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="glass-card rounded-2xl">
             <CardHeader>
               <CardTitle>Spread the Knowledge</CardTitle>
               <CardDescription>

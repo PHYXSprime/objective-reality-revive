@@ -22,6 +22,9 @@ import Propaganda from "./pages/Propaganda";
 import Indoctrination from "./pages/Indoctrination";
 import DogmaticBeliefs from "./pages/DogmaticBeliefs";
 import CoEvolution from "./pages/CoEvolution";
+import LazyThinking from "./pages/LazyThinking";
+import PsychologicalWeakness from "./pages/PsychologicalWeakness";
+import Ego from "./pages/Ego";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -57,6 +60,9 @@ const App = () => (
               <Route path="/indoctrination" element={<Indoctrination />} />
               <Route path="/dogmas" element={<DogmaticBeliefs />} />
               <Route path="/co-evolution" element={<CoEvolution />} />
+              <Route path="/lazy-thinking" element={<LazyThinking />} />
+              <Route path="/psychological-weakness" element={<PsychologicalWeakness />} />
+              <Route path="/ego" element={<Ego />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
