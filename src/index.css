@@ -161,8 +161,8 @@
 @layer components {
   /* Enhanced transparent glass card effects */
   .glass-card {
-    background: hsl(240 10% 15% / 0.08); /* Much more transparent */
-    backdrop-filter: blur(20px) saturate(150%); /* Less blur, more clarity */
+    background: hsl(240 10% 15% / 0.06); /* Ultra transparent */
+    backdrop-filter: blur(10px) saturate(150%); /* Minimal blur for star visibility */
     border: 1px solid hsl(240 20% 80% / 0.25); /* More visible border */
     box-shadow: 
       0 8px 32px hsl(240 10% 3.9% / 0.2), /* Lighter shadow */
@@ -222,17 +222,17 @@
       hsl(var(--accent) / 0.8) 100%);
   }
 
-  /* Floating animation for cards - Slowed down */
+  /* Floating animation for cards - Disabled to stop bouncing */
   .float-card {
-    animation: float 25s ease-in-out infinite;
+    /* animation: float 25s ease-in-out infinite; */
   }
 
   .float-card:nth-child(2n) {
-    animation-delay: -5s;
+    /* animation-delay: -5s; */
   }
 
   .float-card:nth-child(3n) {
-    animation-delay: -10s;
+    /* animation-delay: -10s; */
   }
 
   /* Glow effects */
