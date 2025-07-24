@@ -77,7 +77,7 @@ export function Navigation() {
                   {languages.find(lang => lang.code === language)?.flag}
                 </Button>
               </DropdownMenuTrigger>
-              <DropdownMenuContent align="end" className="z-[100] bg-background border border-border">
+              <DropdownMenuContent align="end" className="z-[9999] bg-background border border-border">
                 {languages.map((lang) => (
                   <DropdownMenuItem
                     key={lang.code}

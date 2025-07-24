@@ -77,7 +77,7 @@ export default function CognitiveBiases() {
               <Filter className="h-4 w-4 mr-2" />
               <SelectValue placeholder="Filter by category" />
             </SelectTrigger>
-            <SelectContent className="z-[100]">
+            <SelectContent className="z-[9999]">
               {categories.map((category) => (
                 <SelectItem key={category.value} value={category.value}>
                   {category.label}
