@@ -95,48 +95,7 @@
     overflow-x: hidden;
   }
 
-  /* Animated starfield background */
-  body::before {
-    content: '';
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 200%;
-    height: 200%;
-    background-image: 
-      radial-gradient(2px 2px at 20px 30px, hsl(var(--star-color)), transparent),
-      radial-gradient(2px 2px at 40px 70px, hsl(var(--star-color) / 0.8), transparent),
-      radial-gradient(1px 1px at 90px 40px, hsl(var(--star-color) / 0.6), transparent),
-      radial-gradient(1px 1px at 130px 80px, hsl(var(--star-color) / 0.4), transparent),
-      radial-gradient(2px 2px at 160px 30px, hsl(var(--star-color) / 0.7), transparent);
-    background-repeat: repeat;
-    background-size: 200px 100px;
-    animation: stars 200s linear infinite;
-    z-index: -2;
-    opacity: 0.8;
-  }
-
-  /* Earth from space background */
-  body::after {
-    content: '';
-    position: fixed;
-    bottom: -40%;
-    left: 50%;
-    width: 80vw;
-    height: 80vw;
-    max-width: 800px;
-    max-height: 800px;
-    background-image: url('/earth-from-space-night-bg2.png');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-color: rgba(0, 100, 200, 0.3); /* Debug blue tint */
-    border-radius: 50%;
-    animation: earthFloat 60s ease-in-out infinite;
-    z-index: -1;
-    filter: blur(0.5px);
-    transform-origin: center;
-  }
+  /* Remove pseudo-element backgrounds - moved to actual elements */
 
   @keyframes stars {
     from { transform: translateX(0); }
