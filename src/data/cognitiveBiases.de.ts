@@ -1,7 +1,6 @@
 // German translations for cognitive biases
 export const cognitiveBiasesTranslations = {
   de: {
-    // Complete translations with definitions and examples
     'Availability Heuristic': {
       name: 'Verfügbarkeits-Heuristik',
       definition: 'Wir überschätzen die Wichtigkeit von Informationen, die leicht abrufbar sind. Wir sind von lebhaften, aktuellen oder emotional aufgeladenen Ereignissen beeinflusst.',
@@ -516,6 +515,16 @@ export const cognitiveBiasesTranslations = {
       name: 'Pessimismusverzerrung',
       definition: 'Die Tendenz, die Wahrscheinlichkeit negativer Ereignisse zu überschätzen.',
       example: 'Immer das schlimmste Szenario zu erwarten, auch wenn Beweise auf positivere Ergebnisse hindeuten.'
+    },
+    'Endowment Effect': {
+      name: 'Besitztumseffekt',
+      definition: 'Die Tendenz, etwas höher zu bewerten, nur weil man es besitzt.',
+      example: 'Sich zu weigern, ein Konzertticket für den Kaufpreis zu verkaufen, obwohl man nicht teilnehmen kann.'
+    },
+    'Fading Affect Bias': {
+      name: 'Schwächende Affektverzerrung',
+      definition: 'Die Tendenz, dass negative Emotionen schneller verblassen als positive Emotionen.',
+      example: 'Sich an Urlaube im Laufe der Zeit positiver zu erinnern, während Stress verblasst.'
     }
   }
 };

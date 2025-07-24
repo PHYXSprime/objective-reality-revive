@@ -341,6 +341,246 @@ export const logicalFallaciesTranslations = {
       name: 'Illusorische Korrelation',
       definition: 'Eine Beziehung zwischen zwei Variablen wahrzunehmen, wenn keine solche Beziehung existiert.',
       example: 'Zu glauben, dass Vollmond mehr Notfälle verursacht, weil man sich an dramatische Vollmondnächte erinnert, aber ruhige vergisst.'
+    },
+    'Appeal to Wealth': {
+      name: 'Appell an Reichtum',
+      definition: 'Anzunehmen, dass jemandes Argumente aufgrund ihres Reichtums gültiger oder moralischer sind.',
+      example: '"Hör auf den Milliardär über die Wirtschaft - er muss es wissen, er ist reich." Reichtum allein validiert keine Argumente.'
+    },
+    'Appeal to Poverty': {
+      name: 'Appell an Armut',
+      definition: 'Anzunehmen, dass jemandes Argumente aufgrund ihrer Armut gültiger oder moralischer sind.',
+      example: '"Hör auf die arme Person über Ungleichheit - sie weiß, wie es wirklich ist." Ihre Erfahrung ist wertvoll, aber Armut allein validiert nicht alle Argumente.'
+    },
+    'Appeal to Age': {
+      name: 'Appell an das Alter',
+      definition: 'Argumente aufgrund des Alters des Argumentierenden abzulehnen oder zu akzeptieren.',
+      example: '"Du bist zu jung, um Politik zu verstehen" oder "Diese altmodische Denkweise ist überholt." Das Alter allein bestimmt nicht die Gültigkeit von Argumenten.'
+    },
+    'Appeal to Flattery': {
+      name: 'Appell an Schmeichelei',
+      definition: 'Komplimente zu verwenden, um ein Argument überzeugender erscheinen zu lassen.',
+      example: '"Du bist so klug, ich bin sicher, du wirst zustimmen, dass diese Investition perfekt für jemanden wie dich ist." Die Schmeichelei ist irrelevant für den Wert der Investition.'
+    },
+    'Appeal to Spite': {
+      name: 'Appell an Boshaftigkeit',
+      definition: 'Boshaftigkeit oder Böswilligkeit gegenüber einer Person oder Gruppe zu fördern, um Zustimmung zu gewinnen.',
+      example: '"Wähle gegen diesen Kandidaten, um diesen Eliten zu zeigen, dass sie uns nicht kontrollieren können!" Dies appelliert an negative Emotionen statt an Politikwerte.'
+    },
+    'Bulverism': {
+      name: 'Bulverismus',
+      definition: 'Anzunehmen, dass ein Argument falsch ist und dann zu erklären, warum der Gegner diese Ansicht vertritt.',
+      example: '"Du unterstützt Waffenkontrolle nur, weil du Angst vor Waffen hast, aber hier ist, warum das falsch ist..." Dies nimmt die Schlussfolgerung vorweg, bevor das Argument behandelt wird.'
+    },
+    'Chronological Snobbery': {
+      name: 'Chronologische Überheblichkeit',
+      definition: 'Ältere Ideen abzulehnen, nur weil sie alt sind.',
+      example: '"Diese Philosophie stammt aus dem 18. Jahrhundert, also ist sie offensichtlich überholt." Das Alter allein invalidiert keine Ideen.'
+    },
+    'Courtier\'s Reply': {
+      name: 'Höflings-Antwort',
+      definition: 'Kritik abzuweisen, indem behauptet wird, der Kritiker habe unzureichendes Wissen oder Qualifikationen.',
+      example: '"Du kannst unsere religiöse Doktrin nicht kritisieren, es sei denn, du hast 20 Jahre Theologie studiert." Dies vermeidet es, die eigentliche Kritik zu behandeln.'
+    },
+    'Ergo Decedo': {
+      name: 'Ergo Decedo',
+      definition: 'Zu suggerieren, dass Kritiker gehen sollten, anstatt Kritik zu äußern.',
+      example: '"Wenn dir dieses Land nicht gefällt, solltest du woanders hinziehen!" Dies vermeidet es, berechtigte Kritik zu behandeln.'
+    },
+    'Fallacy of Relative Privation': {
+      name: 'Fehlschluss der relativen Entbehrung',
+      definition: 'Ein Argument abzuweisen, weil es anderswo wichtigere Probleme gibt.',
+      example: '"Warum sich über lokale Verschmutzung sorgen, wenn es den Klimawandel gibt?" Beide Probleme können gleichzeitig wichtig sein.'
+    },
+    'Godwin\'s Law': {
+      name: 'Godwins Gesetz',
+      definition: 'Jemanden oder etwas unpassend mit Hitler oder Nazis zu vergleichen.',
+      example: '"Maskenpflicht zu unterstützen ist wie das, was Hitler den Juden angetan hat." Dieser Vergleich ist typischerweise unpassend und beendet produktive Diskussionen.'
+    },
+    'Guilt by Association Fallacy': {
+      name: 'Schuld-durch-Assoziation-Fehlschluss',
+      definition: 'Ein Argument aufgrund negativer Assoziationen mit dem Argumentierenden abzulehnen.',
+      example: '"Diese Umweltpolitik wurde auch von Extremistengruppen unterstützt, also muss sie schlecht sein." Die Assoziation invalidiert nicht die Verdienste der Politik.'
+    },
+    'Honor by Association': {
+      name: 'Ehre durch Assoziation',
+      definition: 'Ein Argument aufgrund positiver Assoziationen mit dem Argumentierenden zu akzeptieren.',
+      example: '"Diese Politik muss gut sein, weil Nobelpreisträger sie unterstützen." Selbst Experten können außerhalb ihrer Expertise falsch liegen.'
+    },
+    'Moral High Ground Fallacy': {
+      name: 'Moralische Überlegenheits-Fehlschluss',
+      definition: 'Moralische Überlegenheit zu beanspruchen, um ein Argument zu vermeiden.',
+      example: '"Ich muss nicht mit jemandem debattieren, der Kindern schaden würde." Dies vermeidet es, sich mit dem tatsächlich präsentierten Argument zu befassen.'
+    },
+    'Not as Bad as Fallacy': {
+      name: 'Nicht-so-schlimm-wie-Fehlschluss',
+      definition: 'Eine Handlung zu verteidigen, indem man sie mit etwas Schlimmerem vergleicht.',
+      example: '"Wenigstens habe ich nur bei einem Test betrogen, nicht wie Studenten, die bei allem betrügen." Der Vergleich rechtfertigt das Betrügen nicht.'
+    },
+    'Reductio ad Hitlerum': {
+      name: 'Reductio ad Hitlerum',
+      definition: 'Ein Argument abzulehnen, weil Hitler oder Nazis auch diese Ansicht vertraten.',
+      example: '"Hitler war Vegetarier, also muss Vegetarismus falsch sein." Hitlers Ernährungsentscheidungen beeinflussen nicht die Verdienste des Vegetarismus.'
+    },
+    'Sour Grapes': {
+      name: 'Saure Trauben',
+      definition: 'Etwas als unerwünscht abzutun, weil es unerreichbar ist.',
+      example: '"Ich wollte diese Beförderung sowieso nicht - zu viel Verantwortung." Dies könnte Rationalisierung der Enttäuschung statt ehrlicher Bewertung sein.'
+    },
+    'Sweet Lemon': {
+      name: 'Süße Zitrone',
+      definition: 'Zu behaupten, mit einer unerwünschten Situation glücklich zu sein.',
+      example: '"Ich bin froh, dass ich entlassen wurde - jetzt habe ich mehr Freizeit!" Dies könnte Rationalisierung statt echte Zufriedenheit sein.'
+    },
+    'Thought-Terminating Cliché': {
+      name: 'Gedankenstoppendes Klischee',
+      definition: 'Ein Klischee zu verwenden, um Diskussionen zu beenden, anstatt sich mit Argumenten zu befassen.',
+      example: '"Es ist wie es ist" oder "Alles passiert aus einem Grund." Diese Phrasen stoppen Diskussionen, anstatt sie voranzubringen.'
+    },
+    'Virtue Signaling': {
+      name: 'Tugendhaftigkeit zeigen',
+      definition: 'Argumente hauptsächlich zu machen, um moralische Überlegenheit zu demonstrieren, anstatt aus echter Überzeugung.',
+      example: 'Öffentlich Anliegen in sozialen Medien zu unterstützen ohne echte Aktion oder Verständnis, nur um tugendhaft zu erscheinen.'
+    },
+    'Cherry Picking Causal Evidence': {
+      name: 'Selektive Auswahl kausaler Beweise',
+      definition: 'Nur Beweise auszuwählen, die eine bevorzugte kausale Erklärung stützen, während gegenteilige Beweise ignoriert werden.',
+      example: '"Impfstoffe verursachen Autismus - schau dir diese eine Studie an." Dies ignoriert Dutzende von Studien, die keine kausale Verbindung zeigen.'
+    },
+    'Cum Hoc, Ergo Propter Hoc': {
+      name: 'Cum Hoc, Ergo Propter Hoc',
+      definition: 'Anzunehmen, dass wenn zwei Dinge zusammen auftreten, eines das andere verursacht.',
+      example: '"Länder mit mehr Piraten haben weniger globale Erwärmung, also verhindern Piraten den Klimawandel." Die Korrelation ist zufällig.'
+    },
+    'False Cause': {
+      name: 'Falsche Ursache',
+      definition: 'Fälschlicherweise eine kausale Beziehung zwischen zwei Ereignissen anzunehmen.',
+      example: '"Ich trug meine Glückssocken und gewann das Spiel, also verursachten die Socken den Sieg." Die Socken hatten keine kausale Rolle im Spielausgang.'
+    },
+    'Ignoring a Common Cause': {
+      name: 'Gemeinsame Ursache ignorieren',
+      definition: 'Nicht zu erkennen, dass zwei korrelierte Ereignisse eine gemeinsame zugrundeliegende Ursache haben.',
+      example: 'Anzunehmen, dass gelbe Zähne Lungenkrebs verursachen, und zu ignorieren, dass Rauchen beides verursacht.'
+    },
+    'Joint Effect': {
+      name: 'Gemeinsamer Effekt',
+      definition: 'Anzunehmen, dass weil zwei Dinge verwandt sind, eines das andere verursachen muss, wenn beide Effekte einer dritten Ursache sein könnten.',
+      example: 'Zu denken, dass Eisverkäufe Ertrinkungstodesfälle verursachen, wenn beide aufgrund heißen Wetters zunehmen.'
+    },
+    'Magical Thinking': {
+      name: 'Magisches Denken',
+      definition: 'Zu glauben, dass unverwandte Handlungen Ergebnisse durch übernatürliche Mittel beeinflussen können.',
+      example: '"Wenn ich nicht auf Holz klopfe, wird etwas Schlimmes passieren." Es gibt keinen kausalen Mechanismus, der das Klopfen auf Holz mit Ergebnissen verbindet.'
+    },
+    'Non Causa Pro Causa': {
+      name: 'Non Causa Pro Causa',
+      definition: 'Etwas als Ursache zu identifizieren, wenn es tatsächlich keine Ursache ist.',
+      example: '"Das Krähen des Hahns verursacht den Sonnenaufgang." Das Krähen korreliert mit dem Sonnenaufgang, verursacht ihn aber nicht.'
+    },
+    'Oversimplified Cause': {
+      name: 'Übervereinfachte Ursache',
+      definition: 'Eine komplexe Wirkung auf eine einzige Ursache zu reduzieren, wenn mehrere Faktoren beteiligt sind.',
+      example: '"Der Erste Weltkrieg wurde durch die Ermordung von Erzherzog Franz Ferdinand verursacht." Dies ignoriert komplexe politische Spannungen und Allianzen.'
+    },
+    'Paranoid Attribution': {
+      name: 'Paranoide Attribution',
+      definition: 'Negative Ereignisse vorsätzlichen feindlichen Handlungen ohne Beweise zuzuschreiben.',
+      example: '"Mein Computer ist abgestürzt, weil Hacker mich ins Visier nehmen." Hardwarefehler sind wahrscheinlicher als gezielte Angriffe.'
+    },
+    'Post Hoc Rationalization': {
+      name: 'Post-Hoc-Rationalisierung',
+      definition: 'Kausale Erklärungen für Ereignisse nach ihrem Auftreten zu erstellen, ohne Beweise.',
+      example: '"Ich bekam den Job, weil ich meinen Machtanzug trug." Du hast ihn möglicherweise aufgrund von Qualifikationen bekommen, nicht wegen der Kleidung.'
+    },
+    'Affirming a Disjunct': {
+      name: 'Bejahung einer Disjunktion',
+      definition: 'In einer "Entweder-oder"-Aussage zu schlussfolgern, dass weil eine Option wahr ist, die andere falsch sein muss.',
+      example: '"Entweder regnet es oder die Sprinkler sind an. Es regnet, also sind die Sprinkler nicht an." Beide könnten gleichzeitig wahr sein.'
+    },
+    'Denying a Conjunct': {
+      name: 'Verneinung einer Konjunktion',
+      definition: 'In einer "Und"-Aussage zu schlussfolgern, dass weil die ganze Aussage falsch ist, alle Teile falsch sein müssen.',
+      example: '"Es ist nicht wahr, dass sowohl John als auch Mary hier sind, also sind weder John noch Mary hier." Eine könnte hier sein, während die andere nicht da ist.'
+    },
+    'Existential Fallacy': {
+      name: 'Existenzfehlschluss',
+      definition: 'Zu schlussfolgern, dass etwas existiert basierend auf universellen Aussagen, die möglicherweise keine Instanzen haben.',
+      example: '"Alle Einhörner sind magisch, also muss es mindestens ein magisches Einhorn geben." Die Prämisse stellt nicht fest, dass Einhörner existieren.'
+    },
+    'Four Terms Fallacy': {
+      name: 'Vier-Begriffe-Fehlschluss',
+      definition: 'Ein Syllogismus mit vier Begriffen statt drei, was ihn ungültig macht.',
+      example: '"Alle Banken sind Finanzinstitute. Das Flussufer ist eine Bank. Daher ist das Flussufer ein Finanzinstitut." "Bank" hat verschiedene Bedeutungen.'
+    },
+    'Masked Man Fallacy': {
+      name: 'Maskierter-Mann-Fehlschluss',
+      definition: 'Eine Beschreibung von etwas durch eine andere basierend auf Identität zu ersetzen, wenn die Beschreibungen verschiedene logische Eigenschaften haben.',
+      example: '"Clark Kent ist Superman. Lois Lane liebt Superman. Daher liebt Lois Lane Clark Kent." Dies ignoriert, dass sie nicht weiß, dass sie dieselbe Person sind.'
+    },
+    'Modal Fallacy': {
+      name: 'Modalfehlschluss',
+      definition: 'Notwendigkeit und Möglichkeit in logischen Argumenten zu verwechseln.',
+      example: '"Es ist möglich, dass es morgen regnet, daher ist es notwendig, dass es möglicherweise regnen könnte." Dies verwechselt verschiedene modale Konzepte.'
+    },
+    'Quantifier Shift': {
+      name: 'Quantorverschiebung',
+      definition: 'Die Reihenfolge von Quantoren in logischen Aussagen falsch zu ändern.',
+      example: '"Jeder hat jemanden, den er liebt" zu "Es gibt jemanden, den jeder liebt" zu ändern. Diese haben verschiedene Bedeutungen.'
+    },
+    'Scope Fallacy': {
+      name: 'Reichweitenfehlschluss',
+      definition: 'Den Geltungsbereich logischer Operatoren in komplexen Aussagen misszuverstehen.',
+      example: '"Es ist nicht der Fall, dass alle Vögel fliegen können" als "Keine Vögel können fliegen" statt "Einige Vögel können nicht fliegen" zu missverstehen.'
+    },
+    'Appeal to Extremes': {
+      name: 'Appell an Extreme',
+      definition: 'Anzunehmen, dass wenn etwas in gewissem Maße gut ist, dann mehr besser sein muss, oder wenn etwas schlecht ist, jede Menge inakzeptabel ist.',
+      example: '"Bewegung ist gesund, also müssen täglich 20 Meilen zu laufen extrem gesund sein." Moderate Mengen sind oft optimal.'
+    },
+    'Argument from Incredulity': {
+      name: 'Argument aus Ungläubigkeit',
+      definition: 'Zu argumentieren, dass weil etwas schwer zu verstehen oder zu glauben ist, es falsch sein muss.',
+      example: '"Ich kann nicht verstehen, wie Evolution solch komplexe Organismen schaffen könnte, also muss sie falsch sein." Persönliche Ungläubigkeit widerlegt keine wissenschaftlichen Fakten.'
+    },
+    'Bifurcation Fallacy': {
+      name: 'Bifurkationsfehlschluss',
+      definition: 'Zwei alternative Zustände als die einzigen Möglichkeiten zu präsentieren, wenn mehr existieren.',
+      example: '"Du bist entweder für uns oder gegen uns." Dies ignoriert neutrale Positionen oder alternative Loyalitäten.'
+    },
+    'Black and White Thinking': {
+      name: 'Schwarz-Weiß-Denken',
+      definition: 'Situationen nur in zwei extremen Kategorien zu sehen.',
+      example: '"Entweder bist du erfolgreich oder ein Versager." Dies ignoriert Abstufungen und Zwischenpositionen.'
+    },
+    'Excluded Middle': {
+      name: 'Ausgeschlossene Mitte',
+      definition: 'Zu behaupten, dass zwischen zwei Extremen keine Zwischenpositionen existieren.',
+      example: '"Du musst entweder Pazifist oder Kriegstreiber sein." Es gibt viele Positionen zwischen diesen Extremen.'
+    },
+    'False Dichotomy': {
+      name: 'Falsche Dichotomie',
+      definition: 'Nur zwei Optionen zu präsentieren, wenn mehr Möglichkeiten existieren.',
+      example: '"Wir müssen entweder die Umwelt schützen oder Arbeitsplätze schaffen." Beide Ziele können gleichzeitig verfolgt werden.'
+    },
+    'Morton\'s Fork': {
+      name: 'Mortons Gabel',
+      definition: 'Eine Situation zu schaffen, in der beide verfügbaren Optionen zum gleichen unerwünschten Ergebnis führen.',
+      example: '"Wenn du reich bist, kannst du dir Steuern leisten. Wenn du arm bist, hast du keine Ausgaben. Also können alle hohe Steuern zahlen." Beide Wege führen zur gleichen Schlussfolgerung.'
+    },
+    'Package Deal Fallacy': {
+      name: 'Paketgeschäft-Fehlschluss',
+      definition: 'Anzunehmen, dass Konzepte, die zusammen gruppiert sind, zusammen akzeptiert oder abgelehnt werden müssen.',
+      example: '"Du kannst nicht Demokratie mögen und Kapitalismus nicht mögen - sie gehören zusammen." Diese können unabhängig beurteilt werden.'
+    },
+    'Pensée Unique': {
+      name: 'Pensée Unique',
+      definition: 'Zu behaupten, dass es nur einen akzeptablen Weg gibt, über ein Problem zu denken.',
+      example: '"Es gibt nur einen Weg, die Wirtschaft zu verstehen." Dies schließt alternative Wirtschaftstheorien aus.'
+    },
+    'Suppressed Correlative': {
+      name: 'Unterdrücktes Korrelat',
+      definition: 'Eine Begriffsdefinition zu redefinieren, um Gegenfälle zu eliminieren.',
+      example: 'Nach Kritik an "freiem" Gesundheitswesen zu sagen: "Nichts ist wirklich frei", um die Diskussion über Finanzierung zu vermeiden.'
     }
   }
 };
