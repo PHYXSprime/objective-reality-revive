@@ -2,7 +2,7 @@ export interface LogicalFallacy {
   name: string;
   definition: string;
   example: string;
-  category: 'relevance' | 'presumption' | 'weak_inference' | 'distraction';
+  category: 'relevance' | 'presumption' | 'weak_inference' | 'causal' | 'formal' | 'conditional';
 }
 
 export const logicalFallacies: LogicalFallacy[] = [

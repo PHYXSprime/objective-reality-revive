@@ -2,7 +2,7 @@ export interface CognitiveBias {
   name: string;
   definition: string;
   example: string;
-  category: 'too_much_information' | 'not_enough_meaning' | 'need_to_act_fast' | 'what_should_we_remember';
+  category: 'too_much_information' | 'not_enough_meaning' | 'need_to_act_fast' | 'what_to_remember';
 }
 
 export const cognitiveBiases: CognitiveBias[] = [
@@ -143,12 +143,12 @@ export const cognitiveBiases: CognitiveBias[] = [
     name: 'Recency Effect',
     definition: 'The tendency to better remember the most recently presented items or experiences.',
     example: 'In a job interview, the interviewer is more likely to remember candidates they met later in the day.',
-    category: 'what_should_we_remember',
+    category: 'what_to_remember',
   },
   {
     name: 'Peak-End Rule',
     definition: 'People judge an experience largely based on how they felt at its peak and how it ended, rather than on the total sum or average of every moment.',
     example: 'A vacation with mostly mediocre weather but a spectacular final day will be remembered more fondly than one with consistently good weather but a rainy last day.',
-    category: 'what_should_we_remember',
+    category: 'what_to_remember',
   }
 ];

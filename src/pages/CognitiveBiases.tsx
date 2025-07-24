@@ -23,7 +23,7 @@ export default function CognitiveBiases() {
     { value: 'too_much_information', label: t('category.too_much_information') },
     { value: 'not_enough_meaning', label: t('category.not_enough_meaning') },
     { value: 'need_to_act_fast', label: t('category.need_to_act_fast') },
-    { value: 'what_should_we_remember', label: t('category.what_should_we_remember') },
+    { value: 'what_to_remember', label: t('category.what_to_remember') },
   ];
 
   const filteredBiases = cognitiveBiases.filter(bias => {
@@ -38,7 +38,7 @@ export default function CognitiveBiases() {
       case 'too_much_information': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
       case 'not_enough_meaning': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
       case 'need_to_act_fast': return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200';
-      case 'what_should_we_remember': return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200';
+      case 'what_to_remember': return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200';
       default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200';
     }
   };
