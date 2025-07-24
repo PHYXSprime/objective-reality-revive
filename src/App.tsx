@@ -34,7 +34,7 @@ const App = () => (
           width: '100%', 
           height: '100vh', 
           backgroundColor: 'red', 
-          zIndex: 1,
+          zIndex: 999,
           pointerEvents: 'none'
         }}></div>
         <div className="earth-container" style={{
@@ -48,12 +48,12 @@ const App = () => (
           maxHeight: '600px', 
           backgroundColor: 'lime', 
           borderRadius: '50%',
-          zIndex: 2,
+          zIndex: 998,
           pointerEvents: 'none'
         }}></div>
         
         {/* Main App Content */}
-        <div className="app-content">
+        <div className="app-content" style={{position: 'relative', zIndex: 1000}}>
           <Toaster />
           <Sonner />
           <BrowserRouter>
