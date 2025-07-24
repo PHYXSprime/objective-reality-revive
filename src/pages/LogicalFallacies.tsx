@@ -95,9 +95,13 @@ export default function LogicalFallacies() {
         </div>
 
         {/* Results Count */}
-        <div className="mb-6">
+        <div className="mb-6 flex justify-between items-center">
           <p className="text-muted-foreground">
             Showing {filteredFallacies.length} of {logicalFallacies.length} logical fallacies
+          </p>
+          {/* Debug info */}
+          <p className="text-xs text-muted-foreground">
+            Categories available: {categories.length} | Current: {selectedCategory}
           </p>
         </div>
 

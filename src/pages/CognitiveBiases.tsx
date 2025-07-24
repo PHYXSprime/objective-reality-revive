@@ -93,9 +93,13 @@ export default function CognitiveBiases() {
         </div>
 
         {/* Results Count */}
-        <div className="mb-6">
+        <div className="mb-6 flex justify-between items-center">
           <p className="text-muted-foreground">
             Showing {filteredBiases.length} of {cognitiveBiases.length} cognitive biases
+          </p>
+          {/* Debug info */}
+          <p className="text-xs text-muted-foreground">
+            Categories available: {categories.length} | Current: {selectedCategory}
           </p>
         </div>
 
