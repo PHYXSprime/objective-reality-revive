@@ -26,31 +26,9 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <LanguageProvider>
-        {/* Background Elements - Explicit layering control */}
-        <div className="starfield-container" style={{
-          position: 'fixed', 
-          top: 0, 
-          left: 0, 
-          width: '100%', 
-          height: '100vh', 
-          backgroundColor: 'red', 
-          zIndex: 999,
-          pointerEvents: 'none'
-        }}></div>
-        <div className="earth-container" style={{
-          position: 'fixed', 
-          bottom: '-25%', 
-          left: '50%', 
-          transform: 'translateX(-50%)', 
-          width: '60vw', 
-          height: '60vw', 
-          maxWidth: '600px', 
-          maxHeight: '600px', 
-          backgroundColor: 'lime', 
-          borderRadius: '50%',
-          zIndex: 998,
-          pointerEvents: 'none'
-        }}></div>
+        {/* Background Elements */}
+        <div className="starfield-container"></div>
+        <div className="earth-container"></div>
         
         {/* Main App Content */}
         <div className="app-content" style={{position: 'relative', zIndex: 1000}}>
