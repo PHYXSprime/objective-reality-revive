@@ -17,11 +17,11 @@ export function Navigation() {
   const location = useLocation();
 
   const navItems = [
-    { path: '/challenges', label: t('nav.challenges') },
-    { path: '/solutions', label: t('nav.solutions') },
+    { path: '/consciousness', label: t('nav.consciousness') },
     { path: '/cognitive-biases', label: t('nav.cognitive-biases') },
     { path: '/logical-fallacies', label: t('nav.logical-fallacies') },
-    { path: '/consciousness', label: t('nav.consciousness') },
+    { path: '/challenges', label: t('nav.challenges') },
+    { path: '/solutions', label: t('nav.solutions') },
   ];
 
   const languages: { code: Language; name: string; flag: string }[] = [
