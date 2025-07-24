@@ -452,11 +452,7 @@ export const logicalFallaciesTranslations = {
       definition: 'Anzunehmen, dass wenn zwei Dinge zusammen auftreten, eines das andere verursacht.',
       example: '"Länder mit mehr Piraten haben weniger globale Erwärmung, also verhindern Piraten den Klimawandel." Die Korrelation ist zufällig.'
     },
-    'False Cause': {
-      name: 'Falsche Ursache',
-      definition: 'Fälschlicherweise eine kausale Beziehung zwischen zwei Ereignissen anzunehmen.',
-      example: '"Ich trug meine Glückssocken und gewann das Spiel, also verursachten die Socken den Sieg." Die Socken hatten keine kausale Rolle im Spielausgang.'
-    },
+    // Duplicate removed - 'False Cause' already exists at line 95
     'Ignoring a Common Cause': {
       name: 'Gemeinsame Ursache ignorieren',
       definition: 'Nicht zu erkennen, dass zwei korrelierte Ereignisse eine gemeinsame zugrundeliegende Ursache haben.',
