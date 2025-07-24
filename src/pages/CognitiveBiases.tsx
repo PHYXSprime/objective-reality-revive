@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { Search, Filter } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { cognitiveBiases } from '@/data/cognitiveBiases';
+import { cognitiveBiasesTranslations } from '@/data/cognitiveBiases.de';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -16,9 +17,23 @@ import {
 import { ChallengeNavigation } from '@/components/ChallengeNavigation';
 
 export default function CognitiveBiases() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  // Helper function to get translated content
+  const getTranslatedBias = (bias: any) => {
+    if (language === 'de' && cognitiveBiasesTranslations.de[bias.name]) {
+      const translation = cognitiveBiasesTranslations.de[bias.name];
+      return {
+        name: translation.name,
+        definition: translation.definition,
+        example: translation.example,
+        category: bias.category
+      };
+    }
+    return bias;
+  };
 
   // Generate categories dynamically from the data
   const uniqueCategories = [...new Set(cognitiveBiases.map(bias => bias.category))];
@@ -31,8 +46,9 @@ export default function CognitiveBiases() {
   ];
 
   const filteredBiases = cognitiveBiases.filter(bias => {
-    const matchesSearch = bias.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         bias.definition.toLowerCase().includes(searchTerm.toLowerCase());
+    const translatedBias = getTranslatedBias(bias);
+    const matchesSearch = translatedBias.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         translatedBias.definition.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || bias.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
@@ -98,31 +114,34 @@ export default function CognitiveBiases() {
 
         {/* Biases Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {filteredBiases.map((bias, index) => (
-            <Card key={index} className="h-full glass-card float-card hover:glow-primary transition-all duration-300">
-              <CardHeader>
-                <div className="flex items-start justify-between">
-                  <CardTitle className="text-lg leading-tight">
-                    {bias.name}
-                  </CardTitle>
-                  <Badge className={getCategoryColor(bias.category)}>
-                    {t(`category.${bias.category}`)}
-                  </Badge>
-                </div>
-              </CardHeader>
-              <CardContent className="space-y-4">
-                <CardDescription className="text-sm leading-relaxed">
-                  {bias.definition}
-                </CardDescription>
-                <div>
-                  <h4 className="font-medium text-sm text-foreground mb-2">{t('example')}:</h4>
-                  <p className="text-sm text-muted-foreground italic leading-relaxed">
-                    {bias.example}
-                  </p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+          {filteredBiases.map((bias, index) => {
+            const translatedBias = getTranslatedBias(bias);
+            return (
+              <Card key={index} className="h-full glass-card float-card hover:glow-primary transition-all duration-300">
+                <CardHeader>
+                  <div className="flex items-start justify-between">
+                    <CardTitle className="text-lg leading-tight">
+                      {translatedBias.name}
+                    </CardTitle>
+                    <Badge className={getCategoryColor(bias.category)}>
+                      {t(`category.${bias.category}`)}
+                    </Badge>
+                  </div>
+                </CardHeader>
+                <CardContent className="space-y-4">
+                  <CardDescription className="text-sm leading-relaxed">
+                    {translatedBias.definition}
+                  </CardDescription>
+                  <div>
+                    <h4 className="font-medium text-sm text-foreground mb-2">{t('example')}:</h4>
+                    <p className="text-sm text-muted-foreground italic leading-relaxed">
+                      {translatedBias.example}
+                    </p>
+                  </div>
+                </CardContent>
+              </Card>
+            );
+          })}
         </div>
 
         {/* No Results */}
