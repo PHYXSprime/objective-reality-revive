@@ -71,24 +71,17 @@ export default function CognitiveBiases() {
               className="pl-10 bg-background border-border"
             />
           </div>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant="outline">
-                <Filter className="h-4 w-4 mr-2" />
-                {categories.find(cat => cat.value === selectedCategory)?.label}
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent align="end" className="z-50 min-w-[200px]">
-              {categories.map((category, index) => (
-                <DropdownMenuItem
-                  key={`${category.value}-${index}`}
-                  onClick={() => setSelectedCategory(category.value)}
-                >
-                  {category.label} ({category.value})
-                </DropdownMenuItem>
-              ))}
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <select 
+            value={selectedCategory} 
+            onChange={(e) => setSelectedCategory(e.target.value)}
+            className="px-3 py-2 border border-border rounded-md bg-background text-foreground"
+          >
+            {categories.map((category) => (
+              <option key={category.value} value={category.value}>
+                {category.label} ({category.value})
+              </option>
+            ))}
+          </select>
         </div>
 
         {/* Results Count */}
