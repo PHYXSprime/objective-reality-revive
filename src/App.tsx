@@ -18,6 +18,7 @@ import LogicalFallacies from "./pages/LogicalFallacies";
 import Consciousness from "./pages/Consciousness";
 import ScientificConsensus from "./pages/ScientificConsensus";
 import Censorship from "./pages/Censorship";
+import Propaganda from "./pages/Propaganda";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -49,6 +50,7 @@ const App = () => (
               <Route path="/consciousness" element={<Consciousness />} />
               <Route path="/consensus" element={<ScientificConsensus />} />
               <Route path="/censorship" element={<Censorship />} />
+              <Route path="/propaganda" element={<Propaganda />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>

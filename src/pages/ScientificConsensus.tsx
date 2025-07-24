@@ -32,9 +32,11 @@ export default function ScientificConsensus() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-foreground mb-6">
-            Scientific Consensus as a Golden Calf
-          </h1>
+          <div className="glass-card p-8 max-w-4xl mx-auto mb-8">
+            <h1 className="text-4xl font-bold text-foreground mb-6">
+              Scientific Consensus as a Golden Calf
+            </h1>
+          </div>
           <div className="glass-card p-6 max-w-4xl mx-auto mb-8">
             <p className="text-xl text-muted-foreground">
               The scientific community agrees on a current consensus – which is constantly adjusted according to the latest findings. THAT is the difference to religious beliefs and dogmas.
