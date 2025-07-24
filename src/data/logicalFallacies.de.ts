@@ -131,6 +131,216 @@ export const logicalFallaciesTranslations = {
       name: 'Teilungsfehlschluss',
       definition: 'Anzunehmen, dass was für ein Ganzes wahr ist, auch für seine Teile wahr sein muss.',
       example: '"Diese Universität ist berühmt, also müssen alle ihre Professoren berühmt sein." Die Eigenschaften der Institution gelten nicht unbedingt für alle Individuen darin.'
+    },
+    'Guilt by Association': {
+      name: 'Schuld durch Assoziation',
+      definition: 'Dieser Fehlschluss lehnt ein Argument wegen der damit verbundenen Personen oder Gruppen ab, anstatt den Wert des Arguments zu prüfen.',
+      example: '"Dieser Politikvorschlag kann nicht gut sein, weil er von diesem umstrittenen Politiker unterstützt wurde." Die Assoziation macht die Politik selbst nicht ungültig.'
+    },
+    'Poisoning the Well': {
+      name: 'Brunnenvergiftung',
+      definition: 'Dieser Fehlschluss beinhaltet die Diskreditierung eines Gegners, bevor er die Chance hatte, sein Argument zu präsentieren.',
+      example: '"Bevor Sie Dr. Jones zuhören, sollten Sie wissen, dass sie von ihren Kollegen kritisiert wurde und kontroverse Ansichten hat." Dies versucht, das Publikum gegen ihre Argumente zu beeinflussen, bevor sie präsentiert werden.'
+    },
+    'Tone Policing': {
+      name: 'Tonüberwachung',
+      definition: 'Dieser Fehlschluss verwirft ein Argument aufgrund seines Tons oder emotionalen Ausdrucks anstatt seines Inhalts.',
+      example: '"Ich kann Ihr Argument nicht ernst nehmen, weil Sie zu emotional darüber sind." Der emotionale Ton macht den logischen Inhalt nicht ungültig.'
+    },
+    'Whataboutism': {
+      name: 'Whataboutismus',
+      definition: 'Dieser Fehlschluss lenkt Kritik ab, indem er auf ähnliche Probleme anderswo hinweist, anstatt die Kritik direkt anzugehen.',
+      example: 'Auf Konfrontation über Korruption in ihrer Regierung zu antworten: "Was ist mit der Korruption in anderen Ländern?" Dies geht nicht auf die ursprüngliche Kritik ein.'
+    },
+    'Appeal to Consequences': {
+      name: 'Appell an die Konsequenzen',
+      definition: 'Dieser Fehlschluss argumentiert, dass ein Glaube wahr oder falsch ist, basierend darauf, ob seine Konsequenzen wünschenswert oder unerwünscht sind.',
+      example: '"Wenn Evolution wahr ist, dann hat das Leben keine Bedeutung, was schrecklich wäre. Daher muss Evolution falsch sein." Die unerwünschten Konsequenzen beeinflussen nicht die Wahrheit der Evolution.'
+    },
+    'Post Hoc Ergo Propter Hoc': {
+      name: 'Post Hoc Ergo Propter Hoc',
+      definition: 'Anzunehmen, dass weil ein Ereignis auf ein anderes folgte, das erste Ereignis das zweite verursacht hat. Dies verwechselt Korrelation mit Kausalität.',
+      example: '"Jedes Mal, wenn ich mein Auto wasche, regnet es am nächsten Tag. Daher verursacht das Waschen meines Autos Regen." Die zeitliche Abfolge begründet keine kausale Beziehung.'
+    },
+    'Cum Hoc Ergo Propter Hoc': {
+      name: 'Cum Hoc Ergo Propter Hoc',
+      definition: 'Anzunehmen, dass weil zwei Ereignisse zusammen auftreten, eines das andere verursachen muss.',
+      example: '"Eisverkäufe und Ertrinkungsfälle steigen beide im Sommer, also muss Eis Ertrinken verursachen." Beide werden tatsächlich durch heißes Wetter verursacht, das zum Schwimmen und Eiskonsum ermutigt.'
+    },
+    'Single Cause Fallacy': {
+      name: 'Einzelursachen-Fehlschluss',
+      definition: 'Die Annahme, dass es eine einfache Ursache für ein Ergebnis gibt, wenn es in Wirklichkeit durch eine Anzahl nur gemeinsam ausreichender Ursachen verursacht worden sein könnte.',
+      example: '"Der einzige Grund, warum unser Team das Spiel verloren hat, war diese schlechte Entscheidung des Schiedsrichters." Dies ignoriert schlechte Spielzüge, verpasste Gelegenheiten und andere Faktoren, die zur Niederlage beitrugen.'
+    },
+    'Wrong Direction': {
+      name: 'Falsche Richtung',
+      definition: 'Dieser Fehlschluss tritt auf, wenn die Ursache-Wirkungs-Beziehung umgekehrt wird.',
+      example: '"Erfolgreiche Menschen sind selbstbewusst, also wenn ich selbstbewusst handle, werde ich erfolgreich." Das Selbstvertrauen könnte ein Ergebnis des Erfolgs sein, nicht die Ursache davon.'
+    },
+    'Complex Cause': {
+      name: 'Komplexe Ursache',
+      definition: 'Dieser Fehlschluss nimmt an, dass wenn eine Sache eine andere verursacht hat, dann muss die erste Sache die primäre oder einzige Ursache sein.',
+      example: '"Da das Lernen mir geholfen hat, den Test zu bestehen, muss das Lernen das Einzige sein, was für akademischen Erfolg zählt." Dies ignoriert Faktoren wie Schlaf, Ernährung, Stressmanagement und natürliche Fähigkeiten.'
+    },
+    'Regression Fallacy': {
+      name: 'Regressions-Fehlschluss',
+      definition: 'Anzunehmen, dass ein extremes Ergebnis aufgrund einer Intervention von einem moderateren Ergebnis gefolgt wird, wenn es tatsächlich auf natürliche statistische Regression zurückzuführen ist.',
+      example: '"Nachdem ich angefangen habe, Vitamine zu nehmen, haben meine Kopfschmerzen abgenommen. Die Vitamine müssen wirken!" Die Kopfschmerzen könnten nach einer ungewöhnlich schlimmen Phase natürlich abgenommen haben.'
+    },
+    'Affirming the Consequent': {
+      name: 'Bestätigung des Konsequens',
+      definition: 'Ein formaler logischer Fehlschluss, der auftritt, wenn das Konsequens einer bedingten Aussage bestätigt wird und daraus das Antezedens gefolgert wird.',
+      example: '"Wenn es regnet, wird der Boden nass. Der Boden ist nass, also muss es geregnet haben." Der nasse Boden könnte von einem Sprinklersystem stammen, nicht vom Regen.'
+    },
+    'Denying the Antecedent': {
+      name: 'Verleugnung des Antezedens',
+      definition: 'Ein formaler logischer Fehlschluss, der auftritt, wenn das Antezedens einer bedingten Aussage verneint wird und daraus die Verneinung des Konsequens gefolgert wird.',
+      example: '"Wenn es regnet, wird der Boden nass. Es regnet nicht, also ist der Boden nicht nass." Der Boden könnte trotzdem aus anderen Quellen nass sein.'
+    },
+    'Undistributed Middle': {
+      name: 'Nicht verteilter Mittelbegriff',
+      definition: 'Ein formaler Fehlschluss, der auftritt, wenn der Mittelbegriff in einem Syllogismus nicht in mindestens einer der Prämissen verteilt ist.',
+      example: '"Alle Vögel haben Flügel. Alle Fledermäuse haben Flügel. Daher sind alle Fledermäuse Vögel." Der Mittelbegriff "haben Flügel" ist nicht richtig verteilt.'
+    },
+    'Illicit Major': {
+      name: 'Unerlaubter Oberbegriff',
+      definition: 'Ein formaler Fehlschluss, bei dem der Oberbegriff in der Schlussfolgerung, aber nicht in der Oberprämisse verteilt ist.',
+      example: '"Alle Katzen sind Säugetiere. Keine Hunde sind Katzen. Daher sind keine Hunde Säugetiere." Die Schlussfolgerung verteilt fälschlicherweise "Säugetiere".'
+    },
+    'Illicit Minor': {
+      name: 'Unerlaubter Unterbegriff',
+      definition: 'Ein formaler Fehlschluss, bei dem der Unterbegriff in der Schlussfolgerung, aber nicht in der Unterprämisse verteilt ist.',
+      example: '"Alle Rosen sind Blumen. Alle Rosen sind rot. Daher sind alle Blumen rot." Die Schlussfolgerung verteilt fälschlicherweise "Blumen".'
+    },
+    'Exclusive Premises': {
+      name: 'Ausschließliche Prämissen',
+      definition: 'Ein formaler Fehlschluss, der auftritt, wenn beide Prämissen eines Syllogismus negativ sind.',
+      example: '"Keine Katzen sind Hunde. Keine Hunde sind Vögel. Daher sind keine Katzen Vögel." Man kann keine gültige Schlussfolgerung aus zwei negativen Prämissen ziehen.'
+    },
+    'Perfect Solution Fallacy': {
+      name: 'Perfekte-Lösung-Fehlschluss',
+      definition: 'Dieser Fehlschluss nimmt an, dass eine Lösung abgelehnt werden sollte, weil sie nicht perfekt ist, auch wenn sie immer noch erhebliche Verbesserung bieten würde.',
+      example: '"Wir sollten keine Sicherheitskameras installieren, weil sie nicht alle Verbrechen verhindern." Die Kameras müssen nicht 100% effektiv sein, um lohnenswert zu sein.'
+    },
+    'Nirvana Fallacy': {
+      name: 'Nirvana-Fehlschluss',
+      definition: 'Tatsächliche Dinge mit unrealistischen, idealisierten Alternativen zu vergleichen.',
+      example: '"Demokratie ist fehlerhaft, weil sie nicht immer perfekt die Interessen aller repräsentiert." Dies vergleicht Demokratie mit einem unmöglichen perfekten System anstatt mit anderen realistischen Alternativen.'
+    },
+    'False Compromise': {
+      name: 'Falscher Kompromiss',
+      definition: 'Anzunehmen, dass der Kompromiss zwischen zwei Positionen immer korrekt ist.',
+      example: '"Eine Seite sagt, die Erde ist rund, die andere sagt, sie ist flach, also muss die Wahrheit sein, dass sie leicht gekrümmt ist." Manchmal ist eine Seite einfach richtig und die andere falsch.'
+    },
+    'Continuum Fallacy': {
+      name: 'Kontinuum-Fehlschluss',
+      definition: 'Die Annahme, dass weil es keine klare Trennlinie zwischen zwei Konzepten gibt, keine Unterscheidung zwischen ihnen gemacht werden kann.',
+      example: '"Es gibt keinen exakten Moment, wann jemand "groß" wird, also sind Größenunterschiede bedeutungslos." Das Fehlen einer präzisen Grenze eliminiert nicht die Gültigkeit der allgemeinen Kategorien.'
+    },
+    'Complex Question': {
+      name: 'Komplexe Frage',
+      definition: 'Ein Fehlschluss, bei dem eine Frage gestellt wird, die etwas voraussetzt, was nicht von allen Beteiligten bewiesen oder akzeptiert wurde.',
+      example: '"Warum ist der Angeklagte ein so gefährlicher Verbrecher?" Dies nimmt an, dass der Angeklagte gefährlich und kriminell ist, ohne diese Fakten zu etablieren.'
+    },
+    'Assumption of Hidden Facts': {
+      name: 'Annahme versteckter Fakten',
+      definition: 'Anzunehmen, dass bestimmte unausgesprochene Fakten existieren, um Ihr Argument zu stützen.',
+      example: '"Der Zeuge muss lügen, weil er nervös wirkt." Dies nimmt an, dass Nervosität immer Täuschung anzeigt, und ignoriert andere Gründe für Angst.'
+    },
+    'False Premise': {
+      name: 'Falsche Prämisse',
+      definition: 'Ein Argument, das auf einer faktisch inkorrekten Prämisse basiert.',
+      example: '"Da alle Schwäne weiß sind, kann jeder Vogel, der nicht weiß ist, kein Schwan sein." Die Prämisse ist falsch—schwarze Schwäne existieren.'
+    },
+    'Unrepresentative Sample': {
+      name: 'Nicht repräsentative Stichprobe',
+      definition: 'Schlussfolgerungen aus einer Stichprobe ziehen, die nicht repräsentativ für die untersuchte Population ist.',
+      example: '"Ich habe Menschen im Fitnessstudio über Bewegungsgewohnheiten befragt und herausgefunden, dass 95% regelmäßig trainieren, also müssen die meisten Menschen regelmäßig trainieren." Fitnessstudio-Besucher sind nicht repräsentativ für die Allgemeinbevölkerung.'
+    },
+    'False Analogy': {
+      name: 'Falsche Analogie',
+      definition: 'Eine Analogie, bei der die beiden verglichenen Objekte oder Ereignisse relevant unähnlich sind.',
+      example: '"Angestellte sind wie Nägel. Genauso wie Nägel auf den Kopf getroffen werden müssen, damit sie funktionieren, müssen Angestellte ständig unter Druck gesetzt werden, um produktiv zu sein." Die Analogie bricht zusammen, weil Angestellte denkende Wesen sind, nicht leblose Objekte.'
+    },
+    'Weak Analogy': {
+      name: 'Schwache Analogie',
+      definition: 'Eine Analogie, bei der die Ähnlichkeiten zwischen zwei Dingen oberflächlich sind und die Unterschiede bedeutsam.',
+      example: '"Das Gehirn ist wie ein Computer, also sollten wir es wie einen Computer behandeln können." Während beide Informationen verarbeiten, sind die biologischen Prozesse des Gehirns grundlegend anders als elektronische Berechnungen.'
+    },
+    'Questionable Cause': {
+      name: 'Fragwürdige Ursache',
+      definition: 'Anzunehmen, dass weil zwei Dinge zusammen auftreten, eines das andere verursacht, ohne ausreichende Beweise für eine kausale Beziehung.',
+      example: '"Immer wenn ich meinen Glückshut trage, gewinnt mein Team. Der Hut muss das Gewinnen verursachen." Dies verwechselt Korrelation mit Kausalität ohne Berücksichtigung anderer Faktoren.'
+    },
+    'Cherry Picking': {
+      name: 'Rosinenpickerei',
+      definition: 'Selektiv Beweise zu wählen, die eine bestimmte Position unterstützen, während Beweise ignoriert werden, die ihr widersprechen.',
+      example: '"Sehen Sie sich diese fünf Studien an, die zeigen, dass unser Produkt funktioniert!" während 50 andere Studien ignoriert werden, die zeigen, dass es nicht funktioniert.'
+    },
+    'Texas Sharpshooter': {
+      name: 'Texas-Scharfschütze',
+      definition: 'Muster in zufälligen Daten zu finden, indem man sich auf Cluster konzentriert und Unterschiede ignoriert.',
+      example: 'Nach einem Unfall zu bemerken, dass alle Opfer aus derselben Stadt stammten, und zu schließen, dass die Stadt verflucht ist, ohne zu berücksichtigen, dass die meisten Menschen in der Gegend aus dieser Stadt stammen.'
+    },
+    'Prosecutor\'s Fallacy': {
+      name: 'Staatsanwalts-Fehlschluss',
+      definition: 'Ein statistischer Fehlschluss, bei dem die Wahrscheinlichkeit der Unschuld bei gegebenen Beweisen mit der Wahrscheinlichkeit der Beweise bei gegebener Unschuld verwechselt wird.',
+      example: 'Zu argumentieren, dass weil ein DNA-Match eine 1-zu-Million-Chance hat, die Wahrscheinlichkeit der Unschuld 1 zu Million ist, ohne die Grundrate zu berücksichtigen.'
+    },
+    'Base Rate Fallacy': {
+      name: 'Basisraten-Fehlschluss',
+      definition: 'Allgemeine Informationen über die Wahrscheinlichkeit eines Ereignisses zu ignorieren und sich auf spezifische Informationen zu konzentrieren.',
+      example: 'Ein seltenes Krankheits-Screening-Test ist 99% genau. Wenn Sie positiv testen, anzunehmen, dass Sie eine 99%ige Chance haben, die Krankheit zu haben, ohne zu berücksichtigen, dass die Krankheit nur 1 von 1000 Menschen betrifft.'
+    },
+    'Conjunction Fallacy': {
+      name: 'Konjunktions-Fehlschluss',
+      definition: 'Anzunehmen, dass spezifische Bedingungen wahrscheinlicher sind als eine allgemeine Bedingung, wenn die spezifischen Bedingungen eine Teilmenge der allgemeinen sind.',
+      example: 'Linda ist 31, ledig, ausgesprochen und sehr klug. Sie hat Philosophie studiert und sich als Studentin für soziale Gerechtigkeit und Anti-Atomkraft-Bewegungen engagiert. Was ist wahrscheinlicher: (A) Linda ist Bankangestellte oder (B) Linda ist Bankangestellte und in der Frauenbewegung aktiv? Viele wählen B, obwohl A mathematisch wahrscheinlicher ist.'
+    },
+    'Gambler\'s Fallacy': {
+      name: 'Spieler-Fehlschluss',
+      definition: 'Zu glauben, dass vergangene Ergebnisse zukünftige Wahrscheinlichkeiten in unabhängigen Ereignissen beeinflussen.',
+      example: '"Die Münze ist fünfmal hintereinander auf Kopf gelandet, also ist der nächste Wurf eher Zahl." Jeder Münzwurf ist ein unabhängiges Ereignis mit 50/50-Wahrscheinlichkeiten.'
+    },
+    'Hot Hand Fallacy': {
+      name: 'Heiße-Hand-Fehlschluss',
+      definition: 'Zu glauben, dass eine Person, die bei einem zufälligen Ereignis erfolgreich war, bei nachfolgenden Versuchen eher erfolgreich sein wird.',
+      example: '"Dieser Basketballspieler hat seine letzten fünf Würfe getroffen, also geben wir ihm den Ball für den nächsten Wurf." Vergangene Treffer beeinflussen nicht zukünftige Wurfwahrscheinlichkeiten bei unabhängigen Versuchen.'
+    },
+    'Survivorship Bias': {
+      name: 'Überlebensverzerrung',
+      definition: 'Zu Schlussfolgerungen über eine Gruppe zu kommen, basierend nur auf erfolgreichen Mitgliedern, während gescheiterte Fälle ignoriert werden.',
+      example: '"Schauen Sie sich all diese erfolgreichen College-Abbrecher wie Bill Gates und Steve Jobs an. College ist nicht notwendig für den Erfolg." Dies ignoriert die Millionen von Abbrechern, die nicht erfolgreich wurden.'
+    },
+    'Availability Heuristic': {
+      name: 'Verfügbarkeits-Heuristik',
+      definition: 'Die Wahrscheinlichkeit oder Häufigkeit von Ereignissen basierend darauf zu beurteilen, wie leicht Beispiele in den Sinn kommen.',
+      example: 'Flugangst zu haben, weil Flugzeugabstürze in den Nachrichten dramatisch dargestellt werden, obwohl Fliegen statistisch viel sicherer ist als Autofahren.'
+    },
+    'Representativeness Heuristic': {
+      name: 'Repräsentativitäts-Heuristik',
+      definition: 'Die Wahrscheinlichkeit zu beurteilen, indem man beurteilt, wie ähnlich etwas unserem mentalen Prototyp ist.',
+      example: 'Anzunehmen, dass jemand, der schüchtern und introvertiert ist, eher Bibliothekar als Verkäufer ist, ohne Basisraten zu berücksichtigen (es gibt viel mehr Verkäufer als Bibliothekare).'
+    },
+    'Anchoring Bias': {
+      name: 'Anker-Verzerrung',
+      definition: 'Zu stark von der ersten Information beeinflusst zu werden, die man erhält (dem "Anker"), wenn man Entscheidungen trifft.',
+      example: 'Bei Verhandlungen wird das erste genannte Angebot unverhältnismäßig das Endergebnis beeinflussen, selbst wenn es völlig willkürlich war.'
+    },
+    'Adjustment Bias': {
+      name: 'Anpassungsverzerrung',
+      definition: 'Bei der Anpassung von einem Anker aus unzureichend anzupassen, was zu Urteilen führt, die zu nahe am Anker bleiben.',
+      example: 'Wenn man schätzt, wann Gandhi starb, nachdem man gefragt wurde, ob er vor oder nach 1992 starb, wird die Schätzung näher bei 1992 liegen, als wenn kein Anker gegeben wurde.'
+    },
+    'Availability Cascade': {
+      name: 'Verfügbarkeitskaskade',
+      definition: 'Wenn eine Überzeugung an Plausibilität gewinnt durch ihre zunehmende Wiederholung in öffentlichen Diskursen.',
+      example: 'Eine unbegründete Gesundheitsbesorgnis kann durch Medienberichterstattung an Glaubwürdigkeit gewinnen, was zu mehr Berichterstattung führt, bis sie allgemein als Tatsache akzeptiert wird.'
+    },
+    'Illusory Correlation': {
+      name: 'Illusorische Korrelation',
+      definition: 'Eine Beziehung zwischen zwei Variablen wahrzunehmen, wenn keine solche Beziehung existiert.',
+      example: 'Zu glauben, dass Vollmond mehr Notfälle verursacht, weil man sich an dramatische Vollmondnächte erinnert, aber ruhige vergisst.'
     }
   }
 };
