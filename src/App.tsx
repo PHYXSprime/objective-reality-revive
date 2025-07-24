@@ -8,6 +8,11 @@ import { Navigation } from "@/components/Navigation";
 import Index from "./pages/Index";
 import Epistemology from "./pages/Epistemology";
 import Challenges from "./pages/Challenges";
+import Solutions from "./pages/Solutions";
+import StreetEpistemology from "./pages/StreetEpistemology";
+import SocraticQuestioning from "./pages/SocraticQuestioning";
+import ScientificMethod from "./pages/ScientificMethod";
+import Comedians from "./pages/Comedians";
 import CognitiveBiases from "./pages/CognitiveBiases";
 import LogicalFallacies from "./pages/LogicalFallacies";
 import Consciousness from "./pages/Consciousness";
@@ -29,6 +34,11 @@ const App = () => (
             <Route path="/" element={<Index />} />
             <Route path="/epistemology" element={<Epistemology />} />
             <Route path="/challenges" element={<Challenges />} />
+            <Route path="/solutions" element={<Solutions />} />
+            <Route path="/street-epistemology" element={<StreetEpistemology />} />
+            <Route path="/socratic-questioning" element={<SocraticQuestioning />} />
+            <Route path="/scientific-method" element={<ScientificMethod />} />
+            <Route path="/comedians" element={<Comedians />} />
             <Route path="/cognitive-biases" element={<CognitiveBiases />} />
             <Route path="/logical-fallacies" element={<LogicalFallacies />} />
             <Route path="/consciousness" element={<Consciousness />} />

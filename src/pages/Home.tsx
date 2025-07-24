@@ -23,6 +23,13 @@ export default function Home() {
       color: 'text-orange-600 dark:text-orange-400',
     },
     {
+      icon: AlertTriangle,
+      title: "Solutions",
+      description: "Practical tools and methods to overcome cognitive limitations",
+      link: '/solutions',
+      color: 'text-green-600 dark:text-green-400',
+    },
+    {
       icon: Brain,
       title: t('biases.title'),
       description: t('biases.description'),
