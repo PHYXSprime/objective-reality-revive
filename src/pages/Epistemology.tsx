@@ -89,7 +89,7 @@ export default function Epistemology() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {principles.map((principle, index) => (
-              <Card key={index} className="h-full">
+              <Card key={index} className="h-full glass-card">
                 <CardHeader>
                   <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4`}>
                     <principle.icon className={`h-6 w-6 ${principle.color}`} />
@@ -107,7 +107,7 @@ export default function Epistemology() {
         </div>
 
         {/* Practical Application */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card">
           <CardHeader>
             <CardTitle className="text-2xl flex items-center gap-3">
               <Scale className="h-6 w-6 text-primary" />

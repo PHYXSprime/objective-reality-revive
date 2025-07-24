@@ -103,7 +103,7 @@ export default function Challenges() {
         {/* Challenges Grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
           {challenges.map((challenge, index) => (
-            <Card key={index} className="h-full transition-transform hover:scale-105">
+            <Card key={index} className="h-full glass-card transition-transform hover:scale-105">
               <CardHeader>
                 <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4`}>
                   <challenge.icon className={`h-6 w-6 ${challenge.color}`} />
@@ -125,7 +125,7 @@ export default function Challenges() {
         </div>
 
         {/* Why This Matters */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card">
           <CardHeader>
             <CardTitle className="text-2xl">Why Understanding These Challenges Matters</CardTitle>
           </CardHeader>
@@ -165,7 +165,7 @@ export default function Challenges() {
 
         {/* Interactive Elements */}
         <div className="grid md:grid-cols-2 gap-6">
-          <Card>
+          <Card className="glass-card">
             <CardHeader>
               <CardTitle>Start Your Journey</CardTitle>
               <CardDescription>
@@ -186,7 +186,7 @@ export default function Challenges() {
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="glass-card">
             <CardHeader>
               <CardTitle>Advanced Topics</CardTitle>
               <CardDescription>

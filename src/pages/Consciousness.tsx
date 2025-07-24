@@ -59,7 +59,7 @@ export default function Consciousness() {
         </div>
 
         {/* David Heggli's Digital Twins Study */}
-        <Card className="mb-12 border-primary/20">
+        <Card className="mb-12 border-primary/20 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Brain className="h-6 w-6 text-primary" />
@@ -154,7 +154,7 @@ export default function Consciousness() {
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {consciousnessLevels.map((level, index) => (
-            <Card key={index} className="h-full">
+            <Card key={index} className="h-full glass-card">
               <CardHeader>
                 <div className="flex items-center gap-3">
                   <div className={`px-3 py-1 rounded-full text-sm font-medium ${level.color}`}>

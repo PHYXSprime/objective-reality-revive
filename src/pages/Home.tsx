@@ -72,7 +72,7 @@ export default function Home() {
         <div className="max-w-6xl mx-auto">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
-              <Card key={index} className="transition-transform hover:scale-105 bg-background">
+              <Card key={index} className="glass-card transition-transform hover:scale-105">
                 <CardHeader>
                   <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4`}>
                     <feature.icon className={`h-6 w-6 ${feature.color}`} />
@@ -202,7 +202,7 @@ export default function Home() {
                 color: "text-red-600 dark:text-red-400"
               }
             ].map((principle, index) => (
-              <Card key={index} className="h-full">
+              <Card key={index} className="h-full glass-card">
                 <CardHeader>
                   <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4`}>
                     <principle.icon className={`h-6 w-6 ${principle.color}`} />

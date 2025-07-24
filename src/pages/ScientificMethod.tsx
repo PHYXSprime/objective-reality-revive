@@ -110,7 +110,7 @@ export default function ScientificMethod() {
         </div>
 
         {/* Key Difference from Dogma */}
-        <Card className="mb-12 border-green-200 dark:border-green-800">
+        <Card className="mb-12 border-green-200 dark:border-green-800 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Brain className="h-6 w-6 text-green-600" />
@@ -154,7 +154,7 @@ export default function ScientificMethod() {
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
             {methodSteps.map((step, index) => (
-              <Card key={index} className="relative">
+              <Card key={index} className="relative glass-card">
                 <CardHeader className="text-center">
                   <div className="text-3xl mb-2">{step.icon}</div>
                   <CardTitle className="text-lg">{step.step}</CardTitle>
@@ -175,7 +175,7 @@ export default function ScientificMethod() {
         </div>
 
         {/* Core Principles */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Target className="h-6 w-6 text-blue-600" />
@@ -195,7 +195,7 @@ export default function ScientificMethod() {
         </Card>
 
         {/* Common Misunderstandings */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
               <AlertTriangle className="h-6 w-6 text-orange-600" />
@@ -221,7 +221,7 @@ export default function ScientificMethod() {
         </Card>
 
         {/* Applying to Personal Beliefs */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Microscope className="h-6 w-6 text-purple-600" />
@@ -257,7 +257,7 @@ export default function ScientificMethod() {
         </Card>
 
         {/* Limitations */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
               <CheckCircle className="h-6 w-6 text-indigo-600" />
