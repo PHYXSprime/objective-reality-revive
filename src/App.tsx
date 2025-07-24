@@ -25,6 +25,7 @@ import CoEvolution from "./pages/CoEvolution";
 import LazyThinking from "./pages/LazyThinking";
 import PsychologicalWeakness from "./pages/PsychologicalWeakness";
 import Ego from "./pages/Ego";
+import CriticalThinking from "./pages/CriticalThinking";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -63,6 +64,7 @@ const App = () => (
               <Route path="/lazy-thinking" element={<LazyThinking />} />
               <Route path="/psychological-weakness" element={<PsychologicalWeakness />} />
               <Route path="/ego" element={<Ego />} />
+              <Route path="/critical-thinking" element={<CriticalThinking />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
