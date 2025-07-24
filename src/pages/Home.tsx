@@ -10,6 +10,20 @@ export default function Home() {
   const features = [
     {
       icon: Brain,
+      title: "Epistemology",
+      description: "How can we know if something is actually true?",
+      link: '/epistemology',
+      color: 'text-indigo-600 dark:text-indigo-400',
+    },
+    {
+      icon: AlertTriangle,
+      title: "Challenges",
+      description: "Barriers that separate us from objective reality",
+      link: '/challenges',
+      color: 'text-orange-600 dark:text-orange-400',
+    },
+    {
+      icon: Brain,
       title: t('biases.title'),
       description: t('biases.description'),
       link: '/cognitive-biases',
@@ -51,7 +65,7 @@ export default function Home() {
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-3 gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {features.map((feature, index) => (
               <Card key={index} className="transition-transform hover:scale-105 bg-background">
                 <CardHeader>

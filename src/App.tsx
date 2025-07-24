@@ -6,9 +6,13 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { LanguageProvider } from "@/hooks/useLanguage";
 import { Navigation } from "@/components/Navigation";
 import Index from "./pages/Index";
+import Epistemology from "./pages/Epistemology";
+import Challenges from "./pages/Challenges";
 import CognitiveBiases from "./pages/CognitiveBiases";
 import LogicalFallacies from "./pages/LogicalFallacies";
 import Consciousness from "./pages/Consciousness";
+import ScientificConsensus from "./pages/ScientificConsensus";
+import Censorship from "./pages/Censorship";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -23,9 +27,13 @@ const App = () => (
           <Navigation />
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/epistemology" element={<Epistemology />} />
+            <Route path="/challenges" element={<Challenges />} />
             <Route path="/cognitive-biases" element={<CognitiveBiases />} />
             <Route path="/logical-fallacies" element={<LogicalFallacies />} />
             <Route path="/consciousness" element={<Consciousness />} />
+            <Route path="/consensus" element={<ScientificConsensus />} />
+            <Route path="/censorship" element={<Censorship />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </BrowserRouter>
