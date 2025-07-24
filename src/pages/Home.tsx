@@ -50,8 +50,8 @@ export default function Home() {
       {/* Hero Section with Epistemology */}
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8 p-6 bg-muted/30 rounded-lg">
-            <h2 className="text-2xl font-bold text-foreground mb-4">
+          <div className="mb-8 p-6 glass-card rounded-2xl glow-primary">
+            <h2 className="text-2xl font-bold text-glow-accent mb-4">
               ....wake up Neo! ..................  wake up...
             </h2>
           </div>
