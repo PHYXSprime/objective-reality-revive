@@ -26,9 +26,9 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <LanguageProvider>
-        {/* Animated starfield background - Enhanced visibility */}
+        {/* Animated starfield background */}
         <div 
-          className="fixed top-0 left-0 w-[300%] h-[300%] opacity-100 pointer-events-none"
+          className="fixed top-0 left-0 w-[300%] h-[300%] opacity-80 pointer-events-none"
           style={{
             backgroundImage: `
               radial-gradient(3px 3px at 20px 30px, #ffffff, transparent),
@@ -42,12 +42,11 @@ const App = () => (
             backgroundRepeat: 'repeat',
             backgroundSize: '300px 150px',
             animation: 'stars 300s linear infinite',
-            zIndex: 1,
-            border: '2px solid red' // Debug border
+            zIndex: -2
           }}
         />
         
-        {/* Earth from space background - Enhanced visibility */}
+        {/* Earth from space background */}
         <div 
           className="fixed bottom-[-30%] left-1/2 w-[100vw] h-[100vw] max-w-[1000px] max-h-[1000px] rounded-full pointer-events-none"
           style={{
@@ -55,12 +54,10 @@ const App = () => (
             backgroundSize: 'cover',
             backgroundPosition: 'center',
             backgroundRepeat: 'no-repeat',
-            backgroundColor: 'rgba(0, 100, 200, 0.8)', // Enhanced debug blue
             animation: 'earthFloat 120s ease-in-out infinite',
             filter: 'blur(0.5px) drop-shadow(0 0 50px rgba(66, 153, 225, 0.6))',
             transformOrigin: 'center',
-            zIndex: 0,
-            border: '4px solid lime' // Debug border
+            zIndex: -1
           }}
         />
         
