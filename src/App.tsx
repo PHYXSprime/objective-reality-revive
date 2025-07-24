@@ -27,8 +27,30 @@ const App = () => (
     <TooltipProvider>
       <LanguageProvider>
         {/* Background Elements - Explicit layering control */}
-        <div className="starfield-container" style={{backgroundColor: 'red', zIndex: 1}}></div>
-        <div className="earth-container" style={{backgroundColor: 'lime', zIndex: 2}}></div>
+        <div className="starfield-container" style={{
+          position: 'fixed', 
+          top: 0, 
+          left: 0, 
+          width: '100%', 
+          height: '100vh', 
+          backgroundColor: 'red', 
+          zIndex: 1,
+          pointerEvents: 'none'
+        }}></div>
+        <div className="earth-container" style={{
+          position: 'fixed', 
+          bottom: '-25%', 
+          left: '50%', 
+          transform: 'translateX(-50%)', 
+          width: '60vw', 
+          height: '60vw', 
+          maxWidth: '600px', 
+          maxHeight: '600px', 
+          backgroundColor: 'lime', 
+          borderRadius: '50%',
+          zIndex: 2,
+          pointerEvents: 'none'
+        }}></div>
         
         {/* Main App Content */}
         <div className="app-content">
