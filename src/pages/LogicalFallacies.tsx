@@ -98,7 +98,7 @@ export default function LogicalFallacies() {
         {/* Fallacies Grid */}
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {filteredFallacies.map((fallacy, index) => (
-            <Card key={index} className="h-full">
+            <Card key={index} className="h-full glass-card float-card hover:glow-primary transition-all duration-300">
               <CardHeader>
                 <div className="flex items-start justify-between">
                   <CardTitle className="text-lg leading-tight">
