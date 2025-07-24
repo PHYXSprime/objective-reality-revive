@@ -164,6 +164,7 @@
     background: hsl(240 10% 15% / 0.06); /* Ultra transparent */
     backdrop-filter: blur(10px) saturate(150%); /* Minimal blur for star visibility */
     border: 1px solid hsl(240 20% 80% / 0.25); /* More visible border */
+    border-radius: 1rem; /* Add rounded corners by default */
     box-shadow: 
       0 8px 32px hsl(240 10% 3.9% / 0.2), /* Lighter shadow */
       0 4px 16px hsl(240 10% 3.9% / 0.1),

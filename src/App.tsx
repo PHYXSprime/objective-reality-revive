@@ -19,6 +19,9 @@ import Consciousness from "./pages/Consciousness";
 import ScientificConsensus from "./pages/ScientificConsensus";
 import Censorship from "./pages/Censorship";
 import Propaganda from "./pages/Propaganda";
+import Indoctrination from "./pages/Indoctrination";
+import DogmaticBeliefs from "./pages/DogmaticBeliefs";
+import CoEvolution from "./pages/CoEvolution";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -51,6 +54,9 @@ const App = () => (
               <Route path="/consensus" element={<ScientificConsensus />} />
               <Route path="/censorship" element={<Censorship />} />
               <Route path="/propaganda" element={<Propaganda />} />
+              <Route path="/indoctrination" element={<Indoctrination />} />
+              <Route path="/dogmas" element={<DogmaticBeliefs />} />
+              <Route path="/co-evolution" element={<CoEvolution />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
           </BrowserRouter>
