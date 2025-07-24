@@ -27,8 +27,8 @@ const App = () => (
     <TooltipProvider>
       <LanguageProvider>
         {/* Background Elements - Explicit layering control */}
-        <div className="starfield-container"></div>
-        <div className="earth-container"></div>
+        <div className="starfield-container" style={{backgroundColor: 'red', zIndex: 1}}></div>
+        <div className="earth-container" style={{backgroundColor: 'lime', zIndex: 2}}></div>
         
         {/* Main App Content */}
         <div className="app-content">
