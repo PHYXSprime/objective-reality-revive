@@ -1,7 +1,8 @@
-import { MessageSquare, Users, Heart, Target, CheckCircle, AlertCircle } from 'lucide-react';
+import { MessageSquare, Users, Heart, Target, CheckCircle, AlertCircle, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { SolutionNavigation } from '@/components/SolutionNavigation';
 
 export default function StreetEpistemology() {
   const { t } = useLanguage();
@@ -55,23 +56,26 @@ export default function StreetEpistemology() {
 
   return (
     <div className="min-h-screen py-8">
+      <SolutionNavigation />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-foreground mb-6">
-            Street Epistemology
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
-            A gentle, non-confrontational method of helping people examine the reliability 
-            of their beliefs through conversational questioning techniques.
-          </p>
-        </div>
+        <Card className="glass-card mb-8">
+          <CardHeader>
+            <CardTitle className="text-4xl font-bold">
+              Street Epistemology
+            </CardTitle>
+            <CardDescription className="text-xl max-w-3xl">
+              A gentle, non-confrontational method of helping people examine the reliability 
+              of their beliefs through conversational questioning techniques.
+            </CardDescription>
+          </CardHeader>
+        </Card>
 
         {/* About Dr. Peter Boghossian */}
-        <Card className="mb-12 border-blue-200 dark:border-blue-800">
+        <Card className="mb-12 border-primary/20 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
-              <Users className="h-6 w-6 text-blue-600" />
+              <Users className="h-6 w-6 text-primary" />
               <CardTitle className="text-2xl">Created by Dr. Peter Boghossian</CardTitle>
             </div>
           </CardHeader>
@@ -92,34 +96,40 @@ export default function StreetEpistemology() {
         </Card>
 
         {/* Core Principles */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-            Core Principles of Street Epistemology
-          </h2>
-          <div className="grid md:grid-cols-2 gap-6">
-            {sePrinciples.map((principle, index) => (
-              <Card key={index}>
-                <CardHeader>
-                  <div className="flex items-center gap-3">
-                    <Heart className="h-5 w-5 text-blue-600" />
-                    <CardTitle className="text-lg">{principle.title}</CardTitle>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground">
-                    {principle.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
+        <Card className="glass-card mb-8">
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold">
+              Core Principles of Street Epistemology
+            </CardTitle>
+            <CardDescription className="text-muted-foreground">
+              These foundational principles guide effective Street Epistemology conversations.
+            </CardDescription>
+          </CardHeader>
+        </Card>
+
+        <div className="grid md:grid-cols-2 gap-6 mb-12">
+          {sePrinciples.map((principle, index) => (
+            <Card key={index} className="glass-card">
+              <CardHeader>
+                <div className="flex items-center gap-3">
+                  <Heart className="h-5 w-5 text-primary" />
+                  <CardTitle className="text-lg">{principle.title}</CardTitle>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground">
+                  {principle.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
+          ))}
         </div>
 
         {/* Key Questions */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
-              <MessageSquare className="h-6 w-6 text-green-600" />
+              <MessageSquare className="h-6 w-6 text-primary" />
               <CardTitle className="text-2xl">Essential Street Epistemology Questions</CardTitle>
             </div>
             <CardDescription>
@@ -138,10 +148,10 @@ export default function StreetEpistemology() {
         </Card>
 
         {/* The SE Process */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
-              <Target className="h-6 w-6 text-purple-600" />
+              <Target className="h-6 w-6 text-primary" />
               <CardTitle className="text-2xl">The Street Epistemology Process</CardTitle>
             </div>
           </CardHeader>
@@ -149,29 +159,29 @@ export default function StreetEpistemology() {
             <div className="space-y-6">
               <div className="grid md:grid-cols-4 gap-6">
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-purple-600 font-bold">1</span>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-primary font-bold">1</span>
                   </div>
                   <h4 className="font-semibold text-foreground mb-2">Establish Rapport</h4>
                   <p className="text-sm text-muted-foreground">Build trust and create a safe conversational space</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-purple-600 font-bold">2</span>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-primary font-bold">2</span>
                   </div>
                   <h4 className="font-semibold text-foreground mb-2">Clarify the Claim</h4>
                   <p className="text-sm text-muted-foreground">Understand exactly what the person believes</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-purple-600 font-bold">3</span>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-primary font-bold">3</span>
                   </div>
                   <h4 className="font-semibold text-foreground mb-2">Explore the Method</h4>
                   <p className="text-sm text-muted-foreground">Ask how they came to believe this</p>
                 </div>
                 <div className="text-center">
-                  <div className="w-12 h-12 bg-purple-100 dark:bg-purple-900 rounded-full flex items-center justify-center mx-auto mb-3">
-                    <span className="text-purple-600 font-bold">4</span>
+                  <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
+                    <span className="text-primary font-bold">4</span>
                   </div>
                   <h4 className="font-semibold text-foreground mb-2">Examine Reliability</h4>
                   <p className="text-sm text-muted-foreground">Help them evaluate their belief-forming process</p>
@@ -182,10 +192,10 @@ export default function StreetEpistemology() {
         </Card>
 
         {/* Common Mistakes */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
-              <AlertCircle className="h-6 w-6 text-orange-600" />
+              <AlertCircle className="h-6 w-6 text-primary" />
               <CardTitle className="text-2xl">Common Mistakes to Avoid</CardTitle>
             </div>
           </CardHeader>
@@ -209,10 +219,10 @@ export default function StreetEpistemology() {
 
         {/* Benefits */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Card>
+          <Card className="glass-card">
             <CardHeader>
               <div className="flex items-center gap-3">
-                <CheckCircle className="h-6 w-6 text-green-600" />
+                <CheckCircle className="h-6 w-6 text-primary" />
                 <CardTitle>Why Street Epistemology Works</CardTitle>
               </div>
             </CardHeader>
@@ -227,10 +237,10 @@ export default function StreetEpistemology() {
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="glass-card">
             <CardHeader>
               <div className="flex items-center gap-3">
-                <Target className="h-6 w-6 text-indigo-600" />
+                <Target className="h-6 w-6 text-primary" />
                 <CardTitle>Best Practices</CardTitle>
               </div>
             </CardHeader>
@@ -247,24 +257,27 @@ export default function StreetEpistemology() {
         </div>
 
         {/* Call to Action */}
-        <div className="text-center bg-muted/30 p-8 rounded-lg">
-          <h3 className="text-2xl font-bold text-foreground mb-4">
-            Ready to Practice Street Epistemology?
-          </h3>
-          <p className="text-muted-foreground mb-6 max-w-3xl mx-auto">
-            Start by examining your own beliefs first. What methods did you use to form them? 
-            How confident are you? What evidence would change your mind? Then practice these 
-            gentle questioning techniques with friends and family.
-          </p>
-          <div className="flex gap-4 justify-center">
-            <Button size="lg">
-              Practice with Examples
-            </Button>
-            <Button variant="outline" size="lg">
-              Learn Socratic Questioning
-            </Button>
-          </div>
-        </div>
+        <Card className="glass-card">
+          <CardContent className="p-8 text-center">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              Ready to Practice Street Epistemology?
+            </h3>
+            <p className="text-muted-foreground mb-6 max-w-3xl mx-auto">
+              Start by examining your own beliefs first. What methods did you use to form them? 
+              How confident are you? What evidence would change your mind? Then practice these 
+              gentle questioning techniques with friends and family.
+            </p>
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Button size="lg" className="flex items-center gap-2">
+                <ExternalLink className="h-4 w-4" />
+                Practice with Examples
+              </Button>
+              <Button variant="outline" size="lg">
+                Learn Socratic Questioning
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
