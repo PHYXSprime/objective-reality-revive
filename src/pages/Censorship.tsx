@@ -70,69 +70,84 @@ export default function Censorship() {
       <ChallengeNavigation />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
-        <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-foreground mb-6">
-            Censorship in the Modern Era
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto">
-            Censorship is massively on the rise – most of it is sneaky, hidden, disguised as "good intentions", 
-            "philanthropic cover stories" and even "scientifically sounding assertions".
-          </p>
-        </div>
+        <Card className="glass-card mb-8">
+          <CardHeader>
+            <CardTitle className="text-4xl font-bold">
+              Censorship in the Modern Era
+            </CardTitle>
+            <CardDescription className="text-xl max-w-3xl">
+              Censorship is massively on the rise – most of it is sneaky, hidden, disguised as "good intentions", 
+              "philanthropic cover stories" and even "scientifically sounding assertions".
+            </CardDescription>
+          </CardHeader>
+        </Card>
 
         {/* Main Alert */}
-        <Alert className="mb-12 border-orange-200 dark:border-orange-800">
-          <AlertTriangle className="h-4 w-4" />
-          <AlertDescription className="text-lg">
-            <strong>Political Correctness (PC)</strong> is one of the worst kinds of censorship. 
-            It is extremely dangerous and counter-productive for the progress of humanity to install 
-            this thought police and kill any creative & progressive thoughts and open discussions 
-            out of fear to offend somebody.
-          </AlertDescription>
-        </Alert>
-
-        {/* Types of Modern Censorship */}
-        <div className="mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-            Types of Modern Censorship
-          </h2>
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {censorshipTypes.map((item, index) => (
-              <Card key={index} className="h-full">
-                <CardHeader>
-                  <div className="flex items-center justify-between">
-                    <CardTitle className="text-lg">{item.type}</CardTitle>
-                    <span className={`text-sm font-medium px-2 py-1 rounded ${
-                      item.danger === 'High' ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200' :
-                      'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200'
-                    }`}>
-                      {item.danger} Risk
-                    </span>
-                  </div>
-                </CardHeader>
-                <CardContent>
-                  <CardDescription className="text-muted-foreground">
-                    {item.description}
-                  </CardDescription>
-                </CardContent>
-              </Card>
-            ))}
-          </div>
-        </div>
-
-        {/* Warning Labels */}
-        <Card className="mb-12">
+        <Card className="mb-12 border-primary/20 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
-              <MessageSquare className="h-6 w-6 text-yellow-600" />
-              <CardTitle className="text-2xl">Propaganda Language Alert</CardTitle>
+              <AlertTriangle className="h-6 w-6 text-primary" />
+              <CardTitle className="text-xl">Political Correctness Warning</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground mb-6">
+            <p className="text-muted-foreground leading-relaxed">
+              <strong>Political Correctness (PC)</strong> is one of the worst kinds of censorship. 
+              It is extremely dangerous and counter-productive for the progress of humanity to install 
+              this thought police and kill any creative & progressive thoughts and open discussions 
+              out of fear to offend somebody.
+            </p>
+          </CardContent>
+        </Card>
+
+        {/* Types of Modern Censorship */}
+        <Card className="glass-card mb-8">
+          <CardHeader>
+            <CardTitle className="text-2xl font-bold">
+              Types of Modern Censorship
+            </CardTitle>
+            <CardDescription className="text-muted-foreground">
+              Understanding the various forms of censorship helps us recognize and resist them.
+            </CardDescription>
+          </CardHeader>
+        </Card>
+
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {censorshipTypes.map((item, index) => (
+            <Card key={index} className="h-full glass-card">
+              <CardHeader>
+                <div className="flex items-center justify-between">
+                  <CardTitle className="text-lg">{item.type}</CardTitle>
+                  <span className={`text-sm font-medium px-2 py-1 rounded ${
+                    item.danger === 'High' ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200' :
+                    'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200'
+                  }`}>
+                    {item.danger} Risk
+                  </span>
+                </div>
+              </CardHeader>
+              <CardContent>
+                <CardDescription className="text-muted-foreground">
+                  {item.description}
+                </CardDescription>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        {/* Warning Labels */}
+        <Card className="mb-12 glass-card">
+          <CardHeader>
+            <div className="flex items-center gap-3">
+              <MessageSquare className="h-6 w-6 text-primary" />
+              <CardTitle className="text-2xl">Propaganda Language Alert</CardTitle>
+            </div>
+            <CardDescription className="text-muted-foreground">
               These labels are part of indoctrination and propaganda language and should immediately 
               raise red flags. Remember: who for some is a "freedom fighter", for others is a "terrorist".
-            </p>
+            </CardDescription>
+          </CardHeader>
+          <CardContent>
             <div className="grid md:grid-cols-2 gap-4">
               {warningLabels.map((item, index) => (
                 <div key={index} className="p-4 border border-border rounded-lg">
@@ -146,10 +161,10 @@ export default function Censorship() {
 
         {/* The Growing Problem */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <Card>
+          <Card className="glass-card">
             <CardHeader>
               <div className="flex items-center gap-3">
-                <Eye className="h-6 w-6 text-blue-600" />
+                <Eye className="h-6 w-6 text-primary" />
                 <CardTitle>The Sophistication Problem</CardTitle>
               </div>
             </CardHeader>
@@ -167,10 +182,10 @@ export default function Censorship() {
             </CardContent>
           </Card>
 
-          <Card>
+          <Card className="glass-card">
             <CardHeader>
               <div className="flex items-center gap-3">
-                <Shield className="h-6 w-6 text-green-600" />
+                <Shield className="h-6 w-6 text-primary" />
                 <CardTitle>Growing Up Intellectually</CardTitle>
               </div>
             </CardHeader>
@@ -190,10 +205,10 @@ export default function Censorship() {
         </div>
 
         {/* Detection Methods */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card">
           <CardHeader>
             <div className="flex items-center gap-3">
-              <Filter className="h-6 w-6 text-purple-600" />
+              <Filter className="h-6 w-6 text-primary" />
               <CardTitle className="text-2xl">How to Detect Censorship</CardTitle>
             </div>
           </CardHeader>
@@ -231,16 +246,18 @@ export default function Censorship() {
         </Card>
 
         {/* Call to Action */}
-        <div className="text-center bg-muted/30 p-8 rounded-lg">
-          <h3 className="text-2xl font-bold text-foreground mb-4">
-            The Importance of Free Expression
-          </h3>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
-            Free and open discussion is essential for human progress. When we censor ideas, 
-            even "wrong" ones, we lose the opportunity to test our own beliefs and discover 
-            new truths. The marketplace of ideas works best when all ideas can compete freely.
-          </p>
-        </div>
+        <Card className="glass-card">
+          <CardContent className="p-8 text-center">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              The Importance of Free Expression
+            </h3>
+            <p className="text-muted-foreground max-w-3xl mx-auto">
+              Free and open discussion is essential for human progress. When we censor ideas, 
+              even "wrong" ones, we lose the opportunity to test our own beliefs and discover 
+              new truths. The marketplace of ideas works best when all ideas can compete freely.
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
