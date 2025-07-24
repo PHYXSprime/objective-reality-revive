@@ -26,43 +26,12 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <LanguageProvider>
-        {/* Animated starfield background */}
-        <div 
-          className="fixed top-0 left-0 w-[300%] h-[300%] opacity-80 pointer-events-none"
-          style={{
-            backgroundImage: `
-              radial-gradient(3px 3px at 20px 30px, #ffffff, transparent),
-              radial-gradient(3px 3px at 40px 70px, rgba(255,255,255,0.9), transparent),
-              radial-gradient(2px 2px at 90px 40px, rgba(255,255,255,0.7), transparent),
-              radial-gradient(2px 2px at 130px 80px, rgba(255,255,255,0.5), transparent),
-              radial-gradient(3px 3px at 160px 30px, rgba(255,255,255,0.8), transparent),
-              radial-gradient(2px 2px at 200px 100px, rgba(255,255,255,0.6), transparent),
-              radial-gradient(1px 1px at 250px 50px, rgba(255,255,255,0.4), transparent)
-            `,
-            backgroundRepeat: 'repeat',
-            backgroundSize: '300px 150px',
-            animation: 'stars 300s linear infinite',
-            zIndex: 1
-          }}
-        />
+        {/* Background Elements - Explicit layering control */}
+        <div className="starfield-container"></div>
+        <div className="earth-container"></div>
         
-        {/* Earth from space background */}
-        <div 
-          className="fixed bottom-[-30%] left-1/2 w-[100vw] h-[100vw] max-w-[1000px] max-h-[1000px] rounded-full pointer-events-none"
-          style={{
-            backgroundImage: 'url(/earth-from-space-night-bg2.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
-            backgroundRepeat: 'no-repeat',
-            animation: 'earthFloat 120s ease-in-out infinite',
-            filter: 'blur(0.5px) drop-shadow(0 0 50px rgba(66, 153, 225, 0.6))',
-            transformOrigin: 'center',
-            zIndex: 2
-          }}
-        />
-        
-        {/* Content wrapper with higher z-index */}
-        <div className="relative" style={{ zIndex: 10 }}>
+        {/* Main App Content */}
+        <div className="app-content">
           <Toaster />
           <Sonner />
           <BrowserRouter>
