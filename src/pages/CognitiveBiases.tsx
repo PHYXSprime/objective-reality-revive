@@ -79,12 +79,12 @@ export default function CognitiveBiases() {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end" className="z-50 min-w-[200px]">
-              {categories.map((category) => (
+              {categories.map((category, index) => (
                 <DropdownMenuItem
-                  key={category.value}
+                  key={`${category.value}-${index}`}
                   onClick={() => setSelectedCategory(category.value)}
                 >
-                  {category.label}
+                  {category.label} ({category.value})
                 </DropdownMenuItem>
               ))}
             </DropdownMenuContent>
