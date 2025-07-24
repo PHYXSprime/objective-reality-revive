@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Brain, AlertTriangle, Eye, ArrowRight } from 'lucide-react';
+import { Brain, AlertTriangle, Eye, ArrowRight, Target, Users, Shield } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -123,6 +123,124 @@ export default function Home() {
                 and practical illustrations to help you recognize these patterns in everyday life.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Epistemology Section */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
+        <div className="max-w-6xl mx-auto">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Epistemology: The Foundation
+            </h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Once we've accepted that our brains haven't developed to map reality as perfectly as possible – 
+              but as fast as possible and just good enough to survive – we can find ways to work around our limitations.
+            </p>
+          </div>
+
+          {/* Aviation Experience */}
+          <div className="grid lg:grid-cols-2 gap-12 mb-12">
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-foreground">
+                Lessons from Aviation
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                My personal experience as an airline pilot with over 15,000 hours of flying experience and 14,000 landings 
+                has taught me how limited and vulnerable to errors our brains actually are. This is why we work in a team 
+                of two in the cockpit where all actions are performed in a closed loop principle.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                This closed loop principle has proven to be VERY effective in reducing human error. And yet, human error 
+                is way above any other category for aircraft related deaths and injuries, while accidents due to 
+                technical malfunctions are asymptotically trending towards zero.
+              </p>
+            </div>
+            
+            <div className="space-y-6">
+              <h3 className="text-2xl font-semibold text-foreground">
+                Modern Consequences
+              </h3>
+              <p className="text-muted-foreground leading-relaxed">
+                In today's highly developed, sophisticated world, most of the time we don't run the risk of being 
+                attacked by a wild animal and eventually dying – however, wrong or sub-optimal decisions taken 
+                hastily could have devastating results.
+              </p>
+              <p className="text-muted-foreground leading-relaxed">
+                By removing our ego from the equation and giving every belief a confidence level that adjusts with 
+                new information, we can make significantly better decisions.
+              </p>
+            </div>
+          </div>
+
+          {/* Core Principles */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+            {[
+              {
+                icon: Target,
+                title: "Confidence-Based Beliefs",
+                description: "Assign confidence levels to every belief and adjust them as new information becomes available.",
+                color: "text-blue-600 dark:text-blue-400"
+              },
+              {
+                icon: Brain,
+                title: "Brain Limitations",
+                description: "Our brains evolved for survival, not perfect accuracy. They prioritize speed over precision.",
+                color: "text-green-600 dark:text-green-400"
+              },
+              {
+                icon: Users,
+                title: "Closed Loop Principle",
+                description: "Use collaborative verification and systematic cross-checking to reduce human error.",
+                color: "text-purple-600 dark:text-purple-400"
+              },
+              {
+                icon: Shield,
+                title: "Error Reduction",
+                description: "Systematic approaches to identify and minimize cognitive errors in decision making.",
+                color: "text-red-600 dark:text-red-400"
+              }
+            ].map((principle, index) => (
+              <Card key={index} className="h-full">
+                <CardHeader>
+                  <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4`}>
+                    <principle.icon className={`h-6 w-6 ${principle.color}`} />
+                  </div>
+                  <CardTitle className="text-lg">{principle.title}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <CardDescription className="text-muted-foreground">
+                    {principle.description}
+                  </CardDescription>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Call to Action */}
+      <section className="py-16 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto text-center">
+          <h2 className="text-3xl font-bold text-foreground mb-8">
+            Start Your Journey to Clearer Thinking
+          </h2>
+          <p className="text-muted-foreground max-w-3xl mx-auto mb-8">
+            By understanding cognitive biases, logical fallacies, and the principles of sound reasoning, 
+            you can make better decisions and develop a more accurate understanding of reality.
+          </p>
+          <div className="flex gap-4 justify-center">
+            <Button asChild size="lg">
+              <Link to="/consciousness">
+                Explore Consciousness Levels
+              </Link>
+            </Button>
+            <Button asChild variant="outline" size="lg">
+              <Link to="/cognitive-biases">
+                Study Cognitive Biases
+              </Link>
+            </Button>
           </div>
         </div>
       </section>
