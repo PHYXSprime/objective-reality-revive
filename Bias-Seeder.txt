@@ -1,0 +1,527 @@
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use App\Models\CognitiveBias;
+use Illuminate\Support\Facades\DB;
+
+class CognitiveBiasSeeder extends Seeder
+{
+    /**
+     * Run the database seeds.
+     */
+    public function run(): void
+    {
+        // Truncate the table first to ensure a clean slate on each seed.
+        CognitiveBias::query()->delete();
+        DB::statement('ALTER TABLE cognitive_biases AUTO_INCREMENT = 1;');
+
+        $biases = [
+            //======================================================================
+            // Problem 1: Too Much Information
+            //======================================================================
+            [
+                'name' => ['en' => 'Availability Heuristic'],
+                'definition' => ['en' => 'We overestimate the importance of information that is easy to recall. We are biased by vivid, recent, or emotionally charged events.'],
+                'example' => ['en' => 'After seeing several news reports about shark attacks, you start to believe they are much more common than they actually are, even though car accidents are statistically far more dangerous.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Attentional Bias'],
+                'definition' => ['en' => 'Our perception is disproportionately affected by whatever is currently occupying our attention, leading us to neglect other relevant information.'],
+                'example' => ['en' => 'A person trying to quit smoking will notice other people smoking everywhere, making it much harder to ignore the craving.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Illusory Truth Effect'],
+                'definition' => ['en' => 'We are more likely to believe information we have been exposed to repeatedly, regardless of whether it is true or not.'],
+                'example' => ['en' => 'A political lie, if repeated frequently by news outlets and politicians, can become accepted as truth by a segment of the population.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Mere Exposure Effect'],
+                'definition' => ['en' => 'We tend to develop a preference for things simply because we are familiar with them.'],
+                'example' => ['en' => 'You might dislike a new song the first time you hear it, but after hearing it on the radio several times, you start to enjoy it.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Context Effect'],
+                'definition' => ['en' => 'Our cognition and memory are influenced by the context in which we receive information. The same stimulus can be interpreted differently depending on the surrounding cues.'],
+                'example' => ['en' => 'A person might rate a wine as more enjoyable when served in a fancy restaurant with elegant music than if they drank the exact same wine from a plastic cup at a picnic.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Cue-Dependent Forgetting'],
+                'definition' => ['en' => 'The inability to recall information without the specific cues that were present when the memory was formed.'],
+                'example' => ['en' => 'You walk into a room to get something, but forget what it was. When you return to your original room, the context jogs your memory and you remember.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Frequency Illusion (Baader-Meinhof Phenomenon)'],
+                'definition' => ['en' => 'After noticing something for the first time, there is a tendency to notice it more often, leading one to believe that it has an increased frequency of occurrence.'],
+                'example' => ['en' => 'You learn a new word, and then you suddenly seem to see or hear that word everywhere.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Empathy Gap'],
+                'definition' => ['en' => 'We underestimate the influence of visceral drives on our own attitudes, preferences, and behaviors. It\'s hard to imagine how we would feel in a different emotional or physiological state.'],
+                'example' => ['en' => 'When you are not hungry, it\'s easy to decide you will eat a healthy salad for dinner. When dinner time arrives and you are ravenous, your craving for a greasy burger is much stronger than you anticipated.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Omission Bias'],
+                'definition' => ['en' => 'The tendency to judge harmful actions as worse, or less moral, than equally harmful omissions (inactions).'],
+                'example' => ['en' => 'A person who lets a patient die by not administering a life-saving drug is often judged less harshly than a person who administers a lethal drug, even if the outcome is the same.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Base Rate Fallacy'],
+                'definition' => ['en' => 'We tend to ignore general statistical information (base rates) in favor of specific, descriptive information (anecdotes).'],
+                'example' => ['en' => 'You read a vivid story about a person who won the lottery, so you buy a ticket, ignoring the astronomical odds against winning (the base rate).'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Bizarreness Effect'],
+                'definition' => ['en' => 'Bizarre, unusual, or surprising information is better remembered than common and expected information.'],
+                'example' => ['en' => 'In a list of words, you are more likely to remember "platypus" and "zeppelin" than "chair" and "table".'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Humor Effect'],
+                'definition' => ['en' => 'Humorous items are more easily remembered than non-humorous ones.'],
+                'example' => ['en' => 'You are more likely to remember the details of a funny commercial than a serious one, even for a similar product.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Von Restorff Effect'],
+                'definition' => ['en' => 'An item that stands out is more likely to be remembered than other items. Also known as the isolation effect.'],
+                'example' => ['en' => 'In the list: apple, banana, car, orange, grape; the word "car" is more likely to be remembered because it is distinct from the others.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Picture Superiority Effect'],
+                'definition' => ['en' => 'We remember concepts and ideas better when they are presented as pictures rather than as text.'],
+                'example' => ['en' => 'IKEA instructions are effective because they rely on simple diagrams rather than complex text descriptions.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Self-Relevance Effect'],
+                'definition' => ['en' => 'We remember information better when we can relate it to ourselves in some way.'],
+                'example' => ['en' => 'You are more likely to remember someone\'s birthday if it is close to your own.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Negativity Bias'],
+                'definition' => ['en' => 'Negative events and emotions have a greater impact on our psychological state and processes than neutral or positive ones.'],
+                'example' => ['en' => 'You receive ten positive comments and one negative comment on a presentation. You will likely dwell on the single piece of negative feedback.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Anchoring Bias'],
+                'definition' => ['en' => 'The tendency to rely too heavily on the first piece of information offered (the "anchor") when making decisions.'],
+                'example' => ['en' => 'A used car salesman offers a high price to start negotiations; the final price seems more reasonable by comparison, even if it\'s still higher than the car\'s actual value.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Conservatism Bias'],
+                'definition' => ['en' => 'The tendency to revise one\'s belief insufficiently when presented with new evidence.'],
+                'example' => ['en' => 'An investor holds on to a stock that is performing poorly, believing their initial positive assessment is still valid despite mounting negative news.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Contrast Effect'],
+                'definition' => ['en' => 'The enhancement or diminishment of a perception, cognition or related performance as a result of successive or simultaneous exposure to a stimulus of lesser or greater value in the same dimension.'],
+                'example' => ['en' => 'A mediocre presentation will seem much better if it follows a terrible one, and much worse if it follows an excellent one.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Distinction Bias'],
+                'definition' => ['en' => 'The tendency to view two options as more dissimilar when evaluating them simultaneously than when evaluating them separately.'],
+                'example' => ['en' => 'When choosing between two TVs in a store, you might focus on tiny, insignificant differences in specs. At home, you would likely not notice any difference between them.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Focusing Effect'],
+                'definition' => ['en' => 'The tendency to place too much importance on one aspect of an event, causing an error in accurately predicting the utility of a future outcome.'],
+                'example' => ['en' => 'People often believe that living in California would make them much happier, focusing on the good weather while ignoring other factors like traffic and cost of living.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Confirmation Bias'],
+                'definition' => ['en' => 'The tendency to search for, interpret, favor, and recall information in a way that confirms or supports one\'s prior beliefs or values.'],
+                'example' => ['en' => 'A person who believes a certain political party is corrupt will primarily consume news from sources that report on that party\'s scandals, while ignoring positive news.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Congruence Bias'],
+                'definition' => ['en' => 'The tendency to test hypotheses exclusively through direct testing, instead of testing possible alternative hypotheses.'],
+                'example' => ['en' => 'If you believe a certain type of pen is the best, you might only test it on paper where you know it performs well, rather than trying it on different surfaces where it might fail.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Post-Purchase Rationalization'],
+                'definition' => ['en' => 'The tendency to persuade oneself through rational argument that a purchase was a good value. Also known as Buyer\'s Stockholm Syndrome.'],
+                'example' => ['en' => 'After buying an expensive smartphone, you focus on its positive features and ignore its flaws to convince yourself you made the right decision.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Choice-Supportive Bias'],
+                'definition' => ['en' => 'The tendency to remember one\'s choices as better than they actually were.'],
+                'example' => ['en' => 'When recalling a past decision, like choosing a university, you are more likely to remember the positive aspects of your choice and the negative aspects of the alternatives.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Selective Perception'],
+                'definition' => ['en' => 'The tendency for expectations to affect perception. We see what we expect to see.'],
+                'example' => ['en' => 'Fans of a sports team are more likely to see fouls committed by the opposing team and miss fouls committed by their own.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Observer-Expectancy Effect'],
+                'definition' => ['en' => 'A form of reactivity in which a researcher\'s cognitive bias causes them to subconsciously influence the participants of an experiment.'],
+                'example' => ['en' => 'A teacher who expects a student to perform well may unintentionally give them more encouragement and better feedback, leading to better performance.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Ostrich Effect'],
+                'definition' => ['en' => 'The decision to ignore dangerous or negative information by "burying" one\'s head in the sand, like an ostrich.'],
+                'example' => ['en' => 'An investor avoiding checking their portfolio during a market downturn, hoping the problem will go away on its own.'],
+                'category' => 'too_much_information',
+            ],
+            [
+                'name' => ['en' => 'Subjective Validation'],
+                'definition' => ['en' => 'The tendency to accept a statement or piece of information as correct if it has any personal meaning or significance to us.'],
+                'example' => ['en' => 'People readily believe in vague horoscope predictions because they can easily find examples from their own lives that seem to confirm the statements.'],
+                'category' => 'too_much_information',
+            ],
+
+            //======================================================================
+            // Problem 2: Not Enough Meaning
+            //======================================================================
+            [
+                'name' => ['en' => 'Clustering Illusion'],
+                'definition' => ['en' => 'The tendency to see patterns in random events. It is central to the gambler\'s fallacy.'],
+                'example' => ['en' => 'Seeing a "hot streak" in a basketball player who has made several shots in a row, even though each shot is an independent event.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Insensitivity to Sample Size'],
+                'definition' => ['en' => 'The tendency to under-expect variation in small samples. We often draw conclusions from small amounts of data without considering the role of chance.'],
+                'example' => ['en' => 'A hospital reports that on a particular day, 60% of the babies born were boys. People are more surprised by this if the hospital is large (many births) than if it is small (few births), even though small samples are more likely to show extreme results.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Neglect of Probability'],
+                'definition' => ['en' => 'The tendency to completely disregard probability when making a decision under uncertainty.'],
+                'example' => ['en' => 'Choosing to drive instead of fly because of a fear of plane crashes, despite the statistical probability of a car crash being vastly higher.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Anecdotal Fallacy'],
+                'definition' => ['en' => 'Using a personal experience or an isolated example instead of a sound argument or compelling evidence.'],
+                'example' => ['en' => '"My grandfather smoked a pack a day and lived to be 90, so smoking isn\'t that bad for you."'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Illusion of Validity'],
+                'definition' => ['en' => 'We overestimate our ability to interpret and predict accurately the outcome when analyzing a set of data, in particular when the data analyzed show a very consistent pattern.'],
+                'example' => ['en' => 'A job interviewer might feel confident in their ability to pick the best candidate based on a short interview, despite studies showing that unstructured interviews are poor predictors of job performance.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Gambler\'s Fallacy'],
+                'definition' => ['en' => 'The tendency to think that future probabilities are altered by past events, when in reality they are unchanged.'],
+                'example' => ['en' => 'After a coin toss has landed on heads five times in a row, a person might believe that the next toss is "due" to be tails.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Hot-Hand Fallacy'],
+                'definition' => ['en' => 'The belief that a person who has experienced success with a random event has a greater chance of further success in additional attempts.'],
+                'example' => ['en' => 'A basketball player who has made their last few shots is believed to have a "hot hand" and is more likely to make their next shot.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Illusion of Control'],
+                'definition' => ['en' => 'The tendency to overestimate one\'s ability to control events.'],
+                'example' => ['en' => 'People often believe they can influence the outcome of a dice roll by throwing it harder for a high number and softer for a low number.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Patternicity'],
+                'definition' => ['en' => 'The tendency to find meaningful patterns in meaningless noise. Also known as apophenia.'],
+                'example' => ['en' => 'Seeing a face in the clouds or hearing hidden messages when a record is played backward.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Pareidolia'],
+                'definition' => ['en' => 'A type of apophenia, it is the tendency to perceive a specific, often meaningful image in a random or ambiguous visual pattern.'],
+                'example' => ['en' => 'Seeing the "Man in the Moon" or a face in a piece of toast.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Anthropomorphism'],
+                'definition' => ['en' => 'The tendency to attribute human traits, emotions, or intentions to non-human entities.'],
+                'example' => ['en' => 'Believing your car is "angry" at you when it won\'t start, or thinking your pet dog feels "guilty" after misbehaving.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Group Attribution Error'],
+                'definition' => ['en' => 'The tendency to believe that the characteristics of an individual group member are reflective of the group as a whole.'],
+                'example' => ['en' => 'After a negative interaction with a single tourist from a particular country, concluding that everyone from that country is rude.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Ultimate Attribution Error'],
+                'definition' => ['en' => 'A group-level attribution error that offers an explanation for how one person views different causes of negative and positive behavior in ingroup and outgroup members.'],
+                'example' => ['en' => 'If a member of our own group does something good, we see it as a reflection of their character. If a member of an outgroup does something good, we see it as a result of luck or circumstance.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Stereotyping'],
+                'definition' => ['en' => 'Expecting a group or person to have certain qualities without having real information about the person.'],
+                'example' => ['en' => 'Assuming all librarians are quiet and shy, or that all construction workers are strong and tough.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Essentialism'],
+                'definition' => ['en' => 'The belief that things have a set of characteristics which make them what they are, and that the task of science and philosophy is their discovery and expression.'],
+                'example' => ['en' => 'The belief that there is an "essence" of being male or female that is fixed and cannot be changed.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Functional Fixedness'],
+                'definition' => ['en' => 'A cognitive bias that limits a person to using an object only in the way it is traditionally used.'],
+                'example' => ['en' => 'Needing a hammer but not realizing you could use a heavy wrench to drive in a nail.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Moral Credential Effect'],
+                'definition' => ['en' => 'The tendency of a track record of non-prejudice to increase subsequent prejudice. A person who has engaged in a moral act may feel they have a "license" to engage in an immoral one.'],
+                'example' => ['en' => 'After donating to a charity, a person might feel justified in being rude to a service worker later that day.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Just-World Hypothesis'],
+                'definition' => ['en' => 'The tendency to believe that the world is just and that people get what they deserve.'],
+                'example' => ['en' => 'Blaming the victim of a crime or accident by assuming they must have done something to deserve their fate.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Argument from Fallacy'],
+                'definition' => ['en' => 'The assumption that if an argument for some conclusion is fallacious, then the conclusion is false.'],
+                'example' => ['en' => '"You used a straw man argument, therefore your conclusion that we should invest in renewable energy is wrong."'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Authority Bias'],
+                'definition' => ['en' => 'The tendency to attribute greater accuracy to the opinion of an authority figure and be more influenced by that opinion.'],
+                'example' => ['en' => 'Believing a celebrity\'s endorsement of a medical product, even if they have no medical expertise.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Automation Bias'],
+                'definition' => ['en' => 'The tendency to depend excessively on automated systems which can lead to erroneous automated information overriding correct decisions.'],
+                'example' => ['en' => 'Following a GPS navigation system into a dangerous or incorrect location, trusting it over one\'s own common sense.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Bandwagon Effect'],
+                'definition' => ['en' => 'The tendency to do or believe things because many other people do or believe the same.'],
+                'example' => ['en' => 'Investing in a "meme stock" simply because it is popular and many others are doing so, without researching its fundamental value.'],
+                'category' => 'not_enough_meaning',
+            ],
+            [
+                'name' => ['en' => 'Placebo Effect'],
+                'definition' => ['en' => 'The tendency for a person\'s physical or mental health to appear to improve after taking a placebo or inert treatment.'],
+                'example' => ['en' => 'A patient\'s headache disappears after taking a sugar pill that they believe is a powerful painkiller.'],
+                'category' => 'not_enough_meaning',
+            ],
+
+            //======================================================================
+            // Problem 3: Need to Act Fast
+            //======================================================================
+            [
+                'name' => ['en' => 'Dunning–Kruger Effect'],
+                'definition' => ['en' => 'The tendency for unskilled individuals to overestimate their own ability and the tendency for experts to underestimate their own ability.'],
+                'example' => ['en' => 'A person who has just started learning a new language might believe they are nearly fluent, while a true expert is acutely aware of their own limitations.'],
+                'category' => 'need_to_act_fast',
+            ],
+            [
+                'name' => ['en' => 'Overconfidence Effect'],
+                'definition' => ['en' => 'The tendency for a person\'s subjective confidence in their judgments to be reliably greater than their objective accuracy.'],
+                'example' => ['en' => 'A student who is certain they aced an exam is surprised to find they only received a mediocre grade.'],
+                'category' => 'need_to_act_fast',
+            ],
+            [
+                'name' => ['en' => 'Lake Wobegon Effect'],
+                'definition' => ['en' => 'The human tendency to overestimate one\'s achievements and capabilities in relation to others. Also known as illusory superiority.'],
+                'example' => ['en' => 'In a survey, 90% of drivers might rate their own driving skills as "above average".'],
+                'category' => 'need_to_act_fast',
+            ],
+            [
+                'name' => ['en' => 'Hard–Easy Effect'],
+                'definition' => ['en' => 'The tendency to overestimate one\'s ability to perform a difficult task and to underestimate one\'s ability to perform an easy task.'],
+                'example' => ['en' => 'A student might be overconfident about their ability to write a complex research paper but underconfident about their ability to pass a simple multiple-choice quiz.'],
+                'category' => 'need_to_act_fast',
+            ],
+            [
+                'name' => ['en' => 'Optimism Bias'],
+                'definition' => ['en' => 'The tendency to be overly optimistic, overestimating favorable and pleasing outcomes.'],
+                'example' => ['en' => 'A person might believe they are less likely to experience a negative event, like a car accident or a serious illness, than other people.'],
+                'category' => 'need_to_act_fast',
+            ],
+            [
+                'name' => ['en' => 'Pessimism Bias'],
+                'definition' => ['en' => 'The tendency for some people, especially those suffering from depression, to overestimate the likelihood of negative things happening to them.'],
+                'example' => ['en' => 'A person might believe they are certain to fail an exam, even if they have studied thoroughly and are well-prepared.'],
+                'category' => 'need_to_act_fast',
+            ],
+            [
+                'name' => ['en' => 'Default Effect'],
+                'definition' => ['en' => 'When given a choice between several options, the tendency to favor the default one.'],
+                'example' => ['en' => 'Most people stick with the default settings on their phone, even if customizing them would be beneficial.'],
+                'category' => 'need_to_act_fast',
+            ],
+            [
+                'name' => ['en' => 'Ben Franklin Effect'],
+                'definition' => ['en' => 'A person who has performed a favor for someone is more likely to do another favor for that person than they would be if they had received a favor from that person.'],
+                'example' => ['en' => 'If you want someone to like you, ask them to do a small favor for you. Their brain will rationalize that they must like you, otherwise they wouldn\'t have helped.'],
+                'category' => 'need_to_act_fast',
+            ],
+            [
+                'name' => ['en' => 'Backfire Effect'],
+                'definition' => ['en' => 'The reaction to disconfirming evidence by strengthening one\'s previous beliefs.'],
+                'example' => ['en' => 'When presented with scientific evidence that contradicts their political beliefs, a person might become even more convinced that their original belief is correct.'],
+                'category' => 'need_to_act_fast',
+            ],
+            [
+                'name' => ['en' => 'System Justification'],
+                'definition' => ['en' => 'The tendency to defend and bolster the status quo. Existing social, economic, and political arrangements tend to be preferred, and alternatives disparaged sometimes even at the expense of individual and collective self-interest.'],
+                'example' => ['en' => 'People in lower socioeconomic classes might defend a system that is economically disadvantageous to them because it is the system they are familiar with.'],
+                'category' => 'need_to_act_fast',
+            ],
+            [
+                'name' => ['en' => 'Reactance'],
+                'definition' => ['en' => 'The urge to do the opposite of what someone wants you to do out of a need to resist a perceived attempt to constrain your freedom of choice.'],
+                'example' => ['en' => 'A teenager might start smoking specifically because their parents have forbidden it.'],
+                'category' => 'need_to_act_fast',
+            ],
+            [
+                'name' => ['en' => 'Reverse Psychology'],
+                'definition' => ['en' => 'A technique involving the advocacy of a belief or behavior that is opposite to the one desired, with the expectation that this approach will encourage the subject of the persuasion to do what is actually desired.'],
+                'example' => ['en' => 'Telling a rebellious child, "You\'re probably not old enough to handle the responsibility of cleaning your room," in the hope that they will clean it to prove you wrong.'],
+                'category' => 'need_to_act_fast',
+            ],
+            [
+                'name' => ['en' => 'Decoy Effect'],
+                'definition' => ['en' => 'The phenomenon whereby consumers will tend to have a specific change in preference between two options when also presented with a third option that is asymmetrically dominated.'],
+                'example' => ['en' => 'A movie theater offers a small popcorn for $3 and a large for $7. Most people buy the small. When a medium option is introduced for $6.50, most people now buy the large because it seems like a much better deal.'],
+                'category' => 'need_to_act_fast',
+            ],
+            [
+                'name' => ['en' => 'Social Desirability Bias'],
+                'definition' => ['en' => 'The tendency of survey respondents to answer questions in a manner that will be viewed favorably by others.'],
+                'example' => ['en' => 'In a survey, more people might claim to vote or donate to charity than actually do, because those are socially desirable actions.'],
+                'category' => 'need_to_act_fast',
+            ],
+
+            //======================================================================
+            // Problem 4: What Should We Remember?
+            // We edit and reinforce some memories after the fact.
+            //======================================================================
+            [
+                'name' => ['en' => 'Misinformation Effect'],
+                'definition' => ['en' => 'Memory becoming less accurate because of post-event information.'],
+                'example' => ['en' => 'A witness who is asked "How fast were the cars going when they smashed into each other?" might later remember the cars going faster than they actually were.'],
+                'category' => 'what_to_remember',
+            ],
+            [
+                'name' => ['en' => 'Source Amnesia'],
+                'definition' => ['en' => 'The inability to remember where, when, or how one has learned knowledge that has been acquired and retained.'],
+                'example' => ['en' => 'Remembering a fact but being unable to recall if you read it in a textbook, heard it on the news, or were told by a friend.'],
+                'category' => 'what_to_remember',
+            ],
+            [
+                'name' => ['en' => 'Cryptomnesia'],
+                'definition' => ['en' => 'A memory bias whereby a person may falsely recall generating a thought, idea, song, or joke, not deliberately engaging in plagiarism but rather experiencing a memory as if it were a new inspiration.'],
+                'example' => ['en' => 'A musician might compose a melody that they believe is original, only to discover later that it is very similar to a song they heard years ago.'],
+                'category' => 'what_to_remember',
+            ],
+            [
+                'name' => ['en' => 'False Memory'],
+                'definition' => ['en' => 'A psychological phenomenon where a person recalls something that did not happen or recalls it differently from the way it actually happened.'],
+                'example' => ['en' => 'Many people have a false memory of seeing Bugs Bunny at Disneyland, even though Bugs Bunny is a Warner Bros. character.'],
+                'category' => 'what_to_remember',
+            ],
+            [
+                'name' => ['en' => 'Suggestibility'],
+                'definition' => ['en' => 'The quality of being inclined to accept and act on the suggestions of others.'],
+                'example' => ['en' => 'Leading questions from an interrogator can cause a witness to incorporate false details into their memory of an event.'],
+                'category' => 'what_to_remember',
+            ],
+            [
+                'name' => ['en' => 'Spacing Effect'],
+                'definition' => ['en' => 'The phenomenon whereby learning is greater when studying is spread out over time, as opposed to studying the same amount of time in a single session.'],
+                'example' => ['en' => 'Studying a subject for one hour every day for a week is more effective for long-term retention than cramming for seven hours in one night.'],
+                'category' => 'what_to_remember',
+            ],
+            [
+                'name' => ['en' => 'Testing Effect'],
+                'definition' => ['en' => 'The finding that long-term memory is often increased when some of the learning period is devoted to retrieving the to-be-remembered information.'],
+                'example' => ['en' => 'Actively quizzing yourself on material is a more effective way to study than simply re-reading it.'],
+                'category' => 'what_to_remember',
+            ],
+            [
+                'name' => ['en' => 'Google Effect'],
+                'definition' => ['en' => 'The tendency to forget information that can be found readily online by using Internet search engines.'],
+                'example' => ['en' => 'You are less likely to remember a specific fact, like an actor\'s birthday, because you know you can easily look it up on your phone.'],
+                'category' => 'what_to_remember',
+            ],
+            [
+                'name' => ['en' => 'Peak–End Rule'],
+                'definition' => ['en' => 'That people judge an experience largely based on how they felt at its peak and at its end, rather than based on the total sum or average of every moment.'],
+                'example' => ['en' => 'A vacation might be remembered as great if it had a fantastic final day, even if most of the trip was mediocre.'],
+                'category' => 'what_to_remember',
+            ],
+            [
+                'name' => ['en' => 'Hindsight Bias'],
+                'definition' => ['en' => 'The tendency to see past events as being predictable at the time those events happened.'],
+                'example' => ['en' => 'After a stock market crash, people might say they "knew it was coming all along," even if they didn\'t.'],
+                'category' => 'what_to_remember',
+            ],
+            [
+                'name' => ['en' => 'Rosy Retrospection'],
+                'definition' => ['en' => 'The tendency to rate past events more positively than they had actually rated them when the event occurred.'],
+                'example' => ['en' => 'Remembering a difficult camping trip from your childhood as a fun adventure, while forgetting the rain, mosquitoes, and uncomfortable nights.'],
+                'category' => 'what_to_remember',
+            ],
+            [
+                'name' => ['en' => 'Telescoping Effect'],
+                'definition' => ['en' => 'The tendency to displace recent events backward in time and remote events forward in time, so that recent events appear more remote, and remote events, more recent.'],
+                'example' => ['en' => 'You might think an event that happened two years ago occurred only one year ago (forward telescoping), or that an event from last month happened three months ago (backward telescoping).'],
+                'category' => 'what_to_remember',
+            ],
+            [
+                'name' => ['en' => 'Zeigarnik Effect'],
+                'definition' => ['en' => 'The tendency to remember uncompleted or interrupted tasks better than completed tasks.'],
+                'example' => ['en' => 'A waiter is more likely to remember the orders of a table that has not yet paid than a table that has already settled their bill.'],
+                'category' => 'what_to_remember',
+            ],
+        ];
+
+        foreach ($biases as $biasData) {
+            // Prepare the data for insertion, ensuring multilingual fields are JSON
+            $nameJson = json_encode($biasData['name']);
+            $definitionJson = json_encode($biasData['definition']);
+            $exampleJson = json_encode($biasData['example']);
+
+            CognitiveBias::create([
+                'name' => $nameJson,
+                'definition' => $definitionJson,
+                'example' => $exampleJson,
+                'category' => $biasData['category'],
+            ]);
+        }
+    }
+}
