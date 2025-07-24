@@ -20,6 +20,7 @@ export function Navigation() {
     { path: '/consciousness', label: t('nav.consciousness') },
     { path: '/cognitive-biases', label: t('nav.cognitive-biases') },
     { path: '/logical-fallacies', label: t('nav.logical-fallacies') },
+    { path: '/critical-thinking', label: t('nav.critical-thinking') },
     { path: '/challenges', label: t('nav.challenges') },
     { path: '/solutions', label: t('nav.solutions') },
   ];

@@ -66,7 +66,7 @@ export default function CognitiveBiases() {
               placeholder="Search cognitive biases..."
               value={searchTerm}
               onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10"
+              className="pl-10 bg-background border-border"
             />
           </div>
           <DropdownMenu>
