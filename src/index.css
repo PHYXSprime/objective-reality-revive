@@ -159,18 +159,18 @@
 }
 
 @layer components {
-  /* Enhanced liquid glass card effects */
+  /* Enhanced transparent glass card effects */
   .glass-card {
-    background: hsl(var(--glass-bg));
-    backdrop-filter: blur(40px) saturate(200%);
-    border: 2px solid hsl(var(--glass-border));
+    background: hsl(240 10% 15% / 0.08); /* Much more transparent */
+    backdrop-filter: blur(20px) saturate(150%); /* Less blur, more clarity */
+    border: 1px solid hsl(240 20% 80% / 0.25); /* More visible border */
     box-shadow: 
-      0 20px 60px hsl(240 10% 3.9% / 0.4),
-      0 8px 32px hsl(240 10% 3.9% / 0.3),
-      inset 0 2px 0 hsl(240 20% 80% / 0.15),
-      inset 0 -1px 0 hsl(240 20% 80% / 0.05),
-      inset 2px 0 4px hsl(240 20% 80% / 0.08),
-      inset -2px 0 4px hsl(240 20% 80% / 0.08);
+      0 8px 32px hsl(240 10% 3.9% / 0.2), /* Lighter shadow */
+      0 4px 16px hsl(240 10% 3.9% / 0.1),
+      inset 0 1px 0 hsl(240 20% 80% / 0.3), /* More prominent inner highlights */
+      inset 0 -1px 0 hsl(240 20% 80% / 0.1),
+      inset 1px 0 2px hsl(240 20% 80% / 0.15),
+      inset -1px 0 2px hsl(240 20% 80% / 0.15);
     position: relative;
   }
 
@@ -182,10 +182,10 @@
     right: 0;
     bottom: 0;
     background: linear-gradient(135deg, 
-      hsl(240 20% 80% / 0.1) 0%, 
-      transparent 25%, 
-      transparent 75%, 
-      hsl(240 20% 80% / 0.05) 100%);
+      hsl(240 20% 80% / 0.15) 0%, /* More visible gradient */
+      transparent 30%, 
+      transparent 70%, 
+      hsl(240 20% 80% / 0.08) 100%);
     border-radius: inherit;
     pointer-events: none;
   }
