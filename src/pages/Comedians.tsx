@@ -61,17 +61,19 @@ export default function Comedians() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center">
-          <h1 className="text-4xl font-bold text-foreground mb-6">
-            Comedians: The Modern Jesters
-          </h1>
-          <p className="text-xl text-muted-foreground max-w-4xl mx-auto mb-8">
-            Comedians often are among the smartest people in society. Their cognitive abilities 
-            allow them to question our "status quo" and deliver truth disguised as humor.
-          </p>
+          <div className="glass-card rounded-2xl p-8 max-w-4xl mx-auto mb-8">
+            <h1 className="text-4xl font-bold text-foreground mb-6">
+              Comedians: The Modern Jesters
+            </h1>
+            <p className="text-xl text-muted-foreground">
+              Comedians often are among the smartest people in society. Their cognitive abilities 
+              allow them to question our "status quo" and deliver truth disguised as humor.
+            </p>
+          </div>
         </div>
 
         {/* The Role of Comedy */}
-        <Card className="mb-12 border-blue-200 dark:border-blue-800">
+        <Card className="mb-12 glass-card rounded-2xl border-blue-200 dark:border-blue-800">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Brain className="h-6 w-6 text-blue-600" />
@@ -98,12 +100,14 @@ export default function Comedians() {
 
         {/* Notable Truth-Telling Comedians */}
         <div className="mb-12">
-          <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-            Comedy Philosophers
-          </h2>
+          <div className="glass-card rounded-2xl p-6 text-center mb-8 max-w-3xl mx-auto">
+            <h2 className="text-3xl font-bold text-foreground mb-4">
+              Comedy Philosophers
+            </h2>
+          </div>
           <div className="grid md:grid-cols-2 gap-6">
             {comedianPhilosophers.map((comedian, index) => (
-              <Card key={index}>
+              <Card key={index} className="glass-card rounded-2xl">
                 <CardHeader>
                   <CardTitle className="text-lg">{comedian.name}</CardTitle>
                   <CardDescription className="text-muted-foreground">
@@ -131,7 +135,7 @@ export default function Comedians() {
         </Alert>
 
         {/* Corruption & Resistance */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card rounded-2xl">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Shield className="h-6 w-6 text-red-600" />
@@ -164,7 +168,7 @@ export default function Comedians() {
         </Card>
 
         {/* The Propaganda Machine */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card rounded-2xl">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Users className="h-6 w-6 text-purple-600" />
@@ -188,7 +192,7 @@ export default function Comedians() {
         </Card>
 
         {/* How to Evaluate Comedy */}
-        <Card className="mb-12">
+        <Card className="mb-12 glass-card rounded-2xl">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Target className="h-6 w-6 text-green-600" />
@@ -224,7 +228,7 @@ export default function Comedians() {
         </Card>
 
         {/* The Jester's Wisdom */}
-        <div className="text-center bg-muted/30 p-8 rounded-lg">
+        <div className="glass-card rounded-2xl text-center p-8">
           <Smile className="h-12 w-12 text-primary mx-auto mb-4" />
           <h3 className="text-2xl font-bold text-foreground mb-4">
             The Eternal Role of the Jester
