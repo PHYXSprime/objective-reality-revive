@@ -1,7 +1,7 @@
 import { Brain, Users, BookOpen, Target, AlertTriangle, Eye, Shield } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
-import { SolutionNavigation } from '@/components/SolutionNavigation';
+import { ChallengeNavigation } from '@/components/ChallengeNavigation';
 
 export default function Indoctrination() {
   const { t } = useLanguage();
@@ -58,7 +58,7 @@ export default function Indoctrination() {
 
   return (
     <div className="min-h-screen py-8">
-      <SolutionNavigation />
+      <ChallengeNavigation />
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center">
