@@ -306,4 +306,79 @@ export const es = {
   'propaganda.action.community3': 'Fomenta el diálogo abierto',
   'propaganda.action.community4': 'Desafía las cámaras de eco respetuosamente',
   'propaganda.action.community5': 'Comparte este conocimiento con otros',
+
+  // Censorship
+  'censorship.title': 'Censura',
+  'censorship.subtitle': 'Entender la supresión moderna de información y cómo reconocerla',
+  'censorship.politicalCorrectnessAlert': 'En una era de "corrección política", cuestionar ciertas narrativas puede resultar en consecuencias sociales y profesionales, haciendo el discurso abierto cada vez más difícil.',
+  'censorship.typesOfCensorship': 'Tipos de censura moderna',
+  'censorship.typesDescription': 'Entender las diversas formas de censura nos ayuda a reconocerlas y resistirlas.',
+  'censorship.propagandaLanguage': 'Patrones de lenguaje de propaganda',
+  'censorship.propagandaLanguageDesc': 'Frases comunes que disfrazan la censura como protección',
+  'censorship.sophistication': 'Sofisticación creciente',
+  'censorship.sophisticationText': 'La censura moderna se ha vuelto más sutil y sofisticada que la quema histórica de libros.',
+  'censorship.growingUp.title': 'Madurar',
+  'censorship.growingUp.text': 'Una sociedad madura puede manejar ideas controvertidas sin censurarlas.',
+  'censorship.detection': 'Métodos de detección',
+  'censorship.detection.informationPatterns': 'Patrones de información',
+  'censorship.detection.platformBehavior': 'Comportamiento de plataforma',
+  'censorship.detection.socialSignals': 'Señales sociales',
+  'censorship.importanceOfFreeExpression': 'La importancia de la libre expresión',
+
+  // Censorship Types
+  'censorship.type.politicalCorrectness': 'Corrección política',
+  'censorship.type.politicalCorrectness.desc': 'Vigilancia del lenguaje e ideas para conformarse a las sensibilidades sociales actuales',
+  'censorship.type.algorithmicBias': 'Sesgo algorítmico',
+  'censorship.type.algorithmicBias.desc': 'Sistemas de IA entrenados para suprimir automáticamente ciertos puntos de vista',
+  'censorship.type.shadowBanning': 'Shadow Banning',
+  'censorship.type.shadowBanning.desc': 'Limitación secreta del alcance sin notificar al usuario',
+  'censorship.type.labelSuppression': 'Supresión por etiquetas',
+  'censorship.type.labelSuppression.desc': 'Uso de etiquetas de advertencia para desalentar la interacción con contenido',
+  'censorship.type.memoryHole': 'Agujero de memoria',
+  'censorship.type.memoryHole.desc': 'Hacer que la información desaparezca de los registros digitales',
+  'censorship.type.deplatforming': 'Desplataforming',
+  'censorship.type.deplatforming.desc': 'Eliminar completamente a individuos de plataformas de comunicación',
+
+  // Warning Labels
+  'censorship.label.hateSpeech': 'Discurso de odio',
+  'censorship.label.hateSpeech.reality': 'A menudo significa: "Ideas que desafían las narrativas sociales actuales"',
+  'censorship.label.disinformation': 'Desinformación',
+  'censorship.label.disinformation.reality': 'A menudo significa: "Información que contradice fuentes oficiales"',
+  'censorship.label.conspiracyTheory': 'Teoría de conspiración',
+  'censorship.label.conspiracyTheory.reality': 'A menudo significa: "Explicaciones alternativas para eventos"',
+  'censorship.label.moderate': 'Necesita moderación',
+  'censorship.label.moderate.reality': 'A menudo significa: "Contiene verdades incómodas"',
+
+  // Risk levels
+  'censorship.risk.high': 'Alto riesgo',
+  'censorship.risk.medium': 'Riesgo medio',
+
+  // Sophistication details
+  'censorship.sophistication.detail1': 'La supresión algorítmica parece neutral',
+  'censorship.sophistication.detail2': 'El contenido está oculto, no obviamente eliminado',
+  'censorship.sophistication.detail3': 'Demonetización en lugar de eliminación',
+  'censorship.sophistication.detail4': '"Verificación de hechos" como censura blanda',
+
+  // Growing up details
+  'censorship.growingUp.detail1': 'Desarrollar piel gruesa para puntos de vista opuestos',
+  'censorship.growingUp.detail2': 'Distinguir entre daño y ofensa',
+  'censorship.growingUp.detail3': 'Valorar la verdad sobre la comodidad',
+  'censorship.growingUp.detail4': 'Interactuar con ideas, no con emociones',
+
+  // Detection details
+  'censorship.detection.info1': 'Cobertura unilateral de temas controvertidos',
+  'censorship.detection.info2': 'Ausencia de opiniones expertas disidentes',
+  'censorship.detection.info3': 'Desaparición repentina de contenido',
+  'censorship.detection.info4': 'Mensaje consistente a través de plataformas',
+  'censorship.detection.platform1': 'Reducción del engagement en ciertos temas',
+  'censorship.detection.platform2': 'Resultados de búsqueda que parecen filtrados',
+  'censorship.detection.platform3': 'Advertencias de "verificación de hechos" en puntos de vista específicos',
+  'censorship.detection.platform4': 'Restricciones de cuenta sin violaciones claras',
+  'censorship.detection.social1': 'Temas tabú que "no se pueden discutir"',
+  'censorship.detection.social2': 'Riesgos profesionales por ciertas opiniones',
+  'censorship.detection.social3': 'Ostracismo social por cuestionar narrativas',
+  'censorship.detection.social4': 'Llamados a no "plataformar" ciertas ideas',
+
+  // Final message
+  'censorship.freeExpressionText': 'La discusión libre y abierta es esencial para el progreso humano. Cuando censuramos ideas, incluso las "erróneas", perdemos la oportunidad de probar nuestras propias creencias y descubrir nuevas verdades. El mercado de ideas funciona mejor cuando todas las ideas pueden competir libremente.',
 } as const;

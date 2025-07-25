@@ -11,37 +11,37 @@ export default function Censorship() {
     {
       type: t('censorship.type.politicalCorrectness'),
       description: t('censorship.type.politicalCorrectness.desc'),
-      danger: "High",
+      danger: t('censorship.risk.high'),
       color: "text-red-600 dark:text-red-400"
     },
     {
       type: t('censorship.type.algorithmicBias'),
       description: t('censorship.type.algorithmicBias.desc'),
-      danger: "High",
+      danger: t('censorship.risk.high'),
       color: "text-red-600 dark:text-red-400"
     },
     {
       type: t('censorship.type.shadowBanning'),
       description: t('censorship.type.shadowBanning.desc'),
-      danger: "Medium",
+      danger: t('censorship.risk.medium'),
       color: "text-orange-600 dark:text-orange-400"
     },
     {
       type: t('censorship.type.labelSuppression'),
       description: t('censorship.type.labelSuppression.desc'),
-      danger: "High",
+      danger: t('censorship.risk.high'),
       color: "text-red-600 dark:text-red-400"
     },
     {
       type: t('censorship.type.memoryHole'),
       description: t('censorship.type.memoryHole.desc'),
-      danger: "Medium",
+      danger: t('censorship.risk.medium'),
       color: "text-orange-600 dark:text-orange-400"
     },
     {
       type: t('censorship.type.deplatforming'),
       description: t('censorship.type.deplatforming.desc'),
-      danger: "High",
+      danger: t('censorship.risk.high'),
       color: "text-red-600 dark:text-red-400"
     }
   ];
@@ -102,7 +102,7 @@ export default function Censorship() {
               {t('censorship.typesOfCensorship')}
             </CardTitle>
             <CardDescription className="text-muted-foreground">
-              Understanding the various forms of censorship helps us recognize and resist them.
+              {t('censorship.typesDescription')}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -114,10 +114,10 @@ export default function Censorship() {
                 <div className="flex items-center justify-between">
                   <CardTitle className="text-lg">{item.type}</CardTitle>
                   <span className={`text-sm font-medium px-2 py-1 rounded ${
-                    item.danger === 'High' ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200' :
+                    item.danger === t('censorship.risk.high') ? 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200' :
                     'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200'
                   }`}>
-                    {item.danger} Risk
+                    {item.danger}
                   </span>
                 </div>
               </CardHeader>
@@ -167,10 +167,10 @@ export default function Censorship() {
                 {t('censorship.sophisticationText')}
               </p>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Algorithmic suppression appears neutral</li>
-                <li>• Content is hidden, not obviously removed</li>
-                <li>• Demonetization instead of deletion</li>
-                <li>• "Fact-checking" as soft censorship</li>
+                <li>• {t('censorship.sophistication.detail1')}</li>
+                <li>• {t('censorship.sophistication.detail2')}</li>
+                <li>• {t('censorship.sophistication.detail3')}</li>
+                <li>• {t('censorship.sophistication.detail4')}</li>
               </ul>
             </CardContent>
           </Card>
@@ -187,10 +187,10 @@ export default function Censorship() {
                 {t('censorship.growingUp.text')}
               </p>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Develop thick skin for opposing viewpoints</li>
-                <li>• Distinguish between harm and offense</li>
-                <li>• Value truth over comfort</li>
-                <li>• Engage with ideas, not emotions</li>
+                <li>• {t('censorship.growingUp.detail1')}</li>
+                <li>• {t('censorship.growingUp.detail2')}</li>
+                <li>• {t('censorship.growingUp.detail3')}</li>
+                <li>• {t('censorship.growingUp.detail4')}</li>
               </ul>
             </CardContent>
           </Card>
@@ -209,28 +209,28 @@ export default function Censorship() {
               <div>
                 <h4 className="font-semibold text-foreground mb-3">{t('censorship.detection.informationPatterns')}</h4>
                 <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• One-sided coverage of controversial topics</li>
-                  <li>• Absence of dissenting expert opinions</li>
-                  <li>• Sudden disappearance of content</li>
-                  <li>• Consistent message across platforms</li>
+                  <li>• {t('censorship.detection.info1')}</li>
+                  <li>• {t('censorship.detection.info2')}</li>
+                  <li>• {t('censorship.detection.info3')}</li>
+                  <li>• {t('censorship.detection.info4')}</li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold text-foreground mb-3">{t('censorship.detection.platformBehavior')}</h4>
                 <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• Reduced engagement on certain topics</li>
-                  <li>• Search results that seem filtered</li>
-                  <li>• "Fact-check" warnings on specific viewpoints</li>
-                  <li>• Account restrictions without clear violations</li>
+                  <li>• {t('censorship.detection.platform1')}</li>
+                  <li>• {t('censorship.detection.platform2')}</li>
+                  <li>• {t('censorship.detection.platform3')}</li>
+                  <li>• {t('censorship.detection.platform4')}</li>
                 </ul>
               </div>
               <div>
                 <h4 className="font-semibold text-foreground mb-3">{t('censorship.detection.socialSignals')}</h4>
                 <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• Taboo topics that "can't be discussed"</li>
-                  <li>• Career risks for certain opinions</li>
-                  <li>• Social ostracism for questioning narratives</li>
-                  <li>• Appeals to not "platform" certain ideas</li>
+                  <li>• {t('censorship.detection.social1')}</li>
+                  <li>• {t('censorship.detection.social2')}</li>
+                  <li>• {t('censorship.detection.social3')}</li>
+                  <li>• {t('censorship.detection.social4')}</li>
                 </ul>
               </div>
             </div>
@@ -244,9 +244,7 @@ export default function Censorship() {
               {t('censorship.importanceOfFreeExpression')}
             </h3>
             <p className="text-muted-foreground max-w-3xl mx-auto">
-              Free and open discussion is essential for human progress. When we censor ideas, 
-              even "wrong" ones, we lose the opportunity to test our own beliefs and discover 
-              new truths. The marketplace of ideas works best when all ideas can compete freely.
+              {t('censorship.freeExpressionText')}
             </p>
           </CardContent>
         </Card>

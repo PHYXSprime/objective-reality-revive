@@ -306,4 +306,79 @@ export const fr = {
   'propaganda.action.community3': 'Encouragez le dialogue ouvert',
   'propaganda.action.community4': 'Défiez respectueusement les chambres d\'écho',
   'propaganda.action.community5': 'Partagez ces connaissances avec d\'autres',
+
+  // Censorship
+  'censorship.title': 'Censure',
+  'censorship.subtitle': 'Comprendre la suppression moderne de l\'information et comment la reconnaître',
+  'censorship.politicalCorrectnessAlert': 'À une époque de "correctness politique", remettre en question certaines narratives peut entraîner des conséquences sociales et professionnelles, rendant le discours ouvert de plus en plus difficile.',
+  'censorship.typesOfCensorship': 'Types de censure moderne',
+  'censorship.typesDescription': 'Comprendre les diverses formes de censure nous aide à les reconnaître et à y résister.',
+  'censorship.propagandaLanguage': 'Modèles de langage de propagande',
+  'censorship.propagandaLanguageDesc': 'Phrases courantes qui déguisent la censure en protection',
+  'censorship.sophistication': 'Sophistication croissante',
+  'censorship.sophisticationText': 'La censure moderne est devenue plus subtile et sophistiquée que l\'incinération historique de livres.',
+  'censorship.growingUp.title': 'Grandir',
+  'censorship.growingUp.text': 'Une société mature peut gérer des idées controversées sans les censurer.',
+  'censorship.detection': 'Méthodes de détection',
+  'censorship.detection.informationPatterns': 'Modèles d\'information',
+  'censorship.detection.platformBehavior': 'Comportement de plateforme',
+  'censorship.detection.socialSignals': 'Signaux sociaux',
+  'censorship.importanceOfFreeExpression': 'L\'importance de la libre expression',
+
+  // Censorship Types
+  'censorship.type.politicalCorrectness': 'Correctness politique',
+  'censorship.type.politicalCorrectness.desc': 'Surveillance du langage et des idées pour se conformer aux sensibilités sociales actuelles',
+  'censorship.type.algorithmicBias': 'Biais algorithmique',
+  'censorship.type.algorithmicBias.desc': 'Systèmes d\'IA entraînés à supprimer automatiquement certains points de vue',
+  'censorship.type.shadowBanning': 'Shadow Banning',
+  'censorship.type.shadowBanning.desc': 'Limitation secrète de la portée sans notifier l\'utilisateur',
+  'censorship.type.labelSuppression': 'Suppression par étiquetage',
+  'censorship.type.labelSuppression.desc': 'Utilisation d\'étiquettes d\'avertissement pour décourager l\'interaction avec le contenu',
+  'censorship.type.memoryHole': 'Trou de mémoire',
+  'censorship.type.memoryHole.desc': 'Faire disparaître l\'information des archives numériques',
+  'censorship.type.deplatforming': 'Déplateforme',
+  'censorship.type.deplatforming.desc': 'Suppression complète d\'individus des plateformes de communication',
+
+  // Warning Labels
+  'censorship.label.hateSpeech': 'Discours de haine',
+  'censorship.label.hateSpeech.reality': 'Signifie souvent: "Idées qui remettent en question les narratives sociales actuelles"',
+  'censorship.label.disinformation': 'Désinformation',
+  'censorship.label.disinformation.reality': 'Signifie souvent: "Information qui contredit les sources officielles"',
+  'censorship.label.conspiracyTheory': 'Théorie du complot',
+  'censorship.label.conspiracyTheory.reality': 'Signifie souvent: "Explications alternatives pour les événements"',
+  'censorship.label.moderate': 'Nécessite modération',
+  'censorship.label.moderate.reality': 'Signifie souvent: "Contient des vérités inconfortables"',
+
+  // Risk levels
+  'censorship.risk.high': 'Risque élevé',
+  'censorship.risk.medium': 'Risque moyen',
+
+  // Sophistication details
+  'censorship.sophistication.detail1': 'La suppression algorithmique semble neutre',
+  'censorship.sophistication.detail2': 'Le contenu est caché, pas évidemment supprimé',
+  'censorship.sophistication.detail3': 'Démonétisation au lieu de suppression',
+  'censorship.sophistication.detail4': '"Vérification des faits" comme censure douce',
+
+  // Growing up details
+  'censorship.growingUp.detail1': 'Développer une peau épaisse pour les points de vue opposés',
+  'censorship.growingUp.detail2': 'Distinguer entre préjudice et offense',
+  'censorship.growingUp.detail3': 'Valoriser la vérité plutôt que le confort',
+  'censorship.growingUp.detail4': 'S\'engager avec les idées, pas les émotions',
+
+  // Detection details
+  'censorship.detection.info1': 'Couverture unilatérale de sujets controversés',
+  'censorship.detection.info2': 'Absence d\'opinions d\'experts dissidents',
+  'censorship.detection.info3': 'Disparition soudaine de contenu',
+  'censorship.detection.info4': 'Message cohérent à travers les plateformes',
+  'censorship.detection.platform1': 'Engagement réduit sur certains sujets',
+  'censorship.detection.platform2': 'Résultats de recherche qui semblent filtrés',
+  'censorship.detection.platform3': 'Avertissements de "vérification des faits" sur des points de vue spécifiques',
+  'censorship.detection.platform4': 'Restrictions de compte sans violations claires',
+  'censorship.detection.social1': 'Sujets tabous qui "ne peuvent pas être discutés"',
+  'censorship.detection.social2': 'Risques de carrière pour certaines opinions',
+  'censorship.detection.social3': 'Ostracisme social pour questioner les narratives',
+  'censorship.detection.social4': 'Appels à ne pas "plateformer" certaines idées',
+
+  // Final message
+  'censorship.freeExpressionText': 'La discussion libre et ouverte est essentielle au progrès humain. Lorsque nous censurons les idées, même les "mauvaises", nous perdons l\'opportunité de tester nos propres croyances et de découvrir de nouvelles vérités. Le marché des idées fonctionne mieux lorsque toutes les idées peuvent concourir librement.',
 } as const;

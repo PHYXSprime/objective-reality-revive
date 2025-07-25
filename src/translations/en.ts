@@ -178,6 +178,40 @@ export const en = {
   'censorship.label.moderate': 'Needs Moderation',
   'censorship.label.moderate.reality': 'Often means: "Contains uncomfortable truths"',
 
+  // Risk levels
+  'censorship.risk.high': 'High Risk',
+  'censorship.risk.medium': 'Medium Risk',
+
+  // Sophistication details
+  'censorship.sophistication.detail1': 'Algorithmic suppression appears neutral',
+  'censorship.sophistication.detail2': 'Content is hidden, not obviously removed',
+  'censorship.sophistication.detail3': 'Demonetization instead of deletion',
+  'censorship.sophistication.detail4': '"Fact-checking" as soft censorship',
+
+  // Growing up details
+  'censorship.growingUp.detail1': 'Develop thick skin for opposing viewpoints',
+  'censorship.growingUp.detail2': 'Distinguish between harm and offense',
+  'censorship.growingUp.detail3': 'Value truth over comfort',
+  'censorship.growingUp.detail4': 'Engage with ideas, not emotions',
+
+  // Detection details
+  'censorship.detection.info1': 'One-sided coverage of controversial topics',
+  'censorship.detection.info2': 'Absence of dissenting expert opinions',
+  'censorship.detection.info3': 'Sudden disappearance of content',
+  'censorship.detection.info4': 'Consistent message across platforms',
+  'censorship.detection.platform1': 'Reduced engagement on certain topics',
+  'censorship.detection.platform2': 'Search results that seem filtered',
+  'censorship.detection.platform3': '"Fact-check" warnings on specific viewpoints',
+  'censorship.detection.platform4': 'Account restrictions without clear violations',
+  'censorship.detection.social1': 'Taboo topics that "can\'t be discussed"',
+  'censorship.detection.social2': 'Career risks for certain opinions',
+  'censorship.detection.social3': 'Social ostracism for questioning narratives',
+  'censorship.detection.social4': 'Appeals to not "platform" certain ideas',
+
+  // Final message
+  'censorship.freeExpressionText': 'Free and open discussion is essential for human progress. When we censor ideas, even "wrong" ones, we lose the opportunity to test our own beliefs and discover new truths. The marketplace of ideas works best when all ideas can compete freely.',
+  'censorship.typesDescription': 'Understanding the various forms of censorship helps us recognize and resist them.',
+
   // Cognitive Biases
   'filter.all': 'All Categories',
   'filter.by_category': 'Filter by Category',

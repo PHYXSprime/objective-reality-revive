@@ -330,4 +330,79 @@ export const de = {
   'propaganda.action.community3': 'Ermutigen Sie zu offenem Dialog',
   'propaganda.action.community4': 'Fordern Sie Echokammern respektvoll heraus',
   'propaganda.action.community5': 'Teilen Sie dieses Wissen mit anderen',
+
+  // Censorship
+  'censorship.title': 'Zensur',
+  'censorship.subtitle': 'Moderne Informationsunterdrückung verstehen und erkennen',
+  'censorship.politicalCorrectnessAlert': 'In einer Ära der "politischen Korrektheit" kann das Hinterfragen bestimmter Narrative zu sozialen und beruflichen Konsequenzen führen, was offene Diskussionen zunehmend erschwert.',
+  'censorship.typesOfCensorship': 'Arten moderner Zensur',
+  'censorship.typesDescription': 'Das Verständnis der verschiedenen Formen von Zensur hilft uns, sie zu erkennen und zu widerstehen.',
+  'censorship.propagandaLanguage': 'Propaganda-Sprachmuster',
+  'censorship.propagandaLanguageDesc': 'Häufige Phrasen, die Zensur als Schutz tarnen',
+  'censorship.sophistication': 'Wachsende Raffinesse',
+  'censorship.sophisticationText': 'Moderne Zensur ist subtiler und raffinierter geworden als historische Bücherverbrennungen.',
+  'censorship.growingUp.title': 'Erwachsen werden',
+  'censorship.growingUp.text': 'Eine reife Gesellschaft kann mit kontroversen Ideen umgehen, ohne sie zu zensieren.',
+  'censorship.detection': 'Erkennungsmethoden',
+  'censorship.detection.informationPatterns': 'Informationsmuster',
+  'censorship.detection.platformBehavior': 'Plattformverhalten',
+  'censorship.detection.socialSignals': 'Soziale Signale',
+  'censorship.importanceOfFreeExpression': 'Die Bedeutung freier Meinungsäußerung',
+
+  // Censorship Types
+  'censorship.type.politicalCorrectness': 'Politische Korrektheit',
+  'censorship.type.politicalCorrectness.desc': 'Überwachung von Sprache und Ideen zur Anpassung an aktuelle soziale Empfindlichkeiten',
+  'censorship.type.algorithmicBias': 'Algorithmische Voreingenommenheit',
+  'censorship.type.algorithmicBias.desc': 'KI-Systeme, die darauf trainiert sind, bestimmte Standpunkte automatisch zu unterdrücken',
+  'censorship.type.shadowBanning': 'Shadow Banning',
+  'censorship.type.shadowBanning.desc': 'Heimliche Reichweitenbegrenzung ohne Benachrichtigung des Nutzers',
+  'censorship.type.labelSuppression': 'Label-Unterdrückung',
+  'censorship.type.labelSuppression.desc': 'Verwendung von Warnhinweisen zur Entmutigung der Interaktion mit Inhalten',
+  'censorship.type.memoryHole': 'Gedächtnisloch',
+  'censorship.type.memoryHole.desc': 'Informationen aus digitalen Aufzeichnungen verschwinden lassen',
+  'censorship.type.deplatforming': 'Deplatforming',
+  'censorship.type.deplatforming.desc': 'Vollständige Entfernung von Personen von Kommunikationsplattformen',
+
+  // Warning Labels
+  'censorship.label.hateSpeech': 'Hassrede',
+  'censorship.label.hateSpeech.reality': 'Bedeutet oft: "Ideen, die aktuelle soziale Narrative herausfordern"',
+  'censorship.label.disinformation': 'Desinformation',
+  'censorship.label.disinformation.reality': 'Bedeutet oft: "Informationen, die offiziellen Quellen widersprechen"',
+  'censorship.label.conspiracyTheory': 'Verschwörungstheorie',
+  'censorship.label.conspiracyTheory.reality': 'Bedeutet oft: "Alternative Erklärungen für Ereignisse"',
+  'censorship.label.moderate': 'Moderiert werden',
+  'censorship.label.moderate.reality': 'Bedeutet oft: "Enthält unbequeme Wahrheiten"',
+
+  // Risk levels
+  'censorship.risk.high': 'Hohes Risiko',
+  'censorship.risk.medium': 'Mittleres Risiko',
+
+  // Sophistication details
+  'censorship.sophistication.detail1': 'Algorithmische Unterdrückung erscheint neutral',
+  'censorship.sophistication.detail2': 'Inhalte werden versteckt, nicht offensichtlich entfernt',
+  'censorship.sophistication.detail3': 'Demonetarisierung statt Löschung',
+  'censorship.sophistication.detail4': '"Faktenprüfung" als weiche Zensur',
+
+  // Growing up details
+  'censorship.growingUp.detail1': 'Dickes Fell für gegensätzliche Standpunkte entwickeln',
+  'censorship.growingUp.detail2': 'Zwischen Schaden und Beleidigung unterscheiden',
+  'censorship.growingUp.detail3': 'Wahrheit über Komfort schätzen',
+  'censorship.growingUp.detail4': 'Mit Ideen beschäftigen, nicht mit Emotionen',
+
+  // Detection details
+  'censorship.detection.info1': 'Einseitige Berichterstattung über kontroverse Themen',
+  'censorship.detection.info2': 'Fehlen abweichender Expertenmeinungen',
+  'censorship.detection.info3': 'Plötzliches Verschwinden von Inhalten',
+  'censorship.detection.info4': 'Konsistente Botschaften über Plattformen hinweg',
+  'censorship.detection.platform1': 'Reduzierte Interaktion bei bestimmten Themen',
+  'censorship.detection.platform2': 'Suchergebnisse, die gefiltert erscheinen',
+  'censorship.detection.platform3': '"Faktenprüfungs"-Warnungen bei spezifischen Standpunkten',
+  'censorship.detection.platform4': 'Kontobeschränkungen ohne klare Verstöße',
+  'censorship.detection.social1': 'Tabuthemen, die "nicht diskutiert werden können"',
+  'censorship.detection.social2': 'Karriererisiken für bestimmte Meinungen',
+  'censorship.detection.social3': 'Soziale Ächtung für das Hinterfragen von Narrativen',
+  'censorship.detection.social4': 'Appelle, bestimmte Ideen nicht zu "platformieren"',
+
+  // Final message
+  'censorship.freeExpressionText': 'Freie und offene Diskussion ist für den menschlichen Fortschritt unerlässlich. Wenn wir Ideen zensieren, auch "falsche", verlieren wir die Gelegenheit, unsere eigenen Überzeugungen zu testen und neue Wahrheiten zu entdecken. Der Marktplatz der Ideen funktioniert am besten, wenn alle Ideen frei konkurrieren können.',
 } as const;
