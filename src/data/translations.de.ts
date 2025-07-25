@@ -274,15 +274,170 @@ export const challengePageTranslations = {
     },
 
     lazyThinking: {
-      title: 'Faules Denken',
-      subtitle: 'Die kognitive Epidemie unserer Zeit',
-      definition: 'Faules Denken bezieht sich auf den Rückgriff auf mentale Abkürzungen, Annahmen und oberflächliche Analysen anstelle von rigorosem, kritischem Denken.',
-      manifestations: 'Erscheinungsformen',
-      causes: 'Ursachen',
-      personalCosts: 'Persönliche Kosten',
-      societalCosts: 'Gesellschaftliche Kosten',
-      antidotes: 'Gegenmittel',
-      buildingHabits: 'Bessere Denkgewohnheiten aufbauen'
+      title: 'Träges Denken',
+      subtitle: 'Die versteckten Kosten geistiger Abkürzungen erkennen und überwinden',
+      definition: 'Was ist träges Denken?',
+      definitionText: 'Träges Denken ist die Tendenz, kognitive Abkürzungen zu verwenden und oberflächliche Analysen komplexer Probleme zu bevorzugen. Es ist die menschliche Neigung, Energie zu sparen, indem man etablierte Denkmuster und mentale Heuristiken verwendet, anstatt kritisches, tiefgreifendes Denken anzuwenden.',
+      manifestations: 'Erscheinungsformen trägen Denkens',
+      manifestationsDesc: 'Das Erkennen dieser Muster hilft dabei zu identifizieren, wann wir kognitive Abkürzungen verwenden',
+      causes: 'Grundursachen trägen Denkens',
+      causesDesc: 'Diese Faktoren tragen zu trägen Denkgewohnheiten bei',
+      antidotes: 'Gegenmittel gegen träges Denken',
+      antidotesDesc: 'Praktische Strategien zur Entwicklung rigoroserer und durchdachterer geistiger Gewohnheiten',
+      buildingHabits: 'Bessere Denkgewohnheiten entwickeln',
+      buildingHabitsDesc: 'Die Überwindung trägen Denkens erfordert bewusste Übung und Geduld. Das Ziel ist nicht, alles zu überdenken, sondern zu erkennen, wann eine Situation tiefere Analyse verdient, und die Werkzeuge und Gewohnheiten zu haben, um sie zu liefern.',
+      
+      // Natural tendency section
+      naturalTendency: 'Natürliche Tendenz',
+      naturalTendencyDesc: 'Unser Gehirn ist darauf programmiert, Energie zu sparen und kognitive Abkürzungen zu nehmen',
+      modernAmplification: 'Moderne Verstärkung', 
+      modernAmplificationDesc: 'Informationsüberflutung und die Kultur der sofortigen Befriedigung fördern oberflächliches Denken',
+      hiddenCosts: 'Versteckte Kosten',
+      hiddenCostsDesc: 'Schlechte Entscheidungen addieren sich über die Zeit und führen zu erheblichen Lebenskonsequenzen',
+      
+      // Hidden costs section
+      hiddenCostsTitle: 'Die versteckten Kosten',
+      personalConsequences: 'Persönliche Konsequenzen:',
+      poorFinancialDecisions: 'Schlechte finanzielle Entscheidungen',
+      relationshipProblems: 'Beziehungsprobleme durch Missverständnisse',
+      careerStagnation: 'Karrierestillstand durch mangelndes tiefes Denken',
+      healthIssues: 'Gesundheitsprobleme durch Ignorieren von Komplexität',
+      missedOpportunities: 'Verpasste Gelegenheiten für Wachstum und Lernen',
+      
+      // Societal impact
+      societalImpact: 'Gesellschaftliche Auswirkungen:',
+      politicalPolarization: 'Politische Polarisierung und Tribalismus',
+      misinformationSpread: 'Verbreitung von Fehlinformationen und Verschwörungstheorien',
+      poorCollectiveDecisions: 'Schlechte kollektive Entscheidungsfindung',
+      reducedInnovation: 'Reduzierte Innovation und Problemlösung',
+      democraticDegradation: 'Demokratische Verschlechterung durch uninformierte Stimmabgabe',
+      
+      // Daily practices
+      dailyPractices: 'Tägliche Praktiken:',
+      readLongForm: 'Regelmäßig lange Inhalte lesen',
+      explainComplex: 'Üben, komplexe Themen einfach zu erklären',
+      askWhyHow: 'Öfter "Warum?" und "Wie?" fragen',
+      seekOpposing: 'Gegensätzliche Standpunkte suchen',
+      takePauses: 'Pausen vor wichtigen Entscheidungen einlegen',
+      
+      // Environmental changes
+      environmentalChanges: 'Umgebungsveränderungen:',
+      reduceSocialMedia: 'Social-Media-Konsum reduzieren',
+      createThinkingSpaces: 'Ablenkungsfreie Denkräume schaffen',
+      surroundThoughtful: 'Sich mit nachdenklichen Menschen umgeben',
+      chooseQuality: 'Qualität über Quantität bei Informationen wählen',
+      scheduleReflection: 'Regelmäßige Reflexionszeit einplanen',
+      
+      // Manifestations data translations
+      manifestation: {
+        mentalShortcuts: {
+          title: 'Mentale Abkürzungen',
+          description: 'Verlassen auf Heuristiken anstatt gründlicher Analyse',
+          examples: ['Stereotypisierung', 'Erster-Eindruck-Verzerrung', 'Verfügbarkeitsheuristik', 'Repräsentativitätsverzerrung']
+        },
+        confirmationSeeking: {
+          title: 'Bestätigungssuche',
+          description: 'Suche nach Informationen, die bestehende Überzeugungen bestätigen',
+          examples: ['Echokammern', 'Selektives Lesen', 'Rosinenpickerei bei Daten', 'Ignorieren von Widersprüchen']
+        },
+        authorityDependence: {
+          title: 'Autoritätsabhängigkeit',
+          description: 'Akzeptierung von Schlussfolgerungen ohne Prüfung der Begründung',
+          examples: ['Expertenverehrung', 'Prominentenmeinungen', 'Berechtigungsverzerrung', 'Berufung auf Popularität']
+        },
+        binaryThinking: {
+          title: 'Binäres Denken',
+          description: 'Reduzierung komplexer Themen auf einfache Entweder-Oder-Entscheidungen',
+          examples: ['Falsche Dichotomien', 'Alles-oder-Nichts-Denken', 'Gut-gegen-Böse-Narrative', 'Mit uns oder gegen uns']
+        },
+        emotionalReasoning: {
+          title: 'Emotionales Denken',
+          description: 'Verwendung von Gefühlen als Beweise für Wahrheit',
+          examples: ['Wenn es sich richtig anfühlt, muss es wahr sein', 'Bauchgefühl über Analyse', 'Wunschdenken', 'Angstbasierte Entscheidungen']
+        },
+        surfaceLevelProcessing: {
+          title: 'Oberflächliche Verarbeitung',
+          description: 'Stoppen bei der ersten plausiblen Erklärung',
+          examples: ['Nur Schlagzeilen', 'Soundbite-Denken', 'Meme-Niveau-Verständnis', 'Oberflächliche Recherche']
+        }
+      },
+      
+      // Causes data translations
+      cause: {
+        cognitiveLoad: {
+          factor: 'Kognitive Belastung',
+          description: 'Geistige Ermüdung führt zu Abkürzungen und reduzierter analytischer Kapazität',
+          impact: 'Entscheidungsqualität nimmt ab, wenn man überfordert ist'
+        },
+        timePressure: {
+          factor: 'Zeitdruck',
+          description: 'Eilen zu Schlussfolgerungen, um Fristen oder soziale Erwartungen zu erfüllen',
+          impact: 'Vorzeitiger Abschluss bei komplexen Problemen'
+        },
+        comfortSeeking: {
+          factor: 'Komfortsuche',
+          description: 'Vermeidung des Unbehagens von Ungewissheit und Komplexität',
+          impact: 'Präferenz für einfache, sichere Antworten über nuancierte Wahrheit'
+        },
+        socialConformity: {
+          factor: 'Soziale Konformität',
+          description: 'Folgen von Gruppenmeinungen, um Konflikt oder Ablehnung zu vermeiden',
+          impact: 'Unterdrückung unabhängigen kritischen Denkens'
+        },
+        informationOverload: {
+          factor: 'Informationsüberflutung',
+          description: 'Zu viele Informationen führen zu Analyselähmung oder Abkürzungen',
+          impact: 'Entweder keine Entscheidung oder schlecht informierte Entscheidungen'
+        },
+        educationSystem: {
+          factor: 'Bildungssystem',
+          description: 'Training, "die richtige Antwort" zu finden, anstatt Komplexität zu erkunden',
+          impact: 'Unterentwickelte kritische Denkfähigkeiten'
+        }
+      },
+      
+      // Antidotes data translations
+      antidote: {
+        slowThinking: {
+          practice: 'Langsames Denken',
+          description: 'Bewusst Zeit nehmen, bevor man zu Schlussfolgerungen gelangt',
+          technique: 'Bis 10 zählen, über Entscheidungen schlafen, Wartezeiten verwenden'
+        },
+        devilsAdvocate: {
+          practice: 'Advocatus Diaboli',
+          description: 'Aktiv nach Argumenten gegen die eigene Position suchen',
+          technique: 'Die Gegenseite argumentieren, glaubwürdige Kritiker finden'
+        },
+        multiplePerspectives: {
+          practice: 'Mehrere Perspektiven',
+          description: 'Überlegen, wie verschiedene Menschen das Thema sehen könnten',
+          technique: 'Verschiedene Standpunkte nachspielen, vielfältige Beratung'
+        },
+        questionAssumptions: {
+          practice: 'Annahmen hinterfragen',
+          description: 'Zugrunde liegende Prämissen identifizieren und prüfen',
+          technique: 'Regelmäßig fragen: "Was wäre, wenn das Gegenteil wahr wäre?"'
+        },
+        evidenceHierarchy: {
+          practice: 'Beweis-Hierarchie',
+          description: 'Zwischen Arten und Qualität von Beweisen unterscheiden',
+          technique: 'Primärquellen > Sekundärquellen > Meinungen > Spekulationen'
+        },
+        intellectualHumility: {
+          practice: 'Intellektuelle Bescheidenheit',
+          description: 'Die Grenzen des eigenen Wissens anerkennen',
+          technique: 'Phrasen wie "Ich könnte falsch liegen" und "Ich weiß es nicht" verwenden'
+        }
+      },
+      
+      // Additional hardcoded text translations
+      naturalTendencyText: 'Unser Gehirn ist darauf programmiert, Energie zu sparen und kognitive Abkürzungen zu nehmen',
+      modernAmplificationText: 'Informationsüberflutung und die Kultur der sofortigen Befriedigung fördern oberflächliches Denken',
+      hiddenCostsText: 'Schlechte Entscheidungen addieren sich über die Zeit und führen zu erheblichen Lebenskonsequenzen',
+      
+      // Section labels that appear in the hardcoded text
+      impactLabel: 'Auswirkung:',
+      howLabel: 'Wie:'
     },
 
     socraticQuestioning: {
