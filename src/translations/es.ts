@@ -231,4 +231,51 @@ export const es = {
   'category.decision_making': 'Toma de decisiones',
   'category.self_perception': 'Percepción de sí mismo',
   'category.emotions': 'Emociones',
+
+  // Propaganda
+  'propaganda.title': 'Propaganda',
+  'propaganda.subtitle': 'Entender las técnicas utilizadas para manipular la opinión pública y el pensamiento',
+  'propaganda.definition': '¿Qué es la propaganda?',
+  'propaganda.definitionText': 'La propaganda es comunicación diseñada para influir en la opinión y el comportamiento, a menudo usando información sesgada o engañosa para promover una agenda particular. A diferencia de la educación, la propaganda prioriza la persuasión sobre la verdad.',
+  'propaganda.commonTechniques': 'Técnicas de propaganda comunes',
+  'propaganda.modernDigital': 'Propaganda digital moderna',
+  'propaganda.buildingDefenses': 'Construyendo defensas mentales',
+  'propaganda.warningSigns': 'Señales de advertencia',
+  'propaganda.actionSteps': 'Pasos de acción',
+
+  // Propaganda Techniques
+  'propaganda.technique.emotionalAppeals': 'Apelaciones emocionales',
+  'propaganda.technique.emotionalAppeals.desc': 'Usar miedo, ira u otras emociones para eludir el pensamiento racional',
+  'propaganda.technique.emotionalAppeals.example': 'Usar imágenes de sufrimiento para promover una agenda política sin abordar las causas subyacentes',
+  'propaganda.technique.bandwagon': 'Efecto de arrastre',
+  'propaganda.technique.bandwagon.desc': 'Afirmar que todos están haciendo algo para presionar la conformidad',
+  'propaganda.technique.bandwagon.example': '"Únete a los millones que ya han cambiado" sin evidencia de beneficios',
+  'propaganda.technique.authority': 'Falsa autoridad',
+  'propaganda.technique.authority.desc': 'Usar celebridades o expertos irrelevantes para respaldar ideas',
+  'propaganda.technique.authority.example': 'Tener a un actor famoso promocionando teorías científicas fuera de su experiencia',
+  'propaganda.technique.repetition': 'Repetición',
+  'propaganda.technique.repetition.desc': 'Repetir mensajes hasta que parezcan verdaderos por familiaridad',
+  'propaganda.technique.repetition.example': 'Repetir constantemente eslóganes hasta que se acepten sin cuestionamiento',
+  'propaganda.technique.falseDichotomy': 'Falsa dicotomía',
+  'propaganda.technique.falseDichotomy.desc': 'Presentar solo dos opciones cuando existen más',
+  'propaganda.technique.falseDichotomy.example': '"Estás con nosotros o contra nosotros" ignorando posiciones neutrales o alternativas',
+  'propaganda.technique.loadedLanguage': 'Lenguaje cargado',
+  'propaganda.technique.loadedLanguage.desc': 'Usar palabras emocionalmente cargadas para influir en la percepción',
+  'propaganda.technique.loadedLanguage.example': 'Llamar a los oponentes "enemigos" o "amenazas" en lugar de usar términos neutrales',
+
+  // Modern Propaganda Methods
+  'propaganda.modern.algorithmicAmplification': 'Amplificación algorítmica',
+  'propaganda.modern.psychologicalTargeting': 'Targeting psicológico',
+
+  // Defense Strategies
+  'propaganda.defense.questionSources': 'Cuestionar fuentes',
+  'propaganda.defense.questionSources.desc': 'Siempre investigar quién está detrás del mensaje y sus motivaciones',
+  'propaganda.defense.seekPerspectives': 'Buscar múltiples perspectivas',
+  'propaganda.defense.seekPerspectives.desc': 'Buscar activamente diferentes puntos de vista sobre el mismo tema',
+  'propaganda.defense.checkPrimary': 'Verificar fuentes primarias',
+  'propaganda.defense.checkPrimary.desc': 'Ir a documentos originales en lugar de depender de interpretaciones',
+  'propaganda.defense.recognizeEmotional': 'Reconocer manipulación emocional',
+  'propaganda.defense.recognizeEmotional.desc': 'Notar cuando el contenido está diseñado para provocar fuertes respuestas emocionales',
+  'propaganda.defense.practicalCritical': 'Practicar pensamiento crítico',
+  'propaganda.defense.practicalCritical.desc': 'Desarrollar enfoques sistemáticos para evaluar información',
 } as const;

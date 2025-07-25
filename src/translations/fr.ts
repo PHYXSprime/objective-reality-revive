@@ -231,4 +231,51 @@ export const fr = {
   'category.decision_making': 'Prise de décision',
   'category.self_perception': 'Perception de soi',
   'category.emotions': 'Émotions',
+
+  // Propaganda
+  'propaganda.title': 'Propagande',
+  'propaganda.subtitle': 'Comprendre les techniques utilisées pour manipuler l\'opinion publique et la pensée',
+  'propaganda.definition': 'Qu\'est-ce que la propagande?',
+  'propaganda.definitionText': 'La propagande est une communication conçue pour influencer l\'opinion et le comportement, utilisant souvent des informations biaisées ou trompeuses pour promouvoir un agenda particulier. Contrairement à l\'éducation, la propagande privilégie la persuasion sur la vérité.',
+  'propaganda.commonTechniques': 'Techniques de propagande courantes',
+  'propaganda.modernDigital': 'Propagande numérique moderne',
+  'propaganda.buildingDefenses': 'Construire des défenses mentales',
+  'propaganda.warningSigns': 'Signaux d\'alarme',
+  'propaganda.actionSteps': 'Étapes d\'action',
+
+  // Propaganda Techniques
+  'propaganda.technique.emotionalAppeals': 'Appels émotionnels',
+  'propaganda.technique.emotionalAppeals.desc': 'Utiliser la peur, la colère ou d\'autres émotions pour contourner la pensée rationnelle',
+  'propaganda.technique.emotionalAppeals.example': 'Utiliser des images de souffrance pour promouvoir un agenda politique sans aborder les causes sous-jacentes',
+  'propaganda.technique.bandwagon': 'Effet de groupe',
+  'propaganda.technique.bandwagon.desc': 'Prétendre que tout le monde fait quelque chose pour exercer une pression de conformité',
+  'propaganda.technique.bandwagon.example': '"Rejoignez les millions qui ont déjà changé" sans preuve d\'avantages',
+  'propaganda.technique.authority': 'Fausse autorité',
+  'propaganda.technique.authority.desc': 'Utiliser des célébrités ou des experts non pertinents pour soutenir des idées',
+  'propaganda.technique.authority.example': 'Avoir un acteur célèbre qui promeut des théories scientifiques en dehors de son expertise',
+  'propaganda.technique.repetition': 'Répétition',
+  'propaganda.technique.repetition.desc': 'Répéter des messages jusqu\'à ce qu\'ils semblent vrais par familiarité',
+  'propaganda.technique.repetition.example': 'Répéter constamment des slogans jusqu\'à ce qu\'ils soient acceptés sans question',
+  'propaganda.technique.falseDichotomy': 'Fausse dichotomie',
+  'propaganda.technique.falseDichotomy.desc': 'Présenter seulement deux options quand plus existent',
+  'propaganda.technique.falseDichotomy.example': '"Vous êtes soit avec nous soit contre nous" ignorant les positions neutres ou alternatives',
+  'propaganda.technique.loadedLanguage': 'Langage chargé',
+  'propaganda.technique.loadedLanguage.desc': 'Utiliser des mots émotionnellement chargés pour influencer la perception',
+  'propaganda.technique.loadedLanguage.example': 'Appeler les opposants "ennemis" ou "menaces" plutôt que d\'utiliser des termes neutres',
+
+  // Modern Propaganda Methods
+  'propaganda.modern.algorithmicAmplification': 'Amplification algorithmique',
+  'propaganda.modern.psychologicalTargeting': 'Ciblage psychologique',
+
+  // Defense Strategies
+  'propaganda.defense.questionSources': 'Questionner les sources',
+  'propaganda.defense.questionSources.desc': 'Toujours enquêter sur qui est derrière le message et leurs motivations',
+  'propaganda.defense.seekPerspectives': 'Chercher plusieurs perspectives',
+  'propaganda.defense.seekPerspectives.desc': 'Rechercher activement différents points de vue sur le même sujet',
+  'propaganda.defense.checkPrimary': 'Vérifier les sources primaires',
+  'propaganda.defense.checkPrimary.desc': 'Aller aux documents originaux plutôt que de s\'appuyer sur des interprétations',
+  'propaganda.defense.recognizeEmotional': 'Reconnaître la manipulation émotionnelle',
+  'propaganda.defense.recognizeEmotional.desc': 'Remarquer quand le contenu est conçu pour déclencher de fortes réactions émotionnelles',
+  'propaganda.defense.practicalCritical': 'Pratiquer la pensée critique',
+  'propaganda.defense.practicalCritical.desc': 'Développer des approches systématiques pour évaluer l\'information',
 } as const;

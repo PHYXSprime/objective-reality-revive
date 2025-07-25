@@ -259,7 +259,50 @@ export const en = {
 
   // Propaganda
   'propaganda.title': 'Propaganda',
-  'propaganda.subtitle': 'Manipulation of public opinion',
+  'propaganda.subtitle': 'Understanding techniques used to manipulate public opinion and thought',
+  'propaganda.definition': 'What is Propaganda?',
+  'propaganda.definitionText': 'Propaganda is communication designed to influence opinion and behavior, often using biased or misleading information to promote a particular agenda. Unlike education, propaganda prioritizes persuasion over truth.',
+  'propaganda.commonTechniques': 'Common Propaganda Techniques',
+  'propaganda.modernDigital': 'Modern Digital Propaganda',
+  'propaganda.buildingDefenses': 'Building Mental Defenses',
+  'propaganda.warningSigns': 'Warning Signs',
+  'propaganda.actionSteps': 'Action Steps',
+
+  // Propaganda Techniques
+  'propaganda.technique.emotionalAppeals': 'Emotional Appeals',
+  'propaganda.technique.emotionalAppeals.desc': 'Using fear, anger, or other emotions to bypass rational thinking',
+  'propaganda.technique.emotionalAppeals.example': 'Using images of suffering to promote a political agenda without addressing underlying causes',
+  'propaganda.technique.bandwagon': 'Bandwagon Effect',
+  'propaganda.technique.bandwagon.desc': 'Claiming everyone is doing something to pressure conformity',
+  'propaganda.technique.bandwagon.example': '"Join the millions who have already switched" without evidence of benefits',
+  'propaganda.technique.authority': 'False Authority',
+  'propaganda.technique.authority.desc': 'Using celebrities or irrelevant experts to endorse ideas',
+  'propaganda.technique.authority.example': 'Having a famous actor promote scientific theories outside their expertise',
+  'propaganda.technique.repetition': 'Repetition',
+  'propaganda.technique.repetition.desc': 'Repeating messages until they seem true through familiarity',
+  'propaganda.technique.repetition.example': 'Constantly repeating slogans until they become accepted without question',
+  'propaganda.technique.falseDichotomy': 'False Dichotomy',
+  'propaganda.technique.falseDichotomy.desc': 'Presenting only two options when more exist',
+  'propaganda.technique.falseDichotomy.example': '"You\'re either with us or against us" ignoring neutral or alternative positions',
+  'propaganda.technique.loadedLanguage': 'Loaded Language',
+  'propaganda.technique.loadedLanguage.desc': 'Using emotionally charged words to influence perception',
+  'propaganda.technique.loadedLanguage.example': 'Calling opponents "enemies" or "threats" rather than using neutral terms',
+
+  // Modern Propaganda Methods
+  'propaganda.modern.algorithmicAmplification': 'Algorithmic Amplification',
+  'propaganda.modern.psychologicalTargeting': 'Psychological Targeting',
+
+  // Defense Strategies
+  'propaganda.defense.questionSources': 'Question Sources',
+  'propaganda.defense.questionSources.desc': 'Always investigate who is behind the message and their motivations',
+  'propaganda.defense.seekPerspectives': 'Seek Multiple Perspectives',
+  'propaganda.defense.seekPerspectives.desc': 'Actively look for different viewpoints on the same issue',
+  'propaganda.defense.checkPrimary': 'Check Primary Sources',
+  'propaganda.defense.checkPrimary.desc': 'Go to original documents rather than relying on interpretations',
+  'propaganda.defense.recognizeEmotional': 'Recognize Emotional Manipulation',
+  'propaganda.defense.recognizeEmotional.desc': 'Notice when content is designed to trigger strong emotional responses',
+  'propaganda.defense.practicalCritical': 'Practice Critical Thinking',
+  'propaganda.defense.practicalCritical.desc': 'Develop systematic approaches to evaluating information',
 
   // Co-evolution
   'coEvolution.title': 'Co-evolution',

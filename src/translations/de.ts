@@ -255,4 +255,51 @@ export const de = {
   'category.decision_making': 'Entscheidungsfindung',
   'category.self_perception': 'Selbstwahrnehmung',
   'category.emotions': 'Emotionen',
+
+  // Propaganda
+  'propaganda.title': 'Propaganda',
+  'propaganda.subtitle': 'Verstehen von Techniken zur Manipulation der öffentlichen Meinung und des Denkens',
+  'propaganda.definition': 'Was ist Propaganda?',
+  'propaganda.definitionText': 'Propaganda ist Kommunikation zur Beeinflussung von Meinungen und Verhalten, oft unter Verwendung voreingenommener oder irreführender Informationen zur Förderung einer bestimmten Agenda. Im Gegensatz zur Bildung priorisiert Propaganda Überzeugung über Wahrheit.',
+  'propaganda.commonTechniques': 'Häufige Propaganda-Techniken',
+  'propaganda.modernDigital': 'Moderne digitale Propaganda',
+  'propaganda.buildingDefenses': 'Aufbau mentaler Abwehrkräfte',
+  'propaganda.warningSigns': 'Warnzeichen',
+  'propaganda.actionSteps': 'Handlungsschritte',
+
+  // Propaganda Techniques
+  'propaganda.technique.emotionalAppeals': 'Emotionale Appelle',
+  'propaganda.technique.emotionalAppeals.desc': 'Verwendung von Angst, Wut oder anderen Emotionen um rationales Denken zu umgehen',
+  'propaganda.technique.emotionalAppeals.example': 'Verwendung von Bildern des Leidens zur Förderung einer politischen Agenda ohne Behandlung der zugrundeliegenden Ursachen',
+  'propaganda.technique.bandwagon': 'Mitläufer-Effekt',
+  'propaganda.technique.bandwagon.desc': 'Behauptung, dass alle etwas tun, um Konformitätsdruck zu erzeugen',
+  'propaganda.technique.bandwagon.example': '"Schließen Sie sich den Millionen an, die bereits gewechselt haben" ohne Beweis für Vorteile',
+  'propaganda.technique.authority': 'Falsche Autorität',
+  'propaganda.technique.authority.desc': 'Verwendung von Prominenten oder irrelevanten Experten zur Unterstützung von Ideen',
+  'propaganda.technique.authority.example': 'Ein berühmter Schauspieler bewirbt wissenschaftliche Theorien außerhalb seiner Expertise',
+  'propaganda.technique.repetition': 'Wiederholung',
+  'propaganda.technique.repetition.desc': 'Wiederholung von Botschaften, bis sie durch Vertrautheit wahr erscheinen',
+  'propaganda.technique.repetition.example': 'Ständige Wiederholung von Slogans, bis sie ohne Hinterfragen akzeptiert werden',
+  'propaganda.technique.falseDichotomy': 'Falsche Dichotomie',
+  'propaganda.technique.falseDichotomy.desc': 'Darstellung von nur zwei Optionen, wenn mehr existieren',
+  'propaganda.technique.falseDichotomy.example': '"Sie sind entweder für uns oder gegen uns" ignoriert neutrale oder alternative Positionen',
+  'propaganda.technique.loadedLanguage': 'Geladene Sprache',
+  'propaganda.technique.loadedLanguage.desc': 'Verwendung emotional aufgeladener Wörter zur Beeinflussung der Wahrnehmung',
+  'propaganda.technique.loadedLanguage.example': 'Gegner als "Feinde" oder "Bedrohungen" zu bezeichnen anstatt neutrale Begriffe zu verwenden',
+
+  // Modern Propaganda Methods
+  'propaganda.modern.algorithmicAmplification': 'Algorithmische Verstärkung',
+  'propaganda.modern.psychologicalTargeting': 'Psychologische Zielgruppenansprache',
+
+  // Defense Strategies
+  'propaganda.defense.questionSources': 'Quellen hinterfragen',
+  'propaganda.defense.questionSources.desc': 'Immer untersuchen, wer hinter der Botschaft steht und welche Motivationen sie haben',
+  'propaganda.defense.seekPerspectives': 'Mehrere Perspektiven suchen',
+  'propaganda.defense.seekPerspectives.desc': 'Aktiv nach verschiedenen Standpunkten zum gleichen Thema suchen',
+  'propaganda.defense.checkPrimary': 'Primärquellen prüfen',
+  'propaganda.defense.checkPrimary.desc': 'Zu Originaldokumenten gehen anstatt sich auf Interpretationen zu verlassen',
+  'propaganda.defense.recognizeEmotional': 'Emotionale Manipulation erkennen',
+  'propaganda.defense.recognizeEmotional.desc': 'Bemerken, wann Inhalte darauf ausgelegt sind, starke emotionale Reaktionen auszulösen',
+  'propaganda.defense.practicalCritical': 'Kritisches Denken üben',
+  'propaganda.defense.practicalCritical.desc': 'Systematische Ansätze zur Bewertung von Informationen entwickeln',
 } as const;
