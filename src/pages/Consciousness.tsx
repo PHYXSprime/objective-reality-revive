@@ -2,48 +2,13 @@ import { ExternalLink, Brain, Users, Globe, Lightbulb } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { ConsciousnessTable } from '@/components/ConsciousnessTable';
+import { PHYXSTable } from '@/components/PHYXSTable';
+import { aqalMapData } from '@/data/aqalMapData';
+import { phyxsMapData } from '@/data/phyxsMapData';
 
 export default function Consciousness() {
   const { t } = useLanguage();
-
-  const consciousnessLevels = [
-    {
-      level: "1. Survival",
-      color: "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
-      description: "Basic survival instincts, fight-or-flight responses, and immediate physical needs.",
-      characteristics: ["Reactive behavior", "Survival-focused", "Limited awareness"]
-    },
-    {
-      level: "2. Tribal",
-      color: "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
-      description: "Group belonging, tradition, and tribal identity. Us vs. them mentality.",
-      characteristics: ["Tradition-bound", "Group loyalty", "Ritual importance"]
-    },
-    {
-      level: "3. Achievement",
-      color: "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
-      description: "Individual success, competition, and material achievement.",
-      characteristics: ["Goal-oriented", "Competitive", "Success-driven"]
-    },
-    {
-      level: "4. Community",
-      color: "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-      description: "Harmony, equality, and community welfare. Focus on relationships and feelings.",
-      characteristics: ["Consensus-seeking", "Inclusive", "Process-oriented"]
-    },
-    {
-      level: "5. Integral",
-      color: "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
-      description: "Systems thinking, complexity acceptance, and multiple perspective integration.",
-      characteristics: ["Systems awareness", "Complexity tolerance", "Multi-perspective"]
-    },
-    {
-      level: "6. Holistic",
-      color: "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-      description: "Holistic thinking, ecological awareness, and spiritual dimensions.",
-      characteristics: ["Holistic view", "Ecological thinking", "Spiritual awareness"]
-    }
-  ];
 
   return (
     <div className="min-h-screen py-8">
@@ -74,13 +39,14 @@ export default function Consciousness() {
           <CardContent className="space-y-6">
             <div className="prose dark:prose-invert max-w-none">
               <p className="text-muted-foreground leading-relaxed">
-                David Heggli's groundbreaking research explores the intersection of consciousness development 
+                David Heggli's groundbreaking research at the VORTEX Institute explores the intersection of consciousness development 
                 and digital twin technology. His work investigates how different levels of human consciousness 
-                can be modeled, understood, and potentially enhanced through sophisticated digital representations.
+                can be modeled, understood, and potentially enhanced through sophisticated digital representations, 
+                bridging the gap between psychological models and biophysical reality.
               </p>
               
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-4">
-                Key Research Areas
+                From AQAL to PHYXS: A New Paradigm
               </h3>
               
               <div className="grid md:grid-cols-2 gap-6 mt-6">
@@ -88,9 +54,9 @@ export default function Consciousness() {
                   <div className="flex items-start gap-3">
                     <Lightbulb className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-medium text-foreground">Consciousness Mapping</h4>
+                      <h4 className="font-medium text-foreground">AQAL Foundation</h4>
                       <p className="text-sm text-muted-foreground">
-                        Digital models that represent different stages of consciousness development and their characteristics.
+                        Building on Ken Wilber's comprehensive AQAL framework and Spiral Dynamics to understand consciousness development.
                       </p>
                     </div>
                   </div>
@@ -98,9 +64,9 @@ export default function Consciousness() {
                   <div className="flex items-start gap-3">
                     <Users className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-medium text-foreground">Collective Intelligence</h4>
+                      <h4 className="font-medium text-foreground">PHYXS Evolution D</h4>
                       <p className="text-sm text-muted-foreground">
-                        How groups and organizations can be modeled to understand their collective consciousness levels.
+                        A new biophysical model that maps consciousness evolution to measurable biological and quantum markers.
                       </p>
                     </div>
                   </div>
@@ -110,9 +76,9 @@ export default function Consciousness() {
                   <div className="flex items-start gap-3">
                     <Globe className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-medium text-foreground">Global Implications</h4>
+                      <h4 className="font-medium text-foreground">Digital Twin Technology</h4>
                       <p className="text-sm text-muted-foreground">
-                        Applications for understanding societal development and global consciousness evolution.
+                        Creating digital representations of consciousness states for research, education, and development.
                       </p>
                     </div>
                   </div>
@@ -122,7 +88,7 @@ export default function Consciousness() {
                     <div>
                       <h4 className="font-medium text-foreground">Practical Applications</h4>
                       <p className="text-sm text-muted-foreground">
-                        Real-world implementations in education, organizational development, and personal growth.
+                        Real-world implementations in education, organizational development, and consciousness research.
                       </p>
                     </div>
                   </div>
@@ -131,69 +97,60 @@ export default function Consciousness() {
             </div>
             
             <div className="flex gap-4 pt-4">
-              <Button variant="outline" className="flex items-center gap-2">
-                <ExternalLink className="h-4 w-4" />
-                Read Full Research
+              <Button variant="outline" className="flex items-center gap-2" asChild>
+                <a href="https://www.phyxs.com" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="h-4 w-4" />
+                  Visit PHYXS.com
+                </a>
               </Button>
-              <Button variant="outline" className="flex items-center gap-2">
-                <ExternalLink className="h-4 w-4" />
-                Contact Researcher
+              <Button variant="outline" className="flex items-center gap-2" asChild>
+                <a href="https://www.vortexinstitute.org" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="h-4 w-4" />
+                  VORTEX Institute
+                </a>
               </Button>
             </div>
           </CardContent>
         </Card>
 
-        {/* Consciousness Levels */}
-        <Card className="glass-card mb-8">
-          <CardHeader>
-            <CardTitle className="text-2xl font-bold">
-              Levels of Consciousness Development
-            </CardTitle>
-            <CardDescription className="text-muted-foreground">
-              Understanding the stages of human consciousness development helps us recognize different 
-              worldviews and approaches to complex problems.
-            </CardDescription>
-          </CardHeader>
-        </Card>
-
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {consciousnessLevels.map((level, index) => (
-            <Card key={index} className="h-full glass-card">
-              <CardHeader>
-                <div className="flex items-center gap-3">
-                  <div className={`px-3 py-1 rounded-full text-sm font-medium ${level.color}`}>
-                    {level.level}
-                  </div>
-                </div>
-                <CardDescription className="text-sm leading-relaxed">
-                  {level.description}
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <h4 className="font-medium text-sm text-foreground mb-3">Key Characteristics:</h4>
-                <ul className="space-y-2">
-                  {level.characteristics.map((char, charIndex) => (
-                    <li key={charIndex} className="text-sm text-muted-foreground flex items-center gap-2">
-                      <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
-                      {char}
-                    </li>
-                  ))}
-                </ul>
-              </CardContent>
-            </Card>
-          ))}
+        {/* AQAL Consciousness Map */}
+        <div className="mb-12">
+          <ConsciousnessTable 
+            data={aqalMapData}
+            title="AQAL Consciousness Development Map"
+            description="Based on Ken Wilber's comprehensive AQAL framework and Spiral Dynamics, this map shows the psychological stages of human consciousness development from basic survival to transcendent awareness."
+          />
         </div>
 
-        {/* Note */}
+        {/* PHYXS Evolution D Map */}
+        <div className="mb-12">
+          <PHYXSTable 
+            data={phyxsMapData}
+            title="PHYXS Evolution D Map"
+            description="David Heggli's revolutionary approach that bridges psychological models with biophysical reality, mapping consciousness evolution to measurable biological, neural, and quantum markers across human development."
+          />
+        </div>
+
+        {/* Research Note */}
         <Card className="mt-12 glass-card">
           <CardContent className="p-6">
-            <p className="text-sm text-muted-foreground">
-              <strong>Note:</strong> This consciousness framework is based on developmental psychology research 
-              and integral theory. It's important to understand that these levels are not hierarchical in terms 
-              of human worth, but rather represent different ways of making sense of complex situations. 
-              Each level has its own strengths and limitations, and healthy development involves integrating 
-              insights from multiple levels.
-            </p>
+            <div className="space-y-4">
+              <p className="text-sm text-muted-foreground">
+                <strong>Research Foundation:</strong> The AQAL framework is based on decades of developmental psychology research 
+                and integral theory by Ken Wilber. The PHYXS Evolution D Map represents David Heggli's innovative approach 
+                to bridging psychological models with measurable biophysical markers.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                <strong>Important Note:</strong> These levels are not hierarchical in terms of human worth, but rather represent 
+                different capacities for handling complexity. Each level has its own strengths and appropriate contexts. 
+                Healthy development involves integrating insights from multiple levels rather than transcending and discarding them.
+              </p>
+              <p className="text-sm text-muted-foreground">
+                <strong>Digital Twin Applications:</strong> This research enables the creation of digital twins that can model 
+                consciousness states for educational, therapeutic, and developmental applications, representing a significant 
+                advancement in consciousness research and practical application.
+              </p>
+            </div>
           </CardContent>
         </Card>
       </div>
