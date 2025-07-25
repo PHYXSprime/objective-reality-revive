@@ -199,8 +199,8 @@ export default function LazyThinking() {
               <div key={index} className="border border-muted rounded-lg p-4">
                 <h4 className="font-semibold text-foreground mb-2">{cause.factor}</h4>
                 <p className="text-muted-foreground text-sm mb-2">{cause.description}</p>
-                <div className="bg-orange-50 dark:bg-orange-950/20 p-2 rounded">
-                  <p className="text-xs text-orange-700 dark:text-orange-300">
+                <div className="glass-card p-3 rounded-lg border border-orange-500/30 shadow-[0_0_20px_-5px_rgba(251,146,60,0.3)]">
+                  <p className="text-xs text-orange-300 dark:text-orange-200">
                     <span className="font-semibold">{t('lazyThinking.impactLabel')}</span> {cause.impact}
                   </p>
                 </div>
@@ -261,8 +261,8 @@ export default function LazyThinking() {
                   <CardDescription>{antidote.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-green-50 dark:bg-green-950/20 p-3 rounded-lg">
-                    <p className="text-sm text-green-700 dark:text-green-300">
+                  <div className="glass-card p-3 rounded-lg border border-green-500/30 shadow-[0_0_20px_-5px_rgba(34,197,94,0.3)]">
+                    <p className="text-sm text-green-200 dark:text-green-100">
                       <span className="font-semibold">{t('lazyThinking.howLabel')}</span> {antidote.technique}
                     </p>
                   </div>
