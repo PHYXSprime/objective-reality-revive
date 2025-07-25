@@ -82,6 +82,7 @@ export const fr = {
   'scientificConsensus.balancedMethods.conflicts': 'Rechercher les conflits d\'intérêts',
   'scientificConsensus.balancedMethods.alternatives': 'Considérer des explications alternatives',
   'scientificConsensus.balancedMethods.statistics': 'Comprendre les limites statistiques',
+  'scientificConsensus.consensusProblems': 'Problèmes Courants avec le Consensus Scientifique',
 
   // Historical Context
   'scientificConsensus.historical.pastConsensus': 'Consensus Passé',

@@ -197,7 +197,7 @@ export default function ScientificConsensus() {
           <CardHeader>
             <CardTitle className="text-2xl flex items-center gap-2">
               <AlertCircle className="h-6 w-6 text-orange-500" />
-              Common Problems with Scientific Consensus
+              {t('scientificConsensus.consensusProblems')}
             </CardTitle>
           </CardHeader>
           <CardContent>
