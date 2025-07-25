@@ -37,6 +37,7 @@ export default function ScientificConsensus() {
           <div className="glass-card rounded-2xl p-8 max-w-4xl mx-auto mb-8 shadow-[0_0_20px_-5px_rgba(59,130,246,0.2)]">
             <h1 className="text-4xl font-bold text-foreground mb-6">
               {t('scientificConsensus.title')}
+              {/* Debug: {JSON.stringify({key: 'scientificConsensus.title', value: t('scientificConsensus.title')})} */}
             </h1>
           </div>
           <div className="glass-card rounded-2xl p-6 max-w-4xl mx-auto mb-8 shadow-[0_0_15px_-5px_rgba(59,130,246,0.15)]">
