@@ -1,0 +1,791 @@
+A New Map of Consciousness: From Psychological Models to Biophysical Reality
+
+(For Lovable.dev)
+
+Introduction: The Quest to Understand Consciousness
+
+For millennia, humanity's greatest minds have grappled with a single, profound question: What is consciousness? From ancient mystics to modern neuroscientists, we have sought to map its terrain, understand its origins, and chart its evolution. This quest has given us powerful tools for understanding human development, but they have remained largely descriptive, correlating psychological states without explaining their fundamental, physical origins.
+
+At the vortex|institute, we believe the next leap in this quest requires a new approach—one that bridges the gap between the software of our inner experience and the hardware of our biological evolution. This is a journey from correlation to causation, from abstract models to a data-driven reality.
+
+Part 1: The Foundational View – The AQAL Map
+
+Our journey begins with one of the most comprehensive models of psychological development ever created: Ken Wilber's AQAL framework, often visualized through the lens of Spiral Dynamics.
+
+(Here, we will embed the "Foundational AQAL Map" that we have already built for Objective-Reality.info)
+
+=> old code we used for this map. Extract the useful information for your own design:
+
+<!DOCTYPE html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AQAL Map</title>
+    <link rel="preconnect" href="https://fonts.bunny.net">
+    <link href="https://fonts.bunny.net/css?family=figtree:400,600&display=swap" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Figtree', sans-serif;
+        }
+        .quadrant-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto;
+            gap: 1px;
+            background-color: #e2e8f0; /* A light gray for the grid lines */
+            border: 1px solid #e2e8f0;
+            height: 100%;
+        }
+        .quadrant-cell {
+            background-color: #ffffff;
+            padding: 0.75rem; /* 12px */
+            font-size: 0.875rem; /* 14px */
+        }
+        .quadrant-cell strong {
+            display: block;
+            font-size: 0.75rem; /* 12px */
+            color: #4a5568; /* A darker gray for the quadrant titles */
+            margin-bottom: 0.25rem; /* 4px */
+            font-weight: 600;
+        }
+        .level-title {
+            font-size: 1.25rem; /* 20px */
+            font-weight: 700;
+        }
+        .list-disc {
+            padding-left: 1.5rem; /* 24px */
+        }
+    </style>
+</head>
+<body class="antialiased bg-gray-50 text-gray-700">
+    <div class="container mx-auto p-4 sm:p-6 lg:p-8">
+        <h1 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-8 text-center">Foundational AQAL Map</h1>
+
+        <div class="overflow-x-auto">
+            <table class="min-w-full bg-white shadow-md rounded-lg">
+                <thead class="bg-gray-100">
+                    <tr>
+                        <th class="text-left py-3 px-4 font-semibold text-sm text-gray-600 uppercase">Level</th>
+                        <th class="text-left py-3 px-4 font-semibold text-sm text-gray-600 uppercase">Human Age</t>
+                        <th class="text-left py-3 px-4 font-semibold text-sm text-gray-600 uppercase" style="width>
+                        <th class="text-left py-3 px-4 font-semibold text-sm text-gray-600 uppercase">Description >
+                    </tr>
+                </thead>
+                <tbody class="text-gray-700">
+                    @foreach ($levels as $level)
+                        {{-- This is the fix: Manually decode the JSON strings into arrays --}}
+                        @php
+                            $title = json_decode($level->title, true) ?? [];
+                            $description = json_decode($level->description, true) ?? [];
+                            $characteristics = json_decode($level->characteristics, true) ?? [];
+                            $types_details = json_decode($level->types_details, true) ?? [];
+                        @endphp
+
+
+
+Unitive Self
+Witness Self. Action and non-action without attachment to outcome.
+Realization as a verb not a destination. Apex Self.
+Quest: Realizing integrated free functioning human being.
+
+Holistic Self (SDi turquoise)
+Collective Individualism - starting 30 years ago Authenticirony. An ecology of perspectives 
+Quest: peace in an incomprehensible world.
+Transrational perceptions. Aware of AQAL arising.
+Pitfalls: pathologies of the soul.
+
+Integral Self (SDi yellow)
+World-Kosmocentric - starting 50 years ago
+Healthy hierarchies, Live fully and responsibly. Integrate the whole spiral.
+Quest: integral synthesis - to balance the whole with holarchy
+Evolutionary streams awaken, integrate diversity with discernment, developmental perspective.
+Pitfalls: aborted self-actualization, existential angst, bad faith, etc.
+
+Sensitive Self Age 15-21 years (SDi green)
+Social Democracies, informational - starting 150 years ago, Pluralism
+Seek inner peace within a caring community. Power with, Solidarity, Human Rights Activism 
+Quest: peace, affectionate relations, beneficial resolution, dialogue and consensus.
+Method: appreciate diverse views, listen well, consensus, emphasize group needs, marginalize no one 
+Pitfalls: nihilism, inauthenticity, excessive relativism, lack of discernment, endless consensus, heartless irony
+
+Rational Self Age 9-14 years (SDi orange)
+Capitalistic Democracies - starting 300 years ago - Scientific Rationalism, worldcentric Act from self-interest by playing the game to win. Market-Driven Meritocracy 
+Quest: rational truth, material pleasure, in defense of civilization.
+Method: science, learn to excel, set goals, achieve, measure success.
+Pitfalls: scientism, flatland, identity crisis, role confusions, consumerism, ecological crisis, workaholism, goal-fixation, over-attachment to successful methods, denial of spirit.
+
+Rule/Role Self Age 7-8 years. (SDi blue)
+Late Mythic, Nation States, Authoritarian, Absolutistic Religious - starting 5,000 years ago Ethnocentric, life has meaning, direction, and purpose with predetermined outcomes.
+Quest: ultimate peace, good versus evil.
+Method: fit in, follow the given rules, don't exceed your role, discipline, faith 
+Pitfalls: archetypal role identification, script pathology, fundamentalism, fascism, etc.
+
+Power Self Age 3-6 years. (SDi red)
+Early Mythic, Feudal & Exploitive Empire - starting 10,000 years ago Aggression, might makes right, be and do what you want, regardless.
+Quest: heroic status, power, glory, rage and revenge.
+Method: align with power, take what you need, power over others, force 
+Pitfalls: gangs, anxiety, depression, phobias, bullying, terrorism
+
+
+Tribal Order , Egocentric, impulsive
+starting 50,000 years ago
+Keep the spirits happy and tribe's nest warm and safe. Magical thinking
+Quest: safe mode of living, security.
+Method: Petition to Gods or Powers with ritual.
+Pitfalls: borderline, narcissism, omnipotent fantasy, tribal conflicts
+
+Instinctive Self Age 0-18 months (SDi beige)
+Survival Bands - starting 100,000 years ago
+Do what you must to stay alive. Un-differentiated, narcissism.
+Quest: food, water, warmth, shelter
+Methods: scavenge whatever you need.
+Pitfalls: primitive developmental psycho-pathologies, autism
+
+
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>map.title</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+    <!-- New CSS file for updates + cache bust -->
+    <link rel="stylesheet" href="https://objective.bildungs.reise/css/dark2.css?v=1753186775">
+    <meta name="csrf-token" content="eWxfLiHRqnEq6mspJKNHdzcD0eAjyJKF73Q8hxOP">
+</head>
+<body>
+    <!-- Background Elements - Restored for explicit layering control -->
+    <div class="starfield-container"></div>
+    <div class="earth-container"></div>
+
+    <header>
+        <div class="logo">
+            <span>Objective Reality</span>
+        </div>
+        <div class="controls">
+            <nav>
+                <a href="https://objective.bildungs.reise/de/biases" class="">Cognitive Biases</a>
+                <a href="https://objective.bildungs.reise/de/fallacies" class="">Logical Fallacies</a>
+                <a href="https://objective.bildungs.reise/de/map" class="active">Spiral Dynamics</a>
+            </nav>
+            <div class="language-switcher">
+                                                        <a href="https://objective.bildungs.reise/en/map" class="">
+                        EN
+                    </a>
+                                                        <a href="https://objective.bildungs.reise/de/map" class="active">
+                        DE
+                    </a>
+                                                        <a href="https://objective.bildungs.reise/fr/map" class="">
+                        FR
+                    </a>
+                                                        <a href="https://objective.bildungs.reise/es/map" class="">
+                        ES
+                    </a>
+                            </div>
+             <div class="auth-links" style="padding-left: 30px; border-left: 1px solid #30363d;">
+                                                             <a href="https://objective.bildungs.reise/login">Login</a>
+                                                                 <a href="https://objective.bildungs.reise/register">Register</a>
+                                                </div>
+        </div>
+    </header>
+
+    <main class="container">
+            <div class="page-header">
+        <h1>map.header</h1>
+    </div>
+
+    <div class="content-container">
+                    <div class="spiral-level" style="border-left: 5px solid #40E0D0">
+                <h2>
+                    Holistic Self                </h2>
+                <p><strong>map.human_age:</strong> Emerging</p>
+                <h3>map.description</h3>
+                <ul>
+                                                                <li>Global, cosmic perspective.</li>
+                                            <li>Sees interconnectedness of all life.</li>
+                                            <li>Focus on universal harmony and balance.</li>
+                                    </ul>
+                <h3>map.characteristics</h3>
+                <ul>
+                                                                <li>Holistic, spiritual awareness.</li>
+                                            <li>Values global unity, ecological balance.</li>
+                                            <li>Transcends ego for collective good.</li>
+                                    </ul>
+                <h3>map.quadrants</h3>
+                                                                            <h4>Interior-Individual</h4>
+                        <p>Transpersonal awareness, universal ethics.</p>
+                                                                                <h4>Exterior-Individual</h4>
+                        <p>Actions for global sustainability.</p>
+                                                                                <h4>Interior-Collective</h4>
+                        <p>Shared cosmic consciousness.</p>
+                                                                                <h4>Exterior-Collective</h4>
+                        <p>Global cooperation, planetary systems.</p>
+                                                </div>
+                    <div class="spiral-level" style="border-left: 5px solid #FFFF00">
+                <h2>
+                    Integrative Self                </h2>
+                <p><strong>map.human_age:</strong> 50 years ago</p>
+                <h3>map.description</h3>
+                <ul>
+                                                                <li>Holistic, systems-thinking approach.</li>
+                                            <li>Integrates previous stages, values flexibility.</li>
+                                            <li>Focus on functionality and competence.</li>
+                                    </ul>
+                <h3>map.characteristics</h3>
+                <ul>
+                                                                <li>Systemic, integrative mindset.</li>
+                                            <li>Values knowledge and adaptability.</li>
+                                            <li>Sees complexity without judgment.</li>
+                                    </ul>
+                <h3>map.quadrants</h3>
+                                                                            <h4>Interior-Individual</h4>
+                        <p>Self-actualization, big-picture thinking.</p>
+                                                                                <h4>Exterior-Individual</h4>
+                        <p>Problem-solving, innovative actions.</p>
+                                                                                <h4>Interior-Collective</h4>
+                        <p>Shared vision of interconnected systems.</p>
+                                                                                <h4>Exterior-Collective</h4>
+                        <p>Global systems, sustainable solutions.</p>
+                                                </div>
+                    <div class="spiral-level" style="border-left: 5px solid #008000">
+                <h2>
+                    Communitarian Self                </h2>
+                <p><strong>map.human_age:</strong> 150 years ago</p>
+                <h3>map.description</h3>
+                <ul>
+                                                                <li>Emphasis on equality, community, and empathy.</li>
+                                            <li>Pluralistic, values diversity and inclusion.</li>
+                                            <li>Seeks harmony and consensus.</li>
+                                    </ul>
+                <h3>map.characteristics</h3>
+                <ul>
+                                                                <li>Egalitarian, cooperative.</li>
+                                            <li>Sensitive to social injustices.</li>
+                                            <li>Values feelings and relationships.</li>
+                                    </ul>
+                <h3>map.quadrants</h3>
+                                                                            <h4>Interior-Individual</h4>
+                        <p>Empathy and personal growth focus.</p>
+                                                                                <h4>Exterior-Individual</h4>
+                        <p>Actions to promote fairness, activism.</p>
+                                                                                <h4>Interior-Collective</h4>
+                        <p>Shared values of equality, community.</p>
+                                                                                <h4>Exterior-Collective</h4>
+                        <p>Social movements, cooperative systems.</p>
+                                                </div>
+                    <div class="spiral-level" style="border-left: 5px solid #FFA500">
+                <h2>
+                    Achievement Self                </h2>
+                <p><strong>map.human_age:</strong> 300 years ago</p>
+                <h3>map.description</h3>
+                <ul>
+                                                                <li>Focus on individual success and innovation.</li>
+                                            <li>Rational, scientific, and materialistic worldview.</li>
+                                            <li>Goal-oriented, seeking progress.</li>
+                                    </ul>
+                <h3>map.characteristics</h3>
+                <ul>
+                                                                <li>Entrepreneurial, competitive.</li>
+                                            <li>Values efficiency and results.</li>
+                                            <li>Emphasizes personal achievement.</li>
+                                    </ul>
+                <h3>map.quadrants</h3>
+                                                                            <h4>Interior-Individual</h4>
+                        <p>Ambition and self-improvement drive.</p>
+                                                                                <h4>Exterior-Individual</h4>
+                        <p>Pursuit of wealth, status, skills.</p>
+                                                                                <h4>Interior-Collective</h4>
+                        <p>Shared value in progress, innovation.</p>
+                                                                                <h4>Exterior-Collective</h4>
+                        <p>Capitalism, markets, technology systems.</p>
+                                                </div>
+                    <div class="spiral-level" style="border-left: 5px solid #0000FF">
+                <h2>
+                    Order Self                </h2>
+                <p><strong>map.human_age:</strong> 5,000 years ago</p>
+                <h3>map.description</h3>
+                <ul>
+                                                                <li>Focus on order, rules, and absolute truths.</li>
+                                            <li>Duty, discipline, and loyalty to authority.</li>
+                                            <li>Belief in divine or moral purpose.</li>
+                                    </ul>
+                <h3>map.characteristics</h3>
+                <ul>
+                                                                <li>Conformist, rule-following.</li>
+                                            <li>Strong moral framework, guilt-based.</li>
+                                            <li>Hierarchical and structured society.</li>
+                                    </ul>
+                <h3>map.quadrants</h3>
+                                                                            <h4>Interior-Individual</h4>
+                        <p>Sense of duty and moral obligation.</p>
+                                                                                <h4>Exterior-Individual</h4>
+                        <p>Adherence to rules and roles.</p>
+                                                                                <h4>Interior-Collective</h4>
+                        <p>Shared religious or moral beliefs.</p>
+                                                                                <h4>Exterior-Collective</h4>
+                        <p>Organized institutions, laws.</p>
+                                                </div>
+                    <div class="spiral-level" style="border-left: 5px solid #FF0000">
+                <h2>
+                    Power Self                </h2>
+                <p><strong>map.human_age:</strong> 10,000 years ago</p>
+                <h3>map.description</h3>
+                <ul>
+                                                                <li>Ego-centric, seeking power and dominance.</li>
+                                            <li>Impulsive, immediate gratification-driven.</li>
+                                            <li>Heroic myths and warrior ethos.</li>
+                                    </ul>
+                <h3>map.characteristics</h3>
+                <ul>
+                                                                <li>Aggressive, dominant behavior.</li>
+                                            <li>Respect for strength and courage.</li>
+                                            <li>Short-term focus, low impulse control.</li>
+                                    </ul>
+                <h3>map.quadrants</h3>
+                                                                            <h4>Interior-Individual</h4>
+                        <p>Strong personal desires, pride.</p>
+                                                                                <h4>Exterior-Individual</h4>
+                        <p>Physical displays of power, conquest.</p>
+                                                                                <h4>Interior-Collective</h4>
+                        <p>Loyalty to strong leader or group.</p>
+                                                                                <h4>Exterior-Collective</h4>
+                        <p>Hierarchical, power-based structures.</p>
+                                                </div>
+                    <div class="spiral-level" style="border-left: 5px solid #800080">
+                <h2>
+                    Tribal Self                </h2>
+                <p><strong>map.human_age:</strong> 50,000 years ago</p>
+                <h3>map.description</h3>
+                <ul>
+                                                                <li>Emphasis on group bonding and rituals.</li>
+                                            <li>Animistic worldview, belief in spirits.</li>
+                                            <li>Strong sense of tradition and superstition.</li>
+                                    </ul>
+                <h3>map.characteristics</h3>
+                <ul>
+                                                                <li>Tribal, ritualistic behaviors.</li>
+                                            <li>Loyalty to kin and clan.</li>
+                                            <li>Mystical thinking, ancestor worship.</li>
+                                    </ul>
+                <h3>map.quadrants</h3>
+                                                                            <h4>Interior-Individual</h4>
+                        <p>Personal identity tied to tribe.</p>
+                                                                                <h4>Exterior-Individual</h4>
+                        <p>Ritualistic actions to appease spirits.</p>
+                                                                                <h4>Interior-Collective</h4>
+                        <p>Shared myths and tribal culture.</p>
+                                                                                <h4>Exterior-Collective</h4>
+                        <p>Tribal structures, communal living.</p>
+                                                </div>
+                    <div class="spiral-level" style="border-left: 5px solid #E6D7C1">
+                <h2>
+                    Survival Self                </h2>
+                <p><strong>map.human_age:</strong> 100,000+ years ago</p>
+                <h3>map.description</h3>
+                <ul>
+                                                                <li>Focus on basic survival instincts.</li>
+                                            <li>Driven by immediate needs: food, shelter, safety.</li>
+                                            <li>Minimal self-awareness, reactive behavior.</li>
+                                    </ul>
+                <h3>map.characteristics</h3>
+                <ul>
+                                                                <li>Instinctive, survival-oriented.</li>
+                                            <li>Little to no group structure.</li>
+                                            <li>Pre-verbal, pre-social organization.</li>
+                                    </ul>
+                <h3>map.quadrants</h3>
+                                                                            <h4>Interior-Individual</h4>
+                        <p>Basic instincts, minimal self-reflection.</p>
+                                                                                <h4>Exterior-Individual</h4>
+                        <p>Physical survival behaviors, reactive to environment.</p>
+                                                                                <h4>Interior-Collective</h4>
+                        <p>No cultural identity, survival-focused interactions.</p>
+                                                                                <h4>Exterior-Collective</h4>
+                        <p>No organized systems, nomadic existence.</p>
+                                                </div>
+            </div>
+    </main>
+
+    <footer>
+        <p>© 2025 Objective Reality</p>
+    </footer>
+</body>
+</html>
+
+
+
+
+
+
+The AQAL map is a powerful tool. It organizes human development across multiple parallel lines (cognitive, values, self-identity) and through a spectrum of color-coded stages, from the basic survival instincts of Beige to the integrated, holistic worldview of Turquoise. It provides a rich, nuanced language for discussing the evolution of human thought and culture.
+
+However, it remains a correlational model. It shows us what happens as consciousness evolves, but it doesn't explain why. What is the underlying engine driving this progression? What physical changes in our biology enable the leap from the magical thinking of Purple to the rational logic of Orange?
+
+To answer these questions, we must go deeper.
+
+Part 2: The Next Leap – The PHYXS Evolution D Map of Consciousness
+
+This is where the work of the vortex|institute offers a paradigm shift. Based on the findings from our "Evolution D" simulation—a 3.5-billion-year, subatomic-resolution model of life's evolution powered by the 𝓛_omni framework—we can now propose a causal, biophysical basis for the evolution of consciousness.
+
+The Core Hypothesis: Consciousness as Cognitive Throughput
+
+Our central, testable hypothesis is that consciousness is an emergent property of cognitive throughput. We define this as:
+
+Cognitive Throughput = (Number of Processing Units) x (Firing Rate)
+
+In biological terms, this is (Neuron Count) x (Average Firing Frequency). This metric is the "hardware spec" of consciousness. The psychological states and worldviews described by AQAL are the "software" that this evolving hardware can run.
+
+The PHYXS Evolution D Map of Consciousness is the direct visualization of this hypothesis, grounded in the data from our "Digital Twins," Eve and Adam D.
+
+(Here, we will embed the new, advanced "PHYXS Evolution D Map")
+
+Key Innovations of the PHYXS Map:
+
+A Data-Driven Backbone: The "Cognitive Throughput" and "PHYXS Insights" columns are the heart of the map. They are populated directly with data from the Evolution D simulation, grounding every stage of development in a measurable, biophysical reality.
+
+A Complete Continuum: Our map doesn't start with early humans. It begins 3.5 billion years ago with the first RNA self-replication event and traces the slow, steady increase in information processing capacity through every major evolutionary milestone.
+
+Future Projections to 2050: The map extends into the near future, forecasting the next evolutionary leaps based on current technological trajectories:
+
+Cognitive Augmentation (~2035): The integration of direct neural interfaces, leading to a significant boost in individual cognitive throughput.
+
+AI-Human Symbiosis (~2050): The formation of a planetary-scale cognitive network—a global brain. We posit that the internet is the nascent nervous system for this entity, and technologies like blockchain are the crucial, emergent protocols that will ensure trustworthy signaling across this network.
+
+Conclusion: A New Foundation for Understanding
+
+The PHYXS Evolution D Map is more than just a new chart; it is a new foundation for the study of consciousness. By anchoring the rich history of psychological observation to the hard data of biophysical simulation, we create a more complete, objective, and predictive framework.
+
+It tells a continuous, evidence-based story of the evolution of intelligence, from the first spark of life to the dawn of a planetary mind. This is the next step in our collective quest to understand ourselves.
+
+
+
+This was the seeder to create the PHYXS based Evolution D Map of Consciousness (you can use this info to re-create this map with the same style as /consciousness has now: 
+
+The PHYXS Evolution D Map of Consciousness (stack these info cards with youngest on top to oldest on the bottom (as in the text):
+
+
+
+<?php
+
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+return new class extends Migration
+{
+    /**
+     * Run the migrations.
+     */
+    public function up(): void
+    {
+        Schema::create('phyxs_levels', function (Blueprint $table) {
+            $table->id();
+            $table->string('timeline');
+            $table->string('level_name');
+            $table->string('color_hex')->nullable();
+            $table->string('human_age')->nullable();
+            $table->string('cognitive_throughput')->nullable();
+            $table->text('phyxs_insights')->nullable();
+            $table->string('cognitive_line')->nullable();
+            $table->string('values_worldview')->nullable();
+            $table->string('self_identity')->nullable();
+            $table->timestamps();
+        });
+    }
+
+    /**
+     * Reverse the migrations.
+     */
+    public function down(): void
+    {
+        Schema::dropIfExists('phyxs_levels');
+    }
+};
+
+
+
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class PhyxsLevel extends Model
+{
+    use HasFactory;
+
+    /**
+     * The attributes that are mass assignable.
+     *
+     * @var array<int, string>
+     */
+    protected $fillable = [
+        'timeline',
+        'level_name',
+        'color_hex',
+        'human_age',
+        'cognitive_throughput',
+        'phyxs_insights',
+        'cognitive_line',
+        'values_worldview',
+        'self_identity',
+    ];
+}
+
+
+
+<?php
+
+namespace Database\Seeders;
+
+use Illuminate\Database\Seeder;
+use App\Models\PhyxsLevel;
+use Illuminate\Support\Facades\DB;
+
+class PhyxsLevelSeeder extends Seeder
+{
+    public function run(): void
+    {
+        // Disable foreign key checks to allow truncation
+        DB::statement('SET FOREIGN_KEY_CHECKS=0;');
+
+        // Clear existing data
+        PhyxsLevel::truncate();
+
+        // Re-enable foreign key checks
+        DB::statement('SET FOREIGN_KEY_CHECKS=1;');
+
+        $levels = [
+            [
+                'timeline' => '2050',
+                'level_name' => 'AI-Human Symbiosis',
+                'color_hex' => '#ffffff',
+                'human_age' => 'N/A',
+                'cognitive_throughput' => '1T+ / 100Hz+',
+                'phyxs_insights' => 'Planetary-scale cognitive network.',
+                'cognitive_line' => '(Emerging)',
+                'values_worldview' => '(Emerging)',
+                'self_identity' => '(Emerging)',
+            ],
+            [
+                'timeline' => '2035',
+                'level_name' => 'Cognitive Augmentation',
+                'color_hex' => '#e0e0e0',
+                'human_age' => 'N/A',
+                'cognitive_throughput' => '~500B / 80Hz',
+                'phyxs_insights' => 'Direct neural interface enhances processing speed by 10x.',
+                'cognitive_line' => '(Emerging)',
+                'values_worldview' => '(Emerging)',
+                'self_identity' => '(Emerging)',
+            ],
+            [
+                'timeline' => '2025',
+                'level_name' => 'Indigo',
+                'color_hex' => '#4b0082',
+                'human_age' => 'Adult',
+                'cognitive_throughput' => '100B / 40Hz',
+                'phyxs_insights' => 'Peak Individual Cognition, 40 Hz Gamma Sync.',
+                'cognitive_line' => 'Supermind',
+                'values_worldview' => 'Integral',
+                'self_identity' => 'Ego-aware / 5th Order',
+            ],
+            [
+                'timeline' => '2000',
+                'level_name' => 'Turquoise',
+                'color_hex' => '#00FFFF',
+                'human_age' => 'Adult',
+                'cognitive_throughput' => '10B / 15Hz',
+                'phyxs_insights' => 'Systemic Cognition, Global interconnectedness.',
+                'cognitive_line' => 'Late Vision-Logic',
+                'values_worldview' => 'Global View',
+                'self_identity' => 'Integrated / Autonomous',
+            ],
+            [
+                'timeline' => '1975',
+                'level_name' => 'Teal',
+                'color_hex' => '#008080',
+                'human_age' => 'Adult',
+                'cognitive_throughput' => '3B / 12Hz',
+                'phyxs_insights' => 'Meta-Systemic Logic, Complex systems thinking.',
+                'cognitive_line' => 'Middle Vision-Logic',
+                'values_worldview' => 'Flex Flow',
+                'self_identity' => 'Autonomous / Individualistic',
+            ],
+            [
+                'timeline' => '1850',
+                'level_name' => 'Green',
+                'color_hex' => '#00FF00',
+                'human_age' => '15-21 yrs',
+                'cognitive_throughput' => '100M / 10Hz',
+                'phyxs_insights' => 'Relativistic Logic, Pluralistic societies.',
+                'cognitive_line' => 'Early Vision-Logic',
+                'values_worldview' => 'Human Bond',
+                'self_identity' => 'Individualistic / Conscientious',
+            ],
+            [
+                'timeline' => '1700',
+                'level_name' => 'Orange',
+                'color_hex' => '#FFA500',
+                'human_age' => '9-14 yrs',
+                'cognitive_throughput' => '10M / 10Hz',
+                'phyxs_insights' => 'Formal Operational, *Homo sapiens* emergence.',
+                'cognitive_line' => 'Formal Operational',
+                'values_worldview' => 'Strive Drive',
+                'self_identity' => 'Conscientious / Conformist',
+            ],
+            [
+                'timeline' => '~5,000 years ago',
+                'level_name' => 'Amber',
+                'color_hex' => '#FFBF00',
+                'human_age' => '7-8 yrs',
+                'cognitive_throughput' => '1M / 8Hz',
+                'phyxs_insights' => 'Concrete Operational, Early civilizations.',
+                'cognitive_line' => 'Concrete Operational',
+                'values_worldview' => 'Truth Force',
+                'self_identity' => 'Conformist / Self-Protective',
+            ],
+            [
+                'timeline' => '~10,000 years ago',
+                'level_name' => 'Red',
+                'color_hex' => '#FF0000',
+                'human_age' => '3-6 yrs',
+                'cognitive_throughput' => '100k / 5Hz',
+                'phyxs_insights' => 'Preoperational (Conceptual), Rise of agriculture.',
+                'cognitive_line' => 'Preoperational',
+                'values_worldview' => 'Power Gods',
+                'self_identity' => 'Self-Protective / Impulsive',
+            ],
+            [
+                'timeline' => '~50,000 years ago',
+                'level_name' => 'Purple',
+                'color_hex' => '#800080',
+                'human_age' => '18-36 mos',
+                'cognitive_throughput' => '10k / 1Hz',
+                'phyxs_insights' => 'Preoperational (Symbolic), Behavioral modernity.',
+                'cognitive_line' => 'Preoperational',
+                'values_worldview' => 'Kin Spirits',
+                'self_identity' => 'Impulsive / Symbiotic',
+            ],
+            [
+                'timeline' => '~100,000 years ago',
+                'level_name' => 'Beige',
+                'color_hex' => '#F5DEB3',
+                'human_age' => '0-18 mos',
+                'cognitive_throughput' => '5k / 0.5Hz',
+                'phyxs_insights' => 'Sensorimotor, Archaic *Homo sapiens*.',
+                'cognitive_line' => 'Sensorimotor',
+                'values_worldview' => 'Survival',
+                'self_identity' => 'Symbiotic / Archaic',
+            ],
+            [
+                'timeline' => '~2.5 Million years ago',
+                'level_name' => 'Infrared (Hominid)',
+                'color_hex' => '#A52A2A',
+                'human_age' => 'N/A',
+                'cognitive_throughput' => '5M / 12Hz',
+                'phyxs_insights' => 'Early tool use, bipedalism, Broca\'s area precursors.',
+                'cognitive_line' => '(Pre-symbolic)',
+                'values_worldview' => '(Pre-tribal)',
+                'self_identity' => '(Pre-Self)',
+            ],
+            [
+                'timeline' => '~60 Million years ago',
+                'level_name' => '(Primate)',
+                'color_hex' => '#8B4513',
+                'human_age' => 'N/A',
+                'cognitive_throughput' => '1M / 10Hz',
+                'phyxs_insights' => 'Emergence of complex social structures.',
+                'cognitive_line' => '(Pre-symbolic)',
+                'values_worldview' => '(Pre-tribal)',
+                'self_identity' => '(Pre-Self)',
+            ],
+            [
+                'timeline' => '~300 Million years ago',
+                'level_name' => '(Mammalian)',
+                'color_hex' => '#D2B48C',
+                'human_age' => 'N/A',
+                'cognitive_throughput' => '500k / 10Hz',
+                'phyxs_insights' => 'First mammals, warm-blooded metabolism.',
+                'cognitive_line' => '(Pre-symbolic)',
+                'values_worldview' => '(Pre-tribal)',
+                'self_identity' => '(Pre-Self)',
+            ],
+            [
+                'timeline' => '~350 Million years ago',
+                'level_name' => '(Reptilian)',
+                'color_hex' => '#2E8B57',
+                'human_age' => 'N/A',
+                'cognitive_throughput' => '100k / 8Hz',
+                'phyxs_insights' => 'Amniotic egg allows full land colonization.',
+                'cognitive_line' => '(Pre-neural)',
+                'values_worldview' => '(Pre-tribal)',
+                'self_identity' => '(Pre-Self)',
+            ],
+            [
+                'timeline' => '~400 Million years ago',
+                'level_name' => '(Amphibian)',
+                'color_hex' => '#6B8E23',
+                'human_age' => 'N/A',
+                'cognitive_throughput' => '50k / 8Hz',
+                'phyxs_insights' => 'Transition from water to land, complex sensory input.',
+                'cognitive_line' => '(Pre-neural)',
+                'values_worldview' => '(Pre-tribal)',
+                'self_identity' => '(Pre-Self)',
+            ],
+            [
+                'timeline' => '~500 Million years ago',
+                'level_name' => '(Vertebrate)',
+                'color_hex' => '#4682B4',
+                'human_age' => 'N/A',
+                'cognitive_throughput' => '10k / 5Hz',
+                'phyxs_insights' => 'First true vertebrates, emergence of a notochord.',
+                'cognitive_line' => '(Pre-neural)',
+                'values_worldview' => '(Pre-tribal)',
+                'self_identity' => '(Pre-Self)',
+            ],
+            [
+                'timeline' => '~800 Million years ago',
+                'level_name' => '(Multicellular)',
+                'color_hex' => '#708090',
+                'human_age' => 'N/A',
+                'cognitive_throughput' => '~1k cells',
+                'phyxs_insights' => 'Coordinated Calcium Signaling, first nervous systems.',
+                'cognitive_line' => '(Pre-neural)',
+                'values_worldview' => '(Pre-Tribal)',
+                'self_identity' => '(Pre-Self)',
+            ],
+            [
+                'timeline' => '~2 Billion years ago',
+                'level_name' => '(Eukaryotic)',
+                'color_hex' => '#778899',
+                'human_age' => 'N/A',
+                'cognitive_throughput' => 'N/A',
+                'phyxs_insights' => 'Endosymbiosis, 10x ATP production (0.1 pJ/s).',
+                'cognitive_line' => '(Pre-neural)',
+                'values_worldview' => '(Pre-Tribal)',
+                'self_identity' => '(Pre-Self)',
+            ],
+            [
+                'timeline' => '~3.5 Billion years ago',
+                'level_name' => '(Protocellular)',
+                'color_hex' => '#2F4F4F',
+                'human_age' => 'N/A',
+                'cognitive_throughput' => 'N/A',
+                'phyxs_insights' => 'RNA Self-Replication ($k_{cat}=10^{-3}s^{-1}$).',
+                'cognitive_line' => '(Pre-neural)',
+                'values_worldview' => '(Pre-Tribal)',
+                'self_identity' => '(Pre-Self)',
+            ],
+        ];
+
+        foreach ($levels as $level) {
+            PhyxsLevel::create($level);
+        }
+    }
+}
+
