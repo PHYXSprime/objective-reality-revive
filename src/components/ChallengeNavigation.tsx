@@ -2,11 +2,12 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { Users, Target, Brain, AlertTriangle, MessageCircle, Shield, FileText, Search, Zap, Eye, User, ChevronRight, ChevronLeft } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/hooks/useLanguage';
 
 const challenges = [
   {
     icon: Users,
-    title: "Indoctrination",
+    titleKey: "challenge.indoctrination.title",
     path: "/indoctrination",
     color: "text-red-600 dark:text-red-400"
   },
@@ -73,6 +74,7 @@ const challenges = [
 ];
 
 export function ChallengeNavigation() {
+  const { t } = useLanguage();
   const [isExpanded, setIsExpanded] = useState(false);
   const location = useLocation();
 
@@ -126,7 +128,7 @@ export function ChallengeNavigation() {
                 />
                 {isExpanded && (
                   <span className="text-sm font-medium truncate">
-                    {challenge.title}
+                    {challenge.titleKey ? t(challenge.titleKey) : challenge.title}
                   </span>
                 )}
               </Link>

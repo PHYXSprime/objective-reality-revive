@@ -136,7 +136,7 @@ export default function Indoctrination() {
           
           <div className="grid md:grid-cols-2 gap-6">
             {sources.map((source, index) => (
-              <Card key={index} className="glass-card rounded-2xl">
+              <Card key={index} className="glass-card rounded-2xl shadow-[0_0_20px_-5px_rgba(59,130,246,0.3)] border-blue-100/20 dark:border-blue-800/20">
                 <CardHeader>
                   <div className="flex items-center gap-3">
                     <source.icon className="h-6 w-6 text-blue-600" />
@@ -177,7 +177,7 @@ export default function Indoctrination() {
         </div>
 
         {/* Breaking Free */}
-        <div className="glass-card rounded-2xl p-8 mb-12 border-orange-200 dark:border-orange-800">
+        <div className="glass-card rounded-2xl p-8 mb-12 border-orange-200/30 dark:border-orange-800/30 shadow-[0_0_20px_-5px_rgba(234,88,12,0.2)]">
           <div className="flex items-center gap-3 mb-6">
             <AlertTriangle className="h-6 w-6 text-orange-600" />
             <h2 className="text-2xl font-bold text-foreground">{t('indoctrination.breakingFree')}</h2>
@@ -207,7 +207,7 @@ export default function Indoctrination() {
         </div>
 
         {/* Warning Signs */}
-        <div className="glass-card rounded-2xl p-8">
+        <div className="glass-card rounded-2xl p-8 shadow-[0_0_20px_-5px_rgba(220,38,127,0.2)] border-red-100/20 dark:border-red-800/20">
           <div className="flex items-center gap-3 mb-6">
             <Eye className="h-6 w-6 text-red-600" />
             <h2 className="text-2xl font-bold text-foreground">{t('indoctrination.warningSigns')}</h2>
