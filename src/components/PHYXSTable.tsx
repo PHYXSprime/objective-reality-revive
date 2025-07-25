@@ -2,7 +2,6 @@ import React from 'react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
-import { Collapsible, CollapsibleContent, CollapsibleTrigger } from '@/components/ui/collapsible';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import { PHYXSLevel } from '@/data/phyxsMapData';
 
@@ -101,15 +100,17 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {data.flatMap((level, index) => {
+              {data.map((level, index) => {
                 const colors = getEvolutionColors(level.evolutionPoint);
-                return [
-                    <TableRow key={`row-${index}`}
+                const isOpen = openRows.has(index);
+                return (
+                  <React.Fragment key={index}>
+                    <TableRow 
                       className={`cursor-pointer hover:bg-muted/50 border-l-[10px] ${colors.bg} ${colors.border}`}
                       onClick={() => toggleRow(index)}
                     >
                       <TableCell>
-                        {openRows.has(index) ? (
+                        {isOpen ? (
                           <ChevronDown className="h-4 w-4" />
                         ) : (
                           <ChevronRight className="h-4 w-4" />
@@ -129,61 +130,60 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
                       <TableCell className="text-sm max-w-xs">
                         {level.significance}
                       </TableCell>
-                    </TableRow>,
-                    <Collapsible key={`collapsible-${index}`} open={openRows.has(index)}>
-                      <CollapsibleContent>
-                        <TableRow key={`content-${index}`}>
-                          <TableCell colSpan={5} className="p-0">
-                            <div className={`p-6 border-t border-l-[10px] ${colors.bg} ${colors.border}`}>
-                              <div className="grid md:grid-cols-2 gap-6">
-                                 {/* Description */}
-                                 <div className="md:col-span-2 text-left">
-                                   <h4 className="font-semibold mb-2 text-left">Description</h4>
-                                   <p className="text-sm text-muted-foreground leading-relaxed text-left">{level.description}</p>
-                                 </div>
+                    </TableRow>
+                    {isOpen && (
+                      <TableRow>
+                        <TableCell colSpan={5} className="p-0">
+                          <div className={`p-6 border-t border-l-[10px] ${colors.bg} ${colors.border} animate-fade-in`}>
+                            <div className="grid md:grid-cols-2 gap-6">
+                               {/* Description */}
+                               <div className="md:col-span-2 text-left">
+                                 <h4 className="font-semibold mb-2 text-left">Description</h4>
+                                 <p className="text-sm text-muted-foreground leading-relaxed text-left">{level.description}</p>
+                               </div>
 
-                                  {/* Characteristics */}
-                                  <div className="text-left">
-                                    <h4 className="font-semibold mb-2 text-left">Characteristics</h4>
-                                    <div className="space-y-1 text-left">
-                                      {level.characteristics.map((char, i) => (
-                                        <p key={i} className="text-sm text-muted-foreground leading-relaxed text-left">
-                                          • {char}
-                                        </p>
-                                      ))}
-                                    </div>
+                                {/* Characteristics */}
+                                <div className="text-left">
+                                  <h4 className="font-semibold mb-2 text-left">Characteristics</h4>
+                                  <div className="space-y-1 text-left">
+                                    {level.characteristics.map((char, i) => (
+                                      <p key={i} className="text-sm text-muted-foreground leading-relaxed text-left">
+                                        • {char}
+                                      </p>
+                                    ))}
                                   </div>
+                                </div>
 
-                                  {/* Biophysical Markers */}
-                                  <div className="text-left">
-                                    <h4 className="font-semibold mb-2 text-left">Biophysical Markers</h4>
-                                    <div className="space-y-1 text-left">
-                                      {level.biophysicalMarkers.map((marker, i) => (
-                                        <p key={i} className="text-sm text-muted-foreground leading-relaxed text-left">
-                                          • {marker}
-                                        </p>
-                                      ))}
-                                    </div>
+                                {/* Biophysical Markers */}
+                                <div className="text-left">
+                                  <h4 className="font-semibold mb-2 text-left">Biophysical Markers</h4>
+                                  <div className="space-y-1 text-left">
+                                    {level.biophysicalMarkers.map((marker, i) => (
+                                      <p key={i} className="text-sm text-muted-foreground leading-relaxed text-left">
+                                        • {marker}
+                                      </p>
+                                    ))}
                                   </div>
+                                </div>
 
-                                 {/* Cognitive Capabilities */}
-                                 <div className="md:col-span-2 text-left">
-                                   <h4 className="font-semibold mb-2 text-left">Cognitive Capabilities</h4>
-                                   <div className="flex flex-wrap gap-2 text-left">
-                                     {level.cognitiveCapabilities.map((capability, i) => (
-                                       <Badge key={i} variant="outline" className="text-xs">
-                                         {capability}
-                                       </Badge>
-                                     ))}
-                                   </div>
+                               {/* Cognitive Capabilities */}
+                               <div className="md:col-span-2 text-left">
+                                 <h4 className="font-semibold mb-2 text-left">Cognitive Capabilities</h4>
+                                 <div className="flex flex-wrap gap-2 text-left">
+                                   {level.cognitiveCapabilities.map((capability, i) => (
+                                     <Badge key={i} variant="outline" className="text-xs">
+                                       {capability}
+                                     </Badge>
+                                   ))}
                                  </div>
-                              </div>
+                               </div>
                             </div>
-                          </TableCell>
-                        </TableRow>
-                      </CollapsibleContent>
-                    </Collapsible>
-                  ];
+                          </div>
+                        </TableCell>
+                      </TableRow>
+                    )}
+                  </React.Fragment>
+                );
               })}
             </TableBody>
           </Table>
