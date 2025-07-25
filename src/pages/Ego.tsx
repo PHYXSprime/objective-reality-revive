@@ -8,118 +8,118 @@ export default function Ego() {
 
   const egoManifestations = [
     {
-      type: "Intellectual Pride",
-      description: "Overestimating one's knowledge and reasoning abilities",
-      examples: ["Dunning-Kruger effect", "Expert overconfidence", "Dismissing others' ideas", "Refusing to admit ignorance"]
+      type: t('ego.manifestation.intellectualPride'),
+      description: t('ego.manifestation.intellectualPride.desc'),
+      examples: [t('ego.manifestation.intellectualPride.ex1'), t('ego.manifestation.intellectualPride.ex2'), t('ego.manifestation.intellectualPride.ex3'), t('ego.manifestation.intellectualPride.ex4')]
     },
     {
-      type: "Identity Protection",
-      description: "Defending self-image even when it conflicts with truth",
-      examples: ["Confirmation bias", "Motivated reasoning", "Face-saving behaviors", "Doubling down on mistakes"]
+      type: t('ego.manifestation.identityProtection'),
+      description: t('ego.manifestation.identityProtection.desc'),
+      examples: [t('ego.manifestation.identityProtection.ex1'), t('ego.manifestation.identityProtection.ex2'), t('ego.manifestation.identityProtection.ex3'), t('ego.manifestation.identityProtection.ex4')]
     },
     {
-      type: "Status Seeking",
-      description: "Prioritizing social standing over accuracy",
-      examples: ["Signaling virtue", "Intellectual posturing", "Name-dropping", "Competitive debating"]
+      type: t('ego.manifestation.statusSeeking'),
+      description: t('ego.manifestation.statusSeeking.desc'),
+      examples: [t('ego.manifestation.statusSeeking.ex1'), t('ego.manifestation.statusSeeking.ex2'), t('ego.manifestation.statusSeeking.ex3'), t('ego.manifestation.statusSeeking.ex4')]
     },
     {
-      type: "Need to Be Right",
-      description: "Compulsive urge to win arguments rather than seek truth",
-      examples: ["Moving goalposts", "Strawman arguments", "Ad hominem attacks", "Refusing to concede points"]
+      type: t('ego.manifestation.needToBeRight'),
+      description: t('ego.manifestation.needToBeRight.desc'),
+      examples: [t('ego.manifestation.needToBeRight.ex1'), t('ego.manifestation.needToBeRight.ex2'), t('ego.manifestation.needToBeRight.ex3'), t('ego.manifestation.needToBeRight.ex4')]
     },
     {
-      type: "Fear of Being Wrong",
-      description: "Avoiding situations where mistakes might be exposed",
-      examples: ["Analysis paralysis", "Perfectionism", "Avoiding challenges", "Blame shifting"]
+      type: t('ego.manifestation.fearBeingWrong'),
+      description: t('ego.manifestation.fearBeingWrong.desc'),
+      examples: [t('ego.manifestation.fearBeingWrong.ex1'), t('ego.manifestation.fearBeingWrong.ex2'), t('ego.manifestation.fearBeingWrong.ex3'), t('ego.manifestation.fearBeingWrong.ex4')]
     },
     {
-      type: "Superiority Complex",
-      description: "Believing oneself to be better than others",
-      examples: ["Moral superiority", "Intellectual elitism", "Group supremacy", "Dismissing 'common' people"]
+      type: t('ego.manifestation.superiorityComplex'),
+      description: t('ego.manifestation.superiorityComplex.desc'),
+      examples: [t('ego.manifestation.superiorityComplex.ex1'), t('ego.manifestation.superiorityComplex.ex2'), t('ego.manifestation.superiorityComplex.ex3'), t('ego.manifestation.superiorityComplex.ex4')]
     }
   ];
 
   const egoCosts = [
     {
-      area: "Learning & Growth",
-      impact: "Ego prevents admitting mistakes, asking questions, and accepting feedback",
-      consequences: ["Stagnated personal development", "Missed learning opportunities", "Repeated errors"]
+      area: t('ego.cost.learningGrowth'),
+      impact: t('ego.cost.learningGrowth.impact'),
+      consequences: [t('ego.cost.learningGrowth.c1'), t('ego.cost.learningGrowth.c2'), t('ego.cost.learningGrowth.c3')]
     },
     {
-      area: "Relationships",
-      impact: "Ego creates barriers to genuine connection and understanding",
-      consequences: ["Damaged relationships", "Social isolation", "Inability to collaborate"]
+      area: t('ego.cost.relationships'),
+      impact: t('ego.cost.relationships.impact'),
+      consequences: [t('ego.cost.relationships.c1'), t('ego.cost.relationships.c2'), t('ego.cost.relationships.c3')]
     },
     {
-      area: "Decision Making",
-      impact: "Ego-driven decisions prioritize image over optimal outcomes",
-      consequences: ["Poor choices", "Sunk cost fallacy", "Escalation of commitment"]
+      area: t('ego.cost.decisionMaking'),
+      impact: t('ego.cost.decisionMaking.impact'),
+      consequences: [t('ego.cost.decisionMaking.c1'), t('ego.cost.decisionMaking.c2'), t('ego.cost.decisionMaking.c3')]
     },
     {
-      area: "Truth Seeking",
-      impact: "Ego makes us defend positions rather than follow evidence",
-      consequences: ["False beliefs", "Intellectual dishonesty", "Closed-mindedness"]
+      area: t('ego.cost.truthSeeking'),
+      impact: t('ego.cost.truthSeeking.impact'),
+      consequences: [t('ego.cost.truthSeeking.c1'), t('ego.cost.truthSeeking.c2'), t('ego.cost.truthSeeking.c3')]
     }
   ];
 
   const egoTraps = [
     {
-      trap: "The Expert Trap",
-      description: "Expertise in one area leading to overconfidence in others",
-      warning: "Nobel Prize winners making claims outside their field"
+      trap: t('ego.trap.expert'),
+      description: t('ego.trap.expert.desc'),
+      warning: t('ego.trap.expert.warning')
     },
     {
-      trap: "The Identity Trap",
-      description: "When beliefs become part of personal identity",
-      warning: "Changing your mind feels like losing yourself"
+      trap: t('ego.trap.identity'),
+      description: t('ego.trap.identity.desc'),
+      warning: t('ego.trap.identity.warning')
     },
     {
-      trap: "The Investment Trap",
-      description: "Having invested time/energy in a position makes abandoning it painful",
-      warning: "Defending bad ideas because you've already committed to them"
+      trap: t('ego.trap.investment'),
+      description: t('ego.trap.investment.desc'),
+      warning: t('ego.trap.investment.warning')
     },
     {
-      trap: "The Social Trap",
-      description: "Social groups punish admission of error or uncertainty",
-      warning: "Being right matters less than appearing right to your tribe"
+      trap: t('ego.trap.social'),
+      description: t('ego.trap.social.desc'),
+      warning: t('ego.trap.social.warning')
     },
     {
-      trap: "The Moral Trap",
-      description: "Confusing being right with being good",
-      warning: "Moral superiority preventing intellectual humility"
+      trap: t('ego.trap.moral'),
+      description: t('ego.trap.moral.desc'),
+      warning: t('ego.trap.moral.warning')
     }
   ];
 
   const egoReduction = [
     {
-      practice: "Intellectual Humility",
-      description: "Recognizing the limits of your knowledge and reasoning",
-      techniques: ["Regular 'I don't know' practice", "Seeking disconfirming evidence", "Asking genuine questions"]
+      practice: t('ego.reduction.intellectualHumility'),
+      description: t('ego.reduction.intellectualHumility.desc'),
+      techniques: [t('ego.reduction.intellectualHumility.t1'), t('ego.reduction.intellectualHumility.t2'), t('ego.reduction.intellectualHumility.t3')]
     },
     {
-      practice: "Curiosity Over Certainty",
-      description: "Valuing learning and discovery over being right",
-      techniques: ["Approaching disagreements with curiosity", "Celebrating when you change your mind", "Focusing on understanding"]
+      practice: t('ego.reduction.curiosityOverCertainty'),
+      description: t('ego.reduction.curiosityOverCertainty.desc'),
+      techniques: [t('ego.reduction.curiosityOverCertainty.t1'), t('ego.reduction.curiosityOverCertainty.t2'), t('ego.reduction.curiosityOverCertainty.t3')]
     },
     {
-      practice: "Perspective Taking",
-      description: "Genuinely trying to understand other viewpoints",
-      techniques: ["Steel-manning opponents' arguments", "Role-playing different perspectives", "Seeking common ground"]
+      practice: t('ego.reduction.perspectiveTaking'),
+      description: t('ego.reduction.perspectiveTaking.desc'),
+      techniques: [t('ego.reduction.perspectiveTaking.t1'), t('ego.reduction.perspectiveTaking.t2'), t('ego.reduction.perspectiveTaking.t3')]
     },
     {
-      practice: "Error Celebration",
-      description: "Treating mistakes as valuable learning opportunities",
-      techniques: ["Openly admitting errors", "Analyzing what went wrong", "Sharing lessons learned"]
+      practice: t('ego.reduction.errorCelebration'),
+      description: t('ego.reduction.errorCelebration.desc'),
+      techniques: [t('ego.reduction.errorCelebration.t1'), t('ego.reduction.errorCelebration.t2'), t('ego.reduction.errorCelebration.t3')]
     },
     {
-      practice: "Process Focus",
-      description: "Caring more about how you think than what you conclude",
-      techniques: ["Examining your reasoning process", "Questioning your motivations", "Valuing good thinking over good outcomes"]
+      practice: t('ego.reduction.processFocus'),
+      description: t('ego.reduction.processFocus.desc'),
+      techniques: [t('ego.reduction.processFocus.t1'), t('ego.reduction.processFocus.t2'), t('ego.reduction.processFocus.t3')]
     },
     {
-      practice: "Identity Separation",
-      description: "Distinguishing between your ideas and your self-worth",
-      techniques: ["Holding beliefs lightly", "Practicing ideological diversity", "Cultivating multiple identities"]
+      practice: t('ego.reduction.identitySeparation'),
+      description: t('ego.reduction.identitySeparation.desc'),
+      techniques: [t('ego.reduction.identitySeparation.t1'), t('ego.reduction.identitySeparation.t2'), t('ego.reduction.identitySeparation.t3')]
     }
   ];
 
@@ -131,10 +131,10 @@ export default function Ego() {
         <div className="mb-12 text-center">
           <div className="glass-card rounded-2xl p-8 max-w-4xl mx-auto mb-8">
             <h1 className="text-4xl font-bold text-foreground mb-6">
-              Ego: The Great Barrier to Truth
+              {t('ego.title')}
             </h1>
             <p className="text-xl text-muted-foreground">
-              How our need to protect self-image and maintain superiority interferes with objective reasoning and truth-seeking
+              {t('ego.subtitle')}
             </p>
           </div>
         </div>
@@ -143,31 +143,28 @@ export default function Ego() {
         <div className="glass-card rounded-2xl p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Crown className="h-6 w-6 text-purple-600" />
-            <h2 className="text-2xl font-bold text-foreground">Understanding Ego in Truth-Seeking</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('ego.definition')}</h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            In the context of objective thinking, ego refers to the psychological mechanisms that prioritize 
-            self-image, status, and identity protection over accurate understanding of reality. While healthy 
-            self-regard is important, ego-driven thinking creates systematic barriers to learning, growth, 
-            and genuine truth-seeking.
+            {t('ego.definitionText')}
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">The Core Problem</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('ego.coreProblem')}</h4>
               <p className="text-sm text-muted-foreground">
-                Ego makes being right feel more important than getting it right
+                {t('ego.coreProblemDesc')}
               </p>
             </div>
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Universal Challenge</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('ego.universalChallenge')}</h4>
               <p className="text-sm text-muted-foreground">
-                Even highly intelligent people struggle with ego-driven thinking
+                {t('ego.universalChallengeDesc')}
               </p>
             </div>
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Hidden Nature</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('ego.hiddenNature')}</h4>
               <p className="text-sm text-muted-foreground">
-                Ego-protection often disguises itself as principled reasoning
+                {t('ego.hiddenNatureDesc')}
               </p>
             </div>
           </div>
@@ -177,10 +174,10 @@ export default function Ego() {
         <div className="mb-12">
           <div className="glass-card rounded-2xl p-6 text-center mb-8 max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              How Ego Manifests in Thinking
+              {t('ego.manifestations')}
             </h2>
             <p className="text-muted-foreground">
-              Recognizing these patterns helps identify when ego is interfering with objective analysis
+              {t('ego.manifestationsDesc')}
             </p>
           </div>
           
@@ -213,7 +210,7 @@ export default function Ego() {
         <div className="glass-card rounded-2xl p-8 mb-12 border-red-200 dark:border-red-800">
           <div className="flex items-center gap-3 mb-6">
             <AlertTriangle className="h-6 w-6 text-red-600" />
-            <h2 className="text-2xl font-bold text-foreground">The Cost of Ego-Driven Thinking</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('ego.costs')}</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {egoCosts.map((cost, index) => (
@@ -221,7 +218,7 @@ export default function Ego() {
                 <h4 className="font-semibold text-foreground mb-2">{cost.area}</h4>
                 <p className="text-muted-foreground text-sm mb-3">{cost.impact}</p>
                 <div className="space-y-1">
-                  <h5 className="text-xs font-medium text-red-600 dark:text-red-400 uppercase tracking-wide">Consequences:</h5>
+                  <h5 className="text-xs font-medium text-red-600 dark:text-red-400 uppercase tracking-wide">{t('ego.consequences')}</h5>
                   {cost.consequences.map((consequence, idx) => (
                     <p key={idx} className="text-xs text-red-600 dark:text-red-400">• {consequence}</p>
                   ))}
@@ -235,7 +232,7 @@ export default function Ego() {
         <div className="glass-card rounded-2xl p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Target className="h-6 w-6 text-orange-600" />
-            <h2 className="text-2xl font-bold text-foreground">Common Ego Traps</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('ego.traps')}</h2>
           </div>
           <div className="space-y-4">
             {egoTraps.map((trap, index) => (
@@ -245,9 +242,9 @@ export default function Ego() {
                   <div className="flex-grow">
                     <h4 className="font-semibold text-foreground mb-1">{trap.trap}</h4>
                     <p className="text-muted-foreground text-sm mb-2">{trap.description}</p>
-                    <div className="bg-orange-50 dark:bg-orange-950/20 p-2 rounded">
-                      <p className="text-xs text-orange-700 dark:text-orange-300">
-                        <span className="font-semibold">Warning Sign:</span> {trap.warning}
+                    <div className="glass-card p-3 rounded-lg border border-orange-500/30 shadow-[0_0_20px_-5px_rgba(251,146,60,0.3)]">
+                      <p className="text-xs text-orange-200 dark:text-orange-100">
+                        <span className="font-semibold">{t('ego.warningSign')}</span> {trap.warning}
                       </p>
                     </div>
                   </div>
@@ -261,10 +258,10 @@ export default function Ego() {
         <div className="mb-12">
           <div className="glass-card rounded-2xl p-6 text-center mb-8 max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Practices for Ego Reduction
+              {t('ego.reductionPractices')}
             </h2>
             <p className="text-muted-foreground">
-              Practical strategies to minimize ego interference and cultivate genuine truth-seeking
+              {t('ego.reductionPracticesDesc')}
             </p>
           </div>
           
@@ -279,11 +276,11 @@ export default function Ego() {
                   <CardDescription>{practice.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-green-50 dark:bg-green-950/20 p-3 rounded-lg">
-                    <h5 className="font-semibold text-green-700 dark:text-green-300 mb-2">Techniques:</h5>
+                  <div className="glass-card p-3 rounded-lg border border-green-500/30 shadow-[0_0_20px_-5px_rgba(34,197,94,0.3)]">
+                    <h5 className="font-semibold text-green-200 dark:text-green-100 mb-2">{t('ego.techniques')}</h5>
                     <ul className="space-y-1">
                       {practice.techniques.map((technique, idx) => (
-                        <li key={idx} className="text-xs text-green-600 dark:text-green-400">• {technique}</li>
+                        <li key={idx} className="text-xs text-green-200 dark:text-green-100">• {technique}</li>
                       ))}
                     </ul>
                   </div>
@@ -297,32 +294,30 @@ export default function Ego() {
         <div className="glass-card rounded-2xl p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Brain className="h-6 w-6 text-purple-600" />
-            <h2 className="text-2xl font-bold text-foreground">The Ego Paradox</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('ego.paradox')}</h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            The greatest challenge with ego is that the very act of trying to reduce it can become another 
-            source of ego: "Look how humble and open-minded I am!" The key is developing genuine curiosity 
-            about truth and authentic care for others' well-being, which naturally reduces ego's influence.
+            {t('ego.paradoxText')}
           </p>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Signs of Genuine Progress:</h4>
+              <h4 className="font-semibold text-foreground mb-4">{t('ego.genuineProgress')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Increased comfort with uncertainty</li>
-                <li>• Joy in discovering you were wrong</li>
-                <li>• Genuine curiosity about opposing views</li>
-                <li>• Focus on understanding over winning</li>
-                <li>• Less need to be seen as smart or right</li>
+                <li>• {t('ego.progress.uncertainty')}</li>
+                <li>• {t('ego.progress.joyInWrong')}</li>
+                <li>• {t('ego.progress.curiosity')}</li>
+                <li>• {t('ego.progress.understanding')}</li>
+                <li>• {t('ego.progress.lessNeed')}</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Beware of Ego Disguises:</h4>
+              <h4 className="font-semibold text-foreground mb-4">{t('ego.disguises')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Pride in being "more rational" than others</li>
-                <li>• Using humility as a superior stance</li>
-                <li>• Competitive open-mindedness</li>
-                <li>• Intellectual humility as a performance</li>
-                <li>• Judging others for being "ego-driven"</li>
+                <li>• {t('ego.disguise.rational')}</li>
+                <li>• {t('ego.disguise.humility')}</li>
+                <li>• {t('ego.disguise.competitive')}</li>
+                <li>• {t('ego.disguise.performance')}</li>
+                <li>• {t('ego.disguise.judging')}</li>
               </ul>
             </div>
           </div>
@@ -332,20 +327,15 @@ export default function Ego() {
         <div className="glass-card rounded-2xl p-8 border-blue-200 dark:border-blue-800">
           <div className="flex items-center gap-3 mb-6">
             <Eye className="h-6 w-6 text-blue-600" />
-            <h2 className="text-2xl font-bold text-foreground">The Path Beyond Ego</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('ego.pathBeyond')}</h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Reducing ego's influence isn't about self-flagellation or false modesty. It's about developing 
-            genuine confidence that doesn't depend on being right, superior, or perfect. When we care more 
-            about truth than our image, more about understanding than winning, we become both more effective 
-            and more genuinely connected to reality and others.
+            {t('ego.pathBeyondText')}
           </p>
-          <div className="bg-blue-50 dark:bg-blue-950/20 p-6 rounded-lg">
-            <h4 className="font-semibold text-blue-700 dark:text-blue-300 mb-3">The Ultimate Goal:</h4>
-            <p className="text-blue-600 dark:text-blue-400">
-              To become the kind of person who can hold strong convictions lightly, change their mind gracefully, 
-              admit ignorance comfortably, and seek truth courageously—regardless of where it leads or how it 
-              affects their image.
+          <div className="glass-card p-6 rounded-lg border border-blue-500/30 shadow-[0_0_20px_-5px_rgba(59,130,246,0.3)]">
+            <h4 className="font-semibold text-blue-200 dark:text-blue-100 mb-3">{t('ego.ultimateGoal')}</h4>
+            <p className="text-blue-200 dark:text-blue-100">
+              {t('ego.ultimateGoalText')}
             </p>
           </div>
         </div>
