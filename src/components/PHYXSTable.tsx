@@ -26,17 +26,17 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
   };
 
   const getEvolutionColors = (evolutionPoint: string) => {
-    // Reversed color order to match AQAL better
+    // Apply gradient badge to all levels, with appropriate background colors
     const colors = [
-      { bg: "bg-teal-500/20", border: "border-l-teal-500", badge: "bg-teal-500 text-white" },
-      { bg: "bg-yellow-500/20", border: "border-l-yellow-500", badge: "bg-yellow-500 text-white" },
-      { bg: "bg-green-500/20", border: "border-l-green-500", badge: "bg-green-500 text-white" },
-      { bg: "bg-orange-500/20", border: "border-l-orange-500", badge: "bg-orange-500 text-white" },
-      { bg: "bg-blue-500/20", border: "border-l-blue-500", badge: "bg-blue-500 text-white" },
-      { bg: "bg-red-500/20", border: "border-l-red-500", badge: "bg-red-500 text-white" },
-      { bg: "bg-purple-500/20", border: "border-l-purple-500", badge: "bg-purple-500 text-white" },
-      { bg: "bg-indigo-500/20", border: "border-l-indigo-500", badge: "bg-indigo-500 text-white" },
-      { bg: "bg-stone-500/20", border: "border-l-stone-500", badge: "bg-stone-500 text-white" }
+      { bg: "bg-teal-500/20", border: "border-l-teal-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
+      { bg: "bg-yellow-500/20", border: "border-l-yellow-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
+      { bg: "bg-green-500/20", border: "border-l-green-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
+      { bg: "bg-orange-500/20", border: "border-l-orange-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
+      { bg: "bg-blue-500/20", border: "border-l-blue-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
+      { bg: "bg-red-500/20", border: "border-l-red-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
+      { bg: "bg-purple-500/20", border: "border-l-purple-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
+      { bg: "bg-indigo-500/20", border: "border-l-indigo-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
+      { bg: "bg-stone-500/20", border: "border-l-stone-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" }
     ];
     const colorIndex = parseInt(evolutionPoint.charAt(1)) - 1;
     return colors[colorIndex] || colors[0];
@@ -103,29 +103,29 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
                                   <p className="text-sm text-muted-foreground leading-relaxed">{level.description}</p>
                                 </div>
 
-                                {/* Characteristics */}
-                                <div>
-                                  <h4 className="font-semibold mb-2">Characteristics</h4>
-                                  <div className="space-y-2">
-                                    {level.characteristics.map((char, i) => (
-                                      <p key={i} className="text-sm text-muted-foreground">
-                                        • {char}
-                                      </p>
-                                    ))}
-                                  </div>
-                                </div>
+                                 {/* Characteristics */}
+                                 <div>
+                                   <h4 className="font-semibold mb-2">Characteristics</h4>
+                                   <div className="space-y-1">
+                                     {level.characteristics.map((char, i) => (
+                                       <p key={i} className="text-sm text-muted-foreground leading-relaxed">
+                                         • {char}
+                                       </p>
+                                     ))}
+                                   </div>
+                                 </div>
 
-                                {/* Biophysical Markers */}
-                                <div>
-                                  <h4 className="font-semibold mb-2">Biophysical Markers</h4>
-                                  <div className="space-y-2">
-                                    {level.biophysicalMarkers.map((marker, i) => (
-                                      <p key={i} className="text-sm text-muted-foreground">
-                                        • {marker}
-                                      </p>
-                                    ))}
-                                  </div>
-                                </div>
+                                 {/* Biophysical Markers */}
+                                 <div>
+                                   <h4 className="font-semibold mb-2">Biophysical Markers</h4>
+                                   <div className="space-y-1">
+                                     {level.biophysicalMarkers.map((marker, i) => (
+                                       <p key={i} className="text-sm text-muted-foreground leading-relaxed">
+                                         • {marker}
+                                       </p>
+                                     ))}
+                                   </div>
+                                 </div>
 
                                 {/* Cognitive Capabilities */}
                                 <div className="md:col-span-2">

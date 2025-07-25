@@ -26,27 +26,60 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
   };
 
   const getLevelColors = (level: AQALLevel, index: number) => {
-    if (level.level === "Unitive Self") {
-      return {
-        bg: "bg-gradient-to-b from-indigo-500/20 via-violet-500/20 to-white/20",
-        border: "border-l-indigo-500",
-        badge: "bg-gradient-to-b from-indigo-500 via-violet-500 to-white text-white"
-      };
-    }
+    // Map level names to colors based on the data
+    const colorMap: Record<string, { bg: string; border: string; badge: string }> = {
+      "Unitive Self": {
+        bg: "bg-gradient-to-b from-white/20 via-violet-500/20 to-indigo-500/20",
+        border: "border-l-white",
+        badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white"
+      },
+      "Holistic Self (Turquoise)": {
+        bg: "bg-teal-500/20",
+        border: "border-l-teal-500",
+        badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white"
+      },
+      "Integral Self (Yellow)": {
+        bg: "bg-yellow-500/20",
+        border: "border-l-yellow-500",
+        badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white"
+      },
+      "Sensitive Self (Green)": {
+        bg: "bg-green-500/20",
+        border: "border-l-green-500",
+        badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white"
+      },
+      "Rational Self (Orange)": {
+        bg: "bg-orange-500/20",
+        border: "border-l-orange-500",
+        badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white"
+      },
+      "Rule/Role Self (Blue)": {
+        bg: "bg-blue-500/20",
+        border: "border-l-blue-500",
+        badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white"
+      },
+      "Power Self (Red)": {
+        bg: "bg-red-500/20",
+        border: "border-l-red-500",
+        badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white"
+      },
+      "Tribal Order (Purple)": {
+        bg: "bg-purple-500/20",
+        border: "border-l-purple-500",
+        badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white"
+      },
+      "Instinctive Self (Beige)": {
+        bg: "bg-stone-500/20",
+        border: "border-l-stone-500",
+        badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white"
+      }
+    };
     
-    const colors = [
-      { bg: "bg-stone-500/20", border: "border-l-stone-500", badge: "bg-stone-500 text-white" },
-      { bg: "bg-purple-500/20", border: "border-l-purple-500", badge: "bg-purple-500 text-white" },
-      { bg: "bg-red-500/20", border: "border-l-red-500", badge: "bg-red-500 text-white" },
-      { bg: "bg-blue-500/20", border: "border-l-blue-500", badge: "bg-blue-500 text-white" },
-      { bg: "bg-orange-500/20", border: "border-l-orange-500", badge: "bg-orange-500 text-white" },
-      { bg: "bg-green-500/20", border: "border-l-green-500", badge: "bg-green-500 text-white" },
-      { bg: "bg-yellow-500/20", border: "border-l-yellow-500", badge: "bg-yellow-500 text-white" },
-      { bg: "bg-teal-500/20", border: "border-l-teal-500", badge: "bg-teal-500 text-white" }
-    ];
-    
-    const colorIndex = Math.min(index, colors.length - 1);
-    return colors[colorIndex];
+    return colorMap[level.level] || {
+      bg: "bg-stone-500/20",
+      border: "border-l-stone-500",
+      badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white"
+    };
   };
 
   return (
@@ -106,29 +139,29 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
                           <TableCell colSpan={5} className="p-0">
                             <div className={`p-6 border-t border-l-[10px] ${colors.bg} ${colors.border}`}>
                               <div className="grid md:grid-cols-2 gap-6">
-                                {/* Description */}
-                                <div>
-                                  <h4 className="font-semibold mb-2">Description</h4>
-                                  <div className="space-y-2">
-                                    {level.description.map((desc, i) => (
-                                      <p key={i} className="text-sm text-muted-foreground">
-                                        • {desc}
-                                      </p>
-                                    ))}
-                                  </div>
-                                </div>
+                                 {/* Description */}
+                                 <div>
+                                   <h4 className="font-semibold mb-2">Description</h4>
+                                   <div className="space-y-1">
+                                     {level.description.map((desc, i) => (
+                                       <p key={i} className="text-sm text-muted-foreground leading-relaxed">
+                                         • {desc}
+                                       </p>
+                                     ))}
+                                   </div>
+                                 </div>
 
-                                {/* Characteristics */}
-                                <div>
-                                  <h4 className="font-semibold mb-2">Characteristics</h4>
-                                  <div className="space-y-2">
-                                    {level.characteristics.map((char, i) => (
-                                      <p key={i} className="text-sm text-muted-foreground">
-                                        • {char}
-                                      </p>
-                                    ))}
-                                  </div>
-                                </div>
+                                 {/* Characteristics */}
+                                 <div>
+                                   <h4 className="font-semibold mb-2">Characteristics</h4>
+                                   <div className="space-y-1">
+                                     {level.characteristics.map((char, i) => (
+                                       <p key={i} className="text-sm text-muted-foreground leading-relaxed">
+                                         • {char}
+                                       </p>
+                                     ))}
+                                   </div>
+                                 </div>
 
                                 {/* AQAL Quadrants */}
                                 <div className="md:col-span-2">
