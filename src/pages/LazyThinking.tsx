@@ -2,203 +2,106 @@ import { Zap, Brain, AlertTriangle, Target, Clock, Users, BookOpen, Eye } from '
 import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChallengeNavigation } from '@/components/ChallengeNavigation';
-import { challengePageTranslations } from '@/data/translations.de';
 
 export default function LazyThinking() {
-  const { t, language } = useLanguage();
+  const { t } = useLanguage();
 
-  // Get language-specific translations 
-  const currentLang = language === 'de' ? challengePageTranslations.de : null;
-  
-  const manifestations = currentLang ? [
+  const manifestations = [
     {
-      title: currentLang.lazyThinking.manifestation.mentalShortcuts.title,
-      description: currentLang.lazyThinking.manifestation.mentalShortcuts.description,
-      examples: currentLang.lazyThinking.manifestation.mentalShortcuts.examples
-    },
-    {
-      title: currentLang.lazyThinking.manifestation.confirmationSeeking.title,
-      description: currentLang.lazyThinking.manifestation.confirmationSeeking.description,
-      examples: currentLang.lazyThinking.manifestation.confirmationSeeking.examples
-    },
-    {
-      title: currentLang.lazyThinking.manifestation.authorityDependence.title,
-      description: currentLang.lazyThinking.manifestation.authorityDependence.description,
-      examples: currentLang.lazyThinking.manifestation.authorityDependence.examples
-    },
-    {
-      title: currentLang.lazyThinking.manifestation.binaryThinking.title,
-      description: currentLang.lazyThinking.manifestation.binaryThinking.description,
-      examples: currentLang.lazyThinking.manifestation.binaryThinking.examples
-    },
-    {
-      title: currentLang.lazyThinking.manifestation.emotionalReasoning.title,
-      description: currentLang.lazyThinking.manifestation.emotionalReasoning.description,
-      examples: currentLang.lazyThinking.manifestation.emotionalReasoning.examples
-    },
-    {
-      title: currentLang.lazyThinking.manifestation.surfaceLevelProcessing.title,
-      description: currentLang.lazyThinking.manifestation.surfaceLevelProcessing.description,
-      examples: currentLang.lazyThinking.manifestation.surfaceLevelProcessing.examples
-    }
-  ] : [
-    {
-      title: "Mental Shortcuts",
-      description: "Relying on heuristics instead of thorough analysis",
+      title: t('lazyThinking.manifestation.mentalShortcuts'),
+      description: t('lazyThinking.manifestation.mentalShortcuts.desc'),
       examples: ["Stereotyping", "First impression bias", "Availability heuristic", "Representativeness bias"]
     },
     {
-      title: "Confirmation Seeking",
-      description: "Looking for information that confirms existing beliefs",
+      title: t('lazyThinking.manifestation.confirmationSeeking'),
+      description: t('lazyThinking.manifestation.confirmationSeeking.desc'),
       examples: ["Echo chambers", "Selective reading", "Cherry-picking data", "Ignoring contradictions"]
     },
     {
-      title: "Authority Dependence",
-      description: "Accepting conclusions without examining reasoning",
+      title: t('lazyThinking.manifestation.authorityDependence'),
+      description: t('lazyThinking.manifestation.authorityDependence.desc'),
       examples: ["Expert worship", "Celebrity opinions", "Credential bias", "Appeal to popularity"]
     },
     {
-      title: "Binary Thinking",
-      description: "Reducing complex issues to simple either/or choices",
+      title: t('lazyThinking.manifestation.binaryThinking'),
+      description: t('lazyThinking.manifestation.binaryThinking.desc'),
       examples: ["False dichotomies", "All-or-nothing thinking", "Good vs. evil narratives", "With us or against us"]
     },
     {
-      title: "Emotional Reasoning",
-      description: "Using feelings as evidence for truth",
+      title: t('lazyThinking.manifestation.emotionalReasoning'),
+      description: t('lazyThinking.manifestation.emotionalReasoning.desc'),
       examples: ["If it feels right, it must be true", "Gut instinct over analysis", "Wishful thinking", "Fear-based decisions"]
     },
     {
-      title: "Surface-Level Processing",
-      description: "Stopping at the first plausible explanation",
+      title: t('lazyThinking.manifestation.surfaceLevelProcessing'),
+      description: t('lazyThinking.manifestation.surfaceLevelProcessing.desc'),
       examples: ["Headlines only", "Sound bite thinking", "Meme-level understanding", "Shallow research"]
     }
   ];
 
-  const causes = currentLang ? [
+  const causes = [
     {
-      factor: currentLang.lazyThinking.cause.cognitiveLoad.factor,
-      description: currentLang.lazyThinking.cause.cognitiveLoad.description,
-      impact: currentLang.lazyThinking.cause.cognitiveLoad.impact
+      factor: t('lazyThinking.cause.cognitiveLoad'),
+      description: t('lazyThinking.cause.cognitiveLoad.desc'),
+      impact: t('lazyThinking.cause.cognitiveLoad.impact')
     },
     {
-      factor: currentLang.lazyThinking.cause.timePressure.factor,
-      description: currentLang.lazyThinking.cause.timePressure.description,
-      impact: currentLang.lazyThinking.cause.timePressure.impact
+      factor: t('lazyThinking.cause.timePressure'),
+      description: t('lazyThinking.cause.timePressure.desc'),
+      impact: t('lazyThinking.cause.timePressure.impact')
     },
     {
-      factor: currentLang.lazyThinking.cause.comfortSeeking.factor,
-      description: currentLang.lazyThinking.cause.comfortSeeking.description,
-      impact: currentLang.lazyThinking.cause.comfortSeeking.impact
+      factor: t('lazyThinking.cause.comfortSeeking'),
+      description: t('lazyThinking.cause.comfortSeeking.desc'),
+      impact: t('lazyThinking.cause.comfortSeeking.impact')
     },
     {
-      factor: currentLang.lazyThinking.cause.socialConformity.factor,
-      description: currentLang.lazyThinking.cause.socialConformity.description,
-      impact: currentLang.lazyThinking.cause.socialConformity.impact
+      factor: t('lazyThinking.cause.socialConformity'),
+      description: t('lazyThinking.cause.socialConformity.desc'),
+      impact: t('lazyThinking.cause.socialConformity.impact')
     },
     {
-      factor: currentLang.lazyThinking.cause.informationOverload.factor,
-      description: currentLang.lazyThinking.cause.informationOverload.description,
-      impact: currentLang.lazyThinking.cause.informationOverload.impact
+      factor: t('lazyThinking.cause.informationOverload'),
+      description: t('lazyThinking.cause.informationOverload.desc'),
+      impact: t('lazyThinking.cause.informationOverload.impact')
     },
     {
-      factor: currentLang.lazyThinking.cause.educationSystem.factor,
-      description: currentLang.lazyThinking.cause.educationSystem.description,
-      impact: currentLang.lazyThinking.cause.educationSystem.impact
-    }
-  ] : [
-    {
-      factor: "Cognitive Load",
-      description: "Mental fatigue leads to shortcuts and reduced analytical capacity",
-      impact: "Decision quality decreases when overwhelmed"
-    },
-    {
-      factor: "Time Pressure",
-      description: "Rushing to conclusions to meet deadlines or social expectations",
-      impact: "Premature closure on complex problems"
-    },
-    {
-      factor: "Comfort Seeking",
-      description: "Avoiding the discomfort of uncertainty and complexity",
-      impact: "Preference for simple, certain answers over nuanced truth"
-    },
-    {
-      factor: "Social Conformity",
-      description: "Following group opinions to avoid conflict or rejection",
-      impact: "Suppression of independent critical thinking"
-    },
-    {
-      factor: "Information Overload",
-      description: "Too much information leads to analysis paralysis or shortcuts",
-      impact: "Either no decision or poorly informed decisions"
-    },
-    {
-      factor: "Education System",
-      description: "Training to find 'the right answer' rather than explore complexity",
-      impact: "Underdeveloped critical thinking skills"
+      factor: t('lazyThinking.cause.educationSystem'),
+      description: t('lazyThinking.cause.educationSystem.desc'),
+      impact: t('lazyThinking.cause.educationSystem.impact')
     }
   ];
 
-  const antidotes = currentLang ? [
+  const antidotes = [
     {
-      practice: currentLang.lazyThinking.antidote.slowThinking.practice,
-      description: currentLang.lazyThinking.antidote.slowThinking.description,
-      technique: currentLang.lazyThinking.antidote.slowThinking.technique
+      practice: t('lazyThinking.antidote.slowThinking'),
+      description: t('lazyThinking.antidote.slowThinking.desc'),
+      technique: t('lazyThinking.antidote.slowThinking.technique')
     },
     {
-      practice: currentLang.lazyThinking.antidote.devilsAdvocate.practice,
-      description: currentLang.lazyThinking.antidote.devilsAdvocate.description,
-      technique: currentLang.lazyThinking.antidote.devilsAdvocate.technique
+      practice: t('lazyThinking.antidote.devilsAdvocate'),
+      description: t('lazyThinking.antidote.devilsAdvocate.desc'),
+      technique: t('lazyThinking.antidote.devilsAdvocate.technique')
     },
     {
-      practice: currentLang.lazyThinking.antidote.multiplePerspectives.practice,
-      description: currentLang.lazyThinking.antidote.multiplePerspectives.description,
-      technique: currentLang.lazyThinking.antidote.multiplePerspectives.technique
+      practice: t('lazyThinking.antidote.multiplePerspectives'),
+      description: t('lazyThinking.antidote.multiplePerspectives.desc'),
+      technique: t('lazyThinking.antidote.multiplePerspectives.technique')
     },
     {
-      practice: currentLang.lazyThinking.antidote.questionAssumptions.practice,
-      description: currentLang.lazyThinking.antidote.questionAssumptions.description,
-      technique: currentLang.lazyThinking.antidote.questionAssumptions.technique
+      practice: t('lazyThinking.antidote.questionAssumptions'),
+      description: t('lazyThinking.antidote.questionAssumptions.desc'),
+      technique: t('lazyThinking.antidote.questionAssumptions.technique')
     },
     {
-      practice: currentLang.lazyThinking.antidote.evidenceHierarchy.practice,
-      description: currentLang.lazyThinking.antidote.evidenceHierarchy.description,
-      technique: currentLang.lazyThinking.antidote.evidenceHierarchy.technique
+      practice: t('lazyThinking.antidote.evidenceHierarchy'),
+      description: t('lazyThinking.antidote.evidenceHierarchy.desc'),
+      technique: t('lazyThinking.antidote.evidenceHierarchy.technique')
     },
     {
-      practice: currentLang.lazyThinking.antidote.intellectualHumility.practice,
-      description: currentLang.lazyThinking.antidote.intellectualHumility.description,
-      technique: currentLang.lazyThinking.antidote.intellectualHumility.technique
-    }
-  ] : [
-    {
-      practice: "Slow Thinking",
-      description: "Deliberately take time before reaching conclusions",
-      technique: "Count to 10, sleep on decisions, use waiting periods"
-    },
-    {
-      practice: "Devil's Advocate",
-      description: "Actively seek arguments against your position",
-      technique: "Argue the opposite side, find credible critics"
-    },
-    {
-      practice: "Multiple Perspectives",
-      description: "Consider how different people might view the issue",
-      technique: "Role-play different viewpoints, diverse consultation"
-    },
-    {
-      practice: "Question Assumptions",
-      description: "Identify and examine underlying premises",
-      technique: "Ask 'What if the opposite were true?' regularly"
-    },
-    {
-      practice: "Evidence Hierarchy",
-      description: "Distinguish between types and quality of evidence",
-      technique: "Primary sources > secondary > opinions > speculation"
-    },
-    {
-      practice: "Intellectual Humility",
-      description: "Acknowledge the limits of your knowledge",
-      technique: "Use phrases like 'I might be wrong' and 'I don't know'"
+      practice: t('lazyThinking.antidote.intellectualHumility'),
+      description: t('lazyThinking.antidote.intellectualHumility.desc'),
+      technique: t('lazyThinking.antidote.intellectualHumility.technique')
     }
   ];
 
