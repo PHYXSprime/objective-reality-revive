@@ -19,55 +19,55 @@ const challenges = [
   },
   {
     icon: Brain,
-    title: "Cognitive Biases",
+    titleKey: "challenge.cognitiveBiases.title",
     path: "/cognitive-biases",
     color: "text-blue-600 dark:text-blue-400"
   },
   {
     icon: AlertTriangle,
-    title: "Logical Fallacies",
+    titleKey: "challenge.logicalFallacies.title",
     path: "/logical-fallacies",
     color: "text-red-600 dark:text-red-400"
   },
   {
     icon: MessageCircle,
-    title: "Propaganda",
+    titleKey: "challenge.propaganda.title",
     path: "/propaganda",
     color: "text-purple-600 dark:text-purple-400"
   },
   {
     icon: Shield,
-    title: "Censorship",
+    titleKey: "challenge.censorship.title",
     path: "/censorship",
     color: "text-yellow-600 dark:text-yellow-400"
   },
   {
     icon: FileText,
-    title: "Dogmatic Beliefs",
+    titleKey: "challenge.dogmaticBeliefs.title",
     path: "/dogmas",
     color: "text-green-600 dark:text-green-400"
   },
   {
     icon: Search,
-    title: "Co-evolution",
+    titleKey: "challenge.coEvolution.title",
     path: "/co-evolution",
     color: "text-indigo-600 dark:text-indigo-400"
   },
   {
     icon: Zap,
-    title: "Lazy Thinking",
+    titleKey: "challenge.lazyThinking.title",
     path: "/lazy-thinking",
     color: "text-pink-600 dark:text-pink-400"
   },
   {
     icon: Eye,
-    title: "Psychological Weakness",
+    titleKey: "challenge.psychologicalWeakness.title",
     path: "/psychological-weakness",
     color: "text-cyan-600 dark:text-cyan-400"
   },
   {
     icon: User,
-    title: "Ego",
+    titleKey: "challenge.ego.title",
     path: "/ego",
     color: "text-teal-600 dark:text-teal-400"
   }
@@ -127,9 +127,9 @@ export function ChallengeNavigation() {
                   )} 
                 />
                 {isExpanded && (
-                  <span className="text-sm font-medium truncate">
-                    {challenge.titleKey ? t(challenge.titleKey) : challenge.title}
-                  </span>
+                <span className="text-sm font-medium truncate">
+                  {t(challenge.titleKey)}
+                </span>
                 )}
               </Link>
             );

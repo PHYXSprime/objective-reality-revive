@@ -110,8 +110,21 @@ export const es = {
   'challenges.advanced_topics.description': 'Profundiza en temas complejos',
   'challenges.scientific_consensus': 'Consenso científico',
   'challenges.information_suppression': 'Supresión de información',
+  
+  // Challenge Cards
+  'challenge.indoctrination.title': 'Adoctrinamiento',
   'challenge.scientificConsensus.title': 'Consenso Científico',
   'challenge.scientificConsensus.description': 'Análisis crítico de la autoridad científica y potencial para pensamiento grupal en comunidades de investigación.',
+  'challenge.cognitiveBiases.title': 'Sesgos Cognitivos',
+  'challenge.logicalFallacies.title': 'Falacias Lógicas',
+  'challenge.propaganda.title': 'Propaganda',
+  'challenge.censorship.title': 'Censura',
+  'challenge.dogmaticBeliefs.title': 'Creencias Dogmáticas',
+  'challenge.coEvolution.title': 'Coevolución',
+  'challenge.lazyThinking.title': 'Pensamiento Perezoso',
+  'challenge.psychologicalWeakness.title': 'Debilidad Psicológica',
+  'challenge.ego.title': 'Ego',
+  
   'learn_more': 'Aprende más',
 
   // Indoctrination - Full Section
