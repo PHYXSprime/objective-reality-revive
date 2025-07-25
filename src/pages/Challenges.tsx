@@ -10,78 +10,78 @@ export default function Challenges() {
   const challenges = [
     {
       icon: Users,
-      title: "Indoctrination",
-      description: "Systematic influence by parents, state/school, and media that shapes our worldview from childhood.",
+      titleKey: "challenge.indoctrination.title",
+      descriptionKey: "challenge.indoctrination.description",
       link: "/indoctrination",
       color: "text-red-600 dark:text-red-400"
     },
     {
       icon: Target,
-      title: "Scientific Consensus as Golden Calf",
-      description: "Blind acceptance of scientific consensus without critical evaluation of underlying assumptions.",
+      titleKey: "challenge.consensus.title",
+      descriptionKey: "challenge.consensus.description",
       link: "/consensus",
       color: "text-orange-600 dark:text-orange-400"
     },
     {
       icon: Brain,
-      title: "Cognitive Biases",
-      description: "Systematic errors in thinking that affect decisions and judgments.",
+      titleKey: "challenge.cognitive_biases.title",
+      descriptionKey: "challenge.cognitive_biases.description",
       link: "/cognitive-biases",
       color: "text-blue-600 dark:text-blue-400"
     },
     {
       icon: AlertTriangle,
-      title: "Logical Fallacies",
-      description: "Flawed reasoning patterns that undermine the logic of arguments.",
+      titleKey: "challenge.logical_fallacies.title",
+      descriptionKey: "challenge.logical_fallacies.description",
       link: "/logical-fallacies",
       color: "text-red-600 dark:text-red-400"
     },
     {
       icon: MessageCircle,
-      title: "Propaganda",
-      description: "Information designed to promote particular political causes or points of view.",
+      titleKey: "challenge.propaganda.title",
+      descriptionKey: "challenge.propaganda.description",
       link: "/propaganda",
       color: "text-purple-600 dark:text-purple-400"
     },
     {
       icon: Shield,
-      title: "Censorship",
-      description: "Suppression of information and ideas that challenge established narratives.",
+      titleKey: "challenge.censorship.title",
+      descriptionKey: "challenge.censorship.description",
       link: "/censorship",
       color: "text-yellow-600 dark:text-yellow-400"
     },
     {
       icon: FileText,
-      title: "Dogmatic Beliefs",
-      description: "Rigid adherence to principles without consideration of evidence or alternative viewpoints.",
+      titleKey: "challenge.dogmas.title",
+      descriptionKey: "challenge.dogmas.description",
       link: "/dogmas",
       color: "text-green-600 dark:text-green-400"
     },
     {
       icon: Search,
-      title: "Co-evolution with Religion",
-      description: "How religious thinking patterns influence secular reasoning and decision-making.",
+      titleKey: "challenge.co_evolution.title",
+      descriptionKey: "challenge.co_evolution.description",
       link: "/co-evolution",
       color: "text-indigo-600 dark:text-indigo-400"
     },
     {
       icon: Zap,
-      title: "Lazy Thinking",
-      description: "Mental shortcuts and avoidance of deep analysis leading to poor conclusions.",
+      titleKey: "challenge.lazy_thinking.title",
+      descriptionKey: "challenge.lazy_thinking.description",
       link: "/lazy-thinking",
       color: "text-pink-600 dark:text-pink-400"
     },
     {
       icon: Eye,
-      title: "Psychological Weaknesses",
-      description: "Human psychological vulnerabilities that can be exploited to manipulate thinking.",
+      titleKey: "challenge.psychological_weakness.title",
+      descriptionKey: "challenge.psychological_weakness.description",
       link: "/psychological-weakness",
       color: "text-cyan-600 dark:text-cyan-400"
     },
     {
       icon: User,
-      title: "Ego",
-      description: "How personal identity and self-image interfere with objective reasoning.",
+      titleKey: "challenge.ego.title",
+      descriptionKey: "challenge.ego.description",
       link: "/ego",
       color: "text-teal-600 dark:text-teal-400"
     }
@@ -110,9 +110,9 @@ export default function Challenges() {
                 <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4`}>
                   <challenge.icon className={`h-6 w-6 ${challenge.color}`} />
                 </div>
-                <CardTitle className="text-lg">{challenge.title}</CardTitle>
+                <CardTitle className="text-lg">{t(challenge.titleKey)}</CardTitle>
                 <CardDescription className="text-muted-foreground">
-                  {challenge.description}
+                  {t(challenge.descriptionKey)}
                 </CardDescription>
               </CardHeader>
               <CardContent>
