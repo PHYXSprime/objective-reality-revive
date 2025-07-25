@@ -278,4 +278,32 @@ export const es = {
   'propaganda.defense.recognizeEmotional.desc': 'Notar cuando el contenido está diseñado para provocar fuertes respuestas emocionales',
   'propaganda.defense.practicalCritical': 'Practicar pensamiento crítico',
   'propaganda.defense.practicalCritical.desc': 'Desarrollar enfoques sistemáticos para evaluar información',
+
+  // Warning Signs
+  'propaganda.warning.contentRedFlags': 'Señales de alerta de contenido:',
+  'propaganda.warning.content1': 'Lenguaje emocional extremo',
+  'propaganda.warning.content2': 'Temas complejos sobresimplificados',
+  'propaganda.warning.content3': 'Afirmaciones de superioridad moral',
+  'propaganda.warning.content4': 'Llamadas urgentes a la acción',
+  'propaganda.warning.content5': 'Silenciamiento de la disidencia',
+  'propaganda.warning.sourceRedFlags': 'Señales de alerta de fuente:',
+  'propaganda.warning.source1': 'Autoría anónima o poco clara',
+  'propaganda.warning.source2': 'Fuentes de financiación no divulgadas',
+  'propaganda.warning.source3': 'No se presentan puntos de vista opuestos',
+  'propaganda.warning.source4': 'Afirmaciones sin evidencia',
+  'propaganda.warning.source5': 'Apelaciones a la autoridad sin experiencia',
+
+  // Action Steps
+  'propaganda.action.personalPractice': 'Práctica personal:',
+  'propaganda.action.personal1': 'Diversifica tus fuentes de información',
+  'propaganda.action.personal2': 'Practica el principio de caridad',
+  'propaganda.action.personal3': 'Aprende sobre sesgos cognitivos',
+  'propaganda.action.personal4': 'Desarrolla conciencia emocional',
+  'propaganda.action.personal5': 'Estudia ejemplos históricos de propaganda',
+  'propaganda.action.communityEngagement': 'Participación comunitaria:',
+  'propaganda.action.community1': 'Promueve la educación en alfabetización mediática',
+  'propaganda.action.community2': 'Apoya el periodismo independiente',
+  'propaganda.action.community3': 'Fomenta el diálogo abierto',
+  'propaganda.action.community4': 'Desafía las cámaras de eco respetuosamente',
+  'propaganda.action.community5': 'Comparte este conocimiento con otros',
 } as const;

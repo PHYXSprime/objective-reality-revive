@@ -278,4 +278,32 @@ export const fr = {
   'propaganda.defense.recognizeEmotional.desc': 'Remarquer quand le contenu est conçu pour déclencher de fortes réactions émotionnelles',
   'propaganda.defense.practicalCritical': 'Pratiquer la pensée critique',
   'propaganda.defense.practicalCritical.desc': 'Développer des approches systématiques pour évaluer l\'information',
+
+  // Warning Signs
+  'propaganda.warning.contentRedFlags': 'Signaux d\'alarme de contenu:',
+  'propaganda.warning.content1': 'Langage émotionnel extrême',
+  'propaganda.warning.content2': 'Sujets complexes sursimplifiés',
+  'propaganda.warning.content3': 'Revendications de supériorité morale',
+  'propaganda.warning.content4': 'Appels urgents à l\'action',
+  'propaganda.warning.content5': 'Réduction au silence de la dissidence',
+  'propaganda.warning.sourceRedFlags': 'Signaux d\'alarme de source:',
+  'propaganda.warning.source1': 'Paternité anonyme ou peu claire',
+  'propaganda.warning.source2': 'Sources de financement non divulguées',
+  'propaganda.warning.source3': 'Aucun point de vue opposé présenté',
+  'propaganda.warning.source4': 'Affirmations sans preuves',
+  'propaganda.warning.source5': 'Appels à l\'autorité sans expertise',
+
+  // Action Steps
+  'propaganda.action.personalPractice': 'Pratique personnelle:',
+  'propaganda.action.personal1': 'Diversifiez vos sources d\'information',
+  'propaganda.action.personal2': 'Pratiquez le principe de charité',
+  'propaganda.action.personal3': 'Apprenez sur les biais cognitifs',
+  'propaganda.action.personal4': 'Développez la conscience émotionnelle',
+  'propaganda.action.personal5': 'Étudiez des exemples historiques de propagande',
+  'propaganda.action.communityEngagement': 'Engagement communautaire:',
+  'propaganda.action.community1': 'Promouvez l\'éducation à la littératie médiatique',
+  'propaganda.action.community2': 'Soutenez le journalisme indépendant',
+  'propaganda.action.community3': 'Encouragez le dialogue ouvert',
+  'propaganda.action.community4': 'Défiez respectueusement les chambres d\'écho',
+  'propaganda.action.community5': 'Partagez ces connaissances avec d\'autres',
 } as const;

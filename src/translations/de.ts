@@ -302,4 +302,32 @@ export const de = {
   'propaganda.defense.recognizeEmotional.desc': 'Bemerken, wann Inhalte darauf ausgelegt sind, starke emotionale Reaktionen auszulösen',
   'propaganda.defense.practicalCritical': 'Kritisches Denken üben',
   'propaganda.defense.practicalCritical.desc': 'Systematische Ansätze zur Bewertung von Informationen entwickeln',
+
+  // Warning Signs
+  'propaganda.warning.contentRedFlags': 'Inhalts-Warnzeichen:',
+  'propaganda.warning.content1': 'Extreme emotionale Sprache',
+  'propaganda.warning.content2': 'Übervereinfachte komplexe Themen',
+  'propaganda.warning.content3': 'Ansprüche auf moralische Überlegenheit',
+  'propaganda.warning.content4': 'Dringende Handlungsaufforderungen',
+  'propaganda.warning.content5': 'Unterdrückung von Dissens',
+  'propaganda.warning.sourceRedFlags': 'Quellen-Warnzeichen:',
+  'propaganda.warning.source1': 'Anonyme oder unklare Autorenschaft',
+  'propaganda.warning.source2': 'Finanzierungsquellen nicht offengelegt',
+  'propaganda.warning.source3': 'Keine gegensätzlichen Standpunkte dargestellt',
+  'propaganda.warning.source4': 'Behauptungen ohne Beweise',
+  'propaganda.warning.source5': 'Berufung auf Autorität ohne Expertise',
+
+  // Action Steps
+  'propaganda.action.personalPractice': 'Persönliche Praxis:',
+  'propaganda.action.personal1': 'Diversifizieren Sie Ihre Informationsquellen',
+  'propaganda.action.personal2': 'Üben Sie das Prinzip der Nächstenliebe',
+  'propaganda.action.personal3': 'Lernen Sie über kognitive Verzerrungen',
+  'propaganda.action.personal4': 'Entwickeln Sie emotionales Bewusstsein',
+  'propaganda.action.personal5': 'Studieren Sie historische Propaganda-Beispiele',
+  'propaganda.action.communityEngagement': 'Gemeinschaftsengagement:',
+  'propaganda.action.community1': 'Fördern Sie Medienkompetenz-Bildung',
+  'propaganda.action.community2': 'Unterstützen Sie unabhängigen Journalismus',
+  'propaganda.action.community3': 'Ermutigen Sie zu offenem Dialog',
+  'propaganda.action.community4': 'Fordern Sie Echokammern respektvoll heraus',
+  'propaganda.action.community5': 'Teilen Sie dieses Wissen mit anderen',
 } as const;

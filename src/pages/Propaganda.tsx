@@ -199,23 +199,23 @@ export default function Propaganda() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold text-foreground mb-3">Content Red Flags:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('propaganda.warning.contentRedFlags')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Extreme emotional language</li>
-                <li>• Oversimplified complex issues</li>
-                <li>• Claims of moral superiority</li>
-                <li>• Urgent calls to action</li>
-                <li>• Silencing of dissent</li>
+                <li>• {t('propaganda.warning.content1')}</li>
+                <li>• {t('propaganda.warning.content2')}</li>
+                <li>• {t('propaganda.warning.content3')}</li>
+                <li>• {t('propaganda.warning.content4')}</li>
+                <li>• {t('propaganda.warning.content5')}</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-3">Source Red Flags:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('propaganda.warning.sourceRedFlags')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Anonymous or unclear authorship</li>
-                <li>• Funding sources not disclosed</li>
-                <li>• No opposing viewpoints presented</li>
-                <li>• Claims without evidence</li>
-                <li>• Appeals to authority without expertise</li>
+                <li>• {t('propaganda.warning.source1')}</li>
+                <li>• {t('propaganda.warning.source2')}</li>
+                <li>• {t('propaganda.warning.source3')}</li>
+                <li>• {t('propaganda.warning.source4')}</li>
+                <li>• {t('propaganda.warning.source5')}</li>
               </ul>
             </div>
           </div>
@@ -228,23 +228,23 @@ export default function Propaganda() {
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold text-foreground mb-3">Personal Practice:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('propaganda.action.personalPractice')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Diversify your information sources</li>
-                <li>• Practice the principle of charity</li>
-                <li>• Learn about cognitive biases</li>
-                <li>• Develop emotional awareness</li>
-                <li>• Study historical propaganda examples</li>
+                <li>• {t('propaganda.action.personal1')}</li>
+                <li>• {t('propaganda.action.personal2')}</li>
+                <li>• {t('propaganda.action.personal3')}</li>
+                <li>• {t('propaganda.action.personal4')}</li>
+                <li>• {t('propaganda.action.personal5')}</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-3">Community Engagement:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('propaganda.action.communityEngagement')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Promote media literacy education</li>
-                <li>• Support independent journalism</li>
-                <li>• Encourage open dialogue</li>
-                <li>• Challenge echo chambers respectfully</li>
-                <li>• Share this knowledge with others</li>
+                <li>• {t('propaganda.action.community1')}</li>
+                <li>• {t('propaganda.action.community2')}</li>
+                <li>• {t('propaganda.action.community3')}</li>
+                <li>• {t('propaganda.action.community4')}</li>
+                <li>• {t('propaganda.action.community5')}</li>
               </ul>
             </div>
           </div>

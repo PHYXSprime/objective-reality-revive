@@ -304,6 +304,34 @@ export const en = {
   'propaganda.defense.practicalCritical': 'Practice Critical Thinking',
   'propaganda.defense.practicalCritical.desc': 'Develop systematic approaches to evaluating information',
 
+  // Warning Signs
+  'propaganda.warning.contentRedFlags': 'Content Red Flags:',
+  'propaganda.warning.content1': 'Extreme emotional language',
+  'propaganda.warning.content2': 'Oversimplified complex issues',
+  'propaganda.warning.content3': 'Claims of moral superiority',
+  'propaganda.warning.content4': 'Urgent calls to action',
+  'propaganda.warning.content5': 'Silencing of dissent',
+  'propaganda.warning.sourceRedFlags': 'Source Red Flags:',
+  'propaganda.warning.source1': 'Anonymous or unclear authorship',
+  'propaganda.warning.source2': 'Funding sources not disclosed',
+  'propaganda.warning.source3': 'No opposing viewpoints presented',
+  'propaganda.warning.source4': 'Claims without evidence',
+  'propaganda.warning.source5': 'Appeals to authority without expertise',
+
+  // Action Steps
+  'propaganda.action.personalPractice': 'Personal Practice:',
+  'propaganda.action.personal1': 'Diversify your information sources',
+  'propaganda.action.personal2': 'Practice the principle of charity',
+  'propaganda.action.personal3': 'Learn about cognitive biases',
+  'propaganda.action.personal4': 'Develop emotional awareness',
+  'propaganda.action.personal5': 'Study historical propaganda examples',
+  'propaganda.action.communityEngagement': 'Community Engagement:',
+  'propaganda.action.community1': 'Promote media literacy education',
+  'propaganda.action.community2': 'Support independent journalism',
+  'propaganda.action.community3': 'Encourage open dialogue',
+  'propaganda.action.community4': 'Challenge echo chambers respectfully',
+  'propaganda.action.community5': 'Share this knowledge with others',
+
   // Co-evolution
   'coEvolution.title': 'Co-evolution',
   'coEvolution.subtitle': 'How ideas and systems evolve together',
