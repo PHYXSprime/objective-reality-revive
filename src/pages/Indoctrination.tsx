@@ -11,25 +11,45 @@ export default function Indoctrination() {
       icon: Users,
       title: t('indoctrination.source.family'),
       description: t('indoctrination.source.family.desc'),
-      examples: ["Religious upbringing", "Political family values", "Cultural traditions", "Social class expectations"]
+      examples: [
+        t('indoctrination.source.family.example1'),
+        t('indoctrination.source.family.example2'),
+        t('indoctrination.source.family.example3'),
+        t('indoctrination.source.family.example4')
+      ]
     },
     {
       icon: BookOpen,
       title: t('indoctrination.source.education'),
       description: t('indoctrination.source.education.desc'),
-      examples: ["Standardized curricula", "Authority-based learning", "Peer pressure", "Institutional values"]
+      examples: [
+        t('indoctrination.source.education.example1'),
+        t('indoctrination.source.education.example2'),
+        t('indoctrination.source.education.example3'),
+        t('indoctrination.source.education.example4')
+      ]
     },
     {
       icon: Eye,
       title: t('indoctrination.source.media'),
       description: t('indoctrination.source.media.desc'),
-      examples: ["News bias", "Social media algorithms", "Entertainment messaging", "Advertising influence"]
+      examples: [
+        t('indoctrination.source.media.example1'),
+        t('indoctrination.source.media.example2'),
+        t('indoctrination.source.media.example3'),
+        t('indoctrination.source.media.example4')
+      ]
     },
     {
       icon: Shield,
       title: t('indoctrination.source.state'),
       description: t('indoctrination.source.state.desc'),
-      examples: ["National narratives", "Legal frameworks", "Public policy messaging", "Historical interpretation"]
+      examples: [
+        t('indoctrination.source.state.example1'),
+        t('indoctrination.source.state.example2'),
+        t('indoctrination.source.state.example3'),
+        t('indoctrination.source.state.example4')
+      ]
     }
   ];
 
@@ -83,21 +103,21 @@ export default function Indoctrination() {
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Key Difference</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('indoctrination.keyDifference')}</h4>
               <p className="text-sm text-muted-foreground">
-                Education teaches how to think; indoctrination teaches what to think
+                {t('indoctrination.keyDifferenceText')}
               </p>
             </div>
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Timing Matters</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('indoctrination.timingMatters')}</h4>
               <p className="text-sm text-muted-foreground">
-                Most effective during childhood when critical thinking skills are undeveloped
+                {t('indoctrination.timingMattersText')}
               </p>
             </div>
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Often Invisible</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('indoctrination.oftenInvisible')}</h4>
               <p className="text-sm text-muted-foreground">
-                The most effective indoctrination feels natural and unquestionable
+                {t('indoctrination.oftenInvisibleText')}
               </p>
             </div>
           </div>
@@ -164,23 +184,23 @@ export default function Indoctrination() {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Recognition Steps:</h4>
+              <h4 className="font-semibold text-foreground mb-4">{t('indoctrination.recognition')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Identify beliefs you've never questioned</li>
-                <li>• Examine the sources of your core beliefs</li>
-                <li>• Notice emotional reactions to challenges</li>
-                <li>• Question what feels "obviously true"</li>
-                <li>• Explore opposing viewpoints</li>
+                <li>• {t('indoctrination.recognition.step1')}</li>
+                <li>• {t('indoctrination.recognition.step2')}</li>
+                <li>• {t('indoctrination.recognition.step3')}</li>
+                <li>• {t('indoctrination.recognition.step4')}</li>
+                <li>• {t('indoctrination.recognition.step5')}</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Liberation Practices:</h4>
+              <h4 className="font-semibold text-foreground mb-4">{t('indoctrination.liberation')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Cultivate intellectual humility</li>
-                <li>• Practice suspended judgment</li>
-                <li>• Seek diverse perspectives</li>
-                <li>• Learn to sit with uncertainty</li>
-                <li>• Develop meta-cognitive awareness</li>
+                <li>• {t('indoctrination.liberation.step1')}</li>
+                <li>• {t('indoctrination.liberation.step2')}</li>
+                <li>• {t('indoctrination.liberation.step3')}</li>
+                <li>• {t('indoctrination.liberation.step4')}</li>
+                <li>• {t('indoctrination.liberation.step5')}</li>
               </ul>
             </div>
           </div>
@@ -196,28 +216,28 @@ export default function Indoctrination() {
             <div>
               <h4 className="font-semibold text-foreground mb-3">{t('indoctrination.warning.inOthers')}:</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Absolute certainty without evidence</li>
-                <li>• Unwillingness to consider alternatives</li>
-                <li>• Emotional reactions to challenges</li>
-                <li>• Appeals to authority over reason</li>
+                <li>• {t('indoctrination.warning.inOthers.sign1')}</li>
+                <li>• {t('indoctrination.warning.inOthers.sign2')}</li>
+                <li>• {t('indoctrination.warning.inOthers.sign3')}</li>
+                <li>• {t('indoctrination.warning.inOthers.sign4')}</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-foreground mb-3">{t('indoctrination.warning.inYourself')}:</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Defensive feelings when beliefs are questioned</li>
-                <li>• Inability to explain why you believe something</li>
-                <li>• Avoiding information that contradicts beliefs</li>
-                <li>• Feeling lost without certain beliefs</li>
+                <li>• {t('indoctrination.warning.inYourself.sign1')}</li>
+                <li>• {t('indoctrination.warning.inYourself.sign2')}</li>
+                <li>• {t('indoctrination.warning.inYourself.sign3')}</li>
+                <li>• {t('indoctrination.warning.inYourself.sign4')}</li>
               </ul>
             </div>
             <div>
               <h4 className="font-semibold text-foreground mb-3">{t('indoctrination.warning.inSystems')}:</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Discouraging questions or doubt</li>
-                <li>• Punishing dissent or independent thinking</li>
-                <li>• Claiming exclusive access to truth</li>
-                <li>• Using fear to maintain compliance</li>
+                <li>• {t('indoctrination.warning.inSystems.sign1')}</li>
+                <li>• {t('indoctrination.warning.inSystems.sign2')}</li>
+                <li>• {t('indoctrination.warning.inSystems.sign3')}</li>
+                <li>• {t('indoctrination.warning.inSystems.sign4')}</li>
               </ul>
             </div>
           </div>
