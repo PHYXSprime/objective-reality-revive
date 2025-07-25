@@ -286,6 +286,7 @@ export const challengePageTranslations = {
       antidotesDesc: 'Praktische Strategien zur Entwicklung rigoroserer und durchdachterer geistiger Gewohnheiten',
       buildingHabits: 'Bessere Denkgewohnheiten entwickeln',
       buildingHabitsDesc: 'Die Überwindung trägen Denkens erfordert bewusste Übung und Geduld. Das Ziel ist nicht, alles zu überdenken, sondern zu erkennen, wann eine Situation tiefere Analyse verdient, und die Werkzeuge und Gewohnheiten zu haben, um sie zu liefern.',
+      hiddenCostsTitle: 'Die versteckten Kosten',
       
       // Natural tendency section
       naturalTendency: 'Natürliche Tendenz',
@@ -295,8 +296,7 @@ export const challengePageTranslations = {
       hiddenCosts: 'Versteckte Kosten',
       hiddenCostsDesc: 'Schlechte Entscheidungen addieren sich über die Zeit und führen zu erheblichen Lebenskonsequenzen',
       
-      // Hidden costs section
-      hiddenCostsTitle: 'Die versteckten Kosten',
+      // Personal and societal consequences
       personalConsequences: 'Persönliche Konsequenzen:',
       poorFinancialDecisions: 'Schlechte finanzielle Entscheidungen',
       relationshipProblems: 'Beziehungsprobleme durch Missverständnisse',

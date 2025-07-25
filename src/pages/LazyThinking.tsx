@@ -2,11 +2,46 @@ import { Zap, Brain, AlertTriangle, Target, Clock, Users, BookOpen, Eye } from '
 import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { ChallengeNavigation } from '@/components/ChallengeNavigation';
+import { challengePageTranslations } from '@/data/translations.de';
 
 export default function LazyThinking() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
-  const manifestations = [
+  // Get language-specific translations 
+  const currentLang = language === 'de' ? challengePageTranslations.de : null;
+  
+  const manifestations = currentLang ? [
+    {
+      title: currentLang.lazyThinking.manifestation.mentalShortcuts.title,
+      description: currentLang.lazyThinking.manifestation.mentalShortcuts.description,
+      examples: currentLang.lazyThinking.manifestation.mentalShortcuts.examples
+    },
+    {
+      title: currentLang.lazyThinking.manifestation.confirmationSeeking.title,
+      description: currentLang.lazyThinking.manifestation.confirmationSeeking.description,
+      examples: currentLang.lazyThinking.manifestation.confirmationSeeking.examples
+    },
+    {
+      title: currentLang.lazyThinking.manifestation.authorityDependence.title,
+      description: currentLang.lazyThinking.manifestation.authorityDependence.description,
+      examples: currentLang.lazyThinking.manifestation.authorityDependence.examples
+    },
+    {
+      title: currentLang.lazyThinking.manifestation.binaryThinking.title,
+      description: currentLang.lazyThinking.manifestation.binaryThinking.description,
+      examples: currentLang.lazyThinking.manifestation.binaryThinking.examples
+    },
+    {
+      title: currentLang.lazyThinking.manifestation.emotionalReasoning.title,
+      description: currentLang.lazyThinking.manifestation.emotionalReasoning.description,
+      examples: currentLang.lazyThinking.manifestation.emotionalReasoning.examples
+    },
+    {
+      title: currentLang.lazyThinking.manifestation.surfaceLevelProcessing.title,
+      description: currentLang.lazyThinking.manifestation.surfaceLevelProcessing.description,
+      examples: currentLang.lazyThinking.manifestation.surfaceLevelProcessing.examples
+    }
+  ] : [
     {
       title: "Mental Shortcuts",
       description: "Relying on heuristics instead of thorough analysis",
@@ -39,7 +74,38 @@ export default function LazyThinking() {
     }
   ];
 
-  const causes = [
+  const causes = currentLang ? [
+    {
+      factor: currentLang.lazyThinking.cause.cognitiveLoad.factor,
+      description: currentLang.lazyThinking.cause.cognitiveLoad.description,
+      impact: currentLang.lazyThinking.cause.cognitiveLoad.impact
+    },
+    {
+      factor: currentLang.lazyThinking.cause.timePressure.factor,
+      description: currentLang.lazyThinking.cause.timePressure.description,
+      impact: currentLang.lazyThinking.cause.timePressure.impact
+    },
+    {
+      factor: currentLang.lazyThinking.cause.comfortSeeking.factor,
+      description: currentLang.lazyThinking.cause.comfortSeeking.description,
+      impact: currentLang.lazyThinking.cause.comfortSeeking.impact
+    },
+    {
+      factor: currentLang.lazyThinking.cause.socialConformity.factor,
+      description: currentLang.lazyThinking.cause.socialConformity.description,
+      impact: currentLang.lazyThinking.cause.socialConformity.impact
+    },
+    {
+      factor: currentLang.lazyThinking.cause.informationOverload.factor,
+      description: currentLang.lazyThinking.cause.informationOverload.description,
+      impact: currentLang.lazyThinking.cause.informationOverload.impact
+    },
+    {
+      factor: currentLang.lazyThinking.cause.educationSystem.factor,
+      description: currentLang.lazyThinking.cause.educationSystem.description,
+      impact: currentLang.lazyThinking.cause.educationSystem.impact
+    }
+  ] : [
     {
       factor: "Cognitive Load",
       description: "Mental fatigue leads to shortcuts and reduced analytical capacity",
@@ -72,7 +138,38 @@ export default function LazyThinking() {
     }
   ];
 
-  const antidotes = [
+  const antidotes = currentLang ? [
+    {
+      practice: currentLang.lazyThinking.antidote.slowThinking.practice,
+      description: currentLang.lazyThinking.antidote.slowThinking.description,
+      technique: currentLang.lazyThinking.antidote.slowThinking.technique
+    },
+    {
+      practice: currentLang.lazyThinking.antidote.devilsAdvocate.practice,
+      description: currentLang.lazyThinking.antidote.devilsAdvocate.description,
+      technique: currentLang.lazyThinking.antidote.devilsAdvocate.technique
+    },
+    {
+      practice: currentLang.lazyThinking.antidote.multiplePerspectives.practice,
+      description: currentLang.lazyThinking.antidote.multiplePerspectives.description,
+      technique: currentLang.lazyThinking.antidote.multiplePerspectives.technique
+    },
+    {
+      practice: currentLang.lazyThinking.antidote.questionAssumptions.practice,
+      description: currentLang.lazyThinking.antidote.questionAssumptions.description,
+      technique: currentLang.lazyThinking.antidote.questionAssumptions.technique
+    },
+    {
+      practice: currentLang.lazyThinking.antidote.evidenceHierarchy.practice,
+      description: currentLang.lazyThinking.antidote.evidenceHierarchy.description,
+      technique: currentLang.lazyThinking.antidote.evidenceHierarchy.technique
+    },
+    {
+      practice: currentLang.lazyThinking.antidote.intellectualHumility.practice,
+      description: currentLang.lazyThinking.antidote.intellectualHumility.description,
+      technique: currentLang.lazyThinking.antidote.intellectualHumility.technique
+    }
+  ] : [
     {
       practice: "Slow Thinking",
       description: "Deliberately take time before reaching conclusions",
@@ -132,21 +229,21 @@ export default function LazyThinking() {
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Natural Tendency</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('lazyThinking.naturalTendency')}</h4>
               <p className="text-sm text-muted-foreground">
-                Our brains are wired to conserve energy and take cognitive shortcuts
+                {t('lazyThinking.naturalTendencyDesc')}
               </p>
             </div>
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Modern Amplification</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('lazyThinking.modernAmplification')}</h4>
               <p className="text-sm text-muted-foreground">
-                Information overload and instant gratification culture encourage shallow thinking
+                {t('lazyThinking.modernAmplificationDesc')}
               </p>
             </div>
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Hidden Costs</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('lazyThinking.hiddenCosts')}</h4>
               <p className="text-sm text-muted-foreground">
-                Poor decisions compound over time, leading to significant life consequences
+                {t('lazyThinking.hiddenCostsDesc')}
               </p>
             </div>
           </div>
@@ -159,7 +256,7 @@ export default function LazyThinking() {
               {t('lazyThinking.manifestations')}
             </h2>
             <p className="text-muted-foreground">
-              Recognizing these patterns helps identify when we're taking cognitive shortcuts
+              {t('lazyThinking.manifestationsDesc')}
             </p>
           </div>
           
@@ -201,7 +298,7 @@ export default function LazyThinking() {
                 <p className="text-muted-foreground text-sm mb-2">{cause.description}</p>
                 <div className="bg-orange-50 dark:bg-orange-950/20 p-2 rounded">
                   <p className="text-xs text-orange-700 dark:text-orange-300">
-                    <span className="font-semibold">Impact:</span> {cause.impact}
+                    <span className="font-semibold">{t('lazyThinking.impactLabel')}</span> {cause.impact}
                   </p>
                 </div>
               </div>
@@ -213,27 +310,27 @@ export default function LazyThinking() {
         <div className="glass-card rounded-2xl p-8 mb-12 border-red-200 dark:border-red-800">
           <div className="flex items-center gap-3 mb-6">
             <AlertTriangle className="h-6 w-6 text-red-600" />
-            <h2 className="text-2xl font-bold text-foreground">The Hidden Costs</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('lazyThinking.hiddenCostsTitle')}</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Personal Consequences:</h4>
+              <h4 className="font-semibold text-foreground mb-4">{t('lazyThinking.personalConsequences')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Poor financial decisions</li>
-                <li>• Relationship problems from misunderstandings</li>
-                <li>• Career stagnation from lack of deep thinking</li>
-                <li>• Health issues from ignoring complexity</li>
-                <li>• Missed opportunities for growth and learning</li>
+                <li>• {t('lazyThinking.poorFinancialDecisions')}</li>
+                <li>• {t('lazyThinking.relationshipProblems')}</li>
+                <li>• {t('lazyThinking.careerStagnation')}</li>
+                <li>• {t('lazyThinking.healthIssues')}</li>
+                <li>• {t('lazyThinking.missedOpportunities')}</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Societal Impact:</h4>
+              <h4 className="font-semibold text-foreground mb-4">{t('lazyThinking.societalImpact')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Political polarization and tribalism</li>
-                <li>• Spread of misinformation and conspiracy theories</li>
-                <li>• Poor collective decision-making</li>
-                <li>• Reduced innovation and problem-solving</li>
-                <li>• Democratic degradation through uninformed voting</li>
+                <li>• {t('lazyThinking.politicalPolarization')}</li>
+                <li>• {t('lazyThinking.misinformationSpread')}</li>
+                <li>• {t('lazyThinking.poorCollectiveDecisions')}</li>
+                <li>• {t('lazyThinking.reducedInnovation')}</li>
+                <li>• {t('lazyThinking.democraticDegradation')}</li>
               </ul>
             </div>
           </div>
@@ -246,7 +343,7 @@ export default function LazyThinking() {
               {t('lazyThinking.antidotes')}
             </h2>
             <p className="text-muted-foreground">
-              Practical strategies to develop more rigorous and thoughtful mental habits
+              {t('lazyThinking.antidotesDesc')}
             </p>
           </div>
           
@@ -263,7 +360,7 @@ export default function LazyThinking() {
                 <CardContent>
                   <div className="bg-green-50 dark:bg-green-950/20 p-3 rounded-lg">
                     <p className="text-sm text-green-700 dark:text-green-300">
-                      <span className="font-semibold">How:</span> {antidote.technique}
+                      <span className="font-semibold">{t('lazyThinking.howLabel')}</span> {antidote.technique}
                     </p>
                   </div>
                 </CardContent>
@@ -279,29 +376,27 @@ export default function LazyThinking() {
             <h2 className="text-2xl font-bold text-foreground">{t('lazyThinking.buildingHabits')}</h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Overcoming lazy thinking requires deliberate practice and patience. The goal isn't to 
-            overthink everything, but to recognize when a situation deserves deeper analysis 
-            and having the tools and habits to provide it.
+            {t('lazyThinking.buildingHabitsDesc')}
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold text-foreground mb-3">Daily Practices:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('lazyThinking.dailyPractices')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Read long-form content regularly</li>
-                <li>• Practice explaining complex topics simply</li>
-                <li>• Ask "Why?" and "How?" more often</li>
-                <li>• Seek out opposing viewpoints</li>
-                <li>• Take breaks before important decisions</li>
+                <li>• {t('lazyThinking.readLongForm')}</li>
+                <li>• {t('lazyThinking.explainComplex')}</li>
+                <li>• {t('lazyThinking.askWhyHow')}</li>
+                <li>• {t('lazyThinking.seekOpposing')}</li>
+                <li>• {t('lazyThinking.takePauses')}</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-3">Environmental Changes:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('lazyThinking.environmentalChanges')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Reduce social media consumption</li>
-                <li>• Create distraction-free thinking spaces</li>
-                <li>• Surround yourself with thoughtful people</li>
-                <li>• Choose quality over quantity in information</li>
-                <li>• Schedule regular reflection time</li>
+                <li>• {t('lazyThinking.reduceSocialMedia')}</li>
+                <li>• {t('lazyThinking.createThinkingSpaces')}</li>
+                <li>• {t('lazyThinking.surroundThoughtful')}</li>
+                <li>• {t('lazyThinking.chooseQuality')}</li>
+                <li>• {t('lazyThinking.scheduleReflection')}</li>
               </ul>
             </div>
           </div>
