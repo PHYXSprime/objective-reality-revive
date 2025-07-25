@@ -195,5 +195,10 @@ export const logicalFallaciesES: FallacyTranslations = {
     name: "Dirección Incorrecta (Inversión Causal)",
     definition: "Esta falacia ocurre cuando se invierte la causa y el efecto. El argumentador afirma que X causa Y, cuando en realidad Y causa X.",
     example: "'Al observar que las personas muy enfermas a menudo están en los hospitales, alguien concluye que los hospitales enferman a las personas. En realidad, las personas van al hospital porque ya están enfermas.'"
+  },
+  "Hedonic Treadmill": {
+    name: "Rueda Hedónica",
+    definition: "Esta es la tendencia a regresar rápidamente a un nivel de felicidad relativamente estable a pesar de eventos positivos o negativos. Las personas se adaptan a las circunstancias cambiantes.",
+    example: "'Los ganadores de la lotería a menudo no son más felices que antes, y las personas que han sufrido accidentes a menudo reportan niveles de felicidad similares a los anteriores.' Esto demuestra la notable capacidad de adaptación humana."
   }
 };

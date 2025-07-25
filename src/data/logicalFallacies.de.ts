@@ -2,7 +2,7 @@ import { FallacyTranslations } from './logicalFallacies';
 
 export const logicalFallaciesDE: FallacyTranslations = {
   "Expert Status Argument": {
-    name: "Experten-Status-Argument",
+    name: "Experten-Status-Argument", 
     definition: "Der Trugschluss, eine Behauptung sei wahr oder müsse akzeptiert werden, weil die Person, die sie aufstellt, eine Autoritäts-, Experten- oder hohe Statusposition innehat, und Glauben aufgrund ihres Titels anstatt der vorgelegten Beweise fordert. Dies schließt Appelle an den 'wissenschaftlichen Konsens' ein, wenn dieser dazu dient, Fragen zu unterbinden, anstatt Beweise vorzulegen.",
     example: "'Als Abteilungsleiter kann ich Ihnen sagen, dass dieses Projekt erfolgreich sein wird, und Sie müssen die Daten nicht sehen. Meine Position ist Beweis genug.' oder 'Sie müssen akzeptieren, dass diese Theorie korrekt ist, weil 97% der Wissenschaftler darin übereinstimmen; den Konsens in Frage zu stellen, ist illegitim.'"
   },
@@ -300,6 +300,11 @@ export const logicalFallaciesDE: FallacyTranslations = {
     name: "Spotlight-Trugschluss",
     definition: "Die Tendenz anzunehmen, dass die Berichterstattung der Medien über eine Gruppe repräsentativ für die gesamte Gruppe ist. Es ist ein Trugschluss der Verallgemeinerung, der auf den sichtbarsten Mitgliedern basiert.",
     example: "'Wenn man Nachrichtenberichte sieht, die sich ausschließlich auf gewalttätige Proteste konzentrieren, kommt eine Person zu dem Schluss, dass alle Menschen, die diese Sache unterstützen, gewalttätig sind, auch wenn die große Mehrheit friedlich ist.'"
+  },
+  "Hedonic Treadmill": {
+    name: "Hedonistische Tretmühle",
+    definition: "Dies ist die Tendenz, schnell zu einem relativ stabilen Glücksniveau zurückzukehren, trotz positiver oder negativer Ereignisse. Menschen passen sich an veränderte Umstände an.",
+    example: "'Lottogewinner sind oft nicht glücklicher als vorher, und Menschen, die Unfälle erlitten haben, berichten oft ähnliche Glücksniveaus wie zuvor.' Dies zeigt die bemerkenswerte menschliche Anpassungsfähigkeit."
   }
 };
 
