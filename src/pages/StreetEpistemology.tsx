@@ -62,11 +62,10 @@ export default function StreetEpistemology() {
         <Card className="glass-card mb-8">
           <CardHeader>
             <CardTitle className="text-4xl font-bold">
-              Street Epistemology
+              {t('streetEpistemology.title')}
             </CardTitle>
             <CardDescription className="text-xl max-w-3xl">
-              A gentle, non-confrontational method of helping people examine the reliability 
-              of their beliefs through conversational questioning techniques.
+              {t('streetEpistemology.subtitle')}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -76,21 +75,12 @@ export default function StreetEpistemology() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Users className="h-6 w-6 text-primary" />
-              <CardTitle className="text-2xl">Created by Dr. Peter Boghossian</CardTitle>
+              <CardTitle className="text-2xl">{t('streetEpistemology.aboutBoghossian')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
-            <p className="text-muted-foreground leading-relaxed mb-4">
-              Street Epistemology was developed by Dr. Peter Boghossian, based on the ancient 
-              <strong> Socratic Questioning</strong> method we've known for over 2,000 years. 
-              Dr. Boghossian is a prime example of someone who truly cares about objective truth, 
-              even when it puts his career at risk.
-            </p>
             <p className="text-muted-foreground leading-relaxed">
-              He's particularly known for his academic "hoax papers" that exposed problems 
-              in certain academic fields, demonstrating his commitment to intellectual integrity 
-              over personal safety. We desperately need more people like him who have a spine 
-              and not just linguistic smoke grenades.
+              {t('streetEpistemology.aboutBoghossianText')}
             </p>
           </CardContent>
         </Card>

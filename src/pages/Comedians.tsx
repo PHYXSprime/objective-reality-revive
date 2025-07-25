@@ -65,11 +65,10 @@ export default function Comedians() {
         <div className="mb-12 text-center">
           <div className="glass-card rounded-2xl p-8 max-w-4xl mx-auto mb-8">
             <h1 className="text-4xl font-bold text-foreground mb-6">
-              Comedians: The Modern Jesters
+              {t('comedians.title')}
             </h1>
             <p className="text-xl text-muted-foreground">
-              Comedians often are among the smartest people in society. Their cognitive abilities 
-              allow them to question our "status quo" and deliver truth disguised as humor.
+              {t('comedians.subtitle')}
             </p>
           </div>
         </div>
@@ -79,15 +78,12 @@ export default function Comedians() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Brain className="h-6 w-6 text-blue-600" />
-              <CardTitle className="text-2xl">Why Comedy Matters for Truth</CardTitle>
+              <CardTitle className="text-2xl">{t('comedians.importance')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
             <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-              The best humor condenses right at the boundary between what is socially accepted "knowledge", 
-              tradition, dogmatic beliefs of the time and objective reality. Distributing the truth nicely 
-              disguised as a joke makes the truth much more acceptable to the majority of people – 
-              or at least makes them think about it.
+              {t('comedians.importanceText')}
             </p>
             <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4">
               {comedianRoles.map((role, index) => (

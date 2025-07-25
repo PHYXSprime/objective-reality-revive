@@ -36,12 +36,12 @@ export default function ScientificConsensus() {
         <div className="mb-12 text-center">
           <div className="glass-card p-8 max-w-4xl mx-auto mb-8">
             <h1 className="text-4xl font-bold text-foreground mb-6">
-              Scientific Consensus as a Golden Calf
+              {t('scientificConsensus.title')}
             </h1>
           </div>
           <div className="glass-card p-6 max-w-4xl mx-auto mb-8">
             <p className="text-xl text-muted-foreground">
-              The scientific community agrees on a current consensus – which is constantly adjusted according to the latest findings. THAT is the difference to religious beliefs and dogmas.
+              {t('scientificConsensus.subtitle')}
             </p>
           </div>
         </div>
@@ -50,20 +50,17 @@ export default function ScientificConsensus() {
         <div className="glass-card p-8 mb-12 border-orange-200 dark:border-orange-800">
           <div className="flex items-center gap-3 mb-4">
             <AlertTriangle className="h-6 w-6 text-orange-600" />
-            <h2 className="text-2xl font-bold text-foreground">Critical Observation</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('scientificConsensus.criticalObservation')}</h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed">
-            After evaluating many different scientific fields and going beyond the 
-            <span className="font-semibold"> Dunning-Kruger Effect</span>, I estimate that 
-            <span className="font-bold text-orange-600"> approximately 50% of today's scientific consensus 
-            will most likely be falsified in the future</span>.
+            {t('scientificConsensus.criticalText')}
           </p>
         </div>
 
         {/* Field Confidence Analysis */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-            Confidence Levels by Scientific Field
+            {t('scientificConsensus.confidenceLevels')}
           </h2>
           <div className="glass-card p-6 text-center mb-8 max-w-3xl mx-auto">
             <p className="text-muted-foreground">

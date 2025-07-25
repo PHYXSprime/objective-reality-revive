@@ -64,10 +64,10 @@ export default function Indoctrination() {
         <div className="mb-12 text-center">
           <div className="glass-card rounded-2xl p-8 max-w-4xl mx-auto mb-8">
             <h1 className="text-4xl font-bold text-foreground mb-6">
-              Indoctrination: The Invisible Programming
+              {t('indoctrination.title')}
             </h1>
             <p className="text-xl text-muted-foreground">
-              Understanding how systematic influence shapes our beliefs from childhood and persists throughout life
+              {t('indoctrination.subtitle')}
             </p>
           </div>
         </div>
@@ -76,12 +76,10 @@ export default function Indoctrination() {
         <div className="glass-card rounded-2xl p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Brain className="h-6 w-6 text-purple-600" />
-            <h2 className="text-2xl font-bold text-foreground">What is Indoctrination?</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('indoctrination.definition')}</h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Indoctrination is the process of teaching a person or group to accept a set of beliefs uncritically. 
-            Unlike education, which encourages questioning and critical thinking, indoctrination discourages 
-            independent thought and promotes acceptance of specific worldviews as absolute truth.
+            {t('indoctrination.definitionText')}
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">

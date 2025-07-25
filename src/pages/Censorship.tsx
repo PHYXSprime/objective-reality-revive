@@ -73,11 +73,10 @@ export default function Censorship() {
         <Card className="glass-card mb-8">
           <CardHeader>
             <CardTitle className="text-4xl font-bold">
-              Censorship in the Modern Era
+              {t('censorship.title')}
             </CardTitle>
             <CardDescription className="text-xl max-w-3xl">
-              Censorship is massively on the rise – most of it is sneaky, hidden, disguised as "good intentions", 
-              "philanthropic cover stories" and even "scientifically sounding assertions".
+              {t('censorship.subtitle')}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -87,15 +86,12 @@ export default function Censorship() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <AlertTriangle className="h-6 w-6 text-primary" />
-              <CardTitle className="text-xl">Political Correctness Warning</CardTitle>
+              <CardTitle className="text-xl">{t('censorship.politicalCorrectnessAlert')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed">
-              <strong>Political Correctness (PC)</strong> is one of the worst kinds of censorship. 
-              It is extremely dangerous and counter-productive for the progress of humanity to install 
-              this thought police and kill any creative & progressive thoughts and open discussions 
-              out of fear to offend somebody.
+              {t('censorship.politicalCorrectnessAlert')}
             </p>
           </CardContent>
         </Card>

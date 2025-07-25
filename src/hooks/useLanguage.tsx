@@ -1,4 +1,5 @@
 import { createContext, useContext, useState, ReactNode } from 'react';
+import { challengePageTranslations } from '@/data/translations.de';
 
 export type Language = 'en' | 'de' | 'fr' | 'es';
 
@@ -216,6 +217,8 @@ const translations = {
     'previous': 'Vorherige',
     'close': 'Schließen',
     'open': 'Öffnen',
+    // Challenge page translations
+    ...challengePageTranslations.de,
   },
   fr: {
     'nav.home': 'Accueil',

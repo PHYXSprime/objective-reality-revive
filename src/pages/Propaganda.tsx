@@ -70,10 +70,10 @@ export default function Propaganda() {
         <div className="mb-12 text-center">
           <div className="glass-card p-8 max-w-4xl mx-auto mb-8">
             <h1 className="text-4xl font-bold text-foreground mb-6">
-              Propaganda: The Art of Manufactured Consent
+              {t('propaganda.title')}
             </h1>
             <p className="text-xl text-muted-foreground">
-              Understanding how information is weaponized to shape public opinion and bypass critical thinking
+              {t('propaganda.subtitle')}
             </p>
           </div>
         </div>
@@ -82,12 +82,10 @@ export default function Propaganda() {
         <div className="glass-card p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Megaphone className="h-6 w-6 text-red-600" />
-            <h2 className="text-2xl font-bold text-foreground">What is Propaganda?</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('propaganda.definition')}</h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Propaganda is information designed to promote a particular political cause or point of view, 
-            often using misleading or biased techniques. Unlike education, which encourages critical thinking, 
-            propaganda seeks to bypass rational analysis and create emotional responses.
+            {t('propaganda.definitionText')}
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
