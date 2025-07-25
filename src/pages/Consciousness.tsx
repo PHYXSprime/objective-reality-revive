@@ -260,11 +260,6 @@ export default function Consciousness() {
                 to expand the psychology based AQAL model and to expand it and to map it to measurable biophysical markers.
               </p>
               <p className="text-sm text-muted-foreground">
-                <strong>Important Note:</strong> These levels are not hierarchical in terms of human worth, but rather represent 
-                different capacities for handling complexity. Each level has its own strengths and appropriate contexts. 
-                Healthy development involves integrating insights from multiple levels rather than transcending and discarding them.
-              </p>
-              <p className="text-sm text-muted-foreground">
                 <strong>«Digital Twins» Applications:</strong> This research enables the creation of PERFECT digital twins that can model 
                 actual human brains with billions of digitally "living" billions of neurons and therefore makes consciousness states directly observable and testable for educational, therapeutic, and developmental applications, representing a significant 
                 advancement in consciousness research and practical application.
