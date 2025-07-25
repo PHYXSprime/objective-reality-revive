@@ -179,9 +179,6 @@ const translations = {
     'scientificConsensus.redFlags.noData': 'Lack of open data or methodology',
     'scientificConsensus.redFlags.authority': 'Appeal to authority rather than evidence',
     
-    // Missing key for English
-    'scientificConsensus.confidenceLevels': 'Confidence Levels by Field',
-    
     'censorship.politicalCorrectnessAlert': '"Political Correctness" is often a euphemism for censorship and thought control.',
     'censorship.typesOfCensorship': 'Types of Modern Censorship',
     'censorship.propagandaLanguage': 'Propaganda Language Alert',
@@ -222,6 +219,7 @@ const translations = {
     
     'scientificConsensus.title': 'Scientific Consensus',
     'scientificConsensus.subtitle': 'A personal assessment of the reliability of scientific knowledge',
+    'scientificConsensus.confidenceLevels': 'Confidence Levels by Field',
     
     'indoctrination.title': 'Indoctrination',
     'indoctrination.subtitle': 'The systematic conditioning of beliefs',
