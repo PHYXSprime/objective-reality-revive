@@ -158,8 +158,8 @@ export default function DogmaticBeliefs() {
                   <CardDescription>{char.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-red-50 dark:bg-red-950/20 p-3 rounded-lg">
-                    <p className="text-sm text-red-700 dark:text-red-300">
+                  <div className="glass-card p-3 rounded-lg border border-red-500/30 shadow-[0_0_20px_-5px_rgba(239,68,68,0.3)]">
+                    <p className="text-sm text-red-200 dark:text-red-100">
                       <span className="font-semibold">{t('dogmaticBeliefs.danger')}</span> {char.danger}
                     </p>
                   </div>
