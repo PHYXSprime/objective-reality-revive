@@ -112,6 +112,48 @@ const translations = {
     'previous': 'Previous',
     'close': 'Close',
     'open': 'Open',
+    
+    // Challenge page specific translations (English)
+    'propaganda.title': 'Propaganda',
+    'propaganda.subtitle': 'Recognizing and resisting modern information warfare',
+    'propaganda.definition': 'What is Propaganda?',
+    'propaganda.definitionText': 'Propaganda is the systematic dissemination of information, ideas, or rumors to help or harm an institution, cause, or person. In today\'s world, it has become more subtle and pervasive than ever before.',
+    
+    'scientificConsensus.title': 'Scientific Consensus',
+    'scientificConsensus.subtitle': 'A personal assessment of the reliability of scientific knowledge',
+    
+    'indoctrination.title': 'Indoctrination',
+    'indoctrination.subtitle': 'The systematic conditioning of beliefs',
+    
+    'censorship.title': 'Censorship',
+    'censorship.subtitle': 'Modern forms of information control',
+    
+    'comedians.title': 'Comedians',
+    'comedians.subtitle': 'The modern court jesters of truth',
+    
+    'streetEpistemology.title': 'Street Epistemology',
+    'streetEpistemology.subtitle': 'A method for examining beliefs through Socratic questioning',
+    
+    'dogmaticBeliefs.title': 'Dogmatic Beliefs',
+    'dogmaticBeliefs.subtitle': 'Recognizing and overcoming rigid thinking',
+    
+    'scientificMethod.title': 'The Scientific Method',
+    'scientificMethod.subtitle': 'A tool for objective truth-seeking',
+    
+    'lazyThinking.title': 'Lazy Thinking',
+    'lazyThinking.subtitle': 'The cognitive epidemic of our time',
+    
+    'socraticQuestioning.title': 'Socratic Questioning',
+    'socraticQuestioning.subtitle': 'The art of disciplined questioning',
+    
+    'coEvolution.title': 'Co-Evolution',
+    'coEvolution.subtitle': 'How religious thinking patterns survive in secular contexts',
+    
+    'psychologicalWeakness.title': 'Psychological Weaknesses',
+    'psychologicalWeakness.subtitle': 'Human vulnerabilities that can be exploited',
+    
+    'ego.title': 'Ego',
+    'ego.subtitle': 'How personal identity interferes with objective reasoning',
   },
   de: {
     'nav.home': 'Startseite',
@@ -146,8 +188,6 @@ const translations = {
     'consensus.description': 'Kritische Analyse wissenschaftlicher Autorität und Gruppendenken',
     'solutions.title': 'Lösungen',
     'solutions.description': 'Praktische Werkzeuge und Methoden zur Überwindung kognitiver Beschränkungen',
-    'censorship.title': 'Zensur',
-    'censorship.description': 'Informationsunterdrückung und Gedankenkontrolle in der modernen Gesellschaft',
     // Challenges content
     'challenges.why.title': 'Warum diese Herausforderungen verstehen wichtig ist',
     'challenges.personal.title': 'Persönliches Wachstum',
@@ -217,8 +257,42 @@ const translations = {
     'previous': 'Vorherige',
     'close': 'Schließen',
     'open': 'Öffnen',
-    // Challenge page translations
-    ...challengePageTranslations.de,
+    
+    // Challenge page translations (German) - flattened structure
+    'propaganda.title': challengePageTranslations.de.propaganda.title,
+    'propaganda.subtitle': challengePageTranslations.de.propaganda.subtitle,
+    'propaganda.definition': challengePageTranslations.de.propaganda.definition,
+    'propaganda.definitionText': challengePageTranslations.de.propaganda.definitionText,
+    
+    'scientificConsensus.title': challengePageTranslations.de.scientificConsensus.title,
+    'scientificConsensus.subtitle': challengePageTranslations.de.scientificConsensus.subtitle,
+    
+    'indoctrination.title': challengePageTranslations.de.indoctrination.title,
+    'indoctrination.subtitle': challengePageTranslations.de.indoctrination.subtitle,
+    
+    'censorship.title': challengePageTranslations.de.censorship.title,
+    'censorship.subtitle': challengePageTranslations.de.censorship.subtitle,
+    
+    'comedians.title': challengePageTranslations.de.comedians.title,
+    'comedians.subtitle': challengePageTranslations.de.comedians.subtitle,
+    
+    'streetEpistemology.title': challengePageTranslations.de.streetEpistemology.title,
+    'streetEpistemology.subtitle': challengePageTranslations.de.streetEpistemology.subtitle,
+    
+    'dogmaticBeliefs.title': challengePageTranslations.de.dogmaticBeliefs.title,
+    'dogmaticBeliefs.subtitle': challengePageTranslations.de.dogmaticBeliefs.subtitle,
+    
+    'scientificMethod.title': challengePageTranslations.de.scientificMethod.title,
+    'scientificMethod.subtitle': challengePageTranslations.de.scientificMethod.subtitle,
+    
+    'lazyThinking.title': challengePageTranslations.de.lazyThinking.title,
+    'lazyThinking.subtitle': challengePageTranslations.de.lazyThinking.subtitle,
+    
+    'socraticQuestioning.title': challengePageTranslations.de.socraticQuestioning.title,
+    'socraticQuestioning.subtitle': challengePageTranslations.de.socraticQuestioning.subtitle,
+    
+    'coEvolution.title': challengePageTranslations.de.coEvolution.title,
+    'coEvolution.subtitle': challengePageTranslations.de.coEvolution.subtitle,
   },
   fr: {
     'nav.home': 'Accueil',
@@ -253,8 +327,6 @@ const translations = {
     'consensus.description': 'Analyse critique de l\'autorité scientifique et de la pensée de groupe',
     'solutions.title': 'Solutions',
     'solutions.description': 'Outils et méthodes pratiques pour surmonter les limitations cognitives',
-    'censorship.title': 'Censure',
-    'censorship.description': 'Suppression d\'informations et contrôle de la pensée dans la société moderne',
     // Challenges content
     'challenges.why.title': 'Pourquoi comprendre ces défis est important',
     'challenges.personal.title': 'Croissance Personnelle',
@@ -324,6 +396,42 @@ const translations = {
     'previous': 'Précédent',
     'close': 'Fermer',
     'open': 'Ouvrir',
+    
+    // Challenge page translations (French) - placeholder for now
+    'propaganda.title': 'Propagande',
+    'propaganda.subtitle': 'Reconnaître et résister à la guerre informationnelle moderne',
+    'propaganda.definition': 'Qu\'est-ce que la propagande ?',
+    'propaganda.definitionText': 'La propagande est la diffusion systématique d\'informations, d\'idées ou de rumeurs pour aider ou nuire à une institution, une cause ou une personne.',
+    
+    'scientificConsensus.title': 'Consensus Scientifique',
+    'scientificConsensus.subtitle': 'Une évaluation personnelle de la fiabilité des connaissances scientifiques',
+    
+    'indoctrination.title': 'Endoctrinement',
+    'indoctrination.subtitle': 'Le conditionnement systématique des croyances',
+    
+    'censorship.title': 'Censure',
+    'censorship.subtitle': 'Formes modernes de contrôle de l\'information',
+    
+    'comedians.title': 'Comédiens',
+    'comedians.subtitle': 'Les bouffons de cour modernes de la vérité',
+    
+    'streetEpistemology.title': 'Épistémologie de Rue',
+    'streetEpistemology.subtitle': 'Une méthode pour examiner les croyances par le questionnement socratique',
+    
+    'dogmaticBeliefs.title': 'Croyances Dogmatiques',
+    'dogmaticBeliefs.subtitle': 'Reconnaître et surmonter la pensée rigide',
+    
+    'scientificMethod.title': 'La Méthode Scientifique',
+    'scientificMethod.subtitle': 'Un outil pour la recherche objective de la vérité',
+    
+    'lazyThinking.title': 'Pensée Paresseuse',
+    'lazyThinking.subtitle': 'L\'épidémie cognitive de notre époque',
+    
+    'socraticQuestioning.title': 'Questionnement Socratique',
+    'socraticQuestioning.subtitle': 'L\'art du questionnement discipliné',
+    
+    'coEvolution.title': 'Co-évolution',
+    'coEvolution.subtitle': 'Comment les modèles de pensée religieuse survivent dans les contextes séculaires',
   },
   es: {
     'nav.home': 'Inicio',
@@ -358,8 +466,6 @@ const translations = {
     'consensus.description': 'Análisis crítico de la autoridad científica y el pensamiento grupal',
     'solutions.title': 'Soluciones',
     'solutions.description': 'Herramientas y métodos prácticos para superar las limitaciones cognitivas',
-    'censorship.title': 'Censura',
-    'censorship.description': 'Supresión de información y control del pensamiento en la sociedad moderna',
     // Challenges content
     'challenges.why.title': 'Por qué entender estos desafíos es importante',
     'challenges.personal.title': 'Crecimiento Personal',
@@ -429,6 +535,42 @@ const translations = {
     'previous': 'Anterior',
     'close': 'Cerrar',
     'open': 'Abrir',
+    
+    // Challenge page translations (Spanish) - placeholder for now
+    'propaganda.title': 'Propaganda',
+    'propaganda.subtitle': 'Reconociendo y resistiendo la guerra de información moderna',
+    'propaganda.definition': '¿Qué es la propaganda?',
+    'propaganda.definitionText': 'La propaganda es la difusión sistemática de información, ideas o rumores para ayudar o dañar a una institución, causa o persona.',
+    
+    'scientificConsensus.title': 'Consenso Científico',
+    'scientificConsensus.subtitle': 'Una evaluación personal de la confiabilidad del conocimiento científico',
+    
+    'indoctrination.title': 'Adoctrinamiento',
+    'indoctrination.subtitle': 'El condicionamiento sistemático de las creencias',
+    
+    'censorship.title': 'Censura',
+    'censorship.subtitle': 'Formas modernas de control de información',
+    
+    'comedians.title': 'Comediantes',
+    'comedians.subtitle': 'Los bufones de la corte modernos de la verdad',
+    
+    'streetEpistemology.title': 'Epistemología Callejera',
+    'streetEpistemology.subtitle': 'Un método para examinar creencias a través del cuestionamiento socrático',
+    
+    'dogmaticBeliefs.title': 'Creencias Dogmáticas',
+    'dogmaticBeliefs.subtitle': 'Reconociendo y superando el pensamiento rígido',
+    
+    'scientificMethod.title': 'El Método Científico',
+    'scientificMethod.subtitle': 'Una herramienta para la búsqueda objetiva de la verdad',
+    
+    'lazyThinking.title': 'Pensamiento Perezoso',
+    'lazyThinking.subtitle': 'La epidemia cognitiva de nuestro tiempo',
+    
+    'socraticQuestioning.title': 'Cuestionamiento Socrático',
+    'socraticQuestioning.subtitle': 'El arte del cuestionamiento disciplinado',
+    
+    'coEvolution.title': 'Co-evolución',
+    'coEvolution.subtitle': 'Cómo los patrones de pensamiento religioso sobreviven en contextos seculares',
   }
 };
 
