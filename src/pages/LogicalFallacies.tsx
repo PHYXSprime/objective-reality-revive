@@ -2,7 +2,9 @@ import { useState } from 'react';
 import { Search, Filter } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { logicalFallacies } from '@/data/logicalFallacies.clean';
-import { logicalFallaciesTranslations } from '@/data/logicalFallacies.de';
+import { logicalFallaciesTranslations as deTranslations } from '@/data/logicalFallacies.de';
+import { logicalFallaciesTranslations as esTranslations } from '@/data/logicalFallacies.es';
+import { logicalFallaciesTranslations as frTranslations } from '@/data/logicalFallacies.fr';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -23,8 +25,14 @@ export default function LogicalFallacies() {
 
   // Helper function to get translated content
   const getTranslatedFallacy = (fallacy: any) => {
-    if (language === 'de' && logicalFallaciesTranslations.de[fallacy.name]) {
-      const translation = logicalFallaciesTranslations.de[fallacy.name];
+    const translations = {
+      de: deTranslations?.de,
+      es: esTranslations?.es, 
+      fr: frTranslations?.fr
+    };
+    
+    if (language !== 'en' && translations[language as keyof typeof translations]?.[fallacy.name]) {
+      const translation = translations[language as keyof typeof translations][fallacy.name];
       return {
         name: translation.name,
         definition: translation.definition,
