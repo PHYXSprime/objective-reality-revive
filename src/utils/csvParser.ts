@@ -1,36 +1,75 @@
-// Utility to parse CSV data for logical fallacies
-export function parseLogicalFallaciesCSV(csvData: string) {
-  const lines = csvData.trim().split('\n');
-  const headers = lines[0].split(',').map(h => h.replace(/"/g, ''));
+export interface CognitiveBias {
+  id: number;
+  name: string;
+  definition: string;
+  example: string;
+  category: string;
+}
+
+export function parseCSV(csvContent: string): CognitiveBias[] {
+  const lines = csvContent.trim().split('\n');
+  const header = lines[0];
   
-  return lines.slice(1).map((line, index) => {
-    // Handle CSV parsing with proper quote handling
-    const values = [];
-    let current = '';
-    let inQuotes = false;
+  if (!header.includes('id,name,definition,example,category')) {
+    throw new Error('Invalid CSV format - expected headers: id,name,definition,example,category');
+  }
+  
+  const biases: CognitiveBias[] = [];
+  
+  for (let i = 1; i < lines.length; i++) {
+    const line = lines[i].trim();
+    if (!line) continue;
     
-    for (let i = 0; i < line.length; i++) {
-      const char = line[i];
-      
-      if (char === '"' && (i === 0 || line[i-1] === ',')) {
-        inQuotes = true;
-      } else if (char === '"' && (i === line.length - 1 || line[i+1] === ',')) {
-        inQuotes = false;
-      } else if (char === ',' && !inQuotes) {
-        values.push(current.trim());
-        current = '';
-      } else {
-        current += char;
-      }
+    // Parse CSV line handling quoted values
+    const values = parseCSVLine(line);
+    
+    if (values.length >= 5) {
+      biases.push({
+        id: parseInt(values[0]) || i,
+        name: cleanQuotes(values[1]),
+        definition: cleanQuotes(values[2]),
+        example: cleanQuotes(values[3]),
+        category: cleanQuotes(values[4])
+      });
     }
-    values.push(current.trim());
+  }
+  
+  return biases;
+}
+
+function parseCSVLine(line: string): string[] {
+  const result: string[] = [];
+  let current = '';
+  let inQuotes = false;
+  let i = 0;
+  
+  while (i < line.length) {
+    const char = line[i];
     
-    return {
-      id: parseInt(values[0]) || index + 1,
-      name: values[1]?.replace(/"/g, '') || '',
-      definition: values[2]?.replace(/"/g, '') || '',
-      example: values[3]?.replace(/"/g, '') || '',
-      category: values[4]?.replace(/"/g, '') || ''
-    };
-  });
+    if (char === '"') {
+      if (inQuotes && line[i + 1] === '"') {
+        // Escaped quote
+        current += '"';
+        i += 2;
+      } else {
+        // Toggle quotes
+        inQuotes = !inQuotes;
+        i++;
+      }
+    } else if (char === ',' && !inQuotes) {
+      result.push(current);
+      current = '';
+      i++;
+    } else {
+      current += char;
+      i++;
+    }
+  }
+  
+  result.push(current);
+  return result;
+}
+
+function cleanQuotes(value: string): string {
+  return value.replace(/^"/, '').replace(/"$/, '').replace(/""/g, '"');
 }
