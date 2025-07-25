@@ -227,12 +227,32 @@ export const de = {
   'indoctrination.warning.inSystems.sign3': 'Anspruch auf absolute Wahrheit',
   'indoctrination.warning.inSystems.sign4': 'Isolation von externen Informationen',
 
-  // Categories and other keys
+  // Categories and filters
   'filter.all': 'Alle Kategorien',
   'filter.by_category': 'Nach Kategorie filtern',
   'search.placeholder': 'Verzerrungen suchen...',
-  'showing_results': '{count} von {total} Ergebnissen angezeigt',
+  'showing_results': 'Zeige {count} von {total} Ergebnissen',
   'example': 'Beispiel',
   'no_results': 'Keine Ergebnisse gefunden',
   'clear_filters': 'Filter löschen',
+
+  // Categories - Logical Fallacies
+  'category.relevance': 'Relevanz',
+  'category.presumption': 'Annahme',
+  'category.weak_inference': 'Schwache Schlussfolgerung',
+  'category.causal': 'Kausal',
+  'category.formal': 'Formal',
+  'category.conditional': 'Bedingt',
+
+  // Categories - Cognitive Biases
+  'category.too_much_information': 'Zu viel Information',
+  'category.not_enough_meaning': 'Nicht genug Bedeutung',
+  'category.need_to_act_fast': 'Schnell handeln müssen',
+  'category.what_to_remember': 'Was zu merken ist',
+  'category.memory': 'Gedächtnis',
+  'category.social_influence': 'Sozialer Einfluss',
+  'category.perception': 'Wahrnehmung',
+  'category.decision_making': 'Entscheidungsfindung',
+  'category.self_perception': 'Selbstwahrnehmung',
+  'category.emotions': 'Emotionen',
 } as const;

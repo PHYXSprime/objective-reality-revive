@@ -211,4 +211,24 @@ export const es = {
   'example': 'Ejemplo',
   'no_results': 'No se encontraron resultados',
   'clear_filters': 'Limpiar filtros',
+
+  // Categories - Logical Fallacies
+  'category.relevance': 'Relevancia',
+  'category.presumption': 'Presunción',
+  'category.weak_inference': 'Inferencia débil',
+  'category.causal': 'Causal',
+  'category.formal': 'Formal',
+  'category.conditional': 'Condicional',
+
+  // Categories - Cognitive Biases
+  'category.too_much_information': 'Demasiada información',
+  'category.not_enough_meaning': 'No suficiente significado',
+  'category.need_to_act_fast': 'Necesidad de actuar rápido',
+  'category.what_to_remember': 'Qué recordar',
+  'category.memory': 'Memoria',
+  'category.social_influence': 'Influencia social',
+  'category.perception': 'Percepción',
+  'category.decision_making': 'Toma de decisiones',
+  'category.self_perception': 'Percepción de sí mismo',
+  'category.emotions': 'Emociones',
 } as const;

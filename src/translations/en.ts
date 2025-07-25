@@ -187,8 +187,27 @@ export const en = {
   'no_results': 'No results found',
   'clear_filters': 'Clear Filters',
 
-  // Categories
+  // Categories - Logical Fallacies
+  'category.relevance': 'Relevance',
+  'category.presumption': 'Presumption',
+  'category.weak_inference': 'Weak Inference',
+  'category.causal': 'Causal',
+  'category.formal': 'Formal',
+  'category.conditional': 'Conditional',
+
+  // Categories - Cognitive Biases  
+  'category.too_much_information': 'Too Much Information',
+  'category.not_enough_meaning': 'Not Enough Meaning',
+  'category.need_to_act_fast': 'Need to Act Fast',
+  'category.what_to_remember': 'What to Remember',
   'category.memory': 'Memory',
+  'category.social_influence': 'Social Influence',
+  'category.perception': 'Perception',
+  'category.decision_making': 'Decision Making',
+  'category.self_perception': 'Self Perception',
+  'category.emotions': 'Emotions',
+
+  // Legacy categories (keeping for compatibility)
   'category.social': 'Social',
   'category.probability': 'Probability',
   'category.cognitive': 'Cognitive',
