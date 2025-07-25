@@ -8,96 +8,112 @@ export default function CoEvolution() {
 
   const evolutionaryPatterns = [
     {
-      title: "Tribal Thinking",
-      religious: "Us vs. them mentality (believers vs. infidels)",
-      secular: "Political polarization and ideological camps",
-      impact: "Creates in-group loyalty but prevents objective evaluation"
+      title: t('coEvolution.patterns.tribalThinking.title'),
+      religious: t('coEvolution.patterns.tribalThinking.religious'),
+      secular: t('coEvolution.patterns.tribalThinking.secular'),
+      impact: t('coEvolution.patterns.tribalThinking.impact')
     },
     {
-      title: "Authority Worship",
-      religious: "Unquestioning obedience to religious leaders",
-      secular: "Blind trust in experts, celebrities, or institutions",
-      impact: "Substitutes critical thinking with deference to power"
+      title: t('coEvolution.patterns.authorityWorship.title'),
+      religious: t('coEvolution.patterns.authorityWorship.religious'),
+      secular: t('coEvolution.patterns.authorityWorship.secular'),
+      impact: t('coEvolution.patterns.authorityWorship.impact')
     },
     {
-      title: "Ritual Adherence",
-      religious: "Sacred ceremonies and repeated practices",
-      secular: "Political correctness and social compliance rituals",
-      impact: "Values conformity over truth-seeking"
+      title: t('coEvolution.patterns.ritualAdherence.title'),
+      religious: t('coEvolution.patterns.ritualAdherence.religious'),
+      secular: t('coEvolution.patterns.ritualAdherence.secular'),
+      impact: t('coEvolution.patterns.ritualAdherence.impact')
     },
     {
-      title: "Heresy Punishment",
-      religious: "Excommunication and shunning of questioners",
-      secular: "Cancel culture and social ostracism for dissent",
-      impact: "Suppresses intellectual exploration and honest inquiry"
+      title: t('coEvolution.patterns.heresyPunishment.title'),
+      religious: t('coEvolution.patterns.heresyPunishment.religious'),
+      secular: t('coEvolution.patterns.heresyPunishment.secular'),
+      impact: t('coEvolution.patterns.heresyPunishment.impact')
     },
     {
-      title: "Sacred Texts",
-      religious: "Scripture as infallible divine revelation",
-      secular: "Treating certain documents or theories as unquestionable",
-      impact: "Prevents updating beliefs with new evidence"
+      title: t('coEvolution.patterns.sacredTexts.title'),
+      religious: t('coEvolution.patterns.sacredTexts.religious'),
+      secular: t('coEvolution.patterns.sacredTexts.secular'),
+      impact: t('coEvolution.patterns.sacredTexts.impact')
     },
     {
-      title: "Faith-Based Reasoning",
-      religious: "Belief without evidence as virtue",
-      secular: "Ideological commitments resistant to facts",
-      impact: "Undermines evidence-based decision making"
+      title: t('coEvolution.patterns.faithBasedReasoning.title'),
+      religious: t('coEvolution.patterns.faithBasedReasoning.religious'),
+      secular: t('coEvolution.patterns.faithBasedReasoning.secular'),
+      impact: t('coEvolution.patterns.faithBasedReasoning.impact')
     }
   ];
 
   const cognitiveTraps = [
     {
-      trap: "Sacred Cow Syndrome",
-      description: "Certain beliefs become too important to question",
-      examples: ["Democracy is always good", "Science is always right", "Progress is inevitable"]
+      trap: t('coEvolution.cognitiveTraps.sacredCow.title'),
+      description: t('coEvolution.cognitiveTraps.sacredCow.description'),
+      examples: [
+        t('coEvolution.cognitiveTraps.sacredCow.example1'),
+        t('coEvolution.cognitiveTraps.sacredCow.example2'),
+        t('coEvolution.cognitiveTraps.sacredCow.example3')
+      ]
     },
     {
-      trap: "Moral Superiority",
-      description: "Believing your group holds exclusive moral truth",
-      examples: ["We are on the right side of history", "Anyone who disagrees is evil", "Our cause justifies any means"]
+      trap: t('coEvolution.cognitiveTraps.moralSuperiority.title'),
+      description: t('coEvolution.cognitiveTraps.moralSuperiority.description'),
+      examples: [
+        t('coEvolution.cognitiveTraps.moralSuperiority.example1'),
+        t('coEvolution.cognitiveTraps.moralSuperiority.example2'),
+        t('coEvolution.cognitiveTraps.moralSuperiority.example3')
+      ]
     },
     {
-      trap: "Apocalyptic Thinking",
-      description: "Crisis mentality that demands immediate action",
-      examples: ["Climate emergency", "Existential threats", "Now or never moments"]
+      trap: t('coEvolution.cognitiveTraps.apocalypticThinking.title'),
+      description: t('coEvolution.cognitiveTraps.apocalypticThinking.description'),
+      examples: [
+        t('coEvolution.cognitiveTraps.apocalypticThinking.example1'),
+        t('coEvolution.cognitiveTraps.apocalypticThinking.example2'),
+        t('coEvolution.cognitiveTraps.apocalypticThinking.example3')
+      ]
     },
     {
-      trap: "Salvation Narratives",
-      description: "Belief in simple solutions to complex problems",
-      examples: ["Technology will save us", "The right policy will fix everything", "Education solves all problems"]
+      trap: t('coEvolution.cognitiveTraps.salvationNarratives.title'),
+      description: t('coEvolution.cognitiveTraps.salvationNarratives.description'),
+      examples: [
+        t('coEvolution.cognitiveTraps.salvationNarratives.example1'),
+        t('coEvolution.cognitiveTraps.salvationNarratives.example2'),
+        t('coEvolution.cognitiveTraps.salvationNarratives.example3')
+      ]
     }
   ];
 
   const liberationStrategies = [
     {
-      strategy: "Recognize the Pattern",
-      description: "Identify when secular thinking mirrors religious structures",
-      practice: "Ask: 'Am I treating this belief like a religious doctrine?'"
+      strategy: t('coEvolution.liberation.recognizePattern.title'),
+      description: t('coEvolution.liberation.recognizePattern.description'),
+      practice: t('coEvolution.liberation.recognizePattern.practice')
     },
     {
-      strategy: "Question Sacred Assumptions",
-      description: "Examine beliefs that feel too important to doubt",
-      practice: "List your most cherished beliefs and research opposing views"
+      strategy: t('coEvolution.liberation.questionAssumptions.title'),
+      description: t('coEvolution.liberation.questionAssumptions.description'),
+      practice: t('coEvolution.liberation.questionAssumptions.practice')
     },
     {
-      strategy: "Embrace Intellectual Heresy",
-      description: "Be willing to question popular orthodoxies",
-      practice: "Regularly explore ideas that your peer group would find offensive"
+      strategy: t('coEvolution.liberation.embraceHeresy.title'),
+      description: t('coEvolution.liberation.embraceHeresy.description'),
+      practice: t('coEvolution.liberation.embraceHeresy.practice')
     },
     {
-      strategy: "Practice Ideological Diversity",
-      description: "Seek out perspectives from different worldview systems",
-      practice: "Engage seriously with viewpoints you typically dismiss"
+      strategy: t('coEvolution.liberation.ideologicalDiversity.title'),
+      description: t('coEvolution.liberation.ideologicalDiversity.description'),
+      practice: t('coEvolution.liberation.ideologicalDiversity.practice')
     },
     {
-      strategy: "Cultivate Uncertainty",
-      description: "Learn to be comfortable with not having all the answers",
-      practice: "End statements with 'but I could be wrong about this'"
+      strategy: t('coEvolution.liberation.cultivateUncertainty.title'),
+      description: t('coEvolution.liberation.cultivateUncertainty.description'),
+      practice: t('coEvolution.liberation.cultivateUncertainty.practice')
     },
     {
-      strategy: "Develop Meta-Cognition",
-      description: "Think about how you think and why you believe",
-      practice: "Regular self-examination of your reasoning processes"
+      strategy: t('coEvolution.liberation.developMetaCognition.title'),
+      description: t('coEvolution.liberation.developMetaCognition.description'),
+      practice: t('coEvolution.liberation.developMetaCognition.practice')
     }
   ];
 
@@ -152,10 +168,10 @@ export default function CoEvolution() {
         <div className="mb-12">
           <div className="glass-card rounded-2xl p-6 text-center mb-8 max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Religious vs. Secular: Same Patterns, Different Content
+              {t('coEvolution.patterns.title')}
             </h2>
             <p className="text-muted-foreground">
-              Examining how ancient religious thinking patterns appear in modern secular contexts
+              {t('coEvolution.patterns.subtitle')}
             </p>
           </div>
           
@@ -170,18 +186,18 @@ export default function CoEvolution() {
                 </CardHeader>
                 <CardContent>
                   <div className="grid md:grid-cols-2 gap-4 mb-4">
-                    <div className="bg-blue-50 dark:bg-blue-950/20 p-3 rounded-lg">
-                      <h5 className="font-semibold text-blue-700 dark:text-blue-300 mb-2">Religious Context</h5>
-                      <p className="text-sm text-blue-600 dark:text-blue-400">{pattern.religious}</p>
+                    <div className="border border-muted rounded-lg p-3">
+                      <h5 className="font-semibold text-foreground mb-2">{t('coEvolution.labels.religiousContext')}</h5>
+                      <p className="text-sm text-muted-foreground">{pattern.religious}</p>
                     </div>
-                    <div className="bg-green-50 dark:bg-green-950/20 p-3 rounded-lg">
-                      <h5 className="font-semibold text-green-700 dark:text-green-300 mb-2">Secular Context</h5>
-                      <p className="text-sm text-green-600 dark:text-green-400">{pattern.secular}</p>
+                    <div className="border border-muted rounded-lg p-3">
+                      <h5 className="font-semibold text-foreground mb-2">{t('coEvolution.labels.secularContext')}</h5>
+                      <p className="text-sm text-muted-foreground">{pattern.secular}</p>
                     </div>
                   </div>
-                  <div className="bg-orange-50 dark:bg-orange-950/20 p-3 rounded-lg">
-                    <p className="text-sm text-orange-700 dark:text-orange-300">
-                      <span className="font-semibold">Impact:</span> {pattern.impact}
+                  <div className="border border-muted rounded-lg p-3">
+                    <p className="text-sm text-muted-foreground">
+                      <span className="font-semibold">{t('coEvolution.labels.impact')}</span> {pattern.impact}
                     </p>
                   </div>
                 </CardContent>
@@ -194,7 +210,7 @@ export default function CoEvolution() {
         <div className="glass-card rounded-2xl p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <AlertTriangle className="h-6 w-6 text-orange-600" />
-            <h2 className="text-2xl font-bold text-foreground">Modern Secular Sacred Thinking</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('coEvolution.cognitiveTraps.title')}</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {cognitiveTraps.map((trap, index) => (
@@ -202,7 +218,7 @@ export default function CoEvolution() {
                 <h4 className="font-semibold text-foreground mb-2">{trap.trap}</h4>
                 <p className="text-muted-foreground text-sm mb-3">{trap.description}</p>
                 <div className="space-y-1">
-                  <h5 className="text-xs font-medium text-muted-foreground uppercase tracking-wide">Examples:</h5>
+                  <h5 className="text-xs font-medium text-muted-foreground uppercase tracking-wide">{t('coEvolution.labels.examples')}</h5>
                   {trap.examples.map((example, idx) => (
                     <p key={idx} className="text-xs text-muted-foreground">• {example}</p>
                   ))}
@@ -216,43 +232,43 @@ export default function CoEvolution() {
         <div className="glass-card rounded-2xl p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <History className="h-6 w-6 text-indigo-600" />
-            <h2 className="text-2xl font-bold text-foreground">Historical Examples</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('coEvolution.historicalExamples.title')}</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Political Religions</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('coEvolution.historicalExamples.politicalReligions.title')}</h4>
               <p className="text-sm text-muted-foreground mb-2">
-                Communism, fascism, and nationalism adopted religious-style devotion and orthodoxy
+                {t('coEvolution.historicalExamples.politicalReligions.description')}
               </p>
               <ul className="text-xs text-muted-foreground space-y-1">
-                <li>• Sacred texts (manifestos)</li>
-                <li>• Infallible leaders</li>
-                <li>• Heretic punishment</li>
-                <li>• Utopian promises</li>
+                <li>• {t('coEvolution.historicalExamples.politicalReligions.feature1')}</li>
+                <li>• {t('coEvolution.historicalExamples.politicalReligions.feature2')}</li>
+                <li>• {t('coEvolution.historicalExamples.politicalReligions.feature3')}</li>
+                <li>• {t('coEvolution.historicalExamples.politicalReligions.feature4')}</li>
               </ul>
             </div>
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Scientific Orthodoxy</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('coEvolution.historicalExamples.scientificOrthodoxy.title')}</h4>
               <p className="text-sm text-muted-foreground mb-2">
-                Science sometimes adopts religious-like resistance to paradigm changes
+                {t('coEvolution.historicalExamples.scientificOrthodoxy.description')}
               </p>
               <ul className="text-xs text-muted-foreground space-y-1">
-                <li>• Consensus worship</li>
-                <li>• Authority appeals</li>
-                <li>• Suppressing dissent</li>
-                <li>• Institutional control</li>
+                <li>• {t('coEvolution.historicalExamples.scientificOrthodoxy.feature1')}</li>
+                <li>• {t('coEvolution.historicalExamples.scientificOrthodoxy.feature2')}</li>
+                <li>• {t('coEvolution.historicalExamples.scientificOrthodoxy.feature3')}</li>
+                <li>• {t('coEvolution.historicalExamples.scientificOrthodoxy.feature4')}</li>
               </ul>
             </div>
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Social Movements</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('coEvolution.historicalExamples.socialMovements.title')}</h4>
               <p className="text-sm text-muted-foreground mb-2">
-                Modern activism often mirrors religious zealotry and moral absolutism
+                {t('coEvolution.historicalExamples.socialMovements.description')}
               </p>
               <ul className="text-xs text-muted-foreground space-y-1">
-                <li>• Moral purity demands</li>
-                <li>• Confession rituals</li>
-                <li>• Excommunication practices</li>
-                <li>• Original sin concepts</li>
+                <li>• {t('coEvolution.historicalExamples.socialMovements.feature1')}</li>
+                <li>• {t('coEvolution.historicalExamples.socialMovements.feature2')}</li>
+                <li>• {t('coEvolution.historicalExamples.socialMovements.feature3')}</li>
+                <li>• {t('coEvolution.historicalExamples.socialMovements.feature4')}</li>
               </ul>
             </div>
           </div>
@@ -262,10 +278,10 @@ export default function CoEvolution() {
         <div className="mb-12">
           <div className="glass-card rounded-2xl p-6 text-center mb-8 max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Breaking Free from Secular Sacred Thinking
+              {t('coEvolution.liberation.title')}
             </h2>
             <p className="text-muted-foreground">
-              Practical approaches to recognize and overcome inherited religious thinking patterns
+              {t('coEvolution.liberation.subtitle')}
             </p>
           </div>
           
@@ -280,9 +296,9 @@ export default function CoEvolution() {
                   <CardDescription>{strategy.description}</CardDescription>
                 </CardHeader>
                 <CardContent>
-                  <div className="bg-green-50 dark:bg-green-950/20 p-3 rounded-lg">
-                    <p className="text-sm text-green-700 dark:text-green-300">
-                      <span className="font-semibold">Practice:</span> {strategy.practice}
+                  <div className="border border-muted rounded-lg p-3">
+                    <p className="text-sm text-muted-foreground">
+                      <span className="font-semibold">{t('coEvolution.labels.practice')}</span> {strategy.practice}
                     </p>
                   </div>
                 </CardContent>
@@ -295,30 +311,28 @@ export default function CoEvolution() {
         <div className="glass-card rounded-2xl p-8 border-purple-200 dark:border-purple-800">
           <div className="flex items-center gap-3 mb-6">
             <Eye className="h-6 w-6 text-purple-600" />
-            <h2 className="text-2xl font-bold text-foreground">The Path to Genuine Rationality</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('coEvolution.pathToRationality.title')}</h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Recognizing our co-evolution with religious thinking doesn't mean rejecting all human cooperation 
-            or social structures. Instead, it means becoming aware of when we're using religious-style reasoning 
-            in secular contexts and choosing more appropriate cognitive tools for objective analysis.
+            {t('coEvolution.pathToRationality.description')}
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold text-foreground mb-3">What This Means:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('coEvolution.pathToRationality.whatThisMeans.title')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• True secularism requires more than removing religious content</li>
-                <li>• We must also examine religious-style thinking patterns</li>
-                <li>• Rationality is an ongoing practice, not a achieved state</li>
-                <li>• Intellectual humility is essential for objective thinking</li>
+                <li>• {t('coEvolution.pathToRationality.whatThisMeans.point1')}</li>
+                <li>• {t('coEvolution.pathToRationality.whatThisMeans.point2')}</li>
+                <li>• {t('coEvolution.pathToRationality.whatThisMeans.point3')}</li>
+                <li>• {t('coEvolution.pathToRationality.whatThisMeans.point4')}</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-3">Practical Application:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('coEvolution.pathToRationality.practicalApplication.title')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Question your most sacred secular beliefs</li>
-                <li>• Notice when you demonize those who disagree</li>
-                <li>• Examine the social functions of your beliefs</li>
-                <li>• Practice intellectual charity toward opponents</li>
+                <li>• {t('coEvolution.pathToRationality.practicalApplication.point1')}</li>
+                <li>• {t('coEvolution.pathToRationality.practicalApplication.point2')}</li>
+                <li>• {t('coEvolution.pathToRationality.practicalApplication.point3')}</li>
+                <li>• {t('coEvolution.pathToRationality.practicalApplication.point4')}</li>
               </ul>
             </div>
           </div>
