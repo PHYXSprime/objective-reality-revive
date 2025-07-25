@@ -26,20 +26,60 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
   };
 
   const getEvolutionColors = (evolutionPoint: string) => {
-    // Each level gets its own color for badge to match the level color
-    const colors = [
-      { bg: "bg-teal-500/20", border: "border-l-teal-500", badge: "bg-teal-500 text-white" },
-      { bg: "bg-yellow-500/20", border: "border-l-yellow-500", badge: "bg-yellow-500 text-black" },
-      { bg: "bg-green-500/20", border: "border-l-green-500", badge: "bg-green-500 text-white" },
-      { bg: "bg-orange-500/20", border: "border-l-orange-500", badge: "bg-orange-500 text-white" },
-      { bg: "bg-blue-500/20", border: "border-l-blue-500", badge: "bg-blue-500 text-white" },
-      { bg: "bg-red-500/20", border: "border-l-red-500", badge: "bg-red-500 text-white" },
-      { bg: "bg-purple-500/20", border: "border-l-purple-500", badge: "bg-purple-500 text-white" },
-      { bg: "bg-indigo-500/20", border: "border-l-indigo-500", badge: "bg-indigo-500 text-white" },
-      { bg: "bg-stone-500/20", border: "border-l-stone-500", badge: "bg-stone-500 text-white" }
-    ];
-    const colorIndex = parseInt(evolutionPoint.charAt(1)) - 1;
-    return colors[colorIndex] || colors[0];
+    // Map evolution points to AQAL colors based on timeframes
+    const colorMap: Record<string, { bg: string; border: string; badge: string }> = {
+      "E9 - Digital Consciousness": {
+        bg: "bg-gradient-to-b from-white/20 via-violet-500/20 to-indigo-500/20",
+        border: "border-l-gradient-to-b border-l-white border-l-violet-500 border-l-indigo-500",
+        badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white"
+      },
+      "E8 - Integral Consciousness": {
+        bg: "bg-teal-500/20",
+        border: "border-l-teal-500",
+        badge: "bg-teal-500 text-white"
+      },
+      "E7 - Systematic Consciousness": {
+        bg: "bg-yellow-500/20",
+        border: "border-l-yellow-500",
+        badge: "bg-yellow-500 text-black"
+      },
+      "E6 - Formal Operational": {
+        bg: "bg-green-500/20",
+        border: "border-l-green-500",
+        badge: "bg-green-500 text-white"
+      },
+      "E5 - Concrete Operational": {
+        bg: "bg-orange-500/20",
+        border: "border-l-orange-500",
+        badge: "bg-orange-500 text-white"
+      },
+      "E4 - Symbolic Representation": {
+        bg: "bg-blue-500/20",
+        border: "border-l-blue-500",
+        badge: "bg-blue-500 text-white"
+      },
+      "E3 - Social Coordination": {
+        bg: "bg-red-500/20",
+        border: "border-l-red-500",
+        badge: "bg-red-500 text-white"
+      },
+      "E2 - Tool Creation": {
+        bg: "bg-purple-500/20",
+        border: "border-l-purple-500",
+        badge: "bg-purple-500 text-white"
+      },
+      "E1 - Basic Survival": {
+        bg: "bg-zinc-800/20",
+        border: "border-l-zinc-800",
+        badge: "bg-zinc-800 text-white"
+      }
+    };
+    
+    return colorMap[evolutionPoint] || {
+      bg: "bg-stone-500/20",
+      border: "border-l-stone-500",
+      badge: "bg-stone-500 text-white"
+    };
   };
 
   return (
@@ -97,47 +137,47 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
                           <TableCell colSpan={5} className="p-0">
                             <div className={`p-6 border-t border-l-[10px] ${colors.bg} ${colors.border}`}>
                               <div className="grid md:grid-cols-2 gap-6">
-                                {/* Description */}
-                                <div className="md:col-span-2">
-                                  <h4 className="font-semibold mb-2">Description</h4>
-                                  <p className="text-sm text-muted-foreground leading-relaxed">{level.description}</p>
-                                </div>
-
-                                 {/* Characteristics */}
-                                 <div>
-                                   <h4 className="font-semibold mb-2">Characteristics</h4>
-                                   <div className="space-y-1">
-                                     {level.characteristics.map((char, i) => (
-                                       <p key={i} className="text-sm text-muted-foreground leading-relaxed">
-                                         • {char}
-                                       </p>
-                                     ))}
-                                   </div>
+                                 {/* Description */}
+                                 <div className="md:col-span-2 text-left">
+                                   <h4 className="font-semibold mb-2 text-left">Description</h4>
+                                   <p className="text-sm text-muted-foreground leading-relaxed text-left">{level.description}</p>
                                  </div>
 
-                                 {/* Biophysical Markers */}
-                                 <div>
-                                   <h4 className="font-semibold mb-2">Biophysical Markers</h4>
-                                   <div className="space-y-1">
-                                     {level.biophysicalMarkers.map((marker, i) => (
-                                       <p key={i} className="text-sm text-muted-foreground leading-relaxed">
-                                         • {marker}
-                                       </p>
-                                     ))}
-                                   </div>
-                                 </div>
-
-                                {/* Cognitive Capabilities */}
-                                <div className="md:col-span-2">
-                                  <h4 className="font-semibold mb-2">Cognitive Capabilities</h4>
-                                  <div className="flex flex-wrap gap-2">
-                                    {level.cognitiveCapabilities.map((capability, i) => (
-                                      <Badge key={i} variant="outline" className="text-xs">
-                                        {capability}
-                                      </Badge>
-                                    ))}
+                                  {/* Characteristics */}
+                                  <div className="text-left">
+                                    <h4 className="font-semibold mb-2 text-left">Characteristics</h4>
+                                    <div className="space-y-1 text-left">
+                                      {level.characteristics.map((char, i) => (
+                                        <p key={i} className="text-sm text-muted-foreground leading-relaxed text-left">
+                                          • {char}
+                                        </p>
+                                      ))}
+                                    </div>
                                   </div>
-                                </div>
+
+                                  {/* Biophysical Markers */}
+                                  <div className="text-left">
+                                    <h4 className="font-semibold mb-2 text-left">Biophysical Markers</h4>
+                                    <div className="space-y-1 text-left">
+                                      {level.biophysicalMarkers.map((marker, i) => (
+                                        <p key={i} className="text-sm text-muted-foreground leading-relaxed text-left">
+                                          • {marker}
+                                        </p>
+                                      ))}
+                                    </div>
+                                  </div>
+
+                                 {/* Cognitive Capabilities */}
+                                 <div className="md:col-span-2 text-left">
+                                   <h4 className="font-semibold mb-2 text-left">Cognitive Capabilities</h4>
+                                   <div className="flex flex-wrap gap-2 text-left">
+                                     {level.cognitiveCapabilities.map((capability, i) => (
+                                       <Badge key={i} variant="outline" className="text-xs">
+                                         {capability}
+                                       </Badge>
+                                     ))}
+                                   </div>
+                                 </div>
                               </div>
                             </div>
                           </TableCell>

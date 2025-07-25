@@ -139,64 +139,64 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
                           <TableCell colSpan={5} className="p-0">
                             <div className={`p-6 border-t border-l-[10px] ${colors.bg} ${colors.border}`}>
                               <div className="grid md:grid-cols-2 gap-6">
-                                 {/* Description */}
-                                 <div>
-                                   <h4 className="font-semibold mb-2">Description</h4>
-                                   <div className="space-y-1">
-                                     {level.description.map((desc, i) => (
-                                       <p key={i} className="text-sm text-muted-foreground leading-relaxed">
-                                         • {desc}
-                                       </p>
-                                     ))}
+                                  {/* Description */}
+                                  <div className="text-left">
+                                    <h4 className="font-semibold mb-2 text-left">Description</h4>
+                                    <div className="space-y-1 text-left">
+                                      {level.description.map((desc, i) => (
+                                        <p key={i} className="text-sm text-muted-foreground leading-relaxed text-left">
+                                          • {desc}
+                                        </p>
+                                      ))}
+                                    </div>
+                                  </div>
+
+                                  {/* Characteristics */}
+                                  <div className="text-left">
+                                    <h4 className="font-semibold mb-2 text-left">Characteristics</h4>
+                                    <div className="space-y-1 text-left">
+                                      {level.characteristics.map((char, i) => (
+                                        <p key={i} className="text-sm text-muted-foreground leading-relaxed text-left">
+                                          • {char}
+                                        </p>
+                                      ))}
+                                    </div>
+                                  </div>
+
+                                 {/* AQAL Quadrants */}
+                                 <div className="md:col-span-2 text-left">
+                                   <h4 className="font-semibold mb-3 text-left">AQAL Quadrants</h4>
+                                   <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                     <div className="p-3 bg-background/80 rounded border text-left">
+                                       <h5 className="font-medium text-sm mb-2 text-left">Interior-Individual</h5>
+                                       <p className="text-xs text-muted-foreground leading-relaxed text-left">{level.quadrants.interiorIndividual}</p>
+                                     </div>
+                                     <div className="p-3 bg-background/80 rounded border text-left">
+                                       <h5 className="font-medium text-sm mb-2 text-left">Exterior-Individual</h5>
+                                       <p className="text-xs text-muted-foreground leading-relaxed text-left">{level.quadrants.exteriorIndividual}</p>
+                                     </div>
+                                     <div className="p-3 bg-background/80 rounded border text-left">
+                                       <h5 className="font-medium text-sm mb-2 text-left">Interior-Collective</h5>
+                                       <p className="text-xs text-muted-foreground leading-relaxed text-left">{level.quadrants.interiorCollective}</p>
+                                     </div>
+                                     <div className="p-3 bg-background/80 rounded border text-left">
+                                       <h5 className="font-medium text-sm mb-2 text-left">Exterior-Collective</h5>
+                                       <p className="text-xs text-muted-foreground leading-relaxed text-left">{level.quadrants.exteriorCollective}</p>
+                                     </div>
                                    </div>
                                  </div>
 
-                                 {/* Characteristics */}
-                                 <div>
-                                   <h4 className="font-semibold mb-2">Characteristics</h4>
-                                   <div className="space-y-1">
-                                     {level.characteristics.map((char, i) => (
-                                       <p key={i} className="text-sm text-muted-foreground leading-relaxed">
-                                         • {char}
-                                       </p>
+                                 {/* Pitfalls */}
+                                 <div className="md:col-span-2 text-left">
+                                   <h4 className="font-semibold mb-2 text-left">Common Pitfalls</h4>
+                                   <div className="flex flex-wrap gap-2 text-left">
+                                     {level.pitfalls.map((pitfall, i) => (
+                                       <Badge key={i} variant="outline" className="text-xs">
+                                         {pitfall}
+                                       </Badge>
                                      ))}
                                    </div>
                                  </div>
-
-                                {/* AQAL Quadrants */}
-                                <div className="md:col-span-2">
-                                  <h4 className="font-semibold mb-3">AQAL Quadrants</h4>
-                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-                                    <div className="p-3 bg-background/80 rounded border">
-                                      <h5 className="font-medium text-sm mb-2">Interior-Individual</h5>
-                                      <p className="text-xs text-muted-foreground leading-relaxed">{level.quadrants.interiorIndividual}</p>
-                                    </div>
-                                    <div className="p-3 bg-background/80 rounded border">
-                                      <h5 className="font-medium text-sm mb-2">Exterior-Individual</h5>
-                                      <p className="text-xs text-muted-foreground leading-relaxed">{level.quadrants.exteriorIndividual}</p>
-                                    </div>
-                                    <div className="p-3 bg-background/80 rounded border">
-                                      <h5 className="font-medium text-sm mb-2">Interior-Collective</h5>
-                                      <p className="text-xs text-muted-foreground leading-relaxed">{level.quadrants.interiorCollective}</p>
-                                    </div>
-                                    <div className="p-3 bg-background/80 rounded border">
-                                      <h5 className="font-medium text-sm mb-2">Exterior-Collective</h5>
-                                      <p className="text-xs text-muted-foreground leading-relaxed">{level.quadrants.exteriorCollective}</p>
-                                    </div>
-                                  </div>
-                                </div>
-
-                                {/* Pitfalls */}
-                                <div className="md:col-span-2">
-                                  <h4 className="font-semibold mb-2">Common Pitfalls</h4>
-                                  <div className="flex flex-wrap gap-2">
-                                    {level.pitfalls.map((pitfall, i) => (
-                                      <Badge key={i} variant="outline" className="text-xs">
-                                        {pitfall}
-                                      </Badge>
-                                    ))}
-                                  </div>
-                                </div>
                               </div>
                             </div>
                           </TableCell>
