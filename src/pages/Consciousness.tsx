@@ -150,14 +150,6 @@ export default function Consciousness() {
           />
         </div>
 
-        {/* PHYXS Evolution D Map */}
-        <div className="mb-12">
-          <PHYXSTable 
-            data={phyxsMapData}
-            title="PHYXS Evolution D Map"
-            description="David Heggli's revolutionary approach that bridges psychological models with biophysical reality, mapping consciousness evolution to measurable biological, neural, and quantum markers across human development."
-          />
-        </div>
 
         {/* Part 2: The Next Leap */}
         <Card className="mt-12 glass-card">
@@ -234,6 +226,15 @@ export default function Consciousness() {
                 </div>
               </div>
 
+        {/* PHYXS Evolution D Map */}
+        <div className="mb-12">
+          <PHYXSTable 
+            data={phyxsMapData}
+            title="PHYXS Evolution D Map"
+            description="David Heggli's revolutionary approach that bridges psychological models with biophysical reality, mapping consciousness evolution to measurable biological, neural, and quantum markers across human development."
+          />
+        </div>
+
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-4">
                 Conclusion: A New Foundation for Understanding
               </h3>
@@ -256,7 +257,7 @@ export default function Consciousness() {
               <p className="text-sm text-muted-foreground">
                 <strong>Research Foundation:</strong> The AQAL framework is based on decades of developmental psychology research 
                 and integral theory by Ken Wilber. The PHYXS Evolution D Map represents David Heggli's innovative approach 
-                to bridging psychological models with measurable biophysical markers.
+                to expand the psychology based AQAL model and to expand it and to map it to measurable biophysical markers.
               </p>
               <p className="text-sm text-muted-foreground">
                 <strong>Important Note:</strong> These levels are not hierarchical in terms of human worth, but rather represent 
@@ -264,8 +265,8 @@ export default function Consciousness() {
                 Healthy development involves integrating insights from multiple levels rather than transcending and discarding them.
               </p>
               <p className="text-sm text-muted-foreground">
-                <strong>Digital Twin Applications:</strong> This research enables the creation of digital twins that can model 
-                consciousness states for educational, therapeutic, and developmental applications, representing a significant 
+                <strong>«Digital Twins» Applications:</strong> This research enables the creation of PERFECT digital twins that can model 
+                actual human brains with billions of digitally "living" billions of neurons and therefore makes consciousness states directly observable and testable for educational, therapeutic, and developmental applications, representing a significant 
                 advancement in consciousness research and practical application.
               </p>
             </div>
