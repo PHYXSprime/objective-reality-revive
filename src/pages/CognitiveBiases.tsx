@@ -25,9 +25,9 @@ export default function CognitiveBiases() {
   const uniqueCategories = [...new Set(biases.map(bias => bias.category))];
   const categories = [
     { value: 'all', label: t('filter.all') },
-    ...uniqueCategories.map(category => ({ 
-      value: category, 
-      label: t(`category.${category}`)
+    ...uniqueCategories.map(category => ({
+      value: category,
+      label: t(`category.${category}` as any)
     }))
   ];
 

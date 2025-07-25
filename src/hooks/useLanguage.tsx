@@ -7,7 +7,7 @@ export type { Language };
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
-  t: (key: TranslationKey) => string;
+  t: (key: TranslationKey | string) => string;
   isLoading: boolean;
   error: string | null;
 }
@@ -48,8 +48,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     loadLanguageTranslations(language);
   }, [language]);
 
-  const t = (key: TranslationKey): string => {
-    return translations[key] || key;
+  const t = (key: TranslationKey | string): string => {
+    return translations[key as TranslationKey] || key;
   };
 
   const contextValue: LanguageContextType = {
