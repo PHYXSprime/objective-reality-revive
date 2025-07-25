@@ -35,37 +35,6 @@ export const logicalFallaciesTranslations = {
 
 export const challengePageTranslations = {
   de: {
-    // Scientific Consensus Page
-    scientificConsensus: {
-      title: 'Wissenschaftlicher Konsens',
-      subtitle: 'Eine persönliche Bewertung der Sicherheit wissenschaftlicher Erkenntnisse',
-      criticalObservation: 'Kritische Beobachtung',
-      criticalText: 'Es ist durchaus möglich, dass ein erheblicher Teil dessen, was wir als "wissenschaftlichen Konsens" betrachten, in den nächsten Jahrzehnten als falsch erwiesen wird.',
-      confidenceLevels: 'Vertrauensniveaus nach Bereichen',
-      consensusVsDogma: 'Wissenschaftlicher Konsens vs. Dogma',
-      consensusVsDogmaText: 'Es gibt einen wichtigen Unterschied zwischen echtem wissenschaftlichem Konsens (der auf soliden Beweisen basiert) und dogmatischem Denken, das als Wissenschaft getarnt ist. Echter wissenschaftlicher Konsens ist vorläufig und offen für Revision angesichts neuer Beweise.',
-      balancedApproach: 'Ein ausgewogener Ansatz',
-      balancedApproachText: 'Der Schlüssel liegt darin, sowohl anti-wissenschaftlich als auch pseudowissenschaftlich zu sein. Wir müssen die Wissenschaft respektieren und dabei kritisch denkend bleiben.',
-      historicalPatterns: 'Historische Muster',
-      historicalPatternsText: 'Die Geschichte zeigt uns, dass wissenschaftliche Revolutionen oft von Außenseitern kommen, die den Konsens in Frage stellen. Von Galilei bis zu den Entdeckern der Plattentektonik wurden revolutionäre Ideen oft zunächst abgelehnt.',
-      practicalGuidelines: 'Praktische Richtlinien',
-      practicalGuidelinesText: 'Bewerten Sie wissenschaftliche Behauptungen kritisch, besonders wenn sie starke politische oder wirtschaftliche Auswirkungen haben. Suchen Sie nach Beweisen, nicht nach Autorität.'
-    },
-
-    // Indoctrination Page
-    indoctrination: {
-      title: 'Indoktrination',
-      subtitle: 'Die systematische Konditionierung von Überzeugungen',
-      definition: 'Was ist Indoktrination?',
-      definitionText: 'Indoktrination ist der Prozess der Vermittlung von Ideen, Einstellungen, kognitiven Strategien oder einer beruflichen Methodik. Es bezieht sich oft auf eine grundlegende Veränderung der Denkweise einer Person.',
-      primarySources: 'Hauptquellen der Indoktrination',
-      developmentalImpact: 'Entwicklungsauswirkungen',
-      developmentalImpactText: 'Die Auswirkungen der Indoktrination variieren je nach Lebensphase, in der sie auftritt:',
-      breakingFree: 'Befreiung von der Indoktrination',
-      breakingFreeText: 'Die Befreiung von der Indoktrination erfordert bewusste Anstrengung und kritisches Denken:',
-      warningSigns: 'Warnzeichen der Indoktrination',
-      warningSignsText: 'Achten Sie auf diese Indikatoren in Ihrem eigenen Denken oder das anderer:'
-    },
 
     // Propaganda Page
     propaganda: {
@@ -75,68 +44,188 @@ export const challengePageTranslations = {
       definitionText: 'Propaganda ist die systematische Verbreitung von Informationen, Ideen oder Gerüchten, um einer Institution, Sache oder Person zu helfen oder zu schaden. In der heutigen Welt ist sie subtiler und allgegenwärtiger geworden.',
       commonTechniques: 'Häufige Propagandatechniken',
       modernDigital: 'Moderne digitale Propaganda',
-      modernDigitalText: 'Das digitale Zeitalter hat neue Formen der Propaganda eingeführt:',
       buildingDefenses: 'Aufbau geistiger Verteidigung',
-      buildingDefensesText: 'Entwicklung von Widerstandsfähigkeit gegen Propaganda:',
-      warningSigns: 'Warnzeichen',
-      warningSignsText: 'Seien Sie vorsichtig bei Inhalten, die:',
+      warningSigns: 'Warnzeichen der Propaganda',
       actionSteps: 'Handlungsschritte',
-      actionStepsText: 'So bauen Sie Widerstandsfähigkeit gegen Propaganda auf:'
+      // Techniques
+      'technique.emotionalAppeals': 'Emotionale Appelle',
+      'technique.emotionalAppeals.desc': 'Verwendung von Angst, Wut, Patriotismus oder anderen Emotionen, um rationales Denken zu umgehen',
+      'technique.emotionalAppeals.example': 'Angstmache vor Bedrohungen, damit Menschen Einschränkungen akzeptieren',
+      'technique.bandwagon': 'Mitläufer-Effekt',
+      'technique.bandwagon.desc': 'Suggeriert, dass alle es tun, also sollten Sie es auch',
+      'technique.bandwagon.example': 'Umfragen, die Mehrheitsunterstützung zeigen, um Konformität zu erzwingen',
+      'technique.authority': 'Autoritätsappelle',
+      'technique.authority.desc': 'Verwendung respektierter Persönlichkeiten oder Institutionen zur Unterstützung einer Botschaft',
+      'technique.authority.example': 'Prominente-Empfehlungen oder Experten-Testimonials',
+      'technique.repetition': 'Wiederholung',
+      'technique.repetition.desc': 'Häufige Wiederholung von Botschaften, damit sie wahr erscheinen',
+      'technique.repetition.example': 'Ständige Medienwiederholung spezifischer Narrative',
+      'technique.falseDichotomy': 'Falsche Dichotomie',
+      'technique.falseDichotomy.desc': 'Präsentation von nur zwei Optionen, wenn mehr existieren',
+      'technique.falseDichotomy.example': 'Du bist entweder mit uns oder gegen uns',
+      'technique.loadedLanguage': 'Aufgeladene Sprache',
+      'technique.loadedLanguage.desc': 'Verwendung emotional aufgeladener Wörter zur Beeinflussung der Wahrnehmung',
+      'technique.loadedLanguage.example': 'Freiheitskämpfer vs. Terroristen für dieselbe Gruppe',
+      // Defense strategies
+      'defense.questionSources': 'Quellen hinterfragen',
+      'defense.questionSources.desc': 'Wer profitiert von dieser Botschaft? Was sind ihre Motivationen?',
+      'defense.seekPerspectives': 'Mehrere Perspektiven suchen',
+      'defense.seekPerspectives.desc': 'Suchen Sie nach gegensätzlichen Standpunkten und verschiedenen Interpretationen',
+      'defense.checkPrimary': 'Primärquellen prüfen',
+      'defense.checkPrimary.desc': 'Gehen Sie über Schlagzeilen hinaus zu tatsächlichen Daten und Originaldokumenten',
+      'defense.recognizeEmotional': 'Emotionale Manipulation erkennen',
+      'defense.recognizeEmotional.desc': 'Bemerken Sie, wann Ihre Emotionen statt Ihrer Vernunft angesprochen werden',
+      'defense.practicalCritical': 'Kritisches Denken praktizieren',
+      'defense.practicalCritical.desc': 'Wenden Sie logische Analyse an und hinterfragen Sie grundlegende Annahmen',
+      // Modern sections
+      'modern.algorithmicAmplification': 'Algorithmische Verstärkung',
+      'modern.psychologicalTargeting': 'Psychologische Zielausrichtung',
+      // Warning signs
+      'warning.extremeLanguage': 'Extreme emotionale Sprache',
+      'warning.oversimplified': 'Vereinfachte komplexe Themen',
+      'warning.moralSuperiority': 'Behauptungen moralischer Überlegenheit',
+      'warning.urgentCalls': 'Dringende Handlungsaufrufe',
+      'warning.silencingDissent': 'Unterdrückung von Dissens',
+      'warning.anonymousAuthorship': 'Anonyme oder unklare Urheberschaft',
+      'warning.undisclosedFunding': 'Nicht offengelegte Finanzierungsquellen',
+      'warning.noOpposing': 'Keine gegensätzlichen Standpunkte präsentiert',
+      'warning.noEvidence': 'Behauptungen ohne Beweise',
+      'warning.authorityWithoutExpertise': 'Autoritätsappelle ohne Expertise'
     },
 
-    // Censorship Page  
+    // Censorship Page
     censorship: {
       title: 'Zensur',
       subtitle: 'Moderne Formen der Informationskontrolle',
       politicalCorrectnessAlert: 'Die "Politische Korrektheit" ist oft ein Euphemismus für Zensur und gedankliche Kontrolle.',
       typesOfCensorship: 'Arten moderner Zensur',
-      propagandaLanguage: 'Propaganda-Sprache',
-      propagandaLanguageText: 'Achten Sie auf diese Begriffe, die oft verwendet werden, um Zensur zu rechtfertigen:',
-      sophistication: 'Die Raffinesse der Zensur',
-      sophisticationText: 'Moderne Zensur ist subtiler als je zuvor. Sie erfolgt durch Algorithmen, "Faktenprüfer" und soziale Ächtung statt durch offene Verbote.',
-      detection: 'Zensur erkennen',
-      detectionText: 'Achten Sie auf diese Zeichen:',
-      callToAction: 'Handlungsaufruf',
-      callToActionText: 'Freie Meinungsäußerung ist für eine gesunde Gesellschaft unerlässlich. Kämpfen Sie für Ihr Recht, Ideen frei zu erkunden und zu diskutieren.'
+      propagandaLanguage: 'Propaganda-Sprache-Alarm',
+      propagandaLanguageDesc: 'Diese Begriffe sind Teil der Indoktrinations- und Propaganda-Sprache und sollten sofort Warnsignale auslösen. Denken Sie daran: Was für manche ein "Freiheitskämpfer" ist, ist für andere ein "Terrorist".',
+      sophistication: 'Das Raffinesse-Problem',
+      sophisticationText: 'Moderne Zensur wird raffinierter und schwerer zu erkennen. Traditionelle offene Zensur wird durch subtile Manipulationstechniken ersetzt.',
+      detection: 'Wie man Zensur erkennt',
+      importanceOfFreeExpression: 'Die Bedeutung freier Meinungsäußerung',
+      importanceText: 'Freie und offene Diskussion ist für den menschlichen Fortschritt unerlässlich. Wenn wir Ideen zensieren, auch "falsche", verlieren wir die Gelegenheit, unsere eigenen Überzeugungen zu testen und neue Wahrheiten zu entdecken.',
+      // Censorship types
+      'type.politicalCorrectness': 'Politische Korrektheit',
+      'type.politicalCorrectness.desc': 'Gedankenpolizei, die kreative und progressive Diskussionen aus Angst vor Beleidigung tötet.',
+      'type.algorithmicBias': 'Algorithmische Voreingenommenheit',
+      'type.algorithmicBias.desc': 'Voreingenommene Algorithmen, die bestimmte Standpunkte unterdrücken und andere fördern.',
+      'type.shadowBanning': 'Ghosting/Shadow Banning',
+      'type.shadowBanning.desc': 'Inhalte unsichtbar machen, ohne Autor oder Publikum zu benachrichtigen.',
+      'type.labelSuppression': 'Label-basierte Unterdrückung',
+      'type.labelSuppression.desc': 'Inhalte durch Kennzeichnung als "Hassrede", "Desinformation" oder "Verschwörungstheorie" ablehnen.',
+      'type.memoryHole': 'Memory Hole',
+      'type.memoryHole.desc': 'Entfernung historischer Informationen oder vergangener Aussagen aus öffentlichen Aufzeichnungen.',
+      'type.deplatforming': 'Deplatformierung',
+      'type.deplatforming.desc': 'Vollständige Entfernung von Personen von Kommunikationsplattformen.',
+      // Warning labels
+      'label.hateSpeech': 'Hassrede',
+      'label.hateSpeech.reality': 'Oft verwendet, um legitime Kritik oder unpopuläre Meinungen zum Schweigen zu bringen',
+      'label.disinformation': 'Desinformation',
+      'label.disinformation.reality': 'Kann auf Informationen angewendet werden, die offizielle Narrative herausfordern',
+      'label.conspiracyTheory': 'Verschwörungstheorie',
+      'label.conspiracyTheory.reality': 'Manchmal verwendet, um gültige Fragen zu offiziellen Erklärungen abzutun',
+      'label.moderate': 'Moderat',
+      'label.moderate.reality': 'Subjektiver Begriff, der vollständig von der Perspektive des Beobachters abhängt',
+      // Detection methods
+      'detection.informationPatterns': 'Informationsmuster',
+      'detection.platformBehavior': 'Plattform-Verhalten',
+      'detection.socialSignals': 'Soziale Signale',
+      // Growing up section
+      'growingUp.title': 'Intellektuell erwachsen werden',
+      'growingUp.text': 'Sie haben das Recht, beleidigt zu sein. Werden Sie jetzt erwachsen und beginnen Sie, mit den Herausforderungen umzugehen, die dieses Leben Ihnen zuwirft. Nicht mehr beleidigt zu sein ist Teil des Erwachsenwerdens.'
     },
 
-    // Comedians Page
+    // Scientific Consensus Page
+    scientificConsensus: {
+      title: 'Wissenschaftlicher Konsens',
+      subtitle: 'Eine persönliche Bewertung der Zuverlässigkeit wissenschaftlicher Erkenntnisse',
+      criticalObservation: 'Kritische Beobachtung',
+      criticalText: 'Es ist durchaus möglich, dass ein erheblicher Teil dessen, was wir als "wissenschaftlichen Konsens" betrachten, in den nächsten Jahrzehnten als falsch erwiesen wird.',
+      confidenceLevels: 'Vertrauensniveaus nach Bereichen',
+      consensusVsDogma: 'Der Unterschied zum Dogma',
+      consensusVsDogmaText: 'Wissenschaftlicher Konsens unterscheidet sich von religiösem Dogma, weil er mit neuen Beweisen aktualisiert werden kann. Das bedeutet jedoch nicht, dass wir den aktuellen Konsens unkritisch akzeptieren sollten.',
+      balancedApproach: 'Ein ausgewogener Ansatz',
+      balancedApproachText: 'Das Ziel ist nicht, die Wissenschaft abzulehnen, sondern gesunden Skeptizismus zu bewahren und die Grenzen des aktuellen Wissens zu verstehen.',
+      historicalPattern: 'Historisches Muster',
+      practicalGuidelines: 'Praktische Richtlinien',
+      // Field descriptions
+      'field.mathematics': 'Mathematik',
+      'field.mathematics.desc': 'Bei den Grundlagen ist Betrug nahezu unmöglich',
+      'field.physics': 'Physik (Klassisch)',
+      'field.physics.desc': 'Gut etablierte Gesetze mit starken Beweisen',
+      'field.chemistry': 'Chemie',
+      'field.chemistry.desc': 'Solide experimentelle Grundlage',
+      'field.biology': 'Biologie',
+      'field.biology.desc': 'Komplexe Systeme mit vielen Variablen',
+      'field.medicine': 'Medizin',
+      'field.medicine.desc': 'Individuelle Variation und Komplexität',
+      'field.history': 'Geschichte',
+      'field.history.desc': 'Interpretation variiert, aber Fakten bleiben bestehen',
+      'field.psychology': 'Psychologie',
+      'field.psychology.desc': 'Replikationskrise und subjektive Elemente',
+      'field.nutrition': 'Ernährungswissenschaft',
+      'field.nutrition.desc': 'Widersprüchliche Studien und Industrieeinfluss',
+      'field.economics': 'Wirtschaftswissenschaften',
+      'field.economics.desc': 'Menschliches Verhalten und komplexe Systeme',
+      'field.climate': 'Klimawissenschaft',
+      'field.climate.desc': 'Komplexe Modelle mit vielen Variablen und politischem Einfluss',
+      'field.social': 'Sozialwissenschaften',
+      'field.social.desc': 'Kulturelle Voreingenommenheit und methodische Probleme',
+      // Guidelines
+      'guideline.checkFunding': 'Finanzierungsquellen und potenzielle Konflikte prüfen',
+      'guideline.lookReplication': 'Nach unabhängiger Replikation suchen',
+      'guideline.examineMethodology': 'Methodik und Stichprobengrößen untersuchen',
+      'guideline.considerAlternatives': 'Alternative Interpretationen berücksichtigen',
+      'guideline.skepticalClaims': 'Bei außergewöhnlichen Behauptungen besonders skeptisch sein',
+      // Red flags
+      'redflag.scienceSettled': '"Die Wissenschaft ist geklärt"-Aussagen',
+      'redflag.suppressDissent': 'Unterdrückung abweichender Stimmen',
+      'redflag.immediateAction': 'Behauptungen, die sofortiges Handeln erfordern',
+      'redflag.noOpenData': 'Mangel an offenen Daten oder Methodik',
+      'redflag.appealAuthority': 'Autoritätsappell statt Beweise'
+    },
+
+    // Indoctrination Page  
+    indoctrination: {
+      title: 'Indoktrination',
+      subtitle: 'Die systematische Konditionierung von Überzeugungen',
+      definition: 'Was ist Indoktrination?',
+      definitionText: 'Indoktrination ist der Prozess der Vermittlung von Ideen, Einstellungen, kognitiven Strategien oder einer beruflichen Methodik. Es bezieht sich oft auf eine grundlegende Veränderung der Denkweise einer Person.',
+      primarySources: 'Hauptquellen der Indoktrination',
+      primarySourcesDesc: 'Mehrere sich überschneidende Systeme arbeiten zusammen, um unsere Überzeugungen und Weltanschauung zu formen',
+      developmentalImpact: 'Entwicklungsauswirkungen',
+      breakingFree: 'Befreiung von der Indoktrination',
+      warningSigns: 'Warnzeichen der Indoktrination'
+    },
+
+    // Add missing challenge page translations
     comedians: {
       title: 'Komiker',
       subtitle: 'Die modernen Hofnarren der Wahrheit',
       importance: 'Die Bedeutung der Komödie',
       importanceText: 'Komiker spielen eine einzigartige Rolle in der Gesellschaft als moderne Hofnarren, die durch Humor Wahrheiten aussprechen können, die sonst zensiert würden.',
       cognitiveAbilities: 'Kognitive Fähigkeiten von Komikern',
-      cognitiveAbilitiesText: 'Erfolgreiche Komiker zeigen oft außergewöhnliche kognitive Fähigkeiten:',
       notableComedians: 'Bemerkenswerte Komiker-Philosophen',
       propagandaWarning: 'Vorsicht vor Propaganda',
-      propagandaWarningText: 'Nicht alle Komödie ist aufrichtig. Seien Sie vorsichtig bei:',
-      evaluatingTruth: 'Wahrheit vs. Manipulation bewerten',
-      evaluatingTruthText: 'Fragen Sie sich bei Komödie:'
+      evaluatingTruth: 'Wahrheit vs. Manipulation bewerten'
     },
 
-    // Street Epistemology Page
     streetEpistemology: {
       title: 'Straßen-Epistemologie',
       subtitle: 'Eine Methode zur Untersuchung von Überzeugungen durch sokratisches Hinterfragen',
       introduction: 'Einführung',
-      introductionText: 'Straßen-Epistemologie (SE) ist eine diskursbasierte Methode, die von Dr. Peter Boghossian entwickelt wurde, um Überzeugungen zu erkunden und zu untersuchen. Sie konzentriert sich darauf, die Zuverlässigkeit der Methoden zu bewerten, die Menschen verwenden, um zu ihren Überzeugungen zu gelangen.',
+      introductionText: 'Straßen-Epistemologie (SE) ist eine diskursbasierte Methode, die von Dr. Peter Boghossian entwickelt wurde, um Überzeugungen zu erkunden und zu untersuchen.',
       aboutBoghossian: 'Über Dr. Peter Boghossian',
-      aboutBoghossianText: 'Dr. Peter Boghossian ist Philosoph und Autor von "A Manual for Creating Atheists". Er entwickelte die Straßen-Epistemologie als praktische Anwendung sokratischen Hinterfragens zur Untersuchung von Überzeugungen.',
       corePrinciples: 'Kernprinzipien',
       keyQuestions: 'Schlüsselfragen',
-      keyQuestionsText: 'Diese Fragen helfen dabei, Überzeugungen zu erkunden:',
       process: 'Der SE-Prozess',
-      processText: 'Straßen-Epistemologie folgt einem strukturierten Ansatz:',
       commonMistakes: 'Häufige Fehler',
-      commonMistakesText: 'Vermeiden Sie diese häufigen Fallstricke:',
       benefits: 'Vorteile',
-      benefitsText: 'Das Praktizieren von SE kann zu folgenden Vorteilen führen:',
-      callToAction: 'Handlungsaufruf',
-      callToActionText: 'Beginnen Sie noch heute mit dem Üben der Straßen-Epistemologie. Fangen Sie mit sich selbst an - hinterfragen Sie Ihre eigenen Überzeugungen und die Methoden, die Sie verwendet haben, um zu ihnen zu gelangen.'
+      callToAction: 'Handlungsaufruf'
     },
 
-    // Dogmatic Beliefs Page
     dogmaticBeliefs: {
       title: 'Dogmatische Überzeugungen',
       subtitle: 'Erkennen und Überwinden starren Denkens',
@@ -144,12 +233,9 @@ export const challengePageTranslations = {
       characteristics: 'Merkmale dogmatischen Denkens',
       examplesAcrossDomains: 'Beispiele in verschiedenen Bereichen',
       psychologicalRoots: 'Psychologische Wurzeln',
-      psychologicalRootsText: 'Dogmatisches Denken entspringt oft unserem grundlegenden Bedürfnis nach Sicherheit und Zugehörigkeit. Es bietet:',
-      stepsToLiberation: 'Schritte zur Befreiung',
-      stepsToLiberationText: 'Intellektuelle Flexibilität entwickeln:'
+      stepsToLiberation: 'Schritte zur Befreiung'
     },
 
-    // Scientific Method Page
     scientificMethod: {
       title: 'Die wissenschaftliche Methode',
       subtitle: 'Ein Werkzeug für objektive Wahrheitssuche',
@@ -159,65 +245,55 @@ export const challengePageTranslations = {
       corePrinciples: 'Kernprinzipien',
       commonMisunderstandings: 'Häufige Missverständnisse',
       personalBeliefs: 'Wissenschaftliches Denken auf persönliche Überzeugungen anwenden',
-      personalBeliefsText: 'Sie können wissenschaftliche Prinzipien auf Ihre eigenen Überzeugungen anwenden:',
-      limitations: 'Grenzen verstehen',
-      limitationsText: 'Die Wissenschaft ist mächtig, aber nicht allmächtig. Sie hat Grenzen und kann bestimmte Arten von Fragen nicht beantworten.'
+      limitations: 'Grenzen verstehen'
     },
 
-    // Lazy Thinking Page
     lazyThinking: {
       title: 'Faules Denken',
       subtitle: 'Die kognitive Epidemie unserer Zeit',
       definition: 'Faules Denken bezieht sich auf den Rückgriff auf mentale Abkürzungen, Annahmen und oberflächliche Analysen anstelle von rigorosem, kritischem Denken.',
       manifestations: 'Erscheinungsformen',
       causes: 'Ursachen',
-      causesText: 'Mehrere Faktoren tragen zu faulem Denken bei:',
       personalCosts: 'Persönliche Kosten',
-      personalCostsText: 'Faules Denken kann zu folgenden Problemen führen:',
       societalCosts: 'Gesellschaftliche Kosten',
-      societalCostsText: 'Wenn faules Denken weit verbreitet ist, leiden die Gesellschaften unter:',
       antidotes: 'Gegenmittel',
-      antidotesText: 'Strategien zur Bekämpfung faules Denkens:',
-      buildingHabits: 'Bessere Denkgewohnheiten aufbauen',
-      buildingHabitsText: 'Entwickeln Sie diese täglichen Praktiken:'
+      buildingHabits: 'Bessere Denkgewohnheiten aufbauen'
     },
 
-    // Socratic Questioning Page
     socraticQuestioning: {
       title: 'Sokratisches Hinterfragen',
       subtitle: 'Die Kunst des disziplinierten Hinterfragens',
       introduction: 'Sokratisches Hinterfragen ist eine Form disziplinierter Fragestellung, die verwendet werden kann, um rigoroses Denken und kritische Denkfähigkeiten zu verfolgen.',
       keyDistinctions: 'Schlüsselmerkmale',
-      keyDistinctionsText: 'Sokratisches Hinterfragen unterscheidet sich von normalem Fragen durch:',
       purposes: 'Zwecke des sokratischen Hinterfragens',
       foundations: 'Fünf theoretische Grundlagen',
       questionTypes: 'Sechs Arten sokratischer Fragen',
       questioningProcess: 'Der Fragesteller-Prozess',
-      questioningProcessText: 'Befolgen Sie diese Schritte für effektives sokratisches Hinterfragen:',
       bestPractices: 'Beste Praktiken',
-      bestPracticesText: 'Für erfolgreiche sokratische Gespräche:',
       exampleInAction: 'Beispiel in Aktion',
-      exampleInActionText: 'Hier ist ein kurzes Beispiel sokratischen Hinterfragens:',
-      callToAction: 'Handlungsaufruf',
-      callToActionText: 'Beginnen Sie damit, sokratisches Hinterfragen in Ihren täglichen Gesprächen zu praktizieren. Beginnen Sie mit sich selbst - stellen Sie Ihre eigenen Annahmen in Frage.'
+      callToAction: 'Handlungsaufruf'
     },
 
-    // Co-Evolution Page  
     coEvolution: {
       title: 'Ko-Evolution',
       subtitle: 'Wie religiöse Denkmuster in säkularen Kontexten überleben',
       hypothesis: 'Die Ko-Evolutionshypothese',
       hypothesisText: 'Menschen haben sich entwickelt, um in einer religiösen Welt zu leben. Auch wenn religiöse Überzeugungen abnehmen, bleiben die zugrunde liegenden kognitiven Muster bestehen und manifestieren sich in säkularen Kontexten.',
       evolutionaryPatterns: 'Evolutionäre Muster',
-      evolutionaryPatternsText: 'Religiöse Denkmuster finden neue säkulare Ausdrucksformen:',
       modernTraps: 'Moderne kognitive Fallen',
-      modernTrapsText: 'Erkenne diese säkularen Versionen religiösen Denkens:',
       historicalExamples: 'Historische Beispiele',
-      historicalExamplesText: 'Die Geschichte zeigt uns, wie sich diese Muster wiederholen:',
       liberationStrategies: 'Befreiungsstrategien',
-      liberationStrategiesText: 'Befreien Sie sich von säkular-heiligem Denken:',
-      finalThoughts: 'Abschließende Gedanken',
-      finalThoughtsText: 'Das Erkennen dieser Muster ist der erste Schritt zur intellektuellen Freiheit. Wir können die Vorteile sozialer Zusammengehörigkeit genießen, ohne unsere kritischen Denkfähigkeiten zu opfern.'
+      finalThoughts: 'Abschließende Gedanken'
+    },
+
+    psychologicalWeakness: {
+      title: 'Psychologische Schwächen',
+      subtitle: 'Menschliche Verletzlichkeiten, die ausgenutzt werden können'
+    },
+
+    ego: {
+      title: 'Ego',
+      subtitle: 'Wie persönliche Identität objektives Denken behindert'
     }
   }
 };

@@ -8,57 +8,57 @@ export default function Propaganda() {
 
   const techniques = [
     {
-      name: "Emotional Appeals",
-      description: "Using fear, anger, patriotism, or other emotions to bypass rational thinking",
-      example: "Fear-mongering about threats to make people accept restrictions"
+      name: t('propaganda.technique.emotionalAppeals'),
+      description: t('propaganda.technique.emotionalAppeals.desc'),
+      example: t('propaganda.technique.emotionalAppeals.example')
     },
     {
-      name: "Bandwagon Effect",
-      description: "Suggesting everyone is doing it, so you should too",
-      example: "Polls showing majority support to pressure conformity"
+      name: t('propaganda.technique.bandwagon'),
+      description: t('propaganda.technique.bandwagon.desc'),
+      example: t('propaganda.technique.bandwagon.example')
     },
     {
-      name: "Authority Appeals",
-      description: "Using respected figures or institutions to endorse a message",
-      example: "Celebrity endorsements or expert testimonials"
+      name: t('propaganda.technique.authority'),
+      description: t('propaganda.technique.authority.desc'),
+      example: t('propaganda.technique.authority.example')
     },
     {
-      name: "Repetition",
-      description: "Repeating messages frequently to make them seem true",
-      example: "Constant media repetition of specific narratives"
+      name: t('propaganda.technique.repetition'),
+      description: t('propaganda.technique.repetition.desc'),
+      example: t('propaganda.technique.repetition.example')
     },
     {
-      name: "False Dichotomy",
-      description: "Presenting only two options when more exist",
-      example: "You're either with us or against us"
+      name: t('propaganda.technique.falseDichotomy'),
+      description: t('propaganda.technique.falseDichotomy.desc'),
+      example: t('propaganda.technique.falseDichotomy.example')
     },
     {
-      name: "Loaded Language",
-      description: "Using emotionally charged words to influence perception",
-      example: "Freedom fighters vs. terrorists for the same group"
+      name: t('propaganda.technique.loadedLanguage'),
+      description: t('propaganda.technique.loadedLanguage.desc'),
+      example: t('propaganda.technique.loadedLanguage.example')
     }
   ];
 
   const defenses = [
     {
-      title: "Question Sources",
-      description: "Who benefits from this message? What are their motivations?"
+      title: t('propaganda.defense.questionSources'),
+      description: t('propaganda.defense.questionSources.desc')
     },
     {
-      title: "Seek Multiple Perspectives",
-      description: "Look for opposing viewpoints and different interpretations"
+      title: t('propaganda.defense.seekPerspectives'),
+      description: t('propaganda.defense.seekPerspectives.desc')
     },
     {
-      title: "Check Primary Sources",
-      description: "Go beyond headlines to actual data and original documents"
+      title: t('propaganda.defense.checkPrimary'),
+      description: t('propaganda.defense.checkPrimary.desc')
     },
     {
-      title: "Recognize Emotional Manipulation",
-      description: "Notice when your emotions are being targeted rather than your reason"
+      title: t('propaganda.defense.recognizeEmotional'),
+      description: t('propaganda.defense.recognizeEmotional.desc')
     },
     {
-      title: "Practice Critical Thinking",
-      description: "Apply logical analysis and question underlying assumptions"
+      title: t('propaganda.defense.practicalCritical'),
+      description: t('propaganda.defense.practicalCritical.desc')
     }
   ];
 
@@ -109,11 +109,10 @@ export default function Propaganda() {
           </div>
         </div>
 
-        {/* Common Techniques */}
         <div className="mb-12">
           <div className="glass-card p-6 text-center mb-8 max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Common Propaganda Techniques
+              {t('propaganda.commonTechniques')}
             </h2>
             <p className="text-muted-foreground">
               Recognizing these methods helps build resistance to manipulation
@@ -139,15 +138,14 @@ export default function Propaganda() {
           </div>
         </div>
 
-        {/* Modern Propaganda */}
         <div className="glass-card p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Eye className="h-6 w-6 text-blue-600" />
-            <h2 className="text-2xl font-bold text-foreground">Modern Digital Propaganda</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('propaganda.modernDigital')}</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Algorithmic Amplification</h4>
+              <h4 className="font-semibold text-foreground mb-4">{t('propaganda.modern.algorithmicAmplification')}</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>• Social media algorithms create echo chambers</li>
                 <li>• Personalized content reinforces existing beliefs</li>
@@ -156,7 +154,7 @@ export default function Propaganda() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Psychological Targeting</h4>
+              <h4 className="font-semibold text-foreground mb-4">{t('propaganda.modern.psychologicalTargeting')}</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>• Data mining reveals personal vulnerabilities</li>
                 <li>• Micro-targeting delivers specific messages to groups</li>
@@ -167,11 +165,10 @@ export default function Propaganda() {
           </div>
         </div>
 
-        {/* Building Defenses */}
         <div className="mb-12">
           <div className="glass-card p-6 text-center mb-8 max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Building Mental Defenses
+              {t('propaganda.buildingDefenses')}
             </h2>
             <p className="text-muted-foreground">
               Practical strategies to resist propaganda and maintain independent thinking
@@ -195,11 +192,10 @@ export default function Propaganda() {
           </div>
         </div>
 
-        {/* Warning Signs */}
         <div className="glass-card p-8 mb-12 border-orange-200 dark:border-orange-800">
           <div className="flex items-center gap-3 mb-6">
             <AlertTriangle className="h-6 w-6 text-orange-600" />
-            <h2 className="text-2xl font-bold text-foreground">Warning Signs of Propaganda</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('propaganda.warningSigns')}</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
@@ -225,11 +221,10 @@ export default function Propaganda() {
           </div>
         </div>
 
-        {/* Action Steps */}
         <div className="glass-card p-8">
           <div className="flex items-center gap-3 mb-6">
             <Brain className="h-6 w-6 text-purple-600" />
-            <h2 className="text-2xl font-bold text-foreground">Take Action</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('propaganda.actionSteps')}</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
