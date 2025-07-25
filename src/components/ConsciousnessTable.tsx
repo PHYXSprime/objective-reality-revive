@@ -101,11 +101,10 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
               </TableRow>
             </TableHeader>
             <TableBody>
-              {data.map((level, index) => {
+              {data.flatMap((level, index) => {
                 const colors = getLevelColors(level, index);
-                return (
-                  <React.Fragment key={index}>
-                    <TableRow 
+                return [
+                    <TableRow key={`row-${index}`}
                       className={`cursor-pointer hover:bg-muted/50 border-l-[10px] ${colors.bg} ${colors.border}`}
                       onClick={() => toggleRow(index)}
                     >
@@ -132,10 +131,10 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
                       <TableCell className="text-sm max-w-xs">
                         {level.method}
                       </TableCell>
-                    </TableRow>
-                    <Collapsible open={openRows.has(index)}>
+                    </TableRow>,
+                    <Collapsible key={`collapsible-${index}`} open={openRows.has(index)}>
                       <CollapsibleContent>
-                        <TableRow>
+                        <TableRow key={`content-${index}`}>
                           <TableCell colSpan={5} className="p-0">
                             <div className={`p-6 border-t border-l-[10px] ${colors.bg} ${colors.border}`}>
                               <div className="grid md:grid-cols-2 gap-6">
@@ -203,8 +202,7 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
                         </TableRow>
                       </CollapsibleContent>
                     </Collapsible>
-                  </React.Fragment>
-                );
+                  ];
               })}
             </TableBody>
           </Table>

@@ -101,11 +101,10 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {data.map((level, index) => {
+              {data.flatMap((level, index) => {
                 const colors = getEvolutionColors(level.evolutionPoint);
-                return (
-                  <React.Fragment key={index}>
-                    <TableRow 
+                return [
+                    <TableRow key={`row-${index}`}
                       className={`cursor-pointer hover:bg-muted/50 border-l-[10px] ${colors.bg} ${colors.border}`}
                       onClick={() => toggleRow(index)}
                     >
@@ -130,10 +129,10 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
                       <TableCell className="text-sm max-w-xs">
                         {level.significance}
                       </TableCell>
-                    </TableRow>
-                    <Collapsible open={openRows.has(index)}>
+                    </TableRow>,
+                    <Collapsible key={`collapsible-${index}`} open={openRows.has(index)}>
                       <CollapsibleContent>
-                        <TableRow>
+                        <TableRow key={`content-${index}`}>
                           <TableCell colSpan={5} className="p-0">
                             <div className={`p-6 border-t border-l-[10px] ${colors.bg} ${colors.border}`}>
                               <div className="grid md:grid-cols-2 gap-6">
@@ -184,8 +183,7 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
                         </TableRow>
                       </CollapsibleContent>
                     </Collapsible>
-                  </React.Fragment>
-                );
+                  ];
               })}
             </TableBody>
           </Table>
