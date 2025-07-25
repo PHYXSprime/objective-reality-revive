@@ -197,10 +197,35 @@ export const challengePageTranslations = {
       primarySourcesDesc: 'Mehrere sich überschneidende Systeme arbeiten zusammen, um unsere Überzeugungen und Weltanschauung zu formen',
       developmentalImpact: 'Entwicklungsauswirkungen',
       breakingFree: 'Befreiung von der Indoktrination',
-      warningSigns: 'Warnzeichen der Indoktrination'
+      warningSigns: 'Warnzeichen der Indoktrination',
+      // Sources
+      'source.family': 'Familie & kulturelles Umfeld',
+      'source.family.desc': 'Frühe Kindheitserfahrungen prägen Grundüberzeugungen und Weltanschauung',
+      'source.education': 'Bildungssystem',
+      'source.education.desc': 'Strukturiertes Lernen, das Konformität über kritisches Denken fördern kann',
+      'source.media': 'Medien & Information',
+      'source.media.desc': 'Ständige Exposition gegenüber ausgewählten Informationen prägt die Realitätswahrnehmung',
+      'source.state': 'Staat & Institutionen',
+      'source.state.desc': 'Regierungs- und institutionelle Botschaften, die spezifische Narrative fördern',
+      // Stages
+      'stage.earlyChildhood': 'Frühe Kindheit (0-7)',
+      'stage.earlyChildhood.desc': 'Aufnahme fundamentaler Überzeugungen ohne kritische Bewertung',
+      'stage.earlyChildhood.impact': 'Bildet grundlegende Weltanschauung und emotionale Assoziationen',
+      'stage.schoolAge': 'Schulalter (7-14)',
+      'stage.schoolAge.desc': 'Formale Bildung verstärkt oder stellt familiäre Überzeugungen in Frage',
+      'stage.schoolAge.impact': 'Entwickelt Denkmuster und Autoritätsbeziehungen',
+      'stage.adolescence': 'Adoleszenz (14-21)',
+      'stage.adolescence.desc': 'Peer-Einfluss und Identitätsbildung prägen Glaubenssysteme',
+      'stage.adolescence.impact': 'Festigt oder rebelliert gegen frühere Programmierung',
+      'stage.adulthood': 'Erwachsenenalter (21+)',
+      'stage.adulthood.desc': 'Berufliche und soziale Umgebungen beeinflussen weiterhin Überzeugungen',
+      'stage.adulthood.impact': 'Karriere- und sozialer Druck erhält oder modifiziert Weltanschauung',
+      // Warning signs
+      'warning.inOthers': 'Bei anderen',
+      'warning.inYourself': 'Bei sich selbst',
+      'warning.inSystems': 'In Systemen'
     },
 
-    // Add missing challenge page translations
     comedians: {
       title: 'Komiker',
       subtitle: 'Die modernen Hofnarren der Wahrheit',

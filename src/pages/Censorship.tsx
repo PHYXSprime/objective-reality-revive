@@ -9,38 +9,38 @@ export default function Censorship() {
 
   const censorshipTypes = [
     {
-      type: "Political Correctness",
-      description: "Thought police that kills creative and progressive discussions out of fear of offending someone.",
+      type: t('censorship.type.politicalCorrectness'),
+      description: t('censorship.type.politicalCorrectness.desc'),
       danger: "High",
       color: "text-red-600 dark:text-red-400"
     },
     {
-      type: "Algorithmic Bias",
-      description: "Biased algorithms that suppress certain viewpoints while promoting others.",
+      type: t('censorship.type.algorithmicBias'),
+      description: t('censorship.type.algorithmicBias.desc'),
       danger: "High",
       color: "text-red-600 dark:text-red-400"
     },
     {
-      type: "Ghosting/Shadow Banning",
-      description: "Making content invisible without notifying the author or audience.",
+      type: t('censorship.type.shadowBanning'),
+      description: t('censorship.type.shadowBanning.desc'),
       danger: "Medium",
       color: "text-orange-600 dark:text-orange-400"
     },
     {
-      type: "Label-Based Suppression",
-      description: "Dismissing content by labeling it as 'hate speech', 'disinformation', or 'conspiracy theory'.",
+      type: t('censorship.type.labelSuppression'),
+      description: t('censorship.type.labelSuppression.desc'),
       danger: "High",
       color: "text-red-600 dark:text-red-400"
     },
     {
-      type: "Memory Hole",
-      description: "Removing historical information or past statements from public record.",
+      type: t('censorship.type.memoryHole'),
+      description: t('censorship.type.memoryHole.desc'),
       danger: "Medium",
       color: "text-orange-600 dark:text-orange-400"
     },
     {
-      type: "Deplatforming",
-      description: "Removing individuals from communication platforms entirely.",
+      type: t('censorship.type.deplatforming'),
+      description: t('censorship.type.deplatforming.desc'),
       danger: "High",
       color: "text-red-600 dark:text-red-400"
     }
@@ -48,20 +48,20 @@ export default function Censorship() {
 
   const warningLabels = [
     {
-      label: "Hate Speech",
-      reality: "Often used to silence legitimate criticism or unpopular opinions"
+      label: t('censorship.label.hateSpeech'),
+      reality: t('censorship.label.hateSpeech.reality')
     },
     {
-      label: "Disinformation",
-      reality: "May be applied to information that challenges official narratives"
+      label: t('censorship.label.disinformation'),
+      reality: t('censorship.label.disinformation.reality')
     },
     {
-      label: "Conspiracy Theory",
-      reality: "Sometimes used to dismiss valid questions about official explanations"
+      label: t('censorship.label.conspiracyTheory'),
+      reality: t('censorship.label.conspiracyTheory.reality')
     },
     {
-      label: "Moderate",
-      reality: "Subjective term that depends entirely on the observer's perspective"
+      label: t('censorship.label.moderate'),
+      reality: t('censorship.label.moderate.reality')
     }
   ];
 
@@ -96,11 +96,10 @@ export default function Censorship() {
           </CardContent>
         </Card>
 
-        {/* Types of Modern Censorship */}
         <Card className="glass-card mb-8">
           <CardHeader>
             <CardTitle className="text-2xl font-bold">
-              Types of Modern Censorship
+              {t('censorship.typesOfCensorship')}
             </CardTitle>
             <CardDescription className="text-muted-foreground">
               Understanding the various forms of censorship helps us recognize and resist them.
@@ -136,11 +135,10 @@ export default function Censorship() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <MessageSquare className="h-6 w-6 text-primary" />
-              <CardTitle className="text-2xl">Propaganda Language Alert</CardTitle>
+              <CardTitle className="text-2xl">{t('censorship.propagandaLanguage')}</CardTitle>
             </div>
             <CardDescription className="text-muted-foreground">
-              These labels are part of indoctrination and propaganda language and should immediately 
-              raise red flags. Remember: who for some is a "freedom fighter", for others is a "terrorist".
+              {t('censorship.propagandaLanguageDesc')}
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -161,13 +159,12 @@ export default function Censorship() {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <Eye className="h-6 w-6 text-primary" />
-                <CardTitle>The Sophistication Problem</CardTitle>
+                <CardTitle>{t('censorship.sophistication')}</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                Modern censorship is becoming more sophisticated and harder to detect. 
-                Traditional overt censorship is being replaced by subtle manipulation techniques.
+                {t('censorship.sophisticationText')}
               </p>
               <ul className="space-y-2 text-muted-foreground">
                 <li>• Algorithmic suppression appears neutral</li>
@@ -182,13 +179,12 @@ export default function Censorship() {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <Shield className="h-6 w-6 text-primary" />
-                <CardTitle>Growing Up Intellectually</CardTitle>
+                <CardTitle>{t('censorship.growingUp.title')}</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
               <p className="text-muted-foreground leading-relaxed mb-4">
-                You have the right to be offended. Now grow up and start dealing with the challenges 
-                this life is throwing at you. Not being offended anymore is part of growing up.
+                {t('censorship.growingUp.text')}
               </p>
               <ul className="space-y-2 text-muted-foreground">
                 <li>• Develop thick skin for opposing viewpoints</li>

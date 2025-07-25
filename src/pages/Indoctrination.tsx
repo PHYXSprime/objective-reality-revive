@@ -9,50 +9,50 @@ export default function Indoctrination() {
   const sources = [
     {
       icon: Users,
-      title: "Family & Cultural Environment",
-      description: "Early childhood experiences shape core beliefs and worldview",
+      title: t('indoctrination.source.family'),
+      description: t('indoctrination.source.family.desc'),
       examples: ["Religious upbringing", "Political family values", "Cultural traditions", "Social class expectations"]
     },
     {
       icon: BookOpen,
-      title: "Educational System",
-      description: "Structured learning that can promote conformity over critical thinking",
+      title: t('indoctrination.source.education'),
+      description: t('indoctrination.source.education.desc'),
       examples: ["Standardized curricula", "Authority-based learning", "Peer pressure", "Institutional values"]
     },
     {
       icon: Eye,
-      title: "Media & Information",
-      description: "Constant exposure to selected information shapes perception of reality",
+      title: t('indoctrination.source.media'),
+      description: t('indoctrination.source.media.desc'),
       examples: ["News bias", "Social media algorithms", "Entertainment messaging", "Advertising influence"]
     },
     {
       icon: Shield,
-      title: "State & Institutions",
-      description: "Governmental and institutional messaging that promotes specific narratives",
+      title: t('indoctrination.source.state'),
+      description: t('indoctrination.source.state.desc'),
       examples: ["National narratives", "Legal frameworks", "Public policy messaging", "Historical interpretation"]
     }
   ];
 
   const stages = [
     {
-      phase: "Early Childhood (0-7)",
-      description: "Absorption of fundamental beliefs without critical evaluation",
-      impact: "Forms basic worldview and emotional associations"
+      phase: t('indoctrination.stage.earlyChildhood'),
+      description: t('indoctrination.stage.earlyChildhood.desc'),
+      impact: t('indoctrination.stage.earlyChildhood.impact')
     },
     {
-      phase: "School Age (7-14)",
-      description: "Formal education reinforces or challenges family beliefs",
-      impact: "Develops thinking patterns and authority relationships"
+      phase: t('indoctrination.stage.schoolAge'),
+      description: t('indoctrination.stage.schoolAge.desc'),
+      impact: t('indoctrination.stage.schoolAge.impact')
     },
     {
-      phase: "Adolescence (14-21)",
-      description: "Peer influence and identity formation shape belief systems",
-      impact: "Solidifies or rebels against earlier programming"
+      phase: t('indoctrination.stage.adolescence'),
+      description: t('indoctrination.stage.adolescence.desc'),
+      impact: t('indoctrination.stage.adolescence.impact')
     },
     {
-      phase: "Adulthood (21+)",
-      description: "Professional and social environments continue influencing beliefs",
-      impact: "Career and social pressures maintain or modify worldview"
+      phase: t('indoctrination.stage.adulthood'),
+      description: t('indoctrination.stage.adulthood.desc'),
+      impact: t('indoctrination.stage.adulthood.impact')
     }
   ];
 
@@ -107,10 +107,10 @@ export default function Indoctrination() {
         <div className="mb-12">
           <div className="glass-card rounded-2xl p-6 text-center mb-8 max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Primary Sources of Indoctrination
+              {t('indoctrination.primarySources')}
             </h2>
             <p className="text-muted-foreground">
-              Multiple overlapping systems work together to shape our beliefs and worldview
+              {t('indoctrination.primarySourcesDesc')}
             </p>
           </div>
           
@@ -143,7 +143,7 @@ export default function Indoctrination() {
         <div className="glass-card rounded-2xl p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Target className="h-6 w-6 text-green-600" />
-            <h2 className="text-2xl font-bold text-foreground">Developmental Impact</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('indoctrination.developmentalImpact')}</h2>
           </div>
           <div className="space-y-6">
             {stages.map((stage, index) => (
@@ -160,7 +160,7 @@ export default function Indoctrination() {
         <div className="glass-card rounded-2xl p-8 mb-12 border-orange-200 dark:border-orange-800">
           <div className="flex items-center gap-3 mb-6">
             <AlertTriangle className="h-6 w-6 text-orange-600" />
-            <h2 className="text-2xl font-bold text-foreground">Breaking Free from Indoctrination</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('indoctrination.breakingFree')}</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -190,11 +190,11 @@ export default function Indoctrination() {
         <div className="glass-card rounded-2xl p-8">
           <div className="flex items-center gap-3 mb-6">
             <Eye className="h-6 w-6 text-red-600" />
-            <h2 className="text-2xl font-bold text-foreground">Warning Signs of Indoctrination</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('indoctrination.warningSigns')}</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <div>
-              <h4 className="font-semibold text-foreground mb-3">In Others:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('indoctrination.warning.inOthers')}:</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>• Absolute certainty without evidence</li>
                 <li>• Unwillingness to consider alternatives</li>
@@ -203,7 +203,7 @@ export default function Indoctrination() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-3">In Yourself:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('indoctrination.warning.inYourself')}:</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>• Defensive feelings when beliefs are questioned</li>
                 <li>• Inability to explain why you believe something</li>
@@ -212,7 +212,7 @@ export default function Indoctrination() {
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-3">In Systems:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('indoctrination.warning.inSystems')}:</h4>
               <ul className="space-y-2 text-muted-foreground">
                 <li>• Discouraging questions or doubt</li>
                 <li>• Punishing dissent or independent thinking</li>

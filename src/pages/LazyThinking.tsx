@@ -113,10 +113,10 @@ export default function LazyThinking() {
         <div className="mb-12 text-center">
           <div className="glass-card rounded-2xl p-8 max-w-4xl mx-auto mb-8">
             <h1 className="text-4xl font-bold text-foreground mb-6">
-              Lazy Thinking: The Path of Least Mental Resistance
+              {t('lazyThinking.title')}
             </h1>
             <p className="text-xl text-muted-foreground">
-              Understanding how mental shortcuts and cognitive laziness lead us away from truth and toward convenient fiction
+              {t('lazyThinking.subtitle')}
             </p>
           </div>
         </div>
@@ -125,13 +125,10 @@ export default function LazyThinking() {
         <div className="glass-card rounded-2xl p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Zap className="h-6 w-6 text-yellow-600" />
-            <h2 className="text-2xl font-bold text-foreground">What is Lazy Thinking?</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('lazyThinking.definition')}</h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Lazy thinking is the tendency to use mental shortcuts, avoid deep analysis, and accept 
-            superficial explanations rather than engaging in the hard work of critical reasoning. 
-            While mental efficiency can be useful, lazy thinking often leads to poor decisions, 
-            false beliefs, and missed opportunities for understanding.
+            {t('lazyThinking.definitionText')}
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
@@ -159,7 +156,7 @@ export default function LazyThinking() {
         <div className="mb-12">
           <div className="glass-card rounded-2xl p-6 text-center mb-8 max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Common Forms of Lazy Thinking
+              {t('lazyThinking.manifestations')}
             </h2>
             <p className="text-muted-foreground">
               Recognizing these patterns helps identify when we're taking cognitive shortcuts
@@ -195,7 +192,7 @@ export default function LazyThinking() {
         <div className="glass-card rounded-2xl p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Target className="h-6 w-6 text-orange-600" />
-            <h2 className="text-2xl font-bold text-foreground">Why Do We Think Lazily?</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('lazyThinking.causes')}</h2>
           </div>
           <div className="space-y-6">
             {causes.map((cause, index) => (
@@ -246,7 +243,7 @@ export default function LazyThinking() {
         <div className="mb-12">
           <div className="glass-card rounded-2xl p-6 text-center mb-8 max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Antidotes to Lazy Thinking
+              {t('lazyThinking.antidotes')}
             </h2>
             <p className="text-muted-foreground">
               Practical strategies to develop more rigorous and thoughtful mental habits
@@ -279,7 +276,7 @@ export default function LazyThinking() {
         <div className="glass-card rounded-2xl p-8 border-green-200 dark:border-green-800">
           <div className="flex items-center gap-3 mb-6">
             <Clock className="h-6 w-6 text-green-600" />
-            <h2 className="text-2xl font-bold text-foreground">Building Deeper Thinking Habits</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('lazyThinking.buildingHabits')}</h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
             Overcoming lazy thinking requires deliberate practice and patience. The goal isn't to 

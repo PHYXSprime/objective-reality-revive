@@ -97,10 +97,10 @@ export default function DogmaticBeliefs() {
         <div className="mb-12 text-center">
           <div className="glass-card rounded-2xl p-8 max-w-4xl mx-auto mb-8">
             <h1 className="text-4xl font-bold text-foreground mb-6">
-              Dogmatic Beliefs: The Prison of Certainty
+              {t('dogmaticBeliefs.title')}
             </h1>
             <p className="text-xl text-muted-foreground">
-              Understanding how rigid thinking patterns prevent growth and distort our perception of reality
+              {t('dogmaticBeliefs.subtitle')}
             </p>
           </div>
         </div>
@@ -109,12 +109,10 @@ export default function DogmaticBeliefs() {
         <div className="glass-card rounded-2xl p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Shield className="h-6 w-6 text-red-600" />
-            <h2 className="text-2xl font-bold text-foreground">What Are Dogmatic Beliefs?</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('dogmaticBeliefs.definition')}</h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Dogmatic beliefs are principles or ideas that are held as incontrovertibly true, 
-            often without evidence or despite contrary evidence. They create mental barriers 
-            that prevent learning, growth, and accurate understanding of reality.
+            {t('dogmaticBeliefs.definitionText')}
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
@@ -142,7 +140,7 @@ export default function DogmaticBeliefs() {
         <div className="mb-12">
           <div className="glass-card rounded-2xl p-6 text-center mb-8 max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Characteristics of Dogmatic Thinking
+              {t('dogmaticBeliefs.characteristics')}
             </h2>
             <p className="text-muted-foreground">
               Recognizing these patterns helps identify when beliefs have become rigid and unexamined
@@ -175,7 +173,7 @@ export default function DogmaticBeliefs() {
         <div className="glass-card rounded-2xl p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Eye className="h-6 w-6 text-blue-600" />
-            <h2 className="text-2xl font-bold text-foreground">Dogma Across Different Domains</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('dogmaticBeliefs.examplesAcrossDomains')}</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             {examples.map((example, index) => (
@@ -199,7 +197,7 @@ export default function DogmaticBeliefs() {
         <div className="glass-card rounded-2xl p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Brain className="h-6 w-6 text-purple-600" />
-            <h2 className="text-2xl font-bold text-foreground">Why Do We Become Dogmatic?</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('dogmaticBeliefs.psychologicalRoots')}</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
@@ -229,7 +227,7 @@ export default function DogmaticBeliefs() {
         <div className="mb-12">
           <div className="glass-card rounded-2xl p-6 text-center mb-8 max-w-3xl mx-auto">
             <h2 className="text-3xl font-bold text-foreground mb-4">
-              Liberating Yourself from Dogmatic Thinking
+              {t('dogmaticBeliefs.stepsToLiberation')}
             </h2>
             <p className="text-muted-foreground">
               Practical steps to develop intellectual flexibility and open-mindedness
