@@ -8,84 +8,84 @@ export default function DogmaticBeliefs() {
 
   const characteristics = [
     {
-      title: "Absolute Certainty",
-      description: "Beliefs held with complete confidence despite lack of evidence",
-      danger: "Prevents learning and adaptation to new information"
+      title: t('dogmaticBeliefs.char.absoluteCertainty'),
+      description: t('dogmaticBeliefs.char.absoluteCertainty.desc'),
+      danger: t('dogmaticBeliefs.char.absoluteCertainty.danger')
     },
     {
-      title: "Resistance to Challenge",
-      description: "Strong emotional reaction to questioning or opposing views",
-      danger: "Creates intellectual isolation and confirmation bias"
+      title: t('dogmaticBeliefs.char.resistanceToChallenge'),
+      description: t('dogmaticBeliefs.char.resistanceToChallenge.desc'),
+      danger: t('dogmaticBeliefs.char.resistanceToChallenge.danger')
     },
     {
-      title: "Appeal to Authority",
-      description: "Justification based on who said it rather than evidence",
-      danger: "Substitutes critical thinking with blind obedience"
+      title: t('dogmaticBeliefs.char.appealToAuthority'),
+      description: t('dogmaticBeliefs.char.appealToAuthority.desc'),
+      danger: t('dogmaticBeliefs.char.appealToAuthority.danger')
     },
     {
-      title: "Circular Reasoning",
-      description: "Using the belief system to justify itself",
-      danger: "Creates closed logical loops that resist external validation"
+      title: t('dogmaticBeliefs.char.circularReasoning'),
+      description: t('dogmaticBeliefs.char.circularReasoning.desc'),
+      danger: t('dogmaticBeliefs.char.circularReasoning.danger')
     },
     {
-      title: "Black and White Thinking",
-      description: "Seeing complex issues in simple, binary terms",
-      danger: "Eliminates nuance and prevents understanding complexity"
+      title: t('dogmaticBeliefs.char.blackWhiteThinking'),
+      description: t('dogmaticBeliefs.char.blackWhiteThinking.desc'),
+      danger: t('dogmaticBeliefs.char.blackWhiteThinking.danger')
     },
     {
-      title: "Emotional Investment",
-      description: "Identity becomes tied to specific beliefs",
-      danger: "Makes belief change feel like personal attack or loss of self"
+      title: t('dogmaticBeliefs.char.emotionalInvestment'),
+      description: t('dogmaticBeliefs.char.emotionalInvestment.desc'),
+      danger: t('dogmaticBeliefs.char.emotionalInvestment.danger')
     }
   ];
 
   const examples = [
     {
-      category: "Religious Dogma",
-      description: "Unquestioning acceptance of religious doctrine",
-      manifestations: ["Scripture as absolute truth", "Faith over evidence", "Heresy accusations", "Divine command theory"]
+      category: t('dogmaticBeliefs.example.religious'),
+      description: t('dogmaticBeliefs.example.religious.desc'),
+      manifestations: [t('dogmaticBeliefs.example.religious.m1'), t('dogmaticBeliefs.example.religious.m2'), t('dogmaticBeliefs.example.religious.m3'), t('dogmaticBeliefs.example.religious.m4')]
     },
     {
-      category: "Political Ideology",
-      description: "Rigid adherence to political worldviews",
-      manifestations: ["Party loyalty over principles", "Us vs. them mentality", "Policy positions without analysis", "Demonizing opposition"]
+      category: t('dogmaticBeliefs.example.political'),
+      description: t('dogmaticBeliefs.example.political.desc'),
+      manifestations: [t('dogmaticBeliefs.example.political.m1'), t('dogmaticBeliefs.example.political.m2'), t('dogmaticBeliefs.example.political.m3'), t('dogmaticBeliefs.example.political.m4')]
     },
     {
-      category: "Scientific Dogma",
-      description: "Treating scientific theories as unchangeable truth",
-      manifestations: ["Consensus worship", "Suppressing dissent", "Career punishment for questioning", "Funding bias"]
+      category: t('dogmaticBeliefs.example.scientific'),
+      description: t('dogmaticBeliefs.example.scientific.desc'),
+      manifestations: [t('dogmaticBeliefs.example.scientific.m1'), t('dogmaticBeliefs.example.scientific.m2'), t('dogmaticBeliefs.example.scientific.m3'), t('dogmaticBeliefs.example.scientific.m4')]
     },
     {
-      category: "Social Movements",
-      description: "Ideological purity within activist communities",
-      manifestations: ["Cancel culture", "Orthodoxy enforcement", "Purity tests", "Excommunication practices"]
+      category: t('dogmaticBeliefs.example.social'),
+      description: t('dogmaticBeliefs.example.social.desc'),
+      manifestations: [t('dogmaticBeliefs.example.social.m1'), t('dogmaticBeliefs.example.social.m2'), t('dogmaticBeliefs.example.social.m3'), t('dogmaticBeliefs.example.social.m4')]
     }
   ];
 
   const liberation = [
     {
-      step: "Recognize Certainty as a Red Flag",
-      description: "Notice when you or others express absolute certainty about complex topics"
+      step: t('dogmaticBeliefs.lib.recognizeCertainty'),
+      description: t('dogmaticBeliefs.lib.recognizeCertainty.desc')
     },
     {
-      step: "Practice Intellectual Humility",
-      description: "Acknowledge the limits of your knowledge and the possibility of being wrong"
+      step: t('dogmaticBeliefs.lib.intellectualHumility'),
+      description: t('dogmaticBeliefs.lib.intellectualHumility.desc')
     },
     {
-      step: "Seek Disconfirming Evidence",
-      description: "Actively look for information that challenges your beliefs"
+      step: t('dogmaticBeliefs.lib.seekDisconfirming'),
+      description: t('dogmaticBeliefs.lib.seekDisconfirming.desc')
     },
     {
-      step: "Embrace Uncertainty",
-      description: "Learn to be comfortable with not knowing or having incomplete answers"
+      step: t('dogmaticBeliefs.lib.embraceUncertainty'),
+      description: t('dogmaticBeliefs.lib.embraceUncertainty.desc')
     },
     {
-      step: "Question Sacred Beliefs",
-      description: "Examine beliefs that feel too important or sacred to question"
+      step: t('dogmaticBeliefs.lib.questionSacred'),
+      description: t('dogmaticBeliefs.lib.questionSacred.desc')
     },
     {
-      step: "Value Process Over Conclusion",
-      description: "Focus on how you arrive at beliefs rather than defending specific conclusions"
+      step: t('dogmaticBeliefs.lib.valueProcess'),
+      description: t('dogmaticBeliefs.lib.valueProcess.desc')
     }
   ];
 
@@ -116,21 +116,21 @@ export default function DogmaticBeliefs() {
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Core Problem</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('dogmaticBeliefs.coreProblem')}</h4>
               <p className="text-sm text-muted-foreground">
-                Confuses confidence with accuracy and certainty with truth
+                {t('dogmaticBeliefs.coreProblemText')}
               </p>
             </div>
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Universal Risk</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('dogmaticBeliefs.universalRisk')}</h4>
               <p className="text-sm text-muted-foreground">
-                Can affect anyone regardless of intelligence or education level
+                {t('dogmaticBeliefs.universalRiskText')}
               </p>
             </div>
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Hidden Nature</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('dogmaticBeliefs.hiddenNature')}</h4>
               <p className="text-sm text-muted-foreground">
-                Often invisible to those who hold them most strongly
+                {t('dogmaticBeliefs.hiddenNatureText')}
               </p>
             </div>
           </div>
@@ -143,7 +143,7 @@ export default function DogmaticBeliefs() {
               {t('dogmaticBeliefs.characteristics')}
             </h2>
             <p className="text-muted-foreground">
-              Recognizing these patterns helps identify when beliefs have become rigid and unexamined
+              {t('dogmaticBeliefs.characteristicsDesc')}
             </p>
           </div>
           
@@ -160,7 +160,7 @@ export default function DogmaticBeliefs() {
                 <CardContent>
                   <div className="bg-red-50 dark:bg-red-950/20 p-3 rounded-lg">
                     <p className="text-sm text-red-700 dark:text-red-300">
-                      <span className="font-semibold">Danger:</span> {char.danger}
+                      <span className="font-semibold">{t('dogmaticBeliefs.danger')}</span> {char.danger}
                     </p>
                   </div>
                 </CardContent>
@@ -201,23 +201,23 @@ export default function DogmaticBeliefs() {
           </div>
           <div className="grid md:grid-cols-2 gap-8">
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Psychological Needs:</h4>
+              <h4 className="font-semibold text-foreground mb-4">{t('dogmaticBeliefs.roots.psychologicalNeeds')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Security and certainty in an uncertain world</li>
-                <li>• Identity and belonging within groups</li>
-                <li>• Cognitive ease and reduced mental effort</li>
-                <li>• Protection from anxiety and doubt</li>
-                <li>• Sense of meaning and purpose</li>
+                <li>• {t('dogmaticBeliefs.roots.need1')}</li>
+                <li>• {t('dogmaticBeliefs.roots.need2')}</li>
+                <li>• {t('dogmaticBeliefs.roots.need3')}</li>
+                <li>• {t('dogmaticBeliefs.roots.need4')}</li>
+                <li>• {t('dogmaticBeliefs.roots.need5')}</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-4">Social Pressures:</h4>
+              <h4 className="font-semibold text-foreground mb-4">{t('dogmaticBeliefs.roots.socialPressures')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Group conformity and peer pressure</li>
-                <li>• Authority figures demanding compliance</li>
-                <li>• Cultural and family expectations</li>
-                <li>• Professional and social consequences</li>
-                <li>• Echo chambers reinforcing beliefs</li>
+                <li>• {t('dogmaticBeliefs.roots.pressure1')}</li>
+                <li>• {t('dogmaticBeliefs.roots.pressure2')}</li>
+                <li>• {t('dogmaticBeliefs.roots.pressure3')}</li>
+                <li>• {t('dogmaticBeliefs.roots.pressure4')}</li>
+                <li>• {t('dogmaticBeliefs.roots.pressure5')}</li>
               </ul>
             </div>
           </div>
@@ -230,7 +230,7 @@ export default function DogmaticBeliefs() {
               {t('dogmaticBeliefs.stepsToLiberation')}
             </h2>
             <p className="text-muted-foreground">
-              Practical steps to develop intellectual flexibility and open-mindedness
+              {t('dogmaticBeliefs.liberationDesc')}
             </p>
           </div>
           
@@ -255,30 +255,28 @@ export default function DogmaticBeliefs() {
         <div className="glass-card rounded-2xl p-8 border-green-200 dark:border-green-800">
           <div className="flex items-center gap-3 mb-6">
             <Users className="h-6 w-6 text-green-600" />
-            <h2 className="text-2xl font-bold text-foreground">The Freedom of Uncertainty</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('dogmaticBeliefs.freedomOfUncertainty')}</h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Abandoning dogmatic thinking doesn't mean becoming wishy-washy or losing all convictions. 
-            Instead, it means holding beliefs proportionally to evidence, remaining open to new information, 
-            and maintaining intellectual humility about the limits of human knowledge.
+            {t('dogmaticBeliefs.freedomText')}
           </p>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold text-foreground mb-3">Benefits of Intellectual Flexibility:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('dogmaticBeliefs.benefitsTitle')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• More accurate understanding of reality</li>
-                <li>• Better relationships and communication</li>
-                <li>• Reduced anxiety about being "right"</li>
-                <li>• Increased creativity and problem-solving</li>
+                <li>• {t('dogmaticBeliefs.benefit1')}</li>
+                <li>• {t('dogmaticBeliefs.benefit2')}</li>
+                <li>• {t('dogmaticBeliefs.benefit3')}</li>
+                <li>• {t('dogmaticBeliefs.benefit4')}</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-3">Practical Daily Habits:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('dogmaticBeliefs.habitsTitle')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Say "I could be wrong about this"</li>
-                <li>• Ask "What would change my mind?"</li>
-                <li>• Seek out opposing viewpoints</li>
-                <li>• Practice saying "I don't know"</li>
+                <li>• {t('dogmaticBeliefs.habit1')}</li>
+                <li>• {t('dogmaticBeliefs.habit2')}</li>
+                <li>• {t('dogmaticBeliefs.habit3')}</li>
+                <li>• {t('dogmaticBeliefs.habit4')}</li>
               </ul>
             </div>
           </div>
