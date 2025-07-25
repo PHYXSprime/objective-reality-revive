@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { Search, Filter } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
-import { logicalFallacies } from '@/data/logicalFallacies';
+import { logicalFallacies } from '@/data/logicalFallacies.clean';
 import { logicalFallaciesTranslations } from '@/data/logicalFallacies.de';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';

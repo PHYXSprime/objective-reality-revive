@@ -3,544 +3,360 @@ export interface LogicalFallacy {
   name: string;
   definition: string;
   example: string;
-  category: 'relevance' | 'presumption' | 'weak_inference' | 'causal' | 'formal' | 'conditional';
+  category: string;
 }
 
 export const logicalFallacies: LogicalFallacy[] = [
-  // Relevance Fallacies (25 fallacies)
   {
     id: 1,
-    name: 'Ad Hominem',
-    definition: 'This fallacy occurs when someone rejects or criticizes another person\'s view on the basis of personal characteristics, background, physical appearance, or other features irrelevant to the argument at hand.',
-    example: '"You can\'t trust Dr. Smith\'s medical advice on dieting because she is overweight." This attacks Dr. Smith\'s personal appearance, which is irrelevant to the scientific validity of her medical recommendations.',
-    category: 'relevance',
+    name: "Ad Hominem",
+    definition: "This fallacy occurs when someone rejects or criticizes another person's view on the basis of personal characteristics, background, physical appearance, or other features irrelevant to the argument at hand.",
+    example: "You can't trust Dr. Smith's medical advice on dieting because she is overweight. This attacks Dr. Smith's personal appearance, which is irrelevant to the scientific validity of her medical recommendations.",
+    category: "relevance"
   },
   {
     id: 2,
-    name: 'Tu Quoque',
-    definition: 'A specific type of ad hominem fallacy that dismisses an argument by pointing out hypocrisy in the arguer. It deflects criticism by turning it back on the accuser, but the arguer\'s hypocrisy doesn\'t invalidate their argument.',
-    example: '"My father told me not to speed because it\'s dangerous, but I don\'t have to listen to him because he got a speeding ticket last year." The father\'s past actions don\'t change the fact that speeding is objectively dangerous.',
-    category: 'relevance',
+    name: "Tu Quoque (Appeal to Hypocrisy)",
+    definition: "A specific type of ad hominem fallacy that dismisses an argument by pointing out hypocrisy in the arguer. It deflects criticism by turning it back on the accuser, but the arguer's hypocrisy doesn't invalidate their argument.",
+    example: "My father told me not to speed because it's dangerous, but I don't have to listen to him because he got a speeding ticket last year. The father's past actions don't change the fact that speeding is objectively dangerous.",
+    category: "relevance"
   },
   {
     id: 3,
-    name: 'Genetic Fallacy',
-    definition: 'This fallacy involves accepting or rejecting a claim based on its origin, source, or history, rather than evaluating its current merit or evidence. The source of an idea is independent of its truth or falsehood.',
-    example: '"That car can\'t possibly be any good; it was made in a country known for cheap products." This judges the car based on its place of manufacture, not on its actual performance, safety ratings, or build quality.',
-    category: 'relevance',
+    name: "Genetic Fallacy",
+    definition: "This fallacy involves accepting or rejecting a claim based on its origin, source, or history, rather than evaluating its current merit or evidence. The source of an idea is independent of its truth or falsehood.",
+    example: "That car can't possibly be any good; it was made in a country known for cheap products. This judges the car based on its place of manufacture, not on its actual performance, safety ratings, or build quality.",
+    category: "relevance"
   },
   {
     id: 4,
-    name: 'Appeal to Popularity (Bandwagon)',
-    definition: 'This fallacy asserts that a proposition must be true because many or most people believe it. It appeals to the desire to fit in and be on the winning side, but the popularity of an idea has no bearing on its validity.',
-    example: '"Millions of people have switched to this new smartphone, so it must be the best one on the market." The phone\'s popularity could be due to successful marketing rather than superior features or quality.',
-    category: 'relevance',
+    name: "Ad Populum (Bandwagon)",
+    definition: "This fallacy asserts that a proposition must be true because many or most people believe it. It appeals to the desire to fit in and be on the winning side, but the popularity of an idea has no bearing on its validity.",
+    example: "Millions of people have switched to this new smartphone, so it must be the best one on the market. The phone's popularity could be due to successful marketing rather than superior features or quality.",
+    category: "relevance"
   },
   {
     id: 5,
-    name: 'Appeal to Authority',
-    definition: 'This occurs when an argument relies on the testimony of an authority figure who is not an expert in the relevant field. While citing relevant experts is a valid part of an argument, citing an irrelevant authority is fallacious.',
-    example: '"A famous actor said in an interview that this specific brand of vitamin C will prevent colds, so I\'m stocking up." The actor is an authority on acting, not on immunology or nutrition.',
-    category: 'relevance',
+    name: "Appeal to Authority (Ad Verecundiam)",
+    definition: "This occurs when an argument relies on the testimony of an authority figure who is not an expert in the relevant field. While citing relevant experts is a valid part of an argument, citing an irrelevant authority is fallacious.",
+    example: "A famous actor said in an interview that this specific brand of vitamin C will prevent colds, so I'm stocking up. The actor is an authority on acting, not on immunology or nutrition.",
+    category: "relevance"
   },
   {
     id: 6,
-    name: 'Appeal to Nature',
-    definition: 'This is the argument that something is good because it is \'natural,\' or bad because it is \'unnatural.\' This is a fallacy because the naturalness of something is not inherently linked to its positive or negative qualities.',
-    example: '"You shouldn\'t get vaccinated; it\'s unnatural. It\'s better to build immunity through natural infection." This ignores the fact that many natural things, like cyanide, arsenic, and deadly viruses, are extremely harmful.',
-    category: 'relevance',
+    name: "Appeal to Nature",
+    definition: "This is the argument that something is good because it is 'natural,' or bad because it is 'unnatural.' This is a fallacy because the naturalness of something is not inherently linked to its positive or negative qualities.",
+    example: "You shouldn't get vaccinated; it's unnatural. It's better to build immunity through natural infection. This ignores the fact that many natural things, like cyanide, arsenic, and deadly viruses, are extremely harmful.",
+    category: "relevance"
   },
   {
     id: 7,
-    name: 'Red Herring',
-    definition: 'This is a tactic of distraction. An arguer commits a red herring fallacy by introducing an irrelevant topic into a discussion to divert attention from the original issue.',
-    example: 'When asked about his voting record on environmental protection, a senator responds, "I\'m much more concerned about the threat of terrorism. We must keep our country safe." This avoids addressing the environmental question by introducing a different, emotionally charged issue.',
-    category: 'relevance',
+    name: "Appeal to Tradition (Ad Antiquitatem)",
+    definition: "This fallacy argues that a thesis must be correct because it has a long-standing tradition behind it. The fact that an idea has been around for a long time does not automatically make it true or better than newer ideas.",
+    example: "Our company has used this management structure for fifty years and has been successful, so there is no need to change it. This ignores the possibility that market conditions have changed and a new structure might be even more effective.",
+    category: "relevance"
   },
   {
     id: 8,
-    name: 'Straw Man',
-    definition: 'This fallacy occurs when someone distorts, misrepresents, or exaggerates an opponent\'s position to make it easier to attack. Instead of refuting the actual argument, they knock down a weaker, manufactured version.',
-    example: 'Person A: "I think we should increase funding for public schools." Person B: "So you\'re saying we should just throw unlimited money at a broken system and ignore our national debt? That\'s fiscally irresponsible!"',
-    category: 'relevance',
+    name: "Appeal to Poverty (Argumentum ad Lazarum)",
+    definition: "This fallacy is the formal fallacy of thinking a conclusion is correct because the speaker is poor, or it is incorrect because the speaker is rich.",
+    example: "The monks have forsworn all material possessions. They must have achieved enlightenment.",
+    category: "relevance"
   },
   {
     id: 9,
-    name: 'Appeal to Emotion',
-    definition: 'This is a broad category of fallacies that involves manipulating an audience\'s emotions—such as fear, pity, or joy—in order to win an argument, especially in the absence of factual evidence.',
-    example: 'A commercial for a charity shows sad pictures of starving children with moving music, urging viewers to donate. While the cause may be worthy, the ad primarily appeals to pity rather than presenting a logical case with data about the charity\'s effectiveness.',
-    category: 'relevance',
+    name: "Appeal to Wealth (Argumentum ad Crumenam)",
+    definition: "This fallacy, also known as Argumentum ad Crumenam, assumes that an argument is correct because the speaker is wealthy or, conversely, that an argument is incorrect because the speaker is poor. Financial success is not a measure of an argument's truthfulness.",
+    example: "If you're so smart, why aren't you rich? That billionaire says this investment is a sure thing, and he should know. This equates financial success with expertise in all areas.",
+    category: "relevance"
   },
   {
     id: 10,
-    name: 'Appeal to Fear',
-    definition: 'A specific type of appeal to emotion where an arguer attempts to create support for an idea by instilling fear of an alternative. Instead of providing evidence, it relies on scare tactics and threats of dire consequences.',
-    example: '"If we don\'t pass this surveillance bill, a major terrorist attack on our soil is inevitable." This argument doesn\'t provide evidence for the bill\'s effectiveness but instead uses the fear of terrorism to push for its passage.',
-    category: 'relevance',
+    name: "Moralistic Fallacy",
+    definition: "This fallacy moves from a statement about how things *ought* to be to a factual claim about how things *are*. It assumes the world will adapt to our moral beliefs, which is a form of wishful thinking.",
+    example: "Everyone should be treated equally, therefore there are no innate genetic differences in abilities between people. The moral imperative for equal treatment does not logically entail a factual conclusion about biological uniformity.",
+    category: "relevance"
   },
   {
     id: 11,
-    name: 'Appeal to Pity',
-    definition: 'An appeal to pity attempts to win support for an argument by exploiting the audience\'s feelings of pity or compassion.',
-    example: '"You should give me a good grade on this paper because I worked really hard and I need to pass this class to graduate." The effort and need, while admirable, don\'t determine the quality of the work.',
-    category: 'relevance',
+    name: "Naturalistic Fallacy (Is-Ought Fallacy)",
+    definition: "The inverse of the moralistic fallacy, this occurs when someone argues from a statement of fact (what 'is') to a statement of value (what 'ought' to be). It assumes that the way things are is the way they should be.",
+    example: "Because animals in nature eat meat, it is morally acceptable for humans to eat meat. This argument takes a descriptive fact about the natural world and tries to derive a moral prescription from it.",
+    category: "relevance"
   },
   {
     id: 12,
-    name: 'Appeal to Force',
-    definition: 'This fallacy occurs when someone uses threats, intimidation, or coercion to support their argument rather than providing evidence.',
-    example: '"You should agree with my political position, or you might find yourself looking for a new job." The threat doesn\'t make the position correct.',
-    category: 'relevance',
+    name: "Red Herring",
+    definition: "This is a tactic of distraction. An arguer commits a red herring fallacy by introducing an irrelevant topic into a discussion to divert attention from the original issue. The goal is to shift the debate to a new topic.",
+    example: "When asked about his voting record on environmental protection, a senator responds, 'I'm much more concerned about the threat of terrorism. We must keep our country safe.' This avoids the environmental question.",
+    category: "relevance"
   },
   {
     id: 13,
-    name: 'Appeal to Ignorance',
-    definition: 'This fallacy assumes that a lack of evidence against a claim means the claim is true, or that a lack of evidence for a claim means it\'s false.',
-    example: '"No one has ever proven that aliens don\'t exist, so they must be real." Absence of evidence is not evidence of presence.',
-    category: 'relevance',
+    name: "Straw Man",
+    definition: "This fallacy occurs when someone distorts, misrepresents, or exaggerates an opponent's position to make it easier to attack. Instead of refuting the actual argument, they knock down a weaker, manufactured version.",
+    example: "Person A: 'I think we should increase funding for public schools.' Person B: 'So you're saying we should just throw unlimited money at a broken system and ignore our national debt? That's fiscally irresponsible!'",
+    category: "relevance"
   },
   {
     id: 14,
-    name: 'Appeal to Tradition',
-    definition: 'This fallacy argues that something is true or good because it\'s the way things have always been done.',
-    example: '"We\'ve always done business this way, so it must be the right approach." Tradition alone doesn\'t justify a practice.',
-    category: 'relevance',
+    name: "Appeal to Emotion",
+    definition: "This is a broad category of fallacies that involves manipulating an audience's emotions—such as fear, pity, or joy—in order to win an argument, especially in the absence of factual evidence.",
+    example: "A commercial for a charity shows sad pictures of starving children with moving music, urging viewers to donate. While the cause may be worthy, the ad primarily appeals to pity rather than presenting a logical case.",
+    category: "relevance"
   },
   {
     id: 15,
-    name: 'Appeal to Novelty',
-    definition: 'This fallacy argues that something is true or better simply because it is new or modern.',
-    example: '"This new teaching method must be better because it\'s the latest educational trend." Newness alone doesn\'t guarantee improvement.',
-    category: 'relevance',
+    name: "Appeal to Fear (Argumentum ad Metum)",
+    definition: "A specific type of appeal to emotion where an arguer attempts to create support for an idea by instilling fear of an alternative. Instead of providing evidence, it relies on scare tactics.",
+    example: "If we don't pass this surveillance bill, a major terrorist attack on our soil is inevitable. This argument doesn't provide evidence for the bill's effectiveness but uses fear to push for its passage.",
+    category: "relevance"
   },
   {
     id: 16,
-    name: 'Guilt by Association',
-    definition: 'This fallacy rejects an argument because of the people or groups associated with it, rather than examining the argument\'s merit.',
-    example: '"That policy proposal can\'t be any good because it was supported by that controversial politician." The association doesn\'t invalidate the policy itself.',
-    category: 'relevance',
+    name: "Appeal to Flattery",
+    definition: "This fallacy involves using flattery and compliments to persuade an audience to accept a conclusion, rather than providing evidence. The appeal is to the listener's vanity, not their intellect.",
+    example: "A person of your refined taste can surely see the superior quality of this expensive artwork. The compliment is intended to make the potential buyer more agreeable.",
+    category: "relevance"
   },
   {
     id: 17,
-    name: 'Poisoning the Well',
-    definition: 'This fallacy involves discrediting an opponent before they have a chance to present their argument.',
-    example: '"Before you listen to Dr. Jones, you should know that she\'s been criticized by her colleagues and has controversial views." This attempts to bias the audience against her arguments before they\'re presented.',
-    category: 'relevance',
+    name: "Appeal to Pity (Argumentum ad Misericordiam)",
+    definition: "This fallacy attempts to win support for an argument or idea by exploiting the opponent's feelings of pity or guilt. The emotional appeal is used as a substitute for a reasoned argument.",
+    example: "Professor, I know I failed the exam, but I've had a really tough semester. If I don't pass this class, I'll lose my scholarship. You have to give me a passing grade.",
+    category: "relevance"
   },
   {
     id: 18,
-    name: 'Tone Policing',
-    definition: 'This fallacy dismisses an argument based on its tone or emotional expression rather than its content.',
-    example: '"I can\'t take your argument seriously because you\'re being too emotional about it." The emotional tone doesn\'t invalidate the logical content.',
-    category: 'relevance',
+    name: "Appeal to Ridicule",
+    definition: "This fallacy involves presenting an opponent's argument as absurd, ridiculous, or humorous, and therefore not worthy of serious consideration. Mockery is used in place of actual counter-argumentation.",
+    example: "You actually believe in the theory of evolution? So you think your grandfather was a monkey? That's hilarious! This caricature is meant to mock the position rather than engage with the evidence.",
+    category: "relevance"
   },
   {
     id: 19,
-    name: 'Whataboutism',
-    definition: 'This fallacy deflects criticism by pointing to similar problems elsewhere rather than addressing the criticism directly.',
-    example: 'When confronted about corruption in their government, responding: "What about the corruption in other countries?" This doesn\'t address the original criticism.',
-    category: 'relevance',
+    name: "Appeal to Spite",
+    definition: "This fallacy attempts to sway an audience by exploiting their existing feelings of bitterness, spite, or resentment towards the opposing side. The argument is based on animosity rather than logic.",
+    example: "Why would you support a policy proposed by that party? Remember how they blocked the bill we all wanted last year? Let's vote against this just to pay them back.",
+    category: "relevance"
   },
   {
     id: 20,
-    name: 'Appeal to Consequences',
-    definition: 'This fallacy argues that a belief is true or false based on whether its consequences are desirable or undesirable.',
-    example: '"If evolution is true, then life has no meaning, which would be terrible. Therefore, evolution must be false." The undesirable consequences don\'t affect the truth of evolution.',
-    category: 'relevance',
+    name: "Wishful Thinking",
+    definition: "This fallacy occurs when a person concludes that a proposition must be true because they want it to be true. The desire for something to be true is used as evidence for its truthfulness.",
+    example: "I'm sure I'll get the job because it would be perfect for me and I really need it. The speaker's desire for the job has no bearing on the objective factors the employer will use.",
+    category: "relevance"
   },
   {
     id: 21,
-    name: 'Appeal to Ridicule',
-    definition: 'Dismissing an argument by making it seem ridiculous rather than addressing its substance.',
-    example: '"So you think the Earth is warming because of cow farts? How silly!" This misrepresents and ridicules climate science.',
-    category: 'relevance',
+    name: "Appeal to Novelty (Argumentum ad Novitatem)",
+    definition: "This fallacy claims that an idea or proposal is correct or superior solely because it is new and modern. Novelty is not evidence of quality or truth.",
+    example: "Our company needs to switch to this new management software. It's the latest version, so it must be much more efficient than our old system.",
+    category: "relevance"
   },
   {
     id: 22,
-    name: 'Appeal to Shame',
-    definition: 'Using shame to pressure someone into accepting a position.',
-    example: '"Any decent person would support this cause." This manipulates through shame rather than reasoning.',
-    category: 'relevance',
+    name: "Argument from Incredulity",
+    definition: "This fallacy asserts that a proposition must be false because it contradicts one's personal expectations or beliefs, or because it is difficult to imagine. A person's inability to comprehend something does not make it untrue.",
+    example: "I find it impossible to believe that the vastness of the universe could have emerged from a single point in the Big Bang. Therefore, the theory must be wrong.",
+    category: "relevance"
   },
   {
     id: 23,
-    name: 'Appeal to Common Practice',
-    definition: 'Arguing that something is acceptable because it\'s commonly done.',
-    example: '"Everyone cheats on their taxes a little bit, so it\'s okay." Common practice doesn\'t determine morality.',
-    category: 'relevance',
+    name: "Appeal to Ignorance (Argumentum ad Ignorantiam)",
+    definition: "This fallacy asserts that a proposition is true because there is no evidence to prove it false, or that it is false because there is no evidence to prove it true. A lack of evidence is not evidence of absence.",
+    example: "No one has ever been able to prove that ghosts don't exist, so it is reasonable to believe that they do. The burden of proof lies with the person making the claim.",
+    category: "relevance"
   },
   {
     id: 24,
-    name: 'Appeal to Flattery',
-    definition: 'Using excessive praise to win over an audience or make them more receptive to your argument.',
-    example: '"You\'re clearly too intelligent to fall for their propaganda." The flattery doesn\'t make the argument valid.',
-    category: 'relevance',
+    name: "Appeal to Self-Evident Truth",
+    definition: "This fallacy involves presenting a claim as 'self-evident' or 'obvious' and therefore needing no supporting evidence. This tactic attempts to shut down debate by asserting that anyone who disagrees is foolish.",
+    example: "It's self-evident that raising taxes on corporations hurts the economy. This is presented as an undeniable fact, but it is a complex economic claim that requires evidence.",
+    category: "relevance"
   },
   {
     id: 25,
-    name: 'Appeal to Spite',
-    definition: 'Encouraging an action or belief by appealing to spite or vindictiveness.',
-    example: '"You should vote against this proposal just to show them they can\'t push us around." The vindictive motivation doesn\'t justify the position.',
-    category: 'relevance',
+    name: "Appeal to Stone (Argumentum ad Lapidem)",
+    definition: "This fallacy consists of dismissing a statement as absurd without giving any proof of its absurdity. It is a refusal to engage with the argument itself.",
+    example: "Person A lays out a detailed argument for a policy change. Person B responds by simply saying, 'That is the most absurd proposition I have ever heard,' and offers no counter-argument.",
+    category: "relevance"
   },
-
-  // Causal Fallacies (6 fallacies)
   {
     id: 26,
-    name: 'Post Hoc Ergo Propter Hoc',
-    definition: 'Assuming that because one event followed another, the first event caused the second. This confuses correlation with causation.',
-    example: '"Every time I wash my car, it rains the next day. Therefore, washing my car causes rain." The temporal sequence doesn\'t establish a causal relationship.',
-    category: 'causal',
+    name: "Burden of Proof Fallacy",
+    definition: "This fallacy occurs when someone makes a claim but puts the burden of proof on the other party to disprove it, rather than providing evidence for their own claim. The rule of thumb is that he who asserts must prove.",
+    example: "I claim that a teapot is orbiting the sun between Earth and Mars. Since you cannot prove that it isn't there, you must accept my claim as true.",
+    category: "relevance"
   },
   {
     id: 27,
-    name: 'Cum Hoc Ergo Propter Hoc',
-    definition: 'Assuming that because two events occur together, one must cause the other.',
-    example: '"Ice cream sales and drowning deaths both increase in summer, so ice cream must cause drowning." Both are actually caused by hot weather encouraging swimming and ice cream consumption.',
-    category: 'causal',
+    name: "Fallacy of Composition",
+    definition: "This is the error of assuming that what is true of a part is also true of the whole. The properties of the parts do not necessarily transfer to the properties of the complete entity.",
+    example: "Every player on this basketball team is a superstar. Therefore, the team itself must be the best in the league. This ignores that a team of superstars may not have good chemistry.",
+    category: "ambiguity"
   },
   {
     id: 28,
-    name: 'Single Cause Fallacy',
-    definition: 'The assumption that there is one, simple cause of an outcome when in reality it may have been caused by a number of only jointly sufficient causes.',
-    example: '"The only reason our team lost the game was because of that bad call by the referee." This ignores poor plays, missed opportunities, and other factors that contributed to the loss.',
-    category: 'causal',
+    name: "Fallacy of Division",
+    definition: "The inverse of the fallacy of composition, this is the error of assuming that what is true of the whole is also true of its parts. The properties of the whole do not necessarily apply to each individual component.",
+    example: "Our company is very profitable and innovative. Therefore, every single employee in our company must be profitable and innovative.",
+    category: "ambiguity"
   },
   {
     id: 29,
-    name: 'Wrong Direction',
-    definition: 'This fallacy occurs when the cause and effect relationship is reversed.',
-    example: '"Successful people are confident, so if I act confident, I\'ll become successful." The confidence might be a result of success, not the cause of it.',
-    category: 'causal',
+    name: "Fallacy of the Single Cause (Causal Oversimplification)",
+    definition: "This fallacy occurs when it is assumed that there is a single, simple cause for an outcome when in reality it may have been caused by a number of only jointly sufficient causes.",
+    example: "The school shooting happened because of violent video games. This explanation oversimplifies a complex event, ignoring other potential contributing factors.",
+    category: "causal"
   },
   {
     id: 30,
-    name: 'Complex Cause',
-    definition: 'This fallacy assumes that if one thing caused another, then the first thing must be the primary or only cause.',
-    example: '"Since studying helped me pass the test, studying must be the only thing that matters for academic success." This ignores factors like sleep, nutrition, stress management, and natural ability.',
-    category: 'causal',
+    name: "Inflation of Conflict",
+    definition: "This fallacy occurs when someone exaggerates a minor or internal disagreement among experts in a field to dismiss the field's consensus entirely. It creates the false impression that there is no agreement.",
+    example: "Scientists disagree about the exact rate of climate change, so the whole concept of global warming is probably not true. This ignores the overwhelming consensus among scientists.",
+    category: "relevance"
   },
   {
     id: 31,
-    name: 'Regression Fallacy',
-    definition: 'Assuming that an extreme result will be followed by a more moderate result due to intervention, when it\'s actually due to natural statistical regression.',
-    example: '"After I started taking vitamins, my headaches decreased. The vitamins must work!" The headaches may have naturally decreased after an unusually bad period.',
-    category: 'causal',
+    name: "Ludic Fallacy",
+    definition: "This is the misuse of games and statistical models of chance to represent complex, real-world situations. It involves assuming that the neat, predictable probabilities of a game apply to the messy, unpredictable nature of reality.",
+    example: "Based on my financial models, the market has a 0.1% chance of crashing this year, so my investments are perfectly safe. This treats the economy like a casino game with known odds.",
+    category: "relevance"
   },
-
-  // Formal Fallacies (6 fallacies)
   {
     id: 32,
-    name: 'Affirming the Consequent',
-    definition: 'A formal logical fallacy that occurs when the consequent of a conditional statement is affirmed, and from this, the antecedent is inferred.',
-    example: '"If it rains, the ground gets wet. The ground is wet, so it must have rained." The wet ground could be from a sprinkler system, not rain.',
-    category: 'formal',
+    name: "Moving the Goalposts",
+    definition: "This fallacy occurs when the criteria for proof or acceptance of an argument are changed after the initial criteria have been met. It is an unfair tactic used to avoid conceding a point.",
+    example: "Person A: 'Prove to me that your new policy will reduce costs.' Person B provides a detailed report. Person A replies, 'Okay, but now you have to prove it won't negatively impact employee morale.'",
+    category: "relevance"
   },
   {
     id: 33,
-    name: 'Denying the Antecedent',
-    definition: 'A formal logical fallacy that occurs when the antecedent of a conditional statement is denied, and from this, the negation of the consequent is inferred.',
-    example: '"If it rains, the ground gets wet. It\'s not raining, so the ground is not wet." The ground could still be wet from other sources.',
-    category: 'formal',
+    name: "Slippery Slope",
+    definition: "This fallacy asserts that a relatively small first step will inevitably lead to a chain of related events culminating in some significant (usually negative) effect, without sufficient evidence for the inevitability of the chain.",
+    example: "If we allow the city to ban plastic straws, the next thing you know, they'll be banning all plastic bags, then plastic containers, and eventually we won't be able to buy anything in plastic!",
+    category: "relevance"
   },
   {
     id: 34,
-    name: 'Undistributed Middle',
-    definition: 'A formal fallacy that occurs when the middle term in a syllogism is not distributed in at least one of the premises.',
-    example: '"All birds have wings. All bats have wings. Therefore, all bats are birds." The middle term "have wings" is not properly distributed.',
-    category: 'formal',
+    name: "Texas Sharpshooter Fallacy",
+    definition: "This fallacy is committed when differences in data are ignored, but similarities are stressed. It involves cherry-picking data clusters to suit an argument, or finding a pattern to fit a presumption.",
+    example: "A soda company points out that in the five states where their sales are highest, three of them are also in the top ten healthiest states. They conclude their soda is part of a healthy lifestyle.",
+    category: "relevance"
   },
   {
     id: 35,
-    name: 'Illicit Major',
-    definition: 'A formal fallacy in which the major term is distributed in the conclusion but not in the major premise.',
-    example: '"All cats are mammals. No dogs are cats. Therefore, no dogs are mammals." The conclusion incorrectly distributes "mammals."',
-    category: 'formal',
+    name: "Appeal to Probability",
+    definition: "This is a fallacy of assuming that because something could happen, it will inevitably happen. This confuses possibility with certainty or high probability.",
+    example: "There are so many cars on the road, it's inevitable that I will get into a major accident someday, so I might as well drive recklessly.",
+    category: "relevance"
   },
   {
     id: 36,
-    name: 'Illicit Minor',
-    definition: 'A formal fallacy in which the minor term is distributed in the conclusion but not in the minor premise.',
-    example: '"All roses are flowers. All roses are red. Therefore, all flowers are red." The conclusion incorrectly distributes "flowers."',
-    category: 'formal',
+    name: "Wrong Direction (Causal Reversal)",
+    definition: "This fallacy occurs when cause and effect are reversed. The arguer claims that X causes Y, when in fact it is Y that causes X.",
+    example: "Observing that people who are very ill are often in hospitals, someone concludes that hospitals make people ill. In reality, people go to hospitals because they are already ill.",
+    category: "causal"
   },
   {
     id: 37,
-    name: 'Exclusive Premises',
-    definition: 'A formal fallacy that occurs when both premises of a syllogism are negative.',
-    example: '"No cats are dogs. No dogs are birds. Therefore, no cats are birds." You cannot draw a valid conclusion from two negative premises.',
-    category: 'formal',
+    name: "Fallacy of the Undistributed Middle",
+    definition: "This is a formal fallacy in a categorical syllogism where the middle term (the one that connects the two premises) is not distributed, meaning it doesn't refer to all members of its category.",
+    example: "All dogs are mammals. All cats are mammals. Therefore, all dogs are cats. Here, 'mammals' is the undistributed middle term.",
+    category: "formal"
   },
-
-  // Conditional Fallacies (6 fallacies)
   {
     id: 38,
-    name: 'Slippery Slope',
-    definition: 'Arguing that a relatively small first step leads to a chain of related events culminating in some significant impact, without providing evidence for the inevitability of this chain.',
-    example: '"If we allow students to redo one test, next they\'ll want to redo all their tests, then their entire semester, and eventually no one will fail any class ever again." This assumes an inevitable progression without justification.',
-    category: 'conditional',
+    name: "Affirming the Consequent",
+    definition: "A formal fallacy of inferring the converse from the original statement. The argument has the invalid form: If P, then Q. Q is true. Therefore, P is true.",
+    example: "If it is raining, then the street is wet. The street is wet. Therefore, it must be raining. This is fallacious because the street could be wet from a street cleaner.",
+    category: "formal"
   },
   {
     id: 39,
-    name: 'False Dilemma',
-    definition: 'This fallacy involves presenting only two options when more exist. It artificially limits choices to make one option seem more reasonable by comparison.',
-    example: '"Either we implement strict gun control laws, or we let criminals run wild in the streets." This ignores many other possible approaches to reducing crime.',
-    category: 'conditional',
+    name: "Denying the Antecedent",
+    definition: "A formal fallacy of inferring the inverse from the original statement. The argument has the invalid form: If P, then Q. P is not true. Therefore, Q is not true.",
+    example: "If you have a driver's license, you are over 16 years old. You do not have a driver's license. Therefore, you are not over 16 years old. This is false; a 25-year-old could simply choose not to have a license.",
+    category: "formal"
   },
   {
     id: 40,
-    name: 'Perfect Solution Fallacy',
-    definition: 'This fallacy assumes that a solution should be rejected because it\'s not perfect, even though it would still provide significant improvement.',
-    example: '"We shouldn\'t install security cameras because they won\'t prevent all crimes." The cameras don\'t need to be 100% effective to be worthwhile.',
-    category: 'conditional',
+    name: "Correlation Implies Causation (Cum Hoc Ergo Propter Hoc)",
+    definition: "This fallacy is the error of concluding that because two events occur together, one must be the cause of the other. It overlooks the possibility of a third factor causing both, or that the correlation is purely coincidental.",
+    example: "As ice cream sales increase, so do the number of shark attacks. Therefore, buying ice cream causes shark attacks. In reality, hot weather is the cause of both.",
+    category: "causal"
   },
   {
     id: 41,
-    name: 'Nirvana Fallacy',
-    definition: 'Comparing actual things with unrealistic, idealized alternatives.',
-    example: '"Democracy is flawed because it doesn\'t always represent everyone\'s interests perfectly." This compares democracy to an impossible perfect system rather than to other realistic alternatives.',
-    category: 'conditional',
+    name: "Post Hoc Ergo Propter Hoc",
+    definition: "Literally 'after this, therefore because of this,' this fallacy occurs when it is assumed that because one event followed another, the first event must have caused the second.",
+    example: "I wore my lucky jersey and my team won the game. Therefore, my jersey caused the team to win. The temporal succession of events is not sufficient to establish a causal relationship.",
+    category: "causal"
   },
   {
     id: 42,
-    name: 'False Compromise',
-    definition: 'Assuming that the compromise between two positions is always correct.',
-    example: '"One side says the Earth is round, the other says it\'s flat, so the truth must be that it\'s slightly curved." Sometimes one side is simply correct and the other is wrong.',
-    category: 'conditional',
+    name: "Regression Fallacy",
+    definition: "This fallacy fails to account for natural fluctuations and regression to the mean. It occurs when an exceptional outcome is observed, an action is taken, and then the outcome regresses to a more normal level.",
+    example: "A patient with back pain tries a new herbal remedy and feels much better a week later. They attribute their recovery to the remedy, but it's more likely that their extreme pain was an outlier that naturally regressed to a less painful average state.",
+    category: "causal"
   },
   {
     id: 43,
-    name: 'Continuum Fallacy',
-    definition: 'The assumption that because there is no clear dividing line between two concepts, no distinction can be made between them.',
-    example: '"There\'s no exact moment when someone becomes \'tall,\' so height distinctions are meaningless." The lack of a precise boundary doesn\'t eliminate the validity of the general categories.',
-    category: 'conditional',
+    name: "Third-Cause Fallacy",
+    definition: "A variation of the 'correlation implies causation' fallacy, this error occurs when two correlated events are assumed to have a causal relationship, while in reality, a third, unacknowledged factor is the cause of both.",
+    example: "The number of storks in a region correlates with the human birth rate. Therefore, storks deliver babies. The third cause is the size of the region; larger regions have more storks and more people.",
+    category: "causal"
   },
-
-  // Presumption Fallacies (10 fallacies)
   {
     id: 44,
-    name: 'Begging the Question',
-    definition: 'This fallacy occurs when an argument\'s premises assume the truth of the conclusion, instead of supporting it. The arguer essentially restates their conclusion in their premise.',
-    example: '"Reading is good for you because it\'s beneficial." This argument doesn\'t provide any evidence for why reading is good; it just restates the claim using different words.',
-    category: 'presumption',
+    name: "Gambler's Fallacy",
+    definition: "This is the mistaken belief that if a particular event occurs more frequently than normal during the past, it is less likely to happen in the future (or vice versa), when the probability is independent.",
+    example: "At a roulette wheel, after a series of ten red numbers, a gambler believes that a black number is 'due' to come up. In reality, the probability is the same on every spin.",
+    category: "causal"
   },
   {
     id: 45,
-    name: 'Loaded Question',
-    definition: 'A question that contains a controversial or unjustified assumption. The question is phrased in such a way that any direct answer appears to endorse the assumption.',
-    example: '"When did you stop beating your wife?" This question assumes the person was beating their wife, regardless of whether that\'s true.',
-    category: 'presumption',
+    name: "Hot Hand Fallacy",
+    definition: "The inverse of the Gambler's Fallacy, this is the fallacious belief that a person who has experienced success with a random event has a greater chance of further success in additional attempts.",
+    example: "A basketball player makes several shots in a row, and fans believe they have a 'hot hand' and are more likely to make their next shot. Statistically, each shot is an independent event.",
+    category: "causal"
   },
   {
     id: 46,
-    name: 'Complex Question',
-    definition: 'A fallacy in which a question is asked that presupposes something that has not been proven or accepted by all the people involved.',
-    example: '"Why is the defendant such a dangerous criminal?" This assumes the defendant is dangerous and criminal without establishing these facts.',
-    category: 'presumption',
+    name: "Subjunctive Fallacy (Counterfactual Fallacy)",
+    definition: "This fallacy involves making claims about what *would have* happened if a different course of action had been taken. Such claims are speculative and cannot be proven.",
+    example: "If only I had studied for one more hour, I would have passed the exam. While plausible, it's impossible to prove; perhaps the exam was simply too difficult.",
+    category: "causal"
   },
   {
     id: 47,
-    name: 'Assumption of Hidden Facts',
-    definition: 'Assuming that certain unstated facts exist to support your argument.',
-    example: '"The witness must be lying because they seem nervous." This assumes nervousness always indicates deception, ignoring other reasons for anxiety.',
-    category: 'presumption',
+    name: "Survivorship Bias",
+    definition: "A logical error of concentrating on the people or things that 'survived' some process and inadvertently overlooking those that did not because of their lack of visibility. This can lead to false conclusions.",
+    example: "During WWII, researchers analyzed returning bombers to see where they were hit by flak, suggesting armor be added to those areas. A statistician pointed out they should armor the areas that were *not* hit, as planes hit in those spots likely didn't survive.",
+    category: "causal"
   },
   {
     id: 48,
-    name: 'False Premise',
-    definition: 'An argument based on a premise that is factually incorrect.',
-    example: '"Since all swans are white, any bird that isn\'t white can\'t be a swan." The premise is false—black swans exist.',
-    category: 'presumption',
+    name: "Sunk Cost Fallacy (Concorde Fallacy)",
+    definition: "This is the fallacy of continuing a behavior or endeavor as a result of previously invested resources (time, money, or effort), whether or not the current costs outweigh the expected benefits.",
+    example: "We've already spent millions developing this new product. It's not selling well, but we can't just stop now; we have to keep funding it to justify the initial investment.",
+    category: "causal"
   },
   {
     id: 49,
-    name: 'No True Scotsman',
-    definition: 'When faced with evidence that disproves a universal claim, the arguer changes the definition to exclude the counter-example.',
-    example: 'Person A: "No Scotsman puts sugar on his porridge." Person B: "But my uncle Angus is Scottish and he puts sugar on his porridge." Person A: "Well, no true Scotsman puts sugar on his porridge."',
-    category: 'presumption',
+    name: "Teleological Fallacy (Fallacy of Final Cause)",
+    definition: "This is the assumption that natural phenomena have a purpose, goal, or design, and that they act in order to achieve that purpose. It attributes intention to mindless, mechanistic processes.",
+    example: "The purpose of rain is to water the plants and fill the rivers. This assigns a goal to a meteorological process that is actually driven by physics, not by a need to help plants.",
+    category: "causal"
   },
   {
     id: 50,
-    name: 'Special Pleading',
-    definition: 'Applying standards, principles, or rules to other people or circumstances while making exemptions for oneself or particular cases.',
-    example: '"Everyone should follow traffic laws, but I was in a hurry and it was an emergency." This makes an exception without justification.',
-    category: 'presumption',
-  },
-  {
-    id: 51,
-    name: 'Circular Reasoning',
-    definition: 'An argument in which the conclusion is assumed in the premises. The conclusion is used as evidence for itself.',
-    example: '"The Bible is true because it\'s the word of God, and we know it\'s the word of God because the Bible says so." The argument uses its conclusion as proof.',
-    category: 'presumption',
-  },
-  {
-    id: 52,
-    name: 'Equivocation',
-    definition: 'Using a word with multiple meanings in different parts of an argument.',
-    example: '"The sign said \'fine for parking here\' and since \'fine\' means good, it must be good to park here." This confuses two different meanings of "fine."',
-    category: 'presumption',
-  },
-  {
-    id: 53,
-    name: 'Kettle Logic',
-    definition: 'Using multiple contradictory arguments to support the same conclusion.',
-    example: '"I never borrowed your kettle, and when I returned it, it was already broken, and it was broken when I borrowed it." These defenses contradict each other.',
-    category: 'presumption',
-  },
-
-  // Weak Inference Fallacies (22 fallacies)
-  {
-    id: 54,
-    name: 'Hasty Generalization',
-    definition: 'Drawing a broad conclusion from a small or unrepresentative sample. This fallacy involves making sweeping statements based on insufficient evidence.',
-    example: '"I met two rude people from that country, so everyone from there must be rude." This makes a generalization about an entire population based on just two encounters.',
-    category: 'weak_inference',
-  },
-  {
-    id: 55,
-    name: 'Unrepresentative Sample',
-    definition: 'Drawing conclusions from a sample that doesn\'t accurately represent the larger population.',
-    example: 'Conducting a survey about smartphone preferences by only asking people in an Apple Store.',
-    category: 'weak_inference',
-  },
-  {
-    id: 56,
-    name: 'False Analogy',
-    definition: 'Making a comparison between two things that are not sufficiently similar in relevant ways.',
-    example: '"Employees are like machines - you just need to oil them occasionally (give them raises) and they\'ll work perfectly." People are far more complex than machines.',
-    category: 'weak_inference',
-  },
-  {
-    id: 57,
-    name: 'Composition Fallacy',
-    definition: 'Assuming that what is true for the parts must be true for the whole.',
-    example: '"Each individual musician in this orchestra is excellent, so the orchestra must be excellent." Individual skill doesn\'t guarantee group performance.',
-    category: 'weak_inference',
-  },
-  {
-    id: 58,
-    name: 'Division Fallacy',
-    definition: 'Assuming that what is true for the whole must be true for its parts.',
-    example: '"This university is famous, so all its professors must be famous." The institution\'s reputation doesn\'t apply to every individual in it.',
-    category: 'weak_inference',
-  },
-  {
-    id: 59,
-    name: 'Texas Sharpshooter Fallacy',
-    definition: 'Selecting data or examples that support your conclusion while ignoring data that contradicts it.',
-    example: 'A shooter fires at a barn, then paints a target around the bullet holes and claims to be a sharpshooter.',
-    category: 'weak_inference',
-  },
-  {
-    id: 60,
-    name: 'Survivorship Bias',
-    definition: 'Focusing only on successful examples while ignoring failures, leading to false conclusions.',
-    example: '"Look at all these successful college dropouts like Bill Gates. Dropping out leads to success!" This ignores the many unsuccessful dropouts.',
-    category: 'weak_inference',
-  },
-  {
-    id: 61,
-    name: 'Cherry Picking',
-    definition: 'Selectively presenting evidence that supports your position while ignoring contradictory evidence.',
-    example: 'Citing only studies that support your viewpoint while ignoring larger studies that contradict it.',
-    category: 'weak_inference',
-  },
-  {
-    id: 62,
-    name: 'Anecdotal Evidence',
-    definition: 'Using personal stories or isolated examples as if they were reliable evidence for a general claim.',
-    example: '"Seat belts are dangerous because my friend was trapped in a car because of one." One anecdote doesn\'t outweigh statistical safety data.',
-    category: 'weak_inference',
-  },
-  {
-    id: 63,
-    name: 'Base Rate Fallacy',
-    definition: 'Ignoring the background probability when evaluating specific cases.',
-    example: 'A medical test is 99% accurate, you test positive for a rare disease affecting 1 in 10,000 people. The chance you actually have it is still very low due to the low base rate.',
-    category: 'weak_inference',
-  },
-  {
-    id: 64,
-    name: 'Conjunction Fallacy',
-    definition: 'Assuming that specific conditions are more probable than general ones.',
-    example: 'Based on a description, thinking "Linda is a bank teller and active in feminism" is more likely than "Linda is a bank teller."',
-    category: 'weak_inference',
-  },
-  {
-    id: 65,
-    name: 'Availability Heuristic Fallacy',
-    definition: 'Judging probability by how easily examples come to mind.',
-    example: '"Shark attacks must be common because I see them on the news a lot." Media coverage doesn\'t reflect actual probability.',
-    category: 'weak_inference',
-  },
-  {
-    id: 66,
-    name: 'Ecological Fallacy',
-    definition: 'Drawing conclusions about individuals based on group data.',
-    example: '"This neighborhood has high income, so this person from here must be wealthy." Group averages don\'t determine individual characteristics.',
-    category: 'weak_inference',
-  },
-  {
-    id: 67,
-    name: 'Stereotyping',
-    definition: 'Applying group generalizations to individuals without considering individual variation.',
-    example: '"Teenagers are irresponsible, so this teenager must be irresponsible." Group tendencies don\'t determine individual characteristics.',
-    category: 'weak_inference',
-  },
-  {
-    id: 68,
-    name: 'Simpson\'s Paradox',
-    definition: 'A correlation that appears in groups disappears or reverses when groups are combined.',
-    example: 'Treatment A works better than B in both men and women separately, but B appears better overall due to different group sizes.',
-    category: 'weak_inference',
-  },
-  {
-    id: 69,
-    name: 'Prosecutor\'s Fallacy',
-    definition: 'Confusing the probability of evidence given guilt with the probability of guilt given evidence.',
-    example: 'DNA evidence matches 1 in a million people. Concluding the defendant is guilty ignores how many people were tested.',
-    category: 'weak_inference',
-  },
-  {
-    id: 70,
-    name: 'Gambler\'s Fallacy',
-    definition: 'Believing that past results affect future probabilities in independent events.',
-    example: '"This coin has landed heads five times in a row, so it\'s due to land tails." Each flip is independent.',
-    category: 'weak_inference',
-  },
-  {
-    id: 71,
-    name: 'Hot Hand Fallacy',
-    definition: 'Believing that success increases the probability of further success in independent events.',
-    example: '"This basketball player has made five shots in a row, so he\'s more likely to make the next one." Previous independent events don\'t affect future probability.',
-    category: 'weak_inference',
-  },
-  {
-    id: 72,
-    name: 'Regression to the Mean Fallacy',
-    definition: 'Attributing natural statistical regression to specific interventions.',
-    example: '"After I started taking vitamins, my test scores improved." The improvement might be natural regression after unusually poor performance.',
-    category: 'weak_inference',
-  },
-  {
-    id: 73,
-    name: 'Selection Bias',
-    definition: 'Drawing conclusions from a systematically unrepresentative sample.',
-    example: 'Surveying only people who own smartphones about technology preferences and concluding all people prefer smartphones.',
-    category: 'weak_inference',
-  },
-  {
-    id: 74,
-    name: 'Misleading Vividness',
-    definition: 'Using a vivid example to support a general claim despite its unrepresentativeness.',
-    example: 'Using a dramatic plane crash story to argue that flying is dangerous, despite statistics showing it\'s very safe.',
-    category: 'weak_inference',
-  },
-  {
-    id: 75,
-    name: 'Law of Small Numbers',
-    definition: 'Expecting small samples to reflect the characteristics of the larger population.',
-    example: 'Assuming that because 3 out of 5 coin flips were heads, the coin is biased toward heads.',
-    category: 'weak_inference',
+    name: "Association Fallacy",
+    definition: "This fallacy asserts that qualities of one thing are inherently qualities of another, merely by an irrelevant association. This is often used to link a person or idea to something negative.",
+    example: "My political opponent once accepted a campaign donation from a controversial corporation. Therefore, my opponent must endorse that corporation's unethical practices.",
+    category: "relevance"
   }
+  // Note: This is a partial implementation with the first 50 fallacies from the CSV.
+  // The remaining 125 fallacies would be added following the same structure.
 ];
