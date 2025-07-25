@@ -201,13 +201,13 @@ export default function Censorship() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Filter className="h-6 w-6 text-primary" />
-              <CardTitle className="text-2xl">How to Detect Censorship</CardTitle>
+              <CardTitle className="text-2xl">{t('censorship.detection')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-3 gap-6">
               <div>
-                <h4 className="font-semibold text-foreground mb-3">Information Patterns</h4>
+                <h4 className="font-semibold text-foreground mb-3">{t('censorship.detection.informationPatterns')}</h4>
                 <ul className="space-y-2 text-muted-foreground text-sm">
                   <li>• One-sided coverage of controversial topics</li>
                   <li>• Absence of dissenting expert opinions</li>
@@ -216,7 +216,7 @@ export default function Censorship() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-foreground mb-3">Platform Behavior</h4>
+                <h4 className="font-semibold text-foreground mb-3">{t('censorship.detection.platformBehavior')}</h4>
                 <ul className="space-y-2 text-muted-foreground text-sm">
                   <li>• Reduced engagement on certain topics</li>
                   <li>• Search results that seem filtered</li>
@@ -225,7 +225,7 @@ export default function Censorship() {
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-foreground mb-3">Social Signals</h4>
+                <h4 className="font-semibold text-foreground mb-3">{t('censorship.detection.socialSignals')}</h4>
                 <ul className="space-y-2 text-muted-foreground text-sm">
                   <li>• Taboo topics that "can't be discussed"</li>
                   <li>• Career risks for certain opinions</li>
@@ -241,7 +241,7 @@ export default function Censorship() {
         <Card className="glass-card">
           <CardContent className="p-8 text-center">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              The Importance of Free Expression
+              {t('censorship.importanceOfFreeExpression')}
             </h3>
             <p className="text-muted-foreground max-w-3xl mx-auto">
               Free and open discussion is essential for human progress. When we censor ideas, 
