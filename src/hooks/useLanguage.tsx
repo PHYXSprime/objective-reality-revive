@@ -20,7 +20,7 @@ const translationCache = new Map<Language, Record<string, string>>();
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>('en');
   const [translations, setTranslations] = useState<Record<string, string>>({});
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const loadLanguageTranslations = async (lang: Language) => {
