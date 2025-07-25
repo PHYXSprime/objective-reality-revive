@@ -226,15 +226,6 @@ export default function Consciousness() {
                 </div>
               </div>
 
-        {/* PHYXS Evolution D Map */}
-        <div className="mb-12">
-          <PHYXSTable 
-            data={phyxsMapData}
-            title="PHYXS Evolution D Map"
-            description="David Heggli's revolutionary approach that bridges psychological models with biophysical reality, mapping consciousness evolution to measurable biological, neural, and quantum markers across human development."
-          />
-        </div>
-
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-4">
                 Conclusion: A New Foundation for Understanding
               </h3>
@@ -249,6 +240,15 @@ export default function Consciousness() {
             </div>
           </CardContent>
         </Card>
+
+        {/* PHYXS Evolution D Map */}
+        <div className="mb-12">
+          <PHYXSTable 
+            data={phyxsMapData}
+            title="PHYXS Evolution D Map"
+            description="David Heggli's revolutionary approach that bridges psychological models with biophysical reality, mapping consciousness evolution to measurable biological, neural, and quantum markers across human development."
+          />
+        </div>
 
         {/* Research Note */}
         <Card className="mt-12 glass-card">
