@@ -121,31 +121,28 @@ export default function CoEvolution() {
         <div className="glass-card rounded-2xl p-8 mb-12">
           <div className="flex items-center gap-3 mb-6">
             <Dna className="h-6 w-6 text-purple-600" />
-            <h2 className="text-2xl font-bold text-foreground">The Co-evolutionary Hypothesis</h2>
+            <h2 className="text-2xl font-bold text-foreground">{t('coEvolution.coreHypothesis.title')}</h2>
           </div>
           <p className="text-lg text-muted-foreground leading-relaxed mb-6">
-            Human beings evolved alongside religious thinking for thousands of years. Even as societies become 
-            more secular, the cognitive patterns that made religious thinking adaptive persist and manifest 
-            in supposedly rational, secular contexts. We've simply transferred religious-style thinking 
-            to new domains while believing we've become more rational.
+            {t('coEvolution.coreHypothesis.description')}
           </p>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Evolutionary Advantage</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('coEvolution.coreHypothesis.evolutionaryAdvantage.title')}</h4>
               <p className="text-sm text-muted-foreground">
-                Religious thinking promoted group cohesion and survival in tribal environments
+                {t('coEvolution.coreHypothesis.evolutionaryAdvantage.description')}
               </p>
             </div>
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Cognitive Persistence</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('coEvolution.coreHypothesis.cognitivePersistence.title')}</h4>
               <p className="text-sm text-muted-foreground">
-                These thinking patterns remain active even when religious content is removed
+                {t('coEvolution.coreHypothesis.cognitivePersistence.description')}
               </p>
             </div>
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Modern Manifestation</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('coEvolution.coreHypothesis.modernManifestation.title')}</h4>
               <p className="text-sm text-muted-foreground">
-                Secular ideologies adopt religious-style reasoning and social structures
+                {t('coEvolution.coreHypothesis.modernManifestation.description')}
               </p>
             </div>
           </div>
