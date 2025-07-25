@@ -34,12 +34,12 @@ export default function ScientificConsensus() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header */}
         <div className="mb-12 text-center">
-          <div className="glass-card p-8 max-w-4xl mx-auto mb-8">
+          <div className="glass-card rounded-2xl p-8 max-w-4xl mx-auto mb-8 shadow-[0_0_20px_-5px_rgba(59,130,246,0.2)]">
             <h1 className="text-4xl font-bold text-foreground mb-6">
               {t('scientificConsensus.title')}
             </h1>
           </div>
-          <div className="glass-card p-6 max-w-4xl mx-auto mb-8">
+          <div className="glass-card rounded-2xl p-6 max-w-4xl mx-auto mb-8 shadow-[0_0_15px_-5px_rgba(59,130,246,0.15)]">
             <p className="text-xl text-muted-foreground">
               {t('scientificConsensus.subtitle')}
             </p>
@@ -47,7 +47,7 @@ export default function ScientificConsensus() {
         </div>
 
         {/* Key Insight */}
-        <div className="glass-card p-8 mb-12 border-orange-200 dark:border-orange-800">
+        <div className="glass-card rounded-2xl p-8 mb-12 border-orange-200/30 dark:border-orange-800/30 shadow-[0_0_20px_-5px_rgba(234,88,12,0.2)]">
           <div className="flex items-center gap-3 mb-4">
             <AlertTriangle className="h-6 w-6 text-orange-600" />
             <h2 className="text-2xl font-bold text-foreground">{t('scientificConsensus.criticalObservation')}</h2>
@@ -62,21 +62,20 @@ export default function ScientificConsensus() {
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
             {t('scientificConsensus.confidenceLevels')}
           </h2>
-          <div className="glass-card p-6 text-center mb-8 max-w-3xl mx-auto">
+          <div className="glass-card rounded-2xl p-6 text-center mb-8 max-w-3xl mx-auto shadow-[0_0_15px_-5px_rgba(99,102,241,0.15)]">
             <p className="text-muted-foreground">
-              These percentages represent personal confidence levels based on examining the quality of scientists, 
-              potential for bias, and historical track record of accuracy in each field.
+              {t('scientificConsensus.confidenceDesc')}
             </p>
           </div>
           
           <div className="grid gap-4">
             {fields.map((item, index) => (
-              <Card key={index}>
+              <Card key={index} className="glass-card rounded-2xl shadow-[0_0_10px_-3px_rgba(139,92,246,0.1)]">
                 <CardContent className="p-6">
                   <div className="flex items-center justify-between mb-2">
                     <h3 className="font-semibold text-foreground">{item.field}</h3>
                     <span className="text-sm font-medium text-muted-foreground">
-                      {item.confidence}% confidence
+                      {item.confidence}{t('scientificConsensus.confidencePercentage')}
                     </span>
                   </div>
                   <Progress 
@@ -92,7 +91,7 @@ export default function ScientificConsensus() {
 
         {/* Why This Matters */}
         <div className="grid md:grid-cols-2 gap-8 mb-12">
-          <div className="glass-card p-6">
+          <div className="glass-card rounded-2xl p-6 shadow-[0_0_15px_-5px_rgba(59,130,246,0.2)]">
             <div className="flex items-center gap-3 mb-4">
               <Brain className="h-6 w-6 text-blue-600" />
               <h3 className="text-xl font-bold text-foreground">{t('scientificConsensus.consensusVsDogma')}</h3>
@@ -101,14 +100,14 @@ export default function ScientificConsensus() {
               {t('scientificConsensus.consensusVsDogmaText')}
             </p>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• Scientific paradigms can become entrenched</li>
-              <li>• Funding and career incentives can bias research</li>
-              <li>• Groupthink can affect scientific communities</li>
-              <li>• Political and social pressures influence conclusions</li>
+              <li>• {t('scientificConsensus.consensusProblems.paradigms')}</li>
+              <li>• {t('scientificConsensus.consensusProblems.funding')}</li>
+              <li>• {t('scientificConsensus.consensusProblems.groupthink')}</li>
+              <li>• {t('scientificConsensus.consensusProblems.political')}</li>
             </ul>
           </div>
 
-          <div className="glass-card p-6">
+          <div className="glass-card rounded-2xl p-6 shadow-[0_0_15px_-5px_rgba(34,197,94,0.2)]">
             <div className="flex items-center gap-3 mb-4">
               <Target className="h-6 w-6 text-green-600" />
               <h3 className="text-xl font-bold text-foreground">{t('scientificConsensus.balancedApproach')}</h3>
@@ -117,70 +116,67 @@ export default function ScientificConsensus() {
               {t('scientificConsensus.balancedApproachText')}
             </p>
             <ul className="space-y-2 text-muted-foreground">
-              <li>• Question methodologies and assumptions</li>
-              <li>• Look for conflicts of interest</li>
-              <li>• Consider alternative explanations</li>
-              <li>• Understand statistical limitations</li>
+              <li>• {t('scientificConsensus.balancedMethods.question')}</li>
+              <li>• {t('scientificConsensus.balancedMethods.conflicts')}</li>
+              <li>• {t('scientificConsensus.balancedMethods.alternatives')}</li>
+              <li>• {t('scientificConsensus.balancedMethods.statistics')}</li>
             </ul>
           </div>
         </div>
 
         {/* Historical Perspective */}
-        <div className="glass-card p-8 mb-12">
+        <div className="glass-card rounded-2xl p-8 mb-12 shadow-[0_0_20px_-5px_rgba(139,92,246,0.2)]">
           <div className="flex items-center gap-3 mb-6">
             <TrendingUp className="h-6 w-6 text-purple-600" />
             <h2 className="text-2xl font-bold text-foreground">{t('scientificConsensus.historicalPattern')}</h2>
           </div>
           <div className="grid md:grid-cols-3 gap-6">
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Past Consensus</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('scientificConsensus.historical.pastConsensus')}</h4>
               <p className="text-sm text-muted-foreground">
-                Many "established" scientific facts have been overturned: 
-                flat Earth, phlogiston theory, static universe, etc.
+                {t('scientificConsensus.historical.pastConsensusText')}
               </p>
             </div>
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Current Challenges</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('scientificConsensus.historical.currentChallenges')}</h4>
               <p className="text-sm text-muted-foreground">
-                Replication crisis, publication bias, p-hacking, 
-                and institutional pressure affect modern science.
+                {t('scientificConsensus.historical.currentChallengesText')}
               </p>
             </div>
             <div className="text-center">
-              <h4 className="font-semibold text-foreground mb-2">Future Outlook</h4>
+              <h4 className="font-semibold text-foreground mb-2">{t('scientificConsensus.historical.futureOutlook')}</h4>
               <p className="text-sm text-muted-foreground">
-                Expect significant revisions in our understanding, 
-                especially in complex fields with many variables.
+                {t('scientificConsensus.historical.futureOutlookText')}
               </p>
             </div>
           </div>
         </div>
 
         {/* Practical Guidelines */}
-        <div className="glass-card p-8">
+        <div className="glass-card rounded-2xl p-8 shadow-[0_0_20px_-5px_rgba(99,102,241,0.2)]">
           <div className="flex items-center gap-3 mb-6">
             <Users className="h-6 w-6 text-indigo-600" />
             <h2 className="text-2xl font-bold text-foreground">{t('scientificConsensus.practicalGuidelines')}</h2>
           </div>
           <div className="grid md:grid-cols-2 gap-6">
             <div>
-              <h4 className="font-semibold text-foreground mb-3">When Evaluating Scientific Claims:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('scientificConsensus.evaluating.title')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• Check funding sources and potential conflicts</li>
-                <li>• Look for independent replication</li>
-                <li>• Examine methodology and sample sizes</li>
-                <li>• Consider alternative interpretations</li>
-                <li>• Be especially skeptical of extraordinary claims</li>
+                <li>• {t('scientificConsensus.evaluating.funding')}</li>
+                <li>• {t('scientificConsensus.evaluating.replication')}</li>
+                <li>• {t('scientificConsensus.evaluating.methodology')}</li>
+                <li>• {t('scientificConsensus.evaluating.interpretations')}</li>
+                <li>• {t('scientificConsensus.evaluating.extraordinary')}</li>
               </ul>
             </div>
             <div>
-              <h4 className="font-semibold text-foreground mb-3">Red Flags to Watch For:</h4>
+              <h4 className="font-semibold text-foreground mb-3">{t('scientificConsensus.redFlags.title')}</h4>
               <ul className="space-y-2 text-muted-foreground">
-                <li>• "The science is settled" statements</li>
-                <li>• Suppression of dissenting voices</li>
-                <li>• Claims that require immediate action</li>
-                <li>• Lack of open data or methodology</li>
-                <li>• Appeal to authority rather than evidence</li>
+                <li>• {t('scientificConsensus.redFlags.settled')}</li>
+                <li>• {t('scientificConsensus.redFlags.suppression')}</li>
+                <li>• {t('scientificConsensus.redFlags.immediate')}</li>
+                <li>• {t('scientificConsensus.redFlags.noData')}</li>
+                <li>• {t('scientificConsensus.redFlags.authority')}</li>
               </ul>
             </div>
           </div>

@@ -173,18 +173,38 @@ export const challengePageTranslations = {
       'field.climate.desc': 'Komplexe Modelle mit vielen Variablen und politischem Einfluss',
       'field.social': 'Sozialwissenschaften',
       'field.social.desc': 'Kulturelle Voreingenommenheit und methodische Probleme',
-      // Guidelines
-      'guideline.checkFunding': 'Finanzierungsquellen und potenzielle Konflikte prüfen',
-      'guideline.lookReplication': 'Nach unabhängiger Replikation suchen',
-      'guideline.examineMethodology': 'Methodik und Stichprobengrößen untersuchen',
-      'guideline.considerAlternatives': 'Alternative Interpretationen berücksichtigen',
-      'guideline.skepticalClaims': 'Bei außergewöhnlichen Behauptungen besonders skeptisch sein',
-      // Red flags
-      'redflag.scienceSettled': '"Die Wissenschaft ist geklärt"-Aussagen',
-      'redflag.suppressDissent': 'Unterdrückung abweichender Stimmen',
-      'redflag.immediateAction': 'Behauptungen, die sofortiges Handeln erfordern',
-      'redflag.noOpenData': 'Mangel an offenen Daten oder Methodik',
-      'redflag.appealAuthority': 'Autoritätsappell statt Beweise'
+      // Additional content
+      confidenceDesc: 'Diese Prozentsätze stellen persönliche Vertrauensniveaus dar, basierend auf der Untersuchung der Qualität der Wissenschaftler, des Potenzials für Voreingenommenheit und der historischen Erfolgsbilanz der Genauigkeit in jedem Bereich.',
+      confidencePercentage: '% Vertrauen',
+      // Lists and detailed content
+      'consensusProblems.paradigms': 'Wissenschaftliche Paradigmen können festgefahren werden',
+      'consensusProblems.funding': 'Finanzierung und Karriereanreize können die Forschung verzerren',
+      'consensusProblems.groupthink': 'Gruppendenken kann wissenschaftliche Gemeinschaften beeinflussen',
+      'consensusProblems.political': 'Politische und soziale Pressionen beeinflussen Schlussfolgerungen',
+      'balancedMethods.question': 'Methodologien und Annahmen hinterfragen',
+      'balancedMethods.conflicts': 'Nach Interessenkonflikten suchen',
+      'balancedMethods.alternatives': 'Alternative Erklärungen betrachten',
+      'balancedMethods.statistics': 'Statistische Beschränkungen verstehen',
+      // Historical perspective
+      'historical.pastConsensus': 'Vergangener Konsens',
+      'historical.pastConsensusText': 'Viele "etablierte" wissenschaftliche Fakten wurden widerlegt: flache Erde, Phlogiston-Theorie, statisches Universum, etc.',
+      'historical.currentChallenges': 'Aktuelle Herausforderungen',
+      'historical.currentChallengesText': 'Replikationskrise, Publikationsbias, p-Hacking und institutioneller Druck beeinflussen die moderne Wissenschaft.',
+      'historical.futureOutlook': 'Zukunftsaussichten',
+      'historical.futureOutlookText': 'Erwarten Sie erhebliche Revisionen in unserem Verständnis, besonders in komplexen Bereichen mit vielen Variablen.',
+      // Practical guidelines
+      'evaluating.title': 'Bei der Bewertung wissenschaftlicher Behauptungen:',
+      'evaluating.funding': 'Finanzierungsquellen und potenzielle Konflikte prüfen',
+      'evaluating.replication': 'Nach unabhängiger Replikation suchen',
+      'evaluating.methodology': 'Methodik und Stichprobengrößen untersuchen',
+      'evaluating.interpretations': 'Alternative Interpretationen berücksichtigen',
+      'evaluating.extraordinary': 'Bei außergewöhnlichen Behauptungen besonders skeptisch sein',
+      'redFlags.title': 'Warnsignale, auf die man achten sollte:',
+      'redFlags.settled': '"Die Wissenschaft ist geklärt"-Aussagen',
+      'redFlags.suppression': 'Unterdrückung abweichender Stimmen',
+      'redFlags.immediate': 'Behauptungen, die sofortiges Handeln erfordern',
+      'redFlags.noData': 'Mangel an offenen Daten oder Methodik',
+      'redFlags.authority': 'Autoritätsappell statt Beweise'
     },
 
     // Indoctrination Page  

@@ -13,7 +13,7 @@ const challenges = [
   },
   {
     icon: Target,
-    title: "Scientific Consensus",
+    titleKey: "challenge.scientificConsensus.title",
     path: "/consensus",
     color: "text-orange-600 dark:text-orange-400"
   },
