@@ -26,17 +26,17 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
   };
 
   const getEvolutionColors = (evolutionPoint: string) => {
-    // Apply gradient badge to all levels, with appropriate background colors
+    // Each level gets its own color for badge to match the level color
     const colors = [
-      { bg: "bg-teal-500/20", border: "border-l-teal-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
-      { bg: "bg-yellow-500/20", border: "border-l-yellow-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
-      { bg: "bg-green-500/20", border: "border-l-green-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
-      { bg: "bg-orange-500/20", border: "border-l-orange-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
-      { bg: "bg-blue-500/20", border: "border-l-blue-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
-      { bg: "bg-red-500/20", border: "border-l-red-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
-      { bg: "bg-purple-500/20", border: "border-l-purple-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
-      { bg: "bg-indigo-500/20", border: "border-l-indigo-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" },
-      { bg: "bg-stone-500/20", border: "border-l-stone-500", badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white" }
+      { bg: "bg-teal-500/20", border: "border-l-teal-500", badge: "bg-teal-500 text-white" },
+      { bg: "bg-yellow-500/20", border: "border-l-yellow-500", badge: "bg-yellow-500 text-black" },
+      { bg: "bg-green-500/20", border: "border-l-green-500", badge: "bg-green-500 text-white" },
+      { bg: "bg-orange-500/20", border: "border-l-orange-500", badge: "bg-orange-500 text-white" },
+      { bg: "bg-blue-500/20", border: "border-l-blue-500", badge: "bg-blue-500 text-white" },
+      { bg: "bg-red-500/20", border: "border-l-red-500", badge: "bg-red-500 text-white" },
+      { bg: "bg-purple-500/20", border: "border-l-purple-500", badge: "bg-purple-500 text-white" },
+      { bg: "bg-indigo-500/20", border: "border-l-indigo-500", badge: "bg-indigo-500 text-white" },
+      { bg: "bg-stone-500/20", border: "border-l-stone-500", badge: "bg-stone-500 text-white" }
     ];
     const colorIndex = parseInt(evolutionPoint.charAt(1)) - 1;
     return colors[colorIndex] || colors[0];
