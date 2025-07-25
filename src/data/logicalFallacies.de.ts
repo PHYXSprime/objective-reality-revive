@@ -195,5 +195,112 @@ export const logicalFallaciesDE: FallacyTranslations = {
     name: "Falsche Richtung (Kausale Umkehrung)",
     definition: "Dieser Trugschluss tritt auf, wenn Ursache und Wirkung vertauscht werden. Der Argumentierende behauptet, dass X Y verursacht, obwohl in Wirklichkeit Y X verursacht.",
     example: "'Beobachtet man, dass sehr kranke Menschen oft in Krankenhäusern sind, schließt jemand daraus, dass Krankenhäuser krank machen. In Wirklichkeit gehen die Menschen ins Krankenhaus, weil sie bereits krank sind.'"
+  },
+  "Correlation Implies Causation": {
+    name: "Korrelation impliziert Kausalität (Cum Hoc Ergo Propter Hoc)",
+    definition: "Dieser Trugschluss ist der Fehler zu schlussfolgern, dass, weil zwei Ereignisse zusammen auftreten, das eine die Ursache des anderen sein muss. Er übersieht die Möglichkeit eines dritten Faktors, der beide verursacht.",
+    example: "'Wenn die Eisverkäufe steigen, steigt auch die Zahl der Haiangriffe. Daher verursacht der Kauf von Eis Haiangriffe.' In Wirklichkeit ist heißes Wetter die Ursache für beides."
+  },
+  "Post Hoc Ergo Propter Hoc": {
+    name: "Post Hoc Ergo Propter Hoc",
+    definition: "Wörtlich 'danach, also deswegen', tritt dieser Trugschluss auf, wenn angenommen wird, dass, weil ein Ereignis auf ein anderes folgte, das erste Ereignis das zweite verursacht haben muss.",
+    example: "'Ich trug mein Glückstrikot und mein Team gewann das Spiel. Daher hat mein Trikot das Team zum Sieg geführt.' Die zeitliche Abfolge von Ereignissen reicht nicht aus, um eine Kausalität herzustellen."
+  },
+  "Regression Fallacy": {
+    name: "Regressions-Trugschluss",
+    definition: "Dieser Trugschluss berücksichtigt keine natürlichen Schwankungen und die Regression zum Mittelwert. Er schreibt eine Rückkehr zur Normalität einer Handlung zu, die ergriffen wurde, als ein Ergebnis außergewöhnlich war.",
+    example: "'Ein Patient mit extremen Rückenschmerzen probiert ein neues Mittel und fühlt sich eine Woche später viel besser. Er schreibt die Genesung dem Mittel zu, aber es ist wahrscheinlich, dass der extreme Schmerz auf natürliche Weise zu einem weniger schmerzhaften Durchschnittszustand zurückging.'"
+  },
+  "Third Cause Fallacy": {
+    name: "Dritte-Ursache-Trugschluss",
+    definition: "Eine Variante des Trugschlusses 'Korrelation impliziert Kausalität', dieser Fehler tritt auf, wenn ein dritter, nicht anerkannter Faktor (eine Störvariable) die Ursache für zwei korrelierte Ereignisse ist.",
+    example: "'Die Anzahl der Störche in einer Region korreliert mit der menschlichen Geburtenrate. Daher bringen Störche die Babys.' Die dritte Ursache ist die Größe der Region; größere Regionen haben mehr Störche und mehr Menschen."
+  },
+  "Gambler's Fallacy": {
+    name: "Spieler-Trugschluss",
+    definition: "Der irrige Glaube, dass, wenn ein bestimmtes zufälliges Ereignis in der Vergangenheit häufiger als normal auftritt, es in der Zukunft weniger wahrscheinlich ist (oder umgekehrt).",
+    example: "'An einem Rouletterad glaubt ein Spieler nach zehn roten Zahlen, dass eine schwarze Zahl 'fällig' ist. In Wirklichkeit ist die Wahrscheinlichkeit bei jeder Drehung gleich.'"
+  },
+  "Hot Hand Fallacy": {
+    name: "Heisse-Hand-Trugschluss",
+    definition: "Die Umkehrung des Spieler-Trugschlusses, dies ist der Glaube, dass eine Person, die bei einem zufälligen Ereignis Erfolg hatte, eine größere Chance auf weiteren Erfolg hat.",
+    example: "'Ein Basketballspieler trifft mehrere Würfe hintereinander, und die Fans glauben, er habe eine 'heiße Hand' und treffe eher seinen nächsten Wurf. Statistisch gesehen ist jeder Wurf ein unabhängiges Ereignis.'"
+  },
+  "Survivorship Bias": {
+    name: "Überlebens-Voreingenommenheit",
+    definition: "Ein logischer Fehler, sich auf die Menschen oder Dinge zu konzentrieren, die einen Prozess 'überlebt' haben, und dabei versehentlich diejenigen zu übersehen, die dies aufgrund ihrer mangelnden Sichtbarkeit nicht taten.",
+    example: "'Die Analyse zurückkehrender Bomber im Zweiten Weltkrieg, um zu sehen, wo sie getroffen wurden, und vorschlagen, an diesen Stellen Panzerungen anzubringen. Der Trugschluss besteht darin, die Stellen nicht zu panzern, die *nicht* getroffen wurden, da Flugzeuge, die dort getroffen wurden, wahrscheinlich nicht überlebten.'"
+  },
+  "Magical Thinking": {
+    name: "Magisches Denken",
+    definition: "Der Glaube, dass die eigenen Gedanken, Worte oder Handlungen Ereignisse in der physischen Welt auf eine Weise beeinflussen können, die nicht durch die Gesetze der Physik gestützt wird.",
+    example: "'Ein Athlet glaubt, dass das Tragen eines bestimmten Paares 'Glückssocken' der Grund war, warum er eine Meisterschaft gewonnen hat. Dies schreibt einem Objekt kausale Kraft zu, das keinen tatsächlichen Einfluss hat.'"
+  },
+  "Sunk Cost Fallacy": {
+    name: "Versunkene-Kosten-Trugschluss (Concorde-Trugschluss)",
+    definition: "Ein Verhalten oder Unterfangen aufgrund zuvor investierter Ressourcen (Zeit, Geld oder Mühe) fortzusetzen, unabhängig davon, ob die aktuellen Kosten den erwarteten Nutzen überwiegen.",
+    example: "'Wir haben bereits Millionen in die Entwicklung dieses neuen Produkts investiert. Es verkauft sich nicht gut, aber wir können jetzt nicht einfach aufhören; wir müssen die ursprüngliche Investition rechtfertigen.'"
+  },
+  "Association Fallacy": {
+    name: "Assoziations-Trugschluss (Schuld durch Assoziation)",
+    definition: "Dieser Trugschluss behauptet, dass die Eigenschaften einer Sache von Natur aus die Eigenschaften einer anderen sind, nur durch eine irrelevante Assoziation.",
+    example: "'Mein politischer Gegner hat einmal eine Wahlkampfspende von einem umstrittenen Unternehmen angenommen. Daher muss mein Gegner die unethischen Praktiken dieses Unternehmens gutheißen.'"
+  },
+  "Ecological Fallacy": {
+    name: "Ökologischer Trugschluss",
+    definition: "Dieser Trugschluss beinhaltet das Ziehen von Schlussfolgerungen über ein Individuum auf der Grundlage von aggregierten Daten für die Gruppe, zu der dieses Individuum gehört. Gruppenstatistiken gelten nicht notwendigerweise für Einzelpersonen.",
+    example: "'Eine Studie zeigt, dass Land X einen sehr hohen nationalen Glückswert hat. Meine Freundin kommt aus Land X, also muss sie eine sehr glückliche Person sein.'"
+  },
+  "Etymological Fallacy": {
+    name: "Etymologischer Trugschluss",
+    definition: "Der Fehler zu argumentieren, dass die historische oder ursprüngliche Bedeutung eines Wortes (seine Etymologie) seine einzig richtige und aktuelle Bedeutung ist und die Entwicklung der Sprache ignoriert.",
+    example: "'Jemand argumentiert, dass das Wort 'schrecklich' (awful) ein positiver Begriff sein sollte, weil es ursprünglich 'voller Ehrfurcht' (full of awe) bedeutete. Dies ignoriert, dass sich seine Bedeutung im Laufe der Jahrhunderte geändert hat.'"
+  },
+  "Historian's Fallacy (variant)": {
+    name: "Historiker-Trugschluss",
+    definition: "Dies geschieht, wenn man annimmt, dass Entscheidungsträger der Vergangenheit Ereignisse aus derselben Perspektive betrachteten und dieselben Informationen hatten wie diejenigen, die die Entscheidung nachträglich analysieren.",
+    example: "'Die Generäle im Ersten Weltkrieg hätten wissen müssen, dass der Grabenkrieg zu einem Patt führen würde; es war offensichtlich.' Dies ignoriert die zeitgenössischen Militärtheorien, die ihre Entscheidungen leiteten."
+  },
+  "McNamara Fallacy": {
+    name: "McNamara-Trugschluss",
+    definition: "Dieser Trugschluss besteht darin, eine Entscheidung ausschließlich auf der Grundlage quantitativer Metriken und Daten zu treffen und dabei qualitative Faktoren und schwer messbare Informationen zu ignorieren.",
+    example: "'Ein Schulbezirk bewertet seine Lehrer nur anhand der Testergebnisse der Schüler. Dies ignoriert andere entscheidende Faktoren wie die Fähigkeit eines Lehrers, Kreativität zu inspirieren.'"
+  },
+  "Nirvana Fallacy": {
+    name: "Nirwana-Trugschluss (Perfekte-Lösung-Trugschluss)",
+    definition: "Der Fehler, jede realistische Lösung abzulehnen, weil sie ein Problem nicht vollständig löst. Er vergleicht einen praktischen Vorschlag mit einer unrealistischen, idealisierten 'perfekten' Alternative.",
+    example: "'Warum sollten wir dieses neue Recyclingprogramm umsetzen? Es wird nicht den gesamten Abfall beseitigen, also lohnt es sich nicht.' Dies lehnt einen positiven Schritt ab, weil er keine perfekte Lösung ist."
+  },
+  "Broken Window Fallacy": {
+    name: "Zerbrochenes-Fenster-Trugschluss",
+    definition: "Ein wirtschaftlicher Trugschluss, der argumentiert, dass ein zerstörerisches Ereignis gut für die Wirtschaft ist, weil es die Ausgaben für Reparaturen ankurbelt. Er ignoriert die unsichtbaren Kosten – das Geld hätte für etwas Neues ausgegeben werden können.",
+    example: "'Der Hurrikan war ein Segen im Unglück, weil er so viele Bauarbeitsplätze geschaffen hat, um die Stadt wieder aufzubauen.' Dies übersieht, dass die Ressourcen für den Wiederaufbau für neuen Fortschritt hätten verwendet werden können."
+  },
+  "Appeal to Coincidence": {
+    name: "Appell an den Zufall",
+    definition: "Dieser Trugschluss tritt auf, wenn ein Argumentierender starke Beweise für einen kausalen Zusammenhang abtut, indem er behauptet, die Korrelation sei nur ein Zufall, oft ohne Beweise für den Zufall selbst zu liefern.",
+    example: "'Es ist nur ein Zufall, dass jedes Mal, wenn unser CEO seine Aktien verkauft, das Unternehmen eine Woche später schlechte Nachrichten bekannt gibt.' Dies tut ein verdächtiges Muster ab, das wahrscheinlich auf Insiderhandel hindeutet."
+  },
+  "Availability Heuristic": {
+    name: "Verfügbarkeitsheuristik (als Trugschluss)",
+    definition: "Eine mentale Abkürzung, die sich auf unmittelbare Beispiele stützt, die einem in den Sinn kommen. Dies wird zu einem Trugschluss, wenn diese lebhaften Beispiele verwendet werden, um die Wahrscheinlichkeit zu beurteilen und ein Argument aufzubauen.",
+    example: "'Nachdem eine Person mehrere Nachrichtenberichte über Haiangriffe gesehen hat, argumentiert sie, dass die Strände geschlossen werden sollten, und übertreibt das Risiko aufgrund lebhafter, aber statistisch seltener Ereignisse.'"
+  },
+  "Confirmation Bias": {
+    name: "Bestätigungsfehler (als Trugschluss)",
+    definition: "Die Tendenz, ein Argument aufzubauen, indem man nur Informationen sucht, interpretiert und erinnert, die die eigenen bereits bestehenden Überzeugungen bestätigen, während man widersprüchliche Beweise ignoriert.",
+    example: "'Eine Person, die glaubt, eine Diät sei gesund, wird nur nach Erfahrungsberichten und Artikeln suchen, die sie unterstützen, und diese kuratierten Informationen dann als Beweis für ihre Wirksamkeit präsentieren.'"
+  },
+  "Just World Fallacy": {
+    name: "Gerechte-Welt-Trugschluss",
+    definition: "Die kognitive Voreingenommenheit, dass die Handlungen einer Person dazu neigen, moralisch faire Konsequenzen nach sich zu ziehen. Es wird zu einem Trugschluss, wenn argumentiert wird, dass Opfer von Unglück es verdient haben müssen.",
+    example: "'Sie wurde ausgeraubt, weil sie ihren teuren Schmuck in einer schlechten Gegend zur Schau stellte; sie hat darum gebeten.' Dies gibt dem Opfer die Schuld für das Verbrechen."
+  },
+  "Spotlight Fallacy": {
+    name: "Spotlight-Trugschluss",
+    definition: "Die Tendenz anzunehmen, dass die Berichterstattung der Medien über eine Gruppe repräsentativ für die gesamte Gruppe ist. Es ist ein Trugschluss der Verallgemeinerung, der auf den sichtbarsten Mitgliedern basiert.",
+    example: "'Wenn man Nachrichtenberichte sieht, die sich ausschließlich auf gewalttätige Proteste konzentrieren, kommt eine Person zu dem Schluss, dass alle Menschen, die diese Sache unterstützen, gewalttätig sind, auch wenn die große Mehrheit friedlich ist.'"
   }
 };
+
+export default logicalFallaciesDE;
