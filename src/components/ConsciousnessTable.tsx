@@ -25,6 +25,30 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
     setOpenRows(newOpenRows);
   };
 
+  const getLevelColors = (level: AQALLevel, index: number) => {
+    if (level.level === "Unitive Self") {
+      return {
+        bg: "bg-gradient-to-b from-indigo-500/20 via-violet-500/20 to-white/20",
+        border: "border-l-indigo-500",
+        badge: "bg-gradient-to-b from-indigo-500 via-violet-500 to-white text-white"
+      };
+    }
+    
+    const colors = [
+      { bg: "bg-stone-500/20", border: "border-l-stone-500", badge: "bg-stone-500 text-white" },
+      { bg: "bg-purple-500/20", border: "border-l-purple-500", badge: "bg-purple-500 text-white" },
+      { bg: "bg-red-500/20", border: "border-l-red-500", badge: "bg-red-500 text-white" },
+      { bg: "bg-blue-500/20", border: "border-l-blue-500", badge: "bg-blue-500 text-white" },
+      { bg: "bg-orange-500/20", border: "border-l-orange-500", badge: "bg-orange-500 text-white" },
+      { bg: "bg-green-500/20", border: "border-l-green-500", badge: "bg-green-500 text-white" },
+      { bg: "bg-yellow-500/20", border: "border-l-yellow-500", badge: "bg-yellow-500 text-white" },
+      { bg: "bg-teal-500/20", border: "border-l-teal-500", badge: "bg-teal-500 text-white" }
+    ];
+    
+    const colorIndex = Math.min(index, colors.length - 1);
+    return colors[colorIndex];
+  };
+
   return (
     <Card className="glass-card">
       <CardHeader>
@@ -44,108 +68,111 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
               </TableRow>
             </TableHeader>
             <TableBody>
-              {data.map((level, index) => (
-                <React.Fragment key={index}>
-                  <TableRow 
-                    className="cursor-pointer hover:bg-muted/50"
-                    onClick={() => toggleRow(index)}
-                  >
-                    <TableCell>
-                      {openRows.has(index) ? (
-                        <ChevronDown className="h-4 w-4" />
-                      ) : (
-                        <ChevronRight className="h-4 w-4" />
-                      )}
-                    </TableCell>
-                    <TableCell>
-                      <div className="flex items-center gap-2">
-                        <Badge className={level.color}>
-                          {level.level}
-                        </Badge>
-                      </div>
-                    </TableCell>
-                    <TableCell className="text-sm text-muted-foreground">
-                      {level.humanAge}
-                    </TableCell>
-                    <TableCell className="text-sm max-w-xs">
-                      {level.quest}
-                    </TableCell>
-                    <TableCell className="text-sm max-w-xs">
-                      {level.method}
-                    </TableCell>
-                  </TableRow>
-                  <Collapsible open={openRows.has(index)}>
-                    <CollapsibleContent>
-                      <TableRow>
-                        <TableCell colSpan={5} className="p-0">
-                          <div className="p-6 bg-muted/20 border-t">
-                            <div className="grid md:grid-cols-2 gap-6">
-                              {/* Description */}
-                              <div>
-                                <h4 className="font-semibold mb-2">Description</h4>
-                                <ul className="space-y-1">
-                                  {level.description.map((desc, i) => (
-                                    <li key={i} className="text-sm text-muted-foreground">
-                                      • {desc}
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-
-                              {/* Characteristics */}
-                              <div>
-                                <h4 className="font-semibold mb-2">Characteristics</h4>
-                                <ul className="space-y-1">
-                                  {level.characteristics.map((char, i) => (
-                                    <li key={i} className="text-sm text-muted-foreground">
-                                      • {char}
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
-
-                              {/* AQAL Quadrants */}
-                              <div className="md:col-span-2">
-                                <h4 className="font-semibold mb-3">AQAL Quadrants</h4>
-                                <div className="grid grid-cols-2 gap-4">
-                                  <div className="p-3 bg-background rounded border">
-                                    <h5 className="font-medium text-sm mb-1">Interior-Individual</h5>
-                                    <p className="text-xs text-muted-foreground">{level.quadrants.interiorIndividual}</p>
-                                  </div>
-                                  <div className="p-3 bg-background rounded border">
-                                    <h5 className="font-medium text-sm mb-1">Exterior-Individual</h5>
-                                    <p className="text-xs text-muted-foreground">{level.quadrants.exteriorIndividual}</p>
-                                  </div>
-                                  <div className="p-3 bg-background rounded border">
-                                    <h5 className="font-medium text-sm mb-1">Interior-Collective</h5>
-                                    <p className="text-xs text-muted-foreground">{level.quadrants.interiorCollective}</p>
-                                  </div>
-                                  <div className="p-3 bg-background rounded border">
-                                    <h5 className="font-medium text-sm mb-1">Exterior-Collective</h5>
-                                    <p className="text-xs text-muted-foreground">{level.quadrants.exteriorCollective}</p>
+              {data.map((level, index) => {
+                const colors = getLevelColors(level, index);
+                return (
+                  <React.Fragment key={index}>
+                    <TableRow 
+                      className={`cursor-pointer hover:bg-muted/50 border-l-[10px] ${colors.bg} ${colors.border}`}
+                      onClick={() => toggleRow(index)}
+                    >
+                      <TableCell>
+                        {openRows.has(index) ? (
+                          <ChevronDown className="h-4 w-4" />
+                        ) : (
+                          <ChevronRight className="h-4 w-4" />
+                        )}
+                      </TableCell>
+                      <TableCell>
+                        <div className="flex items-center gap-2">
+                          <Badge className={colors.badge}>
+                            {level.level}
+                          </Badge>
+                        </div>
+                      </TableCell>
+                      <TableCell className="text-sm text-muted-foreground">
+                        {level.humanAge}
+                      </TableCell>
+                      <TableCell className="text-sm max-w-xs">
+                        {level.quest}
+                      </TableCell>
+                      <TableCell className="text-sm max-w-xs">
+                        {level.method}
+                      </TableCell>
+                    </TableRow>
+                    <Collapsible open={openRows.has(index)}>
+                      <CollapsibleContent>
+                        <TableRow>
+                          <TableCell colSpan={5} className="p-0">
+                            <div className={`p-6 border-t border-l-[10px] ${colors.bg} ${colors.border}`}>
+                              <div className="grid md:grid-cols-2 gap-6">
+                                {/* Description */}
+                                <div>
+                                  <h4 className="font-semibold mb-2">Description</h4>
+                                  <div className="space-y-2">
+                                    {level.description.map((desc, i) => (
+                                      <p key={i} className="text-sm text-muted-foreground">
+                                        • {desc}
+                                      </p>
+                                    ))}
                                   </div>
                                 </div>
-                              </div>
 
-                              {/* Pitfalls */}
-                              <div className="md:col-span-2">
-                                <h4 className="font-semibold mb-2">Common Pitfalls</h4>
-                                <div className="flex flex-wrap gap-1">
-                                  {level.pitfalls.map((pitfall, i) => (
-                                    <Badge key={i} variant="outline" className="text-xs">
-                                      {pitfall}
-                                    </Badge>
-                                  ))}
+                                {/* Characteristics */}
+                                <div>
+                                  <h4 className="font-semibold mb-2">Characteristics</h4>
+                                  <div className="space-y-2">
+                                    {level.characteristics.map((char, i) => (
+                                      <p key={i} className="text-sm text-muted-foreground">
+                                        • {char}
+                                      </p>
+                                    ))}
+                                  </div>
+                                </div>
+
+                                {/* AQAL Quadrants */}
+                                <div className="md:col-span-2">
+                                  <h4 className="font-semibold mb-3">AQAL Quadrants</h4>
+                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+                                    <div className="p-3 bg-background/80 rounded border">
+                                      <h5 className="font-medium text-sm mb-2">Interior-Individual</h5>
+                                      <p className="text-xs text-muted-foreground leading-relaxed">{level.quadrants.interiorIndividual}</p>
+                                    </div>
+                                    <div className="p-3 bg-background/80 rounded border">
+                                      <h5 className="font-medium text-sm mb-2">Exterior-Individual</h5>
+                                      <p className="text-xs text-muted-foreground leading-relaxed">{level.quadrants.exteriorIndividual}</p>
+                                    </div>
+                                    <div className="p-3 bg-background/80 rounded border">
+                                      <h5 className="font-medium text-sm mb-2">Interior-Collective</h5>
+                                      <p className="text-xs text-muted-foreground leading-relaxed">{level.quadrants.interiorCollective}</p>
+                                    </div>
+                                    <div className="p-3 bg-background/80 rounded border">
+                                      <h5 className="font-medium text-sm mb-2">Exterior-Collective</h5>
+                                      <p className="text-xs text-muted-foreground leading-relaxed">{level.quadrants.exteriorCollective}</p>
+                                    </div>
+                                  </div>
+                                </div>
+
+                                {/* Pitfalls */}
+                                <div className="md:col-span-2">
+                                  <h4 className="font-semibold mb-2">Common Pitfalls</h4>
+                                  <div className="flex flex-wrap gap-2">
+                                    {level.pitfalls.map((pitfall, i) => (
+                                      <Badge key={i} variant="outline" className="text-xs">
+                                        {pitfall}
+                                      </Badge>
+                                    ))}
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </TableCell>
-                      </TableRow>
-                    </CollapsibleContent>
-                  </Collapsible>
-                </React.Fragment>
-              ))}
+                          </TableCell>
+                        </TableRow>
+                      </CollapsibleContent>
+                    </Collapsible>
+                  </React.Fragment>
+                );
+              })}
             </TableBody>
           </Table>
         </div>

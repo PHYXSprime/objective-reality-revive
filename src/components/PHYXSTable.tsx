@@ -25,19 +25,21 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
     setOpenRows(newOpenRows);
   };
 
-  const getEvolutionColor = (evolutionPoint: string) => {
+  const getEvolutionColors = (evolutionPoint: string) => {
+    // Reversed color order to match AQAL better
     const colors = [
-      "bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200",
-      "bg-indigo-100 text-indigo-800 dark:bg-indigo-900 dark:text-indigo-200",
-      "bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200",
-      "bg-teal-100 text-teal-800 dark:bg-teal-900 dark:text-teal-200",
-      "bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200",
-      "bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200",
-      "bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200",
-      "bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200",
-      "bg-stone-100 text-stone-800 dark:bg-stone-900 dark:text-stone-200"
+      { bg: "bg-teal-500/20", border: "border-l-teal-500", badge: "bg-teal-500 text-white" },
+      { bg: "bg-yellow-500/20", border: "border-l-yellow-500", badge: "bg-yellow-500 text-white" },
+      { bg: "bg-green-500/20", border: "border-l-green-500", badge: "bg-green-500 text-white" },
+      { bg: "bg-orange-500/20", border: "border-l-orange-500", badge: "bg-orange-500 text-white" },
+      { bg: "bg-blue-500/20", border: "border-l-blue-500", badge: "bg-blue-500 text-white" },
+      { bg: "bg-red-500/20", border: "border-l-red-500", badge: "bg-red-500 text-white" },
+      { bg: "bg-purple-500/20", border: "border-l-purple-500", badge: "bg-purple-500 text-white" },
+      { bg: "bg-indigo-500/20", border: "border-l-indigo-500", badge: "bg-indigo-500 text-white" },
+      { bg: "bg-stone-500/20", border: "border-l-stone-500", badge: "bg-stone-500 text-white" }
     ];
-    return colors[parseInt(evolutionPoint.charAt(1)) - 1] || colors[0];
+    const colorIndex = parseInt(evolutionPoint.charAt(1)) - 1;
+    return colors[colorIndex] || colors[0];
   };
 
   return (
@@ -59,89 +61,92 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
               </TableRow>
             </TableHeader>
             <TableBody>
-              {data.map((level, index) => (
-                <React.Fragment key={index}>
-                  <TableRow 
-                    className="cursor-pointer hover:bg-muted/50"
-                    onClick={() => toggleRow(index)}
-                  >
-                    <TableCell>
-                      {openRows.has(index) ? (
-                        <ChevronDown className="h-4 w-4" />
-                      ) : (
-                        <ChevronRight className="h-4 w-4" />
-                      )}
-                    </TableCell>
-                    <TableCell>
-                      <Badge className={getEvolutionColor(level.evolutionPoint)}>
-                        {level.evolutionPoint}
-                      </Badge>
-                    </TableCell>
-                    <TableCell className="font-medium">
-                      {level.stage}
-                    </TableCell>
-                    <TableCell className="text-sm text-muted-foreground">
-                      {level.timeframe}
-                    </TableCell>
-                    <TableCell className="text-sm max-w-xs">
-                      {level.significance}
-                    </TableCell>
-                  </TableRow>
-                  <Collapsible open={openRows.has(index)}>
-                    <CollapsibleContent>
-                      <TableRow>
-                        <TableCell colSpan={5} className="p-0">
-                          <div className="p-6 bg-muted/20 border-t">
-                            <div className="grid md:grid-cols-2 gap-6">
-                              {/* Description */}
-                              <div className="md:col-span-2">
-                                <h4 className="font-semibold mb-2">Description</h4>
-                                <p className="text-sm text-muted-foreground">{level.description}</p>
-                              </div>
+              {data.map((level, index) => {
+                const colors = getEvolutionColors(level.evolutionPoint);
+                return (
+                  <React.Fragment key={index}>
+                    <TableRow 
+                      className={`cursor-pointer hover:bg-muted/50 border-l-[10px] ${colors.bg} ${colors.border}`}
+                      onClick={() => toggleRow(index)}
+                    >
+                      <TableCell>
+                        {openRows.has(index) ? (
+                          <ChevronDown className="h-4 w-4" />
+                        ) : (
+                          <ChevronRight className="h-4 w-4" />
+                        )}
+                      </TableCell>
+                      <TableCell>
+                        <Badge className={colors.badge}>
+                          {level.evolutionPoint}
+                        </Badge>
+                      </TableCell>
+                      <TableCell className="font-medium">
+                        {level.stage}
+                      </TableCell>
+                      <TableCell className="text-sm text-muted-foreground">
+                        {level.timeframe}
+                      </TableCell>
+                      <TableCell className="text-sm max-w-xs">
+                        {level.significance}
+                      </TableCell>
+                    </TableRow>
+                    <Collapsible open={openRows.has(index)}>
+                      <CollapsibleContent>
+                        <TableRow>
+                          <TableCell colSpan={5} className="p-0">
+                            <div className={`p-6 border-t border-l-[10px] ${colors.bg} ${colors.border}`}>
+                              <div className="grid md:grid-cols-2 gap-6">
+                                {/* Description */}
+                                <div className="md:col-span-2">
+                                  <h4 className="font-semibold mb-2">Description</h4>
+                                  <p className="text-sm text-muted-foreground leading-relaxed">{level.description}</p>
+                                </div>
 
-                              {/* Characteristics */}
-                              <div>
-                                <h4 className="font-semibold mb-2">Characteristics</h4>
-                                <ul className="space-y-1">
-                                  {level.characteristics.map((char, i) => (
-                                    <li key={i} className="text-sm text-muted-foreground">
-                                      • {char}
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
+                                {/* Characteristics */}
+                                <div>
+                                  <h4 className="font-semibold mb-2">Characteristics</h4>
+                                  <div className="space-y-2">
+                                    {level.characteristics.map((char, i) => (
+                                      <p key={i} className="text-sm text-muted-foreground">
+                                        • {char}
+                                      </p>
+                                    ))}
+                                  </div>
+                                </div>
 
-                              {/* Biophysical Markers */}
-                              <div>
-                                <h4 className="font-semibold mb-2">Biophysical Markers</h4>
-                                <ul className="space-y-1">
-                                  {level.biophysicalMarkers.map((marker, i) => (
-                                    <li key={i} className="text-sm text-muted-foreground">
-                                      • {marker}
-                                    </li>
-                                  ))}
-                                </ul>
-                              </div>
+                                {/* Biophysical Markers */}
+                                <div>
+                                  <h4 className="font-semibold mb-2">Biophysical Markers</h4>
+                                  <div className="space-y-2">
+                                    {level.biophysicalMarkers.map((marker, i) => (
+                                      <p key={i} className="text-sm text-muted-foreground">
+                                        • {marker}
+                                      </p>
+                                    ))}
+                                  </div>
+                                </div>
 
-                              {/* Cognitive Capabilities */}
-                              <div className="md:col-span-2">
-                                <h4 className="font-semibold mb-2">Cognitive Capabilities</h4>
-                                <div className="flex flex-wrap gap-1">
-                                  {level.cognitiveCapabilities.map((capability, i) => (
-                                    <Badge key={i} variant="outline" className="text-xs">
-                                      {capability}
-                                    </Badge>
-                                  ))}
+                                {/* Cognitive Capabilities */}
+                                <div className="md:col-span-2">
+                                  <h4 className="font-semibold mb-2">Cognitive Capabilities</h4>
+                                  <div className="flex flex-wrap gap-2">
+                                    {level.cognitiveCapabilities.map((capability, i) => (
+                                      <Badge key={i} variant="outline" className="text-xs">
+                                        {capability}
+                                      </Badge>
+                                    ))}
+                                  </div>
                                 </div>
                               </div>
                             </div>
-                          </div>
-                        </TableCell>
-                      </TableRow>
-                    </CollapsibleContent>
-                  </Collapsible>
-                </React.Fragment>
-              ))}
+                          </TableCell>
+                        </TableRow>
+                      </CollapsibleContent>
+                    </Collapsible>
+                  </React.Fragment>
+                );
+              })}
             </TableBody>
           </Table>
         </div>
