@@ -305,7 +305,6 @@ export const en = {
   'indoctrination.liberation.acceptUncertainty': 'Accept uncertainty and complexity',
 
   // Solutions Page
-  'solutions.title': 'Solutions',
   'solutions.subtitle': '...so what can we do about it?!',
   'solutions.introduction': 'Now that we understand the challenges to objective reality, let\'s explore the practical tools and methods we can use to overcome cognitive biases, think more clearly, and help others do the same.',
   'solutions.practicalTools': 'Practical Tools & Methods',
