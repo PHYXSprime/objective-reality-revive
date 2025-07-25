@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { Search, Filter } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
-import { cognitiveBiases } from '@/data/cognitiveBiases';
-import { cognitiveBiasesTranslations } from '@/data/cognitiveBiases.de';
+import { useCognitiveBiases } from '@/hooks/useCognitiveBiases';
 import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
@@ -18,25 +17,12 @@ import { ChallengeNavigation } from '@/components/ChallengeNavigation';
 
 export default function CognitiveBiases() {
   const { t, language } = useLanguage();
+  const { biases, getTranslatedBias, loading } = useCognitiveBiases(language);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  // Helper function to get translated content
-  const getTranslatedBias = (bias: any) => {
-    if (language === 'de' && cognitiveBiasesTranslations.de[bias.name]) {
-      const translation = cognitiveBiasesTranslations.de[bias.name];
-      return {
-        name: translation.name,
-        definition: translation.definition,
-        example: translation.example,
-        category: bias.category
-      };
-    }
-    return bias;
-  };
-
   // Generate categories dynamically from the data
-  const uniqueCategories = [...new Set(cognitiveBiases.map(bias => bias.category))];
+  const uniqueCategories = [...new Set(biases.map(bias => bias.category))];
   const categories = [
     { value: 'all', label: t('filter.all') },
     ...uniqueCategories.map(category => ({ 
@@ -45,7 +31,7 @@ export default function CognitiveBiases() {
     }))
   ];
 
-  const filteredBiases = cognitiveBiases.filter(bias => {
+  const filteredBiases = biases.filter(bias => {
     const translatedBias = getTranslatedBias(bias);
     const matchesSearch = translatedBias.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
                          translatedBias.definition.toLowerCase().includes(searchTerm.toLowerCase());
@@ -108,7 +94,7 @@ export default function CognitiveBiases() {
         {/* Results Count */}
         <div className="mb-6">
           <p className="text-muted-foreground">
-            {t('showing_results').replace('{count}', filteredBiases.length.toString()).replace('{total}', cognitiveBiases.length.toString())}
+            {loading ? 'Loading...' : t('showing_results').replace('{count}', filteredBiases.length.toString()).replace('{total}', biases.length.toString())}
           </p>
         </div>
 
