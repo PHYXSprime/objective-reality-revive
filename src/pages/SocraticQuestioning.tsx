@@ -327,14 +327,16 @@ export default function SocraticQuestioning() {
         </Card>
 
         {/* Call to Action */}
-        <div className="text-center bg-muted/30 p-8 rounded-lg">
-          <h3 className="text-2xl font-bold text-foreground mb-4">
-            {t('socraticQuestioning.startToday')}
-          </h3>
-          <p className="text-muted-foreground max-w-3xl mx-auto">
-            {t('socraticQuestioning.startTodayDesc')}
-          </p>
-        </div>
+        <Card className="text-center glass-card">
+          <CardContent className="p-8">
+            <h3 className="text-2xl font-bold text-foreground mb-4">
+              {t('socraticQuestioning.startToday')}
+            </h3>
+            <p className="text-muted-foreground max-w-3xl mx-auto">
+              {t('socraticQuestioning.startTodayDesc')}
+            </p>
+          </CardContent>
+        </Card>
       </div>
     </div>
   );
