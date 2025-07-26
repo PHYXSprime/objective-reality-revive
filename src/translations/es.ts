@@ -230,6 +230,101 @@ export const es = {
   'socraticQuestioning.startToday': 'Comienza a Cuestionar Hoy',
   'socraticQuestioning.startTodayDesc': 'Comienza cuestionando tus propias creencias y suposiciones. Practica los seis tipos de preguntas en temas sobre los que te sientes seguro. Podrías sorprenderte de lo que descubres cuando profundizas en los fundamentos de tu propio pensamiento.',
   
+  // Purposes
+  'socraticQuestioning.purposes.exploreIdeas': 'Explorar ideas complejas en profundidad',
+  'socraticQuestioning.purposes.getTruth': 'Llegar a la verdad de los asuntos',
+  'socraticQuestioning.purposes.openIssues': 'Abrir problemas e cuestiones',
+  'socraticQuestioning.purposes.uncoverAssumptions': 'Descubrir suposiciones ocultas',
+  'socraticQuestioning.purposes.analyzeConcepts': 'Analizar conceptos sistemáticamente',
+  'socraticQuestioning.purposes.distinguishKnowledge': 'Distinguir lo que sabemos de lo que no sabemos',
+  'socraticQuestioning.purposes.followConsequences': 'Seguir las consecuencias lógicas del pensamiento',
+  'socraticQuestioning.purposes.controlDiscussions': 'Controlar y guiar discusiones productivamente',
+  
+  // Foundations
+  'socraticQuestioning.foundations.structuredLogic': 'Lógica Estructurada',
+  'socraticQuestioning.foundations.structuredLogicDesc': 'El pensamiento sigue patrones lógicos que pueden ser examinados y cuestionados',
+  'socraticQuestioning.foundations.systematicApproach': 'Enfoque Sistemático',
+  'socraticQuestioning.foundations.systematicApproachDesc': 'Las preguntas son organizadas y con propósito, no aleatorias o casuales',
+  'socraticQuestioning.foundations.deepInquiry': 'Investigación Profunda',
+  'socraticQuestioning.foundations.deepInquiryDesc': 'Va más allá del nivel superficial para examinar conceptos y principios fundamentales',
+  'socraticQuestioning.foundations.focusedDirection': 'Dirección Enfocada',
+  'socraticQuestioning.foundations.focusedDirectionDesc': 'Usualmente se concentra en teorías, problemas o cuestiones centrales',
+  'socraticQuestioning.foundations.disciplinedMethod': 'Método Disciplinado',
+  'socraticQuestioning.foundations.disciplinedMethodDesc': 'Sigue principios consistentes y mantiene rigor intelectual',
+  
+  // Question Categories
+  'socraticQuestioning.categories.clarification': 'Preguntas de Clarificación',
+  'socraticQuestioning.categories.assumption': 'Preguntas de Suposiciones',
+  'socraticQuestioning.categories.evidence': 'Preguntas de Evidencia',
+  'socraticQuestioning.categories.perspective': 'Preguntas de Perspectiva',
+  'socraticQuestioning.categories.implication': 'Preguntas de Implicación',
+  'socraticQuestioning.categories.meta': 'Preguntas Meta',
+  
+  // Clarification Questions
+  'socraticQuestioning.clarification.q1': '¿Qué quieres decir cuando dices...?',
+  'socraticQuestioning.clarification.q2': '¿Podrías darme un ejemplo?',
+  'socraticQuestioning.clarification.q3': '¿Cómo se relaciona esto con lo que discutimos antes?',
+  'socraticQuestioning.clarification.q4': '¿Podrías explicar ese punto más?',
+  
+  // Assumption Questions
+  'socraticQuestioning.assumption.q1': '¿Qué suposiciones estás haciendo aquí?',
+  'socraticQuestioning.assumption.q2': '¿Qué pasaría si asumiéramos lo opuesto?',
+  'socraticQuestioning.assumption.q3': '¿Crees que esta suposición siempre es verdad?',
+  'socraticQuestioning.assumption.q4': '¿Qué evidencia tenemos para esta suposición?',
+  
+  // Evidence Questions
+  'socraticQuestioning.evidence.q1': '¿Qué evidencia apoya esta perspectiva?',
+  'socraticQuestioning.evidence.q2': '¿Cómo sabemos que esto es verdad?',
+  'socraticQuestioning.evidence.q3': '¿Qué evidencia podría contradecir esto?',
+  'socraticQuestioning.evidence.q4': '¿Qué tan confiable es esta fuente de información?',
+  
+  // Perspective Questions
+  'socraticQuestioning.perspective.q1': '¿Qué formas alternativas de ver esto existen?',
+  'socraticQuestioning.perspective.q2': '¿Cómo podría responder alguien que no está de acuerdo?',
+  'socraticQuestioning.perspective.q3': '¿Cuáles son las fortalezas y debilidades de esta perspectiva?',
+  'socraticQuestioning.perspective.q4': '¿Qué factores hacen este tema complejo?',
+  
+  // Implication Questions
+  'socraticQuestioning.implication.q1': 'Si esto es verdad, ¿qué sigue?',
+  'socraticQuestioning.implication.q2': '¿Cuáles son las consecuencias de esta creencia?',
+  'socraticQuestioning.implication.q3': '¿Cómo encaja esto con lo que más sabemos?',
+  'socraticQuestioning.implication.q4': '¿Qué implica esto para el futuro?',
+  
+  // Meta Questions
+  'socraticQuestioning.meta.q1': '¿Por qué es importante esta cuestión?',
+  'socraticQuestioning.meta.q2': '¿Cómo nos ayuda esta pregunta?',
+  'socraticQuestioning.meta.q3': '¿Qué nos dice esto sobre la naturaleza de...?',
+  'socraticQuestioning.meta.q4': '¿Qué principios generales están involucrados aquí?',
+  
+  // Process Steps
+  'socraticQuestioning.process.startClarification': '1. Comenzar con Clarificación',
+  'socraticQuestioning.process.startClarificationDesc': 'Asegúrate de entender exactamente lo que se está afirmando o argumentando.',
+  'socraticQuestioning.process.examineAssumptions': '2. Examinar Suposiciones',
+  'socraticQuestioning.process.examineAssumptionsDesc': 'Identifica y cuestiona las suposiciones subyacentes que se están haciendo.',
+  'socraticQuestioning.process.exploreEvidence': '3. Explorar Evidencia',
+  'socraticQuestioning.process.exploreEvidenceDesc': 'Observa qué evidencia apoya o contradice la posición.',
+  'socraticQuestioning.process.considerAlternatives': '4. Considerar Alternativas',
+  'socraticQuestioning.process.considerAlternativesDesc': 'Examina diferentes perspectivas y posibilidades.',
+  
+  // Best Practices
+  'socraticQuestioning.practices.askGenuinely': 'Hacer preguntas genuinamente, no para atrapar o avergonzar',
+  'socraticQuestioning.practices.buildOnPrevious': 'Construir sobre preguntas y respuestas anteriores',
+  'socraticQuestioning.practices.allowTime': 'Permitir tiempo para respuestas reflexivas',
+  'socraticQuestioning.practices.modelThinking': 'Modelar el pensamiento que quieres fomentar',
+  'socraticQuestioning.practices.focusUnderstanding': 'Enfocarse en entender, no en ganar',
+  'socraticQuestioning.practices.bePatient': 'Ser paciente con el proceso',
+  'socraticQuestioning.practices.questionYourself': 'Cuestionar tus propias suposiciones también',
+  
+  // Example
+  'socraticQuestioning.example.clarification': 'Clarificación',
+  'socraticQuestioning.example.clarificationText': '"¿Qué quieres decir exactamente con \'felicidad\'? ¿Cómo defines \'dinero\' en este contexto?"',
+  'socraticQuestioning.example.assumptions': 'Suposiciones',
+  'socraticQuestioning.example.assumptionsText': '"¿Estás asumiendo que la felicidad es la misma para todos? ¿Qué pasa si la felicidad de alguien viene de la seguridad financiera?"',
+  'socraticQuestioning.example.evidence': 'Evidencia',
+  'socraticQuestioning.example.evidenceText': '"¿Qué evidencia tenemos sobre la relación entre dinero y bienestar? ¿Cómo afectan los estudios sobre este tema tu perspectiva?"',
+  'socraticQuestioning.example.implications': 'Implicaciones',
+  'socraticQuestioning.example.implicationsText': '"Si esto es verdad, ¿qué significa para cómo deberíamos vivir? ¿No deberíamos perseguir el éxito financiero en absoluto?"',
+  
   'learn_more': 'Aprende más',
 
   // Indoctrination - Full Section
