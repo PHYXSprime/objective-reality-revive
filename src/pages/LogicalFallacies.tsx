@@ -135,7 +135,7 @@ export default function LogicalFallacies() {
           {filteredFallacies.map((fallacy, index) => {
             const translatedFallacy = getTranslatedFallacy(fallacy);
             return (
-              <Card key={index} className="h-full glass-card float-card hover:glow-primary transition-all duration-300">
+              <Card key={`${fallacy.id}-${language}`} className="h-full glass-card float-card hover:glow-primary transition-all duration-300">
                 <CardHeader>
                   <div className="flex items-start justify-between">
                     <CardTitle className="text-lg leading-tight">

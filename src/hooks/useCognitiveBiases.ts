@@ -16,14 +16,20 @@ export function useCognitiveBiases(language: string = 'en') {
 
   useEffect(() => {
     const loadBiases = async () => {
+      setLoading(true);
       try {
+        console.log('Loading cognitive biases for language:', language);
+        
         // Load main English data
         const englishResponse = await fetch('/New list of cognitive biases.csv');
         if (!englishResponse.ok) {
           throw new Error(`HTTP error! status: ${englishResponse.status}`);
         }
         const englishText = await englishResponse.text();
+        console.log('English CSV loaded, first 100 chars:', englishText.substring(0, 100));
+        
         const englishBiases = parseCSV(englishText);
+        console.log('Parsed biases count:', englishBiases.length);
         
         if (englishBiases.length === 0) {
           console.warn('No cognitive biases loaded from CSV');
@@ -49,10 +55,16 @@ export function useCognitiveBiases(language: string = 'en') {
                 };
               });
               setTranslations(translationMap);
+              console.log('Loaded translations for', language, 'count:', translatedBiases.length);
+            } else {
+              console.warn(`Translation file not found: ${translationFile}`);
             }
           } catch (error) {
             console.warn(`Could not load translations for ${language}:`, error);
           }
+        } else {
+          // Clear translations for English
+          setTranslations({});
         }
       } catch (error) {
         console.error('Error loading cognitive biases:', error);
