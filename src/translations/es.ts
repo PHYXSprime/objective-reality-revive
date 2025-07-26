@@ -213,7 +213,23 @@ export const es = {
   'streetEpistemology.readyToPracticeDesc': 'Comienza examinando tus propias creencias primero. ¿Qué métodos usaste para formarlas? ¿Qué tan seguro estás? ¿Qué evidencia cambiaría tu mente? Luego practica estas técnicas de cuestionamiento gentil con amigos y familia.',
   'streetEpistemology.practiceExamples': 'Practicar con Ejemplos',
   'streetEpistemology.learnSocratic': 'Aprender Cuestionamiento Socrático',
-
+  
+  // Socratic Questioning
+  'socraticQuestioning.title': 'Cuestionamiento Socrático',
+  'socraticQuestioning.subtitle': 'Una forma de cuestionamiento disciplinado que puede usarse para perseguir el pensamiento en muchas direcciones y para muchos propósitos. La base del pensamiento crítico durante más de 2,000 años.',
+  'socraticQuestioning.whatMakesDifferent': 'Lo que lo hace diferente',
+  'socraticQuestioning.whatMakesDifferentText': 'La clave para distinguir el cuestionamiento socrático del cuestionamiento per se es que el cuestionamiento socrático es sistemático, disciplinado, profundo y generalmente se enfoca en conceptos, principios, teorías, problemas o asuntos fundamentales.',
+  'socraticQuestioning.purposes': 'Propósitos del Cuestionamiento Socrático',
+  'socraticQuestioning.fiveFoundations': 'Cinco Fundamentos Teóricos',
+  'socraticQuestioning.sixTypes': 'Seis Tipos de Preguntas Socráticas',
+  'socraticQuestioning.sixTypesDesc': 'Cada tipo de pregunta sirve un propósito específico en el pensamiento crítico y la investigación sistemática.',
+  'socraticQuestioning.questioningProcess': 'El Proceso de Cuestionamiento',
+  'socraticQuestioning.bestPractices': 'Mejores Prácticas',
+  'socraticQuestioning.exampleTitle': 'Ejemplo: Cuestionando una Creencia Común',
+  'socraticQuestioning.exampleDesc': 'Cómo el cuestionamiento socrático podría explorar la creencia "El dinero no puede comprar la felicidad"',
+  'socraticQuestioning.startToday': 'Comienza a Cuestionar Hoy',
+  'socraticQuestioning.startTodayDesc': 'Comienza cuestionando tus propias creencias y suposiciones. Practica los seis tipos de preguntas en temas sobre los que te sientes seguro. Podrías sorprenderte de lo que descubres cuando profundizas en los fundamentos de tu propio pensamiento.',
+  
   'learn_more': 'Aprende más',
 
   // Indoctrination - Full Section

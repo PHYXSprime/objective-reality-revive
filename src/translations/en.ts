@@ -1037,6 +1037,117 @@ export const en = {
   'streetEpistemology.practiceExamples': 'Practice with Examples',
   'streetEpistemology.learnSocratic': 'Learn Socratic Questioning',
   
+  // Socratic Questioning
+  'socraticQuestioning.title': 'Socratic Questioning',
+  'socraticQuestioning.subtitle': 'A form of disciplined questioning that can be used to pursue thought in many directions and for many purposes. The foundation of critical thinking for over 2,000 years.',
+  'socraticQuestioning.whatMakesDifferent': 'What Makes It Different',
+  'socraticQuestioning.whatMakesDifferentText': 'The key to distinguishing Socratic questioning from questioning per se is that Socratic questioning is systematic, disciplined, deep and usually focuses on fundamental concepts, principles, theories, issues or problems.',
+  'socraticQuestioning.purposes': 'Purposes of Socratic Questioning',
+  'socraticQuestioning.fiveFoundations': 'Five Theoretical Foundations',
+  'socraticQuestioning.sixTypes': 'Six Types of Socratic Questions',
+  'socraticQuestioning.sixTypesDesc': 'Each type of question serves a specific purpose in critical thinking and systematic inquiry.',
+  'socraticQuestioning.questioningProcess': 'The Questioning Process',
+  'socraticQuestioning.bestPractices': 'Best Practices',
+  'socraticQuestioning.exampleTitle': 'Example: Questioning a Common Belief',
+  'socraticQuestioning.exampleDesc': 'How Socratic questioning might explore the belief "Money can\'t buy happiness"',
+  'socraticQuestioning.startToday': 'Start Questioning Today',
+  'socraticQuestioning.startTodayDesc': 'Begin by questioning your own beliefs and assumptions. Practice the six types of questions on topics you feel confident about. You might be surprised by what you discover when you dig deeper into the foundations of your own thinking.',
+  
+  // Purposes
+  'socraticQuestioning.purposes.exploreIdeas': 'Explore complex ideas in depth',
+  'socraticQuestioning.purposes.getTruth': 'Get to the truth of matters',
+  'socraticQuestioning.purposes.openIssues': 'Open up issues and problems',
+  'socraticQuestioning.purposes.uncoverAssumptions': 'Uncover hidden assumptions',
+  'socraticQuestioning.purposes.analyzeConcepts': 'Analyze concepts systematically',
+  'socraticQuestioning.purposes.distinguishKnowledge': 'Distinguish what we know from what we don\'t know',
+  'socraticQuestioning.purposes.followConsequences': 'Follow logical consequences of thought',
+  'socraticQuestioning.purposes.controlDiscussions': 'Control and guide discussions productively',
+  
+  // Foundations
+  'socraticQuestioning.foundations.structuredLogic': 'Structured Logic',
+  'socraticQuestioning.foundations.structuredLogicDesc': 'Thinking follows logical patterns that can be examined and questioned',
+  'socraticQuestioning.foundations.systematicApproach': 'Systematic Approach',
+  'socraticQuestioning.foundations.systematicApproachDesc': 'Questions are organized and purposeful, not random or haphazard',
+  'socraticQuestioning.foundations.deepInquiry': 'Deep Inquiry',
+  'socraticQuestioning.foundations.deepInquiryDesc': 'Goes beyond surface-level to examine fundamental concepts and principles',
+  'socraticQuestioning.foundations.focusedDirection': 'Focused Direction',
+  'socraticQuestioning.foundations.focusedDirectionDesc': 'Usually concentrates on core theories, issues, or problems',
+  'socraticQuestioning.foundations.disciplinedMethod': 'Disciplined Method',
+  'socraticQuestioning.foundations.disciplinedMethodDesc': 'Follows consistent principles and maintains intellectual rigor',
+  
+  // Question Categories
+  'socraticQuestioning.categories.clarification': 'Clarification Questions',
+  'socraticQuestioning.categories.assumption': 'Assumption Questions',
+  'socraticQuestioning.categories.evidence': 'Evidence Questions',
+  'socraticQuestioning.categories.perspective': 'Perspective Questions',
+  'socraticQuestioning.categories.implication': 'Implication Questions',
+  'socraticQuestioning.categories.meta': 'Meta Questions',
+  
+  // Clarification Questions
+  'socraticQuestioning.clarification.q1': 'What do you mean when you say...?',
+  'socraticQuestioning.clarification.q2': 'Could you give me an example?',
+  'socraticQuestioning.clarification.q3': 'How does this relate to what we discussed earlier?',
+  'socraticQuestioning.clarification.q4': 'Could you explain that point further?',
+  
+  // Assumption Questions
+  'socraticQuestioning.assumption.q1': 'What assumptions are you making here?',
+  'socraticQuestioning.assumption.q2': 'What if we assumed the opposite?',
+  'socraticQuestioning.assumption.q3': 'Do you think this assumption always holds true?',
+  'socraticQuestioning.assumption.q4': 'What evidence do we have for this assumption?',
+  
+  // Evidence Questions
+  'socraticQuestioning.evidence.q1': 'What evidence supports this view?',
+  'socraticQuestioning.evidence.q2': 'How do we know this to be true?',
+  'socraticQuestioning.evidence.q3': 'What evidence might contradict this?',
+  'socraticQuestioning.evidence.q4': 'How reliable is this source of information?',
+  
+  // Perspective Questions
+  'socraticQuestioning.perspective.q1': 'What alternative ways of looking at this exist?',
+  'socraticQuestioning.perspective.q2': 'How might someone who disagrees respond?',
+  'socraticQuestioning.perspective.q3': 'What are the strengths and weaknesses of this view?',
+  'socraticQuestioning.perspective.q4': 'What factors make this issue complex?',
+  
+  // Implication Questions
+  'socraticQuestioning.implication.q1': 'If this is true, what follows?',
+  'socraticQuestioning.implication.q2': 'What are the consequences of this belief?',
+  'socraticQuestioning.implication.q3': 'How does this fit with what else we know?',
+  'socraticQuestioning.implication.q4': 'What does this imply for the future?',
+  
+  // Meta Questions
+  'socraticQuestioning.meta.q1': 'Why is this issue important?',
+  'socraticQuestioning.meta.q2': 'How does this question help us?',
+  'socraticQuestioning.meta.q3': 'What does this tell us about the nature of...?',
+  'socraticQuestioning.meta.q4': 'What general principles are involved here?',
+  
+  // Process Steps
+  'socraticQuestioning.process.startClarification': '1. Start with Clarification',
+  'socraticQuestioning.process.startClarificationDesc': 'Ensure you understand exactly what is being claimed or argued.',
+  'socraticQuestioning.process.examineAssumptions': '2. Examine Assumptions',
+  'socraticQuestioning.process.examineAssumptionsDesc': 'Identify and question the underlying assumptions being made.',
+  'socraticQuestioning.process.exploreEvidence': '3. Explore Evidence',
+  'socraticQuestioning.process.exploreEvidenceDesc': 'Look at what evidence supports or contradicts the position.',
+  'socraticQuestioning.process.considerAlternatives': '4. Consider Alternatives',
+  'socraticQuestioning.process.considerAlternativesDesc': 'Examine different perspectives and possibilities.',
+  
+  // Best Practices
+  'socraticQuestioning.practices.askGenuinely': 'Ask questions genuinely, not to trap or embarrass',
+  'socraticQuestioning.practices.buildOnPrevious': 'Build on previous questions and answers',
+  'socraticQuestioning.practices.allowTime': 'Allow time for thoughtful responses',
+  'socraticQuestioning.practices.modelThinking': 'Model the thinking you want to encourage',
+  'socraticQuestioning.practices.focusUnderstanding': 'Focus on understanding, not winning',
+  'socraticQuestioning.practices.bePatient': 'Be patient with the process',
+  'socraticQuestioning.practices.questionYourself': 'Question your own assumptions too',
+  
+  // Example
+  'socraticQuestioning.example.clarification': 'Clarification',
+  'socraticQuestioning.example.clarificationText': '"What exactly do you mean by \'happiness\'? How are you defining \'money\' in this context?"',
+  'socraticQuestioning.example.assumptions': 'Assumptions',
+  'socraticQuestioning.example.assumptionsText': '"Are you assuming happiness is the same for everyone? What if someone\'s happiness comes from financial security?"',
+  'socraticQuestioning.example.evidence': 'Evidence',
+  'socraticQuestioning.example.evidenceText': '"What evidence do we have about the relationship between money and well-being? How do studies on this topic affect your view?"',
+  'socraticQuestioning.example.implications': 'Implications',
+  'socraticQuestioning.example.implicationsText': '"If this is true, what does it mean for how we should live? Should we not pursue financial success at all?"',
+  
   'solutions.streetEpistemology.title': 'Street Epistemology',
   'solutions.streetEpistemology.description': 'A gentle method of questioning that helps people examine the reliability of their beliefs without confrontation.',
   'solutions.socraticQuestioning.title': 'Socratic Questioning',

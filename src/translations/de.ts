@@ -344,6 +344,22 @@ export const de = {
   'streetEpistemology.readyToPracticeDesc': 'Beginnen Sie damit, zuerst Ihre eigenen Überzeugungen zu untersuchen. Welche Methoden haben Sie verwendet, um sie zu bilden? Wie sicher sind Sie? Welche Beweise würden Ihre Meinung ändern? Dann üben Sie diese sanften Fragetechniken mit Freunden und Familie.',
   'streetEpistemology.practiceExamples': 'Mit Beispielen üben',
   'streetEpistemology.learnSocratic': 'Sokratisches Fragen lernen',
+  
+  // Socratic Questioning
+  'socraticQuestioning.title': 'Sokratisches Fragen',
+  'socraticQuestioning.subtitle': 'Eine Form disziplinierten Fragens, die verwendet werden kann, um Gedanken in viele Richtungen und zu vielen Zwecken zu verfolgen. Die Grundlage kritischen Denkens seit über 2.000 Jahren.',
+  'socraticQuestioning.whatMakesDifferent': 'Was es anders macht',
+  'socraticQuestioning.whatMakesDifferentText': 'Der Schlüssel zur Unterscheidung sokratischen Fragens vom Fragen an sich ist, dass sokratisches Fragen systematisch, diszipliniert, tiefgreifend ist und sich normalerweise auf grundlegende Konzepte, Prinzipien, Theorien, Themen oder Probleme konzentriert.',
+  'socraticQuestioning.purposes': 'Zwecke des Sokratischen Fragens',
+  'socraticQuestioning.fiveFoundations': 'Fünf theoretische Grundlagen',
+  'socraticQuestioning.sixTypes': 'Sechs Arten sokratischer Fragen',
+  'socraticQuestioning.sixTypesDesc': 'Jede Art von Frage dient einem spezifischen Zweck im kritischen Denken und systematischen Forschen.',
+  'socraticQuestioning.questioningProcess': 'Der Frageprozess',
+  'socraticQuestioning.bestPractices': 'Beste Praktiken',
+  'socraticQuestioning.exampleTitle': 'Beispiel: Eine verbreitete Überzeugung hinterfragen',
+  'socraticQuestioning.exampleDesc': 'Wie sokratisches Fragen die Überzeugung "Geld kann kein Glück kaufen" erforschen könnte',
+  'socraticQuestioning.startToday': 'Fangen Sie heute an zu fragen',
+  'socraticQuestioning.startTodayDesc': 'Beginnen Sie damit, Ihre eigenen Überzeugungen und Annahmen zu hinterfragen. Üben Sie die sechs Arten von Fragen zu Themen, bei denen Sie sich sicher fühlen. Sie könnten überrascht sein, was Sie entdecken, wenn Sie tiefer in die Grundlagen Ihres eigenen Denkens graben.',
 
   // Indoctrination - Full Section
   'indoctrination.title': 'Indoktrination',

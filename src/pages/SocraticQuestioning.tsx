@@ -7,74 +7,74 @@ export default function SocraticQuestioning() {
   const { t } = useLanguage();
 
   const purposes = [
-    "Explore complex ideas in depth",
-    "Get to the truth of matters",
-    "Open up issues and problems",
-    "Uncover hidden assumptions",
-    "Analyze concepts systematically",
-    "Distinguish what we know from what we don't know",
-    "Follow logical consequences of thought",
-    "Control and guide discussions productively"
+    t('socraticQuestioning.purposes.exploreIdeas'),
+    t('socraticQuestioning.purposes.getTruth'),
+    t('socraticQuestioning.purposes.openIssues'),
+    t('socraticQuestioning.purposes.uncoverAssumptions'),
+    t('socraticQuestioning.purposes.analyzeConcepts'),
+    t('socraticQuestioning.purposes.distinguishKnowledge'),
+    t('socraticQuestioning.purposes.followConsequences'),
+    t('socraticQuestioning.purposes.controlDiscussions')
   ];
 
   const questionTypes = [
     {
-      category: "Clarification Questions",
+      category: t('socraticQuestioning.categories.clarification'),
       questions: [
-        "What do you mean when you say...?",
-        "Could you give me an example?",
-        "How does this relate to what we discussed earlier?",
-        "Could you explain that point further?"
+        t('socraticQuestioning.clarification.q1'),
+        t('socraticQuestioning.clarification.q2'),
+        t('socraticQuestioning.clarification.q3'),
+        t('socraticQuestioning.clarification.q4')
       ],
       color: "text-blue-600 dark:text-blue-400"
     },
     {
-      category: "Assumption Questions",
+      category: t('socraticQuestioning.categories.assumption'),
       questions: [
-        "What assumptions are you making here?",
-        "What if we assumed the opposite?",
-        "Do you think this assumption always holds true?",
-        "What evidence do we have for this assumption?"
+        t('socraticQuestioning.assumption.q1'),
+        t('socraticQuestioning.assumption.q2'),
+        t('socraticQuestioning.assumption.q3'),
+        t('socraticQuestioning.assumption.q4')
       ],
       color: "text-green-600 dark:text-green-400"
     },
     {
-      category: "Evidence Questions",
+      category: t('socraticQuestioning.categories.evidence'),
       questions: [
-        "What evidence supports this view?",
-        "How do we know this to be true?",
-        "What evidence might contradict this?",
-        "How reliable is this source of information?"
+        t('socraticQuestioning.evidence.q1'),
+        t('socraticQuestioning.evidence.q2'),
+        t('socraticQuestioning.evidence.q3'),
+        t('socraticQuestioning.evidence.q4')
       ],
       color: "text-purple-600 dark:text-purple-400"
     },
     {
-      category: "Perspective Questions",
+      category: t('socraticQuestioning.categories.perspective'),
       questions: [
-        "What alternative ways of looking at this exist?",
-        "How might someone who disagrees respond?",
-        "What are the strengths and weaknesses of this view?",
-        "What factors make this issue complex?"
+        t('socraticQuestioning.perspective.q1'),
+        t('socraticQuestioning.perspective.q2'),
+        t('socraticQuestioning.perspective.q3'),
+        t('socraticQuestioning.perspective.q4')
       ],
       color: "text-orange-600 dark:text-orange-400"
     },
     {
-      category: "Implication Questions",
+      category: t('socraticQuestioning.categories.implication'),
       questions: [
-        "If this is true, what follows?",
-        "What are the consequences of this belief?",
-        "How does this fit with what else we know?",
-        "What does this imply for the future?"
+        t('socraticQuestioning.implication.q1'),
+        t('socraticQuestioning.implication.q2'),
+        t('socraticQuestioning.implication.q3'),
+        t('socraticQuestioning.implication.q4')
       ],
       color: "text-red-600 dark:text-red-400"
     },
     {
-      category: "Meta Questions",
+      category: t('socraticQuestioning.categories.meta'),
       questions: [
-        "Why is this issue important?",
-        "How does this question help us?",
-        "What does this tell us about the nature of...?",
-        "What general principles are involved here?"
+        t('socraticQuestioning.meta.q1'),
+        t('socraticQuestioning.meta.q2'),
+        t('socraticQuestioning.meta.q3'),
+        t('socraticQuestioning.meta.q4')
       ],
       color: "text-indigo-600 dark:text-indigo-400"
     }
@@ -82,24 +82,24 @@ export default function SocraticQuestioning() {
 
   const foundations = [
     {
-      foundation: "Structured Logic",
-      description: "Thinking follows logical patterns that can be examined and questioned"
+      foundation: t('socraticQuestioning.foundations.structuredLogic'),
+      description: t('socraticQuestioning.foundations.structuredLogicDesc')
     },
     {
-      foundation: "Systematic Approach",
-      description: "Questions are organized and purposeful, not random or haphazard"
+      foundation: t('socraticQuestioning.foundations.systematicApproach'),
+      description: t('socraticQuestioning.foundations.systematicApproachDesc')
     },
     {
-      foundation: "Deep Inquiry",
-      description: "Goes beyond surface-level to examine fundamental concepts and principles"
+      foundation: t('socraticQuestioning.foundations.deepInquiry'),
+      description: t('socraticQuestioning.foundations.deepInquiryDesc')
     },
     {
-      foundation: "Focused Direction",
-      description: "Usually concentrates on core theories, issues, or problems"
+      foundation: t('socraticQuestioning.foundations.focusedDirection'),
+      description: t('socraticQuestioning.foundations.focusedDirectionDesc')
     },
     {
-      foundation: "Disciplined Method",
-      description: "Follows consistent principles and maintains intellectual rigor"
+      foundation: t('socraticQuestioning.foundations.disciplinedMethod'),
+      description: t('socraticQuestioning.foundations.disciplinedMethodDesc')
     }
   ];
 
@@ -111,11 +111,10 @@ export default function SocraticQuestioning() {
         <Card className="glass-card mb-8">
           <CardHeader>
             <CardTitle className="text-4xl font-bold">
-              Socratic Questioning
+              {t('socraticQuestioning.title')}
             </CardTitle>
             <CardDescription className="text-xl max-w-3xl">
-              A form of disciplined questioning that can be used to pursue thought in many directions 
-              and for many purposes. The foundation of critical thinking for over 2,000 years.
+              {t('socraticQuestioning.subtitle')}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -125,14 +124,12 @@ export default function SocraticQuestioning() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Target className="h-6 w-6 text-primary" />
-              <CardTitle className="text-2xl">What Makes It Different</CardTitle>
+              <CardTitle className="text-2xl">{t('socraticQuestioning.whatMakesDifferent')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
             <p className="text-lg text-muted-foreground leading-relaxed">
-              The key to distinguishing Socratic questioning from questioning <em>per se</em> is that 
-              Socratic questioning is <strong>systematic, disciplined, deep and usually focuses on 
-              fundamental concepts, principles, theories, issues or problems</strong>.
+              {t('socraticQuestioning.whatMakesDifferentText')}
             </p>
           </CardContent>
         </Card>
@@ -142,7 +139,7 @@ export default function SocraticQuestioning() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Lightbulb className="h-6 w-6 text-primary" />
-              <CardTitle className="text-2xl">Purposes of Socratic Questioning</CardTitle>
+              <CardTitle className="text-2xl">{t('socraticQuestioning.purposes')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
@@ -162,7 +159,7 @@ export default function SocraticQuestioning() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Brain className="h-6 w-6 text-primary" />
-              <CardTitle className="text-2xl">Five Theoretical Foundations</CardTitle>
+              <CardTitle className="text-2xl">{t('socraticQuestioning.fiveFoundations')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
@@ -181,10 +178,10 @@ export default function SocraticQuestioning() {
         <Card className="glass-card mb-8">
           <CardHeader>
             <CardTitle className="text-2xl font-bold">
-              Six Types of Socratic Questions
+              {t('socraticQuestioning.sixTypes')}
             </CardTitle>
             <CardDescription className="text-muted-foreground">
-              Each type of question serves a specific purpose in critical thinking and systematic inquiry.
+              {t('socraticQuestioning.sixTypesDesc')}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -218,7 +215,7 @@ export default function SocraticQuestioning() {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <Search className="h-6 w-6 text-primary" />
-                <CardTitle>The Questioning Process</CardTitle>
+                <CardTitle>{t('socraticQuestioning.questioningProcess')}</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
@@ -226,36 +223,36 @@ export default function SocraticQuestioning() {
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-medium text-foreground">1. Start with Clarification</h4>
+                    <h4 className="font-medium text-foreground">{t('socraticQuestioning.process.startClarification')}</h4>
                     <p className="text-sm text-muted-foreground">
-                      Ensure you understand exactly what is being claimed or argued.
+                      {t('socraticQuestioning.process.startClarificationDesc')}
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-medium text-foreground">2. Examine Assumptions</h4>
+                    <h4 className="font-medium text-foreground">{t('socraticQuestioning.process.examineAssumptions')}</h4>
                     <p className="text-sm text-muted-foreground">
-                      Identify and question the underlying assumptions being made.
+                      {t('socraticQuestioning.process.examineAssumptionsDesc')}
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-medium text-foreground">3. Explore Evidence</h4>
+                    <h4 className="font-medium text-foreground">{t('socraticQuestioning.process.exploreEvidence')}</h4>
                     <p className="text-sm text-muted-foreground">
-                      Look at what evidence supports or contradicts the position.
+                      {t('socraticQuestioning.process.exploreEvidenceDesc')}
                     </p>
                   </div>
                 </div>
                 <div className="flex items-start gap-3">
                   <div className="w-1.5 h-1.5 bg-primary rounded-full mt-1 flex-shrink-0" />
                   <div>
-                    <h4 className="font-medium text-foreground">4. Consider Alternatives</h4>
+                    <h4 className="font-medium text-foreground">{t('socraticQuestioning.process.considerAlternatives')}</h4>
                     <p className="text-sm text-muted-foreground">
-                      Examine different perspectives and possibilities.
+                      {t('socraticQuestioning.process.considerAlternativesDesc')}
                     </p>
                   </div>
                 </div>
@@ -267,19 +264,19 @@ export default function SocraticQuestioning() {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <Users className="h-6 w-6 text-primary" />
-                <CardTitle>Best Practices</CardTitle>
+                <CardTitle>{t('socraticQuestioning.bestPractices')}</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
               <ul className="space-y-3">
                 {[
-                  "Ask questions genuinely, not to trap or embarrass",
-                  "Build on previous questions and answers", 
-                  "Allow time for thoughtful responses",
-                  "Model the thinking you want to encourage",
-                  "Focus on understanding, not winning",
-                  "Be patient with the process",
-                  "Question your own assumptions too"
+                  t('socraticQuestioning.practices.askGenuinely'),
+                  t('socraticQuestioning.practices.buildOnPrevious'),
+                  t('socraticQuestioning.practices.allowTime'),
+                  t('socraticQuestioning.practices.modelThinking'),
+                  t('socraticQuestioning.practices.focusUnderstanding'),
+                  t('socraticQuestioning.practices.bePatient'),
+                  t('socraticQuestioning.practices.questionYourself')
                 ].map((practice, index) => (
                   <li key={index} className="text-sm text-muted-foreground flex items-center gap-2">
                     <div className="w-1.5 h-1.5 bg-primary rounded-full flex-shrink-0" />
@@ -294,35 +291,35 @@ export default function SocraticQuestioning() {
         {/* Example in Action */}
         <Card className="mb-12 glass-card">
           <CardHeader>
-            <CardTitle className="text-2xl">Example: Questioning a Common Belief</CardTitle>
+            <CardTitle className="text-2xl">{t('socraticQuestioning.exampleTitle')}</CardTitle>
             <CardDescription>
-              How Socratic questioning might explore the belief "Money can't buy happiness"
+              {t('socraticQuestioning.exampleDesc')}
             </CardDescription>
           </CardHeader>
           <CardContent>
             <div className="space-y-4">
               <div className="p-4 bg-muted/30 rounded-lg">
-                <p className="font-medium text-foreground mb-2">Clarification:</p>
+                <p className="font-medium text-foreground mb-2">{t('socraticQuestioning.example.clarification')}:</p>
                 <p className="text-muted-foreground">
-                  "What exactly do you mean by 'happiness'? How are you defining 'money' in this context?"
+                  {t('socraticQuestioning.example.clarificationText')}
                 </p>
               </div>
               <div className="p-4 bg-muted/30 rounded-lg">
-                <p className="font-medium text-foreground mb-2">Assumptions:</p>
+                <p className="font-medium text-foreground mb-2">{t('socraticQuestioning.example.assumptions')}:</p>
                 <p className="text-muted-foreground">
-                  "Are you assuming happiness is the same for everyone? What if someone's happiness comes from financial security?"
+                  {t('socraticQuestioning.example.assumptionsText')}
                 </p>
               </div>
               <div className="p-4 bg-muted/30 rounded-lg">
-                <p className="font-medium text-foreground mb-2">Evidence:</p>
+                <p className="font-medium text-foreground mb-2">{t('socraticQuestioning.example.evidence')}:</p>
                 <p className="text-muted-foreground">
-                  "What evidence do we have about the relationship between money and well-being? How do studies on this topic affect your view?"
+                  {t('socraticQuestioning.example.evidenceText')}
                 </p>
               </div>
               <div className="p-4 bg-muted/30 rounded-lg">
-                <p className="font-medium text-foreground mb-2">Implications:</p>
+                <p className="font-medium text-foreground mb-2">{t('socraticQuestioning.example.implications')}:</p>
                 <p className="text-muted-foreground">
-                  "If this is true, what does it mean for how we should live? Should we not pursue financial success at all?"
+                  {t('socraticQuestioning.example.implicationsText')}
                 </p>
               </div>
             </div>
@@ -332,12 +329,10 @@ export default function SocraticQuestioning() {
         {/* Call to Action */}
         <div className="text-center bg-muted/30 p-8 rounded-lg">
           <h3 className="text-2xl font-bold text-foreground mb-4">
-            Start Questioning Today
+            {t('socraticQuestioning.startToday')}
           </h3>
           <p className="text-muted-foreground max-w-3xl mx-auto">
-            Begin by questioning your own beliefs and assumptions. Practice the six types of questions 
-            on topics you feel confident about. You might be surprised by what you discover when you 
-            dig deeper into the foundations of your own thinking.
+            {t('socraticQuestioning.startTodayDesc')}
           </p>
         </div>
       </div>

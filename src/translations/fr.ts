@@ -213,7 +213,23 @@ export const fr = {
   'streetEpistemology.readyToPracticeDesc': 'Commencez par examiner vos propres croyances d\'abord. Quelles méthodes avez-vous utilisées pour les former ? À quel point êtes-vous confiant ? Quelles preuves changeraient votre avis ? Puis pratiquez ces techniques de questionnement doux avec amis et famille.',
   'streetEpistemology.practiceExamples': 'Pratiquer avec des Exemples',
   'streetEpistemology.learnSocratic': 'Apprendre le Questionnement Socratique',
-
+  
+  // Socratic Questioning
+  'socraticQuestioning.title': 'Questionnement Socratique',
+  'socraticQuestioning.subtitle': 'Une forme de questionnement discipliné qui peut être utilisée pour poursuivre la pensée dans de nombreuses directions et à de nombreuses fins. La fondation de la pensée critique depuis plus de 2 000 ans.',
+  'socraticQuestioning.whatMakesDifferent': 'Ce qui le rend différent',
+  'socraticQuestioning.whatMakesDifferentText': 'La clé pour distinguer le questionnement socratique du questionnement per se est que le questionnement socratique est systématique, discipliné, profond et se concentre généralement sur des concepts, principes, théories, questions ou problèmes fondamentaux.',
+  'socraticQuestioning.purposes': 'Objectifs du Questionnement Socratique',
+  'socraticQuestioning.fiveFoundations': 'Cinq Fondements Théoriques',
+  'socraticQuestioning.sixTypes': 'Six Types de Questions Socratiques',
+  'socraticQuestioning.sixTypesDesc': 'Chaque type de question sert un objectif spécifique dans la pensée critique et l\'enquête systématique.',
+  'socraticQuestioning.questioningProcess': 'Le Processus de Questionnement',
+  'socraticQuestioning.bestPractices': 'Meilleures Pratiques',
+  'socraticQuestioning.exampleTitle': 'Exemple : Questionner une Croyance Commune',
+  'socraticQuestioning.exampleDesc': 'Comment le questionnement socratique pourrait explorer la croyance "L\'argent ne peut pas acheter le bonheur"',
+  'socraticQuestioning.startToday': 'Commencez à Questionner Aujourd\'hui',
+  'socraticQuestioning.startTodayDesc': 'Commencez par questionner vos propres croyances et suppositions. Pratiquez les six types de questions sur des sujets où vous vous sentez confiant. Vous pourriez être surpris de ce que vous découvrez en creusant plus profondément dans les fondements de votre propre pensée.',
+  
   'learn_more': 'En savoir plus',
 
   // Indoctrination - Full Section
