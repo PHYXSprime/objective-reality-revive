@@ -1485,4 +1485,62 @@ export const fr = {
   'ego.pathBeyondText': 'Réduire l\'influence de l\'ego ne consiste pas en l\'auto-flagellation ou la fausse modestie. Il s\'agit de développer une confiance authentique qui ne dépend pas d\'avoir raison, d\'être supérieur ou parfait. Quand nous nous soucions plus de la vérité que de notre image, plus de comprendre que de gagner, nous devenons à la fois plus efficaces et plus authentiquement connectés à la réalité et aux autres.',
   'ego.ultimateGoal': 'L\'Objectif Ultime :',
   'ego.ultimateGoalText': 'Devenir le genre de personne qui peut tenir des convictions fortes légèrement, changer d\'avis gracieusement, admettre l\'ignorance confortablement, et chercher la vérité courageusement—peu importe où cela mène ou comment cela affecte son image.',
+
+  // Stefan Molyneux - Complete French translations
+  'stefanMolyneux.title': 'Stefan Molyneux',
+  'stefanMolyneux.subtitle': 'Philosophie, Éthique et Pensée Rationnelle',
+  'stefanMolyneux.introduction': 'Stefan Molyneux est un philosophe, auteur et défenseur de l\'éthique basée sur la raison. Son travail se concentre sur la création de cadres séculiers et logiques pour le comportement moral, particulièrement à travers son œuvre révolutionnaire "Comportement Universellement Préférable" (CUP).',
+
+  // UPB Section
+  'stefanMolyneux.upb.title': 'Comportement Universellement Préférable (CUP)',
+  'stefanMolyneux.upb.description': 'Un cadre rationnel et séculier pour l\'éthique et la morale',
+  'stefanMolyneux.upb.core': 'Le Cœur du CUP',
+  'stefanMolyneux.upb.coreText': 'Le CUP fournit une méthode logique pour évaluer les propositions morales sans s\'appuyer sur des autorités religieuses ou culturelles. Il établit que les règles éthiques valides doivent être universelles, préférables et comportementalement applicables à tous les êtres rationnels.',
+  'stefanMolyneux.upb.principle1.title': 'Universalité',
+  'stefanMolyneux.upb.principle1.description': 'Les règles morales doivent s\'appliquer également à tous les êtres rationnels, indépendamment du temps, du lieu ou des circonstances.',
+  'stefanMolyneux.upb.principle2.title': 'Cohérence Logique',
+  'stefanMolyneux.upb.principle2.description': 'Les propositions éthiques ne doivent pas se contredire ou créer des impossibilités logiques.',
+  'stefanMolyneux.upb.principle3.title': 'Applicabilité Empirique',
+  'stefanMolyneux.upb.principle3.description': 'Les règles morales valides doivent être pratiquement applicables et ne pas exiger d\'actions impossibles.',
+  'stefanMolyneux.upb.downloadPdf': 'Télécharger le PDF CUP',
+
+  // Video Section
+  'stefanMolyneux.video.title': 'Contenu en Vedette',
+  'stefanMolyneux.video.description': 'Vidéos essentielles qui présentent des perspectives philosophiques',
+  'stefanMolyneux.video.enslavementTitle': 'L\'Histoire de Votre Esclavage',
+  'stefanMolyneux.video.enslavementDescription': 'Une analyse puissante de la façon dont les systèmes économiques et politiques modernes fonctionnent, révélant des mécanismes cachés de contrôle et encourageant la pensée critique sur l\'autorité et la liberté.',
+  'stefanMolyneux.video.watchOnOdysee': 'Regarder sur Odysee',
+
+  // Philosophy Section
+  'stefanMolyneux.philosophy.title': 'Philosophie Centrale',
+  'stefanMolyneux.philosophy.description': 'Principes fondamentaux pour une pensée rationnelle basée sur les preuves',
+  'stefanMolyneux.philosophy.rational.title': 'Argumentation Rationnelle',
+  'stefanMolyneux.philosophy.rational.description': 'Utiliser la logique et la raison comme outils principaux pour comprendre la vérité et prendre des décisions.',
+  'stefanMolyneux.philosophy.evidence.title': 'Croyances Basées sur les Preuves',
+  'stefanMolyneux.philosophy.evidence.description': 'Former des croyances basées sur des preuves empiriques plutôt que sur la tradition, l\'autorité ou l\'émotion.',
+  'stefanMolyneux.philosophy.peaceful.title': 'Résolution Pacifique',
+  'stefanMolyneux.philosophy.peaceful.description': 'Plaider pour des solutions non violentes et des interactions volontaires dans les relations humaines.',
+
+  // Key Ideas
+  'stefanMolyneux.keyIdeas.title': 'Idées Clés et Contributions',
+  'stefanMolyneux.keyIdeas.anarchCapitalism': 'Anarcho-Capitalisme',
+  'stefanMolyneux.keyIdeas.anarchCapitalismText': 'Plaidoyer pour des solutions volontaires basées sur le marché pour l\'organisation sociale sans intervention gouvernementale coercitive.',
+  'stefanMolyneux.keyIdeas.nonAggression': 'Principe de Non-Agression',
+  'stefanMolyneux.keyIdeas.nonAggressionText': 'Le principe fondamental selon lequel initier la force contre d\'autres est immoral et que toutes les interactions doivent être volontaires.',
+  'stefanMolyneux.keyIdeas.reasonEvidence': 'Raison et Preuves',
+  'stefanMolyneux.keyIdeas.reasonEvidenceText': 'Accent mis sur l\'utilisation du raisonnement logique et des preuves empiriques comme base pour toutes les croyances et jugements moraux.',
+  'stefanMolyneux.keyIdeas.peacefulParenting': 'Parentalité Pacifique',
+  'stefanMolyneux.keyIdeas.peacefulParentingText': 'Plaider pour des approches non violentes et rationnelles de l\'éducation des enfants basées sur la raison plutôt que sur la coercition.',
+
+  // Resources
+  'stefanMolyneux.resources.title': 'Ressources Essentielles',
+  'stefanMolyneux.resources.description': 'Commencez votre voyage avec ces matériaux fondamentaux',
+  'stefanMolyneux.resources.upbBook': 'Lire le Livre CUP',
+  'stefanMolyneux.resources.enslavementVideo': 'Regarder "L\'Histoire de Votre Esclavage"',
+
+  // Apply Section
+  'stefanMolyneux.apply.title': 'Appliquer Ces Idées',
+  'stefanMolyneux.apply.description': 'Franchir l\'étape suivante dans le développement des compétences de pensée rationnelle',
+  'stefanMolyneux.apply.criticalThinking': 'Développer la Pensée Critique',
+  'stefanMolyneux.apply.socraticMethod': 'Apprendre la Méthode Socratique',
 } as const;

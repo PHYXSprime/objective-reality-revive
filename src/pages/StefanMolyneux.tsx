@@ -83,8 +83,8 @@ export default function StefanMolyneux() {
               </div>
             </CardHeader>
             <CardContent className="space-y-8">
-              <div className="text-center p-8 bg-gradient-to-r from-emerald-50 to-blue-50 dark:from-emerald-900/20 dark:to-blue-900/20 rounded-2xl border border-emerald-200/50 dark:border-emerald-800/50">
-                <h3 className="text-2xl font-bold text-foreground mb-6">
+              <div className="text-center p-8 bg-gradient-to-r from-primary/10 to-accent/10 rounded-2xl border border-primary/20 shadow-lg backdrop-blur-sm">
+                <h3 className="text-2xl font-bold text-foreground mb-6 text-glow-blue">
                   {t('stefanMolyneux.upb.core')}
                 </h3>
                 <p className="text-muted-foreground text-lg leading-relaxed max-w-3xl mx-auto">

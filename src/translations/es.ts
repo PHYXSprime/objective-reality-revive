@@ -1523,4 +1523,62 @@ export const es = {
   'ego.pathBeyondText': 'Reducir la influencia del ego no se trata de autoflagelación o falsa modestia. Se trata de desarrollar confianza genuina que no depende de tener razón, ser superior o perfecto. Cuando nos importa más la verdad que nuestra imagen, más el entendimiento que ganar, nos volvemos tanto más efectivos como más genuinamente conectados con la realidad y otros.',
   'ego.ultimateGoal': 'El Objetivo Final:',
   'ego.ultimateGoalText': 'Convertirse en el tipo de persona que puede mantener convicciones fuertes ligeramente, cambiar de opinión con gracia, admitir ignorancia cómodamente y buscar la verdad valientemente, sin importar a dónde lleve o cómo afecte su imagen.',
+
+  // Stefan Molyneux - Complete Spanish translations
+  'stefanMolyneux.title': 'Stefan Molyneux',
+  'stefanMolyneux.subtitle': 'Filosofía, Ética y Pensamiento Racional',
+  'stefanMolyneux.introduction': 'Stefan Molyneux es un filósofo, autor y defensor de la ética basada en la razón. Su trabajo se centra en crear marcos seculares y lógicos para el comportamiento moral, particularmente a través de su obra revolucionaria "Comportamiento Universalmente Preferible" (UPB).',
+
+  // UPB Section
+  'stefanMolyneux.upb.title': 'Comportamiento Universalmente Preferible (UPB)',
+  'stefanMolyneux.upb.description': 'Un marco racional y secular para la ética y la moral',
+  'stefanMolyneux.upb.core': 'El Núcleo de UPB',
+  'stefanMolyneux.upb.coreText': 'UPB proporciona un método lógico para evaluar proposiciones morales sin depender de autoridades religiosas o culturales. Establece que las reglas éticas válidas deben ser universales, preferibles y comportamentalmente aplicables a todos los seres racionales.',
+  'stefanMolyneux.upb.principle1.title': 'Universalidad',
+  'stefanMolyneux.upb.principle1.description': 'Las reglas morales deben aplicarse igualmente a todos los seres racionales, independientemente del tiempo, lugar o circunstancia.',
+  'stefanMolyneux.upb.principle2.title': 'Consistencia Lógica',
+  'stefanMolyneux.upb.principle2.description': 'Las proposiciones éticas no deben contradecirse a sí mismas ni crear imposibilidades lógicas.',
+  'stefanMolyneux.upb.principle3.title': 'Aplicabilidad Empírica',
+  'stefanMolyneux.upb.principle3.description': 'Las reglas morales válidas deben ser prácticamente aplicables y no requerir acciones imposibles.',
+  'stefanMolyneux.upb.downloadPdf': 'Descargar PDF de UPB',
+
+  // Video Section
+  'stefanMolyneux.video.title': 'Contenido Destacado',
+  'stefanMolyneux.video.description': 'Videos esenciales que muestran perspectivas filosóficas',
+  'stefanMolyneux.video.enslavementTitle': 'La Historia de Tu Esclavitud',
+  'stefanMolyneux.video.enslavementDescription': 'Un análisis poderoso de cómo operan los sistemas económicos y políticos modernos, revelando mecanismos ocultos de control y fomentando el pensamiento crítico sobre la autoridad y la libertad.',
+  'stefanMolyneux.video.watchOnOdysee': 'Ver en Odysee',
+
+  // Philosophy Section
+  'stefanMolyneux.philosophy.title': 'Filosofía Central',
+  'stefanMolyneux.philosophy.description': 'Principios fundamentales para el pensamiento racional basado en evidencia',
+  'stefanMolyneux.philosophy.rational.title': 'Argumentación Racional',
+  'stefanMolyneux.philosophy.rational.description': 'Usar la lógica y la razón como las herramientas principales para entender la verdad y tomar decisiones.',
+  'stefanMolyneux.philosophy.evidence.title': 'Creencias Basadas en Evidencia',
+  'stefanMolyneux.philosophy.evidence.description': 'Formar creencias basadas en evidencia empírica en lugar de tradición, autoridad o emoción.',
+  'stefanMolyneux.philosophy.peaceful.title': 'Resolución Pacífica',
+  'stefanMolyneux.philosophy.peaceful.description': 'Abogar por soluciones no violentas e interacciones voluntarias en las relaciones humanas.',
+
+  // Key Ideas
+  'stefanMolyneux.keyIdeas.title': 'Ideas Clave y Contribuciones',
+  'stefanMolyneux.keyIdeas.anarchCapitalism': 'Anarco-Capitalismo',
+  'stefanMolyneux.keyIdeas.anarchCapitalismText': 'Defensa de soluciones voluntarias basadas en el mercado para la organización social sin intervención gubernamental coercitiva.',
+  'stefanMolyneux.keyIdeas.nonAggression': 'Principio de No Agresión',
+  'stefanMolyneux.keyIdeas.nonAggressionText': 'El principio fundamental de que iniciar la fuerza contra otros es inmoral y que todas las interacciones deben ser voluntarias.',
+  'stefanMolyneux.keyIdeas.reasonEvidence': 'Razón y Evidencia',
+  'stefanMolyneux.keyIdeas.reasonEvidenceText': 'Énfasis en usar el razonamiento lógico y la evidencia empírica como base para todas las creencias y juicios morales.',
+  'stefanMolyneux.keyIdeas.peacefulParenting': 'Crianza Pacífica',
+  'stefanMolyneux.keyIdeas.peacefulParentingText': 'Abogar por enfoques no violentos y racionales para la crianza de los niños basados en la razón en lugar de la coerción.',
+
+  // Resources
+  'stefanMolyneux.resources.title': 'Recursos Esenciales',
+  'stefanMolyneux.resources.description': 'Comienza tu viaje con estos materiales fundamentales',
+  'stefanMolyneux.resources.upbBook': 'Leer Libro UPB',
+  'stefanMolyneux.resources.enslavementVideo': 'Ver "La Historia de Tu Esclavitud"',
+
+  // Apply Section
+  'stefanMolyneux.apply.title': 'Aplicar Estas Ideas',
+  'stefanMolyneux.apply.description': 'Da el siguiente paso en el desarrollo de habilidades de pensamiento racional',
+  'stefanMolyneux.apply.criticalThinking': 'Desarrollar Pensamiento Crítico',
+  'stefanMolyneux.apply.socraticMethod': 'Aprender Método Socrático',
 } as const;
