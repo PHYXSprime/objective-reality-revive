@@ -25,59 +25,59 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
   };
 
   const getLevelColors = (level: AQALLevel, index: number) => {
-    // Map level names to colors based on the data
-    const colorMap: Record<string, { bg: string; border: string; badge: string }> = {
-      "Unitive Self": {
+    // Use index-based colors instead of language-dependent level names
+    const colorPalette = [
+      {
         bg: "bg-gradient-to-b from-white/20 via-violet-500/20 to-indigo-500/20",
-        border: "border-l-gradient-to-b border-l-white border-l-violet-500 border-l-indigo-500",
+        border: "border-l-violet-500",
         badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white"
       },
-      "Holistic Self (Turquoise)": {
+      {
         bg: "bg-teal-500/20",
         border: "border-l-teal-500",
         badge: "bg-teal-500 text-white"
       },
-      "Integral Self (Yellow)": {
+      {
         bg: "bg-yellow-500/20",
         border: "border-l-yellow-500",
         badge: "bg-yellow-500 text-black"
       },
-      "Sensitive Self (Green)": {
+      {
         bg: "bg-green-500/20",
         border: "border-l-green-500",
         badge: "bg-green-500 text-white"
       },
-      "Rational Self (Orange)": {
+      {
         bg: "bg-orange-500/20",
         border: "border-l-orange-500",
         badge: "bg-orange-500 text-white"
       },
-      "Rule/Role Self (Blue)": {
+      {
         bg: "bg-blue-500/20",
         border: "border-l-blue-500",
         badge: "bg-blue-500 text-white"
       },
-      "Power Self (Red)": {
+      {
         bg: "bg-red-500/20",
         border: "border-l-red-500",
         badge: "bg-red-500 text-white"
       },
-      "Tribal Order (Purple)": {
+      {
         bg: "bg-purple-500/20",
         border: "border-l-purple-500",
         badge: "bg-purple-500 text-white"
       },
-      "Instinctive Self (Beige)": {
+      {
         bg: "bg-stone-500/20",
         border: "border-l-stone-500",
         badge: "bg-stone-500 text-white"
       }
-    };
+    ];
     
-    return colorMap[level.level] || {
+    return colorPalette[index] || {
       bg: "bg-stone-500/20",
       border: "border-l-stone-500",
-      badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white"
+      badge: "bg-stone-500 text-white"
     };
   };
 
@@ -118,9 +118,9 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
                       </TableCell>
                       <TableCell>
                         <div className="flex items-center gap-2">
-                          <Badge className={colors.badge}>
-                            {level.level === "Unitive Self" ? "Unitive Self (Indigo)" : level.level}
-                          </Badge>
+                           <Badge className={colors.badge}>
+                             {level.level}
+                           </Badge>
                         </div>
                       </TableCell>
                       <TableCell className="text-sm text-muted-foreground">
