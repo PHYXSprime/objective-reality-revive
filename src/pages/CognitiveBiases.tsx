@@ -104,7 +104,7 @@ export default function CognitiveBiases() {
                   <Filter className="h-4 w-4 text-muted-foreground" />
                   <Select value={selectedCategory} onValueChange={setSelectedCategory}>
                     <SelectTrigger className="w-48">
-                      <SelectValue placeholder={t('filter.category')} />
+                      <SelectValue placeholder="Filter by category" />
                     </SelectTrigger>
                     <SelectContent>
                       {categories.map((category) => (
@@ -118,9 +118,9 @@ export default function CognitiveBiases() {
               </div>
               
               <div className="mt-4 text-sm text-muted-foreground">
-                {filteredBiases.length === 1 
-                  ? t('results.singular').replace('{count}', '1')
-                  : t('results.plural').replace('{count}', filteredBiases.length.toString())
+                {t('showing_results')
+                  .replace('{count}', filteredBiases.length.toString())
+                  .replace('{total}', biases.length.toString())
                 }
               </div>
             </div>
@@ -162,8 +162,8 @@ export default function CognitiveBiases() {
               ) : (
                 <div className="text-center py-12">
                   <div className="glass-card p-8 max-w-md mx-auto">
-                    <h3 className="text-lg font-semibold text-foreground mb-2">{t('no-results.title')}</h3>
-                    <p className="text-muted-foreground mb-4">{t('no-results.description')}</p>
+                    <h3 className="text-lg font-semibold text-foreground mb-2">{t('no_results')}</h3>
+                    <p className="text-muted-foreground mb-4">Try adjusting your search or category filter</p>
                     <Button 
                       onClick={() => {
                         setSearchTerm('');
@@ -171,7 +171,7 @@ export default function CognitiveBiases() {
                       }}
                       variant="outline"
                     >
-                      {t('no-results.clear')}
+                      {t('clear_filters')}
                     </Button>
                   </div>
                 </div>
