@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { Brain, AlertTriangle, Eye, ArrowRight, Target, Users, Shield } from 'lucide-react';
+import { Brain, AlertTriangle, Eye, ArrowRight, Target, Users, Shield, MessageCircle, BookOpen, Microscope, Smile, UserCheck, Scale, Zap, Megaphone, GraduationCap, Church, TreePine, Bed, Heart, UserX, Lightbulb } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
@@ -8,41 +8,123 @@ import { PageViewCounter } from '@/components/PageViewCounter';
 export default function Home() {
   const { t } = useLanguage();
 
-  const features = [
-    {
-      icon: AlertTriangle,
-      title: t('home.features.challenges.title'),
-      description: t('home.features.challenges.description'),
-      link: '/challenges',
-      color: 'text-orange-600 dark:text-orange-400',
-    },
-    {
-      icon: AlertTriangle,
-      title: t('home.features.solutions.title'),
-      description: t('home.features.solutions.description'),
-      link: '/solutions',
-      color: 'text-green-600 dark:text-green-400',
-    },
+  // Challenge pages
+  const challengePages = [
     {
       icon: Brain,
       title: t('biases.title'),
-      description: t('biases.description'),
       link: '/cognitive-biases',
       color: 'text-blue-600 dark:text-blue-400',
     },
     {
       icon: AlertTriangle,
       title: t('fallacies.title'),
-      description: t('fallacies.description'),
       link: '/logical-fallacies',
       color: 'text-red-600 dark:text-red-400',
     },
     {
+      icon: Scale,
+      title: 'Scientific Consensus',
+      link: '/consensus',
+      color: 'text-indigo-600 dark:text-indigo-400',
+    },
+    {
+      icon: Zap,
+      title: 'Censorship',
+      link: '/censorship',
+      color: 'text-yellow-600 dark:text-yellow-400',
+    },
+    {
+      icon: Megaphone,
+      title: 'Propaganda',
+      link: '/propaganda',
+      color: 'text-orange-600 dark:text-orange-400',
+    },
+    {
+      icon: GraduationCap,
+      title: 'Indoctrination',
+      link: '/indoctrination',
+      color: 'text-pink-600 dark:text-pink-400',
+    },
+    {
+      icon: Church,
+      title: 'Dogmatic Beliefs',
+      link: '/dogmas',
+      color: 'text-gray-600 dark:text-gray-400',
+    },
+    {
+      icon: Bed,
+      title: 'Lazy Thinking',
+      link: '/lazy-thinking',
+      color: 'text-teal-600 dark:text-teal-400',
+    },
+    {
+      icon: Heart,
+      title: 'Psychological Weakness',
+      link: '/psychological-weakness',
+      color: 'text-rose-600 dark:text-rose-400',
+    },
+    {
+      icon: UserX,
+      title: 'Ego',
+      link: '/ego',
+      color: 'text-amber-600 dark:text-amber-400',
+    },
+  ];
+
+  // Solution pages
+  const solutionPages = [
+    {
+      icon: MessageCircle,
+      title: 'Street Epistemology',
+      link: '/street-epistemology',
+      color: 'text-green-600 dark:text-green-400',
+    },
+    {
+      icon: BookOpen,
+      title: 'Socratic Questioning',
+      link: '/socratic-questioning',
+      color: 'text-blue-600 dark:text-blue-400',
+    },
+    {
+      icon: Microscope,
+      title: 'Scientific Method',
+      link: '/scientific-method',
+      color: 'text-purple-600 dark:text-purple-400',
+    },
+    {
+      icon: Lightbulb,
+      title: 'Critical Thinking',
+      link: '/critical-thinking',
+      color: 'text-cyan-600 dark:text-cyan-400',
+    },
+    {
+      icon: Smile,
+      title: 'Comedians',
+      link: '/comedians',
+      color: 'text-yellow-600 dark:text-yellow-400',
+    },
+    {
+      icon: UserCheck,
+      title: 'Stefan Molyneux',
+      link: '/stefan-molyneux',
+      color: 'text-red-600 dark:text-red-400',
+    },
+  ];
+
+  // Other important pages
+  const otherPages = [
+    {
       icon: Eye,
       title: t('consciousness.title'),
-      description: t('consciousness.description'),
       link: '/consciousness',
       color: 'text-purple-600 dark:text-purple-400',
+    },
+    {
+      icon: TreePine,
+      title: 'Co-Evolution',
+      link: '/co-evolution',
+      color: 'text-emerald-600 dark:text-emerald-400',
     },
   ];
 
@@ -103,29 +185,70 @@ export default function Home() {
           </div>
         </section>
 
-      {/* Features Section */}
+      {/* Pages Navigation Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {features.map((feature, index) => (
-              <Card key={index} className="glass-card transition-transform hover:scale-105">
-                <CardHeader>
-                  <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center mb-4`}>
-                    <feature.icon className={`h-6 w-6 ${feature.color}`} />
-                  </div>
-                  <CardTitle className="text-xl">{feature.title}</CardTitle>
-                  <CardDescription className="text-muted-foreground">
-                    {feature.description}
-                  </CardDescription>
-                </CardHeader>
-                <CardContent>
-                  <Button asChild variant="outline" className="w-full group">
-                    <Link to={feature.link}>
-                      {t('home.explore')}
-                      <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+        <div className="max-w-7xl mx-auto space-y-12">
+          
+          {/* Challenges Group */}
+          <div className="relative">
+            <div className="absolute inset-0 rounded-2xl border border-orange-400/30 bg-transparent"></div>
+            <div className="absolute -top-4 left-6 bg-background px-3 py-1 rounded-full border border-orange-400/30">
+              <h2 className="text-xl font-semibold text-orange-600 dark:text-orange-400">Challenges</h2>
+            </div>
+            <div className="p-8 pt-12">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+                {challengePages.map((page, index) => (
+                  <Card key={index} className="glass-card transition-transform hover:scale-105 h-24 p-3">
+                    <Link to={page.link} className="flex items-center h-full space-x-3">
+                      <div className={`w-8 h-8 rounded-lg bg-muted flex items-center justify-center flex-shrink-0`}>
+                        <page.icon className={`h-4 w-4 ${page.color}`} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-sm font-medium text-foreground truncate">{page.title}</h3>
+                      </div>
                     </Link>
-                  </Button>
-                </CardContent>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Solutions Group */}
+          <div className="relative">
+            <div className="absolute inset-0 rounded-2xl border border-green-400/30 bg-transparent"></div>
+            <div className="absolute -top-4 left-6 bg-background px-3 py-1 rounded-full border border-green-400/30">
+              <h2 className="text-xl font-semibold text-green-600 dark:text-green-400">Solutions</h2>
+            </div>
+            <div className="p-8 pt-12">
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+                {solutionPages.map((page, index) => (
+                  <Card key={index} className="glass-card transition-transform hover:scale-105 h-24 p-3">
+                    <Link to={page.link} className="flex items-center h-full space-x-3">
+                      <div className={`w-8 h-8 rounded-lg bg-muted flex items-center justify-center flex-shrink-0`}>
+                        <page.icon className={`h-4 w-4 ${page.color}`} />
+                      </div>
+                      <div className="flex-1 min-w-0">
+                        <h3 className="text-sm font-medium text-foreground truncate">{page.title}</h3>
+                      </div>
+                    </Link>
+                  </Card>
+                ))}
+              </div>
+            </div>
+          </div>
+
+          {/* Other Important Pages */}
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+            {otherPages.map((page, index) => (
+              <Card key={index} className="glass-card transition-transform hover:scale-105 h-24 p-3">
+                <Link to={page.link} className="flex items-center h-full space-x-3">
+                  <div className={`w-8 h-8 rounded-lg bg-muted flex items-center justify-center flex-shrink-0`}>
+                    <page.icon className={`h-4 w-4 ${page.color}`} />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-sm font-medium text-foreground truncate">{page.title}</h3>
+                  </div>
+                </Link>
               </Card>
             ))}
           </div>
