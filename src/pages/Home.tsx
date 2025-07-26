@@ -112,21 +112,13 @@ export default function Home() {
     },
   ];
 
-  // Other important pages
-  const otherPages = [
-    {
-      icon: Eye,
-      title: t('consciousness.title'),
-      link: '/consciousness',
-      color: 'text-purple-600 dark:text-purple-400',
-    },
-    {
-      icon: TreePine,
-      title: 'Co-Evolution',
-      link: '/co-evolution',
-      color: 'text-emerald-600 dark:text-emerald-400',
-    },
-  ];
+  // Add Co-Evolution to challenges
+  challengePages.push({
+    icon: TreePine,
+    title: 'Co-Evolution',
+    link: '/co-evolution',
+    color: 'text-emerald-600 dark:text-emerald-400',
+  });
 
   const principles = [
     {
@@ -185,8 +177,29 @@ export default function Home() {
           </div>
         </section>
 
+      {/* Consciousness Section */}
+      <section className="py-8 px-4 sm:px-6 lg:px-8">
+        <div className="max-w-4xl mx-auto">
+          <Card className="glass-card transition-transform hover:scale-105 cursor-pointer">
+            <Link to="/consciousness" className="block">
+              <CardHeader className="text-center">
+                <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
+                  <Eye className="h-8 w-8 text-purple-600 dark:text-purple-400" />
+                </div>
+                <CardTitle className="text-2xl font-bold">
+                  {t('consciousness.title')}
+                </CardTitle>
+                <CardDescription className="text-lg">
+                  {t('consciousness.subtitle')}
+                </CardDescription>
+              </CardHeader>
+            </Link>
+          </Card>
+        </div>
+      </section>
+
       {/* Pages Navigation Section */}
-      <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
+      <section className="py-8 px-4 sm:px-6 lg:px-8 bg-muted/30">
         <div className="max-w-7xl mx-auto space-y-12">
           
           {/* Challenges Group */}
@@ -237,21 +250,6 @@ export default function Home() {
             </div>
           </div>
 
-          {/* Other Important Pages */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
-            {otherPages.map((page, index) => (
-              <Card key={index} className="glass-card transition-transform hover:scale-105 h-24 p-3">
-                <Link to={page.link} className="flex items-center h-full space-x-3">
-                  <div className={`w-8 h-8 rounded-lg bg-muted flex items-center justify-center flex-shrink-0`}>
-                    <page.icon className={`h-4 w-4 ${page.color}`} />
-                  </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-sm font-medium text-foreground truncate">{page.title}</h3>
-                  </div>
-                </Link>
-              </Card>
-            ))}
-          </div>
         </div>
       </section>
 
