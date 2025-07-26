@@ -131,6 +131,102 @@ export const fr = {
   'solution.scientificMethod.title': 'Méthode Scientifique',
   'solution.criticalThinking.title': 'Pensée Critique',
   'solution.comedians.title': 'Comédiens',
+
+  // Critical Thinking
+  'criticalThinking.title': 'Pensée Critique',
+  'criticalThinking.subtitle': 'L\'analyse et l\'évaluation objectives d\'une question afin de porter un jugement. La pensée critique est le fondement de la prise de décision rationnelle et de l\'indépendance intellectuelle.',
+  'criticalThinking.whatIs': 'Qu\'est-ce que la Pensée Critique ?',
+  'criticalThinking.definition1': 'La pensée critique est le processus intellectuellement discipliné de conceptualisation, d\'application, d\'analyse, de synthèse et d\'évaluation actives et habiles d\'informations recueillies ou générées par l\'observation, l\'expérience, la réflexion, le raisonnement ou la communication, comme guide pour la croyance et l\'action.',
+  'criticalThinking.definition2': 'Elle implique l\'acquisition et l\'interprétation soigneuses d\'informations et leur utilisation pour parvenir à une conclusion bien justifiée. La liste des compétences de pensée critique de base comprend l\'observation, l\'interprétation, l\'analyse, l\'inférence, l\'évaluation, l\'explication et la métacognition.',
+
+  // Core Components
+  'criticalThinking.coreComponents': 'Composants Fondamentaux de la Pensée Critique',
+  'criticalThinking.components.analysis': 'Analyse',
+  'criticalThinking.components.analysisDesc': 'Décomposer des informations complexes en parties plus petites pour comprendre les relations entre les concepts, identifier les modèles et examiner les suppositions sous-jacentes.',
+  'criticalThinking.components.evaluation': 'Évaluation',
+  'criticalThinking.components.evaluationDesc': 'Évaluer la crédibilité des sources, la force des preuves, la validité des arguments et la fiabilité des conclusions tirées d\'informations disponibles.',
+  'criticalThinking.components.inference': 'Inférence',
+  'criticalThinking.components.inferenceDesc': 'Tirer des conclusions logiques basées sur les preuves disponibles tout en reconnaissant la différence entre ce qui est implicite et ce qui est explicitement énoncé.',
+  'criticalThinking.components.interpretation': 'Interprétation',
+  'criticalThinking.components.interpretationDesc': 'Comprendre la signification et l\'importance des informations, reconnaître le contexte et appréhender les implications de diverses perspectives.',
+
+  // Essential Skills
+  'criticalThinking.essentialSkills': 'Compétences Essentielles de Pensée Critique',
+  'criticalThinking.skills.questioningAssumptions': 'Questionner les Suppositions',
+  'criticalThinking.skills.questioningAssumptionsDesc': 'Remettre en question les croyances et suppositions sous-jacentes qui peuvent être tenues pour acquises. Posez des questions comme :',
+  'criticalThinking.skills.questioningQuestions.q1': 'Quelles suppositions est-ce que je fais ?',
+  'criticalThinking.skills.questioningQuestions.q2': 'Ces suppositions sont-elles justifiées ?',
+  'criticalThinking.skills.questioningQuestions.q3': 'Et si le contraire était vrai ?',
+  'criticalThinking.skills.questioningQuestions.q4': 'Quelles preuves soutiennent cette supposition ?',
+
+  'criticalThinking.skills.examiningEvidence': 'Examiner les Preuves',
+  'criticalThinking.skills.examiningEvidenceDesc': 'Évaluer la qualité, la pertinence et la suffisance des preuves :',
+  'criticalThinking.skills.evidenceQuestions.q1': 'La source est-elle crédible et impartiale ?',
+  'criticalThinking.skills.evidenceQuestions.q2': 'Les preuves sont-elles pertinentes pour l\'affirmation ?',
+  'criticalThinking.skills.evidenceQuestions.q3': 'Y a-t-il suffisamment de preuves pour soutenir la conclusion ?',
+  'criticalThinking.skills.evidenceQuestions.q4': 'Quelles preuves pourraient contredire cette conclusion ?',
+
+  'criticalThinking.skills.multiplePerspec': 'Considérer Plusieurs Perspectives',
+  'criticalThinking.skills.multiplePespecDesc': 'Rechercher et considérer activement différents points de vue :',
+  'criticalThinking.skills.perspectiveQuestions.q1': 'De quelles autres façons cela pourrait-il être interprété ?',
+  'criticalThinking.skills.perspectiveQuestions.q2': 'Qui pourrait être en désaccord avec cette conclusion et pourquoi ?',
+  'criticalThinking.skills.perspectiveQuestions.q3': 'Quelles sont les forces et faiblesses des points de vue alternatifs ?',
+  'criticalThinking.skills.perspectiveQuestions.q4': 'Comment les biais culturels ou personnels pourraient-ils influencer l\'interprétation ?',
+
+  'criticalThinking.skills.logicalReasoning': 'Raisonnement Logique',
+  'criticalThinking.skills.logicalReasoningDesc': 'Utiliser des principes logiques solides pour évaluer les arguments :',
+  'criticalThinking.skills.reasoningQuestions.q1': 'Les prémisses soutiennent-elles logiquement la conclusion ?',
+  'criticalThinking.skills.reasoningQuestions.q2': 'Y a-t-il des sophismes logiques présents ?',
+  'criticalThinking.skills.reasoningQuestions.q3': 'Le raisonnement est-il cohérent tout au long ?',
+  'criticalThinking.skills.reasoningQuestions.q4': 'Y a-t-il des lacunes dans la chaîne logique ?',
+
+  // Barriers
+  'criticalThinking.commonBarriers': 'Obstacles Communs à la Pensée Critique',
+  'criticalThinking.barriers.confirmationBias': 'Biais de Confirmation',
+  'criticalThinking.barriers.confirmationBiasDesc': 'Rechercher des informations qui confirment les croyances existantes tout en évitant les preuves contradictoires.',
+  'criticalThinking.barriers.emotionalReasoning': 'Raisonnement Émotionnel',
+  'criticalThinking.barriers.emotionalReasoningDesc': 'Laisser les émotions supplanter l\'analyse logique et le raisonnement basé sur les preuves.',
+  'criticalThinking.barriers.groupthink': 'Pensée de Groupe',
+  'criticalThinking.barriers.groupthinkDesc': 'Se conformer au consensus du groupe sans évaluation critique des alternatives.',
+  'criticalThinking.barriers.authorityBias': 'Biais d\'Autorité',
+  'criticalThinking.barriers.authorityBiasDesc': 'Accepter des affirmations simplement parce qu\'elles viennent de figures d\'autorité perçues.',
+  'criticalThinking.barriers.blackWhiteThinking': 'Pensée Noir et Blanc',
+  'criticalThinking.barriers.blackWhiteThinkingDesc': 'Voir les questions en termes absolus sans reconnaître les nuances ou la complexité.',
+  'criticalThinking.barriers.informationOverload': 'Surcharge d\'Information',
+  'criticalThinking.barriers.informationOverloadDesc': 'Être submergé par trop d\'informations, menant à des raccourcis mentaux et de mauvaises décisions.',
+
+  // Development
+  'criticalThinking.howToDevelop': 'Comment Développer les Compétences de Pensée Critique',
+  'criticalThinking.development.activeReading': 'Pratiquer la Lecture et l\'Écoute Actives',
+  'criticalThinking.development.activeReadingDesc': 'Ne consommez pas l\'information passivement. Posez des questions, prenez des notes et engagez-vous avec le matériel. Cherchez les arguments principaux, les preuves présentées et les suppositions sous-jacentes.',
+  'criticalThinking.development.powerfulQuestions': 'Poser des Questions Puissantes',
+  'criticalThinking.development.powerfulQuestionsDesc': 'Développez l\'habitude de poser des questions approfondies : Pourquoi est-ce important ? Quelles preuves soutiennent cela ? Quelles sont les implications ? Qui bénéficie de cette perspective ? Qu\'est-ce qui est omis ?',
+  'criticalThinking.development.diverseSources': 'Rechercher des Sources Diverses',
+  'criticalThinking.development.diverseSourcesDesc': 'Exposez-vous à différents points de vue, cultures et sources d\'information. Cela vous aide à reconnaître vos propres biais et à comprendre les questions complexes sous plusieurs angles.',
+  'criticalThinking.development.metacognition': 'Pratiquer la Métacognition',
+  'criticalThinking.development.metacognitionDesc': 'Pensez à votre pensée. Réfléchissez sur votre processus de raisonnement, identifiez vos biais et évaluez l\'efficacité de vos stratégies de résolution de problèmes.',
+  'criticalThinking.development.intellectualHumility': 'Embrasser l\'Humilité Intellectuelle',
+  'criticalThinking.development.intellectualHumilityDesc': 'Reconnaissez ce que vous ne savez pas et soyez prêt à changer d\'avis quand de meilleures preuves sont présentées. Reconnaissez qu\'avoir tort est une opportunité d\'apprendre et de grandir.',
+
+  // Benefits
+  'criticalThinking.benefits': 'Avantages de la Pensée Critique',
+  'criticalThinking.personalBenefits': 'Avantages Personnels',
+  'criticalThinking.personalBenefitsList.betterDecisions': 'Meilleure prise de décision',
+  'criticalThinking.personalBenefitsList.selfAwareness': 'Conscience de soi accrue',
+  'criticalThinking.personalBenefitsList.problemSolving': 'Capacités de résolution de problèmes améliorées',
+  'criticalThinking.personalBenefitsList.independence': 'Plus grande indépendance intellectuelle',
+  'criticalThinking.personalBenefitsList.manipulation': 'Susceptibilité réduite à la manipulation',
+  'criticalThinking.professionalBenefits': 'Avantages Professionnels',
+  'criticalThinking.professionalBenefitsList.analytical': 'Compétences analytiques améliorées',
+  'criticalThinking.professionalBenefitsList.strategic': 'Meilleure pensée stratégique',
+  'criticalThinking.professionalBenefitsList.creativity': 'Créativité et innovation renforcées',
+  'criticalThinking.professionalBenefitsList.communication': 'Communication plus efficace',
+  'criticalThinking.professionalBenefitsList.leadership': 'Capacités de leadership renforcées',
+
+  // Conclusion
+  'criticalThinking.pathForward': 'La Voie à Suivre',
+  'criticalThinking.conclusion1': 'La pensée critique n\'est pas seulement une compétence académique—c\'est une compétence de vie qui nous permet de naviguer dans un monde de plus en plus complexe. À une époque de surcharge d\'information, de fausses nouvelles et de techniques de manipulation sophistiquées, la capacité de penser de manière critique n\'a jamais été plus importante.',
+  'criticalThinking.conclusion2': 'En développant de solides compétences de pensée critique, nous devenons des résolveurs de problèmes plus efficaces, de meilleurs communicateurs et des citoyens plus réfléchis. Nous apprenons à questionner nos propres suppositions, à considérer plusieurs perspectives et à prendre des décisions basées sur les preuves plutôt que sur l\'émotion ou les biais. C\'est le fondement de la liberté intellectuelle et du discours rationnel.',
   
   // Navigation
   'solutions.allSolutions': 'Toutes les Solutions',
