@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import { PHYXSLevel } from '@/data/phyxsMapData';
+import { useLanguage } from '@/hooks/useLanguage';
 
 interface PHYXSTableProps {
   data: PHYXSLevel[];
@@ -12,6 +13,7 @@ interface PHYXSTableProps {
 }
 
 export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
+  const { t } = useLanguage();
   const [openRows, setOpenRows] = React.useState<Set<number>>(new Set());
 
   const toggleRow = (index: number) => {
@@ -93,10 +95,10 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
             <TableHeader>
               <TableRow>
                 <TableHead className="w-[50px]"></TableHead>
-                <TableHead>Evolution Point</TableHead>
-                <TableHead>Stage</TableHead>
-                <TableHead>Timeframe</TableHead>
-                <TableHead>Significance</TableHead>
+                <TableHead>{t('consciousness.phyxs.table.headers.evolutionPoint')}</TableHead>
+                <TableHead>{t('consciousness.phyxs.table.headers.stage')}</TableHead>
+                <TableHead>{t('consciousness.phyxs.table.headers.timeframe')}</TableHead>
+                <TableHead>{t('consciousness.phyxs.table.headers.significance')}</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -137,14 +139,14 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
                           <div className={`p-6 border-t border-l-[10px] ${colors.bg} ${colors.border} animate-fade-in`}>
                             <div className="grid md:grid-cols-2 gap-6">
                                {/* Description */}
-                               <div className="md:col-span-2 text-left">
-                                 <h4 className="font-semibold mb-2 text-left">Description</h4>
-                                 <p className="text-sm text-muted-foreground leading-relaxed text-left">{level.description}</p>
-                               </div>
+                                <div className="md:col-span-2 text-left">
+                                  <h4 className="font-semibold mb-2 text-left">{t('consciousness.phyxs.table.labels.description')}</h4>
+                                  <p className="text-sm text-muted-foreground leading-relaxed text-left">{level.description}</p>
+                                </div>
 
                                 {/* Characteristics */}
-                                <div className="text-left">
-                                  <h4 className="font-semibold mb-2 text-left">Characteristics</h4>
+                                 <div className="text-left">
+                                   <h4 className="font-semibold mb-2 text-left">{t('consciousness.phyxs.table.labels.characteristics')}</h4>
                                   <div className="space-y-1 text-left">
                                     {level.characteristics.map((char, i) => (
                                       <p key={i} className="text-sm text-muted-foreground leading-relaxed text-left">
@@ -155,8 +157,8 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
                                 </div>
 
                                 {/* Biophysical Markers */}
-                                <div className="text-left">
-                                  <h4 className="font-semibold mb-2 text-left">Biophysical Markers</h4>
+                                 <div className="text-left">
+                                   <h4 className="font-semibold mb-2 text-left">{t('consciousness.phyxs.table.labels.biophysicalMarkers')}</h4>
                                   <div className="space-y-1 text-left">
                                     {level.biophysicalMarkers.map((marker, i) => (
                                       <p key={i} className="text-sm text-muted-foreground leading-relaxed text-left">
@@ -167,8 +169,8 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
                                 </div>
 
                                {/* Cognitive Capabilities */}
-                               <div className="md:col-span-2 text-left">
-                                 <h4 className="font-semibold mb-2 text-left">Cognitive Capabilities</h4>
+                                <div className="md:col-span-2 text-left">
+                                  <h4 className="font-semibold mb-2 text-left">{t('consciousness.phyxs.table.labels.cognitiveCapabilities')}</h4>
                                  <div className="flex flex-wrap gap-2 text-left">
                                    {level.cognitiveCapabilities.map((capability, i) => (
                                      <Badge key={i} variant="outline" className="text-xs">

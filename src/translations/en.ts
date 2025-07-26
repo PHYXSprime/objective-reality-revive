@@ -54,7 +54,47 @@ export const en = {
 
   // Pages
   'epistemology.title': 'Epistemology',
-  'epistemology.description': 'How can we know if something is actually true?',
+  'epistemology.subtitle': 'How can we know if something is actually true?',
+  'epistemology.description': 'The short answer is: we can never be 100% sure of anything. Therefore, the best thing to do is to give every piece of information or belief a value of confidence that adjusts with every new piece of information we gain.',
+  'epistemology.neoQuote': '....wake up Neo! ..................  wake up...',
+  
+  // Epistemology principles
+  'epistemology.principles.confidenceBasedBeliefs.title': 'Confidence-Based Beliefs',
+  'epistemology.principles.confidenceBasedBeliefs.description': 'Assign confidence levels to every belief and adjust them as new information becomes available. Remove ego from the equation.',
+  'epistemology.principles.brainLimitations.title': 'Brain Limitations',
+  'epistemology.principles.brainLimitations.description': 'Our brains evolved for survival, not perfect accuracy. They prioritize speed over precision to conserve energy.',
+  'epistemology.principles.closedLoopPrinciple.title': 'Closed Loop Principle',
+  'epistemology.principles.closedLoopPrinciple.description': 'Like airline pilots, use collaborative verification and systematic cross-checking to reduce human error.',
+  'epistemology.principles.errorReduction.title': 'Error Reduction',
+  'epistemology.principles.errorReduction.description': 'Systematic approaches to identify and minimize cognitive errors in high-stakes decision making.',
+  
+  // Epistemology sections
+  'epistemology.sections.humanCognition.title': 'The Reality of Human Cognition',
+  'epistemology.sections.humanCognition.paragraph1': 'Once we\'ve accepted that our brains haven\'t developed to map reality as perfectly as possible – but as fast as possible and just good enough to survive and not waste too much energy on the quality of the result – we can find ways to work around the shortcomings of our brains.',
+  'epistemology.sections.humanCognition.paragraph2': 'In today\'s highly developed, sophisticated world, most of the time we don\'t run the risk of being attacked by a wild animal and eventually dying – however, wrong or sub-optimal decisions taken hastily could have devastating results.',
+  'epistemology.sections.aviationExperience.title': 'Aviation Experience',
+  'epistemology.sections.aviationExperience.paragraph1': 'My personal experience as an airline pilot with over 15,000 hours of flying experience and 14,000 landings has taught me how limited and vulnerable to errors our brains actually are. This is why we work in a team of two in the cockpit where all actions are performed in a closed loop principle.',
+  'epistemology.sections.aviationExperience.paragraph2': 'This closed loop principle has proven to be VERY effective in reducing human error on the list of aviation related accidents. And yet, human error is way above any other category for aircraft related deaths and injuries, while accidents due to technical malfunctions are asymptotically trending towards zero.',
+  
+  // Epistemology core principles
+  'epistemology.corePrinciples.title': 'Core Epistemological Principles',
+  
+  // Epistemology practical application
+  'epistemology.practicalApplication.title': 'Practical Application',
+  'epistemology.practicalApplication.confidenceCalibration.title': 'Confidence Calibration',
+  'epistemology.practicalApplication.confidenceCalibration.point1': 'Rate beliefs on a 0-100% confidence scale',
+  'epistemology.practicalApplication.confidenceCalibration.point2': 'Update confidence levels with new evidence',
+  'epistemology.practicalApplication.confidenceCalibration.point3': 'Separate confidence from emotional attachment',
+  'epistemology.practicalApplication.confidenceCalibration.point4': 'Track accuracy of past confidence assessments',
+  'epistemology.practicalApplication.errorPrevention.title': 'Error Prevention',
+  'epistemology.practicalApplication.errorPrevention.point1': 'Use systematic verification processes',
+  'epistemology.practicalApplication.errorPrevention.point2': 'Implement collaborative cross-checking',
+  'epistemology.practicalApplication.errorPrevention.point3': 'Recognize when emotions influence judgment',
+  'epistemology.practicalApplication.errorPrevention.point4': 'Question assumptions regularly',
+  
+  // Epistemology call to action
+  'epistemology.callToAction.title': 'The Path to Better Decision Making',
+  'epistemology.callToAction.description': 'By understanding the limitations of human cognition and implementing systematic approaches to verification and error reduction, we can make significantly better decisions and develop a more accurate understanding of reality.',
   'challenges.title': 'Challenges',
   'challenges.description': 'Barriers that separate us from objective reality',
   'biases.title': 'Cognitive Biases',
@@ -1697,4 +1737,53 @@ export const en = {
   'consciousness.researchNote.foundation.description': 'The AQAL framework is based on decades of developmental psychology research and integral theory by Ken Wilber. The PHYXS Evolution D Map represents David Heggli\'s innovative approach to expand the psychology based AQAL model and to expand it and to map it to measurable biophysical markers.',
   'consciousness.researchNote.applications.title': '«Digital Twins» Applications:',
   'consciousness.researchNote.applications.description': 'This research enables the creation of PERFECT digital twins that can model actual human brains with billions of digitally "living" billions of neurons and therefore makes consciousness states directly observable and testable for educational, therapeutic, and developmental applications, representing a significant advancement in consciousness research and practical application.',
+  
+  // Consciousness table headers and labels
+  'consciousness.aqal.table.headers.level': 'Level',
+  'consciousness.aqal.table.headers.humanAge': 'Human Age',
+  'consciousness.aqal.table.headers.quest': 'Quest',
+  'consciousness.aqal.table.headers.method': 'Method',
+  'consciousness.aqal.table.labels.description': 'Description',
+  'consciousness.aqal.table.labels.characteristics': 'Characteristics',
+  'consciousness.aqal.table.labels.aqalQuadrants': 'AQAL Quadrants',
+  'consciousness.aqal.table.labels.interiorIndividual': 'Interior-Individual',
+  'consciousness.aqal.table.labels.exteriorIndividual': 'Exterior-Individual',
+  'consciousness.aqal.table.labels.interiorCollective': 'Interior-Collective',
+  'consciousness.aqal.table.labels.exteriorCollective': 'Exterior-Collective',
+  'consciousness.aqal.table.labels.commonPitfalls': 'Common Pitfalls',
+  
+  'consciousness.phyxs.table.headers.evolutionPoint': 'Evolution Point',
+  'consciousness.phyxs.table.headers.stage': 'Stage',
+  'consciousness.phyxs.table.headers.timeframe': 'Timeframe',
+  'consciousness.phyxs.table.headers.significance': 'Significance',
+  'consciousness.phyxs.table.labels.description': 'Description',
+  'consciousness.phyxs.table.labels.characteristics': 'Characteristics',
+  'consciousness.phyxs.table.labels.biophysicalMarkers': 'Biophysical Markers',
+  'consciousness.phyxs.table.labels.cognitiveCapabilities': 'Cognitive Capabilities',
+  
+  // Lazy thinking examples
+  'lazyThinking.manifestation.mentalShortcuts.example1': 'Stereotyping',
+  'lazyThinking.manifestation.mentalShortcuts.example2': 'First impression bias',
+  'lazyThinking.manifestation.mentalShortcuts.example3': 'Availability heuristic',
+  'lazyThinking.manifestation.mentalShortcuts.example4': 'Representativeness bias',
+  'lazyThinking.manifestation.confirmationSeeking.example1': 'Echo chambers',
+  'lazyThinking.manifestation.confirmationSeeking.example2': 'Selective reading',
+  'lazyThinking.manifestation.confirmationSeeking.example3': 'Cherry-picking data',
+  'lazyThinking.manifestation.confirmationSeeking.example4': 'Ignoring contradictions',
+  'lazyThinking.manifestation.authorityDependence.example1': 'Expert worship',
+  'lazyThinking.manifestation.authorityDependence.example2': 'Celebrity opinions',
+  'lazyThinking.manifestation.authorityDependence.example3': 'Credential bias',
+  'lazyThinking.manifestation.authorityDependence.example4': 'Appeal to popularity',
+  'lazyThinking.manifestation.binaryThinking.example1': 'False dichotomies',
+  'lazyThinking.manifestation.binaryThinking.example2': 'All-or-nothing thinking',
+  'lazyThinking.manifestation.binaryThinking.example3': 'Good vs. evil narratives',
+  'lazyThinking.manifestation.binaryThinking.example4': 'With us or against us',
+  'lazyThinking.manifestation.emotionalReasoning.example1': 'If it feels right, it must be true',
+  'lazyThinking.manifestation.emotionalReasoning.example2': 'Gut instinct over analysis',
+  'lazyThinking.manifestation.emotionalReasoning.example3': 'Wishful thinking',
+  'lazyThinking.manifestation.emotionalReasoning.example4': 'Fear-based decisions',
+  'lazyThinking.manifestation.surfaceLevelProcessing.example1': 'Headlines only',
+  'lazyThinking.manifestation.surfaceLevelProcessing.example2': 'Sound bite thinking',
+  'lazyThinking.manifestation.surfaceLevelProcessing.example3': 'Meme-level understanding',
+  'lazyThinking.manifestation.surfaceLevelProcessing.example4': 'Shallow research',
 } as const;

@@ -4,6 +4,7 @@ import { Badge } from '@/components/ui/badge';
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from '@/components/ui/table';
 import { ChevronDown, ChevronRight } from 'lucide-react';
 import { AQALLevel } from '@/data/aqalMapData';
+import { useLanguage } from '@/hooks/useLanguage';
 
 interface ConsciousnessTableProps {
   data: AQALLevel[];
@@ -12,6 +13,7 @@ interface ConsciousnessTableProps {
 }
 
 export function ConsciousnessTable({ data, title, description }: ConsciousnessTableProps) {
+  const { t } = useLanguage();
   const [openRows, setOpenRows] = React.useState<Set<number>>(new Set());
 
   const toggleRow = (index: number) => {
@@ -93,10 +95,10 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
             <TableHeader>
               <TableRow>
                 <TableHead className="w-[50px]"></TableHead>
-                <TableHead>Level</TableHead>
-                <TableHead>Human Age</TableHead>
-                <TableHead>Quest</TableHead>
-                <TableHead>Method</TableHead>
+                <TableHead>{t('consciousness.aqal.table.headers.level')}</TableHead>
+                <TableHead>{t('consciousness.aqal.table.headers.humanAge')}</TableHead>
+                <TableHead>{t('consciousness.aqal.table.headers.quest')}</TableHead>
+                <TableHead>{t('consciousness.aqal.table.headers.method')}</TableHead>
               </TableRow>
             </TableHeader>
             <TableBody>
@@ -140,7 +142,7 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
                             <div className="grid md:grid-cols-2 gap-6">
                                 {/* Description */}
                                 <div className="text-left">
-                                  <h4 className="font-semibold mb-2 text-left">Description</h4>
+                                  <h4 className="font-semibold mb-2 text-left">{t('consciousness.aqal.table.labels.description')}</h4>
                                   <div className="space-y-1 text-left">
                                     {level.description.map((desc, i) => (
                                       <p key={i} className="text-sm text-muted-foreground leading-relaxed text-left">
@@ -152,7 +154,7 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
 
                                 {/* Characteristics */}
                                 <div className="text-left">
-                                  <h4 className="font-semibold mb-2 text-left">Characteristics</h4>
+                                  <h4 className="font-semibold mb-2 text-left">{t('consciousness.aqal.table.labels.characteristics')}</h4>
                                   <div className="space-y-1 text-left">
                                     {level.characteristics.map((char, i) => (
                                       <p key={i} className="text-sm text-muted-foreground leading-relaxed text-left">
@@ -164,22 +166,22 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
 
                                {/* AQAL Quadrants */}
                                <div className="md:col-span-2 text-left">
-                                 <h4 className="font-semibold mb-3 text-left">AQAL Quadrants</h4>
+                                 <h4 className="font-semibold mb-3 text-left">{t('consciousness.aqal.table.labels.aqalQuadrants')}</h4>
                                  <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                                    <div className="p-3 bg-background/80 rounded border text-left">
-                                     <h5 className="font-medium text-sm mb-2 text-left">Interior-Individual</h5>
+                                     <h5 className="font-medium text-sm mb-2 text-left">{t('consciousness.aqal.table.labels.interiorIndividual')}</h5>
                                      <p className="text-xs text-muted-foreground leading-relaxed text-left">{level.quadrants.interiorIndividual}</p>
                                    </div>
                                    <div className="p-3 bg-background/80 rounded border text-left">
-                                     <h5 className="font-medium text-sm mb-2 text-left">Exterior-Individual</h5>
+                                     <h5 className="font-medium text-sm mb-2 text-left">{t('consciousness.aqal.table.labels.exteriorIndividual')}</h5>
                                      <p className="text-xs text-muted-foreground leading-relaxed text-left">{level.quadrants.exteriorIndividual}</p>
                                    </div>
                                    <div className="p-3 bg-background/80 rounded border text-left">
-                                     <h5 className="font-medium text-sm mb-2 text-left">Interior-Collective</h5>
+                                     <h5 className="font-medium text-sm mb-2 text-left">{t('consciousness.aqal.table.labels.interiorCollective')}</h5>
                                      <p className="text-xs text-muted-foreground leading-relaxed text-left">{level.quadrants.interiorCollective}</p>
                                    </div>
                                    <div className="p-3 bg-background/80 rounded border text-left">
-                                     <h5 className="font-medium text-sm mb-2 text-left">Exterior-Collective</h5>
+                                     <h5 className="font-medium text-sm mb-2 text-left">{t('consciousness.aqal.table.labels.exteriorCollective')}</h5>
                                      <p className="text-xs text-muted-foreground leading-relaxed text-left">{level.quadrants.exteriorCollective}</p>
                                    </div>
                                  </div>
@@ -187,7 +189,7 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
 
                                {/* Pitfalls */}
                                <div className="md:col-span-2 text-left">
-                                 <h4 className="font-semibold mb-2 text-left">Common Pitfalls</h4>
+                                 <h4 className="font-semibold mb-2 text-left">{t('consciousness.aqal.table.labels.commonPitfalls')}</h4>
                                  <div className="flex flex-wrap gap-2 text-left">
                                    {level.pitfalls.map((pitfall, i) => (
                                      <Badge key={i} variant="outline" className="text-xs">

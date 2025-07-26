@@ -10,32 +10,62 @@ export default function LazyThinking() {
     {
       title: t('lazyThinking.manifestation.mentalShortcuts'),
       description: t('lazyThinking.manifestation.mentalShortcuts.desc'),
-      examples: ["Stereotyping", "First impression bias", "Availability heuristic", "Representativeness bias"]
+      examples: [
+        t('lazyThinking.manifestation.mentalShortcuts.example1'),
+        t('lazyThinking.manifestation.mentalShortcuts.example2'),
+        t('lazyThinking.manifestation.mentalShortcuts.example3'),
+        t('lazyThinking.manifestation.mentalShortcuts.example4')
+      ]
     },
     {
       title: t('lazyThinking.manifestation.confirmationSeeking'),
       description: t('lazyThinking.manifestation.confirmationSeeking.desc'),
-      examples: ["Echo chambers", "Selective reading", "Cherry-picking data", "Ignoring contradictions"]
+      examples: [
+        t('lazyThinking.manifestation.confirmationSeeking.example1'),
+        t('lazyThinking.manifestation.confirmationSeeking.example2'),
+        t('lazyThinking.manifestation.confirmationSeeking.example3'),
+        t('lazyThinking.manifestation.confirmationSeeking.example4')
+      ]
     },
     {
       title: t('lazyThinking.manifestation.authorityDependence'),
       description: t('lazyThinking.manifestation.authorityDependence.desc'),
-      examples: ["Expert worship", "Celebrity opinions", "Credential bias", "Appeal to popularity"]
+      examples: [
+        t('lazyThinking.manifestation.authorityDependence.example1'),
+        t('lazyThinking.manifestation.authorityDependence.example2'),
+        t('lazyThinking.manifestation.authorityDependence.example3'),
+        t('lazyThinking.manifestation.authorityDependence.example4')
+      ]
     },
     {
       title: t('lazyThinking.manifestation.binaryThinking'),
       description: t('lazyThinking.manifestation.binaryThinking.desc'),
-      examples: ["False dichotomies", "All-or-nothing thinking", "Good vs. evil narratives", "With us or against us"]
+      examples: [
+        t('lazyThinking.manifestation.binaryThinking.example1'),
+        t('lazyThinking.manifestation.binaryThinking.example2'),
+        t('lazyThinking.manifestation.binaryThinking.example3'),
+        t('lazyThinking.manifestation.binaryThinking.example4')
+      ]
     },
     {
       title: t('lazyThinking.manifestation.emotionalReasoning'),
       description: t('lazyThinking.manifestation.emotionalReasoning.desc'),
-      examples: ["If it feels right, it must be true", "Gut instinct over analysis", "Wishful thinking", "Fear-based decisions"]
+      examples: [
+        t('lazyThinking.manifestation.emotionalReasoning.example1'),
+        t('lazyThinking.manifestation.emotionalReasoning.example2'),
+        t('lazyThinking.manifestation.emotionalReasoning.example3'),
+        t('lazyThinking.manifestation.emotionalReasoning.example4')
+      ]
     },
     {
       title: t('lazyThinking.manifestation.surfaceLevelProcessing'),
       description: t('lazyThinking.manifestation.surfaceLevelProcessing.desc'),
-      examples: ["Headlines only", "Sound bite thinking", "Meme-level understanding", "Shallow research"]
+      examples: [
+        t('lazyThinking.manifestation.surfaceLevelProcessing.example1'),
+        t('lazyThinking.manifestation.surfaceLevelProcessing.example2'),
+        t('lazyThinking.manifestation.surfaceLevelProcessing.example3'),
+        t('lazyThinking.manifestation.surfaceLevelProcessing.example4')
+      ]
     }
   ];
 

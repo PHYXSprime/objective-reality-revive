@@ -8,26 +8,26 @@ export default function Epistemology() {
   const principles = [
     {
       icon: Target,
-      title: "Confidence-Based Beliefs",
-      description: "Assign confidence levels to every belief and adjust them as new information becomes available. Remove ego from the equation.",
+      title: t('epistemology.principles.confidenceBasedBeliefs.title'),
+      description: t('epistemology.principles.confidenceBasedBeliefs.description'),
       color: "text-blue-600 dark:text-blue-400"
     },
     {
       icon: Brain,
-      title: "Brain Limitations",
-      description: "Our brains evolved for survival, not perfect accuracy. They prioritize speed over precision to conserve energy.",
+      title: t('epistemology.principles.brainLimitations.title'),
+      description: t('epistemology.principles.brainLimitations.description'),
       color: "text-green-600 dark:text-green-400"
     },
     {
       icon: Users,
-      title: "Closed Loop Principle",
-      description: "Like airline pilots, use collaborative verification and systematic cross-checking to reduce human error.",
+      title: t('epistemology.principles.closedLoopPrinciple.title'),
+      description: t('epistemology.principles.closedLoopPrinciple.description'),
       color: "text-purple-600 dark:text-purple-400"
     },
     {
       icon: Shield,
-      title: "Error Reduction",
-      description: "Systematic approaches to identify and minimize cognitive errors in high-stakes decision making.",
+      title: t('epistemology.principles.errorReduction.title'),
+      description: t('epistemology.principles.errorReduction.description'),
       color: "text-red-600 dark:text-red-400"
     }
   ];
@@ -39,13 +39,13 @@ export default function Epistemology() {
         <Card className="mb-12 glass-card">
           <CardHeader className="text-center">
             <CardTitle className="text-4xl font-bold">
-              Epistemology
+              {t('epistemology.title')}
             </CardTitle>
             <CardDescription className="text-2xl mb-4">
-              How can we know if something is actually true?
+              {t('epistemology.subtitle')}
             </CardDescription>
             <CardDescription className="text-lg max-w-4xl mx-auto">
-              The short answer is: we can never be 100% sure of anything. Therefore, the best thing to do is to give every piece of information or belief a value of confidence that adjusts with every new piece of information we gain.
+              {t('epistemology.description')}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -54,7 +54,7 @@ export default function Epistemology() {
         <Card className="glass-card mb-12">
           <CardContent className="p-8 text-center">
             <h2 className="text-3xl font-bold text-foreground text-glow-accent">
-              ....wake up Neo! ..................  wake up...
+              {t('epistemology.neoQuote')}
             </h2>
           </CardContent>
         </Card>
@@ -65,25 +65,25 @@ export default function Epistemology() {
             <div className="grid lg:grid-cols-2 gap-8">
               <div className="space-y-6">
                 <h3 className="text-2xl font-semibold text-foreground">
-                  The Reality of Human Cognition
+                  {t('epistemology.sections.humanCognition.title')}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  Once we've accepted that our brains haven't developed to map reality as perfectly as possible – but as fast as possible and just good enough to survive and not waste too much energy on the quality of the result – we can find ways to work around the shortcomings of our brains.
+                  {t('epistemology.sections.humanCognition.paragraph1')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  In today's highly developed, sophisticated world, most of the time we don't run the risk of being attacked by a wild animal and eventually dying – however, wrong or sub-optimal decisions taken hastily could have devastating results.
+                  {t('epistemology.sections.humanCognition.paragraph2')}
                 </p>
               </div>
               
               <div className="space-y-6">
                 <h3 className="text-2xl font-semibold text-foreground">
-                  Aviation Experience
+                  {t('epistemology.sections.aviationExperience.title')}
                 </h3>
                 <p className="text-muted-foreground leading-relaxed">
-                  My personal experience as an airline pilot with over 15,000 hours of flying experience and 14,000 landings has taught me how limited and vulnerable to errors our brains actually are. This is why we work in a team of two in the cockpit where all actions are performed in a closed loop principle.
+                  {t('epistemology.sections.aviationExperience.paragraph1')}
                 </p>
                 <p className="text-muted-foreground leading-relaxed">
-                  This closed loop principle has proven to be VERY effective in reducing human error on the list of aviation related accidents. And yet, human error is way above any other category for aircraft related deaths and injuries, while accidents due to technical malfunctions are asymptotically trending towards zero.
+                  {t('epistemology.sections.aviationExperience.paragraph2')}
                 </p>
               </div>
             </div>
@@ -93,7 +93,7 @@ export default function Epistemology() {
         {/* Core Principles */}
         <div className="mb-12">
           <h2 className="text-3xl font-bold text-foreground mb-8 text-center">
-            Core Epistemological Principles
+            {t('epistemology.corePrinciples.title')}
           </h2>
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
             {principles.map((principle, index) => (
@@ -119,27 +119,27 @@ export default function Epistemology() {
           <CardHeader>
             <CardTitle className="text-2xl flex items-center gap-3">
               <Scale className="h-6 w-6 text-primary" />
-              Practical Application
+              {t('epistemology.practicalApplication.title')}
             </CardTitle>
           </CardHeader>
           <CardContent className="space-y-4">
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h4 className="font-semibold text-foreground mb-3">Confidence Calibration</h4>
+                <h4 className="font-semibold text-foreground mb-3">{t('epistemology.practicalApplication.confidenceCalibration.title')}</h4>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• Rate beliefs on a 0-100% confidence scale</li>
-                  <li>• Update confidence levels with new evidence</li>
-                  <li>• Separate confidence from emotional attachment</li>
-                  <li>• Track accuracy of past confidence assessments</li>
+                  <li>• {t('epistemology.practicalApplication.confidenceCalibration.point1')}</li>
+                  <li>• {t('epistemology.practicalApplication.confidenceCalibration.point2')}</li>
+                  <li>• {t('epistemology.practicalApplication.confidenceCalibration.point3')}</li>
+                  <li>• {t('epistemology.practicalApplication.confidenceCalibration.point4')}</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-foreground mb-3">Error Prevention</h4>
+                <h4 className="font-semibold text-foreground mb-3">{t('epistemology.practicalApplication.errorPrevention.title')}</h4>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• Use systematic verification processes</li>
-                  <li>• Implement collaborative cross-checking</li>
-                  <li>• Recognize when emotions influence judgment</li>
-                  <li>• Question assumptions regularly</li>
+                  <li>• {t('epistemology.practicalApplication.errorPrevention.point1')}</li>
+                  <li>• {t('epistemology.practicalApplication.errorPrevention.point2')}</li>
+                  <li>• {t('epistemology.practicalApplication.errorPrevention.point3')}</li>
+                  <li>• {t('epistemology.practicalApplication.errorPrevention.point4')}</li>
                 </ul>
               </div>
             </div>
@@ -150,10 +150,10 @@ export default function Epistemology() {
         <Card className="glass-card">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl font-bold">
-              The Path to Better Decision Making
+              {t('epistemology.callToAction.title')}
             </CardTitle>
             <CardDescription className="text-muted-foreground max-w-3xl mx-auto">
-              By understanding the limitations of human cognition and implementing systematic approaches to verification and error reduction, we can make significantly better decisions and develop a more accurate understanding of reality.
+              {t('epistemology.callToAction.description')}
             </CardDescription>
           </CardHeader>
         </Card>
