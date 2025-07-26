@@ -21,18 +21,27 @@ export default function LogicalFallacies() {
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
-  // Helper function to get translated content
+  // Helper function to get translated content with memoization
   const getTranslatedFallacy = (fallacy: LogicalFallacy) => {
-    if (translationsLoading) return fallacy; // Return original while loading
-    if (language !== 'en' && logicalFallaciesTranslations[language as keyof typeof logicalFallaciesTranslations]?.[fallacy.name]) {
-      const translation = logicalFallaciesTranslations[language as keyof typeof logicalFallaciesTranslations][fallacy.name];
-      return {
-        name: translation.name,
-        definition: translation.definition,
-        example: translation.example,
-        category: fallacy.category
-      };
+    // Don't translate while translations are still loading
+    if (translationsLoading) return fallacy;
+    
+    // If not English and we have translations for this language
+    if (language !== 'en' && logicalFallaciesTranslations[language as keyof typeof logicalFallaciesTranslations]) {
+      const translations = logicalFallaciesTranslations[language as keyof typeof logicalFallaciesTranslations];
+      const translation = translations[fallacy.name];
+      
+      if (translation) {
+        return {
+          name: translation.name,
+          definition: translation.definition,
+          example: translation.example,
+          category: fallacy.category
+        };
+      }
     }
+    
+    // Return original fallacy if no translation found or language is English
     return fallacy;
   };
 
