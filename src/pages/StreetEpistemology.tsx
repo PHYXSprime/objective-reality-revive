@@ -9,48 +9,48 @@ export default function StreetEpistemology() {
 
   const sePrinciples = [
     {
-      title: "Non-confrontational",
-      description: "The goal is not to 'win' but to help people examine their beliefs"
+      title: t('streetEpistemology.principles.nonConfrontational'),
+      description: t('streetEpistemology.principles.nonConfrontationalDesc')
     },
     {
-      title: "Genuine curiosity",
-      description: "Ask questions from a place of authentic interest, not to trap"
+      title: t('streetEpistemology.principles.genuineCuriosity'),
+      description: t('streetEpistemology.principles.genuineCuriosityDesc')
     },
     {
-      title: "Focus on method",
-      description: "Examine how someone came to believe something, not what they believe"
+      title: t('streetEpistemology.principles.focusOnMethod'),
+      description: t('streetEpistemology.principles.focusOnMethodDesc')
     },
     {
-      title: "Collaborative inquiry",
-      description: "Work together to understand the reliability of belief-forming methods"
+      title: t('streetEpistemology.principles.collaborativeInquiry'),
+      description: t('streetEpistemology.principles.collaborativeInquiryDesc')
     }
   ];
 
   const seQuestions = [
-    "How did you come to believe that?",
-    "What evidence would change your mind?",
-    "How confident are you in this belief on a scale of 1-10?",
-    "What method did you use to evaluate this information?",
-    "If you discovered this belief was wrong, would you want to know?",
-    "What's the difference between thinking something is true and knowing it's true?"
+    t('streetEpistemology.questions.howDidYouBelieve'),
+    t('streetEpistemology.questions.whatEvidenceChange'),
+    t('streetEpistemology.questions.howConfident'),
+    t('streetEpistemology.questions.whatMethod'),
+    t('streetEpistemology.questions.wouldWantToKnow'),
+    t('streetEpistemology.questions.thinkingVsKnowing')
   ];
 
   const commonMistakes = [
     {
-      mistake: "Being confrontational or aggressive",
-      correction: "Stay calm, patient, and genuinely curious"
+      mistake: t('streetEpistemology.mistakes.confrontational'),
+      correction: t('streetEpistemology.corrections.stayCalm')
     },
     {
-      mistake: "Trying to change someone's mind immediately",
-      correction: "Plant seeds of doubt; change takes time"
+      mistake: t('streetEpistemology.mistakes.changeImmediately'),
+      correction: t('streetEpistemology.corrections.plantSeeds')
     },
     {
-      mistake: "Asking leading questions",
-      correction: "Ask open-ended questions that encourage reflection"
+      mistake: t('streetEpistemology.mistakes.leadingQuestions'),
+      correction: t('streetEpistemology.corrections.openEndedQuestions')
     },
     {
-      mistake: "Getting emotionally invested in the outcome",
-      correction: "Focus on the process, not the result"
+      mistake: t('streetEpistemology.mistakes.emotionallyInvested'),
+      correction: t('streetEpistemology.corrections.focusOnProcess')
     }
   ];
 
@@ -89,10 +89,10 @@ export default function StreetEpistemology() {
         <Card className="glass-card mb-8">
           <CardHeader>
             <CardTitle className="text-2xl font-bold">
-              Core Principles of Street Epistemology
+              {t('streetEpistemology.corePrinciples')}
             </CardTitle>
             <CardDescription className="text-muted-foreground">
-              These foundational principles guide effective Street Epistemology conversations.
+              {t('streetEpistemology.corePrinciplesDesc')}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -120,10 +120,10 @@ export default function StreetEpistemology() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <MessageSquare className="h-6 w-6 text-primary" />
-              <CardTitle className="text-2xl">Essential Street Epistemology Questions</CardTitle>
+              <CardTitle className="text-2xl">{t('streetEpistemology.essentialQuestions')}</CardTitle>
             </div>
             <CardDescription>
-              These questions help people examine the reliability of their belief-forming processes
+              {t('streetEpistemology.essentialQuestionsDesc')}
             </CardDescription>
           </CardHeader>
           <CardContent>
@@ -142,7 +142,7 @@ export default function StreetEpistemology() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Target className="h-6 w-6 text-primary" />
-              <CardTitle className="text-2xl">The Street Epistemology Process</CardTitle>
+              <CardTitle className="text-2xl">{t('streetEpistemology.seProcess')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
@@ -152,29 +152,29 @@ export default function StreetEpistemology() {
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-primary font-bold">1</span>
                   </div>
-                  <h4 className="font-semibold text-foreground mb-2">Establish Rapport</h4>
-                  <p className="text-sm text-muted-foreground">Build trust and create a safe conversational space</p>
+                  <h4 className="font-semibold text-foreground mb-2">{t('streetEpistemology.process.establishRapport')}</h4>
+                  <p className="text-sm text-muted-foreground">{t('streetEpistemology.process.establishRapportDesc')}</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-primary font-bold">2</span>
                   </div>
-                  <h4 className="font-semibold text-foreground mb-2">Clarify the Claim</h4>
-                  <p className="text-sm text-muted-foreground">Understand exactly what the person believes</p>
+                  <h4 className="font-semibold text-foreground mb-2">{t('streetEpistemology.process.clarifyClaim')}</h4>
+                  <p className="text-sm text-muted-foreground">{t('streetEpistemology.process.clarifyClaimDesc')}</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-primary font-bold">3</span>
                   </div>
-                  <h4 className="font-semibold text-foreground mb-2">Explore the Method</h4>
-                  <p className="text-sm text-muted-foreground">Ask how they came to believe this</p>
+                  <h4 className="font-semibold text-foreground mb-2">{t('streetEpistemology.process.exploreMethod')}</h4>
+                  <p className="text-sm text-muted-foreground">{t('streetEpistemology.process.exploreMethodDesc')}</p>
                 </div>
                 <div className="text-center">
                   <div className="w-12 h-12 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-3">
                     <span className="text-primary font-bold">4</span>
                   </div>
-                  <h4 className="font-semibold text-foreground mb-2">Examine Reliability</h4>
-                  <p className="text-sm text-muted-foreground">Help them evaluate their belief-forming process</p>
+                  <h4 className="font-semibold text-foreground mb-2">{t('streetEpistemology.process.examineReliability')}</h4>
+                  <p className="text-sm text-muted-foreground">{t('streetEpistemology.process.examineReliabilityDesc')}</p>
                 </div>
               </div>
             </div>
@@ -186,7 +186,7 @@ export default function StreetEpistemology() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <AlertCircle className="h-6 w-6 text-primary" />
-              <CardTitle className="text-2xl">Common Mistakes to Avoid</CardTitle>
+              <CardTitle className="text-2xl">{t('streetEpistemology.commonMistakes')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
@@ -194,11 +194,11 @@ export default function StreetEpistemology() {
               {commonMistakes.map((item, index) => (
                 <div key={index} className="grid md:grid-cols-2 gap-4 p-4 border border-border rounded-lg">
                   <div>
-                    <h4 className="font-semibold text-red-600 dark:text-red-400 mb-2">❌ Don't:</h4>
+                    <h4 className="font-semibold text-red-600 dark:text-red-400 mb-2">{t('streetEpistemology.dontLabel')}</h4>
                     <p className="text-sm text-muted-foreground">{item.mistake}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-green-600 dark:text-green-400 mb-2">✅ Do:</h4>
+                    <h4 className="font-semibold text-green-600 dark:text-green-400 mb-2">{t('streetEpistemology.doLabel')}</h4>
                     <p className="text-sm text-muted-foreground">{item.correction}</p>
                   </div>
                 </div>
@@ -213,16 +213,16 @@ export default function StreetEpistemology() {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <CheckCircle className="h-6 w-6 text-primary" />
-                <CardTitle>Why Street Epistemology Works</CardTitle>
+                <CardTitle>{t('streetEpistemology.whyItWorks')}</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
               <ul className="space-y-3 text-muted-foreground">
-                <li>• Non-threatening approach preserves relationships</li>
-                <li>• Focuses on process, not content</li>
-                <li>• Helps people discover issues themselves</li>
-                <li>• Develops critical thinking skills</li>
-                <li>• Creates lasting change through self-reflection</li>
+                <li>• {t('streetEpistemology.benefits.nonThreatening')}</li>
+                <li>• {t('streetEpistemology.benefits.focusOnProcess')}</li>
+                <li>• {t('streetEpistemology.benefits.selfDiscovery')}</li>
+                <li>• {t('streetEpistemology.benefits.criticalThinking')}</li>
+                <li>• {t('streetEpistemology.benefits.lastingChange')}</li>
               </ul>
             </CardContent>
           </Card>
@@ -231,16 +231,16 @@ export default function StreetEpistemology() {
             <CardHeader>
               <div className="flex items-center gap-3">
                 <Target className="h-6 w-6 text-primary" />
-                <CardTitle>Best Practices</CardTitle>
+                <CardTitle>{t('streetEpistemology.bestPractices')}</CardTitle>
               </div>
             </CardHeader>
             <CardContent>
               <ul className="space-y-3 text-muted-foreground">
-                <li>• Start with less emotionally charged topics</li>
-                <li>• Listen more than you speak</li>
-                <li>• Be prepared to say "I don't know"</li>
-                <li>• Focus on epistemology, not facts</li>
-                <li>• Practice on yourself first</li>
+                <li>• {t('streetEpistemology.practices.startEasy')}</li>
+                <li>• {t('streetEpistemology.practices.listenMore')}</li>
+                <li>• {t('streetEpistemology.practices.sayDontKnow')}</li>
+                <li>• {t('streetEpistemology.practices.focusEpistemology')}</li>
+                <li>• {t('streetEpistemology.practices.practiceYourself')}</li>
               </ul>
             </CardContent>
           </Card>
@@ -250,20 +250,18 @@ export default function StreetEpistemology() {
         <Card className="glass-card">
           <CardContent className="p-8 text-center">
             <h3 className="text-2xl font-bold text-foreground mb-4">
-              Ready to Practice Street Epistemology?
+              {t('streetEpistemology.readyToPractice')}
             </h3>
             <p className="text-muted-foreground mb-6 max-w-3xl mx-auto">
-              Start by examining your own beliefs first. What methods did you use to form them? 
-              How confident are you? What evidence would change your mind? Then practice these 
-              gentle questioning techniques with friends and family.
+              {t('streetEpistemology.readyToPracticeDesc')}
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
               <Button size="lg" className="flex items-center gap-2">
                 <ExternalLink className="h-4 w-4" />
-                Practice with Examples
+                {t('streetEpistemology.practiceExamples')}
               </Button>
               <Button variant="outline" size="lg">
-                Learn Socratic Questioning
+                {t('streetEpistemology.learnSocratic')}
               </Button>
             </div>
           </CardContent>

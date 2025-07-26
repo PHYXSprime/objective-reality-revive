@@ -271,6 +271,79 @@ export const de = {
   'solutions.introduction': 'Nachdem wir die Herausforderungen für die objektive Realität verstehen, erforschen wir die praktischen Werkzeuge und Methoden, die wir verwenden können, um kognitive Verzerrungen zu überwinden, klarer zu denken und anderen dabei zu helfen.',
   'solutions.practicalTools': 'Praktische Werkzeuge & Methoden',
   'solutions.practicalToolsDescription': 'Evidenzbasierte Ansätze zur Überwindung kognitiver Grenzen und klarerem Denken',
+  
+  // Street Epistemology
+  'streetEpistemology.title': 'Straßen-Epistemologie',
+  'streetEpistemology.subtitle': 'Ein gesprächsbasierter Ansatz, um Menschen zu helfen, die Zuverlässigkeit ihrer Überzeugungen und Denkmethoden zu überprüfen',
+  'streetEpistemology.aboutBoghossian': 'Über Dr. Peter Boghossian',
+  'streetEpistemology.aboutBoghossianText': 'Die Straßen-Epistemologie wurde von Dr. Peter Boghossian entwickelt, einem Philosophen und Autor, der erkannte, dass traditionelle Debatten und Argumente selten Meinungen ändern. Stattdessen schuf er eine auf sokratischen Fragen basierende Methode, die Menschen hilft, ihre eigenen überzeugungsbildenden Prozesse auf nicht-bedrohliche Weise zu untersuchen.',
+  'streetEpistemology.corePrinciples': 'Grundprinzipien der Straßen-Epistemologie',
+  'streetEpistemology.corePrinciplesDesc': 'Diese grundlegenden Prinzipien leiten effektive Straßen-Epistemologie-Gespräche.',
+  
+  // Principles
+  'streetEpistemology.principles.nonConfrontational': 'Nicht-konfrontativ',
+  'streetEpistemology.principles.nonConfrontationalDesc': 'Das Ziel ist nicht zu "gewinnen", sondern Menschen zu helfen, ihre Überzeugungen zu überprüfen',
+  'streetEpistemology.principles.genuineCuriosity': 'Echte Neugier',
+  'streetEpistemology.principles.genuineCuriosityDesc': 'Fragen aus einem Ort authentischen Interesses stellen, nicht um zu fangen',
+  'streetEpistemology.principles.focusOnMethod': 'Fokus auf die Methode',
+  'streetEpistemology.principles.focusOnMethodDesc': 'Untersuchen, wie jemand zu etwas gekommen ist zu glauben, nicht was er glaubt',
+  'streetEpistemology.principles.collaborativeInquiry': 'Kollaborative Untersuchung',
+  'streetEpistemology.principles.collaborativeInquiryDesc': 'Zusammenarbeiten, um die Zuverlässigkeit überzeugungsbildender Methoden zu verstehen',
+  
+  // Questions
+  'streetEpistemology.essentialQuestions': 'Wesentliche Straßen-Epistemologie-Fragen',
+  'streetEpistemology.essentialQuestionsDesc': 'Diese Fragen helfen Menschen, die Zuverlässigkeit ihrer überzeugungsbildenden Prozesse zu untersuchen',
+  'streetEpistemology.questions.howDidYouBelieve': 'Wie sind Sie zu diesem Glauben gekommen?',
+  'streetEpistemology.questions.whatEvidenceChange': 'Welche Beweise würden Ihre Meinung ändern?',
+  'streetEpistemology.questions.howConfident': 'Wie sicher sind Sie in diesem Glauben auf einer Skala von 1-10?',
+  'streetEpistemology.questions.whatMethod': 'Welche Methode haben Sie verwendet, um diese Information zu bewerten?',
+  'streetEpistemology.questions.wouldWantToKnow': 'Wenn Sie entdeckten, dass dieser Glaube falsch war, würden Sie es wissen wollen?',
+  'streetEpistemology.questions.thinkingVsKnowing': 'Was ist der Unterschied zwischen zu denken, dass etwas wahr ist, und zu wissen, dass es wahr ist?',
+  
+  // Process
+  'streetEpistemology.seProcess': 'Der Straßen-Epistemologie-Prozess',
+  'streetEpistemology.process.establishRapport': 'Vertrauen aufbauen',
+  'streetEpistemology.process.establishRapportDesc': 'Vertrauen aufbauen und einen sicheren Gesprächsraum schaffen',
+  'streetEpistemology.process.clarifyClaim': 'Die Behauptung klären',
+  'streetEpistemology.process.clarifyClaimDesc': 'Genau verstehen, was die Person glaubt',
+  'streetEpistemology.process.exploreMethod': 'Die Methode erkunden',
+  'streetEpistemology.process.exploreMethodDesc': 'Fragen, wie sie zu diesem Glauben gekommen sind',
+  'streetEpistemology.process.examineReliability': 'Zuverlässigkeit untersuchen',
+  'streetEpistemology.process.examineReliabilityDesc': 'Ihnen helfen, ihren überzeugungsbildenden Prozess zu bewerten',
+  
+  // Mistakes and corrections
+  'streetEpistemology.commonMistakes': 'Häufige Fehler zu vermeiden',
+  'streetEpistemology.dontLabel': '❌ Nicht:',
+  'streetEpistemology.doLabel': '✅ Tun:',
+  'streetEpistemology.mistakes.confrontational': 'Konfrontativ oder aggressiv sein',
+  'streetEpistemology.corrections.stayCalm': 'Ruhig, geduldig und ehrlich neugierig bleiben',
+  'streetEpistemology.mistakes.changeImmediately': 'Versuchen, jemandes Meinung sofort zu ändern',
+  'streetEpistemology.corrections.plantSeeds': 'Zweifelssamen pflanzen; Veränderung braucht Zeit',
+  'streetEpistemology.mistakes.leadingQuestions': 'Suggestivfragen stellen',
+  'streetEpistemology.corrections.openEndedQuestions': 'Offene Fragen stellen, die zur Reflexion ermutigen',
+  'streetEpistemology.mistakes.emotionallyInvested': 'Emotional in das Ergebnis investiert werden',
+  'streetEpistemology.corrections.focusOnProcess': 'Auf den Prozess fokussieren, nicht auf das Ergebnis',
+  
+  // Benefits and practices
+  'streetEpistemology.whyItWorks': 'Warum Straßen-Epistemologie funktioniert',
+  'streetEpistemology.benefits.nonThreatening': 'Nicht-bedrohlicher Ansatz bewahrt Beziehungen',
+  'streetEpistemology.benefits.focusOnProcess': 'Fokussiert auf Prozess, nicht Inhalt',
+  'streetEpistemology.benefits.selfDiscovery': 'Hilft Menschen, Probleme selbst zu entdecken',
+  'streetEpistemology.benefits.criticalThinking': 'Entwickelt kritische Denkfähigkeiten',
+  'streetEpistemology.benefits.lastingChange': 'Schafft dauerhafte Veränderung durch Selbstreflexion',
+  
+  'streetEpistemology.bestPractices': 'Beste Praktiken',
+  'streetEpistemology.practices.startEasy': 'Mit weniger emotional aufgeladenen Themen beginnen',
+  'streetEpistemology.practices.listenMore': 'Mehr zuhören als sprechen',
+  'streetEpistemology.practices.sayDontKnow': 'Bereit sein zu sagen "Ich weiß es nicht"',
+  'streetEpistemology.practices.focusEpistemology': 'Auf Epistemologie fokussieren, nicht auf Fakten',
+  'streetEpistemology.practices.practiceYourself': 'Zuerst an sich selbst üben',
+  
+  // Call to action
+  'streetEpistemology.readyToPractice': 'Bereit, Straßen-Epistemologie zu praktizieren?',
+  'streetEpistemology.readyToPracticeDesc': 'Beginnen Sie damit, zuerst Ihre eigenen Überzeugungen zu untersuchen. Welche Methoden haben Sie verwendet, um sie zu bilden? Wie sicher sind Sie? Welche Beweise würden Ihre Meinung ändern? Dann üben Sie diese sanften Fragetechniken mit Freunden und Familie.',
+  'streetEpistemology.practiceExamples': 'Mit Beispielen üben',
+  'streetEpistemology.learnSocratic': 'Sokratisches Fragen lernen',
 
   // Indoctrination - Full Section
   'indoctrination.title': 'Indoktrination',

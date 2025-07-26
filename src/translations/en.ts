@@ -963,6 +963,80 @@ export const en = {
   'solutions.introduction': 'Now that we understand the challenges to objective reality, let\'s explore the practical tools and methods we can use to overcome cognitive biases, think more clearly, and help others do the same.',
   'solutions.practicalTools': 'Practical Tools & Methods',
   'solutions.practicalToolsDescription': 'Evidence-based approaches to overcome cognitive limitations and think more clearly',
+  
+  // Street Epistemology
+  'streetEpistemology.title': 'Street Epistemology',
+  'streetEpistemology.subtitle': 'A conversational approach to helping people examine the reliability of their beliefs and thinking methods',
+  'streetEpistemology.aboutBoghossian': 'About Dr. Peter Boghossian',
+  'streetEpistemology.aboutBoghossianText': 'Street Epistemology was developed by Dr. Peter Boghossian, a philosopher and author who recognized that traditional debate and argument rarely change minds. Instead, he created a method based on Socratic questioning that helps people examine their own belief-forming processes in a non-threatening way.',
+  'streetEpistemology.corePrinciples': 'Core Principles of Street Epistemology',
+  'streetEpistemology.corePrinciplesDesc': 'These foundational principles guide effective Street Epistemology conversations.',
+  
+  // Principles
+  'streetEpistemology.principles.nonConfrontational': 'Non-confrontational',
+  'streetEpistemology.principles.nonConfrontationalDesc': 'The goal is not to "win" but to help people examine their beliefs',
+  'streetEpistemology.principles.genuineCuriosity': 'Genuine curiosity',
+  'streetEpistemology.principles.genuineCuriosityDesc': 'Ask questions from a place of authentic interest, not to trap',
+  'streetEpistemology.principles.focusOnMethod': 'Focus on method',
+  'streetEpistemology.principles.focusOnMethodDesc': 'Examine how someone came to believe something, not what they believe',
+  'streetEpistemology.principles.collaborativeInquiry': 'Collaborative inquiry',
+  'streetEpistemology.principles.collaborativeInquiryDesc': 'Work together to understand the reliability of belief-forming methods',
+  
+  // Questions
+  'streetEpistemology.essentialQuestions': 'Essential Street Epistemology Questions',
+  'streetEpistemology.essentialQuestionsDesc': 'These questions help people examine the reliability of their belief-forming processes',
+  'streetEpistemology.questions.howDidYouBelieve': 'How did you come to believe that?',
+  'streetEpistemology.questions.whatEvidenceChange': 'What evidence would change your mind?',
+  'streetEpistemology.questions.howConfident': 'How confident are you in this belief on a scale of 1-10?',
+  'streetEpistemology.questions.whatMethod': 'What method did you use to evaluate this information?',
+  'streetEpistemology.questions.wouldWantToKnow': 'If you discovered this belief was wrong, would you want to know?',
+  'streetEpistemology.questions.thinkingVsKnowing': 'What\'s the difference between thinking something is true and knowing it\'s true?',
+  
+  // Process
+  'streetEpistemology.seProcess': 'The Street Epistemology Process',
+  'streetEpistemology.process.establishRapport': 'Establish Rapport',
+  'streetEpistemology.process.establishRapportDesc': 'Build trust and create a safe conversational space',
+  'streetEpistemology.process.clarifyClaim': 'Clarify the Claim',
+  'streetEpistemology.process.clarifyClaimDesc': 'Understand exactly what the person believes',
+  'streetEpistemology.process.exploreMethod': 'Explore the Method',
+  'streetEpistemology.process.exploreMethodDesc': 'Ask how they came to believe this',
+  'streetEpistemology.process.examineReliability': 'Examine Reliability',
+  'streetEpistemology.process.examineReliabilityDesc': 'Help them evaluate their belief-forming process',
+  
+  // Mistakes and corrections
+  'streetEpistemology.commonMistakes': 'Common Mistakes to Avoid',
+  'streetEpistemology.dontLabel': '❌ Don\'t:',
+  'streetEpistemology.doLabel': '✅ Do:',
+  'streetEpistemology.mistakes.confrontational': 'Being confrontational or aggressive',
+  'streetEpistemology.corrections.stayCalm': 'Stay calm, patient, and genuinely curious',
+  'streetEpistemology.mistakes.changeImmediately': 'Trying to change someone\'s mind immediately',
+  'streetEpistemology.corrections.plantSeeds': 'Plant seeds of doubt; change takes time',
+  'streetEpistemology.mistakes.leadingQuestions': 'Asking leading questions',
+  'streetEpistemology.corrections.openEndedQuestions': 'Ask open-ended questions that encourage reflection',
+  'streetEpistemology.mistakes.emotionallyInvested': 'Getting emotionally invested in the outcome',
+  'streetEpistemology.corrections.focusOnProcess': 'Focus on the process, not the result',
+  
+  // Benefits and practices
+  'streetEpistemology.whyItWorks': 'Why Street Epistemology Works',
+  'streetEpistemology.benefits.nonThreatening': 'Non-threatening approach preserves relationships',
+  'streetEpistemology.benefits.focusOnProcess': 'Focuses on process, not content',
+  'streetEpistemology.benefits.selfDiscovery': 'Helps people discover issues themselves',
+  'streetEpistemology.benefits.criticalThinking': 'Develops critical thinking skills',
+  'streetEpistemology.benefits.lastingChange': 'Creates lasting change through self-reflection',
+  
+  'streetEpistemology.bestPractices': 'Best Practices',
+  'streetEpistemology.practices.startEasy': 'Start with less emotionally charged topics',
+  'streetEpistemology.practices.listenMore': 'Listen more than you speak',
+  'streetEpistemology.practices.sayDontKnow': 'Be prepared to say "I don\'t know"',
+  'streetEpistemology.practices.focusEpistemology': 'Focus on epistemology, not facts',
+  'streetEpistemology.practices.practiceYourself': 'Practice on yourself first',
+  
+  // Call to action
+  'streetEpistemology.readyToPractice': 'Ready to Practice Street Epistemology?',
+  'streetEpistemology.readyToPracticeDesc': 'Start by examining your own beliefs first. What methods did you use to form them? How confident are you? What evidence would change your mind? Then practice these gentle questioning techniques with friends and family.',
+  'streetEpistemology.practiceExamples': 'Practice with Examples',
+  'streetEpistemology.learnSocratic': 'Learn Socratic Questioning',
+  
   'solutions.streetEpistemology.title': 'Street Epistemology',
   'solutions.streetEpistemology.description': 'A gentle method of questioning that helps people examine the reliability of their beliefs without confrontation.',
   'solutions.socraticQuestioning.title': 'Socratic Questioning',

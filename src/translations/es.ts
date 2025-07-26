@@ -141,6 +141,79 @@ export const es = {
   'solutions.practicalTools': 'Herramientas y Métodos Prácticos',
   'solutions.practicalToolsDescription': 'Enfoques basados en evidencia para superar limitaciones cognitivas y pensar más claramente',
   
+  // Street Epistemology
+  'streetEpistemology.title': 'Epistemología Callejera',
+  'streetEpistemology.subtitle': 'Un enfoque conversacional para ayudar a las personas a examinar la confiabilidad de sus creencias y métodos de pensamiento',
+  'streetEpistemology.aboutBoghossian': 'Sobre Dr. Peter Boghossian',
+  'streetEpistemology.aboutBoghossianText': 'La Epistemología Callejera fue desarrollada por el Dr. Peter Boghossian, un filósofo y autor que reconoció que el debate y el argumento tradicionales rara vez cambian las mentes. En su lugar, creó un método basado en el cuestionamiento socrático que ayuda a las personas a examinar sus propios procesos de formación de creencias de manera no amenazante.',
+  'streetEpistemology.corePrinciples': 'Principios Fundamentales de la Epistemología Callejera',
+  'streetEpistemology.corePrinciplesDesc': 'Estos principios fundamentales guían las conversaciones efectivas de Epistemología Callejera.',
+  
+  // Principles
+  'streetEpistemology.principles.nonConfrontational': 'No confrontacional',
+  'streetEpistemology.principles.nonConfrontationalDesc': 'El objetivo no es "ganar" sino ayudar a las personas a examinar sus creencias',
+  'streetEpistemology.principles.genuineCuriosity': 'Curiosidad genuina',
+  'streetEpistemology.principles.genuineCuriosityDesc': 'Hacer preguntas desde un lugar de interés auténtico, no para atrapar',
+  'streetEpistemology.principles.focusOnMethod': 'Enfoque en el método',
+  'streetEpistemology.principles.focusOnMethodDesc': 'Examinar cómo alguien llegó a creer algo, no lo que creen',
+  'streetEpistemology.principles.collaborativeInquiry': 'Investigación colaborativa',
+  'streetEpistemology.principles.collaborativeInquiryDesc': 'Trabajar juntos para entender la confiabilidad de los métodos de formación de creencias',
+  
+  // Questions
+  'streetEpistemology.essentialQuestions': 'Preguntas Esenciales de Epistemología Callejera',
+  'streetEpistemology.essentialQuestionsDesc': 'Estas preguntas ayudan a las personas a examinar la confiabilidad de sus procesos de formación de creencias',
+  'streetEpistemology.questions.howDidYouBelieve': '¿Cómo llegaste a creer eso?',
+  'streetEpistemology.questions.whatEvidenceChange': '¿Qué evidencia cambiaría tu mente?',
+  'streetEpistemology.questions.howConfident': '¿Qué tan seguro estás en esta creencia en una escala del 1 al 10?',
+  'streetEpistemology.questions.whatMethod': '¿Qué método usaste para evaluar esta información?',
+  'streetEpistemology.questions.wouldWantToKnow': 'Si descubrieras que esta creencia era incorrecta, ¿querrías saberlo?',
+  'streetEpistemology.questions.thinkingVsKnowing': '¿Cuál es la diferencia entre pensar que algo es verdad y saber que es verdad?',
+  
+  // Process
+  'streetEpistemology.seProcess': 'El Proceso de Epistemología Callejera',
+  'streetEpistemology.process.establishRapport': 'Establecer Rapport',
+  'streetEpistemology.process.establishRapportDesc': 'Construir confianza y crear un espacio conversacional seguro',
+  'streetEpistemology.process.clarifyClaim': 'Clarificar la Afirmación',
+  'streetEpistemology.process.clarifyClaimDesc': 'Entender exactamente lo que la persona cree',
+  'streetEpistemology.process.exploreMethod': 'Explorar el Método',
+  'streetEpistemology.process.exploreMethodDesc': 'Preguntar cómo llegaron a creer esto',
+  'streetEpistemology.process.examineReliability': 'Examinar la Confiabilidad',
+  'streetEpistemology.process.examineReliabilityDesc': 'Ayudarlos a evaluar su proceso de formación de creencias',
+  
+  // Mistakes and corrections
+  'streetEpistemology.commonMistakes': 'Errores Comunes a Evitar',
+  'streetEpistemology.dontLabel': '❌ No:',
+  'streetEpistemology.doLabel': '✅ Sí:',
+  'streetEpistemology.mistakes.confrontational': 'Ser confrontacional o agresivo',
+  'streetEpistemology.corrections.stayCalm': 'Mantente calmado, paciente y genuinamente curioso',
+  'streetEpistemology.mistakes.changeImmediately': 'Tratar de cambiar la mente de alguien inmediatamente',
+  'streetEpistemology.corrections.plantSeeds': 'Plantar semillas de duda; el cambio toma tiempo',
+  'streetEpistemology.mistakes.leadingQuestions': 'Hacer preguntas dirigidas',
+  'streetEpistemology.corrections.openEndedQuestions': 'Hacer preguntas abiertas que fomenten la reflexión',
+  'streetEpistemology.mistakes.emotionallyInvested': 'Invertirse emocionalmente en el resultado',
+  'streetEpistemology.corrections.focusOnProcess': 'Enfocarse en el proceso, no en el resultado',
+  
+  // Benefits and practices
+  'streetEpistemology.whyItWorks': 'Por Qué Funciona la Epistemología Callejera',
+  'streetEpistemology.benefits.nonThreatening': 'El enfoque no amenazante preserva las relaciones',
+  'streetEpistemology.benefits.focusOnProcess': 'Se enfoca en el proceso, no en el contenido',
+  'streetEpistemology.benefits.selfDiscovery': 'Ayuda a las personas a descubrir problemas por sí mismas',
+  'streetEpistemology.benefits.criticalThinking': 'Desarrolla habilidades de pensamiento crítico',
+  'streetEpistemology.benefits.lastingChange': 'Crea cambio duradero a través de la autorreflexión',
+  
+  'streetEpistemology.bestPractices': 'Mejores Prácticas',
+  'streetEpistemology.practices.startEasy': 'Comenzar con temas menos cargados emocionalmente',
+  'streetEpistemology.practices.listenMore': 'Escuchar más de lo que hablas',
+  'streetEpistemology.practices.sayDontKnow': 'Estar preparado para decir "No lo sé"',
+  'streetEpistemology.practices.focusEpistemology': 'Enfocarse en la epistemología, no en los hechos',
+  'streetEpistemology.practices.practiceYourself': 'Practicar primero contigo mismo',
+  
+  // Call to action
+  'streetEpistemology.readyToPractice': '¿Listo para Practicar Epistemología Callejera?',
+  'streetEpistemology.readyToPracticeDesc': 'Comienza examinando tus propias creencias primero. ¿Qué métodos usaste para formarlas? ¿Qué tan seguro estás? ¿Qué evidencia cambiaría tu mente? Luego practica estas técnicas de cuestionamiento gentil con amigos y familia.',
+  'streetEpistemology.practiceExamples': 'Practicar con Ejemplos',
+  'streetEpistemology.learnSocratic': 'Aprender Cuestionamiento Socrático',
+
   'learn_more': 'Aprende más',
 
   // Indoctrination - Full Section
