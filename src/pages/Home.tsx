@@ -257,18 +257,16 @@ export default function Home() {
           <Card className="glass-card">
             <CardContent className="text-center py-6">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <p className="text-sm text-muted-foreground">
-                  «Made with tons of ❤️ by{' '}
+                <Button asChild variant="outline" size="sm">
                   <a 
                     href="https://lovable.dev" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 transition-colors underline hover:underline-offset-4"
+                    className="text-sm"
                   >
-                    Lovable.dev
+                    «Made with tons of ❤️ by Lovable.dev»
                   </a>
-                  »
-                </p>
+                </Button>
                 <Button asChild variant="outline" size="sm">
                   <a href="mailto:contact@Objective-Reality.info">
                     Contact David Heggli
