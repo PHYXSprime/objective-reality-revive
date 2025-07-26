@@ -184,6 +184,7 @@ export const en = {
   'solution.scientificMethod.title': 'Scientific Method',
   'solution.criticalThinking.title': 'Critical Thinking',
   'solution.comedians.title': 'Comedians',
+  'solution.stefanMolyneux.title': 'Stefan Molyneux',
   
   // Navigation
   'solutions.allSolutions': 'All Solutions',
@@ -1439,6 +1440,9 @@ export const en = {
   'solutions.priority.essential': 'Essential',
   'solutions.priority.core': 'Core',
   'solutions.priority.cultural': 'Cultural',
+  'solutions.priority.influential': 'Influential',
+  'solutions.stefanMolyneux.title': 'Stefan Molyneux',
+  'solutions.stefanMolyneux.description': 'Philosopher advocating for reason, evidence, and ethical frameworks for human behavior.',
   'solutions.personalActionPlan': 'Personal Action Plan',
   'solutions.personalActionDescription': 'Practical steps you can take today to improve your thinking and help others',
   'solutions.dailyPractices': 'Daily Practices',
@@ -1581,4 +1585,62 @@ export const en = {
   'coEvolution.labels.impact': 'Impact:',
   'coEvolution.labels.examples': 'Examples:',
   'coEvolution.labels.practice': 'Practice:',
+
+  // Stefan Molyneux
+  'stefanMolyneux.title': 'Stefan Molyneux',
+  'stefanMolyneux.subtitle': 'Philosophy, Ethics, and Rational Thinking',
+  'stefanMolyneux.introduction': 'Stefan Molyneux is a philosopher, author, and advocate for reason-based ethics. His work focuses on creating secular, logical frameworks for moral behavior, particularly through his groundbreaking work "Universally Preferable Behaviour" (UPB).',
+
+  // UPB Section
+  'stefanMolyneux.upb.title': 'Universally Preferable Behaviour (UPB)',
+  'stefanMolyneux.upb.description': 'A rational, secular framework for ethics and morality',
+  'stefanMolyneux.upb.core': 'The Core of UPB',
+  'stefanMolyneux.upb.coreText': 'UPB provides a logical method for evaluating moral propositions without relying on religious or cultural authorities. It establishes that valid ethical rules must be universal, preferable, and behaviorally applicable to all rational beings.',
+  'stefanMolyneux.upb.principle1.title': 'Universality',
+  'stefanMolyneux.upb.principle1.description': 'Moral rules must apply equally to all rational beings, regardless of time, place, or circumstance.',
+  'stefanMolyneux.upb.principle2.title': 'Logical Consistency',
+  'stefanMolyneux.upb.principle2.description': 'Ethical propositions must not contradict themselves or create logical impossibilities.',
+  'stefanMolyneux.upb.principle3.title': 'Empirical Enforceability',
+  'stefanMolyneux.upb.principle3.description': 'Valid moral rules must be practically enforceable and not require impossible actions.',
+  'stefanMolyneux.upb.downloadPdf': 'Download UPB PDF',
+
+  // Video Section
+  'stefanMolyneux.video.title': 'Featured Content',
+  'stefanMolyneux.video.description': 'Essential videos that showcase philosophical insights',
+  'stefanMolyneux.video.enslavementTitle': 'The Story of Your Enslavement',
+  'stefanMolyneux.video.enslavementDescription': 'A powerful analysis of how modern economic and political systems operate, revealing hidden mechanisms of control and encouraging critical thinking about authority and freedom.',
+  'stefanMolyneux.video.watchOnOdysee': 'Watch on Odysee',
+
+  // Philosophy Section
+  'stefanMolyneux.philosophy.title': 'Core Philosophy',
+  'stefanMolyneux.philosophy.description': 'Foundational principles for rational, evidence-based thinking',
+  'stefanMolyneux.philosophy.rational.title': 'Rational Argumentation',
+  'stefanMolyneux.philosophy.rational.description': 'Using logic and reason as the primary tools for understanding truth and making decisions.',
+  'stefanMolyneux.philosophy.evidence.title': 'Evidence-Based Beliefs',
+  'stefanMolyneux.philosophy.evidence.description': 'Forming beliefs based on empirical evidence rather than tradition, authority, or emotion.',
+  'stefanMolyneux.philosophy.peaceful.title': 'Peaceful Resolution',
+  'stefanMolyneux.philosophy.peaceful.description': 'Advocating for non-violent solutions and voluntary interactions in human relationships.',
+
+  // Key Ideas
+  'stefanMolyneux.keyIdeas.title': 'Key Ideas & Contributions',
+  'stefanMolyneux.keyIdeas.anarchCapitalism': 'Anarcho-Capitalism',
+  'stefanMolyneux.keyIdeas.anarchCapitalismText': 'Advocacy for voluntary, market-based solutions to social organization without coercive government intervention.',
+  'stefanMolyneux.keyIdeas.nonAggression': 'Non-Aggression Principle',
+  'stefanMolyneux.keyIdeas.nonAggressionText': 'The fundamental principle that initiating force against others is immoral and that all interactions should be voluntary.',
+  'stefanMolyneux.keyIdeas.reasonEvidence': 'Reason and Evidence',
+  'stefanMolyneux.keyIdeas.reasonEvidenceText': 'Emphasis on using logical reasoning and empirical evidence as the basis for all beliefs and moral judgments.',
+  'stefanMolyneux.keyIdeas.peacefulParenting': 'Peaceful Parenting',
+  'stefanMolyneux.keyIdeas.peacefulParentingText': 'Advocating for non-violent, rational approaches to child-rearing based on reason rather than coercion.',
+
+  // Resources
+  'stefanMolyneux.resources.title': 'Essential Resources',
+  'stefanMolyneux.resources.description': 'Start your journey with these foundational materials',
+  'stefanMolyneux.resources.upbBook': 'Read UPB Book',
+  'stefanMolyneux.resources.enslavementVideo': 'Watch "The Story of Your Enslavement"',
+
+  // Apply Section
+  'stefanMolyneux.apply.title': 'Apply These Ideas',
+  'stefanMolyneux.apply.description': 'Take the next step in developing rational thinking skills',
+  'stefanMolyneux.apply.criticalThinking': 'Develop Critical Thinking',
+  'stefanMolyneux.apply.socraticMethod': 'Learn Socratic Method',
 } as const;

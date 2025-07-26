@@ -13,6 +13,7 @@ import StreetEpistemology from "./pages/StreetEpistemology";
 import SocraticQuestioning from "./pages/SocraticQuestioning";
 import ScientificMethod from "./pages/ScientificMethod";
 import Comedians from "./pages/Comedians";
+import StefanMolyneux from "./pages/StefanMolyneux";
 import CognitiveBiases from "./pages/CognitiveBiases";
 import LogicalFallacies from "./pages/LogicalFallacies";
 import Consciousness from "./pages/Consciousness";
@@ -52,6 +53,7 @@ const App = () => (
               <Route path="/socratic-questioning" element={<SocraticQuestioning />} />
               <Route path="/scientific-method" element={<ScientificMethod />} />
               <Route path="/comedians" element={<Comedians />} />
+              <Route path="/stefan-molyneux" element={<StefanMolyneux />} />
               <Route path="/cognitive-biases" element={<CognitiveBiases />} />
               <Route path="/logical-fallacies" element={<LogicalFallacies />} />
               <Route path="/consciousness" element={<Consciousness />} />

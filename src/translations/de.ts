@@ -348,6 +348,7 @@ export const de = {
   'solution.scientificMethod.title': 'Wissenschaftliche Methode',
   'solution.criticalThinking.title': 'Kritisches Denken',
   'solution.comedians.title': 'Komiker',
+  'solution.stefanMolyneux.title': 'Stefan Molyneux',
   
   // Navigation
   'solutions.allSolutions': 'Alle Lösungen',
@@ -370,6 +371,9 @@ export const de = {
   'solutions.priority.essential': 'Essentiell',
   'solutions.priority.core': 'Kern',
   'solutions.priority.cultural': 'Kulturell',
+  'solutions.priority.influential': 'Einflussreich',
+  'solutions.stefanMolyneux.title': 'Stefan Molyneux',
+  'solutions.stefanMolyneux.description': 'Philosoph, der für Vernunft, Beweise und ethische Rahmen für menschliches Verhalten eintritt.',
   'solutions.personalActionPlan': 'Persönlicher Aktionsplan',
   'solutions.personalActionDescription': 'Praktische Schritte, die Sie heute unternehmen können, um Ihr Denken zu verbessern und anderen zu helfen',
   'solutions.dailyPractices': 'Tägliche Praktiken',
@@ -1538,4 +1542,62 @@ export const de = {
   'ego.pathBeyondText': 'Den Einfluss des Egos zu reduzieren bedeutet nicht Selbstgeißelung oder falsche Bescheidenheit. Es geht darum, echtes Selbstvertrauen zu entwickeln, das nicht davon abhängt, recht zu haben, überlegen oder perfekt zu sein. Wenn uns Wahrheit mehr als unser Image, Verstehen mehr als Gewinnen wichtig ist, werden wir sowohl effektiver als auch echter mit der Realität und anderen verbunden.',
   'ego.ultimateGoal': 'Das ultimative Ziel:',
   'ego.ultimateGoalText': 'Die Art von Person zu werden, die starke Überzeugungen locker halten, ihre Meinung elegant ändern, Unwissen bequem zugeben und mutig nach Wahrheit suchen kann - unabhängig davon, wohin sie führt oder wie sie das eigene Image beeinflusst.',
+
+  // Stefan Molyneux
+  'stefanMolyneux.title': 'Stefan Molyneux',
+  'stefanMolyneux.subtitle': 'Philosophie, Ethik und rationales Denken',
+  'stefanMolyneux.introduction': 'Stefan Molyneux ist ein Philosoph, Autor und Verfechter vernunftbasierter Ethik. Seine Arbeit konzentriert sich darauf, säkulare, logische Rahmen für moralisches Verhalten zu schaffen, insbesondere durch sein bahnbrechendes Werk "Universally Preferable Behaviour" (UPB).',
+
+  // UPB Section
+  'stefanMolyneux.upb.title': 'Universally Preferable Behaviour (UPB)',
+  'stefanMolyneux.upb.description': 'Ein rationaler, säkularer Rahmen für Ethik und Moral',
+  'stefanMolyneux.upb.core': 'Der Kern von UPB',
+  'stefanMolyneux.upb.coreText': 'UPB bietet eine logische Methode zur Bewertung moralischer Aussagen, ohne auf religiöse oder kulturelle Autoritäten angewiesen zu sein. Es stellt fest, dass gültige ethische Regeln universal, vorzugswürdig und verhaltensmäßig auf alle rationalen Wesen anwendbar sein müssen.',
+  'stefanMolyneux.upb.principle1.title': 'Universalität',
+  'stefanMolyneux.upb.principle1.description': 'Moralische Regeln müssen gleichermaßen für alle rationalen Wesen gelten, unabhängig von Zeit, Ort oder Umständen.',
+  'stefanMolyneux.upb.principle2.title': 'Logische Konsistenz',
+  'stefanMolyneux.upb.principle2.description': 'Ethische Aussagen dürfen sich nicht selbst widersprechen oder logische Unmöglichkeiten schaffen.',
+  'stefanMolyneux.upb.principle3.title': 'Empirische Durchsetzbarkeit',
+  'stefanMolyneux.upb.principle3.description': 'Gültige moralische Regeln müssen praktisch durchsetzbar sein und keine unmöglichen Handlungen erfordern.',
+  'stefanMolyneux.upb.downloadPdf': 'UPB PDF herunterladen',
+
+  // Video Section
+  'stefanMolyneux.video.title': 'Ausgewählte Inhalte',
+  'stefanMolyneux.video.description': 'Wesentliche Videos, die philosophische Einsichten zeigen',
+  'stefanMolyneux.video.enslavementTitle': 'Die Geschichte Ihrer Versklavung',
+  'stefanMolyneux.video.enslavementDescription': 'Eine kraftvolle Analyse, wie moderne wirtschaftliche und politische Systeme funktionieren, die verborgene Kontrollmechanismen aufdeckt und kritisches Denken über Autorität und Freiheit fördert.',
+  'stefanMolyneux.video.watchOnOdysee': 'Auf Odysee ansehen',
+
+  // Philosophy Section
+  'stefanMolyneux.philosophy.title': 'Kernphilosophie',
+  'stefanMolyneux.philosophy.description': 'Grundprinzipien für rationales, evidenzbasiertes Denken',
+  'stefanMolyneux.philosophy.rational.title': 'Rationale Argumentation',
+  'stefanMolyneux.philosophy.rational.description': 'Logik und Vernunft als primäre Werkzeuge zum Verständnis der Wahrheit und zur Entscheidungsfindung nutzen.',
+  'stefanMolyneux.philosophy.evidence.title': 'Evidenzbasierte Überzeugungen',
+  'stefanMolyneux.philosophy.evidence.description': 'Überzeugungen auf empirische Beweise stützen, anstatt auf Tradition, Autorität oder Emotion.',
+  'stefanMolyneux.philosophy.peaceful.title': 'Friedliche Lösung',
+  'stefanMolyneux.philosophy.peaceful.description': 'Eintreten für gewaltfreie Lösungen und freiwillige Interaktionen in menschlichen Beziehungen.',
+
+  // Key Ideas
+  'stefanMolyneux.keyIdeas.title': 'Schlüsselideen & Beiträge',
+  'stefanMolyneux.keyIdeas.anarchCapitalism': 'Anarcho-Kapitalismus',
+  'stefanMolyneux.keyIdeas.anarchCapitalismText': 'Befürwortung freiwilliger, marktbasierter Lösungen für gesellschaftliche Organisation ohne zwanghafte staatliche Eingriffe.',
+  'stefanMolyneux.keyIdeas.nonAggression': 'Nicht-Aggressions-Prinzip',
+  'stefanMolyneux.keyIdeas.nonAggressionText': 'Das grundlegende Prinzip, dass die Initiierung von Gewalt gegen andere unmoralisch ist und alle Interaktionen freiwillig sein sollten.',
+  'stefanMolyneux.keyIdeas.reasonEvidence': 'Vernunft und Beweise',
+  'stefanMolyneux.keyIdeas.reasonEvidenceText': 'Betonung der Verwendung logischen Denkens und empirischer Beweise als Grundlage für alle Überzeugungen und moralischen Urteile.',
+  'stefanMolyneux.keyIdeas.peacefulParenting': 'Friedliche Erziehung',
+  'stefanMolyneux.keyIdeas.peacefulParentingText': 'Befürwortung gewaltfreier, rationaler Ansätze zur Kindererziehung basierend auf Vernunft statt Zwang.',
+
+  // Resources
+  'stefanMolyneux.resources.title': 'Wesentliche Ressourcen',
+  'stefanMolyneux.resources.description': 'Beginnen Sie Ihre Reise mit diesen grundlegenden Materialien',
+  'stefanMolyneux.resources.upbBook': 'UPB Buch lesen',
+  'stefanMolyneux.resources.enslavementVideo': '"Die Geschichte Ihrer Versklavung" ansehen',
+
+  // Apply Section
+  'stefanMolyneux.apply.title': 'Diese Ideen anwenden',
+  'stefanMolyneux.apply.description': 'Machen Sie den nächsten Schritt bei der Entwicklung rationaler Denkfähigkeiten',
+  'stefanMolyneux.apply.criticalThinking': 'Kritisches Denken entwickeln',
+  'stefanMolyneux.apply.socraticMethod': 'Sokratische Methode lernen',
 } as const;

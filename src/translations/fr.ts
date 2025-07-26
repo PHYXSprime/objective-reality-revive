@@ -164,6 +164,7 @@ export const fr = {
   'solution.scientificMethod.title': 'Méthode Scientifique',
   'solution.criticalThinking.title': 'Pensée Critique',
   'solution.comedians.title': 'Comédiens',
+  'solution.stefanMolyneux.title': 'Stefan Molyneux',
 
   // Critical Thinking
   'criticalThinking.title': 'Pensée Critique',
@@ -282,6 +283,9 @@ export const fr = {
   'solutions.priority.essential': 'Essentiel',
   'solutions.priority.core': 'Central',
   'solutions.priority.cultural': 'Culturel',
+  'solutions.priority.influential': 'Influent',
+  'solutions.stefanMolyneux.title': 'Stefan Molyneux',
+  'solutions.stefanMolyneux.description': 'Philosophe prônant la raison, les preuves et les cadres éthiques pour le comportement humain.',
   'solutions.personalActionPlan': 'Plan d\'Action Personnel',
   'solutions.personalActionDescription': 'Étapes pratiques que vous pouvez prendre aujourd\'hui pour améliorer votre pensée et aider les autres',
   'solutions.dailyPractices': 'Pratiques Quotidiennes',

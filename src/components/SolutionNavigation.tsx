@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
-import { MessageSquare, HelpCircle, Microscope, Lightbulb, Smile, ChevronRight, ChevronLeft } from 'lucide-react';
+import { MessageSquare, HelpCircle, Microscope, Lightbulb, Smile, User, ChevronRight, ChevronLeft } from 'lucide-react';
 import { cn } from '@/lib/utils';
 import { useLanguage } from '@/hooks/useLanguage';
 
@@ -34,6 +34,12 @@ const solutions = [
     titleKey: "solution.comedians.title",
     path: "/comedians",
     color: "text-pink-600 dark:text-pink-400"
+  },
+  {
+    icon: User,
+    titleKey: "solution.stefanMolyneux.title",
+    path: "/stefan-molyneux",
+    color: "text-emerald-600 dark:text-emerald-400"
   }
 ];
 

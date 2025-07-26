@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom';
-import { MessageSquare, HelpCircle, Microscope, Lightbulb, Smile, Users, Target, ArrowRight } from 'lucide-react';
+import { MessageSquare, HelpCircle, Microscope, Lightbulb, Smile, User, Users, Target, ArrowRight } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
@@ -47,6 +47,14 @@ export default function Solutions() {
       link: "/comedians",
       color: "text-pink-600 dark:text-pink-400",
       priority: t('solutions.priority.cultural')
+    },
+    {
+      icon: User,
+      title: t('solutions.stefanMolyneux.title'),
+      description: t('solutions.stefanMolyneux.description'),
+      link: "/stefan-molyneux",
+      color: "text-emerald-600 dark:text-emerald-400",
+      priority: t('solutions.priority.influential')
     }
   ];
 
