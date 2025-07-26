@@ -6,6 +6,7 @@ import { ConsciousnessTable } from '@/components/ConsciousnessTable';
 import { PHYXSTable } from '@/components/PHYXSTable';
 import { useAQALMapData } from '@/hooks/useAQALMapData';
 import { usePHYXSMapData } from '@/hooks/usePHYXSMapData';
+import linesOfDevelopmentImage from '@/assets/lines-of-development-diagram.jpg';
 
 export default function Consciousness() {
   const { t } = useLanguage();
@@ -153,6 +154,119 @@ export default function Consciousness() {
           />
         </div>
 
+        {/* Lines of Development */}
+        <Card className="mb-12 border-primary/20 glass-card">
+          <CardHeader>
+            <div className="flex items-center gap-3">
+              <Brain className="h-6 w-6 text-primary" />
+              <CardTitle className="text-2xl">Lines of Development</CardTitle>
+            </div>
+            <CardDescription className="text-lg">
+              Understanding Multiple Intelligences in Human Development
+            </CardDescription>
+          </CardHeader>
+          <CardContent className="space-y-6">
+            <div className="grid md:grid-cols-2 gap-8 items-start">
+              <div className="space-y-4">
+                <img 
+                  src={linesOfDevelopmentImage} 
+                  alt="Lines of Development Diagram" 
+                  className="w-full h-auto rounded-lg shadow-lg"
+                />
+              </div>
+              <div className="space-y-4">
+                <div className="prose dark:prose-invert max-w-none">
+                  <p className="text-muted-foreground leading-relaxed">
+                    We can think of these lines of development as multiple intelligences that have evolved in response to life's core questions:
+                  </p>
+                  
+                  <div className="space-y-3 mt-4">
+                    <div className="flex gap-3">
+                      <span className="text-primary font-medium">•</span>
+                      <div>
+                        <span className="font-medium">What am I aware of?</span>
+                        <span className="text-muted-foreground ml-1">(Determined by the cognitive line of development.)</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-3">
+                      <span className="text-primary font-medium">•</span>
+                      <div>
+                        <span className="font-medium">What do I need?</span>
+                        <span className="text-muted-foreground ml-1">(The needs line.)</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-3">
+                      <span className="text-primary font-medium">•</span>
+                      <div>
+                        <span className="font-medium">Who am I?</span>
+                        <span className="text-muted-foreground ml-1">(Self-identity.)</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-3">
+                      <span className="text-primary font-medium">•</span>
+                      <div>
+                        <span className="font-medium">What is important to me?</span>
+                        <span className="text-muted-foreground ml-1">(Values.)</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-3">
+                      <span className="text-primary font-medium">•</span>
+                      <div>
+                        <span className="font-medium">How do I feel about this?</span>
+                        <span className="text-muted-foreground ml-1">(Emotional intelligence.)</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-3">
+                      <span className="text-primary font-medium">•</span>
+                      <div>
+                        <span className="font-medium">What is the right thing to do?</span>
+                        <span className="text-muted-foreground ml-1">(Morals.)</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-3">
+                      <span className="text-primary font-medium">•</span>
+                      <div>
+                        <span className="font-medium">How should we interact?</span>
+                        <span className="text-muted-foreground ml-1">(Interpersonal.)</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-3">
+                      <span className="text-primary font-medium">•</span>
+                      <div>
+                        <span className="font-medium">How should I physically do this?</span>
+                        <span className="text-muted-foreground ml-1">(Kinesthetic.)</span>
+                      </div>
+                    </div>
+                    
+                    <div className="flex gap-3">
+                      <span className="text-primary font-medium">•</span>
+                      <div>
+                        <span className="font-medium">What is of ultimate concern to me?</span>
+                        <span className="text-muted-foreground ml-1">(Spirituality.)</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div className="flex justify-center pt-4">
+              <Button variant="outline" className="flex items-center gap-2" asChild>
+                <a href="https://integrallife.com/what-is-integral-approach/" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="h-4 w-4" />
+                  Learn More About Integral Approach
+                </a>
+              </Button>
+            </div>
+          </CardContent>
+        </Card>
 
         {/* Part 2: The Next Leap */}
         <Card className="mt-12 glass-card">
