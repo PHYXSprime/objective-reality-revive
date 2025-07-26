@@ -325,6 +325,107 @@ export const es = {
   'socraticQuestioning.example.implications': 'Implicaciones',
   'socraticQuestioning.example.implicationsText': '"Si esto es verdad, ¿qué significa para cómo deberíamos vivir? ¿No deberíamos perseguir el éxito financiero en absoluto?"',
   
+  // Scientific Method
+  'scientificMethod.title': 'El Método Científico',
+  'scientificMethod.subtitle': 'Un método empírico de adquirir conocimiento que ha caracterizado el desarrollo de la ciencia desde al menos el siglo XVII. Involucra observación cuidadosa y escepticismo riguroso sobre lo que se observa.',
+  'scientificMethod.scienceVsDogma': 'Ciencia vs. Dogma',
+  'scientificMethod.scienceVsDogmaText': 'A diferencia de las religiones u otras creencias dogmáticas que reclaman autoridad definitiva que no puede ser cuestionada, la ciencia vive de la expectativa de que nunca se ha obtenido la respuesta completa, está parcial o completamente equivocada – y siempre está lista para cambiar de opinión ante la presentación de mejores hechos, evidencia y argumentos.',
+  'scientificMethod.dogmaticApproach': 'Enfoque Dogmático',
+  'scientificMethod.scientificApproach': 'Enfoque Científico',
+  'scientificMethod.processTitle': 'El Proceso del Método Científico',
+  'scientificMethod.corePrinciples': 'Principios Fundamentales',
+  'scientificMethod.commonMisunderstandings': 'Malentendidos Comunes',
+  'scientificMethod.myth': 'Mito',
+  'scientificMethod.reality': 'Realidad',
+  'scientificMethod.applyingToBeliefs': 'Aplicando el Pensamiento Científico a las Creencias Personales',
+  'scientificMethod.questionsToAsk': 'Preguntas para Hacerte',
+  'scientificMethod.redFlags': 'Señales de Alerta a Observar',
+  'scientificMethod.understandingLimitations': 'Entendiendo las Limitaciones',
+  'scientificMethod.limitationsIntro': 'El método científico es poderoso pero no perfecto. Tiene limitaciones y puede ser mal utilizado:',
+  'scientificMethod.inherentLimitations': 'Limitaciones Inherentes',
+  'scientificMethod.potentialMisuse': 'Potencial para Mal Uso',
+  'scientificMethod.embraceScientificThinking': 'Abraza el Pensamiento Científico',
+  'scientificMethod.embraceScientificThinkingDesc': 'Aplica principios científicos a tu vida diaria: basa las creencias en evidencia, mantente abierto a nueva información, cuestiona las suposiciones y siempre esté listo para actualizar tu comprensión cuando se presente mejor evidencia. Este es el camino hacia creencias más precisas y mejores decisiones.',
+  
+  // Steps
+  'scientificMethod.steps.observation': 'Observación',
+  'scientificMethod.steps.observationDesc': 'Observación cuidadosa y sistemática de fenómenos con escepticismo riguroso sobre las suposiciones cognitivas',
+  'scientificMethod.steps.questionFormation': 'Formulación de Preguntas',
+  'scientificMethod.steps.questionFormationDesc': 'Formular preguntas específicas y verificables basadas en observaciones',
+  'scientificMethod.steps.hypothesis': 'Hipótesis',
+  'scientificMethod.steps.hypothesisDesc': 'Crear explicaciones verificables mediante inducción basada en observaciones',
+  'scientificMethod.steps.prediction': 'Predicción',
+  'scientificMethod.steps.predictionDesc': 'Hacer predicciones específicas que puedan ser probadas experimentalmente',
+  'scientificMethod.steps.experimentation': 'Experimentación',
+  'scientificMethod.steps.experimentationDesc': 'Probar deducciones extraídas de hipótesis a través de experimentos controlados',
+  'scientificMethod.steps.analysis': 'Análisis',
+  'scientificMethod.steps.analysisDesc': 'Analizar datos objetivamente, buscando patrones y significancia estadística',
+  'scientificMethod.steps.conclusion': 'Conclusión',
+  'scientificMethod.steps.conclusionDesc': 'Refinar, modificar o eliminar hipótesis basándose en hallazgos experimentales',
+  'scientificMethod.steps.replication': 'Replicación',
+  'scientificMethod.steps.replicationDesc': 'Verificación independiente de resultados por otros investigadores',
+  
+  // Principles
+  'scientificMethod.principles.empiricalEvidence': 'Evidencia Empírica',
+  'scientificMethod.principles.empiricalEvidenceDesc': 'El conocimiento viene de observación directa y experimentación, no de autoridad o tradición',
+  'scientificMethod.principles.falsifiability': 'Falsabilidad',
+  'scientificMethod.principles.falsifiabilityDesc': 'Las afirmaciones científicas deben ser verificables y potencialmente refutables',
+  'scientificMethod.principles.reproducibility': 'Reproducibilidad',
+  'scientificMethod.principles.reproducibilityDesc': 'Los resultados deben ser replicables por investigadores independientes bajo condiciones similares',
+  'scientificMethod.principles.peerReview': 'Revisión por Pares',
+  'scientificMethod.principles.peerReviewDesc': 'Las afirmaciones son examinadas por otros expertos antes de ser aceptadas',
+  'scientificMethod.principles.provisionalConclusions': 'Conclusiones Provisionales',
+  'scientificMethod.principles.provisionalConclusionsDesc': 'Todo conocimiento científico es tentativo y sujeto a revisión con nueva evidencia',
+  'scientificMethod.principles.controlledVariables': 'Variables Controladas',
+  'scientificMethod.principles.controlledVariablesDesc': 'Aislar factores para establecer relaciones claras de causa y efecto',
+  
+  // Dogmatic vs Scientific
+  'scientificMethod.dogmatic.absoluteTruth': 'Reclama verdad absoluta',
+  'scientificMethod.dogmatic.discourageQuestioning': 'Desalienta el cuestionamiento',
+  'scientificMethod.dogmatic.reliesOnAuthority': 'Se basa en autoridad',
+  'scientificMethod.dogmatic.resistantToChange': 'Resistente al cambio',
+  'scientificMethod.scientific.provisionalConclusions': 'Conclusiones provisionales',
+  'scientificMethod.scientific.encouragesSkepticism': 'Fomenta el escepticismo',
+  'scientificMethod.scientific.basedOnEvidence': 'Basado en evidencia',
+  'scientificMethod.scientific.selfCorrecting': 'Autocorrectivo',
+  
+  // Myths and Realities
+  'scientificMethod.myths.absoluteTruth': 'La ciencia prueba cosas absolutamente verdaderas',
+  'scientificMethod.realities.bestExplanation': 'La ciencia proporciona la mejor explicación actual basada en evidencia disponible',
+  'scientificMethod.myths.oneStudy': 'Un estudio es suficiente para establecer la verdad',
+  'scientificMethod.realities.consensus': 'El consenso científico se construye a través de múltiples estudios independientes y replicación',
+  'scientificMethod.myths.completeObjectivity': 'Los científicos son completamente objetivos',
+  'scientificMethod.realities.minimizeBias': 'Los científicos también tienen sesgos; el método está diseñado para minimizar su impacto',
+  'scientificMethod.myths.correlationCausation': 'Correlación es igual a causación',
+  'scientificMethod.realities.correlationNotCausation': 'La correlación puede sugerir relaciones pero no prueba causación sin controles apropiados',
+  
+  // Questions
+  'scientificMethod.questions.evidence': '¿Qué evidencia apoya esta creencia?',
+  'scientificMethod.questions.tested': '¿Ha sido probada esta creencia sistemáticamente?',
+  'scientificMethod.questions.changeMind': '¿Qué se necesitaría para cambiar mi opinión?',
+  'scientificMethod.questions.alternatives': '¿Hay explicaciones alternativas?',
+  'scientificMethod.questions.correlation': '¿Estoy confundiendo correlación con causación?',
+  'scientificMethod.questions.biases': '¿Cuáles son mis sesgos potenciales aquí?',
+  
+  // Red Flags
+  'scientificMethod.flags.untestable': 'Afirmaciones que no pueden ser probadas',
+  'scientificMethod.flags.authority': 'Apelaciones a la autoridad sin evidencia',
+  'scientificMethod.flags.anecdotal': 'Evidencia anecdótica presentada como prueba',
+  'scientificMethod.flags.resistance': 'Resistencia al cuestionamiento',
+  'scientificMethod.flags.cherryPicking': 'Selección sesgada de datos favorables',
+  'scientificMethod.flags.extraordinaryClaims': 'Afirmaciones extraordinarias con evidencia ordinaria',
+  
+  // Limitations
+  'scientificMethod.limitations.values': 'No puede abordar todos los tipos de preguntas (valores, significado)',
+  'scientificMethod.limitations.technology': 'Depende de la tecnología e instrumentos actuales',
+  'scientificMethod.limitations.biases': 'Limitado por sesgos cognitivos humanos',
+  'scientificMethod.limitations.uncertainty': 'Incertidumbre estadística en todas las mediciones',
+  
+  // Misuse
+  'scientificMethod.misuse.funding': 'Sesgo de financiamiento influyendo direcciones de investigación',
+  'scientificMethod.misuse.publication': 'Sesgo de publicación hacia resultados positivos',
+  'scientificMethod.misuse.institutional': 'Presión institucional sobre investigadores',
+  'scientificMethod.misuse.misrepresentation': 'Tergiversación por medios y políticos',
   'learn_more': 'Aprende más',
 
   // Indoctrination - Full Section

@@ -455,6 +455,108 @@ export const de = {
   'socraticQuestioning.example.evidenceText': '"Welche Beweise haben wir über die Beziehung zwischen Geld und Wohlbefinden? Wie beeinflussen Studien zu diesem Thema Ihre Ansicht?"',
   'socraticQuestioning.example.implications': 'Implikationen',
   'socraticQuestioning.example.implicationsText': '"Wenn das wahr ist, was bedeutet das für die Art, wie wir leben sollten? Sollten wir überhaupt keinen finanziellen Erfolg anstreben?"',
+  
+  // Scientific Method
+  'scientificMethod.title': 'Die Wissenschaftliche Methode',
+  'scientificMethod.subtitle': 'Eine empirische Methode des Wissenserwerbs, die die Entwicklung der Wissenschaft seit mindestens dem 17. Jahrhundert geprägt hat. Sie beinhaltet sorgfältige Beobachtung und rigorose Skepsis gegenüber dem Beobachteten.',
+  'scientificMethod.scienceVsDogma': 'Wissenschaft vs. Dogma',
+  'scientificMethod.scienceVsDogmaText': 'Im Gegensatz zu Religionen oder anderen dogmatischen Überzeugungen, die letztendliche Autorität beanspruchen, die nicht hinterfragt werden kann, lebt die Wissenschaft von der Erwartung, dass man nie die vollständige Antwort hat, teilweise oder vollständig falsch liegt – und immer bereit ist, seine Meinung zu ändern, wenn bessere Fakten, Beweise und Argumente präsentiert werden.',
+  'scientificMethod.dogmaticApproach': 'Dogmatischer Ansatz',
+  'scientificMethod.scientificApproach': 'Wissenschaftlicher Ansatz',
+  'scientificMethod.processTitle': 'Der wissenschaftliche Methodenprozess',
+  'scientificMethod.corePrinciples': 'Grundprinzipien',
+  'scientificMethod.commonMisunderstandings': 'Häufige Missverständnisse',
+  'scientificMethod.myth': 'Mythos',
+  'scientificMethod.reality': 'Realität',
+  'scientificMethod.applyingToBeliefs': 'Wissenschaftliches Denken auf persönliche Überzeugungen anwenden',
+  'scientificMethod.questionsToAsk': 'Fragen, die Sie sich stellen sollten',
+  'scientificMethod.redFlags': 'Warnsignale, auf die Sie achten sollten',
+  'scientificMethod.understandingLimitations': 'Die Grenzen verstehen',
+  'scientificMethod.limitationsIntro': 'Die wissenschaftliche Methode ist mächtig, aber nicht perfekt. Sie hat Grenzen und kann missbraucht werden:',
+  'scientificMethod.inherentLimitations': 'Inhärente Grenzen',
+  'scientificMethod.potentialMisuse': 'Missbrauchspotenzial',
+  'scientificMethod.embraceScientificThinking': 'Wissenschaftliches Denken annehmen',
+  'scientificMethod.embraceScientificThinkingDesc': 'Wenden Sie wissenschaftliche Prinzipien in Ihrem täglichen Leben an: basieren Sie Überzeugungen auf Beweisen, bleiben Sie offen für neue Informationen, hinterfragen Sie Annahmen und seien Sie immer bereit, Ihr Verständnis zu aktualisieren, wenn bessere Beweise präsentiert werden. Das ist der Weg zu genaueren Überzeugungen und besseren Entscheidungen.',
+  
+  // Steps
+  'scientificMethod.steps.observation': 'Beobachtung',
+  'scientificMethod.steps.observationDesc': 'Sorgfältige, systematische Beobachtung von Phänomenen mit rigoroser Skepsis gegenüber kognitiven Annahmen',
+  'scientificMethod.steps.questionFormation': 'Fragenformulierung',
+  'scientificMethod.steps.questionFormationDesc': 'Spezifische, testbare Fragen basierend auf Beobachtungen formulieren',
+  'scientificMethod.steps.hypothesis': 'Hypothese',
+  'scientificMethod.steps.hypothesisDesc': 'Testbare Erklärungen durch Induktion basierend auf Beobachtungen erstellen',
+  'scientificMethod.steps.prediction': 'Vorhersage',
+  'scientificMethod.steps.predictionDesc': 'Spezifische Vorhersagen treffen, die experimentell getestet werden können',
+  'scientificMethod.steps.experimentation': 'Experimentierung',
+  'scientificMethod.steps.experimentationDesc': 'Aus Hypothesen abgeleitete Deduktionen durch kontrollierte Experimente testen',
+  'scientificMethod.steps.analysis': 'Analyse',
+  'scientificMethod.steps.analysisDesc': 'Daten objektiv analysieren, nach Mustern und statistischer Signifikanz suchen',
+  'scientificMethod.steps.conclusion': 'Schlussfolgerung',
+  'scientificMethod.steps.conclusionDesc': 'Hypothesen basierend auf experimentellen Ergebnissen verfeinern, modifizieren oder eliminieren',
+  'scientificMethod.steps.replication': 'Replikation',
+  'scientificMethod.steps.replicationDesc': 'Unabhängige Überprüfung der Ergebnisse durch andere Forscher',
+  
+  // Principles
+  'scientificMethod.principles.empiricalEvidence': 'Empirische Beweise',
+  'scientificMethod.principles.empiricalEvidenceDesc': 'Wissen kommt aus direkter Beobachtung und Experimentierung, nicht aus Autorität oder Tradition',
+  'scientificMethod.principles.falsifiability': 'Falsifizierbarkeit',
+  'scientificMethod.principles.falsifiabilityDesc': 'Wissenschaftliche Behauptungen müssen testbar und potenziell widerlegbar sein',
+  'scientificMethod.principles.reproducibility': 'Reproduzierbarkeit',
+  'scientificMethod.principles.reproducibilityDesc': 'Ergebnisse müssen von unabhängigen Forschern unter ähnlichen Bedingungen replizierbar sein',
+  'scientificMethod.principles.peerReview': 'Peer-Review',
+  'scientificMethod.principles.peerReviewDesc': 'Behauptungen werden von anderen Experten geprüft, bevor sie akzeptiert werden',
+  'scientificMethod.principles.provisionalConclusions': 'Vorläufige Schlussfolgerungen',
+  'scientificMethod.principles.provisionalConclusionsDesc': 'Alles wissenschaftliche Wissen ist tentativ und kann mit neuen Beweisen revidiert werden',
+  'scientificMethod.principles.controlledVariables': 'Kontrollierte Variablen',
+  'scientificMethod.principles.controlledVariablesDesc': 'Faktoren isolieren, um klare Ursache-Wirkungs-Beziehungen zu etablieren',
+  
+  // Dogmatic vs Scientific
+  'scientificMethod.dogmatic.absoluteTruth': 'Beansprucht absolute Wahrheit',
+  'scientificMethod.dogmatic.discourageQuestioning': 'Entmutigt Hinterfragen',
+  'scientificMethod.dogmatic.reliesOnAuthority': 'Stützt sich auf Autorität',
+  'scientificMethod.dogmatic.resistantToChange': 'Widerstandsfähig gegen Veränderung',
+  'scientificMethod.scientific.provisionalConclusions': 'Vorläufige Schlussfolgerungen',
+  'scientificMethod.scientific.encouragesSkepticism': 'Ermutigt Skepsis',
+  'scientificMethod.scientific.basedOnEvidence': 'Basiert auf Beweisen',
+  'scientificMethod.scientific.selfCorrecting': 'Selbstkorrigierend',
+  
+  // Myths and Realities
+  'scientificMethod.myths.absoluteTruth': 'Wissenschaft beweist Dinge absolut wahr',
+  'scientificMethod.realities.bestExplanation': 'Wissenschaft liefert die beste aktuelle Erklärung basierend auf verfügbaren Beweisen',
+  'scientificMethod.myths.oneStudy': 'Eine Studie reicht aus, um Wahrheit zu etablieren',
+  'scientificMethod.realities.consensus': 'Wissenschaftlicher Konsens entsteht durch mehrere unabhängige Studien und Replikation',
+  'scientificMethod.myths.completeObjectivity': 'Wissenschaftler sind völlig objektiv',
+  'scientificMethod.realities.minimizeBias': 'Wissenschaftler haben auch Vorurteile; die Methode ist darauf ausgelegt, deren Einfluss zu minimieren',
+  'scientificMethod.myths.correlationCausation': 'Korrelation bedeutet Kausalität',
+  'scientificMethod.realities.correlationNotCausation': 'Korrelation kann Beziehungen andeuten, beweist aber ohne angemessene Kontrollen keine Kausalität',
+  
+  // Questions
+  'scientificMethod.questions.evidence': 'Welche Beweise unterstützen diese Überzeugung?',
+  'scientificMethod.questions.tested': 'Wurde diese Überzeugung systematisch getestet?',
+  'scientificMethod.questions.changeMind': 'Was würde nötig sein, um meine Meinung zu ändern?',
+  'scientificMethod.questions.alternatives': 'Gibt es alternative Erklärungen?',
+  'scientificMethod.questions.correlation': 'Verwechsle ich Korrelation mit Kausalität?',
+  'scientificMethod.questions.biases': 'Was sind meine potenziellen Vorurteile hier?',
+  
+  // Red Flags
+  'scientificMethod.flags.untestable': 'Behauptungen, die nicht getestet werden können',
+  'scientificMethod.flags.authority': 'Berufung auf Autorität ohne Beweise',
+  'scientificMethod.flags.anecdotal': 'Anekdotische Beweise als Beweis präsentiert',
+  'scientificMethod.flags.resistance': 'Widerstand gegen Hinterfragen',
+  'scientificMethod.flags.cherryPicking': 'Rosinenpicken günstiger Daten',
+  'scientificMethod.flags.extraordinaryClaims': 'Außergewöhnliche Behauptungen mit gewöhnlichen Beweisen',
+  
+  // Limitations
+  'scientificMethod.limitations.values': 'Kann nicht alle Arten von Fragen beantworten (Werte, Bedeutung)',
+  'scientificMethod.limitations.technology': 'Abhängig von aktueller Technologie und Instrumenten',
+  'scientificMethod.limitations.biases': 'Begrenzt durch menschliche kognitive Vorurteile',
+  'scientificMethod.limitations.uncertainty': 'Statistische Unsicherheit in allen Messungen',
+  
+  // Misuse
+  'scientificMethod.misuse.funding': 'Finanzierungsvoreingenommenheit beeinflusst Forschungsrichtungen',
+  'scientificMethod.misuse.publication': 'Publikationsvoreingenommenheit zu positiven Ergebnissen',
+  'scientificMethod.misuse.institutional': 'Institutioneller Druck auf Forscher',
+  'scientificMethod.misuse.misrepresentation': 'Falschdarstellung durch Medien und Politiker',
 
   // Indoctrination - Full Section
   'indoctrination.title': 'Indoktrination',

@@ -8,90 +8,90 @@ export default function ScientificMethod() {
 
   const methodSteps = [
     {
-      step: "Observation",
-      description: "Careful, systematic observation of phenomena with rigorous skepticism about cognitive assumptions",
+      step: t('scientificMethod.steps.observation'),
+      description: t('scientificMethod.steps.observationDesc'),
       icon: "👁️"
     },
     {
-      step: "Question Formation",
-      description: "Formulate specific, testable questions based on observations",
+      step: t('scientificMethod.steps.questionFormation'),
+      description: t('scientificMethod.steps.questionFormationDesc'),
       icon: "❓"
     },
     {
-      step: "Hypothesis",
-      description: "Create testable explanations via induction based on observations",
+      step: t('scientificMethod.steps.hypothesis'),
+      description: t('scientificMethod.steps.hypothesisDesc'),
       icon: "💡"
     },
     {
-      step: "Prediction",
-      description: "Make specific predictions that can be tested experimentally",
+      step: t('scientificMethod.steps.prediction'),
+      description: t('scientificMethod.steps.predictionDesc'),
       icon: "🎯"
     },
     {
-      step: "Experimentation",
-      description: "Test deductions drawn from hypotheses through controlled experiments",
+      step: t('scientificMethod.steps.experimentation'),
+      description: t('scientificMethod.steps.experimentationDesc'),
       icon: "🧪"
     },
     {
-      step: "Analysis",
-      description: "Analyze data objectively, looking for patterns and statistical significance",
+      step: t('scientificMethod.steps.analysis'),
+      description: t('scientificMethod.steps.analysisDesc'),
       icon: "📊"
     },
     {
-      step: "Conclusion",
-      description: "Refine, modify, or eliminate hypotheses based on experimental findings",
+      step: t('scientificMethod.steps.conclusion'),
+      description: t('scientificMethod.steps.conclusionDesc'),
       icon: "✅"
     },
     {
-      step: "Replication",
-      description: "Independent verification of results by other researchers",
+      step: t('scientificMethod.steps.replication'),
+      description: t('scientificMethod.steps.replicationDesc'),
       icon: "🔄"
     }
   ];
 
   const keyPrinciples = [
     {
-      principle: "Empirical Evidence",
-      description: "Knowledge comes from direct observation and experimentation, not from authority or tradition"
+      principle: t('scientificMethod.principles.empiricalEvidence'),
+      description: t('scientificMethod.principles.empiricalEvidenceDesc')
     },
     {
-      principle: "Falsifiability",
-      description: "Scientific claims must be testable and potentially disprovable"
+      principle: t('scientificMethod.principles.falsifiability'),
+      description: t('scientificMethod.principles.falsifiabilityDesc')
     },
     {
-      principle: "Reproducibility",
-      description: "Results must be replicable by independent researchers under similar conditions"
+      principle: t('scientificMethod.principles.reproducibility'),
+      description: t('scientificMethod.principles.reproducibilityDesc')
     },
     {
-      principle: "Peer Review",
-      description: "Claims are scrutinized by other experts before acceptance"
+      principle: t('scientificMethod.principles.peerReview'),
+      description: t('scientificMethod.principles.peerReviewDesc')
     },
     {
-      principle: "Provisional Conclusions",
-      description: "All scientific knowledge is tentative and subject to revision with new evidence"
+      principle: t('scientificMethod.principles.provisionalConclusions'),
+      description: t('scientificMethod.principles.provisionalConclusionsDesc')
     },
     {
-      principle: "Controlled Variables",
-      description: "Isolate factors to establish clear cause-and-effect relationships"
+      principle: t('scientificMethod.principles.controlledVariables'),
+      description: t('scientificMethod.principles.controlledVariablesDesc')
     }
   ];
 
   const commonMisunderstandings = [
     {
-      myth: "Science proves things absolutely true",
-      reality: "Science provides the best current explanation based on available evidence"
+      myth: t('scientificMethod.myths.absoluteTruth'),
+      reality: t('scientificMethod.realities.bestExplanation')
     },
     {
-      myth: "One study is enough to establish truth",
-      reality: "Scientific consensus builds through multiple independent studies and replication"
+      myth: t('scientificMethod.myths.oneStudy'),
+      reality: t('scientificMethod.realities.consensus')
     },
     {
-      myth: "Scientists are completely objective",
-      reality: "Scientists have biases too; the method is designed to minimize their impact"
+      myth: t('scientificMethod.myths.completeObjectivity'),
+      reality: t('scientificMethod.realities.minimizeBias')
     },
     {
-      myth: "Correlation equals causation",
-      reality: "Correlation may suggest relationships but doesn't prove causation without proper controls"
+      myth: t('scientificMethod.myths.correlationCausation'),
+      reality: t('scientificMethod.realities.correlationNotCausation')
     }
   ];
 
@@ -103,12 +103,10 @@ export default function ScientificMethod() {
         <Card className="mb-12 glass-card">
           <CardHeader className="text-center">
             <CardTitle className="text-4xl font-bold">
-              The Scientific Method
+              {t('scientificMethod.title')}
             </CardTitle>
             <CardDescription className="text-xl max-w-4xl mx-auto">
-              An empirical method of acquiring knowledge that has characterized the development 
-              of science since at least the 17th century. It involves careful observation and 
-              rigorous skepticism about what is observed.
+              {t('scientificMethod.subtitle')}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -118,33 +116,30 @@ export default function ScientificMethod() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Brain className="h-6 w-6 text-green-600" />
-              <CardTitle className="text-2xl">Science vs. Dogma</CardTitle>
+              <CardTitle className="text-2xl">{t('scientificMethod.scienceVsDogma')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
             <p className="text-lg text-muted-foreground leading-relaxed mb-4">
-              Unlike religions or other dogmatic beliefs that claim ultimate authority that can't be questioned, 
-              <strong> science lives from the expectation that one has never got the full answer, is partially 
-              or completely wrong</strong> – and is always ready to change one's mind upon presentation of 
-              better facts, evidence and arguments.
+              {t('scientificMethod.scienceVsDogmaText')}
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="p-4 bg-red-50 dark:bg-red-950/20 rounded-lg">
-                <h4 className="font-semibold text-red-800 dark:text-red-200 mb-2">❌ Dogmatic Approach</h4>
+                <h4 className="font-semibold text-red-800 dark:text-red-200 mb-2">❌ {t('scientificMethod.dogmaticApproach')}</h4>
                 <ul className="text-sm text-red-700 dark:text-red-300 space-y-1">
-                  <li>• Claims absolute truth</li>
-                  <li>• Discourages questioning</li>
-                  <li>• Relies on authority</li>
-                  <li>• Resistant to change</li>
+                  <li>• {t('scientificMethod.dogmatic.absoluteTruth')}</li>
+                  <li>• {t('scientificMethod.dogmatic.discourageQuestioning')}</li>
+                  <li>• {t('scientificMethod.dogmatic.reliesOnAuthority')}</li>
+                  <li>• {t('scientificMethod.dogmatic.resistantToChange')}</li>
                 </ul>
               </div>
               <div className="p-4 bg-green-50 dark:bg-green-950/20 rounded-lg">
-                <h4 className="font-semibold text-green-800 dark:text-green-200 mb-2">✅ Scientific Approach</h4>
+                <h4 className="font-semibold text-green-800 dark:text-green-200 mb-2">✅ {t('scientificMethod.scientificApproach')}</h4>
                 <ul className="text-sm text-green-700 dark:text-green-300 space-y-1">
-                  <li>• Provisional conclusions</li>
-                  <li>• Encourages skepticism</li>
-                  <li>• Based on evidence</li>
-                  <li>• Self-correcting</li>
+                  <li>• {t('scientificMethod.scientific.provisionalConclusions')}</li>
+                  <li>• {t('scientificMethod.scientific.encouragesSkepticism')}</li>
+                  <li>• {t('scientificMethod.scientific.basedOnEvidence')}</li>
+                  <li>• {t('scientificMethod.scientific.selfCorrecting')}</li>
                 </ul>
               </div>
             </div>
@@ -156,7 +151,7 @@ export default function ScientificMethod() {
           <Card className="glass-card mb-8">
             <CardHeader className="text-center">
               <CardTitle className="text-3xl font-bold">
-                The Scientific Method Process
+                {t('scientificMethod.processTitle')}
               </CardTitle>
             </CardHeader>
           </Card>
@@ -187,7 +182,7 @@ export default function ScientificMethod() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Target className="h-6 w-6 text-blue-600" />
-              <CardTitle className="text-2xl">Core Principles</CardTitle>
+              <CardTitle className="text-2xl">{t('scientificMethod.corePrinciples')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
@@ -207,7 +202,7 @@ export default function ScientificMethod() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <AlertTriangle className="h-6 w-6 text-orange-600" />
-              <CardTitle className="text-2xl">Common Misunderstandings</CardTitle>
+              <CardTitle className="text-2xl">{t('scientificMethod.commonMisunderstandings')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
@@ -215,11 +210,11 @@ export default function ScientificMethod() {
               {commonMisunderstandings.map((item, index) => (
                 <div key={index} className="grid md:grid-cols-2 gap-4 p-4 border border-border rounded-lg">
                   <div>
-                    <h4 className="font-semibold text-red-600 dark:text-red-400 mb-2">❌ Myth:</h4>
+                    <h4 className="font-semibold text-red-600 dark:text-red-400 mb-2">❌ {t('scientificMethod.myth')}:</h4>
                     <p className="text-sm text-muted-foreground">{item.myth}</p>
                   </div>
                   <div>
-                    <h4 className="font-semibold text-green-600 dark:text-green-400 mb-2">✅ Reality:</h4>
+                    <h4 className="font-semibold text-green-600 dark:text-green-400 mb-2">✅ {t('scientificMethod.reality')}:</h4>
                     <p className="text-sm text-muted-foreground">{item.reality}</p>
                   </div>
                 </div>
@@ -233,31 +228,31 @@ export default function ScientificMethod() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Microscope className="h-6 w-6 text-purple-600" />
-              <CardTitle className="text-2xl">Applying Scientific Thinking to Personal Beliefs</CardTitle>
+              <CardTitle className="text-2xl">{t('scientificMethod.applyingToBeliefs')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h4 className="font-semibold text-foreground mb-4">Questions to Ask Yourself:</h4>
+                <h4 className="font-semibold text-foreground mb-4">{t('scientificMethod.questionsToAsk')}:</h4>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• What evidence supports this belief?</li>
-                  <li>• Has this belief been tested systematically?</li>
-                  <li>• What would it take to change my mind?</li>
-                  <li>• Are there alternative explanations?</li>
-                  <li>• Am I confusing correlation with causation?</li>
-                  <li>• What are my potential biases here?</li>
+                  <li>• {t('scientificMethod.questions.evidence')}</li>
+                  <li>• {t('scientificMethod.questions.tested')}</li>
+                  <li>• {t('scientificMethod.questions.changeMind')}</li>
+                  <li>• {t('scientificMethod.questions.alternatives')}</li>
+                  <li>• {t('scientificMethod.questions.correlation')}</li>
+                  <li>• {t('scientificMethod.questions.biases')}</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-foreground mb-4">Red Flags to Watch For:</h4>
+                <h4 className="font-semibold text-foreground mb-4">{t('scientificMethod.redFlags')}:</h4>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• Claims that can't be tested</li>
-                  <li>• Appeals to authority without evidence</li>
-                  <li>• Anecdotal evidence presented as proof</li>
-                  <li>• Resistance to questioning</li>
-                  <li>• Cherry-picking favorable data</li>
-                  <li>• Extraordinary claims with ordinary evidence</li>
+                  <li>• {t('scientificMethod.flags.untestable')}</li>
+                  <li>• {t('scientificMethod.flags.authority')}</li>
+                  <li>• {t('scientificMethod.flags.anecdotal')}</li>
+                  <li>• {t('scientificMethod.flags.resistance')}</li>
+                  <li>• {t('scientificMethod.flags.cherryPicking')}</li>
+                  <li>• {t('scientificMethod.flags.extraordinaryClaims')}</li>
                 </ul>
               </div>
             </div>
@@ -269,30 +264,30 @@ export default function ScientificMethod() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <CheckCircle className="h-6 w-6 text-indigo-600" />
-              <CardTitle className="text-2xl">Understanding the Limitations</CardTitle>
+              <CardTitle className="text-2xl">{t('scientificMethod.understandingLimitations')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed mb-4">
-              The scientific method is powerful but not perfect. It has limitations and can be misused:
+              {t('scientificMethod.limitationsIntro')}
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               <div>
-                <h4 className="font-semibold text-foreground mb-3">Inherent Limitations:</h4>
+                <h4 className="font-semibold text-foreground mb-3">{t('scientificMethod.inherentLimitations')}:</h4>
                 <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• Cannot address all types of questions (values, meaning)</li>
-                  <li>• Relies on current technology and instruments</li>
-                  <li>• Limited by human cognitive biases</li>
-                  <li>• Statistical uncertainty in all measurements</li>
+                  <li>• {t('scientificMethod.limitations.values')}</li>
+                  <li>• {t('scientificMethod.limitations.technology')}</li>
+                  <li>• {t('scientificMethod.limitations.biases')}</li>
+                  <li>• {t('scientificMethod.limitations.uncertainty')}</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-foreground mb-3">Potential for Misuse:</h4>
+                <h4 className="font-semibold text-foreground mb-3">{t('scientificMethod.potentialMisuse')}:</h4>
                 <ul className="space-y-2 text-muted-foreground text-sm">
-                  <li>• Funding bias influencing research directions</li>
-                  <li>• Publication bias toward positive results</li>
-                  <li>• Institutional pressure on researchers</li>
-                  <li>• Misrepresentation by media and politicians</li>
+                  <li>• {t('scientificMethod.misuse.funding')}</li>
+                  <li>• {t('scientificMethod.misuse.publication')}</li>
+                  <li>• {t('scientificMethod.misuse.institutional')}</li>
+                  <li>• {t('scientificMethod.misuse.misrepresentation')}</li>
                 </ul>
               </div>
             </div>
@@ -303,12 +298,10 @@ export default function ScientificMethod() {
         <Card className="glass-card">
           <CardHeader className="text-center">
             <CardTitle className="text-2xl font-bold">
-              Embrace Scientific Thinking
+              {t('scientificMethod.embraceScientificThinking')}
             </CardTitle>
             <CardDescription className="text-muted-foreground max-w-3xl mx-auto">
-              Apply scientific principles to your daily life: base beliefs on evidence, remain open 
-              to new information, question assumptions, and always be ready to update your understanding 
-              when presented with better evidence. This is the path to more accurate beliefs and better decisions.
+              {t('scientificMethod.embraceScientificThinkingDesc')}
             </CardDescription>
           </CardHeader>
         </Card>
