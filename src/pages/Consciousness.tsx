@@ -167,7 +167,7 @@ export default function Consciousness() {
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
-            <div className="grid md:grid-cols-2 gap-8 items-start">
+            <div className="grid md:grid-cols-2 gap-8 items-center">
               <div className="space-y-4">
                 <Dialog>
                   <DialogTrigger asChild>
