@@ -2,6 +2,7 @@ import { ExternalLink, Brain, Users, Globe, Lightbulb } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
 import { ConsciousnessTable } from '@/components/ConsciousnessTable';
 import { PHYXSTable } from '@/components/PHYXSTable';
 import { useAQALMapData } from '@/hooks/useAQALMapData';
@@ -159,97 +160,110 @@ export default function Consciousness() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Brain className="h-6 w-6 text-primary" />
-              <CardTitle className="text-2xl">Lines of Development</CardTitle>
+              <CardTitle className="text-2xl">{t('consciousness.linesOfDevelopment.title')}</CardTitle>
             </div>
             <CardDescription className="text-lg">
-              Understanding Multiple Intelligences in Human Development
+              {t('consciousness.linesOfDevelopment.description')}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="grid md:grid-cols-2 gap-8 items-start">
               <div className="space-y-4">
-                <img 
-                  src={linesOfDevelopmentImage} 
-                  alt="Lines of Development Diagram" 
-                  className="w-full h-auto rounded-lg shadow-lg"
-                />
+                <Dialog>
+                  <DialogTrigger asChild>
+                    <button className="block w-full cursor-pointer hover:opacity-90 transition-opacity">
+                      <img 
+                        src={linesOfDevelopmentImage} 
+                        alt="Lines of Development Diagram" 
+                        className="w-full h-auto rounded-lg shadow-lg"
+                      />
+                    </button>
+                  </DialogTrigger>
+                  <DialogContent className="max-w-4xl max-h-[90vh] p-4">
+                    <img 
+                      src={linesOfDevelopmentImage} 
+                      alt="Lines of Development Diagram" 
+                      className="w-full h-auto rounded-lg"
+                    />
+                  </DialogContent>
+                </Dialog>
               </div>
               <div className="space-y-4">
                 <div className="prose dark:prose-invert max-w-none">
                   <p className="text-muted-foreground leading-relaxed">
-                    We can think of these lines of development as multiple intelligences that have evolved in response to life's core questions:
+                    {t('consciousness.linesOfDevelopment.introduction')}
                   </p>
                   
                   <div className="space-y-3 mt-4">
                     <div className="flex gap-3">
                       <span className="text-primary font-medium">•</span>
                       <div>
-                        <span className="font-medium">What am I aware of?</span>
-                        <span className="text-muted-foreground ml-1">(Determined by the cognitive line of development.)</span>
+                        <span className="font-medium">{t('consciousness.linesOfDevelopment.questions.awareness.question')}</span>
+                        <span className="text-muted-foreground ml-1">({t('consciousness.linesOfDevelopment.questions.awareness.answer')})</span>
                       </div>
                     </div>
                     
                     <div className="flex gap-3">
                       <span className="text-primary font-medium">•</span>
                       <div>
-                        <span className="font-medium">What do I need?</span>
-                        <span className="text-muted-foreground ml-1">(The needs line.)</span>
+                        <span className="font-medium">{t('consciousness.linesOfDevelopment.questions.needs.question')}</span>
+                        <span className="text-muted-foreground ml-1">({t('consciousness.linesOfDevelopment.questions.needs.answer')})</span>
                       </div>
                     </div>
                     
                     <div className="flex gap-3">
                       <span className="text-primary font-medium">•</span>
                       <div>
-                        <span className="font-medium">Who am I?</span>
-                        <span className="text-muted-foreground ml-1">(Self-identity.)</span>
+                        <span className="font-medium">{t('consciousness.linesOfDevelopment.questions.identity.question')}</span>
+                        <span className="text-muted-foreground ml-1">({t('consciousness.linesOfDevelopment.questions.identity.answer')})</span>
                       </div>
                     </div>
                     
                     <div className="flex gap-3">
                       <span className="text-primary font-medium">•</span>
                       <div>
-                        <span className="font-medium">What is important to me?</span>
-                        <span className="text-muted-foreground ml-1">(Values.)</span>
+                        <span className="font-medium">{t('consciousness.linesOfDevelopment.questions.values.question')}</span>
+                        <span className="text-muted-foreground ml-1">({t('consciousness.linesOfDevelopment.questions.values.answer')})</span>
                       </div>
                     </div>
                     
                     <div className="flex gap-3">
                       <span className="text-primary font-medium">•</span>
                       <div>
-                        <span className="font-medium">How do I feel about this?</span>
-                        <span className="text-muted-foreground ml-1">(Emotional intelligence.)</span>
+                        <span className="font-medium">{t('consciousness.linesOfDevelopment.questions.emotions.question')}</span>
+                        <span className="text-muted-foreground ml-1">({t('consciousness.linesOfDevelopment.questions.emotions.answer')})</span>
                       </div>
                     </div>
                     
                     <div className="flex gap-3">
                       <span className="text-primary font-medium">•</span>
                       <div>
-                        <span className="font-medium">What is the right thing to do?</span>
-                        <span className="text-muted-foreground ml-1">(Morals.)</span>
+                        <span className="font-medium">{t('consciousness.linesOfDevelopment.questions.morals.question')}</span>
+                        <span className="text-muted-foreground ml-1">({t('consciousness.linesOfDevelopment.questions.morals.answer')})</span>
                       </div>
                     </div>
                     
                     <div className="flex gap-3">
                       <span className="text-primary font-medium">•</span>
                       <div>
-                        <span className="font-medium">How should we interact?</span>
-                        <span className="text-muted-foreground ml-1">(Interpersonal.)</span>
+                        <span className="font-medium">{t('consciousness.linesOfDevelopment.questions.interpersonal.question')}</span>
+                        <span className="text-muted-foreground ml-1">({t('consciousness.linesOfDevelopment.questions.interpersonal.answer')})</span>
                       </div>
                     </div>
                     
                     <div className="flex gap-3">
                       <span className="text-primary font-medium">•</span>
                       <div>
-                        <span className="font-medium">How should I physically do this?</span>
-                        <span className="text-muted-foreground ml-1">(Kinesthetic.)</span>
+                        <span className="font-medium">{t('consciousness.linesOfDevelopment.questions.kinesthetic.question')}</span>
+                        <span className="text-muted-foreground ml-1">({t('consciousness.linesOfDevelopment.questions.kinesthetic.answer')})</span>
                       </div>
                     </div>
                     
                     <div className="flex gap-3">
                       <span className="text-primary font-medium">•</span>
                       <div>
-                        <span className="font-medium">What is of ultimate concern to me?</span>
-                        <span className="text-muted-foreground ml-1">(Spirituality.)</span>
+                        <span className="font-medium">{t('consciousness.linesOfDevelopment.questions.spirituality.question')}</span>
+                        <span className="text-muted-foreground ml-1">({t('consciousness.linesOfDevelopment.questions.spirituality.answer')})</span>
                       </div>
                     </div>
                   </div>
@@ -261,7 +275,7 @@ export default function Consciousness() {
               <Button variant="outline" className="flex items-center gap-2" asChild>
                 <a href="https://integrallife.com/what-is-integral-approach/" target="_blank" rel="noopener noreferrer">
                   <ExternalLink className="h-4 w-4" />
-                  Learn More About Integral Approach
+                  {t('consciousness.linesOfDevelopment.learnMore')}
                 </a>
               </Button>
             </div>
