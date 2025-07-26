@@ -73,30 +73,33 @@ export default function Home() {
   ];
 
   return (
-    <div className="min-h-screen">
-      {/* Hero Section with Epistemology */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto text-center">
-          <div className="mb-8">
-            <h2 className="text-2xl font-bold text-glow-blue mb-4 animate-pulse">
-              {t('home.wakeUpNeo')}
-            </h2>
-          </div>
-          <Card className="glass-card p-8 mb-8">
-            <CardContent className="text-center space-y-6">
-              <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-foreground">
+    <div className="min-h-screen gradient-bg relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+      
+      <div className="relative z-10">
+        {/* Hero Section with Epistemology */}
+        <section className="py-24 px-4 sm:px-6 lg:px-8">
+          <div className="max-w-4xl mx-auto text-center">
+            <div className="mb-8">
+              <h2 className="text-2xl font-bold text-glow-blue mb-4 animate-pulse">
+                {t('home.wakeUpNeo')}
+              </h2>
+            </div>
+            <div className="glass-card rounded-3xl p-12 max-w-4xl mx-auto border border-primary/20 shadow-2xl mb-8">
+              <h1 className="text-5xl sm:text-6xl lg:text-7xl font-bold mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 {t('home.title')}
               </h1>
-              <h2 className="text-2xl sm:text-3xl text-muted-foreground">
+              <h2 className="text-2xl sm:text-3xl text-muted-foreground mb-6">
                 {t('home.epistemologyQuestion')}
               </h2>
-              <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              <p className="text-lg text-muted-foreground max-w-3xl mx-auto leading-relaxed">
                 {t('home.epistemologyAnswer')}
               </p>
-            </CardContent>
-          </Card>
-        </div>
-      </section>
+            </div>
+          </div>
+        </section>
 
       {/* Features Section */}
       <section className="py-16 px-4 sm:px-6 lg:px-8 bg-muted/30">
@@ -277,6 +280,7 @@ export default function Home() {
           </Card>
         </div>
       </footer>
+      </div>
     </div>
   );
 }
