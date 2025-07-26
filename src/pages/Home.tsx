@@ -258,12 +258,12 @@ export default function Home() {
             <CardContent className="text-center py-6">
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <p className="text-sm text-muted-foreground">
-                  «Made with tons of love by{' '}
+                  «Made with tons of ❤️ by{' '}
                   <a 
                     href="https://lovable.dev" 
                     target="_blank" 
                     rel="noopener noreferrer"
-                    className="text-primary hover:text-primary/80 transition-colors underline"
+                    className="text-primary hover:text-primary/80 transition-colors underline hover:underline-offset-4"
                   >
                     Lovable.dev
                   </a>
