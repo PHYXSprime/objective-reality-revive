@@ -24,57 +24,57 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
     setOpenRows(newOpenRows);
   };
 
-  const getEvolutionColors = (evolutionPoint: string) => {
-    // Map evolution points to AQAL colors based on timeframes
-    const colorMap: Record<string, { bg: string; border: string; badge: string }> = {
-      "E9 - Digital Consciousness": {
+  const getEvolutionColors = (index: number) => {
+    // Use index-based colors instead of language-dependent evolution point names
+    const colorPalette = [
+      {
         bg: "bg-gradient-to-b from-white/20 via-violet-500/20 to-indigo-500/20",
-        border: "border-l-gradient-to-b border-l-white border-l-violet-500 border-l-indigo-500",
+        border: "border-l-violet-500",
         badge: "bg-gradient-to-b from-white via-violet-500 to-indigo-500 text-white"
       },
-      "E8 - Integral Consciousness": {
+      {
         bg: "bg-teal-500/20",
         border: "border-l-teal-500",
         badge: "bg-teal-500 text-white"
       },
-      "E7 - Systematic Consciousness": {
+      {
         bg: "bg-yellow-500/20",
         border: "border-l-yellow-500",
         badge: "bg-yellow-500 text-black"
       },
-      "E6 - Formal Operational": {
+      {
         bg: "bg-green-500/20",
         border: "border-l-green-500",
         badge: "bg-green-500 text-white"
       },
-      "E5 - Concrete Operational": {
+      {
         bg: "bg-orange-500/20",
         border: "border-l-orange-500",
         badge: "bg-orange-500 text-white"
       },
-      "E4 - Symbolic Representation": {
+      {
         bg: "bg-blue-500/20",
         border: "border-l-blue-500",
         badge: "bg-blue-500 text-white"
       },
-      "E3 - Social Coordination": {
+      {
         bg: "bg-red-500/20",
         border: "border-l-red-500",
         badge: "bg-red-500 text-white"
       },
-      "E2 - Tool Creation": {
+      {
         bg: "bg-purple-500/20",
         border: "border-l-purple-500",
         badge: "bg-purple-500 text-white"
       },
-      "E1 - Basic Survival": {
+      {
         bg: "bg-zinc-800/20",
         border: "border-l-zinc-800",
         badge: "bg-zinc-800 text-white"
       }
-    };
+    ];
     
-    return colorMap[evolutionPoint] || {
+    return colorPalette[index] || {
       bg: "bg-stone-500/20",
       border: "border-l-stone-500",
       badge: "bg-stone-500 text-white"
@@ -101,7 +101,7 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
             </TableHeader>
             <TableBody>
               {data.map((level, index) => {
-                const colors = getEvolutionColors(level.evolutionPoint);
+                const colors = getEvolutionColors(index);
                 const isOpen = openRows.has(index);
                 return (
                   <React.Fragment key={index}>
