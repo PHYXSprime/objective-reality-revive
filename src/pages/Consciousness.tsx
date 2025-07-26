@@ -13,19 +13,24 @@ export default function Consciousness() {
   const phyxsMapData = usePHYXSMapData();
 
   return (
-    <div className="min-h-screen py-8">
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <Card className="glass-card mb-8">
-          <CardHeader>
-            <CardTitle className="text-4xl font-bold">
-              {t('consciousness.title')}
-            </CardTitle>
-            <CardDescription className="text-xl max-w-3xl">
-              {t('consciousness.description')}
-            </CardDescription>
-          </CardHeader>
-        </Card>
+    <div className="min-h-screen gradient-bg relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+      
+      <div className="relative z-10 py-8">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <div className="glass-card rounded-3xl p-12 max-w-4xl mx-auto border border-primary/20 shadow-2xl">
+              <h1 className="text-5xl font-bold text-foreground mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                {t('consciousness.title')}
+              </h1>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                {t('consciousness.description')}
+              </p>
+            </div>
+          </div>
 
         {/* New Insights Section */}
         <Card className="mb-8 glass-card">
@@ -261,6 +266,7 @@ export default function Consciousness() {
             </div>
           </CardContent>
         </Card>
+        </div>
       </div>
     </div>
   );

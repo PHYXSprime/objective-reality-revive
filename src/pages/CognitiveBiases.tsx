@@ -50,20 +50,25 @@ export default function CognitiveBiases() {
   };
 
   return (
-    <div className="min-h-screen py-8 pr-20">
-      <ChallengeNavigation />
-      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Header */}
-        <Card className="mb-8 glass-card">
-          <CardHeader>
-            <CardTitle className="text-4xl font-bold">
-              {t('biases.title')}
-            </CardTitle>
-            <CardDescription className="text-xl max-w-3xl">
-              {t('biases.description')}
-            </CardDescription>
-          </CardHeader>
-        </Card>
+    <div className="min-h-screen gradient-bg relative overflow-hidden">
+      {/* Background Effects */}
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
+      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+      
+      <div className="relative z-10 py-8 pr-20">
+        <ChallengeNavigation />
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Hero Section */}
+          <div className="text-center mb-16">
+            <div className="glass-card rounded-3xl p-12 max-w-4xl mx-auto border border-primary/20 shadow-2xl">
+              <h1 className="text-5xl font-bold text-foreground mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+                {t('biases.title')}
+              </h1>
+              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+                {t('biases.description')}
+              </p>
+            </div>
+          </div>
 
         {/* Search and Filter Controls */}
         <div className="flex flex-col sm:flex-row gap-4 mb-8">
@@ -148,6 +153,7 @@ export default function CognitiveBiases() {
             </Button>
           </div>
         )}
+        </div>
       </div>
     </div>
   );
