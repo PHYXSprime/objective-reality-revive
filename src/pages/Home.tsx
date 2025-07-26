@@ -78,7 +78,7 @@ export default function Home() {
       <section className="py-24 px-4 sm:px-6 lg:px-8">
         <div className="max-w-4xl mx-auto text-center">
           <div className="mb-8">
-            <h2 className="text-2xl font-bold text-glow-accent mb-4 animate-pulse">
+            <h2 className="text-2xl font-bold text-glow-blue mb-4 animate-pulse">
               {t('home.wakeUpNeo')}
             </h2>
           </div>

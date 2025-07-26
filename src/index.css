@@ -255,6 +255,11 @@
     text-shadow: 0 0 15px hsl(var(--accent) / 0.7);
   }
 
+  .text-glow-blue {
+    text-shadow: 0 0 20px hsl(217 91% 60% / 0.8), 0 0 40px hsl(217 91% 60% / 0.4);
+    color: hsl(217 91% 70%);
+  }
+
   /* Nebula background for hero sections */
   .nebula-bg {
     background: 
