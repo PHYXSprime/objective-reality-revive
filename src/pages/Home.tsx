@@ -180,19 +180,19 @@ export default function Home() {
       {/* Consciousness Section */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
         <div className="max-w-7xl mx-auto">
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
-            <Card className="glass-card transition-transform hover:scale-105 cursor-pointer">
-              <Link to="/consciousness" className="block p-6">
-                <div className="flex items-start space-x-4">
-                  <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
-                    <Eye className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+          <div className="flex justify-center">
+            <Card className="glass-card transition-transform hover:scale-105 cursor-pointer w-full max-w-sm">
+              <Link to="/consciousness" className="block p-4">
+                <div className="space-y-3">
+                  <div className="flex items-center space-x-3">
+                    <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                      <Eye className="h-5 w-5 text-purple-600 dark:text-purple-400" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-foreground">{t('consciousness.title')}</h3>
                   </div>
-                  <div className="flex-1 min-w-0">
-                    <h3 className="text-lg font-semibold text-foreground mb-2">{t('consciousness.title')}</h3>
-                    <p className="text-sm text-muted-foreground leading-relaxed">
-                      {t('consciousness.subtitle')}
-                    </p>
-                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed text-left">
+                    Explore consciousness levels and developmental frameworks for understanding human awareness
+                  </p>
                 </div>
               </Link>
             </Card>
@@ -214,7 +214,7 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {challengePages.map((page, index) => (
                   <Card key={index} className="glass-card transition-transform hover:scale-105">
-                    <Link to={page.link} className="block p-6">
+                    <Link to={page.link} className="block p-4">
                       <div className="flex items-start space-x-4">
                         <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0`}>
                           <page.icon className={`h-6 w-6 ${page.color}`} />
@@ -243,7 +243,7 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {solutionPages.map((page, index) => (
                   <Card key={index} className="glass-card transition-transform hover:scale-105">
-                    <Link to={page.link} className="block p-6">
+                    <Link to={page.link} className="block p-4">
                       <div className="flex items-start space-x-4">
                         <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0`}>
                           <page.icon className={`h-6 w-6 ${page.color}`} />
