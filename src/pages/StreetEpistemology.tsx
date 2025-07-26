@@ -3,6 +3,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { SolutionNavigation } from '@/components/SolutionNavigation';
+import { Link } from 'react-router-dom';
 
 export default function StreetEpistemology() {
   const { t } = useLanguage();
@@ -256,12 +257,22 @@ export default function StreetEpistemology() {
               {t('streetEpistemology.readyToPracticeDesc')}
             </p>
             <div className="flex gap-4 justify-center flex-wrap">
-              <Button size="lg" className="flex items-center gap-2">
-                <ExternalLink className="h-4 w-4" />
-                {t('streetEpistemology.practiceExamples')}
+              <Button asChild size="lg" className="flex items-center gap-2">
+                <Link to="/socratic-questioning">
+                  <ExternalLink className="h-4 w-4" />
+                  {t('streetEpistemology.practiceExamples')}
+                </Link>
               </Button>
-              <Button variant="outline" size="lg">
-                {t('streetEpistemology.learnSocratic')}
+              <Button asChild variant="outline" size="lg">
+                <Link to="/socratic-questioning">
+                  {t('streetEpistemology.learnSocratic')}
+                </Link>
+              </Button>
+              <Button asChild variant="secondary" size="lg" className="flex items-center gap-2">
+                <a href="https://www.streetepistemology.com" target="_blank" rel="noopener noreferrer">
+                  <ExternalLink className="h-4 w-4" />
+                  Visit StreetEpistemology.com
+                </a>
               </Button>
             </div>
           </CardContent>
