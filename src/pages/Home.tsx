@@ -215,16 +215,16 @@ export default function Home() {
                 {challengePages.map((page, index) => (
                   <Card key={index} className="glass-card transition-transform hover:scale-105">
                     <Link to={page.link} className="block p-4">
-                      <div className="flex items-start space-x-4">
-                        <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0`}>
-                          <page.icon className={`h-6 w-6 ${page.color}`} />
+                      <div className="space-y-3">
+                        <div className="flex items-center space-x-3">
+                          <div className={`w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0`}>
+                            <page.icon className={`h-5 w-5 ${page.color}`} />
+                          </div>
+                          <h3 className="text-lg font-semibold text-foreground">{page.title}</h3>
                         </div>
-                        <div className="flex-1 min-w-0">
-                          <h3 className="text-lg font-semibold text-foreground mb-2">{page.title}</h3>
-                          <p className="text-sm text-muted-foreground">
-                            Learn about {page.title.toLowerCase()} and how they affect thinking
-                          </p>
-                        </div>
+                        <p className="text-sm text-muted-foreground leading-relaxed text-left">
+                          Learn about {page.title.toLowerCase()} and how they affect thinking
+                        </p>
                       </div>
                     </Link>
                   </Card>
@@ -244,16 +244,16 @@ export default function Home() {
                 {solutionPages.map((page, index) => (
                   <Card key={index} className="glass-card transition-transform hover:scale-105">
                     <Link to={page.link} className="block p-4">
-                      <div className="flex items-start space-x-4">
-                        <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0`}>
-                          <page.icon className={`h-6 w-6 ${page.color}`} />
+                      <div className="space-y-3">
+                        <div className="flex items-center space-x-3">
+                          <div className={`w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0`}>
+                            <page.icon className={`h-5 w-5 ${page.color}`} />
+                          </div>
+                          <h3 className="text-lg font-semibold text-foreground">{page.title}</h3>
                         </div>
-                        <div className="flex-1 min-w-0">
-                          <h3 className="text-lg font-semibold text-foreground mb-2">{page.title}</h3>
-                          <p className="text-sm text-muted-foreground">
-                            Discover {page.title.toLowerCase()} techniques for better reasoning
-                          </p>
-                        </div>
+                        <p className="text-sm text-muted-foreground leading-relaxed text-left">
+                          Discover {page.title.toLowerCase()} techniques for better reasoning
+                        </p>
                       </div>
                     </Link>
                   </Card>
