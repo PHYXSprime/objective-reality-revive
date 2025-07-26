@@ -250,6 +250,35 @@ export default function Home() {
           </Card>
         </div>
       </section>
+
+      {/* Footer */}
+      <footer className="py-8 px-4 sm:px-6 lg:px-8 border-t border-border/50">
+        <div className="max-w-4xl mx-auto">
+          <Card className="glass-card">
+            <CardContent className="text-center py-6">
+              <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
+                <p className="text-sm text-muted-foreground">
+                  «Made with tons of love by{' '}
+                  <a 
+                    href="https://lovable.dev" 
+                    target="_blank" 
+                    rel="noopener noreferrer"
+                    className="text-primary hover:text-primary/80 transition-colors underline"
+                  >
+                    Lovable.dev
+                  </a>
+                  »
+                </p>
+                <Button asChild variant="outline" size="sm">
+                  <a href="mailto:contact@Objective-Reality.info">
+                    Contact David Heggli
+                  </a>
+                </Button>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </footer>
     </div>
   );
 }
