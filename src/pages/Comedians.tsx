@@ -9,52 +9,52 @@ export default function Comedians() {
 
   const comedianRoles = [
     {
-      role: "Truth-Tellers",
-      description: "Question society's 'status quo' and challenge accepted wisdom through humor"
+      role: t('comedians.roles.truthTellers'),
+      description: t('comedians.roles.truthTellersDesc')
     },
     {
-      role: "Social Critics",
-      description: "Point out inconsistencies and absurdities in social norms and beliefs"
+      role: t('comedians.roles.socialCritics'),
+      description: t('comedians.roles.socialCriticsDesc')
     },
     {
-      role: "Reality Checkers",
-      description: "Bridge the gap between accepted 'knowledge' and objective reality"
+      role: t('comedians.roles.realityCheckers'),
+      description: t('comedians.roles.realityCheckersDesc')
     },
     {
-      role: "Cognitive Disruptors",
-      description: "Make people think by presenting familiar ideas in unexpected ways"
+      role: t('comedians.roles.cognitiveDisruptors'),
+      description: t('comedians.roles.cognitiveDisruptorsDesc')
     }
   ];
 
   const comedianPhilosophers = [
     {
       name: "George Carlin",
-      insight: "Master of questioning religious dogma, social conventions, and political hypocrisy",
-      quote: "Think of how stupid the average person is, and realize half of them are stupider than that."
+      insight: t('comedians.carlin.insight'),
+      quote: t('comedians.carlin.quote')
     },
     {
       name: "Ricky Gervais",
-      insight: "Challenges religious beliefs and social taboos with logical reasoning disguised as humor",
-      quote: "Just because you're offended doesn't mean you're right."
+      insight: t('comedians.gervais.insight'),
+      quote: t('comedians.gervais.quote')
     },
     {
       name: "Dave Chappelle",
-      insight: "Rejected $50 million to maintain integrity - couldn't resolve moral dissonance",
-      quote: "The mark of greatness is when everything before you is obsolete, and everything after you bears your mark."
+      insight: t('comedians.chappelle.insight'),
+      quote: t('comedians.chappelle.quote')
     },
     {
       name: "Jim Carrey",
-      insight: "Started behaving 'strangely' when Hollywood tried to corrupt him with money and status",
-      quote: "Behind every great man is a woman rolling her eyes."
+      insight: t('comedians.carrey.insight'),
+      quote: t('comedians.carrey.quote')
     }
   ];
 
   const propagandaWarning = [
-    "Hollywood has big ties to intelligence agencies (Mossad & CIA)",
-    "Social media platforms enable granular propaganda targeting",
-    "Cambridge Analytica scandal revealed manipulation capabilities",
-    "'Free' apps collect data to influence public opinion",
-    "Comedians face pressure to promote certain narratives"
+    t('comedians.propaganda.hollywood'),
+    t('comedians.propaganda.socialMedia'),
+    t('comedians.propaganda.cambridge'),
+    t('comedians.propaganda.freeApps'),
+    t('comedians.propaganda.pressure')
   ];
 
   return (
@@ -96,13 +96,12 @@ export default function Comedians() {
           </CardContent>
         </Card>
 
-        {/* Notable Truth-Telling Comedians */}
-        <div className="mb-12">
-          <div className="glass-card rounded-2xl p-6 text-center mb-8 max-w-3xl mx-auto">
-            <h2 className="text-3xl font-bold text-foreground mb-4">
-              Comedy Philosophers
-            </h2>
-          </div>
+          <div className="mb-12">
+            <div className="glass-card rounded-2xl p-6 text-center mb-8 max-w-3xl mx-auto">
+              <h2 className="text-3xl font-bold text-foreground mb-4">
+                {t('comedians.philosophersTitle')}
+              </h2>
+            </div>
           <div className="grid md:grid-cols-2 gap-6">
             {comedianPhilosophers.map((comedian, index) => (
               <Card key={index} className="glass-card rounded-2xl">
@@ -126,57 +125,48 @@ export default function Comedians() {
         <Alert className="mb-12 border-orange-200 dark:border-orange-800">
           <AlertTriangle className="h-4 w-4" />
           <AlertDescription className="text-lg">
-            <strong>Warning:</strong> This gives comedians a great deal of responsibility since the ability 
-            to influence public opinion can also be abused for propaganda or dogmatic beliefs 
-            that are not in line with objective reality.
+            <strong>{t('comedians.warningTitle')}</strong> {t('comedians.warningText')}
           </AlertDescription>
         </Alert>
 
-        {/* Corruption & Resistance */}
         <Card className="mb-12 glass-card rounded-2xl">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Shield className="h-6 w-6 text-red-600" />
-              <CardTitle className="text-2xl">When Comedians Resist Corruption</CardTitle>
+              <CardTitle className="text-2xl">{t('comedians.resistanceTitle')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Some comedians couldn't resolve the dissonance between what was asked of them 
-              (attempts to corrupt them with money and status) and their moral conscience:
+              {t('comedians.resistanceText')}
             </p>
             <div className="grid md:grid-cols-2 gap-6">
               <div className="p-4 bg-muted/30 rounded-lg">
                 <h4 className="font-semibold text-foreground mb-3">Dave Chappelle</h4>
                 <p className="text-sm text-muted-foreground">
-                  Rejected a $50 million contract rather than compromise his integrity. 
-                  He couldn't reconcile the pressure to promote certain narratives 
-                  with his commitment to truth-telling.
+                  {t('comedians.chappelle.resistance')}
                 </p>
               </div>
               <div className="p-4 bg-muted/30 rounded-lg">
                 <h4 className="font-semibold text-foreground mb-3">Jim Carrey</h4>
                 <p className="text-sm text-muted-foreground">
-                  Started behaving in "strange ways" and dropped off the Hollywood A-list 
-                  when he couldn't resolve the moral dissonance of what was being asked of him.
+                  {t('comedians.carrey.resistance')}
                 </p>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* The Propaganda Machine */}
         <Card className="mb-12 glass-card rounded-2xl">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Users className="h-6 w-6 text-purple-600" />
-              <CardTitle className="text-2xl">The Modern Propaganda Landscape</CardTitle>
+              <CardTitle className="text-2xl">{t('comedians.propagandaTitle')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
             <p className="text-muted-foreground leading-relaxed mb-6">
-              Hollywood is a huge propaganda machine with big ties to intelligence agencies. 
-              Social media has joined the fray, enabling even more granular manipulation of public opinion.
+              {t('comedians.propagandaText')}
             </p>
             <div className="space-y-3">
               {propagandaWarning.map((warning, index) => (
@@ -189,53 +179,48 @@ export default function Comedians() {
           </CardContent>
         </Card>
 
-        {/* How to Evaluate Comedy */}
         <Card className="mb-12 glass-card rounded-2xl">
           <CardHeader>
             <div className="flex items-center gap-3">
               <Target className="h-6 w-6 text-green-600" />
-              <CardTitle className="text-2xl">Evaluating Comedy for Truth vs. Propaganda</CardTitle>
+              <CardTitle className="text-2xl">{t('comedians.evaluationTitle')}</CardTitle>
             </div>
           </CardHeader>
           <CardContent>
             <div className="grid md:grid-cols-2 gap-8">
               <div>
-                <h4 className="font-semibold text-foreground mb-4">Truth-Telling Comedy:</h4>
+                <h4 className="font-semibold text-foreground mb-4">{t('comedians.truthTelling.title')}</h4>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• Challenges popular but questionable beliefs</li>
-                  <li>• Questions authority figures and institutions</li>
-                  <li>• Points out logical inconsistencies</li>
-                  <li>• Makes people uncomfortable but thinking</li>
-                  <li>• Comes from personal observation and experience</li>
-                  <li>• Often results in career consequences</li>
+                  <li>• {t('comedians.truthTelling.1')}</li>
+                  <li>• {t('comedians.truthTelling.2')}</li>
+                  <li>• {t('comedians.truthTelling.3')}</li>
+                  <li>• {t('comedians.truthTelling.4')}</li>
+                  <li>• {t('comedians.truthTelling.5')}</li>
+                  <li>• {t('comedians.truthTelling.6')}</li>
                 </ul>
               </div>
               <div>
-                <h4 className="font-semibold text-foreground mb-4">Propaganda Comedy:</h4>
+                <h4 className="font-semibold text-foreground mb-4">{t('comedians.propagandaComedy.title')}</h4>
                 <ul className="space-y-2 text-muted-foreground">
-                  <li>• Reinforces mainstream narratives</li>
-                  <li>• Mocks those who question official stories</li>
-                  <li>• Promotes specific political agendas</li>
-                  <li>• Makes people feel good about their beliefs</li>
-                  <li>• Comes from scripted, corporate sources</li>
-                  <li>• Often rewarded with career advancement</li>
+                  <li>• {t('comedians.propagandaComedy.1')}</li>
+                  <li>• {t('comedians.propagandaComedy.2')}</li>
+                  <li>• {t('comedians.propagandaComedy.3')}</li>
+                  <li>• {t('comedians.propagandaComedy.4')}</li>
+                  <li>• {t('comedians.propagandaComedy.5')}</li>
+                  <li>• {t('comedians.propagandaComedy.6')}</li>
                 </ul>
               </div>
             </div>
           </CardContent>
         </Card>
 
-        {/* The Jester's Wisdom */}
         <div className="glass-card rounded-2xl text-center p-8">
           <Smile className="h-12 w-12 text-primary mx-auto mb-4" />
           <h3 className="text-2xl font-bold text-foreground mb-4">
-            The Eternal Role of the Jester
+            {t('comedians.jesterTitle')}
           </h3>
           <p className="text-muted-foreground max-w-3xl mx-auto">
-            Throughout history, jesters were the only ones who could tell kings uncomfortable truths 
-            without losing their heads. Today's comedians serve the same function for society. 
-            When you hear a joke that makes you laugh but also makes you think, pay attention – 
-            you might be hearing an important truth wrapped in humor.
+            {t('comedians.jesterText')}
           </p>
         </div>
       </div>
