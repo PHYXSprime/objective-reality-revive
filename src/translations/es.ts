@@ -125,6 +125,22 @@ export const es = {
   'challenge.psychologicalWeakness.title': 'Debilidad Psicológica',
   'challenge.ego.title': 'Ego',
   
+  // Solutions
+  'solution.streetEpistemology.title': 'Epistemología Callejera',
+  'solution.socraticQuestioning.title': 'Cuestionamiento Socrático',
+  'solution.scientificMethod.title': 'Método Científico',
+  'solution.criticalThinking.title': 'Pensamiento Crítico',
+  'solution.comedians.title': 'Comediantes',
+  
+  // Navigation
+  'solutions.allSolutions': 'Todas las Soluciones',
+  
+  // Solutions Page
+  'solutions.subtitle': '...¡entonces qué podemos hacer al respecto?!',
+  'solutions.introduction': 'Ahora que entendemos los desafíos a la realidad objetiva, exploremos las herramientas y métodos prácticos que podemos usar para superar los sesgos cognitivos, pensar más claramente y ayudar a otros a hacer lo mismo.',
+  'solutions.practicalTools': 'Herramientas y Métodos Prácticos',
+  'solutions.practicalToolsDescription': 'Enfoques basados en evidencia para superar limitaciones cognitivas y pensar más claramente',
+  
   'learn_more': 'Aprende más',
 
   // Indoctrination - Full Section

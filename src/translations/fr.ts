@@ -125,6 +125,22 @@ export const fr = {
   'challenge.psychologicalWeakness.title': 'Faiblesse Psychologique',
   'challenge.ego.title': 'Ego',
   
+  // Solutions
+  'solution.streetEpistemology.title': 'Épistémologie de Rue',
+  'solution.socraticQuestioning.title': 'Questionnement Socratique',
+  'solution.scientificMethod.title': 'Méthode Scientifique',
+  'solution.criticalThinking.title': 'Pensée Critique',
+  'solution.comedians.title': 'Comédiens',
+  
+  // Navigation
+  'solutions.allSolutions': 'Toutes les Solutions',
+  
+  // Solutions Page
+  'solutions.subtitle': '...alors que pouvons-nous faire à ce sujet ?!',
+  'solutions.introduction': 'Maintenant que nous comprenons les défis à la réalité objective, explorons les outils et méthodes pratiques que nous pouvons utiliser pour surmonter les biais cognitifs, penser plus clairement et aider les autres à faire de même.',
+  'solutions.practicalTools': 'Outils et Méthodes Pratiques',
+  'solutions.practicalToolsDescription': 'Approches basées sur les preuves pour surmonter les limitations cognitives et penser plus clairement',
+  
   'learn_more': 'En savoir plus',
 
   // Indoctrination - Full Section

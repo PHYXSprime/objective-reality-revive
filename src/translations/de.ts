@@ -255,6 +255,22 @@ export const de = {
   'challenge.psychological_weakness.title': 'Psychologische Schwäche',
   'challenge.psychological_weakness.description': 'Emotionale Verwundbarkeiten, die das Denken beeinträchtigen',
   'challenge.ego.description': 'Wie Selbstbild Wahrnehmung und Urteil verzerrt',
+  
+  // Solutions
+  'solution.streetEpistemology.title': 'Straßen-Epistemologie',
+  'solution.socraticQuestioning.title': 'Sokratisches Fragen',
+  'solution.scientificMethod.title': 'Wissenschaftliche Methode',
+  'solution.criticalThinking.title': 'Kritisches Denken',
+  'solution.comedians.title': 'Komiker',
+  
+  // Navigation
+  'solutions.allSolutions': 'Alle Lösungen',
+  
+  // Solutions Page
+  'solutions.subtitle': '...was können wir dagegen tun?!',
+  'solutions.introduction': 'Nachdem wir die Herausforderungen für die objektive Realität verstehen, erforschen wir die praktischen Werkzeuge und Methoden, die wir verwenden können, um kognitive Verzerrungen zu überwinden, klarer zu denken und anderen dabei zu helfen.',
+  'solutions.practicalTools': 'Praktische Werkzeuge & Methoden',
+  'solutions.practicalToolsDescription': 'Evidenzbasierte Ansätze zur Überwindung kognitiver Grenzen und klarerem Denken',
 
   // Indoctrination - Full Section
   'indoctrination.title': 'Indoktrination',

@@ -2,41 +2,43 @@ import { useState } from 'react';
 import { Link, useLocation } from 'react-router-dom';
 import { MessageSquare, HelpCircle, Microscope, Lightbulb, Smile, ChevronRight, ChevronLeft } from 'lucide-react';
 import { cn } from '@/lib/utils';
+import { useLanguage } from '@/hooks/useLanguage';
 
 const solutions = [
   {
     icon: MessageSquare,
-    title: "Street Epistemology",
+    titleKey: "solution.streetEpistemology.title",
     path: "/street-epistemology",
     color: "text-blue-600 dark:text-blue-400"
   },
   {
     icon: HelpCircle,
-    title: "Socratic Questioning",
+    titleKey: "solution.socraticQuestioning.title",
     path: "/socratic-questioning",
     color: "text-green-600 dark:text-green-400"
   },
   {
     icon: Microscope,
-    title: "Scientific Method",
+    titleKey: "solution.scientificMethod.title",
     path: "/scientific-method",
     color: "text-purple-600 dark:text-purple-400"
   },
   {
     icon: Lightbulb,
-    title: "Critical Thinking",
+    titleKey: "solution.criticalThinking.title",
     path: "/critical-thinking",
     color: "text-orange-600 dark:text-orange-400"
   },
   {
     icon: Smile,
-    title: "Comedians",
+    titleKey: "solution.comedians.title",
     path: "/comedians",
     color: "text-pink-600 dark:text-pink-400"
   }
 ];
 
 export function SolutionNavigation() {
+  const { t } = useLanguage();
   const [isExpanded, setIsExpanded] = useState(false);
   const location = useLocation();
 
@@ -58,7 +60,7 @@ export function SolutionNavigation() {
         <div className="flex items-center mb-3 px-2">
           {isExpanded ? (
             <div className="flex items-center justify-between w-full">
-              <span className="text-sm font-medium text-muted-foreground">Solutions</span>
+              <span className="text-sm font-medium text-muted-foreground">{t('nav.solutions')}</span>
               <ChevronRight className="h-4 w-4 text-muted-foreground" />
             </div>
           ) : (
@@ -67,7 +69,7 @@ export function SolutionNavigation() {
         </div>
 
         {/* Navigation Items */}
-        <nav className="space-y-1">
+        <nav className="space-y-1 max-h-[70vh] overflow-y-auto">
           {solutions.map((solution) => {
             const isActive = isActivePath(solution.path);
             return (
@@ -90,7 +92,7 @@ export function SolutionNavigation() {
                 />
                 {isExpanded && (
                   <span className="text-sm font-medium truncate">
-                    {solution.title}
+                    {t(solution.titleKey)}
                   </span>
                 )}
               </Link>
@@ -111,7 +113,7 @@ export function SolutionNavigation() {
               <span className="text-xs font-bold">◄</span>
             </div>
             {isExpanded && (
-              <span className="text-sm font-medium">All Solutions</span>
+              <span className="text-sm font-medium">{t('solutions.allSolutions')}</span>
             )}
           </Link>
         </div>

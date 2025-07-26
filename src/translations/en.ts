@@ -144,7 +144,16 @@ export const en = {
   'challenge.lazy_thinking.description': 'Mental shortcuts that lead to poor decisions',
   'challenge.psychological_weakness.title': 'Psychological Weakness',
   'challenge.psychological_weakness.description': 'Emotional vulnerabilities that affect reasoning',
-  'challenge.ego.description': 'How self-image distorts perception and judgment',
+  
+  // Solutions
+  'solution.streetEpistemology.title': 'Street Epistemology',
+  'solution.socraticQuestioning.title': 'Socratic Questioning',
+  'solution.scientificMethod.title': 'Scientific Method',
+  'solution.criticalThinking.title': 'Critical Thinking',
+  'solution.comedians.title': 'Comedians',
+  
+  // Navigation
+  'solutions.allSolutions': 'All Solutions',
 
   // Censorship
   'censorship.title': 'Censorship',
@@ -953,6 +962,7 @@ export const en = {
   'solutions.subtitle': '...so what can we do about it?!',
   'solutions.introduction': 'Now that we understand the challenges to objective reality, let\'s explore the practical tools and methods we can use to overcome cognitive biases, think more clearly, and help others do the same.',
   'solutions.practicalTools': 'Practical Tools & Methods',
+  'solutions.practicalToolsDescription': 'Evidence-based approaches to overcome cognitive limitations and think more clearly',
   'solutions.streetEpistemology.title': 'Street Epistemology',
   'solutions.streetEpistemology.description': 'A gentle method of questioning that helps people examine the reliability of their beliefs without confrontation.',
   'solutions.socraticQuestioning.title': 'Socratic Questioning',
