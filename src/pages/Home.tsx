@@ -179,22 +179,24 @@ export default function Home() {
 
       {/* Consciousness Section */}
       <section className="py-8 px-4 sm:px-6 lg:px-8">
-        <div className="max-w-4xl mx-auto">
-          <Card className="glass-card transition-transform hover:scale-105 cursor-pointer">
-            <Link to="/consciousness" className="block">
-              <CardHeader className="text-center">
-                <div className="w-16 h-16 rounded-full bg-muted flex items-center justify-center mx-auto mb-4">
-                  <Eye className="h-8 w-8 text-purple-600 dark:text-purple-400" />
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 justify-center">
+            <Card className="glass-card transition-transform hover:scale-105 cursor-pointer">
+              <Link to="/consciousness" className="block p-6">
+                <div className="flex items-start space-x-4">
+                  <div className="w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                    <Eye className="h-6 w-6 text-purple-600 dark:text-purple-400" />
+                  </div>
+                  <div className="flex-1 min-w-0">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">{t('consciousness.title')}</h3>
+                    <p className="text-sm text-muted-foreground leading-relaxed">
+                      {t('consciousness.subtitle')}
+                    </p>
+                  </div>
                 </div>
-                <CardTitle className="text-2xl font-bold">
-                  {t('consciousness.title')}
-                </CardTitle>
-                <CardDescription className="text-lg">
-                  {t('consciousness.subtitle')}
-                </CardDescription>
-              </CardHeader>
-            </Link>
-          </Card>
+              </Link>
+            </Card>
+          </div>
         </div>
       </section>
 
@@ -209,15 +211,20 @@ export default function Home() {
               <h2 className="text-xl font-semibold text-orange-600 dark:text-orange-400">Challenges</h2>
             </div>
             <div className="p-8 pt-12">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
                 {challengePages.map((page, index) => (
-                  <Card key={index} className="glass-card transition-transform hover:scale-105 h-24 p-3">
-                    <Link to={page.link} className="flex items-center h-full space-x-3">
-                      <div className={`w-8 h-8 rounded-lg bg-muted flex items-center justify-center flex-shrink-0`}>
-                        <page.icon className={`h-4 w-4 ${page.color}`} />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-sm font-medium text-foreground truncate">{page.title}</h3>
+                  <Card key={index} className="glass-card transition-transform hover:scale-105">
+                    <Link to={page.link} className="block p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0`}>
+                          <page.icon className={`h-6 w-6 ${page.color}`} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-lg font-semibold text-foreground mb-2">{page.title}</h3>
+                          <p className="text-sm text-muted-foreground">
+                            Learn about {page.title.toLowerCase()} and how they affect thinking
+                          </p>
+                        </div>
                       </div>
                     </Link>
                   </Card>
@@ -233,15 +240,20 @@ export default function Home() {
               <h2 className="text-xl font-semibold text-green-600 dark:text-green-400">Solutions</h2>
             </div>
             <div className="p-8 pt-12">
-              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6 gap-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 {solutionPages.map((page, index) => (
-                  <Card key={index} className="glass-card transition-transform hover:scale-105 h-24 p-3">
-                    <Link to={page.link} className="flex items-center h-full space-x-3">
-                      <div className={`w-8 h-8 rounded-lg bg-muted flex items-center justify-center flex-shrink-0`}>
-                        <page.icon className={`h-4 w-4 ${page.color}`} />
-                      </div>
-                      <div className="flex-1 min-w-0">
-                        <h3 className="text-sm font-medium text-foreground truncate">{page.title}</h3>
+                  <Card key={index} className="glass-card transition-transform hover:scale-105">
+                    <Link to={page.link} className="block p-6">
+                      <div className="flex items-start space-x-4">
+                        <div className={`w-12 h-12 rounded-lg bg-muted flex items-center justify-center flex-shrink-0`}>
+                          <page.icon className={`h-6 w-6 ${page.color}`} />
+                        </div>
+                        <div className="flex-1 min-w-0">
+                          <h3 className="text-lg font-semibold text-foreground mb-2">{page.title}</h3>
+                          <p className="text-sm text-muted-foreground">
+                            Discover {page.title.toLowerCase()} techniques for better reasoning
+                          </p>
+                        </div>
                       </div>
                     </Link>
                   </Card>
