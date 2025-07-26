@@ -2,7 +2,7 @@ import { ExternalLink, Brain, Users, Globe, Lightbulb } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Dialog, DialogContent, DialogTrigger } from '@/components/ui/dialog';
+import { Dialog, DialogContent, DialogTrigger, DialogTitle, DialogDescription } from '@/components/ui/dialog';
 import { ConsciousnessTable } from '@/components/ConsciousnessTable';
 import { PHYXSTable } from '@/components/PHYXSTable';
 import { useAQALMapData } from '@/hooks/useAQALMapData';
@@ -179,7 +179,13 @@ export default function Consciousness() {
                       />
                     </button>
                   </DialogTrigger>
-                  <DialogContent className="max-w-4xl max-h-[90vh] p-4">
+                  <DialogContent className="max-w-4xl max-h-[90vh] p-4 z-[9999]">
+                    <DialogTitle className="sr-only">
+                      {t('consciousness.linesOfDevelopment.title')} - Full Screen View
+                    </DialogTitle>
+                    <DialogDescription className="sr-only">
+                      {t('consciousness.linesOfDevelopment.description')}
+                    </DialogDescription>
                     <img 
                       src={linesOfDevelopmentImage} 
                       alt="Lines of Development Diagram" 
