@@ -17,12 +17,13 @@ import { ChallengeNavigation } from '@/components/ChallengeNavigation';
 import { PageViewCounter } from '@/components/PageViewCounter';
 
 export default function LogicalFallacies() {
-  const { t, language } = useLanguage();
+  const { t, language, isLoading: translationsLoading } = useLanguage();
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
   // Helper function to get translated content
   const getTranslatedFallacy = (fallacy: LogicalFallacy) => {
+    if (translationsLoading) return fallacy; // Return original while loading
     if (language !== 'en' && logicalFallaciesTranslations[language as keyof typeof logicalFallaciesTranslations]?.[fallacy.name]) {
       const translation = logicalFallaciesTranslations[language as keyof typeof logicalFallaciesTranslations][fallacy.name];
       return {
@@ -41,7 +42,7 @@ export default function LogicalFallacies() {
     { value: 'all', label: t('filter.all') },
     ...uniqueCategories.map(category => ({ 
       value: category, 
-      label: t(`category.${category}`)
+      label: t(`category.${category}`) || category
     }))
   ];
 

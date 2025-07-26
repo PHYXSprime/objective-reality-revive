@@ -17,10 +17,13 @@ import { ChallengeNavigation } from '@/components/ChallengeNavigation';
 import { PageViewCounter } from '@/components/PageViewCounter';
 
 export default function CognitiveBiases() {
-  const { t, language } = useLanguage();
+  const { t, language, isLoading: translationsLoading } = useLanguage();
   const { biases, getTranslatedBias, loading } = useCognitiveBiases(language);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
+
+  // Wait for both translations and biases to load
+  const isLoading = translationsLoading || loading;
 
   // Generate categories dynamically from the data
   const uniqueCategories = [...new Set(biases.map(bias => bias.category))];
@@ -28,7 +31,7 @@ export default function CognitiveBiases() {
     { value: 'all', label: t('filter.all') },
     ...uniqueCategories.map(category => ({
       value: category,
-      label: t(`category.${category}` as any)
+      label: t(`category.${category}` as any) || category
     }))
   ];
 
@@ -51,110 +54,130 @@ export default function CognitiveBiases() {
   };
 
   return (
-    <div className="min-h-screen gradient-bg relative overflow-hidden">
-      <PageViewCounter />
-      {/* Background Effects */}
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
-      <div className="absolute inset-0 bg-grid-pattern opacity-5" />
+    <div className="min-h-screen bg-background relative overflow-hidden">
+      {/* Background effects */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-background to-accent/5" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_30%_20%,rgba(120,119,198,0.1),transparent_50%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_70%_80%,rgba(74,144,226,0.1),transparent_50%)]" />
       
-      <div className="relative z-10 py-8 pr-20">
+      <div className="relative z-10">
+        <PageViewCounter />
         <ChallengeNavigation />
-        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <div className="container mx-auto px-4 py-8">
           {/* Hero Section */}
-          <div className="text-center mb-16">
-            <div className="glass-card rounded-3xl p-12 max-w-4xl mx-auto border border-primary/20 shadow-2xl">
-              <h1 className="text-5xl font-bold text-foreground mb-6 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+          <div className="text-center mb-12">
+            <div className="glass-card rounded-3xl p-8 max-w-4xl mx-auto border border-primary/20 shadow-2xl">
+              <h1 className="text-4xl font-bold text-foreground mb-4 bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 {t('biases.title')}
               </h1>
-              <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+              <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
                 {t('biases.description')}
               </p>
             </div>
           </div>
 
-        {/* Search and Filter Controls */}
-        <div className="flex flex-col sm:flex-row gap-4 mb-8">
-          <div className="relative flex-1">
-            <Search className="absolute left-3 top-3 h-4 w-4 text-muted-foreground" />
-            <Input
-              placeholder={t('search.placeholder')}
-              value={searchTerm}
-              onChange={(e) => setSearchTerm(e.target.value)}
-              className="pl-10 bg-background border-border"
-            />
-          </div>
-          <Select value={selectedCategory} onValueChange={setSelectedCategory}>
-            <SelectTrigger className="w-[200px]">
-              <Filter className="h-4 w-4 mr-2" />
-              <SelectValue placeholder={t('filter.by_category')} />
-            </SelectTrigger>
-            <SelectContent className="z-[9999]">
-              {categories.map((category) => (
-                <SelectItem key={category.value} value={category.value}>
-                  {category.label}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
-        </div>
+          {/* Loading State */}
+          {isLoading && (
+            <div className="text-center py-12">
+              <div className="glass-card p-8 max-w-md mx-auto">
+                <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-primary mx-auto mb-4"></div>
+                <p className="text-muted-foreground">Loading cognitive biases...</p>
+              </div>
+            </div>
+          )}
 
-        {/* Results Count */}
-        <div className="mb-6">
-          <p className="text-muted-foreground">
-            {loading ? 'Loading...' : t('showing_results').replace('{count}', filteredBiases.length.toString()).replace('{total}', biases.length.toString())}
-          </p>
-        </div>
+          {/* Search and Filter Controls - Only show when not loading */}
+          {!isLoading && (
+            <div className="glass-card p-6 mb-8 max-w-4xl mx-auto border border-primary/20">
+              <div className="flex flex-col md:flex-row gap-4">
+                <div className="flex-1 relative">
+                  <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-muted-foreground h-4 w-4" />
+                  <Input
+                    placeholder={t('search.placeholder')}
+                    value={searchTerm}
+                    onChange={(e) => setSearchTerm(e.target.value)}
+                    className="pl-10"
+                  />
+                </div>
+                <div className="flex items-center gap-2">
+                  <Filter className="h-4 w-4 text-muted-foreground" />
+                  <Select value={selectedCategory} onValueChange={setSelectedCategory}>
+                    <SelectTrigger className="w-48">
+                      <SelectValue placeholder={t('filter.category')} />
+                    </SelectTrigger>
+                    <SelectContent>
+                      {categories.map((category) => (
+                        <SelectItem key={category.value} value={category.value}>
+                          {category.label}
+                        </SelectItem>
+                      ))}
+                    </SelectContent>
+                  </Select>
+                </div>
+              </div>
+              
+              <div className="mt-4 text-sm text-muted-foreground">
+                {filteredBiases.length === 1 
+                  ? t('results.singular').replace('{count}', '1')
+                  : t('results.plural').replace('{count}', filteredBiases.length.toString())
+                }
+              </div>
+            </div>
+          )}
 
-        {/* Biases Grid */}
-        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-          {filteredBiases.map((bias, index) => {
-            const translatedBias = getTranslatedBias(bias);
-            return (
-              <Card key={index} className="h-full glass-card float-card hover:glow-primary transition-all duration-300">
-                <CardHeader>
-                  <div className="flex items-start justify-between">
-                    <CardTitle className="text-lg leading-tight">
-                      {translatedBias.name}
-                    </CardTitle>
-                    <Badge className={getCategoryColor(bias.category)}>
-                      {t(`category.${bias.category}`)}
-                    </Badge>
+          {/* Biases Grid - Only show when not loading */}
+          {!isLoading && (
+            <>
+              {filteredBiases.length > 0 ? (
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                  {filteredBiases.map((bias) => {
+                    const translatedBias = getTranslatedBias(bias);
+                    return (
+                      <Card key={bias.id} className="glass-card transition-transform hover:scale-105 border border-primary/10">
+                        <CardHeader>
+                          <div className="flex items-start justify-between">
+                            <CardTitle className="text-lg text-foreground pr-4">
+                              {translatedBias.name}
+                            </CardTitle>
+                            <Badge variant="secondary" className={getCategoryColor(bias.category)}>
+                              {t(`category.${bias.category}` as any) || bias.category}
+                            </Badge>
+                          </div>
+                        </CardHeader>
+                        <CardContent>
+                          <CardDescription className="text-muted-foreground mb-4 leading-relaxed">
+                            {translatedBias.definition}
+                          </CardDescription>
+                          <div className="bg-muted/50 p-3 rounded-lg">
+                            <p className="text-sm text-muted-foreground italic">
+                              <strong>Example:</strong> {translatedBias.example}
+                            </p>
+                          </div>
+                        </CardContent>
+                      </Card>
+                    );
+                  })}
+                </div>
+              ) : (
+                <div className="text-center py-12">
+                  <div className="glass-card p-8 max-w-md mx-auto">
+                    <h3 className="text-lg font-semibold text-foreground mb-2">{t('no-results.title')}</h3>
+                    <p className="text-muted-foreground mb-4">{t('no-results.description')}</p>
+                    <Button 
+                      onClick={() => {
+                        setSearchTerm('');
+                        setSelectedCategory('all');
+                      }}
+                      variant="outline"
+                    >
+                      {t('no-results.clear')}
+                    </Button>
                   </div>
-                </CardHeader>
-                <CardContent className="space-y-4">
-                  <CardDescription className="text-sm leading-relaxed">
-                    {translatedBias.definition}
-                  </CardDescription>
-                  <div>
-                    <h4 className="font-medium text-sm text-foreground mb-2">{t('example')}:</h4>
-                    <p className="text-sm text-muted-foreground italic leading-relaxed">
-                      {translatedBias.example}
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            );
-          })}
-        </div>
-
-        {/* No Results */}
-        {filteredBiases.length === 0 && (
-          <div className="text-center py-12">
-            <p className="text-muted-foreground text-lg">
-              {t('no_results')}
-            </p>
-            <Button
-              variant="outline"
-              className="mt-4"
-              onClick={() => {
-                setSearchTerm('');
-                setSelectedCategory('all');
-              }}
-            >
-              {t('clear_filters')}
-            </Button>
-          </div>
-        )}
+                </div>
+              )}
+            </>
+          )}
         </div>
       </div>
     </div>
