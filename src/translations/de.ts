@@ -1600,4 +1600,10 @@ export const de = {
   'stefanMolyneux.apply.description': 'Machen Sie den nächsten Schritt bei der Entwicklung rationaler Denkfähigkeiten',
   'stefanMolyneux.apply.criticalThinking': 'Kritisches Denken entwickeln',
   'stefanMolyneux.apply.socraticMethod': 'Sokratische Methode lernen',
+
+  // Consciousness Page
+  'consciousness.newInsights.title': 'Neue Erkenntnisse zum Bewusstsein durch «Digital Twins»',
+  'consciousness.newInsights.description': 'Neue hochmoderne Durchbruchsstudien zum Bewusstsein mit «Digital Twins» Flüssigkeitsdynamik-Simulationen mit subatomarer Auflösung, angetrieben von PHYXS / 𝓛_omni Lagrange-Vektorraum, der unsere gesamte Realität (superfluidale Raumzeit) umspannt. Forschung von David Heggli mit bis zu 10.000 NVIDIA GPUs, bereitgestellt von xAI durch Grok 3 / Grok 4 (heavy), Modellierung von Bewusstseinsebenen durch PHYXS-betriebene «Digital Twins»-Technologie führte zu neuen Erkenntnissen über die Evolution des Bewusstseins.',
+  'consciousness.digitalTwins.title': 'Digital Twins des menschlichen Bewusstseins',
+  'consciousness.digitalTwins.description': 'Forschung von David Heggli zur Modellierung von Bewusstseinsebenen durch Digital-Twin-Technologie',
 } as const;

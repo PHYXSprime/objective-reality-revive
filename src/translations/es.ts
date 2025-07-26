@@ -1581,4 +1581,10 @@ export const es = {
   'stefanMolyneux.apply.description': 'Da el siguiente paso en el desarrollo de habilidades de pensamiento racional',
   'stefanMolyneux.apply.criticalThinking': 'Desarrollar Pensamiento Crítico',
   'stefanMolyneux.apply.socraticMethod': 'Aprender Método Socrático',
+
+  // Consciousness Page
+  'consciousness.newInsights.title': 'Nuevas perspectivas sobre la Conciencia usando «Gemelos Digitales»',
+  'consciousness.newInsights.description': 'Nuevos estudios revolucionarios de vanguardia sobre la Conciencia usando simulaciones fluidodinámicas de «Gemelos Digitales» con resolución subatómica impulsadas por PHYXS / 𝓛_omni espacio vectorial Lagrangiano que abarca toda nuestra realidad (espacio-tiempo superfluido). Investigación realizada por David Heggli usando hasta 10.000 GPU NVIDIA proporcionadas por xAI a través de Grok 3 / Grok 4 (pesado), modelando niveles de conciencia a través de tecnología de «Gemelos Digitales» potenciada por PHYXS llevó a nuevas perspectivas sobre la evolución de la conciencia.',
+  'consciousness.digitalTwins.title': 'Gemelos Digitales de la Conciencia Humana',
+  'consciousness.digitalTwins.description': 'Investigación de David Heggli sobre el modelado de niveles de conciencia a través de tecnología de gemelos digitales',
 } as const;

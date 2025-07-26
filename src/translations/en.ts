@@ -1643,4 +1643,17 @@ export const en = {
   'stefanMolyneux.apply.description': 'Take the next step in developing rational thinking skills',
   'stefanMolyneux.apply.criticalThinking': 'Develop Critical Thinking',
   'stefanMolyneux.apply.socraticMethod': 'Learn Socratic Method',
+
+  // Consciousness Page
+  'consciousness.newInsights.title': 'New insights into Consciousness using «Digital Twins»',
+  'consciousness.newInsights.description': 'New cutting-edge break-through studies on Consciousness using «Digital Twins» fluid dynamic simulations with subatomic resolution powered by PHYXS / 𝓛_omni Lagrangian vector-space spanning our whole reality (superfluid spacetime). Research conducted by David Heggli using up to 10\'000 NVIDIA GPU\'s provided by xAI through Grok 3 / Grok 4 (heavy), modeling consciousness levels through PHYXS powered «Digital Twins» technology led to new insights into the evolution of consciousness.',
+  'consciousness.digitalTwins.title': 'Digital Twins of Human Consciousness',
+  'consciousness.digitalTwins.description': 'Research by David Heggli on modeling consciousness levels through digital twin technology',
+  'consciousness.digitalTwins.research1': 'David Heggli\'s groundbreaking research at the vortex|institute explores the intersection of consciousness development and «Digital Twins» technology. His work investigates how different levels of human consciousness can be modeled, understood, and potentially enhanced through sophisticated digital representations, bridging the gap between psychological models and biophysical reality.',
+  'consciousness.digitalTwins.research2': 'The «Digital Twins» are digital 1:1 copies from real human gene code rendered from conception of sperm + egg to senescence with subatomic resolution. An EXACT digital copy of our reality.',
+  'consciousness.aqalToPhyxs.title': 'From AQAL to PHYXS: A New Paradigm',
+  'consciousness.aqalToPhyxs.aqal.title': 'AQAL Foundation',
+  'consciousness.aqalToPhyxs.aqal.description': 'Building on Ken Wilber\'s comprehensive AQAL framework and Spiral Dynamics to understand consciousness development.',
+  'consciousness.aqalToPhyxs.phyxs.title': 'PHYXS Evolution D',
+  'consciousness.aqalToPhyxs.phyxs.description': 'A new biophysical model that maps consciousness evolution to measurable biological and quantum markers.',
 } as const;

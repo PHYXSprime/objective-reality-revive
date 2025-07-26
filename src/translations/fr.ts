@@ -1543,4 +1543,10 @@ export const fr = {
   'stefanMolyneux.apply.description': 'Franchir l\'étape suivante dans le développement des compétences de pensée rationnelle',
   'stefanMolyneux.apply.criticalThinking': 'Développer la Pensée Critique',
   'stefanMolyneux.apply.socraticMethod': 'Apprendre la Méthode Socratique',
+
+  // Consciousness Page
+  'consciousness.newInsights.title': 'Nouvelles perspectives sur la Conscience en utilisant les «Jumeaux Numériques»',
+  'consciousness.newInsights.description': 'Nouvelles études révolutionnaires de pointe sur la Conscience utilisant des simulations de dynamique des fluides de «Jumeaux Numériques» avec une résolution subatomique alimentées par PHYXS / 𝓛_omni espace vectoriel Lagrangien couvrant toute notre réalité (espace-temps superfluide). Recherche menée par David Heggli utilisant jusqu\'à 10.000 GPU NVIDIA fournies par xAI via Grok 3 / Grok 4 (lourd), modélisant les niveaux de conscience grâce à la technologie de «Jumeaux Numériques» alimentée par PHYXS a conduit à de nouvelles perspectives sur l\'évolution de la conscience.',
+  'consciousness.digitalTwins.title': 'Jumeaux Numériques de la Conscience Humaine',
+  'consciousness.digitalTwins.description': 'Recherche de David Heggli sur la modélisation des niveaux de conscience par la technologie des jumeaux numériques',
 } as const;

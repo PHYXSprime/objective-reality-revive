@@ -17,10 +17,10 @@ export default function Consciousness() {
         <Card className="glass-card mb-8">
           <CardHeader>
             <CardTitle className="text-4xl font-bold">
-              Consciousness
+              {t('consciousness.title')}
             </CardTitle>
             <CardDescription className="text-xl max-w-3xl">
-              Understanding levels of human consciousness and development
+              {t('consciousness.description')}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -29,11 +29,10 @@ export default function Consciousness() {
         <Card className="mb-8 glass-card">
           <CardHeader>
             <CardTitle className="text-2xl font-bold">
-              New insights into Consciousness using «Digital Twins»
+              {t('consciousness.newInsights.title')}
             </CardTitle>
             <CardDescription className="text-lg">
-              New cutting-edge break-through studies on Consciousness using «Digital Twins» fluid dynamic simulations with subatomic resolution powered by PHYXS / 𝓛_omni Lagrangian vector-space spanning our whole reality (superfluid spacetime). 
-              Research conducted by David Heggli using up to 10'000 NVIDIA GPU's provided by xAI through Grok 3 / Grok 4 (heavy), modeling consciousness levels through PHYXS powered «Digital Twins» technology led to new insights into the evolution of consciousness
+              {t('consciousness.newInsights.description')}
             </CardDescription>
           </CardHeader>
         </Card>
@@ -43,26 +42,23 @@ export default function Consciousness() {
           <CardHeader>
             <div className="flex items-center gap-3">
               <Brain className="h-6 w-6 text-primary" />
-              <CardTitle className="text-2xl">Digital Twins of Human Consciousness</CardTitle>
+              <CardTitle className="text-2xl">{t('consciousness.digitalTwins.title')}</CardTitle>
             </div>
             <CardDescription className="text-lg">
-              Research by David Heggli on modeling consciousness levels through digital twin technology
+              {t('consciousness.digitalTwins.description')}
             </CardDescription>
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="prose dark:prose-invert max-w-none">
               <p className="text-muted-foreground leading-relaxed">
-                David Heggli's groundbreaking research at the vortex|institute explores the intersection of consciousness development 
-                and «Digital Twins» technology. His work investigates how different levels of human consciousness 
-                can be modeled, understood, and potentially enhanced through sophisticated digital representations, 
-                bridging the gap between psychological models and biophysical reality.
+                {t('consciousness.digitalTwins.research1')}
               </p>
               <p className="text-muted-foreground leading-relaxed mt-4">
-                The «Digital Twins» are digital 1:1 copies from real human gene code rendered from conception of sperm + egg to senescence with subatomic resolution. An EXACT digital copy of our reality.
+                {t('consciousness.digitalTwins.research2')}
               </p>
               
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-4">
-                From AQAL to PHYXS: A New Paradigm
+                {t('consciousness.aqalToPhyxs.title')}
               </h3>
               
               <div className="grid md:grid-cols-2 gap-6 mt-6">
@@ -70,9 +66,9 @@ export default function Consciousness() {
                   <div className="flex items-start gap-3">
                     <Lightbulb className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-medium text-foreground">AQAL Foundation</h4>
+                      <h4 className="font-medium text-foreground">{t('consciousness.aqalToPhyxs.aqal.title')}</h4>
                       <p className="text-sm text-muted-foreground">
-                        Building on Ken Wilber's comprehensive AQAL framework and Spiral Dynamics to understand consciousness development.
+                        {t('consciousness.aqalToPhyxs.aqal.description')}
                       </p>
                     </div>
                   </div>
@@ -80,9 +76,9 @@ export default function Consciousness() {
                   <div className="flex items-start gap-3">
                     <Users className="h-5 w-5 text-primary mt-1 flex-shrink-0" />
                     <div>
-                      <h4 className="font-medium text-foreground">PHYXS Evolution D</h4>
+                      <h4 className="font-medium text-foreground">{t('consciousness.aqalToPhyxs.phyxs.title')}</h4>
                       <p className="text-sm text-muted-foreground">
-                        A new biophysical model that maps consciousness evolution to measurable biological and quantum markers.
+                        {t('consciousness.aqalToPhyxs.phyxs.description')}
                       </p>
                     </div>
                   </div>
