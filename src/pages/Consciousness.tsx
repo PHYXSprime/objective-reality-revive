@@ -4,11 +4,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/com
 import { Button } from '@/components/ui/button';
 import { ConsciousnessTable } from '@/components/ConsciousnessTable';
 import { PHYXSTable } from '@/components/PHYXSTable';
-import { aqalMapData } from '@/data/aqalMapData';
-import { phyxsMapData } from '@/data/phyxsMapData';
+import { useAQALMapData } from '@/hooks/useAQALMapData';
+import { usePHYXSMapData } from '@/hooks/usePHYXSMapData';
 
 export default function Consciousness() {
   const { t } = useLanguage();
+  const aqalMapData = useAQALMapData();
+  const phyxsMapData = usePHYXSMapData();
 
   return (
     <div className="min-h-screen py-8">
