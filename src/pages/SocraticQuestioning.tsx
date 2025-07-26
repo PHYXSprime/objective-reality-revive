@@ -1,7 +1,9 @@
-import { HelpCircle, Lightbulb, Search, Target, Brain, Users } from 'lucide-react';
+import { HelpCircle, Lightbulb, Search, Target, Brain, Users, ExternalLink } from 'lucide-react';
 import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { Button } from '@/components/ui/button';
 import { SolutionNavigation } from '@/components/SolutionNavigation';
+import { Link } from 'react-router-dom';
 
 export default function SocraticQuestioning() {
   const { t } = useLanguage();
@@ -332,9 +334,17 @@ export default function SocraticQuestioning() {
             <h3 className="text-2xl font-bold text-foreground mb-4">
               {t('socraticQuestioning.startToday')}
             </h3>
-            <p className="text-muted-foreground max-w-3xl mx-auto">
+            <p className="text-muted-foreground max-w-3xl mx-auto mb-6">
               {t('socraticQuestioning.startTodayDesc')}
             </p>
+            <div className="flex gap-4 justify-center flex-wrap">
+              <Button asChild size="lg" className="flex items-center gap-2">
+                <Link to="/street-epistemology">
+                  <ExternalLink className="h-4 w-4" />
+                  Learn Street Epistemology
+                </Link>
+              </Button>
+            </div>
           </CardContent>
         </Card>
       </div>
