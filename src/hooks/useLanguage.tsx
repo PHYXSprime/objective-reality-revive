@@ -12,7 +12,15 @@ interface LanguageContextType {
   error: string | null;
 }
 
-const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
+const defaultContextValue: LanguageContextType = {
+  language: 'en',
+  setLanguage: () => {},
+  t: (key: string) => key,
+  isLoading: false,
+  error: null,
+};
+
+const LanguageContext = createContext<LanguageContextType>(defaultContextValue);
 
 // Cache for loaded translations
 const translationCache = new Map<Language, Record<string, string>>();
@@ -20,7 +28,7 @@ const translationCache = new Map<Language, Record<string, string>>();
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>('en');
   const [translations, setTranslations] = useState<Record<string, string>>({});
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState<string | null>(null);
 
   const loadLanguageTranslations = async (lang: Language) => {
@@ -69,8 +77,5 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
 
 export function useLanguage() {
   const context = useContext(LanguageContext);
-  if (!context) {
-    throw new Error('useLanguage must be used within LanguageProvider');
-  }
   return context;
 }
