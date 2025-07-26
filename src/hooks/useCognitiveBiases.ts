@@ -19,8 +19,16 @@ export function useCognitiveBiases(language: string = 'en') {
       try {
         // Load main English data
         const englishResponse = await fetch('/New list of cognitive biases.csv');
+        if (!englishResponse.ok) {
+          throw new Error(`HTTP error! status: ${englishResponse.status}`);
+        }
         const englishText = await englishResponse.text();
         const englishBiases = parseCSV(englishText);
+        
+        if (englishBiases.length === 0) {
+          console.warn('No cognitive biases loaded from CSV');
+        }
+        
         setBiases(englishBiases);
 
         // Load translations if not English
@@ -28,24 +36,28 @@ export function useCognitiveBiases(language: string = 'en') {
           const translationFile = `/New list of cognitive biases ${language.toUpperCase()}.csv`;
           try {
             const translationResponse = await fetch(translationFile);
-            const translationText = await translationResponse.text();
-            const translatedBiases = parseCSV(translationText);
-            
-            const translationMap: BiasTranslations = {};
-            translatedBiases.forEach(bias => {
-              translationMap[bias.id.toString()] = {
-                name: bias.name,
-                definition: bias.definition,
-                example: bias.example
-              };
-            });
-            setTranslations(translationMap);
+            if (translationResponse.ok) {
+              const translationText = await translationResponse.text();
+              const translatedBiases = parseCSV(translationText);
+              
+              const translationMap: BiasTranslations = {};
+              translatedBiases.forEach(bias => {
+                translationMap[bias.id.toString()] = {
+                  name: bias.name,
+                  definition: bias.definition,
+                  example: bias.example
+                };
+              });
+              setTranslations(translationMap);
+            }
           } catch (error) {
             console.warn(`Could not load translations for ${language}:`, error);
           }
         }
       } catch (error) {
         console.error('Error loading cognitive biases:', error);
+        // Set empty array to avoid infinite loading state
+        setBiases([]);
       } finally {
         setLoading(false);
       }

@@ -28,12 +28,13 @@ const translationCache = new Map<Language, Record<string, string>>();
 export function LanguageProvider({ children }: { children: ReactNode }) {
   const [language, setLanguage] = useState<Language>('en');
   const [translations, setTranslations] = useState<Record<string, string>>({});
-  const [isLoading, setIsLoading] = useState(false);
+  const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   const loadLanguageTranslations = async (lang: Language) => {
     if (translationCache.has(lang)) {
       setTranslations(translationCache.get(lang)!);
+      setIsLoading(false);
       return;
     }
 
@@ -47,6 +48,16 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
     } catch (err) {
       setError(`Failed to load translations for ${lang}`);
       console.error('Translation loading error:', err);
+      // Fallback to English if current language fails
+      if (lang !== 'en') {
+        try {
+          const fallbackTranslations = await loadTranslations('en');
+          translationCache.set('en', fallbackTranslations);
+          setTranslations(fallbackTranslations);
+        } catch (fallbackErr) {
+          console.error('Fallback translation loading failed:', fallbackErr);
+        }
+      }
     } finally {
       setIsLoading(false);
     }
@@ -57,6 +68,8 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   }, [language]);
 
   const t = (key: TranslationKey | string): string => {
+    // Return the key if translations are still loading to prevent showing raw keys
+    if (isLoading) return key;
     return translations[key as TranslationKey] || key;
   };
 
