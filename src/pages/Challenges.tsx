@@ -3,6 +3,7 @@ import { AlertTriangle, Users, Search, Shield, Brain, Target, Eye, FileText, Mes
 import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
+import { PageViewCounter } from '@/components/PageViewCounter';
 
 export default function Challenges() {
   const { t } = useLanguage();
@@ -89,6 +90,7 @@ export default function Challenges() {
 
   return (
     <div className="min-h-screen gradient-bg relative overflow-hidden">
+      <PageViewCounter />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />

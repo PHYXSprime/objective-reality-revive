@@ -8,6 +8,7 @@ import { PHYXSTable } from '@/components/PHYXSTable';
 import { useAQALMapData } from '@/hooks/useAQALMapData';
 import { usePHYXSMapData } from '@/hooks/usePHYXSMapData';
 import linesOfDevelopmentImage from '@/assets/lines-of-development-diagram.jpg';
+import { PageViewCounter } from '@/components/PageViewCounter';
 
 export default function Consciousness() {
   const { t } = useLanguage();
@@ -16,6 +17,7 @@ export default function Consciousness() {
 
   return (
     <div className="min-h-screen gradient-bg relative overflow-hidden">
+      <PageViewCounter />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />

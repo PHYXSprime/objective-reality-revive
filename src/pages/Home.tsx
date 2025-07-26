@@ -3,6 +3,7 @@ import { Brain, AlertTriangle, Eye, ArrowRight, Target, Users, Shield } from 'lu
 import { useLanguage } from '@/hooks/useLanguage';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
+import { PageViewCounter } from '@/components/PageViewCounter';
 
 export default function Home() {
   const { t } = useLanguage();
@@ -74,6 +75,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen gradient-bg relative overflow-hidden">
+      <PageViewCounter />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />

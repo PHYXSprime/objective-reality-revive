@@ -14,6 +14,7 @@ import {
   SelectValue,
 } from '@/components/ui/select';
 import { ChallengeNavigation } from '@/components/ChallengeNavigation';
+import { PageViewCounter } from '@/components/PageViewCounter';
 
 export default function LogicalFallacies() {
   const { t, language } = useLanguage();
@@ -66,6 +67,7 @@ export default function LogicalFallacies() {
 
   return (
     <div className="min-h-screen gradient-bg relative overflow-hidden">
+      <PageViewCounter />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />
