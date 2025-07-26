@@ -33,16 +33,16 @@ const queryClient = new QueryClient();
 const App = () => (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
-      <LanguageProvider>
-        {/* Background Elements */}
-        <div className="starfield-container"></div>
-        <div className="earth-container"></div>
-        
-        {/* Main App Content */}
-        <div className="app-content" style={{position: 'relative', zIndex: 1000}}>
-          <Toaster />
-          <Sonner />
-          <BrowserRouter>
+      <BrowserRouter>
+        <LanguageProvider>
+          {/* Background Elements */}
+          <div className="starfield-container"></div>
+          <div className="earth-container"></div>
+          
+          {/* Main App Content */}
+          <div className="app-content" style={{position: 'relative', zIndex: 1000}}>
+            <Toaster />
+            <Sonner />
             <Navigation />
             <Routes>
               <Route path="/" element={<Index />} />
@@ -67,9 +67,9 @@ const App = () => (
               <Route path="/critical-thinking" element={<CriticalThinking />} />
               <Route path="*" element={<NotFound />} />
             </Routes>
-          </BrowserRouter>
-        </div>
-      </LanguageProvider>
+          </div>
+        </LanguageProvider>
+      </BrowserRouter>
     </TooltipProvider>
   </QueryClientProvider>
 );
