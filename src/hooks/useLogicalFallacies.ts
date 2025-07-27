@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 
-export interface CognitiveBias {
+export interface LogicalFallacy {
   id: number;
   name: string;
   definition: string;
@@ -8,39 +8,39 @@ export interface CognitiveBias {
   category: string;
 }
 
-export function useCognitiveBiases(language: string = 'en') {
-  const [biases, setBiases] = useState<CognitiveBias[]>([]);
+export function useLogicalFallacies(language: string = 'en') {
+  const [fallacies, setFallacies] = useState<LogicalFallacy[]>([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    const loadBiases = async () => {
+    const loadFallacies = async () => {
       setLoading(true);
       try {
-        console.log('Loading cognitive biases from API for language:', language);
+        console.log('Loading logical fallacies from API for language:', language);
         
-        const response = await fetch(`/api/cognitive-biases.php?lang=${language}`);
+        const response = await fetch(`/api/logical-fallacies.php?lang=${language}`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
         
         const data = await response.json();
-        console.log('Loaded biases from API, count:', data.length);
+        console.log('Loaded fallacies from API, count:', data.length);
         
         if (Array.isArray(data)) {
-          setBiases(data);
+          setFallacies(data);
         } else {
           throw new Error('Invalid response format');
         }
       } catch (error) {
-        console.error('Error loading cognitive biases from API:', error);
-        setBiases([]);
+        console.error('Error loading logical fallacies from API:', error);
+        setFallacies([]);
       } finally {
         setLoading(false);
       }
     };
 
-    loadBiases();
+    loadFallacies();
   }, [language]);
 
-  return { biases, loading };
+  return { fallacies, loading };
 }

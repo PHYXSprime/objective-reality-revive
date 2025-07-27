@@ -18,7 +18,7 @@ import { PageViewCounter } from '@/components/PageViewCounter';
 
 export default function CognitiveBiases() {
   const { t, language, isLoading: translationsLoading } = useLanguage();
-  const { biases, getTranslatedBias, loading } = useCognitiveBiases(language);
+  const { biases, loading } = useCognitiveBiases(language);
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string>('all');
 
@@ -36,9 +36,8 @@ export default function CognitiveBiases() {
   ];
 
   const filteredBiases = biases.filter(bias => {
-    const translatedBias = getTranslatedBias(bias);
-    const matchesSearch = translatedBias.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-                         translatedBias.definition.toLowerCase().includes(searchTerm.toLowerCase());
+    const matchesSearch = bias.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
+                         bias.definition.toLowerCase().includes(searchTerm.toLowerCase());
     const matchesCategory = selectedCategory === 'all' || bias.category === selectedCategory;
     return matchesSearch && matchesCategory;
   });
@@ -130,33 +129,30 @@ export default function CognitiveBiases() {
             <>
               {filteredBiases.length > 0 ? (
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                  {filteredBiases.map((bias) => {
-                    const translatedBias = getTranslatedBias(bias);
-                    return (
-                      <Card key={bias.id} className="glass-card transition-transform hover:scale-105 border border-primary/10">
-                        <CardHeader>
-                          <div className="flex items-start justify-between">
-                            <CardTitle className="text-lg text-foreground pr-4">
-                              {translatedBias.name}
-                            </CardTitle>
-                            <Badge variant="secondary" className={getCategoryColor(bias.category)}>
-                              {t(`category.${bias.category}` as any) || bias.category}
-                            </Badge>
-                          </div>
-                        </CardHeader>
-                        <CardContent>
-                          <CardDescription className="text-muted-foreground mb-4 leading-relaxed">
-                            {translatedBias.definition}
-                          </CardDescription>
-                          <div className="bg-muted/50 p-3 rounded-lg">
-                            <p className="text-sm text-muted-foreground italic">
-                              <strong>Example:</strong> {translatedBias.example}
-                            </p>
-                          </div>
-                        </CardContent>
-                      </Card>
-                    );
-                  })}
+                  {filteredBiases.map((bias) => (
+                    <Card key={`${bias.id}-${language}`} className="glass-card transition-transform hover:scale-105 border border-primary/10">
+                      <CardHeader>
+                        <div className="flex items-start justify-between">
+                          <CardTitle className="text-lg text-foreground pr-4">
+                            {bias.name}
+                          </CardTitle>
+                          <Badge variant="secondary" className={getCategoryColor(bias.category)}>
+                            {t(`category.${bias.category}` as any) || bias.category}
+                          </Badge>
+                        </div>
+                      </CardHeader>
+                      <CardContent>
+                        <CardDescription className="text-muted-foreground mb-4 leading-relaxed">
+                          {bias.definition}
+                        </CardDescription>
+                        <div className="bg-muted/50 p-3 rounded-lg">
+                          <p className="text-sm text-muted-foreground italic">
+                            <strong>Example:</strong> {bias.example}
+                          </p>
+                        </div>
+                      </CardContent>
+                    </Card>
+                  ))}
                 </div>
               ) : (
                 <div className="text-center py-12">
