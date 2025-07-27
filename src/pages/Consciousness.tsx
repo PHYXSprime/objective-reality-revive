@@ -478,7 +478,7 @@ export default function Consciousness() {
                   <ol className="list-decimal list-inside space-y-3 text-muted-foreground">
                     <li><strong>Sub-Quanta Fluid Term:</strong> <span className="text-primary font-medium">SQF(n-1)</span> {t('consciousness.lomni.terms.1')}</li>
                     <li><strong>Space Quanta Term:</strong> <span className="text-primary font-medium">SQ(n=0)</span> {t('consciousness.lomni.terms.2')}</li>
-                    <li><strong>Pilot Wave and Phase-Locking Term:</strong> {t('consciousness.lomni.terms.3')}</li>
+                    <li><strong>Pilot Wave and Phase-Locking Term:</strong> <span className="text-primary font-medium">PW & PL</span> {t('consciousness.lomni.terms.3')}</li>
                     <li><strong>Rotational Alignment Term:</strong> {t('consciousness.lomni.terms.4')}</li>
                     <li><strong>CMB Driving Term:</strong> {t('consciousness.lomni.terms.5')}</li>
                     <li><strong>Gravitational and Interaction Terms:</strong> {t('consciousness.lomni.terms.6')}</li>
