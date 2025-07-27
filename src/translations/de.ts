@@ -1621,7 +1621,7 @@ export const de = {
   'consciousness.links.phyxs': 'PHYXS.com',
   'consciousness.links.academia': 'Academia.org',
   'consciousness.links.researchGate': 'ResearchGate',
-  'consciousness.aqalTable.title': 'AQAL-Bewusstseinsentwicklungskarte',
+  'consciousness.aqalTable.title': 'AQAL Spiral Dynamics Entwicklungskarte',
   'consciousness.aqalTable.description': 'Basierend auf Ken Wilbers umfassendem AQAL-Rahmen und Spiral Dynamics zeigt diese Karte die psychologischen Stadien der menschlichen Bewusstseinsentwicklung vom grundlegenden Überleben bis zum transzendenten Bewusstsein.',
 
   // Step 3: AQAL vs PHYXS Content  

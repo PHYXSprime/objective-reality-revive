@@ -1566,7 +1566,7 @@ export const fr = {
   'consciousness.links.phyxs': 'PHYXS.com',
   'consciousness.links.academia': 'Academia.org',
   'consciousness.links.researchGate': 'ResearchGate',
-  'consciousness.aqalTable.title': 'Carte de Développement de la Conscience AQAL',
+  'consciousness.aqalTable.title': 'Carte de Développement AQAL Spiral Dynamics',
   'consciousness.aqalTable.description': 'Basée sur le cadre AQAL complet de Ken Wilber et la Dynamique Spirale, cette carte montre les étapes psychologiques du développement de la conscience humaine de la survie de base à la conscience transcendante.',
   'consciousness.nextLeap.title': 'Partie 2 : Le Prochain Bond – La Carte PHYXS Evolution D de la Conscience',
   'consciousness.nextLeap.introduction': 'Ici, le travail du vortex|institute offre un changement de paradigme. En se basant sur les perspectives de notre simulation "Evolution D" — un modèle de 3,5 milliards d\'années, résolution subatomique de l\'évolution de la vie, alimenté par le cadre 𝓛_omni — nous pouvons maintenant proposer une base causale, biophysique pour l\'évolution de la conscience.',

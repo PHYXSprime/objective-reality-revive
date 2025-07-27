@@ -1604,7 +1604,7 @@ export const es = {
   'consciousness.links.phyxs': 'PHYXS.com',
   'consciousness.links.academia': 'Academia.org',
   'consciousness.links.researchGate': 'ResearchGate',
-  'consciousness.aqalTable.title': 'Mapa de Desarrollo de Conciencia AQAL',
+  'consciousness.aqalTable.title': 'Mapa de Desarrollo AQAL Spiral Dynamics',
   'consciousness.aqalTable.description': 'Basado en el marco AQAL integral de Ken Wilber y Dinámicas Espirales, este mapa muestra las etapas psicológicas del desarrollo de la conciencia humana desde la supervivencia básica hasta la conciencia trascendente.',
   'consciousness.nextLeap.title': 'Parte 2: El Siguiente Salto – El Mapa PHYXS Evolution D de la Conciencia',
   'consciousness.nextLeap.introduction': 'Aquí, el trabajo del vortex|institute ofrece un cambio de paradigma. Basándose en las perspectivas de nuestra simulación "Evolution D" — un modelo de 3.5 mil millones de años, resolución subatómica de la evolución de la vida, impulsado por el marco 𝓛_omni — ahora podemos proponer una base causal, biofísica para la evolución de la conciencia.',

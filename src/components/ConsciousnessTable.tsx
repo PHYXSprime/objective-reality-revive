@@ -119,9 +119,20 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
                         )}
                       </TableCell>
                       <TableCell>
-                        <div className="flex items-center gap-2">
-                           <Badge className={colors.badge}>
+                        <div className="flex flex-col items-center text-center gap-1">
+                           <div className="font-medium text-sm">
                              {level.level}
+                           </div>
+                           <Badge className={`${colors.badge} text-xs`}>
+                             {level.color.includes('white') ? 'Indigo-Ultraviolet' : 
+                              level.color.includes('teal') ? 'Turquoise' :
+                              level.color.includes('yellow') ? 'Yellow' :
+                              level.color.includes('green') ? 'Green' :
+                              level.color.includes('orange') ? 'Orange' :
+                              level.color.includes('blue') ? 'Blue' :
+                              level.color.includes('red') ? 'Red' :
+                              level.color.includes('purple') ? 'Purple' :
+                              'Beige'}
                            </Badge>
                         </div>
                       </TableCell>

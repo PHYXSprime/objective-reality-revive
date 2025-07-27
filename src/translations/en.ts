@@ -1704,7 +1704,7 @@ export const en = {
   'consciousness.links.phyxs': 'PHYXS.com',
   'consciousness.links.academia': 'Academia.org',
   'consciousness.links.researchGate': 'ResearchGate',
-  'consciousness.aqalTable.title': 'AQAL Consciousness Development Map',
+  'consciousness.aqalTable.title': 'AQAL Spiral Dynamics Development Map',
   'consciousness.aqalTable.description': 'Based on Ken Wilber\'s comprehensive AQAL framework and Spiral Dynamics, this map shows the psychological stages of human consciousness development from basic survival to transcendent awareness.',
 
   // Step 3: AQAL vs PHYXS Content

@@ -17,7 +17,7 @@ export interface AQALLevel {
 
 export const aqalMapData: AQALLevel[] = [
   {
-    level: "Unitive Self",
+    level: "Unitive Self (Indigo-Ultraviolet)",
     humanAge: "Transcendent",
     color: "bg-white/20 text-white border-white/30",
     description: [
