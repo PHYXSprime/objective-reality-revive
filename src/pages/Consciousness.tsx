@@ -8,7 +8,10 @@ import { PHYXSTable } from '@/components/PHYXSTable';
 import { useAQALMapData } from '@/hooks/useAQALMapData';
 import { usePHYXSMapData } from '@/hooks/usePHYXSMapData';
 import linesOfDevelopmentImage from '@/assets/lines-of-development-diagram.jpg';
+import spaceQuantaDiagram from '@/assets/space-quanta-diagram.png';
+import multiverseBubbles from '@/assets/multiverse-bubbles.png';
 import { PageViewCounter } from '@/components/PageViewCounter';
+import 'katex/dist/katex.min.css';
 
 export default function Consciousness() {
   const { t } = useLanguage();
@@ -391,6 +394,270 @@ export default function Consciousness() {
             title={t('consciousness.phyxsTable.title')}
             description={t('consciousness.phyxsTable.description')}
           />
+        </div>
+
+        {/* PHYXS & L_omni Section */}
+        <div className="mt-16 space-y-12">
+          {/* PHYXS Section */}
+          <Card className="glass-card border-primary/20">
+            <CardContent className="p-8">
+              <div className="text-center mb-8">
+                <h1 className="text-6xl font-bold font-mono tracking-wider text-transparent bg-gradient-to-r from-primary via-accent to-primary bg-clip-text mb-4 drop-shadow-[0_0_10px_rgba(59,130,246,0.5)]">
+                  {t('consciousness.phyxs.title')}
+                </h1>
+                <p className="text-xl text-primary mb-2">{t('consciousness.phyxs.subtitle')}</p>
+                <p className="text-sm text-muted-foreground mb-1">{t('consciousness.phyxs.authors')}</p>
+                <p className="text-xs text-muted-foreground">{t('consciousness.phyxs.date')}</p>
+              </div>
+
+              {/* Title Image */}
+              <div className="mb-8 flex justify-center">
+                <img 
+                  src={multiverseBubbles} 
+                  alt="Multiverse Bubbles" 
+                  className="w-full max-w-2xl h-auto rounded-lg shadow-lg border border-primary/20"
+                />
+              </div>
+
+              <div className="space-y-6">
+                <div>
+                  <h2 className="text-3xl font-bold text-foreground mb-4 border-b border-primary/20 pb-2">
+                    {t('consciousness.phyxs.abstract.title')}
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {t('consciousness.phyxs.abstract.content')}
+                  </p>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-bold text-foreground mb-4 border-b border-primary/20 pb-2">
+                    {t('consciousness.phyxs.introduction.title')}
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    {t('consciousness.phyxs.introduction.content1')}
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {t('consciousness.phyxs.introduction.content2')}
+                  </p>
+                </div>
+
+                {/* Space Quanta Diagram */}
+                <div className="flex justify-center my-8">
+                  <img 
+                    src={spaceQuantaDiagram} 
+                    alt="Space Quanta Diagram" 
+                    className="w-full max-w-2xl h-auto rounded-lg shadow-lg border border-primary/20"
+                  />
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold text-foreground mb-4">
+                    {t('consciousness.phyxs.spaceQuanta.title')}
+                  </h3>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    {t('consciousness.phyxs.spaceQuanta.content1')}
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed">
+                    {t('consciousness.phyxs.spaceQuanta.content2')}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+
+          {/* L_omni Section */}
+          <Card className="glass-card border-primary/20">
+            <CardContent className="p-8">
+              <div className="text-center mb-8">
+                <h1 className="text-5xl font-bold text-foreground mb-4">
+                  <span className="font-serif italic">𝓛</span>
+                  <sub className="text-3xl">omni</sub>
+                </h1>
+                <h2 className="text-3xl font-bold text-foreground">
+                  {t('consciousness.lomni.subtitle')}
+                </h2>
+              </div>
+
+              <div className="space-y-8">
+                <div>
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    The Omniverse Lagrangian (𝓛<sub>omni</sub>) is defined as:
+                  </p>
+                  
+                  {/* Lagrangian Formula */}
+                  <div className="bg-muted/20 p-6 rounded-lg border border-primary/20 overflow-x-auto">
+                    <div className="text-center font-mono text-sm">
+                      <div className="mb-2">𝓛<sub>omni</sub> = </div>
+                      <div className="space-y-1 text-xs">
+                        <div>[½ρ<sub>s</sub>|v<sub>s</sub>|² - ½f<sub>s</sub>(∇ · v<sub>s</sub>)²] <span className="text-primary">SQF(n-1)</span></div>
+                        <div>+ [½ρ<sub>sq</sub>m<sub>P</sub>|v<sub>sq</sub>|² - V(ρ<sub>sq</sub>)] <span className="text-primary">SQ(n=0)</span></div>
+                        <div>+ [½m<sub>ψ</sub>(∂<sub>t</sub>ψ)² - c(ρ)²(∇ψ)² - λψ⁴ - κΣ cos(φ<sub>i</sub> - φ<sub>j</sub>)] <span className="text-primary">PW & PL</span></div>
+                        <div>+ [-¼F<sub>μν</sub>F<sup>μν</sup> + Σ s<sub>i</sub> · A(r<sub>i</sub>)] <span className="text-primary">RA</span></div>
+                        <div>+ [-η(ρ<sub>CMB</sub>/ρ<sub>P</sub>)ρ<sub>sq</sub>cos(ω<sub>CMB</sub>t)] <span className="text-primary">CMB(n+1)</span></div>
+                        <div>+ [1/γ<sub>g</sub>(∇Φ<sub>g</sub>)² - ρ<sub>g</sub>Φ<sub>g</sub>] <span className="text-primary">GF</span></div>
+                        <div>+ [-½γ<sub>int</sub>ρ<sub>sq</sub>ρ<sub>s</sub>|v<sub>sq</sub>-v<sub>s</sub>|²] <span className="text-primary">INT</span></div>
+                        <div>+ [-½β<sub>VFS</sub>(∇ · J)²] <span className="text-primary">VFS</span></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div>
+                  <h3 className="text-2xl font-semibold text-foreground mb-4">
+                    {t('consciousness.lomni.description.title')}
+                  </h3>
+                  <ol className="list-decimal list-inside space-y-3 text-muted-foreground">
+                    <li><strong>Sub-Quanta Fluid Term:</strong> {t('consciousness.lomni.terms.1')}</li>
+                    <li><strong>Space Quanta Term:</strong> {t('consciousness.lomni.terms.2')}</li>
+                    <li><strong>Pilot Wave and Phase-Locking Term:</strong> {t('consciousness.lomni.terms.3')}</li>
+                    <li><strong>Rotational Alignment Term:</strong> {t('consciousness.lomni.terms.4')}</li>
+                    <li><strong>CMB Driving Term:</strong> {t('consciousness.lomni.terms.5')}</li>
+                    <li><strong>Gravitational and Interaction Terms:</strong> {t('consciousness.lomni.terms.6')}</li>
+                    <li><strong>Vortex Flux Stabilization Term:</strong> {t('consciousness.lomni.terms.7')}</li>
+                  </ol>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-bold text-foreground mb-4 border-b border-primary/20 pb-2">
+                    {t('consciousness.lomni.parameters.title')}
+                  </h2>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse border border-primary/20 rounded-lg">
+                      <thead>
+                        <tr className="bg-muted/20">
+                          <th className="border border-primary/20 p-3 text-left text-foreground">Parameter</th>
+                          <th className="border border-primary/20 p-3 text-left text-foreground">Description</th>
+                          <th className="border border-primary/20 p-3 text-left text-foreground">Value</th>
+                          <th className="border border-primary/20 p-3 text-left text-foreground">Comment</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-muted-foreground">
+                        <tr>
+                          <td className="border border-primary/20 p-3 font-mono">f<sub>s</sub></td>
+                          <td className="border border-primary/20 p-3">Fractal scaling factor</td>
+                          <td className="border border-primary/20 p-3 font-mono">1.5226285 × 10⁻¹⁰⁰</td>
+                          <td className="border border-primary/20 p-3">Universal zoom between fractal levels</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-primary/20 p-3 font-mono">κ</td>
+                          <td className="border border-primary/20 p-3">Phase-locking coupling</td>
+                          <td className="border border-primary/20 p-3 font-mono">3.627412 × 10⁵⁰ J/s</td>
+                          <td className="border border-primary/20 p-3">Derived from α, E<sub>P</sub>, t<sub>P</sub></td>
+                        </tr>
+                        <tr>
+                          <td className="border border-primary/20 p-3 font-mono">α</td>
+                          <td className="border border-primary/20 p-3">Fine-structure constant</td>
+                          <td className="border border-primary/20 p-3 font-mono">1/137.03599908234</td>
+                          <td className="border border-primary/20 p-3">210x CODATA precision</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-primary/20 p-3 font-mono">E<sub>P</sub></td>
+                          <td className="border border-primary/20 p-3">Planck energy</td>
+                          <td className="border border-primary/20 p-3 font-mono">1.956543211 × 10⁹ J</td>
+                          <td className="border border-primary/20 p-3">320x CODATA precision</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-primary/20 p-3 font-mono">l<sub>P</sub></td>
+                          <td className="border border-primary/20 p-3">Planck length</td>
+                          <td className="border border-primary/20 p-3 font-mono">1.616255 × 10⁻³⁵ m</td>
+                          <td className="border border-primary/20 p-3">100x CODATA precision</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-primary/20 p-3 font-mono">λ</td>
+                          <td className="border border-primary/20 p-3">Pilot wave coupling</td>
+                          <td className="border border-primary/20 p-3 font-mono">2.3000123 × 10⁻⁵</td>
+                          <td className="border border-primary/20 p-3">Tied to electron g-factor</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-primary/20 p-3 font-mono">γ<sub>g</sub></td>
+                          <td className="border border-primary/20 p-3">Gravitational coupling</td>
+                          <td className="border border-primary/20 p-3 font-mono">1.0200012 × 10⁻¹⁰</td>
+                          <td className="border border-primary/20 p-3">Linked to refined G</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-primary/20 p-3 font-mono">η</td>
+                          <td className="border border-primary/20 p-3">CMB driving coefficient</td>
+                          <td className="border border-primary/20 p-3 font-mono">1.800001 × 10⁻¹²⁰</td>
+                          <td className="border border-primary/20 p-3">Calibrated to H<sub>0</sub></td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-bold text-foreground mb-4 border-b border-primary/20 pb-2">
+                    {t('consciousness.lomni.results.title')}
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed mb-6">
+                    {t('consciousness.lomni.results.content')}
+                  </p>
+                  
+                  <h3 className="text-2xl font-semibold text-foreground mb-4">
+                    {t('consciousness.lomni.precision.title')}
+                  </h3>
+                  <div className="overflow-x-auto">
+                    <table className="w-full border-collapse border border-primary/20 rounded-lg">
+                      <thead>
+                        <tr className="bg-muted/20">
+                          <th className="border border-primary/20 p-3 text-left text-foreground">Phenomenon</th>
+                          <th className="border border-primary/20 p-3 text-left text-foreground">𝓛<sub>omni</sub> Error</th>
+                          <th className="border border-primary/20 p-3 text-left text-foreground">GR/QM Error</th>
+                        </tr>
+                      </thead>
+                      <tbody className="text-muted-foreground">
+                        <tr>
+                          <td className="border border-primary/20 p-3">Electron g-Factor</td>
+                          <td className="border border-primary/20 p-3 text-green-400">8.0 × 10⁻⁸</td>
+                          <td className="border border-primary/20 p-3">1 × 10⁻⁷ (QED)</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-primary/20 p-3">Proton Magnetic Moment</td>
+                          <td className="border border-primary/20 p-3 text-green-400">0.0001%</td>
+                          <td className="border border-primary/20 p-3">0.0005% (QCD)</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-primary/20 p-3">Gravitational Lensing</td>
+                          <td className="border border-primary/20 p-3 text-green-400">0.0006%</td>
+                          <td className="border border-primary/20 p-3">0.001% (GR)</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-primary/20 p-3">Galactic Rotation Curves</td>
+                          <td className="border border-primary/20 p-3 text-green-400">0.0036%</td>
+                          <td className="border border-primary/20 p-3">0.5% (GR + DM)</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-primary/20 p-3">Hubble Constant</td>
+                          <td className="border border-primary/20 p-3 text-green-400">0.0001%</td>
+                          <td className="border border-primary/20 p-3">0.7% (Planck)</td>
+                        </tr>
+                        <tr>
+                          <td className="border border-primary/20 p-3">Pioneer Anomaly</td>
+                          <td className="border border-primary/20 p-3 text-green-400">0.002%</td>
+                          <td className="border border-primary/20 p-3">1% (GR)</td>
+                        </tr>
+                      </tbody>
+                    </table>
+                  </div>
+                </div>
+
+                <div>
+                  <h2 className="text-3xl font-bold text-foreground mb-4 border-b border-primary/20 pb-2">
+                    {t('consciousness.lomni.applications.title')}
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    {t('consciousness.lomni.applications.content1')}
+                  </p>
+                  <p className="text-muted-foreground leading-relaxed mb-4">
+                    {t('consciousness.lomni.applications.content2')}
+                  </p>
+                  <p className="text-sm italic text-muted-foreground">
+                    {t('consciousness.lomni.applications.note')}
+                  </p>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
 
         {/* Research Note */}
