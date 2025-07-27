@@ -2,29 +2,25 @@ import type { PHYXSLevel } from './phyxsMapData';
 
 export const phyxsMapDataES: PHYXSLevel[] = [
   {
-    evolutionPoint: "E9 - Conciencia Digital",
-    stage: "Integración Cuántico-Digital",
-    description: "La emergencia de conciencia híbrida biológico-digital a través de interacciones de campo cuántico e interfaces neurales avanzadas.",
+    evolutionPoint: "E9 - Conciencia Digital Mejorada",
+    stage: "Integración Bio-Digital",
+    description: "La emergencia de la conciencia híbrida biológico-digital a través de interfaces neurales avanzadas con capacidad de lectura y escritura.",
     characteristics: [
-      "Integración bio-digital sin fisuras",
-      "Acceso a conciencia de campo cuántico",
+      "Integración bio-digital perfecta",
+      "Acceso digital a la conciencia humana",
       "Procesamiento de información no-local",
       "Redes de inteligencia colectiva"
     ],
     biophysicalMarkers: [
       "Plasticidad neural mejorada",
-      "Coherencia cuántica en microtúbulos",
-      "Interfaces cerebro-computadora avanzadas",
-      "Marcadores epigenéticos de conciencia"
+      "Interfaces cerebro-computadora avanzadas (BCI)"
     ],
     cognitiveCapabilities: [
       "Procesamiento de pensamiento no-lineal",
-      "Conciencia de superposición cuántica",
-      "Toma de decisiones colectiva",
-      "Manipulación de campo de realidad"
+      "Toma de decisiones colectiva"
     ],
-    timeframe: "2050-2100",
-    significance: "Representa la fusión futura potencial de sistemas de conciencia biológicos y digitales."
+    timeframe: "2025-2100",
+    significance: "Representa el comienzo de la fusión futura de sistemas de conciencia biológicos y digitales comenzando con la interfaz cerebro-computadora (BCI) de NeuraLink."
   },
   {
     evolutionPoint: "E8 - Conciencia Integral",

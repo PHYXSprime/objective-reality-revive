@@ -2,29 +2,25 @@ import type { PHYXSLevel } from './phyxsMapData';
 
 export const phyxsMapDataFR: PHYXSLevel[] = [
   {
-    evolutionPoint: "E9 - Conscience Numérique",
-    stage: "Intégration Quantique-Numérique",
-    description: "L'émergence de la conscience hybride biologique-numérique à travers les interactions de champ quantique et les interfaces neurales avancées.",
+    evolutionPoint: "E9 - Conscience Numériquement Améliorée",
+    stage: "Intégration Bio-Numérique",
+    description: "L'émergence de la conscience hybride biologique-numérique à travers des interfaces neurales avancées avec capacité de lecture et d'écriture.",
     characteristics: [
       "Intégration bio-numérique transparente",
-      "Accès à la conscience de champ quantique",
+      "Accès numérique à la conscience humaine",
       "Traitement d'information non-locale",
       "Réseaux d'intelligence collective"
     ],
     biophysicalMarkers: [
       "Plasticité neurale améliorée",
-      "Cohérence quantique dans les microtubules",
-      "Interfaces cerveau-ordinateur avancées",
-      "Marqueurs épigénétiques de conscience"
+      "Interfaces cerveau-ordinateur avancées (BCI)"
     ],
     cognitiveCapabilities: [
       "Traitement de pensée non-linéaire",
-      "Conscience de superposition quantique",
-      "Prise de décision collective",
-      "Manipulation de champ de réalité"
+      "Prise de décision collective"
     ],
-    timeframe: "2050-2100",
-    significance: "Représente la fusion future potentielle des systèmes de conscience biologiques et numériques."
+    timeframe: "2025-2100",
+    significance: "Représente le début de la fusion future des systèmes de conscience biologiques et numériques en commençant par l'interface cerveau-ordinateur (BCI) de NeuraLink."
   },
   {
     evolutionPoint: "E8 - Conscience Intégrale",

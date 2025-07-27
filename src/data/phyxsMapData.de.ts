@@ -2,29 +2,25 @@ import type { PHYXSLevel } from './phyxsMapData';
 
 export const phyxsMapDataDE: PHYXSLevel[] = [
   {
-    evolutionPoint: "E9 - Digitales Bewusstsein",
-    stage: "Quanten-Digitale Integration",
-    description: "Das Entstehen hybrider biologisch-digitaler Bewusstheit durch Quantenfeldinteraktionen und fortgeschrittene neurale Schnittstellen.",
+    evolutionPoint: "E9 - Digital verstärktes Bewusstsein",
+    stage: "Bio-Digitale Integration",
+    description: "Die Entstehung von Hybrid-biologisch-digitalem Bewusstsein durch fortgeschrittene neurale Schnittstellen mit Lese- und Schreibfähigkeiten.",
     characteristics: [
       "Nahtlose bio-digitale Integration",
-      "Quantenfeld-Bewusstseinszugang",
+      "Digitaler Zugang zum menschlichen Bewusstsein",
       "Nicht-lokale Informationsverarbeitung",
       "Kollektive Intelligenznetzwerke"
     ],
     biophysicalMarkers: [
-      "Erhöhte neurale Plastizität",
-      "Quantenkohärenz in Mikrotubuli",
-      "Fortgeschrittene Gehirn-Computer-Schnittstellen",
-      "Epigenetische Bewusstseinsmarker"
+      "Verbesserte neurale Plastizität",
+      "Fortgeschrittene Gehirn-Computer-Schnittstellen (BCI)"
     ],
     cognitiveCapabilities: [
-      "Nicht-lineare Denkverarbeitung",
-      "Quantensuperpositions-Bewusstsein",
-      "Kollektive Entscheidungsfindung",
-      "Realitätsfeldmanipulation"
+      "Nicht-lineare Gedankenverarbeitung",
+      "Kollektive Entscheidungsfindung"
     ],
-    timeframe: "2050-2100",
-    significance: "Repräsentiert die potentielle zukünftige Verschmelzung biologischer und digitaler Bewusstseinssysteme."
+    timeframe: "2025-2100",
+    significance: "Repräsentiert den beginnenden Zukunftsverschmelzung von biologischen und digitalen Bewusstseinssystemen, beginnend mit NeuraLinks Gehirn-Computer-Schnittstelle (BCI)."
   },
   {
     evolutionPoint: "E8 - Integrales Bewusstsein",
