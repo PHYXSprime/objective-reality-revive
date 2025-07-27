@@ -476,7 +476,7 @@ export default function Consciousness() {
                     {t('consciousness.lomni.description.title')}
                   </h3>
                   <ol className="list-decimal list-inside space-y-3 text-muted-foreground">
-                    <li><strong>Sub-Quanta Fluid Term:</strong> {t('consciousness.lomni.terms.1')}</li>
+                    <li><strong>Sub-Quanta Fluid Term:</strong> <span className="text-primary font-medium">SQF(n-1)</span> {t('consciousness.lomni.terms.1')}</li>
                     <li><strong>Space Quanta Term:</strong> {t('consciousness.lomni.terms.2')}</li>
                     <li><strong>Pilot Wave and Phase-Locking Term:</strong> {t('consciousness.lomni.terms.3')}</li>
                     <li><strong>Rotational Alignment Term:</strong> {t('consciousness.lomni.terms.4')}</li>
