@@ -119,10 +119,10 @@ export function ConsciousnessTable({ data, title, description }: ConsciousnessTa
                         )}
                       </TableCell>
                       <TableCell>
-                        <div className="flex flex-col items-center text-center gap-1">
-                           <div className="font-medium text-sm">
-                             {level.level}
-                           </div>
+                         <div className="flex flex-col items-center text-center gap-1">
+                            <div className="font-medium text-sm">
+                              {level.level.replace(/\s*\([^)]*\)$/, '')}
+                            </div>
                            <Badge className={`${colors.badge} text-xs`}>
                              {level.color.includes('white') ? 'Indigo-Ultraviolet' : 
                               level.color.includes('teal') ? 'Turquoise' :
