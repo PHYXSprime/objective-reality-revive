@@ -10,14 +10,13 @@ import { usePHYXSMapData } from '@/hooks/usePHYXSMapData';
 import linesOfDevelopmentImage from '@/assets/lines-of-development-diagram.jpg';
 import { PageViewCounter } from '@/components/PageViewCounter';
 import 'katex/dist/katex.min.css';
-
 export default function Consciousness() {
-  const { t } = useLanguage();
+  const {
+    t
+  } = useLanguage();
   const aqalMapData = useAQALMapData();
   const phyxsMapData = usePHYXSMapData();
-
-  return (
-    <div className="min-h-screen gradient-bg relative overflow-hidden">
+  return <div className="min-h-screen gradient-bg relative overflow-hidden">
       <PageViewCounter />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
@@ -44,11 +43,9 @@ export default function Consciousness() {
               {t('consciousness.newInsights.title')}
             </CardTitle>
             <div className="text-lg space-y-4">
-              {t('consciousness.newInsights.description').split('\n\n').map((paragraph, index) => (
-                <p key={index} className="text-muted-foreground">
+              {t('consciousness.newInsights.description').split('\n\n').map((paragraph, index) => <p key={index} className="text-muted-foreground">
                   {paragraph}
-                </p>
-              ))}
+                </p>)}
             </div>
           </CardHeader>
         </Card>
@@ -155,11 +152,7 @@ export default function Consciousness() {
 
         {/* AQAL Consciousness Map */}
         <div className="mb-12">
-          <ConsciousnessTable 
-            data={aqalMapData}
-            title={t('consciousness.aqalTable.title')}
-            description={t('consciousness.aqalTable.description')}
-          />
+          <ConsciousnessTable data={aqalMapData} title={t('consciousness.aqalTable.title')} description={t('consciousness.aqalTable.description')} />
         </div>
 
         {/* Lines of Development */}
@@ -179,11 +172,7 @@ export default function Consciousness() {
                 <Dialog>
                   <DialogTrigger asChild>
                     <button className="block w-full cursor-pointer hover:opacity-90 transition-opacity">
-                      <img 
-                        src={linesOfDevelopmentImage} 
-                        alt="Lines of Development Diagram" 
-                        className="w-full h-auto rounded-lg shadow-lg"
-                      />
+                      <img src={linesOfDevelopmentImage} alt="Lines of Development Diagram" className="w-full h-auto rounded-lg shadow-lg" />
                     </button>
                   </DialogTrigger>
                   <DialogContent className="max-w-4xl max-h-[90vh] p-4 z-[9999]">
@@ -193,11 +182,7 @@ export default function Consciousness() {
                     <DialogDescription className="sr-only">
                       {t('consciousness.linesOfDevelopment.description')}
                     </DialogDescription>
-                    <img 
-                      src={linesOfDevelopmentImage} 
-                      alt="Lines of Development Diagram" 
-                      className="w-full h-auto rounded-lg"
-                    />
+                    <img src={linesOfDevelopmentImage} alt="Lines of Development Diagram" className="w-full h-auto rounded-lg" />
                   </DialogContent>
                 </Dialog>
               </div>
@@ -387,11 +372,7 @@ export default function Consciousness() {
 
         {/* PHYXS Evolution D Map */}
         <div className="mb-12">
-          <PHYXSTable 
-            data={phyxsMapData}
-            title={t('consciousness.phyxsTable.title')}
-            description={t('consciousness.phyxsTable.description')}
-          />
+          <PHYXSTable data={phyxsMapData} title={t('consciousness.phyxsTable.title')} description={t('consciousness.phyxsTable.description')} />
         </div>
 
         {/* PHYXS & L_omni Section */}
@@ -404,17 +385,13 @@ export default function Consciousness() {
                   {t('consciousness.phyxs.title')}
                 </h1>
                 <p className="text-xl text-primary mb-2">{t('consciousness.phyxs.subtitle')}</p>
-                <p className="text-sm text-muted-foreground mb-1">{t('consciousness.phyxs.authors')}</p>
-                <p className="text-xs text-muted-foreground">{t('consciousness.phyxs.date')}</p>
+                
+                
               </div>
 
               {/* Title Image */}
               <div className="mb-8 flex justify-center">
-                <img 
-                  src="/lovable-uploads/82ae9517-647e-488a-986b-7995f2a0286e.png" 
-                  alt="Multiverse Bubbles" 
-                  className="w-full max-w-2xl h-auto rounded-lg shadow-lg border border-primary/20"
-                />
+                <img src="/lovable-uploads/82ae9517-647e-488a-986b-7995f2a0286e.png" alt="Multiverse Bubbles" className="w-full max-w-2xl h-auto rounded-lg shadow-lg border border-primary/20" />
               </div>
 
               <div className="space-y-6">
@@ -441,11 +418,7 @@ export default function Consciousness() {
 
                 {/* Space Quanta Diagram */}
                 <div className="flex justify-center my-8">
-                  <img 
-                    src="/lovable-uploads/ee501520-9d6c-4f07-99ab-702e46f88942.png" 
-                    alt="Space Quanta Diagram" 
-                    className="w-full max-w-2xl h-auto rounded-lg shadow-lg border border-primary/20"
-                  />
+                  <img src="/lovable-uploads/ee501520-9d6c-4f07-99ab-702e46f88942.png" alt="Space Quanta Diagram" className="w-full max-w-2xl h-auto rounded-lg shadow-lg border border-primary/20" />
                 </div>
 
                 <div>
@@ -471,9 +444,7 @@ export default function Consciousness() {
                   <span className="font-serif italic">𝓛</span>
                   <sub className="text-3xl">omni</sub>
                 </h1>
-                <h2 className="text-3xl font-bold text-foreground">
-                  {t('consciousness.lomni.subtitle')}
-                </h2>
+                
               </div>
 
               <div className="space-y-8">
@@ -673,6 +644,5 @@ export default function Consciousness() {
         </Card>
         </div>
       </div>
-    </div>
-  );
+    </div>;
 }
