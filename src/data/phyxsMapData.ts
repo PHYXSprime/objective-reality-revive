@@ -11,29 +11,25 @@ export interface PHYXSLevel {
 
 export const phyxsMapData: PHYXSLevel[] = [
   {
-    evolutionPoint: "E9 - Digital Consciousness",
-    stage: "Quantum-Digital Integration",
-    description: "The emergence of hybrid biological-digital consciousness through quantum field interactions and advanced neural interfaces.",
+    evolutionPoint: "E9 - Digitally Enhanced Consciousness",
+    stage: "Bio-Digital Integration",
+    description: "The emergence of hybrid biological-digital consciousness through advanced neural interfaces with read and write capability.",
     characteristics: [
       "Seamless bio-digital integration",
-      "Quantum field consciousness access",
+      "Digital access to human consciousness",
       "Non-local information processing",
       "Collective intelligence networks"
     ],
     biophysicalMarkers: [
       "Enhanced neural plasticity",
-      "Quantum coherence in microtubules",
-      "Advanced brain-computer interfaces",
-      "Epigenetic consciousness markers"
+      "Advanced brain-computer interfaces (BCI)"
     ],
     cognitiveCapabilities: [
       "Non-linear thought processing",
-      "Quantum superposition awareness",
-      "Collective decision making",
-      "Reality field manipulation"
+      "Collective decision making"
     ],
-    timeframe: "2050-2100",
-    significance: "Represents the potential future merger of biological and digital consciousness systems."
+    timeframe: "2025-2100",
+    significance: "Represents the beginning future merger of biological and digital consciousness systems beginning with NeuraLink's brain-computer interface (BCI)."
   },
   {
     evolutionPoint: "E8 - Integral Consciousness",
