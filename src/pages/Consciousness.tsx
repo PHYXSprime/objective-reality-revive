@@ -8,8 +8,6 @@ import { PHYXSTable } from '@/components/PHYXSTable';
 import { useAQALMapData } from '@/hooks/useAQALMapData';
 import { usePHYXSMapData } from '@/hooks/usePHYXSMapData';
 import linesOfDevelopmentImage from '@/assets/lines-of-development-diagram.jpg';
-import spaceQuantaDiagram from '@/assets/space-quanta-diagram.png';
-import multiverseBubbles from '@/assets/multiverse-bubbles.png';
 import { PageViewCounter } from '@/components/PageViewCounter';
 import 'katex/dist/katex.min.css';
 
@@ -413,7 +411,7 @@ export default function Consciousness() {
               {/* Title Image */}
               <div className="mb-8 flex justify-center">
                 <img 
-                  src={multiverseBubbles} 
+                  src="/lovable-uploads/82ae9517-647e-488a-986b-7995f2a0286e.png" 
                   alt="Multiverse Bubbles" 
                   className="w-full max-w-2xl h-auto rounded-lg shadow-lg border border-primary/20"
                 />
@@ -444,7 +442,7 @@ export default function Consciousness() {
                 {/* Space Quanta Diagram */}
                 <div className="flex justify-center my-8">
                   <img 
-                    src={spaceQuantaDiagram} 
+                    src="/lovable-uploads/ee501520-9d6c-4f07-99ab-702e46f88942.png" 
                     alt="Space Quanta Diagram" 
                     className="w-full max-w-2xl h-auto rounded-lg shadow-lg border border-primary/20"
                   />
@@ -486,17 +484,17 @@ export default function Consciousness() {
                   
                   {/* Lagrangian Formula */}
                   <div className="bg-muted/20 p-6 rounded-lg border border-primary/20 overflow-x-auto">
-                    <div className="text-center font-mono text-sm">
-                      <div className="mb-2">𝓛<sub>omni</sub> = </div>
-                      <div className="space-y-1 text-xs">
-                        <div>[½ρ<sub>s</sub>|v<sub>s</sub>|² - ½f<sub>s</sub>(∇ · v<sub>s</sub>)²] <span className="text-primary">SQF(n-1)</span></div>
-                        <div>+ [½ρ<sub>sq</sub>m<sub>P</sub>|v<sub>sq</sub>|² - V(ρ<sub>sq</sub>)] <span className="text-primary">SQ(n=0)</span></div>
-                        <div>+ [½m<sub>ψ</sub>(∂<sub>t</sub>ψ)² - c(ρ)²(∇ψ)² - λψ⁴ - κΣ cos(φ<sub>i</sub> - φ<sub>j</sub>)] <span className="text-primary">PW & PL</span></div>
-                        <div>+ [-¼F<sub>μν</sub>F<sup>μν</sup> + Σ s<sub>i</sub> · A(r<sub>i</sub>)] <span className="text-primary">RA</span></div>
-                        <div>+ [-η(ρ<sub>CMB</sub>/ρ<sub>P</sub>)ρ<sub>sq</sub>cos(ω<sub>CMB</sub>t)] <span className="text-primary">CMB(n+1)</span></div>
-                        <div>+ [1/γ<sub>g</sub>(∇Φ<sub>g</sub>)² - ρ<sub>g</sub>Φ<sub>g</sub>] <span className="text-primary">GF</span></div>
-                        <div>+ [-½γ<sub>int</sub>ρ<sub>sq</sub>ρ<sub>s</sub>|v<sub>sq</sub>-v<sub>s</sub>|²] <span className="text-primary">INT</span></div>
-                        <div>+ [-½β<sub>VFS</sub>(∇ · J)²] <span className="text-primary">VFS</span></div>
+                    <div className="text-left font-bold text-2xl">
+                      <div className="mb-4">𝓛<sub>omni</sub> = </div>
+                      <div className="space-y-2 text-lg pl-8">
+                        <div>[½ρ<sub>s</sub>|v<sub>s</sub>|² - ½f<sub>s</sub>(∇ · v<sub>s</sub>)²] <span className="text-primary font-normal">SQF(n-1)</span></div>
+                        <div>+ [½ρ<sub>sq</sub>m<sub>P</sub>|v<sub>sq</sub>|² - V(ρ<sub>sq</sub>)] <span className="text-primary font-normal">SQ(n=0)</span></div>
+                        <div>+ [½m<sub>ψ</sub>(∂<sub>t</sub>ψ)² - c(ρ)²(∇ψ)² - λψ⁴ - κΣ cos(φ<sub>i</sub> - φ<sub>j</sub>)] <span className="text-primary font-normal">PW & PL</span></div>
+                        <div>+ [-¼F<sub>μν</sub>F<sup>μν</sup> + Σ s<sub>i</sub> · A(r<sub>i</sub>)] <span className="text-primary font-normal">RA</span></div>
+                        <div>+ [-η(ρ<sub>CMB</sub>/ρ<sub>P</sub>)ρ<sub>sq</sub>cos(ω<sub>CMB</sub>t)] <span className="text-primary font-normal">CMB(n+1)</span></div>
+                        <div>+ [1/γ<sub>g</sub>(∇Φ<sub>g</sub>)² - ρ<sub>g</sub>Φ<sub>g</sub>] <span className="text-primary font-normal">GF</span></div>
+                        <div>+ [-½γ<sub>int</sub>ρ<sub>sq</sub>ρ<sub>s</sub>|v<sub>sq</sub>-v<sub>s</sub>|²] <span className="text-primary font-normal">INT</span></div>
+                        <div>+ [-½β<sub>VFS</sub>(∇ · J)²] <span className="text-primary font-normal">VFS</span></div>
                       </div>
                     </div>
                   </div>
