@@ -1,0 +1,74 @@
+/* Modern CSS with space theme and glass effects */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 240 10% 3.9%;
+    --foreground: 210 40% 98%;
+    --card: 240 10% 3.9% / 0.6;
+    --card-foreground: 210 40% 98%;
+    --popover: 240 10% 3.9% / 0.9;
+    --popover-foreground: 210 40% 98%;
+    --primary: 217 91% 60%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+    --secondary: 240 4% 16% / 0.8;
+    --secondary-foreground: 210 40% 98%;
+    --muted: 240 5% 25% / 0.5;
+    --muted-foreground: 215 25% 75%;
+    --accent: 270 95% 75%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+    --destructive: 0 75% 60%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 240 6% 20% / 0.3;
+    --input: 240 6% 20% / 0.5;
+    --ring: 217 91% 60%;
+    --radius: 1rem;
+  }
+
+  body {
+    background-color: transparent;
+    background-image: url('/starfield-bg.png'), url('/earth-from-space-night-bg2.png');
+    background-size: 300px auto, 130%;
+    background-repeat: repeat, no-repeat;
+    background-attachment: fixed;
+    background-position: 0 0, center;
+    color: hsl(var(--foreground));
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+  }
+
+  .glass-card {
+    background: hsl(240 10% 15% / 0.15);
+    backdrop-filter: blur(10px) saturate(150%);
+    border: 1px solid hsl(240 20% 80% / 0.25);
+    border-radius: 1rem;
+    box-shadow: 0 8px 32px hsl(240 10% 3.9% / 0.2);
+  }
+
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+  }
+
+  .btn {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: linear-gradient(135deg, hsl(var(--primary) / 0.8), hsl(var(--accent) / 0.6));
+    color: hsl(var(--foreground));
+    text-decoration: none;
+    border-radius: 0.5rem;
+    border: 1px solid hsl(var(--primary) / 0.3);
+    transition: all 0.3s ease;
+  }
+
+  .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 32px hsl(var(--primary) / 0.4);
+  }
+}
