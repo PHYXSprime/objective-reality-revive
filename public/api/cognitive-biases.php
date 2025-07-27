@@ -4,23 +4,21 @@ require_once 'config.php';
 try {
     $language = $_GET['lang'] ?? 'en';
     
-    // Map language codes to table suffixes
-    $tableSuffix = '';
+    // Map language codes to table names
+    $tableName = '';
     switch ($language) {
         case 'de':
-            $tableSuffix = '_de';
+            $tableName = 'biases_DE';
             break;
         case 'es':
-            $tableSuffix = '_es';
+            $tableName = 'biases_ES';
             break;
         case 'fr':
-            $tableSuffix = '_fr';
+            $tableName = 'biases_FR';
             break;
         default:
-            $tableSuffix = ''; // English is the base table
+            $tableName = 'biases_EN'; // English is the base table
     }
-    
-    $tableName = 'cognitive_biases' . $tableSuffix;
     
     // Check if the table exists
     $checkTable = $pdo->prepare("SHOW TABLES LIKE ?");
@@ -28,7 +26,7 @@ try {
     
     if ($checkTable->rowCount() === 0) {
         // Fallback to English if translation table doesn't exist
-        $tableName = 'cognitive_biases';
+        $tableName = 'biases_EN';
     }
     
     $stmt = $pdo->prepare("SELECT * FROM `$tableName` ORDER BY id");

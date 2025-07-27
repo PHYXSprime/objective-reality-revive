@@ -4,23 +4,21 @@ require_once 'config.php';
 try {
     $language = $_GET['lang'] ?? 'en';
     
-    // Map language codes to table suffixes
-    $tableSuffix = '';
+    // Map language codes to table names
+    $tableName = '';
     switch ($language) {
         case 'de':
-            $tableSuffix = '_de';
+            $tableName = 'fallacies_DE';
             break;
         case 'es':
-            $tableSuffix = '_es';
+            $tableName = 'fallacies_ES';
             break;
         case 'fr':
-            $tableSuffix = '_fr';
+            $tableName = 'fallacies_FR';
             break;
         default:
-            $tableSuffix = ''; // English is the base table
+            $tableName = 'fallacies_EN'; // English is the base table
     }
-    
-    $tableName = 'logical_fallacies' . $tableSuffix;
     
     // Check if the table exists
     $checkTable = $pdo->prepare("SHOW TABLES LIKE ?");
@@ -28,7 +26,7 @@ try {
     
     if ($checkTable->rowCount() === 0) {
         // Fallback to English if translation table doesn't exist
-        $tableName = 'logical_fallacies';
+        $tableName = 'fallacies_EN';
     }
     
     $stmt = $pdo->prepare("SELECT * FROM `$tableName` ORDER BY id");
