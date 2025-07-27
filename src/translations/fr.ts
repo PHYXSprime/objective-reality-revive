@@ -1628,4 +1628,10 @@ export const fr = {
   'consciousness.linesOfDevelopment.questions.spirituality.question': 'Qu\'est-ce qui me préoccupe ultimement ?',
   'consciousness.linesOfDevelopment.questions.spirituality.answer': 'Spiritualité.',
   'consciousness.linesOfDevelopment.learnMore': 'En Savoir Plus Sur l\'Approche Intégrale',
+  
+  // Consciousness table headers
+  'consciousness.aqal.table.headers.level': 'Niveau',
+  'consciousness.aqal.table.headers.humanAge': 'Âge Humain',
+  'consciousness.aqal.table.headers.quest': 'Quête',
+  'consciousness.aqal.table.headers.method': 'Méthode',
 } as const;

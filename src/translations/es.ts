@@ -1666,4 +1666,10 @@ export const es = {
   'consciousness.linesOfDevelopment.questions.spirituality.question': '¿Qué es de última preocupación para mí?',
   'consciousness.linesOfDevelopment.questions.spirituality.answer': 'Espiritualidad.',
   'consciousness.linesOfDevelopment.learnMore': 'Aprende Más Sobre el Enfoque Integral',
+  
+  // Consciousness table headers
+  'consciousness.aqal.table.headers.level': 'Nivel',
+  'consciousness.aqal.table.headers.humanAge': 'Edad Humana',
+  'consciousness.aqal.table.headers.quest': 'Búsqueda',
+  'consciousness.aqal.table.headers.method': 'Método',
 } as const;

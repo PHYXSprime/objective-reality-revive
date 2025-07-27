@@ -1687,4 +1687,10 @@ export const de = {
   'consciousness.linesOfDevelopment.questions.spirituality.question': 'Was ist von ultimativer Bedeutung für mich?',
   'consciousness.linesOfDevelopment.questions.spirituality.answer': 'Spiritualität.',
   'consciousness.linesOfDevelopment.learnMore': 'Mehr über Integralen Ansatz erfahren',
+  
+  // Consciousness table headers
+  'consciousness.aqal.table.headers.level': 'Ebene',
+  'consciousness.aqal.table.headers.humanAge': 'Menschliches Alter',
+  'consciousness.aqal.table.headers.quest': 'Suche',
+  'consciousness.aqal.table.headers.method': 'Methode',
 } as const;
