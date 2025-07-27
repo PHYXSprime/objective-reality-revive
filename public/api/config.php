@@ -11,7 +11,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 
 // Database configuration
 $host = 'ukeluhuf.mysql.db.internal';
-$dbname = 'ukeluhuf_lovabl';
+$dbname = 'ukeluhuf_object';
 $username = 'ukeluhuf_lovabl';
 $password = '2Piloten!7fa!';
 
