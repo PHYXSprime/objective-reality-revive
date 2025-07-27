@@ -482,7 +482,7 @@ export default function Consciousness() {
                     <li><strong>Rotational Alignment Term:</strong> <span className="text-primary font-medium">RA</span> {t('consciousness.lomni.terms.4')}</li>
                     <li><strong>CMB Driving Term:</strong> <span className="text-primary font-medium">CMB(n+1)</span> {t('consciousness.lomni.terms.5')}</li>
                     <li><strong>Gravitational and Interaction Terms:</strong> <span className="text-primary font-medium">GF & INT</span> {t('consciousness.lomni.terms.6')}</li>
-                    <li><strong>Vortex Flux Stabilization Term:</strong> {t('consciousness.lomni.terms.7')}</li>
+                    <li><strong>Vortex Flux Stabilization Term:</strong> <span className="text-primary font-medium">VFS</span> {t('consciousness.lomni.terms.7')}</li>
                   </ol>
                 </div>
 
