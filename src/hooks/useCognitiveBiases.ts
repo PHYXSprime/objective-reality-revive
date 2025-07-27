@@ -18,7 +18,7 @@ export function useCognitiveBiases(language: string = 'en') {
       try {
         console.log('Loading cognitive biases from API for language:', language);
         
-        const response = await fetch(`/api/cognitive-biases.php?lang=${language}`);
+        const response = await fetch(`https://dev.objective-reality.info/api/cognitive-biases.php?lang=${language}`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }

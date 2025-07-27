@@ -18,7 +18,7 @@ export function useLogicalFallacies(language: string = 'en') {
       try {
         console.log('Loading logical fallacies from API for language:', language);
         
-        const response = await fetch(`/api/logical-fallacies.php?lang=${language}`);
+        const response = await fetch(`https://dev.objective-reality.info/api/logical-fallacies.php?lang=${language}`);
         if (!response.ok) {
           throw new Error(`HTTP error! status: ${response.status}`);
         }
