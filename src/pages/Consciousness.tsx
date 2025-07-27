@@ -51,6 +51,86 @@ export default function Consciousness() {
           </CardHeader>
         </Card>
 
+        {/* Quick Navigation Cards */}
+        <div className="mb-12">
+          <div className="relative">
+            <div className="absolute inset-0 rounded-2xl border border-blue-400/30 bg-transparent"></div>
+            <div className="absolute -top-4 left-6 bg-background px-3 py-1 rounded-full border border-blue-400/30">
+              <h2 className="text-xl font-semibold text-blue-600 dark:text-blue-400">Jump to...</h2>
+            </div>
+            <div className="p-8 pt-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+                <Card className="glass-card transition-transform hover:scale-105">
+                  <button className="block p-4 w-full text-left" onClick={() => {
+                    const phyxsTable = document.querySelector('[data-testid="phyxs-table"]') || 
+                                     document.querySelector('div:has(> [data-testid="phyxs-table"])') ||
+                                     document.querySelector('.mb-12:nth-of-type(2)');
+                    if (phyxsTable) {
+                      phyxsTable.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}>
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                          <Brain className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-foreground">PHYXS Map of Consciousness (Part 2)</h3>
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed text-left">
+                        Explore the advanced PHYXS consciousness mapping framework
+                      </p>
+                    </div>
+                  </button>
+                </Card>
+
+                <Card className="glass-card transition-transform hover:scale-105">
+                  <button className="block p-4 w-full text-left" onClick={() => {
+                    const phyxsSection = document.querySelector('h1[class*="text-6xl"]') ||
+                                        document.querySelector('h1:has(span)');
+                    if (phyxsSection) {
+                      phyxsSection.closest('div')?.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}>
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                          <Globe className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-foreground">PHYXS</h3>
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed text-left">
+                        Discover the Physical Systems framework and space quanta theory
+                      </p>
+                    </div>
+                  </button>
+                </Card>
+
+                <Card className="glass-card transition-transform hover:scale-105">
+                  <button className="block p-4 w-full text-left" onClick={() => {
+                    const lomniSection = document.querySelector('h1:has(span.font-serif)') ||
+                                        document.querySelector('span.font-serif')?.closest('h1');
+                    if (lomniSection) {
+                      lomniSection.closest('.glass-card')?.scrollIntoView({ behavior: 'smooth' });
+                    }
+                  }}>
+                    <div className="space-y-3">
+                      <div className="flex items-center space-x-3">
+                        <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
+                          <Lightbulb className="h-5 w-5 text-blue-600 dark:text-blue-400" />
+                        </div>
+                        <h3 className="text-lg font-semibold text-foreground">𝓛_omni</h3>
+                      </div>
+                      <p className="text-sm text-muted-foreground leading-relaxed text-left">
+                        Learn about the Omniverse Lagrangian and its mathematical framework
+                      </p>
+                    </div>
+                  </button>
+                </Card>
+              </div>
+            </div>
+          </div>
+        </div>
+
         {/* David Heggli's Digital Twins Study */}
         <Card className="mb-12 border-primary/20 glass-card">
           <CardHeader>
@@ -142,86 +222,6 @@ export default function Consciousness() {
             </div>
           </CardContent>
         </Card>
-
-        {/* Quick Navigation Cards */}
-        <div className="mb-12">
-          <div className="relative">
-            <div className="absolute inset-0 rounded-2xl border border-blue-400/30 bg-transparent"></div>
-            <div className="absolute -top-4 left-6 bg-background px-3 py-1 rounded-full border border-blue-400/30">
-              <h2 className="text-xl font-semibold text-blue-600 dark:text-blue-400">Jump to...</h2>
-            </div>
-            <div className="p-8 pt-12">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-                <Card className="glass-card transition-transform hover:scale-105">
-                  <button className="block p-4 w-full text-left" onClick={() => {
-                    const phyxsTable = document.querySelector('[data-testid="phyxs-table"]') || 
-                                     document.querySelector('div:has(> [data-testid="phyxs-table"])') ||
-                                     document.querySelector('.mb-12:nth-of-type(2)');
-                    if (phyxsTable) {
-                      phyxsTable.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}>
-                    <div className="space-y-3">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
-                          <Brain className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                        </div>
-                        <h3 className="text-lg font-semibold text-foreground">PHYXS Map of Consciousness (Part 2)</h3>
-                      </div>
-                      <p className="text-sm text-muted-foreground leading-relaxed text-left">
-                        Explore the advanced PHYXS consciousness mapping framework
-                      </p>
-                    </div>
-                  </button>
-                </Card>
-
-                <Card className="glass-card transition-transform hover:scale-105">
-                  <button className="block p-4 w-full text-left" onClick={() => {
-                    const phyxsSection = document.querySelector('h1[class*="text-6xl"]') ||
-                                        document.querySelector('h1:has(span)');
-                    if (phyxsSection) {
-                      phyxsSection.closest('div')?.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}>
-                    <div className="space-y-3">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
-                          <Globe className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                        </div>
-                        <h3 className="text-lg font-semibold text-foreground">PHYXS</h3>
-                      </div>
-                      <p className="text-sm text-muted-foreground leading-relaxed text-left">
-                        Discover the Physical Systems framework and space quanta theory
-                      </p>
-                    </div>
-                  </button>
-                </Card>
-
-                <Card className="glass-card transition-transform hover:scale-105">
-                  <button className="block p-4 w-full text-left" onClick={() => {
-                    const lomniSection = document.querySelector('h1:has(span.font-serif)') ||
-                                        document.querySelector('span.font-serif')?.closest('h1');
-                    if (lomniSection) {
-                      lomniSection.closest('.glass-card')?.scrollIntoView({ behavior: 'smooth' });
-                    }
-                  }}>
-                    <div className="space-y-3">
-                      <div className="flex items-center space-x-3">
-                        <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
-                          <Lightbulb className="h-5 w-5 text-blue-600 dark:text-blue-400" />
-                        </div>
-                        <h3 className="text-lg font-semibold text-foreground">𝓛_omni</h3>
-                      </div>
-                      <p className="text-sm text-muted-foreground leading-relaxed text-left">
-                        Learn about the Omniverse Lagrangian and its mathematical framework
-                      </p>
-                    </div>
-                  </button>
-                </Card>
-              </div>
-            </div>
-          </div>
-        </div>
 
         {/* AQAL Consciousness Map */}
         <div className="mb-12">
