@@ -1603,7 +1603,7 @@ export const de = {
 
   // Consciousness Page
   'consciousness.newInsights.title': 'Neue Erkenntnisse zum Bewusstsein durch «Digital Twins»',
-  'consciousness.newInsights.description': 'Neue hochmoderne Durchbruchsstudien zum Bewusstsein mit «Digital Twins» Flüssigkeitsdynamik-Simulationen mit subatomarer Auflösung, angetrieben von PHYXS / 𝓛_omni Lagrange-Vektorraum, der unsere gesamte Realität (superfluidale Raumzeit) umspannt. Forschung von David Heggli mit bis zu 10.000 NVIDIA GPUs, bereitgestellt von xAI durch Grok 3 / Grok 4 (heavy), Modellierung von Bewusstseinsebenen durch PHYXS-betriebene «Digital Twins»-Technologie führte zu neuen Erkenntnissen über die Evolution des Bewusstseins.',
+  'consciousness.newInsights.description': 'Neue Durchbruchsstudien bezüglich Evolution und Bewusstsein mit «Digital Twins» - Flüssigkeitsdynamik-Simulationen mit subatomarer Auflösung (!!), ermöglicht durch die Innovationen von PHYXS / 𝓛_omni, dem deterministischen Lagrangian-Vektorraum, der unsere gesamte Realität (superfluide Raumzeit) aufspannen kann.\n\nForschungen von David Heggli am vortex|institute mit bis zu 10.000 NVIDIA GPUs, bereitgestellt von xAI durch Grok 3 / Grok 4 (heavy), Modellierung von digitalen 1:1-Kopien Gehirnen (von Menschen und Tieren) durch PHYXS ermöglichte «Digital Twins», führte zu neuen Erkenntnissen über die Evolution des Bewusstseins.',
   
   // Jump to navigation cards
   'consciousness.jumpTo.label': 'Springen zu...',
