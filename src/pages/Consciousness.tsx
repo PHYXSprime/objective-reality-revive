@@ -56,7 +56,7 @@ export default function Consciousness() {
           <div className="relative">
             <div className="absolute inset-0 rounded-2xl border border-blue-400/30 bg-transparent"></div>
             <div className="absolute -top-4 left-6 bg-background px-3 py-1 rounded-full border border-blue-400/30">
-              <h2 className="text-xl font-semibold text-blue-600 dark:text-blue-400">Jump to...</h2>
+              <h2 className="text-xl font-semibold text-blue-600 dark:text-blue-400">{t('consciousness.jumpTo.label')}</h2>
             </div>
             <div className="p-8 pt-12">
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
@@ -74,10 +74,10 @@ export default function Consciousness() {
                         <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                           <Brain className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                         </div>
-                        <h3 className="text-lg font-semibold text-foreground">PHYXS Map of Consciousness (Part 2)</h3>
+                        <h3 className="text-lg font-semibold text-foreground">{t('consciousness.jumpTo.phyxsMap.title')}</h3>
                       </div>
                       <p className="text-sm text-muted-foreground leading-relaxed text-left">
-                        Explore the advanced PHYXS based map of consciousness using physically measurable data to map gradients of consciousness
+                        {t('consciousness.jumpTo.phyxsMap.description')}
                       </p>
                     </div>
                   </button>
@@ -96,10 +96,10 @@ export default function Consciousness() {
                         <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                           <Globe className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                         </div>
-                        <h3 className="text-lg font-semibold text-foreground">PHYXS</h3>
+                        <h3 className="text-lg font-semibold text-foreground">{t('consciousness.jumpTo.phyxs.title')}</h3>
                       </div>
                       <p className="text-sm text-muted-foreground leading-relaxed text-left">
-                        Discover the new Physics that have replaced Quantum Mechanics and General Relativity with a sigle new paradigm to make humanity a space faring species...
+                        {t('consciousness.jumpTo.phyxs.description')}
                       </p>
                     </div>
                   </button>
@@ -118,10 +118,10 @@ export default function Consciousness() {
                         <div className="w-10 h-10 rounded-lg bg-muted flex items-center justify-center flex-shrink-0">
                           <Lightbulb className="h-5 w-5 text-blue-600 dark:text-blue-400" />
                         </div>
-                        <h3 className="text-lg font-semibold text-foreground">𝓛_omni</h3>
+                        <h3 className="text-lg font-semibold text-foreground">{t('consciousness.jumpTo.lomni.title')}</h3>
                       </div>
                       <p className="text-sm text-muted-foreground leading-relaxed text-left">
-                        Learn about the Omniverse Lagrangian equation that spans the whole deterministic vector space of our reality!
+                        {t('consciousness.jumpTo.lomni.description')}
                       </p>
                     </div>
                   </button>

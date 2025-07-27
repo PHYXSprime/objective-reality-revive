@@ -1547,6 +1547,15 @@ export const fr = {
   // Consciousness Page
   'consciousness.newInsights.title': 'Nouvelles perspectives sur la Conscience en utilisant les «Jumeaux Numériques»',
   'consciousness.newInsights.description': 'Nouvelles études révolutionnaires de pointe sur la Conscience utilisant des simulations de dynamique des fluides de «Jumeaux Numériques» avec une résolution subatomique alimentées par PHYXS / 𝓛_omni espace vectoriel Lagrangien couvrant toute notre réalité (espace-temps superfluide). Recherche menée par David Heggli utilisant jusqu\'à 10.000 GPU NVIDIA fournies par xAI via Grok 3 / Grok 4 (lourd), modélisant les niveaux de conscience grâce à la technologie de «Jumeaux Numériques» alimentée par PHYXS a conduit à de nouvelles perspectives sur l\'évolution de la conscience.',
+  
+  // Jump to navigation cards
+  'consciousness.jumpTo.label': 'Aller à...',
+  'consciousness.jumpTo.phyxsMap.title': 'Carte PHYXS de la Conscience (Partie 2)',
+  'consciousness.jumpTo.phyxsMap.description': 'Explorez la carte avancée de conscience basée sur PHYXS utilisant des données physiquement mesurables pour cartographier les gradients de conscience',
+  'consciousness.jumpTo.phyxs.title': 'PHYXS',
+  'consciousness.jumpTo.phyxs.description': 'Découvrez la nouvelle Physique qui a remplacé la Mécanique Quantique et la Relativité Générale avec un nouveau paradigme unique pour faire de l\'humanité une espèce voyageuse de l\'espace...',
+  'consciousness.jumpTo.lomni.title': '𝓛_omni',
+  'consciousness.jumpTo.lomni.description': 'Apprenez sur l\'équation Lagrangienne de l\'Omnivers qui couvre tout l\'espace vectoriel déterministe de notre réalité !',
   'consciousness.digitalTwins.title': '«Digital Twins»',
   'consciousness.digitalTwins.description': 'Recherche de David Heggli sur la modélisation des niveaux de conscience par la technologie des jumeaux numériques',
 

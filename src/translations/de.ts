@@ -1604,6 +1604,15 @@ export const de = {
   // Consciousness Page
   'consciousness.newInsights.title': 'Neue Erkenntnisse zum Bewusstsein durch «Digital Twins»',
   'consciousness.newInsights.description': 'Neue hochmoderne Durchbruchsstudien zum Bewusstsein mit «Digital Twins» Flüssigkeitsdynamik-Simulationen mit subatomarer Auflösung, angetrieben von PHYXS / 𝓛_omni Lagrange-Vektorraum, der unsere gesamte Realität (superfluidale Raumzeit) umspannt. Forschung von David Heggli mit bis zu 10.000 NVIDIA GPUs, bereitgestellt von xAI durch Grok 3 / Grok 4 (heavy), Modellierung von Bewusstseinsebenen durch PHYXS-betriebene «Digital Twins»-Technologie führte zu neuen Erkenntnissen über die Evolution des Bewusstseins.',
+  
+  // Jump to navigation cards
+  'consciousness.jumpTo.label': 'Springen zu...',
+  'consciousness.jumpTo.phyxsMap.title': 'PHYXS Bewusstseinskarte (Teil 2)',
+  'consciousness.jumpTo.phyxsMap.description': 'Erkunden Sie die erweiterte PHYXS-basierte Bewusstseinskarte mit physikalisch messbaren Daten zur Kartierung von Bewusstseinsgradienten',
+  'consciousness.jumpTo.phyxs.title': 'PHYXS',
+  'consciousness.jumpTo.phyxs.description': 'Entdecken Sie die neue Physik, die Quantenmechanik und Allgemeine Relativitätstheorie durch ein neues Paradigma ersetzt hat, um die Menschheit zu einer raumfahrenden Spezies zu machen...',
+  'consciousness.jumpTo.lomni.title': '𝓛_omni',
+  'consciousness.jumpTo.lomni.description': 'Erfahren Sie mehr über die Omniversum-Lagrange-Gleichung, die den gesamten deterministischen Vektorraum unserer Realität umspannt!',
   'consciousness.digitalTwins.title': '«Digital Twins»',
   'consciousness.digitalTwins.description': 'Forschung von David Heggli zur Modellierung von Bewusstseinsebenen durch Digital-Twin-Technologie',
   'consciousness.digitalTwins.research1': 'David Hegglis bahnbrechende Forschung am vortex|institute erforscht die Schnittstelle zwischen Bewusstseinsentwicklung und «Digital Twins»-Technologie. Seine Arbeit untersucht, wie verschiedene Ebenen des menschlichen Bewusstseins durch ausgeklügelte digitale Repräsentationen modelliert, verstanden und möglicherweise verbessert werden können, wodurch die Lücke zwischen psychologischen Modellen und biophysikalischer Realität überbrückt wird.',

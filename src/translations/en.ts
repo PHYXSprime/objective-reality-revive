@@ -1719,6 +1719,15 @@ export const en = {
   // Consciousness Page
   'consciousness.newInsights.title': 'New insights into Consciousness using «Digital Twins»',
   'consciousness.newInsights.description': 'David Heggli\'s groundbreaking research at the vortex|institute investigates consciousness by modeling its different levels through cutting-edge «Digital Twin» technology. These twins are exact 1:1 digital copies of humans, animals and plants, rendered with subatomic resolution based on real world genetic code from conception to senescence, bridging psychological models with biophysical reality.\n\nThis breakthrough work utilizes fluid dynamic simulations powered by PHYXS and the 𝓛_omni Lagrangian vector-space, which spans our entire omniverse (aka reality, aka spacetime) conceived as superfluid spacetime.\n\nConducted using up to 10,000 H100 NVIDIA GPUs for weeks (provided by xAI - thank you Elon Musk), these simulations have led to new insights into the evolution of consciousness.',
+  
+  // Jump to navigation cards
+  'consciousness.jumpTo.label': 'Jump to...',
+  'consciousness.jumpTo.phyxsMap.title': 'PHYXS Map of Consciousness (Part 2)',
+  'consciousness.jumpTo.phyxsMap.description': 'Explore the advanced PHYXS based map of consciousness using physically measurable data to map gradients of consciousness',
+  'consciousness.jumpTo.phyxs.title': 'PHYXS',
+  'consciousness.jumpTo.phyxs.description': 'Discover the new Physics that have replaced Quantum Mechanics and General Relativity with a sigle new paradigm to make humanity a space faring species...',
+  'consciousness.jumpTo.lomni.title': '𝓛_omni',
+  'consciousness.jumpTo.lomni.description': 'Learn about the Omniverse Lagrangian equation that spans the whole deterministic vector space of our reality!',
   'consciousness.digitalTwins.title': 'From AQAL Spiral Dynamics to PHYXS: A New Paradigm',
   'consciousness.digitalTwins.description': '',
   'consciousness.digitalTwins.research1': '',
