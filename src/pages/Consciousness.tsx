@@ -469,18 +469,18 @@ export default function Consciousness() {
 
               <div className="space-y-6">
                 <div>
-                  <h2 className="text-3xl font-bold text-foreground mb-4 border-b border-primary/20 pb-2">
+                  <h4 className="text-xl font-bold text-foreground mb-4 border-b border-primary/20 pb-2">
                     {t('consciousness.phyxs.abstract.title')}
-                  </h2>
+                  </h4>
                   <p className="text-muted-foreground leading-relaxed">
                     {t('consciousness.phyxs.abstract.content')}
                   </p>
                 </div>
 
                 <div>
-                  <h2 className="text-3xl font-bold text-foreground mb-4 border-b border-primary/20 pb-2">
+                  <h4 className="text-xl font-bold text-foreground mb-4 border-b border-primary/20 pb-2">
                     {t('consciousness.phyxs.introduction.title')}
-                  </h2>
+                  </h4>
                   <p className="text-muted-foreground leading-relaxed mb-4">
                     {t('consciousness.phyxs.introduction.content1')}
                   </p>
