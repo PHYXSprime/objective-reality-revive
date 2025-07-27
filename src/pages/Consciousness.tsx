@@ -77,7 +77,7 @@ export default function Consciousness() {
                         <h3 className="text-lg font-semibold text-foreground">PHYXS Map of Consciousness (Part 2)</h3>
                       </div>
                       <p className="text-sm text-muted-foreground leading-relaxed text-left">
-                        Explore the advanced PHYXS consciousness mapping framework
+                        Explore the advanced PHYXS based map of consciousness using physically measurable data to map gradients of consciousness
                       </p>
                     </div>
                   </button>
