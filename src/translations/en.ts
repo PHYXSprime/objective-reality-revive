@@ -19,7 +19,7 @@ export const en = {
   'consciousness.lomni.terms.2': 'Space Quanta Term: Captures the kinetic energy of space quanta. The potential term stabilizes quanta density to prevent collapse or dispersion, ensuring structural integrity.',
   'consciousness.lomni.terms.3': 'Pilot Wave and Phase-Locking Term: Governs pilot wave propagation through the sub-quanta fluid. The phase-locking term ensures synchronized oscillations, critical for quantum coherence and entanglement.',
   'consciousness.lomni.terms.4': 'Rotational Alignment Term: Models electromagnetic interactions through the field tensor F_μν. The spin-vector potential term accounts for quanta alignment, reproducing Maxwell\'s equations.',
-  'consciousness.lomni.terms.5': 'CMB Driving Term: Represents the cosmological influence of the cosmic microwave background (CMB). This term drives large-scale dynamics, such as cosmological expansion.',
+  'consciousness.lomni.terms.5': 'Represents the cosmological influence of the cosmic microwave background (CMB). This term drives large-scale dynamics, such as cosmological expansion.',
   'consciousness.lomni.terms.6': 'Gravitational and Interaction Terms: Model gravity through a scalar potential Φ_g. The interaction term captures velocity differences between quanta and fluid.',
   'consciousness.lomni.terms.7': 'Vortex Flux Stabilization Term: Stabilizes vortical flux in the sub-quanta fluid, ensuring the coherence of vortex structures across scales, from particle formation to cosmological filaments.',
   'consciousness.lomni.parameters.title': 'Numerical Parameters',
