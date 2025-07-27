@@ -57,18 +57,12 @@ export default function Consciousness() {
               <Brain className="h-6 w-6 text-primary" />
               <CardTitle className="text-2xl">{t('consciousness.digitalTwins.title')}</CardTitle>
             </div>
-            <CardDescription className="text-lg">
-              {t('consciousness.digitalTwins.description')}
-            </CardDescription>
+            
           </CardHeader>
           <CardContent className="space-y-6">
             <div className="prose dark:prose-invert max-w-none">
-              <p className="text-muted-foreground leading-relaxed">
-                {t('consciousness.digitalTwins.research1')}
-              </p>
-              <p className="text-muted-foreground leading-relaxed mt-4">
-                {t('consciousness.digitalTwins.research2')}
-              </p>
+              
+              
               
               <h3 className="text-xl font-semibold text-foreground mt-6 mb-4">
                 {t('consciousness.aqalToPhyxs.title')}
