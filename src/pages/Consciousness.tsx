@@ -42,9 +42,13 @@ export default function Consciousness() {
             <CardTitle className="text-2xl font-bold">
               {t('consciousness.newInsights.title')}
             </CardTitle>
-            <CardDescription className="text-lg">
-              {t('consciousness.newInsights.description')}
-            </CardDescription>
+            <div className="text-lg space-y-4">
+              {t('consciousness.newInsights.description').split('\n\n').map((paragraph, index) => (
+                <p key={index} className="text-muted-foreground">
+                  {paragraph}
+                </p>
+              ))}
+            </div>
           </CardHeader>
         </Card>
 
