@@ -10,9 +10,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 }
 
 // Database configuration
-$host = 'mysql.hostpoint.ch';
-$dbname = 'ukeluhuf_object';
-$username = 'ukeluhuf_object';
+$host = 'ukeluhuf.mysql.db.internal';
+$dbname = 'ukeluhuf_lovabl';
+$username = 'ukeluhuf_lovabl';
 $password = 'Lbp24w8qR9kq';
 
 try {
