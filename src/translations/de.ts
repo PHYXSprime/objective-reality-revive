@@ -1623,6 +1623,15 @@ export const de = {
   'consciousness.links.researchGate': 'ResearchGate',
   'consciousness.aqalTable.title': 'AQAL Spiral Dynamics Entwicklungskarte',
   'consciousness.aqalTable.description': 'Basierend auf Ken Wilbers umfassendem AQAL-Rahmen und Spiral Dynamics zeigt diese Karte die psychologischen Stadien der menschlichen Bewusstseinsentwicklung vom grundlegenden Überleben bis zum transzendenten Bewusstsein.',
+  
+  'consciousness.phyxs.table.headers.evolutionPoint': 'Evolutionspunkt',
+  'consciousness.phyxs.table.headers.stage': 'Stadium',
+  'consciousness.phyxs.table.headers.timeframe': 'Zeitrahmen',
+  'consciousness.phyxs.table.headers.significance': 'Bedeutung',
+  'consciousness.phyxs.table.labels.description': 'Beschreibung',
+  'consciousness.phyxs.table.labels.characteristics': 'Eigenschaften',
+  'consciousness.phyxs.table.labels.biophysicalMarkers': 'Biophysikalische Marker',
+  'consciousness.phyxs.table.labels.cognitiveCapabilities': 'Kognitive Fähigkeiten',
 
   // Step 3: AQAL vs PHYXS Content  
   'consciousness.nextLeap.title': 'Teil 2: Der nächste Sprung – Die PHYXS Evolution D Karte des Bewusstseins',
