@@ -121,7 +121,7 @@ export default function Consciousness() {
                         <h3 className="text-lg font-semibold text-foreground">𝓛_omni</h3>
                       </div>
                       <p className="text-sm text-muted-foreground leading-relaxed text-left">
-                        Learn about the Omniverse Lagrangian and its mathematical framework
+                        Learn about the Omniverse Lagrangian equation that spans the whole deterministic vector space of our reality!
                       </p>
                     </div>
                   </button>
