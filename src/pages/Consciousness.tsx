@@ -64,9 +64,7 @@ export default function Consciousness() {
               
               
               
-              <h3 className="text-xl font-semibold text-foreground mt-6 mb-4">
-                {t('consciousness.aqalToPhyxs.title')}
-              </h3>
+              
               
               <div className="grid md:grid-cols-2 gap-6 mt-6">
                 <div className="space-y-4">
