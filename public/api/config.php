@@ -13,7 +13,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
 $host = 'ukeluhuf.mysql.db.internal';
 $dbname = 'ukeluhuf_lovabl';
 $username = 'ukeluhuf_lovabl';
-$password = 'Lbp24w8qR9kq';
+$password = '2Piloten!7fa!';
 
 try {
     $pdo = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8mb4", $username, $password);
