@@ -99,7 +99,7 @@ export default function Consciousness() {
                         <h3 className="text-lg font-semibold text-foreground">PHYXS</h3>
                       </div>
                       <p className="text-sm text-muted-foreground leading-relaxed text-left">
-                        Discover the Physical Systems framework and space quanta theory
+                        Discover the new Physics that have replaced Quantum Mechanics and General Relativity with a sigle new paradigm to make humanity a space faring species...
                       </p>
                     </div>
                   </button>
