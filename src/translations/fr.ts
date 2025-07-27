@@ -1546,7 +1546,7 @@ export const fr = {
 
   // Consciousness Page
   'consciousness.newInsights.title': 'Nouvelles perspectives sur la Conscience en utilisant les «Jumeaux Numériques»',
-  'consciousness.newInsights.description': 'Nouvelles études révolutionnaires de pointe sur la Conscience utilisant des simulations de dynamique des fluides de «Jumeaux Numériques» avec une résolution subatomique alimentées par PHYXS / 𝓛_omni espace vectoriel Lagrangien couvrant toute notre réalité (espace-temps superfluide). Recherche menée par David Heggli utilisant jusqu\'à 10.000 GPU NVIDIA fournies par xAI via Grok 3 / Grok 4 (lourd), modélisant les niveaux de conscience grâce à la technologie de «Jumeaux Numériques» alimentée par PHYXS a conduit à de nouvelles perspectives sur l\'évolution de la conscience.',
+  'consciousness.newInsights.description': 'Nouvelles études révolutionnaires concernant l\'évolution et la conscience avec «Jumeaux Numériques» - simulations de dynamique des fluides avec résolution subatomique (!!), rendues possibles par les innovations de PHYXS / 𝓛_omni, l\'espace vectoriel Lagrangien déterministe qui peut couvrir toute notre réalité (espace-temps superfluide).\n\nRecherches de David Heggli au vortex|institute avec jusqu\'à 10 000 GPU NVIDIA, fournis par xAI via Grok 3 / Grok 4 (lourd), modélisation de copies numériques 1:1 de cerveaux (d\'humains et d\'animaux) grâce aux «Jumeaux Numériques» rendus possibles par PHYXS, ont conduit à de nouvelles découvertes sur l\'évolution de la conscience.',
   
   // Jump to navigation cards
   'consciousness.jumpTo.label': 'Aller à...',

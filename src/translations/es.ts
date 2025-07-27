@@ -1584,7 +1584,7 @@ export const es = {
 
   // Consciousness Page
   'consciousness.newInsights.title': 'Nuevas perspectivas sobre la Conciencia usando «Gemelos Digitales»',
-  'consciousness.newInsights.description': 'Nuevos estudios revolucionarios de vanguardia sobre la Conciencia usando simulaciones fluidodinámicas de «Gemelos Digitales» con resolución subatómica impulsadas por PHYXS / 𝓛_omni espacio vectorial Lagrangiano que abarca toda nuestra realidad (espacio-tiempo superfluido). Investigación realizada por David Heggli usando hasta 10.000 GPU NVIDIA proporcionadas por xAI a través de Grok 3 / Grok 4 (pesado), modelando niveles de conciencia a través de tecnología de «Gemelos Digitales» potenciada por PHYXS llevó a nuevas perspectivas sobre la evolución de la conciencia.',
+  'consciousness.newInsights.description': 'Nuevos estudios revolucionarios sobre evolución y conciencia con «Gemelos Digitales» - simulaciones fluidodinámicas con resolución subatómica (!!), posibilitadas por las innovaciones de PHYXS / 𝓛_omni, el espacio vectorial Lagrangiano determinístico que puede abarcar toda nuestra realidad (espacio-tiempo superfluido).\n\nInvestigaciones de David Heggli en vortex|institute con hasta 10,000 GPU NVIDIA, proporcionadas por xAI a través de Grok 3 / Grok 4 (pesado), modelado de copias digitales 1:1 de cerebros (de humanos y animales) mediante «Gemelos Digitales» habilitados por PHYXS, llevaron a nuevos descubrimientos sobre la evolución de la conciencia.',
   
   // Jump to navigation cards
   'consciousness.jumpTo.label': 'Ir a...',
