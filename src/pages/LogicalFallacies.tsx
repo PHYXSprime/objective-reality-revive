@@ -184,7 +184,7 @@ export default function LogicalFallacies() {
                   <Filter className="h-4 w-4 mr-2" />
                   <SelectValue placeholder={t('filter.by_category')} />
                 </SelectTrigger>
-                <SelectContent className="z-[9999]">
+                <SelectContent className="z-[9999] bg-background border border-border">
                   {categories.map((category) => (
                     <SelectItem key={category.value} value={category.value}>
                       {category.label}
