@@ -25,14 +25,50 @@ export default function LogicalFallacies() {
   // Wait for both translations and fallacies to load
   const isLoading = translationsLoading || loading;
 
+  // Map database category values to translation keys
+  const mapCategoryToTranslationKey = (category: string): string => {
+    const mapping: { [key: string]: string } = {
+      'Relevance': 'relevance',
+      'Presumption': 'presumption',
+      'Weak Inference': 'weak_inference',
+      'Causal': 'causal',
+      'Formal': 'formal',
+      'Conditional': 'conditional',
+      // Handle possible variations
+      'relevance': 'relevance',
+      'presumption': 'presumption',
+      'weak_inference': 'weak_inference',
+      'causal': 'causal',
+      'formal': 'formal',
+      'conditional': 'conditional',
+      'weak-inference': 'weak_inference',
+      'Weak-Inference': 'weak_inference'
+    };
+    return mapping[category] || category.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_');
+  };
+
   // Generate categories dynamically from the data
   const uniqueCategories = [...new Set(fallacies.map(fallacy => fallacy.category))];
+  
+  // Debug: Log categories to see what's coming from the API
+  if (fallacies.length > 0) {
+    console.log('Categories from API:', uniqueCategories);
+    console.log('Mapped categories:', uniqueCategories.map(cat => ({ 
+      original: cat, 
+      mapped: mapCategoryToTranslationKey(cat),
+      translation: t(`category.${mapCategoryToTranslationKey(cat)}`)
+    })));
+  }
+  
   const categories = [
     { value: 'all', label: t('filter.all') },
-    ...uniqueCategories.map(category => ({ 
-      value: category, 
-      label: t(`category.${category}`) || category
-    }))
+    ...uniqueCategories.map(category => {
+      const translationKey = mapCategoryToTranslationKey(category);
+      return { 
+        value: category, 
+        label: t(`category.${translationKey}`) || category
+      };
+    })
   ];
 
   const filteredFallacies = fallacies.filter(fallacy => {
@@ -43,7 +79,8 @@ export default function LogicalFallacies() {
   });
 
   const getCategoryColor = (category: string) => {
-    switch (category) {
+    const mappedCategory = mapCategoryToTranslationKey(category);
+    switch (mappedCategory) {
       case 'relevance': return 'bg-red-100 text-red-800 dark:bg-red-900 dark:text-red-200';
       case 'presumption': return 'bg-orange-100 text-orange-800 dark:bg-orange-900 dark:text-orange-200';
       case 'weak_inference': return 'bg-yellow-100 text-yellow-800 dark:bg-yellow-900 dark:text-yellow-200';
@@ -132,7 +169,7 @@ export default function LogicalFallacies() {
                           {fallacy.name}
                         </CardTitle>
                         <Badge className={getCategoryColor(fallacy.category)}>
-                          {t(`category.${fallacy.category}`)}
+                          {t(`category.${mapCategoryToTranslationKey(fallacy.category)}`)}
                         </Badge>
                       </div>
                     </CardHeader>
