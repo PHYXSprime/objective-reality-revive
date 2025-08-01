@@ -88,7 +88,8 @@ export default function LogicalFallacies() {
   
   // Debug: Log categories to see what's coming from the API
   if (fallacies.length > 0) {
-    console.log('Categories from API:', uniqueCategories);
+    console.log(`Language: ${language}, Categories from API:`, uniqueCategories);
+    console.log(`Language: ${language}, First few fallacies:`, fallacies.slice(0, 3).map(f => ({ name: f.name, category: f.category })));
     console.log('Mapped categories:', uniqueCategories.map(cat => ({ 
       original: cat, 
       mapped: mapCategoryToTranslationKey(cat),
@@ -96,9 +97,14 @@ export default function LogicalFallacies() {
     })));
   }
   
+  // If no categories found (all null), use default English categories as fallback
+  const fallbackCategories = uniqueCategories.length === 0 ? 
+    ['relevance', 'causal', 'conditional', 'formal', 'presumption', 'weak_inference'] : 
+    uniqueCategories;
+  
   const categories = [
     { value: 'all', label: t('filter.all') },
-    ...uniqueCategories.map(category => {
+    ...fallbackCategories.map(category => {
       const translationKey = mapCategoryToTranslationKey(category);
       return { 
         value: category, 
