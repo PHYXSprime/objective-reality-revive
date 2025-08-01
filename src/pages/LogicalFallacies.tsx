@@ -33,13 +33,13 @@ export default function LogicalFallacies() {
     }
     
     const mapping: { [key: string]: string } = {
+      // English categories
       'Relevance': 'relevance',
-      'Presumption': 'presumption',
+      'Presumption': 'presumption', 
       'Weak Inference': 'weak_inference',
       'Causal': 'causal',
       'Formal': 'formal',
       'Conditional': 'conditional',
-      // Handle possible variations
       'relevance': 'relevance',
       'presumption': 'presumption',
       'weak_inference': 'weak_inference',
@@ -47,9 +47,34 @@ export default function LogicalFallacies() {
       'formal': 'formal',
       'conditional': 'conditional',
       'weak-inference': 'weak_inference',
-      'Weak-Inference': 'weak_inference'
+      'Weak-Inference': 'weak_inference',
+      
+      // German categories from API
+      'relevanz': 'relevance',
+      'annahme': 'presumption',
+      'schwache_schlussfolgerung': 'weak_inference',
+      'kausal': 'causal',
+      'bedingt': 'conditional',
+      'konditional': 'conditional',
+      
+      // French categories from API  
+      'pertinence': 'relevance',
+      'présomption': 'presumption',
+      'inférence_faible': 'weak_inference',
+      'inference_faible': 'weak_inference',
+      'formel': 'formal',
+      'conditionnel': 'conditional',
+      
+      // Spanish categories from API
+      'relevancia': 'relevance',
+      'presunción': 'presumption',
+      'presuncion': 'presumption',
+      'inferencia_débil': 'weak_inference',
+      'inferencia_debil': 'weak_inference',
+      'condicional': 'conditional'
     };
-    return mapping[category] || category.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_');
+    
+    return mapping[category] || mapping[category.toLowerCase()] || 'other';
   };
 
   // Generate categories dynamically from the data, filtering out null values
