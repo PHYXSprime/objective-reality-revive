@@ -59,11 +59,17 @@ export default function LogicalFallacies() {
       
       // French categories from API  
       'pertinence': 'relevance',
+      'Pertinence': 'relevance',
       'présomption': 'presumption',
+      'Présomption': 'presumption',
+      'inférence faible': 'weak_inference',
+      'Inférence faible': 'weak_inference',
       'inférence_faible': 'weak_inference',
       'inference_faible': 'weak_inference',
       'formel': 'formal',
+      'Formel': 'formal',
       'conditionnel': 'conditional',
+      'Conditionnel': 'conditional',
       
       // Spanish categories from API
       'relevancia': 'relevance',
