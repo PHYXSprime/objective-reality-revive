@@ -887,6 +887,7 @@ export const es = {
   'category.causal': 'Causal',
   'category.formal': 'Formal',
   'category.conditional': 'Condicional',
+  'category.other': 'Otro',
 
   // Categories - Cognitive Biases
   'category.too_much_information': 'Demasiada información',

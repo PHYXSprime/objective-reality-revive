@@ -26,7 +26,12 @@ export default function LogicalFallacies() {
   const isLoading = translationsLoading || loading;
 
   // Map database category values to translation keys
-  const mapCategoryToTranslationKey = (category: string): string => {
+  const mapCategoryToTranslationKey = (category: string | null | undefined): string => {
+    // Handle null/undefined categories
+    if (!category) {
+      return 'other'; // fallback category
+    }
+    
     const mapping: { [key: string]: string } = {
       'Relevance': 'relevance',
       'Presumption': 'presumption',
@@ -47,8 +52,8 @@ export default function LogicalFallacies() {
     return mapping[category] || category.toLowerCase().replace(/\s+/g, '_').replace(/-/g, '_');
   };
 
-  // Generate categories dynamically from the data
-  const uniqueCategories = [...new Set(fallacies.map(fallacy => fallacy.category))];
+  // Generate categories dynamically from the data, filtering out null values
+  const uniqueCategories = [...new Set(fallacies.map(fallacy => fallacy.category).filter(Boolean))];
   
   // Debug: Log categories to see what's coming from the API
   if (fallacies.length > 0) {
@@ -87,6 +92,7 @@ export default function LogicalFallacies() {
       case 'causal': return 'bg-blue-100 text-blue-800 dark:bg-blue-900 dark:text-blue-200';
       case 'formal': return 'bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-200';
       case 'conditional': return 'bg-purple-100 text-purple-800 dark:bg-purple-900 dark:text-purple-200';
+      case 'other': return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200';
       default: return 'bg-gray-100 text-gray-800 dark:bg-gray-900 dark:text-gray-200';
     }
   };
