@@ -84,7 +84,7 @@ export function PHYXSTable({ data, title, description }: PHYXSTableProps) {
   };
 
   return (
-    <Card className="glass-card">
+    <Card className="glass-card" data-testid="phyxs-table">
       <CardHeader>
         <CardTitle className="text-2xl font-bold">{title}</CardTitle>
         <p className="text-muted-foreground">{description}</p>
