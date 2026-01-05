@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { FileDown, Loader2 } from 'lucide-react';
 import { useQuestLanguage } from '@/contexts/QuestLanguageContext';
-import { nodes, subgraphs } from '@/data/flowchartData';
+import { nodes } from '@/data/flowchartData';
 import jsPDF from 'jspdf';
 
 const translations = {
@@ -54,94 +54,113 @@ export default function FlowchartPDFExport() {
         format: 'a4'
       });
 
-      const pageWidth = pdf.internal.pageSize.getWidth();
-      const pageHeight = pdf.internal.pageSize.getHeight();
-      const margin = 10;
+      const pageWidth = pdf.internal.pageSize.getWidth(); // 297mm
+      const pageHeight = pdf.internal.pageSize.getHeight(); // 210mm
+      const margin = 5;
       
-      // Colors
-      const colors = {
-        background: '#0f172a',
-        cardBg: '#1e293b',
-        text: '#f8fafc',
-        textMuted: '#94a3b8',
-        start: '#a855f7',
-        decision: '#eab308',
-        process: '#3b82f6',
-        end: '#22c55e',
-        arrow: '#64748b'
-      };
-
       // Set background
       pdf.setFillColor(15, 23, 42);
       pdf.rect(0, 0, pageWidth, pageHeight, 'F');
 
       // Title
       pdf.setTextColor(168, 85, 247);
-      pdf.setFontSize(20);
+      pdf.setFontSize(14);
       pdf.setFont('helvetica', 'bold');
       const title = translations.title[language as keyof typeof translations.title] || translations.title.en;
-      pdf.text(title, pageWidth / 2, 15, { align: 'center' });
+      pdf.text(title, pageWidth / 2, 8, { align: 'center' });
       
-      pdf.setFontSize(12);
+      pdf.setFontSize(8);
       pdf.setTextColor(148, 163, 184);
       const subtitle = translations.subtitle[language as keyof typeof translations.subtitle] || translations.subtitle.en;
-      pdf.text(subtitle, pageWidth / 2, 22, { align: 'center' });
+      pdf.text(subtitle, pageWidth / 2, 12, { align: 'center' });
 
-      // Node dimensions
-      const nodeWidth = 45;
-      const nodeHeight = 25;
-      const startY = 35;
-      const colSpacing = 55;
-      const rowSpacing = 35;
+      // Very small node dimensions to fit everything
+      const nodeWidth = 22;
+      const nodeHeight = 10;
+      const colSpacing = 26;
+      const rowSpacing = 14;
+      const startY = 18;
 
-      // Position nodes in a flowchart layout
-      const nodePositions: Record<string, NodePosition> = {};
-      
-      // Main flow columns
-      const col1X = margin + 25;
-      const col2X = col1X + colSpacing;
-      const col3X = col2X + colSpacing;
-      const col4X = col3X + colSpacing;
-      const col5X = col4X + colSpacing;
-
-      // Position key nodes manually for proper flow
-      const keyNodes = [
-        { id: 'StartQuest', x: col1X, y: startY },
-        { id: 'Start', x: col1X, y: startY + rowSpacing },
-        { id: 'SourceQuality', x: col1X, y: startY + rowSpacing * 2 },
-        { id: 'ExpertiseCheck', x: col1X, y: startY + rowSpacing * 3 },
-        { id: 'SeekExpert', x: col1X - 30, y: startY + rowSpacing * 3.5 },
-        { id: 'Collect', x: col1X, y: startY + rowSpacing * 4 },
-        { id: 'AssessNature', x: col2X, y: startY },
-        { id: 'Formulate', x: col2X, y: startY + rowSpacing },
-        { id: 'Falsifiability', x: col2X, y: startY + rowSpacing * 2 },
-        { id: 'IsSupernatural', x: col3X, y: startY },
-        { id: 'ClassifyMetaphysical', x: col3X + 25, y: startY + rowSpacing * 0.5 },
-        { id: 'IsUseful', x: col3X, y: startY + rowSpacing },
-        { id: 'ClassifyPseudo', x: col3X + 25, y: startY + rowSpacing * 1.5 },
-        { id: 'ApplyBayes', x: col3X, y: startY + rowSpacing * 2 },
-        { id: 'EvaluateEvidence', x: col3X, y: startY + rowSpacing * 3 },
-        { id: 'BiasCheck', x: col4X, y: startY },
-        { id: 'AdjustConfidence', x: col4X, y: startY + rowSpacing },
-        { id: 'Conclusion', x: col4X, y: startY + rowSpacing * 2 },
-        { id: 'HighConfidence', x: col4X, y: startY + rowSpacing * 3 },
-        { id: 'StoreFact', x: col5X, y: startY },
-        { id: 'StoreWorking', x: col5X, y: startY + rowSpacing },
-        { id: 'StoreUncertain', x: col5X, y: startY + rowSpacing * 2 },
-        { id: 'StoreUnknown', x: col5X, y: startY + rowSpacing * 3 },
+      // Calculate column positions across the page
+      const cols = [
+        margin + 12,           // Col 0: Start
+        margin + 12 + colSpacing,  // Col 1
+        margin + 12 + colSpacing * 2,  // Col 2
+        margin + 12 + colSpacing * 3,  // Col 3
+        margin + 12 + colSpacing * 4,  // Col 4
+        margin + 12 + colSpacing * 5,  // Col 5
+        margin + 12 + colSpacing * 6,  // Col 6
+        margin + 12 + colSpacing * 7,  // Col 7
+        margin + 12 + colSpacing * 8,  // Col 8
+        margin + 12 + colSpacing * 9,  // Col 9
+        margin + 12 + colSpacing * 10, // Col 10
       ];
 
-      // Set node positions
-      keyNodes.forEach(n => {
-        nodePositions[n.id] = { x: n.x, y: n.y, width: nodeWidth, height: nodeHeight };
-      });
+      // Position all nodes in a grid layout following the flow
+      const nodePositions: Record<string, NodePosition> = {};
+      
+      // Row 0 - Main flow start
+      nodePositions['StartQuest'] = { x: cols[0], y: startY, width: nodeWidth, height: nodeHeight };
+      nodePositions['Start'] = { x: cols[1], y: startY, width: nodeWidth, height: nodeHeight };
+      nodePositions['SourceQuality'] = { x: cols[2], y: startY, width: nodeWidth, height: nodeHeight };
+      nodePositions['ExpertiseCheck'] = { x: cols[3], y: startY, width: nodeWidth, height: nodeHeight };
+      nodePositions['Collect'] = { x: cols[4], y: startY, width: nodeWidth, height: nodeHeight };
+      nodePositions['AssessNature'] = { x: cols[5], y: startY, width: nodeWidth, height: nodeHeight };
+      
+      // Row 1 - Branches
+      nodePositions['SeekExpert'] = { x: cols[3], y: startY + rowSpacing, width: nodeWidth, height: nodeHeight };
+      nodePositions['Formulate'] = { x: cols[6], y: startY, width: nodeWidth, height: nodeHeight };
+      nodePositions['IsSupernatural'] = { x: cols[5], y: startY + rowSpacing, width: nodeWidth, height: nodeHeight };
+      
+      // Row 2
+      nodePositions['Falsifiability'] = { x: cols[6], y: startY + rowSpacing, width: nodeWidth, height: nodeHeight };
+      nodePositions['ClassifyMetaphysical'] = { x: cols[5], y: startY + rowSpacing * 2, width: nodeWidth, height: nodeHeight };
+      nodePositions['IsUseful'] = { x: cols[4], y: startY + rowSpacing * 2, width: nodeWidth, height: nodeHeight };
+      
+      // Row 3
+      nodePositions['ApplyBayes'] = { x: cols[7], y: startY, width: nodeWidth, height: nodeHeight };
+      nodePositions['ClassifyPseudo'] = { x: cols[4], y: startY + rowSpacing * 3, width: nodeWidth, height: nodeHeight };
+      nodePositions['Revise'] = { x: cols[6], y: startY + rowSpacing * 2, width: nodeWidth, height: nodeHeight };
+      
+      // Row 4 - Evidence evaluation
+      nodePositions['EvaluateEvidence'] = { x: cols[8], y: startY, width: nodeWidth, height: nodeHeight };
+      nodePositions['BiasCheck'] = { x: cols[8], y: startY + rowSpacing, width: nodeWidth, height: nodeHeight };
+      nodePositions['AdjustConfidence'] = { x: cols[8], y: startY + rowSpacing * 2, width: nodeWidth, height: nodeHeight };
+      
+      // Row 5 - Conclusions
+      nodePositions['Conclusion'] = { x: cols[9], y: startY, width: nodeWidth, height: nodeHeight };
+      nodePositions['HighConfidence'] = { x: cols[9], y: startY + rowSpacing, width: nodeWidth, height: nodeHeight };
+      nodePositions['MediumConfidence'] = { x: cols[9], y: startY + rowSpacing * 2, width: nodeWidth, height: nodeHeight };
+      nodePositions['LowConfidence'] = { x: cols[9], y: startY + rowSpacing * 3, width: nodeWidth, height: nodeHeight };
+      
+      // Row 6 - Storage
+      nodePositions['StoreFact'] = { x: cols[10], y: startY, width: nodeWidth, height: nodeHeight };
+      nodePositions['StoreWorking'] = { x: cols[10], y: startY + rowSpacing, width: nodeWidth, height: nodeHeight };
+      nodePositions['StoreUncertain'] = { x: cols[10], y: startY + rowSpacing * 2, width: nodeWidth, height: nodeHeight };
+      nodePositions['StoreUnknown'] = { x: cols[10], y: startY + rowSpacing * 3, width: nodeWidth, height: nodeHeight };
+      
+      // Additional nodes - lower section
+      nodePositions['NeedMoreData'] = { x: cols[7], y: startY + rowSpacing * 3, width: nodeWidth, height: nodeHeight };
+      nodePositions['RecordResult'] = { x: cols[9], y: startY + rowSpacing * 4, width: nodeWidth, height: nodeHeight };
+      nodePositions['ConfidenceDecay'] = { x: cols[10], y: startY + rowSpacing * 4, width: nodeWidth, height: nodeHeight };
+      nodePositions['EndInquiry'] = { x: cols[9], y: startY + rowSpacing * 5, width: nodeWidth, height: nodeHeight };
+      nodePositions['KnowledgeDB'] = { x: cols[10], y: startY + rowSpacing * 5, width: nodeWidth, height: nodeHeight };
+      
+      // Classification endpoints
+      nodePositions['ClassifyFiction'] = { x: cols[3], y: startY + rowSpacing * 3, width: nodeWidth, height: nodeHeight };
+      nodePositions['ClassifyOpinion'] = { x: cols[3], y: startY + rowSpacing * 4, width: nodeWidth, height: nodeHeight };
+      nodePositions['ClassifyMisinfo'] = { x: cols[2], y: startY + rowSpacing * 3, width: nodeWidth, height: nodeHeight };
+      
+      // More process nodes
+      nodePositions['ConsiderAlternatives'] = { x: cols[7], y: startY + rowSpacing, width: nodeWidth, height: nodeHeight };
+      nodePositions['WeighEvidence'] = { x: cols[7], y: startY + rowSpacing * 2, width: nodeWidth, height: nodeHeight };
 
       // Draw function for nodes
       const drawNode = (nodeId: string, pos: NodePosition) => {
         const node = nodes.find(n => n.id === nodeId);
         if (!node) return;
 
-        const title = node.title[language as keyof typeof node.title] || node.title.en;
+        const nodeTitle = node.title[language as keyof typeof node.title] || node.title.en;
         
         // Get node color based on type
         let fillColor: string;
@@ -149,20 +168,35 @@ export default function FlowchartPDFExport() {
         switch (node.type) {
           case 'start':
             fillColor = '#581c87';
-            borderColor = colors.start;
+            borderColor = '#a855f7';
             break;
           case 'decision':
             fillColor = '#713f12';
-            borderColor = colors.decision;
+            borderColor = '#eab308';
             break;
           case 'end':
             fillColor = '#14532d';
-            borderColor = colors.end;
+            borderColor = '#22c55e';
+            break;
+          case 'category':
+          case 'database':
+            fillColor = '#1e3a5f';
+            borderColor = node.categoryColor || '#3b82f6';
             break;
           default:
             fillColor = '#1e3a5f';
-            borderColor = colors.process;
+            borderColor = '#3b82f6';
         }
+
+        // Parse colors
+        const parseColor = (hex: string) => [
+          parseInt(hex.slice(1, 3), 16),
+          parseInt(hex.slice(3, 5), 16),
+          parseInt(hex.slice(5, 7), 16)
+        ];
+
+        const [fr, fg, fb] = parseColor(fillColor);
+        const [br, bg, bb] = parseColor(borderColor);
 
         // Draw node shape
         if (node.type === 'decision') {
@@ -172,59 +206,46 @@ export default function FlowchartPDFExport() {
           const hw = pos.width / 2;
           const hh = pos.height / 2;
           
-          pdf.setFillColor(parseInt(fillColor.slice(1, 3), 16), parseInt(fillColor.slice(3, 5), 16), parseInt(fillColor.slice(5, 7), 16));
-          pdf.setDrawColor(parseInt(borderColor.slice(1, 3), 16), parseInt(borderColor.slice(3, 5), 16), parseInt(borderColor.slice(5, 7), 16));
-          pdf.setLineWidth(0.5);
+          pdf.setFillColor(fr, fg, fb);
+          pdf.setDrawColor(br, bg, bb);
+          pdf.setLineWidth(0.3);
           
-          // Draw diamond
-          const points = [
-            { x: cx, y: cy - hh },
-            { x: cx + hw, y: cy },
-            { x: cx, y: cy + hh },
-            { x: cx - hw, y: cy }
-          ];
-          
-          pdf.moveTo(points[0].x, points[0].y);
-          pdf.lineTo(points[1].x, points[1].y);
-          pdf.lineTo(points[2].x, points[2].y);
-          pdf.lineTo(points[3].x, points[3].y);
-          pdf.lineTo(points[0].x, points[0].y);
-          pdf.fill();
+          // Draw filled diamond using triangle method
+          pdf.triangle(cx, cy - hh, cx + hw, cy, cx, cy + hh, 'F');
+          pdf.triangle(cx, cy - hh, cx - hw, cy, cx, cy + hh, 'F');
           
           // Draw border
-          pdf.moveTo(points[0].x, points[0].y);
-          pdf.lineTo(points[1].x, points[1].y);
-          pdf.lineTo(points[2].x, points[2].y);
-          pdf.lineTo(points[3].x, points[3].y);
-          pdf.lineTo(points[0].x, points[0].y);
-          pdf.stroke();
+          pdf.line(cx, cy - hh, cx + hw, cy);
+          pdf.line(cx + hw, cy, cx, cy + hh);
+          pdf.line(cx, cy + hh, cx - hw, cy);
+          pdf.line(cx - hw, cy, cx, cy - hh);
         } else if (node.type === 'start' || node.type === 'end') {
           // Rounded rectangle for start/end
-          pdf.setFillColor(parseInt(fillColor.slice(1, 3), 16), parseInt(fillColor.slice(3, 5), 16), parseInt(fillColor.slice(5, 7), 16));
-          pdf.setDrawColor(parseInt(borderColor.slice(1, 3), 16), parseInt(borderColor.slice(3, 5), 16), parseInt(borderColor.slice(5, 7), 16));
-          pdf.setLineWidth(0.5);
-          pdf.roundedRect(pos.x, pos.y, pos.width, pos.height, 5, 5, 'FD');
+          pdf.setFillColor(fr, fg, fb);
+          pdf.setDrawColor(br, bg, bb);
+          pdf.setLineWidth(0.3);
+          pdf.roundedRect(pos.x, pos.y, pos.width, pos.height, 3, 3, 'FD');
         } else {
           // Rectangle for process nodes
-          pdf.setFillColor(parseInt(fillColor.slice(1, 3), 16), parseInt(fillColor.slice(3, 5), 16), parseInt(fillColor.slice(5, 7), 16));
-          pdf.setDrawColor(parseInt(borderColor.slice(1, 3), 16), parseInt(borderColor.slice(3, 5), 16), parseInt(borderColor.slice(5, 7), 16));
-          pdf.setLineWidth(0.5);
-          pdf.roundedRect(pos.x, pos.y, pos.width, pos.height, 2, 2, 'FD');
+          pdf.setFillColor(fr, fg, fb);
+          pdf.setDrawColor(br, bg, bb);
+          pdf.setLineWidth(0.3);
+          pdf.roundedRect(pos.x, pos.y, pos.width, pos.height, 1, 1, 'FD');
         }
 
-        // Draw title text
+        // Draw title text (very small)
         pdf.setTextColor(248, 250, 252);
-        pdf.setFontSize(6);
+        pdf.setFontSize(3.5);
         pdf.setFont('helvetica', 'bold');
         
         // Word wrap title
-        const maxWidth = pos.width - 4;
-        const lines = pdf.splitTextToSize(title, maxWidth);
-        const lineHeight = 3;
-        const totalTextHeight = lines.length * lineHeight;
+        const maxWidth = pos.width - 2;
+        const lines = pdf.splitTextToSize(nodeTitle, maxWidth);
+        const lineHeight = 2;
+        const totalTextHeight = Math.min(lines.length, 3) * lineHeight;
         const startTextY = pos.y + (pos.height - totalTextHeight) / 2 + lineHeight;
         
-        lines.forEach((line: string, i: number) => {
+        lines.slice(0, 3).forEach((line: string, i: number) => {
           pdf.text(line, pos.x + pos.width / 2, startTextY + i * lineHeight, { align: 'center' });
         });
       };
@@ -235,9 +256,15 @@ export default function FlowchartPDFExport() {
         const to = nodePositions[toId];
         if (!from || !to) return;
 
-        const arrowColor = color || colors.arrow;
-        pdf.setDrawColor(parseInt(arrowColor.slice(1, 3), 16), parseInt(arrowColor.slice(3, 5), 16), parseInt(arrowColor.slice(5, 7), 16));
-        pdf.setLineWidth(0.3);
+        const arrowColor = color || '#64748b';
+        const [ar, ag, ab] = [
+          parseInt(arrowColor.slice(1, 3), 16),
+          parseInt(arrowColor.slice(3, 5), 16),
+          parseInt(arrowColor.slice(5, 7), 16)
+        ];
+        
+        pdf.setDrawColor(ar, ag, ab);
+        pdf.setLineWidth(0.2);
 
         // Calculate connection points
         const fromCx = from.x + from.width / 2;
@@ -277,25 +304,25 @@ export default function FlowchartPDFExport() {
 
         // Draw arrowhead
         const angle = Math.atan2(endY - startY, endX - startX);
-        const arrowSize = 2;
+        const arrowSize = 1;
         pdf.line(endX, endY, endX - arrowSize * Math.cos(angle - Math.PI / 6), endY - arrowSize * Math.sin(angle - Math.PI / 6));
         pdf.line(endX, endY, endX - arrowSize * Math.cos(angle + Math.PI / 6), endY - arrowSize * Math.sin(angle + Math.PI / 6));
 
         // Draw label if provided
         if (label) {
-          pdf.setFontSize(5);
-          pdf.setTextColor(parseInt(arrowColor.slice(1, 3), 16), parseInt(arrowColor.slice(3, 5), 16), parseInt(arrowColor.slice(5, 7), 16));
+          pdf.setFontSize(3);
+          pdf.setTextColor(ar, ag, ab);
           const midX = (startX + endX) / 2;
           const midY = (startY + endY) / 2;
-          pdf.text(label, midX, midY - 1, { align: 'center' });
+          pdf.text(label, midX, midY - 0.5, { align: 'center' });
         }
       };
 
-      // Draw connections first (so they appear behind nodes)
+      // Labels
       const yesLabel = language === 'de' ? 'Ja' : language === 'fr' ? 'Oui' : language === 'es' ? 'Sí' : 'Yes';
       const noLabel = language === 'de' ? 'Nein' : language === 'fr' ? 'Non' : 'No';
 
-      // Main flow arrows
+      // Draw connections
       drawArrow('StartQuest', 'Start');
       drawArrow('Start', 'SourceQuality');
       drawArrow('SourceQuality', 'ExpertiseCheck');
@@ -306,51 +333,69 @@ export default function FlowchartPDFExport() {
       drawArrow('AssessNature', 'Formulate', yesLabel, '#22c55e');
       drawArrow('AssessNature', 'IsSupernatural', noLabel, '#ef4444');
       drawArrow('Formulate', 'Falsifiability');
+      drawArrow('Falsifiability', 'ApplyBayes', yesLabel, '#22c55e');
+      drawArrow('Falsifiability', 'Revise', noLabel, '#ef4444');
       drawArrow('IsSupernatural', 'ClassifyMetaphysical', yesLabel, '#22c55e');
       drawArrow('IsSupernatural', 'IsUseful', noLabel, '#ef4444');
       drawArrow('IsUseful', 'ClassifyPseudo', noLabel, '#ef4444');
       drawArrow('IsUseful', 'ApplyBayes', yesLabel, '#22c55e');
-      drawArrow('Falsifiability', 'ApplyBayes', yesLabel, '#22c55e');
       drawArrow('ApplyBayes', 'EvaluateEvidence');
       drawArrow('EvaluateEvidence', 'BiasCheck');
       drawArrow('BiasCheck', 'AdjustConfidence');
       drawArrow('AdjustConfidence', 'Conclusion');
       drawArrow('Conclusion', 'HighConfidence');
       drawArrow('HighConfidence', 'StoreFact', yesLabel, '#22c55e');
-      drawArrow('HighConfidence', 'StoreWorking', noLabel, '#ef4444');
+      drawArrow('HighConfidence', 'MediumConfidence', noLabel, '#ef4444');
+      drawArrow('MediumConfidence', 'StoreWorking');
+      drawArrow('MediumConfidence', 'LowConfidence', noLabel, '#ef4444');
+      drawArrow('LowConfidence', 'StoreUncertain');
+      drawArrow('LowConfidence', 'NeedMoreData', noLabel, '#ef4444');
+      drawArrow('NeedMoreData', 'StoreUnknown');
+      drawArrow('StoreFact', 'RecordResult');
+      drawArrow('StoreWorking', 'RecordResult');
+      drawArrow('StoreUncertain', 'RecordResult');
+      drawArrow('StoreUnknown', 'RecordResult');
+      drawArrow('RecordResult', 'ConfidenceDecay');
+      drawArrow('RecordResult', 'EndInquiry');
+      drawArrow('EndInquiry', 'KnowledgeDB');
+      drawArrow('ConsiderAlternatives', 'WeighEvidence');
+      drawArrow('WeighEvidence', 'AdjustConfidence');
 
       // Draw all positioned nodes
       Object.entries(nodePositions).forEach(([nodeId, pos]) => {
         drawNode(nodeId, pos);
       });
 
-      // Add legend
-      const legendY = pageHeight - 20;
-      pdf.setFontSize(8);
+      // Add legend at bottom
+      const legendY = pageHeight - 8;
+      pdf.setFontSize(5);
       pdf.setTextColor(148, 163, 184);
-      pdf.text('Legend:', margin, legendY);
+      
+      const legendItems = [
+        { label: 'Start/End', color: '#a855f7', type: 'rounded' },
+        { label: 'Decision', color: '#eab308', type: 'diamond' },
+        { label: 'Process', color: '#3b82f6', type: 'rect' },
+        { label: 'Category', color: '#22c55e', type: 'rect' }
+      ];
 
-      // Start node legend
-      pdf.setFillColor(88, 28, 135);
-      pdf.roundedRect(margin + 20, legendY - 3, 10, 6, 2, 2, 'F');
-      pdf.setTextColor(248, 250, 252);
-      pdf.setFontSize(6);
-      pdf.text('Start/End', margin + 32, legendY);
+      let legendX = margin;
+      legendItems.forEach(item => {
+        const [r, g, b] = [
+          parseInt(item.color.slice(1, 3), 16),
+          parseInt(item.color.slice(3, 5), 16),
+          parseInt(item.color.slice(5, 7), 16)
+        ];
+        pdf.setFillColor(r, g, b);
+        pdf.rect(legendX, legendY - 2, 4, 3, 'F');
+        pdf.setTextColor(248, 250, 252);
+        pdf.text(item.label, legendX + 5, legendY, { align: 'left' });
+        legendX += 25;
+      });
 
-      // Decision node legend
-      pdf.setFillColor(113, 63, 18);
-      pdf.rect(margin + 55, legendY - 3, 10, 6, 'F');
-      pdf.text('Decision', margin + 67, legendY);
-
-      // Process node legend
-      pdf.setFillColor(30, 58, 95);
-      pdf.rect(margin + 90, legendY - 3, 10, 6, 'F');
-      pdf.text('Process', margin + 102, legendY);
-
-      // Website
+      // Website - CORRECTED URL
       pdf.setTextColor(168, 85, 247);
-      pdf.setFontSize(8);
-      pdf.text('www.quest4objectivereality.com', pageWidth - margin, legendY, { align: 'right' });
+      pdf.setFontSize(6);
+      pdf.text('www.Objective-Reality.info', pageWidth - margin, legendY, { align: 'right' });
 
       // Download
       const langCode = language.toUpperCase();
