@@ -3,14 +3,15 @@ import { useQuestLanguage } from '@/contexts/QuestLanguageContext';
 import { useQuest } from '@/contexts/QuestContext';
 import { FlowchartNode, getSubgraphById } from '@/data/flowchartData';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Lightbulb, BookOpen, ExternalLink, ChevronLeft } from 'lucide-react';
+import { ArrowRight, Lightbulb, BookOpen, ExternalLink, ChevronLeft, Map } from 'lucide-react';
 import BayesTheorem from './BayesTheorem';
 
 interface FlowchartCardProps {
   node: FlowchartNode;
+  onZoomOut?: () => void;
 }
 
-export default function FlowchartCard({ node }: FlowchartCardProps) {
+export default function FlowchartCard({ node, onZoomOut }: FlowchartCardProps) {
   const { t, language } = useQuestLanguage();
   const { goToNode, goBack, canGoBack } = useQuest();
   const subgraph = getSubgraphById(node.subgraph);
@@ -206,6 +207,18 @@ export default function FlowchartCard({ node }: FlowchartCardProps) {
             >
               <ChevronLeft className="w-4 h-4 mr-2" />
               {t({ en: 'Go Back', de: 'Zurück', fr: 'Retour', es: 'Volver' })}
+            </Button>
+          )}
+
+          {/* Map Overview button - prominently visible */}
+          {onZoomOut && (
+            <Button
+              onClick={onZoomOut}
+              variant="outline"
+              className="w-full mt-2 border-primary/50 text-primary hover:bg-primary/10"
+            >
+              <Map className="w-4 h-4 mr-2" />
+              {t({ en: 'View Map Overview', de: 'Kartenübersicht', fr: 'Aperçu de la carte', es: 'Vista del mapa' })}
             </Button>
           )}
         </div>

@@ -69,18 +69,10 @@ function QuestContent() {
         <main className="flex-1 flex items-center justify-center p-4 pb-24">
           <AnimatePresence mode="wait">
             {currentNode && (
-              <FlowchartCard key={currentNode.id} node={currentNode} />
+              <FlowchartCard key={currentNode.id} node={currentNode} onZoomOut={handleZoomOut} />
             )}
           </AnimatePresence>
         </main>
-
-        <button
-          onClick={handleZoomOut}
-          className="quest-zoom-btn"
-          title="Zoom out to see overview"
-        >
-          <Map className="w-5 h-5 text-primary" />
-        </button>
 
         <a
           href="https://www.objective-reality.info"

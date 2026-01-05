@@ -274,10 +274,15 @@ export default function CustomFlowchartOverview({
   };
 
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/95">
-      <div className="relative w-full h-full">
-        {/* Header */}
-        <div className="absolute top-0 left-0 right-0 z-20 flex items-center justify-between p-4 bg-gradient-to-b from-black via-black/90 to-transparent">
+    <div className="fixed inset-0 z-50 flex items-center justify-center">
+      {/* Background layers - matching main app */}
+      <div className="absolute inset-0 starfield-container" />
+      <div className="absolute inset-0 earth-container" />
+      <div className="absolute inset-0 bg-black/60" />
+      
+      <div className="relative w-full h-full z-10">
+        {/* Header - moved down 50px to avoid main nav */}
+        <div className="absolute top-[50px] left-0 right-0 z-20 flex items-center justify-between p-4 bg-gradient-to-b from-black/80 via-black/60 to-transparent">
           <div className="flex items-center gap-4">
             <div className="text-4xl">{viewMode === 'section' ? '📂' : '🗺️'}</div>
             <div>
@@ -310,8 +315,8 @@ export default function CustomFlowchartOverview({
           </div>
         </div>
         
-        {/* Find current node button */}
-        <div className="absolute top-28 left-4 z-20">
+        {/* Find current node button - adjusted for 50px offset */}
+        <div className="absolute top-[178px] left-4 z-20">
           <button 
             onClick={jumpToCurrentNode}
             className="bg-green-500 hover:bg-green-400 text-black font-bold text-xs px-3 py-1.5 rounded-full shadow-md shadow-green-500/50 animate-pulse flex items-center gap-1.5 transition-all hover:scale-105 cursor-pointer"
@@ -334,7 +339,7 @@ export default function CustomFlowchartOverview({
           <svg 
             width="100%" 
             height="100%" 
-            style={{ background: '#000000' }}
+            style={{ background: 'transparent' }}
           >
             <defs>
               <marker id="arrowhead-green" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto">
