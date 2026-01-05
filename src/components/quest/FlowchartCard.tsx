@@ -173,6 +173,17 @@ export default function FlowchartCard({
                   </div>
                 </a>
               )}
+
+              {/* English Premium PDF */}
+              {language === 'en' && (
+                <a href="/downloads/ObjFinalEN-A3.pdf" download="Quest-Flowchart-EN-Premium.pdf" className="flex items-center gap-3 p-4 rounded-lg bg-green-500/10 border border-green-500/30 hover:bg-green-500/20 transition-colors">
+                  <Download className="w-5 h-5 text-green-400" />
+                  <div>
+                    <p className="text-sm font-medium text-green-400">Premium Flowchart PDF</p>
+                    <p className="text-xs text-muted-foreground">Handcrafted Design (A3 Format)</p>
+                  </div>
+                </a>
+              )}
               
               {/* Dynamic PDF Export for all languages */}
               <FlowchartPDFExport />
