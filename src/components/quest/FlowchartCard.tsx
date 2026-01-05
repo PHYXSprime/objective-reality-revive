@@ -5,6 +5,8 @@ import { FlowchartNode, getSubgraphById } from '@/data/flowchartData';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Lightbulb, BookOpen, ExternalLink, ChevronLeft, Map, RotateCcw, Download } from 'lucide-react';
 import BayesTheorem from './BayesTheorem';
+import FlowchartPDFExport from './FlowchartPDFExport';
+
 interface FlowchartCardProps {
   node: FlowchartNode;
   onZoomOut?: () => void;
@@ -158,14 +160,24 @@ export default function FlowchartCard({
                 </a>)}
             </div>}
 
-          {/* German PDF Download on StartQuest card */}
-          {node.id === 'StartQuest' && language === 'de' && <a href="/downloads/ObjFinalDE-A2.pdf" download="Quest-Flowchart-DE.pdf" className="flex items-center gap-3 p-4 rounded-lg bg-green-500/10 border border-green-500/30 hover:bg-green-500/20 transition-colors">
-              <Download className="w-5 h-5 text-green-400" />
-              <div>
-                <p className="text-sm font-medium text-green-400">Komplette Flowchart als PDF</p>
-                <p className="text-xs text-muted-foreground">Kostenloser Download (A2 Format)</p>
-              </div>
-            </a>}
+          {/* PDF Export for all languages on StartQuest card */}
+          {node.id === 'StartQuest' && (
+            <div className="space-y-3">
+              {/* German Premium PDF */}
+              {language === 'de' && (
+                <a href="/downloads/ObjFinalDE-A2.pdf" download="Quest-Flowchart-DE-Premium.pdf" className="flex items-center gap-3 p-4 rounded-lg bg-green-500/10 border border-green-500/30 hover:bg-green-500/20 transition-colors">
+                  <Download className="w-5 h-5 text-green-400" />
+                  <div>
+                    <p className="text-sm font-medium text-green-400">Premium Flowchart PDF</p>
+                    <p className="text-xs text-muted-foreground">Handgemachtes Design (A2 Format)</p>
+                  </div>
+                </a>
+              )}
+              
+              {/* Dynamic PDF Export for all languages */}
+              <FlowchartPDFExport />
+            </div>
+          )}
 
           {/* Category color indicator */}
           {node.categoryColor && (node.type === 'category' || node.type === 'database') && <div className="h-2 rounded-full mt-4" style={{
