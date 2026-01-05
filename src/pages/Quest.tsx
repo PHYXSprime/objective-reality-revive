@@ -32,34 +32,32 @@ function QuestContent() {
   };
 
   return (
-    <div className="min-h-screen relative overflow-hidden">
+    <div className="min-h-screen relative overflow-y-auto overflow-x-hidden">
       <StarField />
 
-      <div className="relative z-10 min-h-screen flex flex-col">
-        {/* Cards aligned to top, scroll only when needed */}
-        <main className="flex-1 flex items-start justify-center px-4 py-2 overflow-y-auto">
-          <AnimatePresence mode="wait">
-            {currentNode && (
-              <FlowchartCard 
-                key={currentNode.id} 
-                node={currentNode} 
-                onZoomOut={handleZoomOut}
-                onReset={resetQuest}
-              />
-            )}
-          </AnimatePresence>
-        </main>
-
-        {viewMode && currentNode && (
-          <CustomFlowchartOverview
-            currentNodeId={currentNode.id}
-            onNodeClick={handleNodeClick}
-            onClose={handleCloseOverview}
-            viewMode={viewMode}
-            currentSubgraph={currentNode.subgraph}
-          />
-        )}
+      <div className="relative z-10 px-4 py-2">
+        {/* Cards - no forced height, natural content flow */}
+        <AnimatePresence mode="wait">
+          {currentNode && (
+            <FlowchartCard 
+              key={currentNode.id} 
+              node={currentNode} 
+              onZoomOut={handleZoomOut}
+              onReset={resetQuest}
+            />
+          )}
+        </AnimatePresence>
       </div>
+
+      {viewMode && currentNode && (
+        <CustomFlowchartOverview
+          currentNodeId={currentNode.id}
+          onNodeClick={handleNodeClick}
+          onClose={handleCloseOverview}
+          viewMode={viewMode}
+          currentSubgraph={currentNode.subgraph}
+        />
+      )}
     </div>
   );
 }
