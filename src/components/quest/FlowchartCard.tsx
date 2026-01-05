@@ -87,7 +87,7 @@ export default function FlowchartCard({ node, onZoomOut, onReset }: FlowchartCar
           {/* Special content: Confidence slider info */}
           {node.specialContent === 'confidence' && (
             <div className="mt-4 p-4 rounded-lg bg-cyan-500/10 border border-cyan-500/30">
-              <p className="text-sm text-cyan-400 mb-2">Confidence Scale:</p>
+              <p className="text-sm text-cyan-400 mb-2">{t({ en: 'Confidence Scale:', de: 'Vertrauensskala:', fr: 'Échelle de confiance:', es: 'Escala de confianza:' })}</p>
               <div className="flex justify-between text-xs">
                 <span className="text-red-400">0%</span>
                 <span className="text-orange-400">40%</span>

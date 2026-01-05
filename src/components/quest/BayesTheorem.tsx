@@ -131,6 +131,30 @@ const translations = {
     de: "Ihre aktualisierte Überzeugung nach Berücksichtigung der Beweise",
     fr: "Votre croyance mise à jour après avoir considéré les preuves",
     es: "Tu creencia actualizada después de considerar la evidencia"
+  },
+  guideStep1: {
+    en: "Start with your prior belief (before seeing evidence)",
+    de: "Beginnen Sie mit Ihrer anfänglichen Überzeugung (vor dem Beweis)",
+    fr: "Commencez par votre croyance initiale (avant de voir les preuves)",
+    es: "Comienza con tu creencia previa (antes de ver la evidencia)"
+  },
+  guideStep2: {
+    en: "Estimate how likely you'd see this evidence if your hypothesis is true",
+    de: "Schätzen Sie, wie wahrscheinlich Sie diesen Beweis sehen würden, wenn Ihre Hypothese wahr ist",
+    fr: "Estimez la probabilité de voir cette preuve si votre hypothèse est vraie",
+    es: "Estima qué tan probable sería ver esta evidencia si tu hipótesis es verdadera"
+  },
+  guideStep3: {
+    en: "Estimate how likely you'd see this evidence if your hypothesis is false",
+    de: "Schätzen Sie, wie wahrscheinlich Sie diesen Beweis sehen würden, wenn Ihre Hypothese falsch ist",
+    fr: "Estimez la probabilité de voir cette preuve si votre hypothèse est fausse",
+    es: "Estima qué tan probable sería ver esta evidencia si tu hipótesis es falsa"
+  },
+  guideStep4: {
+    en: "The result shows your rationally updated belief",
+    de: "Das Ergebnis zeigt Ihre rational aktualisierte Überzeugung",
+    fr: "Le résultat montre votre croyance rationnellement mise à jour",
+    es: "El resultado muestra tu creencia racionalmente actualizada"
   }
 };
 
@@ -235,10 +259,10 @@ export default function BayesTheorem() {
 
       {showGuide && (
         <div className="p-4 rounded-lg bg-blue-500/10 border border-blue-500/30 text-sm space-y-2">
-          <p><strong>1.</strong> Start with your prior belief (before seeing evidence)</p>
-          <p><strong>2.</strong> Estimate how likely you'd see this evidence if your hypothesis is true</p>
-          <p><strong>3.</strong> Estimate how likely you'd see this evidence if your hypothesis is false</p>
-          <p><strong>4.</strong> The result shows your rationally updated belief</p>
+          <p><strong>1.</strong> {t(translations.guideStep1)}</p>
+          <p><strong>2.</strong> {t(translations.guideStep2)}</p>
+          <p><strong>3.</strong> {t(translations.guideStep3)}</p>
+          <p><strong>4.</strong> {t(translations.guideStep4)}</p>
         </div>
       )}
 
