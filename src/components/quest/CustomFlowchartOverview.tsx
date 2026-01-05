@@ -3,6 +3,68 @@ import dagre from '@dagrejs/dagre';
 import { nodes as flowchartNodes, subgraphs, type FlowchartNode } from '@/data/flowchartData';
 import { useQuestLanguage } from '@/contexts/QuestLanguageContext';
 
+// UI Translations for all hardcoded strings
+const uiTranslations = {
+  fullFlowchartOverview: {
+    en: "Full Flowchart Overview",
+    de: "Vollständige Flussdiagramm-Übersicht",
+    fr: "Vue d'ensemble complète",
+    es: "Vista general del diagrama"
+  },
+  currentSection: {
+    en: "Current Section",
+    de: "Aktueller Abschnitt",
+    fr: "Section actuelle",
+    es: "Sección actual"
+  },
+  nodes: { en: "nodes", de: "Knoten", fr: "nœuds", es: "nodos" },
+  connections: { en: "connections", de: "Verbindungen", fr: "connexions", es: "conexiones" },
+  clickNodeToJump: {
+    en: "Click any node to jump there",
+    de: "Klicken Sie auf einen Knoten, um dorthin zu springen",
+    fr: "Cliquez sur un nœud pour y accéder",
+    es: "Haz clic en cualquier nodo para ir allí"
+  },
+  fullView: { en: "Full View", de: "Vollansicht", fr: "Vue complète", es: "Vista completa" },
+  close: { en: "Close", de: "Schließen", fr: "Fermer", es: "Cerrar" },
+  findCurrentNode: {
+    en: "Find Current Node",
+    de: "Aktuellen Knoten finden",
+    fr: "Trouver le nœud actuel",
+    es: "Encontrar nodo actual"
+  },
+  youAreHere: { en: "YOU ARE HERE", de: "SIE SIND HIER", fr: "VOUS ÊTES ICI", es: "ESTÁS AQUÍ" },
+  legend: { en: "LEGEND", de: "LEGENDE", fr: "LÉGENDE", es: "LEYENDA" },
+  start: { en: "Start", de: "Start", fr: "Début", es: "Inicio" },
+  decision: { en: "Decision", de: "Entscheidung", fr: "Décision", es: "Decisión" },
+  process: { en: "Process", de: "Prozess", fr: "Processus", es: "Proceso" },
+  navigation: { en: "NAVIGATION", de: "NAVIGATION", fr: "NAVIGATION", es: "NAVEGACIÓN" },
+  navClickNode: {
+    en: "Click any node to jump there",
+    de: "Klicken Sie auf einen Knoten, um dorthin zu springen",
+    fr: "Cliquez sur un nœud pour y accéder",
+    es: "Haz clic en cualquier nodo para ir allí"
+  },
+  navScrollZoom: {
+    en: "Scroll to zoom in/out",
+    de: "Scrollen zum Zoomen",
+    fr: "Faites défiler pour zoomer",
+    es: "Desplázate para hacer zoom"
+  },
+  navDragPan: {
+    en: "Drag to pan around",
+    de: "Ziehen zum Verschieben",
+    fr: "Faites glisser pour vous déplacer",
+    es: "Arrastra para desplazarte"
+  },
+  navClickPin: {
+    en: "Click pin to find yourself",
+    de: "Klicken Sie auf die Markierung",
+    fr: "Cliquez sur l'épingle pour vous trouver",
+    es: "Haz clic en el pin para encontrarte"
+  }
+};
+
 interface CustomFlowchartOverviewProps {
   currentNodeId: string;
   onNodeClick: (nodeId: string) => void;
@@ -52,7 +114,7 @@ export default function CustomFlowchartOverview({
   viewMode,
   currentSubgraph,
 }: CustomFlowchartOverviewProps) {
-  const { language } = useQuestLanguage();
+  const { language, t } = useQuestLanguage();
   const containerRef = useRef<HTMLDivElement>(null);
   const [transform, setTransform] = useState({ x: 0, y: 0, scale: 0.15 });
   const [isDragging, setIsDragging] = useState(false);
@@ -288,12 +350,12 @@ export default function CustomFlowchartOverview({
             <div>
               <h2 className="text-2xl font-bold text-green-400 font-mono">
                 {viewMode === 'section' 
-                  ? currentSubgraphData?.title[language] || 'Current Section'
-                  : 'Full Flowchart Overview'
+                  ? currentSubgraphData?.title[language] || t(uiTranslations.currentSection)
+                  : t(uiTranslations.fullFlowchartOverview)
                 }
               </h2>
               <p className="text-sm text-gray-400">
-                {layoutNodes.length} nodes • {layoutEdges.length} connections • Click any node to jump there
+                {layoutNodes.length} {t(uiTranslations.nodes)} • {layoutEdges.length} {t(uiTranslations.connections)} • {t(uiTranslations.clickNodeToJump)}
               </p>
             </div>
           </div>
@@ -303,14 +365,14 @@ export default function CustomFlowchartOverview({
                 onClick={() => onNodeClick('__FULL_VIEW__')}
                 className="px-6 py-3 bg-purple-600 hover:bg-purple-500 text-white rounded-xl text-sm font-bold transition-all border-2 border-purple-400 shadow-lg shadow-purple-500/30"
               >
-                🔍 Full View
+                🔍 {t(uiTranslations.fullView)}
               </button>
             )}
             <button
               onClick={onClose}
               className="px-5 py-3 bg-red-600 hover:bg-red-500 text-white rounded-xl text-sm font-bold transition-all border-2 border-red-400"
             >
-              ✕ Close
+              ✕ {t(uiTranslations.close)}
             </button>
           </div>
         </div>
@@ -322,7 +384,7 @@ export default function CustomFlowchartOverview({
             className="bg-green-500 hover:bg-green-400 text-black font-bold text-xs px-3 py-1.5 rounded-full shadow-md shadow-green-500/50 animate-pulse flex items-center gap-1.5 transition-all hover:scale-105 cursor-pointer"
           >
             <span className="text-sm">📍</span>
-            <span>Find Current Node</span>
+            <span>{t(uiTranslations.findCurrentNode)}</span>
           </button>
         </div>
 
@@ -460,7 +522,7 @@ export default function CustomFlowchartOverview({
                             fontSize={10}
                             fontWeight="bold"
                           >
-                            📍 YOU ARE HERE
+                            📍 {t(uiTranslations.youAreHere)}
                           </text>
                         </g>
                       </>
@@ -523,35 +585,35 @@ export default function CustomFlowchartOverview({
 
         {/* Legend */}
         <div className="absolute bottom-4 left-4 z-20 bg-black/90 border-2 border-green-500/50 rounded-xl p-4">
-          <h3 className="text-green-400 font-bold mb-3 text-sm">LEGEND</h3>
+          <h3 className="text-green-400 font-bold mb-3 text-sm">{t(uiTranslations.legend)}</h3>
           <div className="grid grid-cols-2 gap-3 text-xs">
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 rounded-full bg-green-500 shadow-lg shadow-green-500/50" />
-              <span className="text-white">YOU ARE HERE</span>
+              <span className="text-white">{t(uiTranslations.youAreHere)}</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 rounded-full bg-purple-500" />
-              <span className="text-gray-300">Start</span>
+              <span className="text-gray-300">{t(uiTranslations.start)}</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 rounded bg-yellow-500" />
-              <span className="text-gray-300">Decision</span>
+              <span className="text-gray-300">{t(uiTranslations.decision)}</span>
             </div>
             <div className="flex items-center gap-2">
               <div className="w-4 h-4 rounded bg-gray-500" />
-              <span className="text-gray-300">Process</span>
+              <span className="text-gray-300">{t(uiTranslations.process)}</span>
             </div>
           </div>
         </div>
 
         {/* Navigation help */}
         <div className="absolute bottom-4 right-4 z-20 bg-black/90 border-2 border-cyan-500/50 rounded-xl p-4">
-          <h3 className="text-cyan-400 font-bold mb-2 text-sm">NAVIGATION</h3>
+          <h3 className="text-cyan-400 font-bold mb-2 text-sm">{t(uiTranslations.navigation)}</h3>
           <div className="space-y-1 text-xs text-gray-300">
-            <p>👆 Click any node to jump there</p>
-            <p>🔍 Scroll to zoom in/out</p>
-            <p>✋ Drag to pan around</p>
-            <p>📍 Click pin to find yourself</p>
+            <p>👆 {t(uiTranslations.navClickNode)}</p>
+            <p>🔍 {t(uiTranslations.navScrollZoom)}</p>
+            <p>✋ {t(uiTranslations.navDragPan)}</p>
+            <p>📍 {t(uiTranslations.navClickPin)}</p>
           </div>
         </div>
       </div>
