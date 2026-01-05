@@ -9,6 +9,7 @@ import Index from "./pages/Index";
 import Epistemology from "./pages/Epistemology";
 import Challenges from "./pages/Challenges";
 import Solutions from "./pages/Solutions";
+import Quest from "./pages/Quest";
 import StreetEpistemology from "./pages/StreetEpistemology";
 import SocraticQuestioning from "./pages/SocraticQuestioning";
 import ScientificMethod from "./pages/ScientificMethod";
@@ -49,6 +50,7 @@ const App = () => (
               <Route path="/" element={<Index />} />
               <Route path="/challenges" element={<Challenges />} />
               <Route path="/solutions" element={<Solutions />} />
+              <Route path="/quest" element={<Quest />} />
               <Route path="/street-epistemology" element={<StreetEpistemology />} />
               <Route path="/socratic-questioning" element={<SocraticQuestioning />} />
               <Route path="/scientific-method" element={<ScientificMethod />} />
