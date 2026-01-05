@@ -22,6 +22,7 @@ export function Navigation() {
     { path: '/logical-fallacies', label: t('nav.logical-fallacies') },
     { path: '/challenges', label: t('nav.challenges') },
     { path: '/solutions', label: t('nav.solutions') },
+    { path: '/quest', label: 'Quest' },
   ];
 
   const languages: { code: Language; name: string; flag: string }[] = [
