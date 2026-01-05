@@ -37,7 +37,7 @@ function QuestContent() {
 
       <div className="relative z-10 min-h-screen flex flex-col">
         {/* Cards aligned to top, scroll only when needed */}
-        <main className="flex-1 flex items-start justify-center p-4 pt-8 overflow-y-auto">
+        <main className="flex-1 flex items-start justify-center px-4 py-2 overflow-y-auto">
           <AnimatePresence mode="wait">
             {currentNode && (
               <FlowchartCard 
