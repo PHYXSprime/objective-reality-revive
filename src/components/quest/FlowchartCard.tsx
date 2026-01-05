@@ -3,7 +3,7 @@ import { useQuestLanguage } from '@/contexts/QuestLanguageContext';
 import { useQuest } from '@/contexts/QuestContext';
 import { FlowchartNode, getSubgraphById } from '@/data/flowchartData';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Lightbulb, BookOpen, ExternalLink, ChevronLeft, Map, RotateCcw } from 'lucide-react';
+import { ArrowRight, Lightbulb, BookOpen, ExternalLink, ChevronLeft, Map, RotateCcw, Download } from 'lucide-react';
 import BayesTheorem from './BayesTheorem';
 
 interface FlowchartCardProps {
@@ -152,6 +152,21 @@ export default function FlowchartCard({ node, onZoomOut, onReset }: FlowchartCar
                 </a>
               ))}
             </div>
+          )}
+
+          {/* German PDF Download on StartQuest card */}
+          {node.id === 'StartQuest' && language === 'de' && (
+            <a
+              href="/downloads/ObjFinalDE-A2.pdf"
+              download="Quest-Flowchart-DE.pdf"
+              className="flex items-center gap-3 p-4 rounded-lg bg-green-500/10 border border-green-500/30 hover:bg-green-500/20 transition-colors"
+            >
+              <Download className="w-5 h-5 text-green-400" />
+              <div>
+                <p className="text-sm font-medium text-green-400">Komplettes Flowchart als PDF</p>
+                <p className="text-xs text-muted-foreground">Kostenloser Download (A2 Format)</p>
+              </div>
+            </a>
           )}
 
           {/* Category color indicator */}
