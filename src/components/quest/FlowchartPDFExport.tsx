@@ -35,12 +35,6 @@ const translations = {
     de: 'von',
     fr: 'de',
     es: 'de'
-  },
-  continued: {
-    en: '→ continues on page',
-    de: '→ weiter auf Seite',
-    fr: '→ continue à la page',
-    es: '→ continúa en página'
   }
 };
 
@@ -52,43 +46,121 @@ interface NodePos {
   page: number;
 }
 
-// Define page structure - which subgraphs go on which page
-const pageStructure: { subgraphs: SubgraphId[]; title: Record<string, string> }[] = [
+// Define the hierarchical flow structure for each page
+const flowStructure: { 
+  page: number;
+  title: Record<string, string>;
+  subgraphs: SubgraphId[];
+  rows: { nodeIds: string[]; spacing?: 'wide' | 'normal' | 'compact' }[];
+}[] = [
   {
-    subgraphs: ['DC'],
+    page: 0,
     title: {
       en: 'Data Collection & Initial Assessment',
       de: 'Datenerhebung & Erste Bewertung',
-      fr: 'Collecte de données & Évaluation initiale',
-      es: 'Recopilación de datos & Evaluación inicial'
-    }
+      fr: 'Collecte de données & Évaluation',
+      es: 'Recopilación de datos & Evaluación'
+    },
+    subgraphs: ['DC'],
+    rows: [
+      { nodeIds: ['StartQuest'], spacing: 'wide' },
+      { nodeIds: ['Start'] },
+      { nodeIds: ['SourceQuality'] },
+      { nodeIds: ['ExpertiseCheck'] },
+      { nodeIds: ['SeekExpert', 'Collect'], spacing: 'wide' },
+      { nodeIds: ['AssessNature'] }
+    ]
   },
   {
-    subgraphs: ['HE', 'NT'],
+    page: 1,
     title: {
-      en: 'Hypothesis & Non-Testable Classification',
-      de: 'Hypothese & Nicht-prüfbare Klassifizierung',
-      fr: 'Hypothèse & Classification non testable',
-      es: 'Hipótesis & Clasificación no comprobable'
-    }
+      en: 'Hypothesis & Experimentation',
+      de: 'Hypothese & Experiment',
+      fr: 'Hypothèse & Expérimentation',
+      es: 'Hipótesis & Experimentación'
+    },
+    subgraphs: ['HE'],
+    rows: [
+      { nodeIds: ['Formulate'] },
+      { nodeIds: ['Falsifiability'] },
+      { nodeIds: ['ReformulateHyp', 'Design'], spacing: 'wide' },
+      { nodeIds: ['CollectMore'] },
+      { nodeIds: ['Bayes'] }
+    ]
   },
   {
-    subgraphs: ['BA', 'EE'],
+    page: 2,
     title: {
-      en: 'Bayes Theorem & Evidence Evaluation',
-      de: 'Bayes-Theorem & Beweisbewertung',
-      fr: 'Théorème de Bayes & Évaluation des preuves',
-      es: 'Teorema de Bayes & Evaluación de evidencia'
-    }
+      en: 'Non-Testable Classification',
+      de: 'Nicht-prüfbare Klassifizierung',
+      fr: 'Classification non testable',
+      es: 'Clasificación no comprobable'
+    },
+    subgraphs: ['NT'],
+    rows: [
+      { nodeIds: ['IsSupernatural'] },
+      { nodeIds: ['Religion', 'IsRigid'], spacing: 'wide' },
+      { nodeIds: ['Dogma', 'IsIdeology'], spacing: 'wide' },
+      { nodeIds: ['Ideology', 'IsSecret'], spacing: 'wide' },
+      { nodeIds: ['Conspiracy', 'Gossip'], spacing: 'wide' },
+      { nodeIds: ['NotTestable'] },
+      { nodeIds: ['EndInquiry'] }
+    ]
   },
   {
-    subgraphs: ['BM', 'KB'],
+    page: 3,
     title: {
-      en: 'Bias Management & Knowledge Database',
-      de: 'Bias-Management & Wissensdatenbank',
-      fr: 'Gestion des biais & Base de connaissances',
-      es: 'Gestión de sesgos & Base de conocimiento'
-    }
+      en: 'Evidence Evaluation',
+      de: 'Beweisbewertung',
+      fr: 'Évaluation des preuves',
+      es: 'Evaluación de evidencia'
+    },
+    subgraphs: ['EE'],
+    rows: [
+      { nodeIds: ['Evaluate'] },
+      { nodeIds: ['MetaAnalysis'] },
+      { nodeIds: ['Conflicts'] },
+      { nodeIds: ['AdjustForConflict', 'ConfidenceCheck'], spacing: 'wide' },
+      { nodeIds: ['ProceedHigh', 'ProceedMedium', 'Reevaluate'], spacing: 'compact' },
+      { nodeIds: ['Conclude', 'MedConfWall', 'TimeReview'], spacing: 'compact' },
+      { nodeIds: ['LowConfWall'] }
+    ]
+  },
+  {
+    page: 4,
+    title: {
+      en: 'Bias Management',
+      de: 'Bias-Management',
+      fr: 'Gestion des biais',
+      es: 'Gestión de sesgos'
+    },
+    subgraphs: ['BM'],
+    rows: [
+      { nodeIds: ['AddressBiases'] },
+      { nodeIds: ['MotivatedReasoning'] },
+      { nodeIds: ['AcknowledgeBias', 'Steelman'], spacing: 'wide' },
+      { nodeIds: ['Debias'] },
+      { nodeIds: ['CriticalReview'] },
+      { nodeIds: ['AvoidFallacies'] },
+      { nodeIds: ['Verify'] },
+      { nodeIds: ['PeerReview'] },
+      { nodeIds: ['Feedback'] }
+    ]
+  },
+  {
+    page: 5,
+    title: {
+      en: 'Knowledge Database',
+      de: 'Wissensdatenbank',
+      fr: 'Base de connaissances',
+      es: 'Base de conocimiento'
+    },
+    subgraphs: ['KB'],
+    rows: [
+      { nodeIds: ['AI_Reevaluate', 'HighConfTrue', 'ErrorDetected'], spacing: 'compact' },
+      { nodeIds: ['ConfirmedUntrue'] },
+      { nodeIds: ['KnowledgeDB'] }
+    ]
   }
 ];
 
@@ -108,95 +180,65 @@ export default function FlowchartPDFExport() {
 
       const pageWidth = 210;
       const pageHeight = 297;
-      const margin = 10;
-      const topMargin = 28;
-      const bottomMargin = 18;
+      const margin = 15;
+      const topMargin = 35;
+      const bottomMargin = 20;
       const contentWidth = pageWidth - 2 * margin;
       const contentHeight = pageHeight - topMargin - bottomMargin;
 
-      // Node dimensions
-      const nw = 24; // node width
-      const nh = 9;  // node height
-      const vGap = 5; // vertical gap
-      const hGap = 4; // horizontal gap
+      // Node dimensions - much larger for readability
+      const nw = 50; // node width
+      const nh = 18;  // node height
+      const vGap = 8; // vertical gap between rows
+      const hGap = 12; // horizontal gap between nodes
 
-      const totalPages = pageStructure.length;
+      const totalPages = flowStructure.length;
 
       // Calculate positions for all nodes
       const positions: Record<string, NodePos> = {};
 
-      // Helper to get nodes for a page
-      const getNodesForPage = (pageIndex: number): FlowchartNode[] => {
-        const pageSubgraphs = pageStructure[pageIndex].subgraphs;
-        return nodes.filter(n => pageSubgraphs.includes(n.subgraph));
-      };
+      // Layout each page
+      flowStructure.forEach((pageInfo, pageIndex) => {
+        let currentY = topMargin + 5;
+        const centerX = pageWidth / 2;
 
-      // Layout nodes for each page
-      for (let pageIndex = 0; pageIndex < totalPages; pageIndex++) {
-        const pageNodes = getNodesForPage(pageIndex);
-        const startY = topMargin + 8;
-        
-        // Create a simple grid layout for the page
-        let currentY = startY;
-        let currentX = margin;
-        let maxHeightInRow = 0;
-        let nodesInRow = 0;
-        const maxNodesPerRow = Math.floor(contentWidth / (nw + hGap));
-
-        // Group nodes by subgraph for better organization
-        const subgraphGroups: Record<string, FlowchartNode[]> = {};
-        pageNodes.forEach(node => {
-          if (!subgraphGroups[node.subgraph]) {
-            subgraphGroups[node.subgraph] = [];
-          }
-          subgraphGroups[node.subgraph].push(node);
-        });
-
-        // Layout each subgraph group
-        Object.entries(subgraphGroups).forEach(([subgraphId, sgNodes]) => {
-          // Add subgraph header spacing
-          if (currentY > startY) {
-            currentY += 4;
+        pageInfo.rows.forEach(row => {
+          const nodeCount = row.nodeIds.length;
+          const spacing = row.spacing || 'normal';
+          
+          // Calculate total width for this row
+          let totalRowWidth: number;
+          let gapBetween: number;
+          
+          if (spacing === 'wide') {
+            gapBetween = hGap * 2;
+          } else if (spacing === 'compact') {
+            gapBetween = hGap * 0.6;
+          } else {
+            gapBetween = hGap;
           }
           
-          // Reset row for new subgraph
-          currentX = margin;
-          nodesInRow = 0;
-
-          sgNodes.forEach((node) => {
-            // Check if we need a new row
-            if (nodesInRow >= maxNodesPerRow || currentX + nw > pageWidth - margin) {
-              currentY += nh + vGap;
-              currentX = margin;
-              nodesInRow = 0;
+          totalRowWidth = nodeCount * nw + (nodeCount - 1) * gapBetween;
+          
+          // Start X to center the row
+          let startX = centerX - totalRowWidth / 2;
+          
+          row.nodeIds.forEach((nodeId, idx) => {
+            const node = nodes.find(n => n.id === nodeId);
+            if (node) {
+              positions[nodeId] = {
+                x: startX + idx * (nw + gapBetween),
+                y: currentY,
+                w: nw,
+                h: nh,
+                page: pageIndex
+              };
             }
-
-            // Check if we're running out of vertical space
-            if (currentY + nh > pageHeight - bottomMargin - 10) {
-              currentY = startY;
-              currentX = margin;
-              nodesInRow = 0;
-            }
-
-            positions[node.id] = {
-              x: currentX,
-              y: currentY,
-              w: nw,
-              h: nh,
-              page: pageIndex
-            };
-
-            currentX += nw + hGap;
-            nodesInRow++;
-            maxHeightInRow = Math.max(maxHeightInRow, nh);
           });
 
-          // Move to next row after subgraph
           currentY += nh + vGap;
-          currentX = margin;
-          nodesInRow = 0;
         });
-      }
+      });
 
       // Draw each page
       for (let pageIndex = 0; pageIndex < totalPages; pageIndex++) {
@@ -204,45 +246,40 @@ export default function FlowchartPDFExport() {
           pdf.addPage();
         }
 
-        // Background
+        const pageInfo = flowStructure[pageIndex];
+
+        // Background - deep space blue
         pdf.setFillColor(15, 23, 42);
         pdf.rect(0, 0, pageWidth, pageHeight, 'F');
 
         // Main title
         pdf.setTextColor(168, 85, 247);
-        pdf.setFontSize(12);
+        pdf.setFontSize(16);
         pdf.setFont('helvetica', 'bold');
         const title = translations.title[language as keyof typeof translations.title] || translations.title.en;
-        pdf.text(title, pageWidth / 2, 10, { align: 'center' });
+        pdf.text(title, pageWidth / 2, 15, { align: 'center' });
 
-        // Page subtitle
-        const pageTitle = pageStructure[pageIndex].title[language] || pageStructure[pageIndex].title.en;
-        pdf.setFontSize(9);
-        pdf.setTextColor(150, 150, 180);
-        pdf.text(pageTitle, pageWidth / 2, 17, { align: 'center' });
+        // Page subtitle with subgraph color
+        const pageTitle = pageInfo.title[language] || pageInfo.title.en;
+        const sg = subgraphs.find(s => s.id === pageInfo.subgraphs[0]);
+        const sgColor = sg?.color || '#a855f7';
+        const sgR = parseInt(sgColor.slice(1, 3), 16);
+        const sgG = parseInt(sgColor.slice(3, 5), 16);
+        const sgB = parseInt(sgColor.slice(5, 7), 16);
+        
+        pdf.setFontSize(12);
+        pdf.setTextColor(sgR, sgG, sgB);
+        pdf.text(pageTitle, pageWidth / 2, 24, { align: 'center' });
 
-        // Subgraph color indicators
-        const pageSubgraphs = pageStructure[pageIndex].subgraphs;
-        let indicatorX = margin;
-        pageSubgraphs.forEach(sgId => {
-          const sg = subgraphs.find(s => s.id === sgId);
-          if (sg) {
-            const color = sg.color;
-            const r = parseInt(color.slice(1, 3), 16);
-            const g = parseInt(color.slice(3, 5), 16);
-            const b = parseInt(color.slice(5, 7), 16);
-            pdf.setFillColor(r, g, b);
-            pdf.rect(indicatorX, 21, 3, 3, 'F');
-            pdf.setTextColor(200, 200, 200);
-            pdf.setFontSize(5);
-            const sgTitle = sg.title[language] || sg.title.en;
-            pdf.text(sgTitle.substring(0, 25), indicatorX + 4, 23.5);
-            indicatorX += 50;
-          }
-        });
+        // Decorative line under subtitle
+        pdf.setDrawColor(sgR, sgG, sgB);
+        pdf.setLineWidth(0.5);
+        const lineWidth = Math.min(pdf.getTextWidth(pageTitle) + 20, contentWidth);
+        pdf.line(pageWidth / 2 - lineWidth / 2, 27, pageWidth / 2 + lineWidth / 2, 27);
 
         // Get nodes for this page
-        const pageNodes = nodes.filter(n => positions[n.id]?.page === pageIndex);
+        const pageNodeIds = pageInfo.rows.flatMap(r => r.nodeIds);
+        const pageNodes = nodes.filter(n => pageNodeIds.includes(n.id));
 
         // Draw arrows first (behind nodes)
         const drawArrow = (fromId: string, toId: string, label?: string, color?: string) => {
@@ -251,73 +288,58 @@ export default function FlowchartPDFExport() {
           if (!from || !to) return;
           if (from.page !== pageIndex) return;
 
-          const c = color || '#475569';
+          const c = color || '#64748b';
           pdf.setDrawColor(parseInt(c.slice(1, 3), 16), parseInt(c.slice(3, 5), 16), parseInt(c.slice(5, 7), 16));
-          pdf.setLineWidth(0.2);
+          pdf.setLineWidth(0.6);
 
-          // If target is on different page, draw arrow to page indicator
+          const fromCx = from.x + from.w / 2;
+          const fromBottom = from.y + from.h;
+          const toCx = to.x + to.w / 2;
+          const toTop = to.y;
+
+          // If target is on different page
           if (to.page !== pageIndex) {
-            const fromCx = from.x + from.w / 2;
-            const fromBottom = from.y + from.h;
-            pdf.line(fromCx, fromBottom, fromCx, fromBottom + 3);
-            
-            // Draw page reference
-            pdf.setFontSize(3);
+            pdf.line(fromCx, fromBottom, fromCx, fromBottom + 6);
+            pdf.setFontSize(7);
             pdf.setTextColor(parseInt(c.slice(1, 3), 16), parseInt(c.slice(3, 5), 16), parseInt(c.slice(5, 7), 16));
-            const continueText = `→ P${to.page + 1}`;
-            pdf.text(continueText, fromCx, fromBottom + 5, { align: 'center' });
+            const continueText = `→ Page ${to.page + 1}`;
+            pdf.text(continueText, fromCx, fromBottom + 10, { align: 'center' });
             return;
           }
 
-          const fromCx = from.x + from.w / 2;
-          const fromCy = from.y + from.h / 2;
-          const toCx = to.x + to.w / 2;
-          const toCy = to.y + to.h / 2;
+          // Same page arrow
+          const midY = (fromBottom + toTop) / 2;
 
-          let sx: number, sy: number, ex: number, ey: number;
-
-          const dx = Math.abs(toCx - fromCx);
-          const dy = Math.abs(toCy - fromCy);
-
-          if (dy > dx * 0.5) {
-            sy = toCy > fromCy ? from.y + from.h : from.y;
-            ey = toCy > fromCy ? to.y : to.y + to.h;
-            sx = fromCx;
-            ex = toCx;
+          // Check if it's a straight down arrow
+          if (Math.abs(fromCx - toCx) < 5) {
+            // Straight vertical arrow
+            pdf.line(fromCx, fromBottom, fromCx, toTop);
           } else {
-            sx = toCx > fromCx ? from.x + from.w : from.x;
-            ex = toCx > fromCx ? to.x : to.x + to.w;
-            sy = fromCy;
-            ey = toCy;
-          }
-
-          // Elbow connection
-          if (Math.abs(sx - ex) > 2 && Math.abs(sy - ey) > 2) {
-            const midY = (sy + ey) / 2;
-            pdf.line(sx, sy, sx, midY);
-            pdf.line(sx, midY, ex, midY);
-            pdf.line(ex, midY, ex, ey);
-          } else {
-            pdf.line(sx, sy, ex, ey);
+            // Elbow connection
+            pdf.line(fromCx, fromBottom, fromCx, midY);
+            pdf.line(fromCx, midY, toCx, midY);
+            pdf.line(toCx, midY, toCx, toTop);
           }
 
           // Arrowhead
-          const angle = Math.atan2(ey - sy, ex - sx);
-          const aLen = 0.8;
-          pdf.line(ex, ey, ex - aLen * Math.cos(angle - 0.4), ey - aLen * Math.sin(angle - 0.4));
-          pdf.line(ex, ey, ex - aLen * Math.cos(angle + 0.4), ey - aLen * Math.sin(angle + 0.4));
+          const aLen = 2;
+          pdf.line(toCx, toTop, toCx - aLen, toTop - aLen);
+          pdf.line(toCx, toTop, toCx + aLen, toTop - aLen);
 
+          // Label
           if (label) {
-            pdf.setFontSize(2.5);
+            pdf.setFontSize(8);
             pdf.setTextColor(parseInt(c.slice(1, 3), 16), parseInt(c.slice(3, 5), 16), parseInt(c.slice(5, 7), 16));
-            pdf.text(label, (sx + ex) / 2, (sy + ey) / 2 - 0.5, { align: 'center' });
+            const labelX = Math.abs(fromCx - toCx) < 5 ? fromCx + 8 : (fromCx + toCx) / 2;
+            const labelY = midY - 2;
+            pdf.text(label, labelX, labelY, { align: 'center' });
           }
         };
 
         const yes = language === 'de' ? 'Ja' : language === 'fr' ? 'Oui' : language === 'es' ? 'Sí' : 'Yes';
         const no = language === 'de' ? 'Nein' : language === 'fr' ? 'Non' : 'No';
 
-        // Draw all connections
+        // Draw all connections for this page
         pageNodes.forEach(node => {
           if (node.nextNodeId) {
             drawArrow(node.id, node.nextNodeId);
@@ -338,134 +360,146 @@ export default function FlowchartPDFExport() {
 
           const nodeTitle = node.title[language] || node.title.en;
 
-          // Get subgraph color
-          const sg = subgraphs.find(s => s.id === node.subgraph);
-          const sgColor = sg?.color || '#3b82f6';
-          const sgR = parseInt(sgColor.slice(1, 3), 16);
-          const sgG = parseInt(sgColor.slice(3, 5), 16);
-          const sgB = parseInt(sgColor.slice(5, 7), 16);
-
           // Colors by type
-          let fill: [number, number, number];
-          let border: [number, number, number];
+          let fillColor: [number, number, number];
+          let borderColor: [number, number, number];
+          let textColor: [number, number, number] = [248, 250, 252];
 
           switch (node.type) {
             case 'start':
-              fill = [88, 28, 135];
-              border = [168, 85, 247];
+              fillColor = [88, 28, 135];
+              borderColor = [168, 85, 247];
               break;
             case 'decision':
-              fill = [113, 63, 18];
-              border = [234, 179, 8];
+              fillColor = [120, 70, 20];
+              borderColor = [234, 179, 8];
               break;
             case 'end':
-              fill = [20, 83, 45];
-              border = [34, 197, 94];
+              fillColor = [20, 83, 45];
+              borderColor = [34, 197, 94];
               break;
             case 'category':
-              // Use category-specific color if available
               if (node.categoryColor) {
                 const cc = node.categoryColor;
                 const ccR = parseInt(cc.slice(1, 3), 16);
                 const ccG = parseInt(cc.slice(3, 5), 16);
                 const ccB = parseInt(cc.slice(5, 7), 16);
-                fill = [Math.floor(ccR * 0.3), Math.floor(ccG * 0.3), Math.floor(ccB * 0.3)];
-                border = [ccR, ccG, ccB];
+                fillColor = [Math.floor(ccR * 0.25), Math.floor(ccG * 0.25), Math.floor(ccB * 0.25)];
+                borderColor = [ccR, ccG, ccB];
               } else {
-                fill = [30, 58, 95];
-                border = [34, 197, 94];
+                fillColor = [30, 58, 95];
+                borderColor = [34, 197, 94];
               }
               break;
             case 'database':
-              fill = [20, 50, 20];
-              border = [34, 197, 94];
+              fillColor = [15, 60, 40];
+              borderColor = [34, 197, 94];
               break;
             default:
-              fill = [Math.floor(sgR * 0.15), Math.floor(sgG * 0.15), Math.floor(sgB * 0.15)];
-              border = [sgR, sgG, sgB];
+              fillColor = [30, 41, 59];
+              borderColor = [100, 116, 139];
               break;
           }
 
-          pdf.setFillColor(...fill);
-          pdf.setDrawColor(...border);
-          pdf.setLineWidth(0.3);
+          pdf.setFillColor(...fillColor);
+          pdf.setDrawColor(...borderColor);
+          pdf.setLineWidth(0.8);
 
           if (node.type === 'decision') {
-            // Diamond shape
+            // Diamond shape - larger
             const cx = pos.x + pos.w / 2;
             const cy = pos.y + pos.h / 2;
             const hw = pos.w / 2;
             const hh = pos.h / 2;
 
-            pdf.triangle(cx, cy - hh, cx + hw, cy, cx, cy + hh, 'F');
-            pdf.triangle(cx, cy - hh, cx - hw, cy, cx, cy + hh, 'F');
-            pdf.line(cx, cy - hh, cx + hw, cy);
-            pdf.line(cx + hw, cy, cx, cy + hh);
-            pdf.line(cx, cy + hh, cx - hw, cy);
-            pdf.line(cx - hw, cy, cx, cy - hh);
+            // Draw filled diamond
+            const points = [
+              [cx, cy - hh],       // top
+              [cx + hw, cy],       // right
+              [cx, cy + hh],       // bottom
+              [cx - hw, cy]        // left
+            ];
+            
+            // Fill using triangles
+            pdf.triangle(points[0][0], points[0][1], points[1][0], points[1][1], points[2][0], points[2][1], 'F');
+            pdf.triangle(points[0][0], points[0][1], points[2][0], points[2][1], points[3][0], points[3][1], 'F');
+            
+            // Draw border
+            pdf.line(points[0][0], points[0][1], points[1][0], points[1][1]);
+            pdf.line(points[1][0], points[1][1], points[2][0], points[2][1]);
+            pdf.line(points[2][0], points[2][1], points[3][0], points[3][1]);
+            pdf.line(points[3][0], points[3][1], points[0][0], points[0][1]);
           } else if (node.type === 'start' || node.type === 'end') {
-            pdf.roundedRect(pos.x, pos.y, pos.w, pos.h, 2.5, 2.5, 'FD');
+            // Rounded rectangle for start/end
+            pdf.roundedRect(pos.x, pos.y, pos.w, pos.h, 6, 6, 'FD');
           } else if (node.type === 'database') {
-            // Cylinder-like shape for database
-            pdf.roundedRect(pos.x, pos.y, pos.w, pos.h, 1, 1, 'FD');
-            // Add a subtle top arc
-            pdf.setDrawColor(...border);
-            pdf.line(pos.x + 1, pos.y + 1.5, pos.x + pos.w - 1, pos.y + 1.5);
+            // Cylinder shape for database
+            pdf.roundedRect(pos.x, pos.y, pos.w, pos.h, 2, 2, 'FD');
+            // Add subtle lines at top
+            pdf.setDrawColor(...borderColor);
+            pdf.setLineWidth(0.3);
+            pdf.line(pos.x + 3, pos.y + 3, pos.x + pos.w - 3, pos.y + 3);
           } else {
-            pdf.roundedRect(pos.x, pos.y, pos.w, pos.h, 1, 1, 'FD');
+            // Regular rounded rectangle
+            pdf.roundedRect(pos.x, pos.y, pos.w, pos.h, 3, 3, 'FD');
           }
 
-          // Text
-          pdf.setTextColor(248, 250, 252);
-          pdf.setFontSize(2.8);
+          // Text - larger and more readable
+          pdf.setTextColor(...textColor);
+          pdf.setFontSize(8);
           pdf.setFont('helvetica', 'bold');
 
-          const lines = pdf.splitTextToSize(nodeTitle, pos.w - 1.5);
-          const lh = 1.8;
-          const maxLines = 3;
+          const maxWidth = pos.w - 6;
+          const lines = pdf.splitTextToSize(nodeTitle, maxWidth);
+          const lineHeight = 3.5;
+          const maxLines = Math.floor((pos.h - 4) / lineHeight);
           const displayLines = lines.slice(0, maxLines);
-          const th = displayLines.length * lh;
-          const ty = pos.y + (pos.h - th) / 2 + lh;
+          const totalTextHeight = displayLines.length * lineHeight;
+          const startY = pos.y + (pos.h - totalTextHeight) / 2 + lineHeight * 0.7;
 
           displayLines.forEach((line: string, i: number) => {
-            pdf.text(line, pos.x + pos.w / 2, ty + i * lh, { align: 'center' });
+            pdf.text(line, pos.x + pos.w / 2, startY + i * lineHeight, { align: 'center' });
           });
         };
 
         pageNodes.forEach(drawNode);
 
-        // Legend (only on first page)
-        if (pageIndex === 0) {
-          const ly = pageHeight - 12;
-          pdf.setFontSize(4);
+        // Page footer
+        pdf.setFillColor(20, 30, 50);
+        pdf.rect(0, pageHeight - 12, pageWidth, 12, 'F');
 
+        // Page number
+        pdf.setTextColor(140, 140, 160);
+        pdf.setFontSize(9);
+        const pageText = `${translations.page[language as keyof typeof translations.page] || 'Page'} ${pageIndex + 1} ${translations.of[language as keyof typeof translations.of] || 'of'} ${totalPages}`;
+        pdf.text(pageText, margin, pageHeight - 5);
+
+        // Website
+        pdf.setTextColor(168, 85, 247);
+        pdf.setFontSize(9);
+        pdf.text('www.Objective-Reality.info', pageWidth - margin, pageHeight - 5, { align: 'right' });
+
+        // Legend on first page only
+        if (pageIndex === 0) {
+          const legendY = pageHeight - 25;
+          pdf.setFontSize(7);
+          
           const legend = [
-            { label: 'Start/End', color: [168, 85, 247] },
-            { label: 'Decision', color: [234, 179, 8] },
-            { label: 'Process', color: [59, 130, 246] },
-            { label: 'Category', color: [34, 197, 94] }
+            { label: 'Start/End', color: [168, 85, 247] as [number, number, number] },
+            { label: 'Decision', color: [234, 179, 8] as [number, number, number] },
+            { label: 'Process', color: [100, 116, 139] as [number, number, number] },
+            { label: 'Category', color: [34, 197, 94] as [number, number, number] }
           ];
 
           let lx = margin;
           legend.forEach(item => {
-            pdf.setFillColor(item.color[0], item.color[1], item.color[2]);
-            pdf.rect(lx, ly - 1.5, 3, 2.5, 'F');
+            pdf.setFillColor(...item.color);
+            pdf.roundedRect(lx, legendY - 2, 8, 5, 1, 1, 'F');
             pdf.setTextColor(180, 180, 180);
-            pdf.text(item.label, lx + 4, ly, { align: 'left' });
-            lx += 25;
+            pdf.text(item.label, lx + 10, legendY + 1.5);
+            lx += 40;
           });
         }
-
-        // Page number
-        pdf.setTextColor(120, 120, 140);
-        pdf.setFontSize(5);
-        const pageText = `${translations.page[language as keyof typeof translations.page] || 'Page'} ${pageIndex + 1} ${translations.of[language as keyof typeof translations.of] || 'of'} ${totalPages}`;
-        pdf.text(pageText, pageWidth / 2, pageHeight - 6, { align: 'center' });
-
-        // Website
-        pdf.setTextColor(168, 85, 247);
-        pdf.setFontSize(5);
-        pdf.text('www.Objective-Reality.info', pageWidth - margin, pageHeight - 6, { align: 'right' });
       }
 
       // Save
