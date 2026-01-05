@@ -1,6 +1,7 @@
-import React, { createContext, useContext, useState, useCallback, useEffect } from 'react';
+import React, { createContext, useContext, useCallback } from 'react';
+import { useLanguage, type Language } from '@/hooks/useLanguage';
 
-export type QuestLanguage = 'en' | 'de' | 'fr' | 'es';
+export type QuestLanguage = Language;
 
 interface QuestLanguageContextType {
   language: QuestLanguage;
@@ -10,18 +11,6 @@ interface QuestLanguageContextType {
 
 const QuestLanguageContext = createContext<QuestLanguageContextType | undefined>(undefined);
 
-const LANGUAGE_STORAGE_KEY = 'quest-for-reality-language';
-
-function getInitialLanguage(): QuestLanguage {
-  if (typeof window !== 'undefined') {
-    const stored = localStorage.getItem(LANGUAGE_STORAGE_KEY);
-    if (stored && ['en', 'de', 'fr', 'es'].includes(stored)) {
-      return stored as QuestLanguage;
-    }
-  }
-  return 'en';
-}
-
 export const questLanguages: { code: QuestLanguage; name: string; flag: string }[] = [
   { code: 'en', name: 'English', flag: '🇺🇸' },
   { code: 'de', name: 'Deutsch', flag: '🇩🇪' },
@@ -30,21 +19,8 @@ export const questLanguages: { code: QuestLanguage; name: string; flag: string }
 ];
 
 export function QuestLanguageProvider({ children }: { children: React.ReactNode }) {
-  const [language, setLanguageState] = useState<QuestLanguage>(getInitialLanguage);
-
-  const setLanguage = useCallback((lang: QuestLanguage) => {
-    setLanguageState(lang);
-    if (typeof window !== 'undefined') {
-      localStorage.setItem(LANGUAGE_STORAGE_KEY, lang);
-    }
-  }, []);
-
-  useEffect(() => {
-    const stored = localStorage.getItem(LANGUAGE_STORAGE_KEY);
-    if (stored && ['en', 'de', 'fr', 'es'].includes(stored) && stored !== language) {
-      setLanguageState(stored as QuestLanguage);
-    }
-  }, []);
+  // Use the main site's language context
+  const { language, setLanguage } = useLanguage();
 
   const t = useCallback((translations: Record<string, string>): string => {
     return translations[language] || translations['en'] || '';
