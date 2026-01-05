@@ -159,6 +159,32 @@
 }
 
 @layer components {
+  /* Quest star field - fixed background */
+  .quest-star-field {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  .quest-star {
+    position: absolute;
+    border-radius: 50%;
+    background: hsl(60 100% 95%);
+  }
+
+  .quest-star-twinkle {
+    animation: quest-twinkle 2s ease-in-out infinite;
+  }
+
+  @keyframes quest-twinkle {
+    0%, 100% { opacity: 0.2; }
+    50% { opacity: 0.8; }
+  }
+
   /* Enhanced transparent glass card effects */
   .glass-card {
     background: hsl(240 10% 15% / 0.06); /* Ultra transparent */
