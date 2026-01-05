@@ -23,20 +23,14 @@ const translations = {
     de: 'Suche nach objektiver Realität',
     fr: 'Quête de la réalité objective',
     es: 'Búsqueda de la realidad objetiva'
-  },
-  subtitle: {
-    en: 'Complete Decision Flowchart',
-    de: 'Komplettes Entscheidungs-Flussdiagramm',
-    fr: 'Organigramme de décision complet',
-    es: 'Diagrama de flujo de decisiones completo'
   }
 };
 
-interface NodePosition {
+interface NodePos {
   x: number;
   y: number;
-  width: number;
-  height: number;
+  w: number;
+  h: number;
 }
 
 export default function FlowchartPDFExport() {
@@ -47,309 +41,239 @@ export default function FlowchartPDFExport() {
     setIsGenerating(true);
 
     try {
-      // A4 Landscape
+      // A4 Portrait
       const pdf = new jsPDF({
-        orientation: 'landscape',
+        orientation: 'portrait',
         unit: 'mm',
         format: 'a4'
       });
 
-      const pageWidth = pdf.internal.pageSize.getWidth(); // 297mm
-      const pageHeight = pdf.internal.pageSize.getHeight(); // 210mm
-      const margin = 5;
+      const pageWidth = 210;
+      const pageHeight = 297;
+      const margin = 8;
       
-      // Set background
+      // Background
       pdf.setFillColor(15, 23, 42);
       pdf.rect(0, 0, pageWidth, pageHeight, 'F');
 
       // Title
       pdf.setTextColor(168, 85, 247);
-      pdf.setFontSize(14);
+      pdf.setFontSize(16);
       pdf.setFont('helvetica', 'bold');
       const title = translations.title[language as keyof typeof translations.title] || translations.title.en;
-      pdf.text(title, pageWidth / 2, 8, { align: 'center' });
-      
-      pdf.setFontSize(8);
-      pdf.setTextColor(148, 163, 184);
-      const subtitle = translations.subtitle[language as keyof typeof translations.subtitle] || translations.subtitle.en;
-      pdf.text(subtitle, pageWidth / 2, 12, { align: 'center' });
+      pdf.text(title, pageWidth / 2, 12, { align: 'center' });
 
-      // Very small node dimensions to fit everything
-      const nodeWidth = 22;
-      const nodeHeight = 10;
-      const colSpacing = 26;
-      const rowSpacing = 14;
-      const startY = 18;
+      // Node dimensions - very small
+      const nw = 28; // node width
+      const nh = 8;  // node height
+      const vGap = 4; // vertical gap
+      const hGap = 4; // horizontal gap
 
-      // Calculate column positions across the page
-      const cols = [
-        margin + 12,           // Col 0: Start
-        margin + 12 + colSpacing,  // Col 1
-        margin + 12 + colSpacing * 2,  // Col 2
-        margin + 12 + colSpacing * 3,  // Col 3
-        margin + 12 + colSpacing * 4,  // Col 4
-        margin + 12 + colSpacing * 5,  // Col 5
-        margin + 12 + colSpacing * 6,  // Col 6
-        margin + 12 + colSpacing * 7,  // Col 7
-        margin + 12 + colSpacing * 8,  // Col 8
-        margin + 12 + colSpacing * 9,  // Col 9
-        margin + 12 + colSpacing * 10, // Col 10
-      ];
+      // Center X position
+      const centerX = pageWidth / 2 - nw / 2;
+      
+      // Build positions - vertical flow with branches
+      const positions: Record<string, NodePos> = {};
+      let y = 20;
 
-      // Position all nodes in a grid layout following the flow
-      const nodePositions: Record<string, NodePosition> = {};
-      
-      // Row 0 - Main flow start
-      nodePositions['StartQuest'] = { x: cols[0], y: startY, width: nodeWidth, height: nodeHeight };
-      nodePositions['Start'] = { x: cols[1], y: startY, width: nodeWidth, height: nodeHeight };
-      nodePositions['SourceQuality'] = { x: cols[2], y: startY, width: nodeWidth, height: nodeHeight };
-      nodePositions['ExpertiseCheck'] = { x: cols[3], y: startY, width: nodeWidth, height: nodeHeight };
-      nodePositions['Collect'] = { x: cols[4], y: startY, width: nodeWidth, height: nodeHeight };
-      nodePositions['AssessNature'] = { x: cols[5], y: startY, width: nodeWidth, height: nodeHeight };
-      
-      // Row 1 - Branches
-      nodePositions['SeekExpert'] = { x: cols[3], y: startY + rowSpacing, width: nodeWidth, height: nodeHeight };
-      nodePositions['Formulate'] = { x: cols[6], y: startY, width: nodeWidth, height: nodeHeight };
-      nodePositions['IsSupernatural'] = { x: cols[5], y: startY + rowSpacing, width: nodeWidth, height: nodeHeight };
-      
-      // Row 2
-      nodePositions['Falsifiability'] = { x: cols[6], y: startY + rowSpacing, width: nodeWidth, height: nodeHeight };
-      nodePositions['ClassifyMetaphysical'] = { x: cols[5], y: startY + rowSpacing * 2, width: nodeWidth, height: nodeHeight };
-      nodePositions['IsUseful'] = { x: cols[4], y: startY + rowSpacing * 2, width: nodeWidth, height: nodeHeight };
-      
-      // Row 3
-      nodePositions['ApplyBayes'] = { x: cols[7], y: startY, width: nodeWidth, height: nodeHeight };
-      nodePositions['ClassifyPseudo'] = { x: cols[4], y: startY + rowSpacing * 3, width: nodeWidth, height: nodeHeight };
-      nodePositions['Revise'] = { x: cols[6], y: startY + rowSpacing * 2, width: nodeWidth, height: nodeHeight };
-      
-      // Row 4 - Evidence evaluation
-      nodePositions['EvaluateEvidence'] = { x: cols[8], y: startY, width: nodeWidth, height: nodeHeight };
-      nodePositions['BiasCheck'] = { x: cols[8], y: startY + rowSpacing, width: nodeWidth, height: nodeHeight };
-      nodePositions['AdjustConfidence'] = { x: cols[8], y: startY + rowSpacing * 2, width: nodeWidth, height: nodeHeight };
-      
-      // Row 5 - Conclusions
-      nodePositions['Conclusion'] = { x: cols[9], y: startY, width: nodeWidth, height: nodeHeight };
-      nodePositions['HighConfidence'] = { x: cols[9], y: startY + rowSpacing, width: nodeWidth, height: nodeHeight };
-      nodePositions['MediumConfidence'] = { x: cols[9], y: startY + rowSpacing * 2, width: nodeWidth, height: nodeHeight };
-      nodePositions['LowConfidence'] = { x: cols[9], y: startY + rowSpacing * 3, width: nodeWidth, height: nodeHeight };
-      
-      // Row 6 - Storage
-      nodePositions['StoreFact'] = { x: cols[10], y: startY, width: nodeWidth, height: nodeHeight };
-      nodePositions['StoreWorking'] = { x: cols[10], y: startY + rowSpacing, width: nodeWidth, height: nodeHeight };
-      nodePositions['StoreUncertain'] = { x: cols[10], y: startY + rowSpacing * 2, width: nodeWidth, height: nodeHeight };
-      nodePositions['StoreUnknown'] = { x: cols[10], y: startY + rowSpacing * 3, width: nodeWidth, height: nodeHeight };
-      
-      // Additional nodes - lower section
-      nodePositions['NeedMoreData'] = { x: cols[7], y: startY + rowSpacing * 3, width: nodeWidth, height: nodeHeight };
-      nodePositions['RecordResult'] = { x: cols[9], y: startY + rowSpacing * 4, width: nodeWidth, height: nodeHeight };
-      nodePositions['ConfidenceDecay'] = { x: cols[10], y: startY + rowSpacing * 4, width: nodeWidth, height: nodeHeight };
-      nodePositions['EndInquiry'] = { x: cols[9], y: startY + rowSpacing * 5, width: nodeWidth, height: nodeHeight };
-      nodePositions['KnowledgeDB'] = { x: cols[10], y: startY + rowSpacing * 5, width: nodeWidth, height: nodeHeight };
-      
-      // Classification endpoints
-      nodePositions['ClassifyFiction'] = { x: cols[3], y: startY + rowSpacing * 3, width: nodeWidth, height: nodeHeight };
-      nodePositions['ClassifyOpinion'] = { x: cols[3], y: startY + rowSpacing * 4, width: nodeWidth, height: nodeHeight };
-      nodePositions['ClassifyMisinfo'] = { x: cols[2], y: startY + rowSpacing * 3, width: nodeWidth, height: nodeHeight };
-      
-      // More process nodes
-      nodePositions['ConsiderAlternatives'] = { x: cols[7], y: startY + rowSpacing, width: nodeWidth, height: nodeHeight };
-      nodePositions['WeighEvidence'] = { x: cols[7], y: startY + rowSpacing * 2, width: nodeWidth, height: nodeHeight };
-
-      // Draw function for nodes
-      const drawNode = (nodeId: string, pos: NodePosition) => {
-        const node = nodes.find(n => n.id === nodeId);
-        if (!node) return;
-
-        const nodeTitle = node.title[language as keyof typeof node.title] || node.title.en;
-        
-        // Get node color based on type
-        let fillColor: string;
-        let borderColor: string;
-        switch (node.type) {
-          case 'start':
-            fillColor = '#581c87';
-            borderColor = '#a855f7';
-            break;
-          case 'decision':
-            fillColor = '#713f12';
-            borderColor = '#eab308';
-            break;
-          case 'end':
-            fillColor = '#14532d';
-            borderColor = '#22c55e';
-            break;
-          case 'category':
-          case 'database':
-            fillColor = '#1e3a5f';
-            borderColor = node.categoryColor || '#3b82f6';
-            break;
-          default:
-            fillColor = '#1e3a5f';
-            borderColor = '#3b82f6';
-        }
-
-        // Parse colors
-        const parseColor = (hex: string) => [
-          parseInt(hex.slice(1, 3), 16),
-          parseInt(hex.slice(3, 5), 16),
-          parseInt(hex.slice(5, 7), 16)
-        ];
-
-        const [fr, fg, fb] = parseColor(fillColor);
-        const [br, bg, bb] = parseColor(borderColor);
-
-        // Draw node shape
-        if (node.type === 'decision') {
-          // Diamond shape for decisions
-          const cx = pos.x + pos.width / 2;
-          const cy = pos.y + pos.height / 2;
-          const hw = pos.width / 2;
-          const hh = pos.height / 2;
-          
-          pdf.setFillColor(fr, fg, fb);
-          pdf.setDrawColor(br, bg, bb);
-          pdf.setLineWidth(0.3);
-          
-          // Draw filled diamond using triangle method
-          pdf.triangle(cx, cy - hh, cx + hw, cy, cx, cy + hh, 'F');
-          pdf.triangle(cx, cy - hh, cx - hw, cy, cx, cy + hh, 'F');
-          
-          // Draw border
-          pdf.line(cx, cy - hh, cx + hw, cy);
-          pdf.line(cx + hw, cy, cx, cy + hh);
-          pdf.line(cx, cy + hh, cx - hw, cy);
-          pdf.line(cx - hw, cy, cx, cy - hh);
-        } else if (node.type === 'start' || node.type === 'end') {
-          // Rounded rectangle for start/end
-          pdf.setFillColor(fr, fg, fb);
-          pdf.setDrawColor(br, bg, bb);
-          pdf.setLineWidth(0.3);
-          pdf.roundedRect(pos.x, pos.y, pos.width, pos.height, 3, 3, 'FD');
-        } else {
-          // Rectangle for process nodes
-          pdf.setFillColor(fr, fg, fb);
-          pdf.setDrawColor(br, bg, bb);
-          pdf.setLineWidth(0.3);
-          pdf.roundedRect(pos.x, pos.y, pos.width, pos.height, 1, 1, 'FD');
-        }
-
-        // Draw title text (very small)
-        pdf.setTextColor(248, 250, 252);
-        pdf.setFontSize(3.5);
-        pdf.setFont('helvetica', 'bold');
-        
-        // Word wrap title
-        const maxWidth = pos.width - 2;
-        const lines = pdf.splitTextToSize(nodeTitle, maxWidth);
-        const lineHeight = 2;
-        const totalTextHeight = Math.min(lines.length, 3) * lineHeight;
-        const startTextY = pos.y + (pos.height - totalTextHeight) / 2 + lineHeight;
-        
-        lines.slice(0, 3).forEach((line: string, i: number) => {
-          pdf.text(line, pos.x + pos.width / 2, startTextY + i * lineHeight, { align: 'center' });
-        });
+      // Helper to add node
+      const addNode = (id: string, x: number, yPos: number) => {
+        positions[id] = { x, y: yPos, w: nw, h: nh };
       };
 
-      // Draw arrows between nodes
+      // ===== MAIN VERTICAL FLOW =====
+      // Row 1: Start
+      addNode('StartQuest', centerX, y);
+      y += nh + vGap;
+
+      // Row 2: Define Question
+      addNode('Start', centerX, y);
+      y += nh + vGap;
+
+      // Row 3: Source Quality
+      addNode('SourceQuality', centerX, y);
+      y += nh + vGap;
+
+      // Row 4: Expertise Check (decision) with branch
+      addNode('ExpertiseCheck', centerX, y);
+      addNode('SeekExpert', centerX - nw - hGap, y); // Left branch
+      y += nh + vGap;
+
+      // Row 5: Collect Data
+      addNode('Collect', centerX, y);
+      y += nh + vGap;
+
+      // Row 6: Empirically Testable? (major decision)
+      addNode('AssessNature', centerX, y);
+      y += nh + vGap;
+
+      // Row 7: Two branches - Testable vs Non-testable
+      const leftBranchX = centerX - nw/2 - hGap/2 - nw/2;
+      const rightBranchX = centerX + nw/2 + hGap/2 + nw/2;
+      
+      addNode('Formulate', leftBranchX, y);           // Yes branch
+      addNode('IsSupernatural', rightBranchX, y);     // No branch
+      y += nh + vGap;
+
+      // Row 8
+      addNode('Falsifiability', leftBranchX, y);
+      addNode('ClassifyMetaphysical', rightBranchX + nw + hGap, y); // Far right
+      addNode('IsUseful', rightBranchX, y);
+      y += nh + vGap;
+
+      // Row 9
+      addNode('Revise', leftBranchX - nw - hGap, y);  // Left of left
+      addNode('ApplyBayes', centerX, y);               // Center - main flow continues
+      addNode('ClassifyPseudo', rightBranchX + nw + hGap, y);
+      y += nh + vGap;
+
+      // Row 10: Evidence Evaluation
+      addNode('EvaluateEvidence', centerX, y);
+      addNode('ConsiderAlternatives', leftBranchX, y);
+      y += nh + vGap;
+
+      // Row 11: Bias Check
+      addNode('BiasCheck', centerX, y);
+      addNode('WeighEvidence', leftBranchX, y);
+      y += nh + vGap;
+
+      // Row 12: Adjust Confidence
+      addNode('AdjustConfidence', centerX, y);
+      y += nh + vGap;
+
+      // Row 13: Conclusion
+      addNode('Conclusion', centerX, y);
+      y += nh + vGap;
+
+      // Row 14: Confidence levels (horizontal spread)
+      const conf1X = margin + 10;
+      const conf2X = margin + 10 + nw + hGap;
+      const conf3X = margin + 10 + (nw + hGap) * 2;
+      const conf4X = margin + 10 + (nw + hGap) * 3;
+      
+      addNode('HighConfidence', conf1X, y);
+      addNode('MediumConfidence', conf2X, y);
+      addNode('LowConfidence', conf3X, y);
+      addNode('NeedMoreData', conf4X, y);
+      y += nh + vGap;
+
+      // Row 15: Storage categories
+      addNode('StoreFact', conf1X, y);
+      addNode('StoreWorking', conf2X, y);
+      addNode('StoreUncertain', conf3X, y);
+      addNode('StoreUnknown', conf4X, y);
+      y += nh + vGap;
+
+      // Row 16: Record & Review
+      addNode('RecordResult', centerX - nw/2 - hGap/2, y);
+      addNode('ConfidenceDecay', centerX + nw/2 + hGap/2, y);
+      y += nh + vGap;
+
+      // Row 17: End
+      addNode('EndInquiry', centerX, y);
+      y += nh + vGap;
+
+      // Row 18: Knowledge DB
+      addNode('KnowledgeDB', centerX, y);
+
+      // Classification endpoints (side)
+      addNode('ClassifyFiction', pageWidth - margin - nw - 5, 100);
+      addNode('ClassifyOpinion', pageWidth - margin - nw - 5, 112);
+      addNode('ClassifyMisinfo', pageWidth - margin - nw - 5, 124);
+
+      // ===== DRAW ARROWS FIRST =====
       const drawArrow = (fromId: string, toId: string, label?: string, color?: string) => {
-        const from = nodePositions[fromId];
-        const to = nodePositions[toId];
+        const from = positions[fromId];
+        const to = positions[toId];
         if (!from || !to) return;
 
-        const arrowColor = color || '#64748b';
-        const [ar, ag, ab] = [
-          parseInt(arrowColor.slice(1, 3), 16),
-          parseInt(arrowColor.slice(3, 5), 16),
-          parseInt(arrowColor.slice(5, 7), 16)
-        ];
-        
-        pdf.setDrawColor(ar, ag, ab);
-        pdf.setLineWidth(0.2);
+        const c = color || '#475569';
+        pdf.setDrawColor(parseInt(c.slice(1,3),16), parseInt(c.slice(3,5),16), parseInt(c.slice(5,7),16));
+        pdf.setLineWidth(0.25);
 
-        // Calculate connection points
-        const fromCx = from.x + from.width / 2;
-        const fromCy = from.y + from.height / 2;
-        const toCx = to.x + to.width / 2;
-        const toCy = to.y + to.height / 2;
+        const fromCx = from.x + from.w / 2;
+        const fromCy = from.y + from.h / 2;
+        const toCx = to.x + to.w / 2;
+        const toCy = to.y + to.h / 2;
 
-        let startX: number, startY: number, endX: number, endY: number;
+        let sx: number, sy: number, ex: number, ey: number;
 
-        // Determine start and end points based on relative positions
-        if (Math.abs(toCx - fromCx) > Math.abs(toCy - fromCy)) {
-          // Horizontal connection
-          if (toCx > fromCx) {
-            startX = from.x + from.width;
-            endX = to.x;
-          } else {
-            startX = from.x;
-            endX = to.x + to.width;
-          }
-          startY = fromCy;
-          endY = toCy;
+        // Determine connection direction
+        const dx = Math.abs(toCx - fromCx);
+        const dy = Math.abs(toCy - fromCy);
+
+        if (dy > dx * 0.5) {
+          // Vertical-ish
+          sy = toCy > fromCy ? from.y + from.h : from.y;
+          ey = toCy > fromCy ? to.y : to.y + to.h;
+          sx = fromCx;
+          ex = toCx;
         } else {
-          // Vertical connection
-          if (toCy > fromCy) {
-            startY = from.y + from.height;
-            endY = to.y;
-          } else {
-            startY = from.y;
-            endY = to.y + to.height;
-          }
-          startX = fromCx;
-          endX = toCx;
+          // Horizontal-ish
+          sx = toCx > fromCx ? from.x + from.w : from.x;
+          ex = toCx > fromCx ? to.x : to.x + to.w;
+          sy = fromCy;
+          ey = toCy;
         }
 
-        // Draw line
-        pdf.line(startX, startY, endX, endY);
+        // Draw with elbow if needed
+        if (Math.abs(sx - ex) > 2 && Math.abs(sy - ey) > 2) {
+          const midY = (sy + ey) / 2;
+          pdf.line(sx, sy, sx, midY);
+          pdf.line(sx, midY, ex, midY);
+          pdf.line(ex, midY, ex, ey);
+        } else {
+          pdf.line(sx, sy, ex, ey);
+        }
 
-        // Draw arrowhead
-        const angle = Math.atan2(endY - startY, endX - startX);
-        const arrowSize = 1;
-        pdf.line(endX, endY, endX - arrowSize * Math.cos(angle - Math.PI / 6), endY - arrowSize * Math.sin(angle - Math.PI / 6));
-        pdf.line(endX, endY, endX - arrowSize * Math.cos(angle + Math.PI / 6), endY - arrowSize * Math.sin(angle + Math.PI / 6));
+        // Arrowhead
+        const angle = Math.atan2(ey - sy, ex - sx);
+        const aLen = 1.2;
+        pdf.line(ex, ey, ex - aLen * Math.cos(angle - 0.4), ey - aLen * Math.sin(angle - 0.4));
+        pdf.line(ex, ey, ex - aLen * Math.cos(angle + 0.4), ey - aLen * Math.sin(angle + 0.4));
 
-        // Draw label if provided
+        // Label
         if (label) {
           pdf.setFontSize(3);
-          pdf.setTextColor(ar, ag, ab);
-          const midX = (startX + endX) / 2;
-          const midY = (startY + endY) / 2;
-          pdf.text(label, midX, midY - 0.5, { align: 'center' });
+          pdf.setTextColor(parseInt(c.slice(1,3),16), parseInt(c.slice(3,5),16), parseInt(c.slice(5,7),16));
+          pdf.text(label, (sx + ex) / 2, (sy + ey) / 2 - 1, { align: 'center' });
         }
       };
 
-      // Labels
-      const yesLabel = language === 'de' ? 'Ja' : language === 'fr' ? 'Oui' : language === 'es' ? 'Sí' : 'Yes';
-      const noLabel = language === 'de' ? 'Nein' : language === 'fr' ? 'Non' : 'No';
+      const yes = language === 'de' ? 'Ja' : language === 'fr' ? 'Oui' : language === 'es' ? 'Sí' : 'Yes';
+      const no = language === 'de' ? 'Nein' : language === 'fr' ? 'Non' : 'No';
 
-      // Draw connections
+      // Main flow
       drawArrow('StartQuest', 'Start');
       drawArrow('Start', 'SourceQuality');
       drawArrow('SourceQuality', 'ExpertiseCheck');
-      drawArrow('ExpertiseCheck', 'SeekExpert', noLabel, '#ef4444');
-      drawArrow('ExpertiseCheck', 'Collect', yesLabel, '#22c55e');
+      drawArrow('ExpertiseCheck', 'SeekExpert', no, '#ef4444');
+      drawArrow('ExpertiseCheck', 'Collect', yes, '#22c55e');
       drawArrow('SeekExpert', 'Collect');
       drawArrow('Collect', 'AssessNature');
-      drawArrow('AssessNature', 'Formulate', yesLabel, '#22c55e');
-      drawArrow('AssessNature', 'IsSupernatural', noLabel, '#ef4444');
+      drawArrow('AssessNature', 'Formulate', yes, '#22c55e');
+      drawArrow('AssessNature', 'IsSupernatural', no, '#ef4444');
       drawArrow('Formulate', 'Falsifiability');
-      drawArrow('Falsifiability', 'ApplyBayes', yesLabel, '#22c55e');
-      drawArrow('Falsifiability', 'Revise', noLabel, '#ef4444');
-      drawArrow('IsSupernatural', 'ClassifyMetaphysical', yesLabel, '#22c55e');
-      drawArrow('IsSupernatural', 'IsUseful', noLabel, '#ef4444');
-      drawArrow('IsUseful', 'ClassifyPseudo', noLabel, '#ef4444');
-      drawArrow('IsUseful', 'ApplyBayes', yesLabel, '#22c55e');
+      drawArrow('Falsifiability', 'ApplyBayes', yes, '#22c55e');
+      drawArrow('Falsifiability', 'Revise', no, '#ef4444');
+      drawArrow('Revise', 'Formulate');
+      drawArrow('IsSupernatural', 'ClassifyMetaphysical', yes, '#22c55e');
+      drawArrow('IsSupernatural', 'IsUseful', no, '#ef4444');
+      drawArrow('IsUseful', 'ApplyBayes', yes, '#22c55e');
+      drawArrow('IsUseful', 'ClassifyPseudo', no, '#ef4444');
       drawArrow('ApplyBayes', 'EvaluateEvidence');
       drawArrow('EvaluateEvidence', 'BiasCheck');
+      drawArrow('ConsiderAlternatives', 'WeighEvidence');
+      drawArrow('WeighEvidence', 'AdjustConfidence');
       drawArrow('BiasCheck', 'AdjustConfidence');
       drawArrow('AdjustConfidence', 'Conclusion');
       drawArrow('Conclusion', 'HighConfidence');
-      drawArrow('HighConfidence', 'StoreFact', yesLabel, '#22c55e');
-      drawArrow('HighConfidence', 'MediumConfidence', noLabel, '#ef4444');
+      drawArrow('Conclusion', 'MediumConfidence');
+      drawArrow('Conclusion', 'LowConfidence');
+      drawArrow('Conclusion', 'NeedMoreData');
+      drawArrow('HighConfidence', 'StoreFact');
       drawArrow('MediumConfidence', 'StoreWorking');
-      drawArrow('MediumConfidence', 'LowConfidence', noLabel, '#ef4444');
       drawArrow('LowConfidence', 'StoreUncertain');
-      drawArrow('LowConfidence', 'NeedMoreData', noLabel, '#ef4444');
       drawArrow('NeedMoreData', 'StoreUnknown');
       drawArrow('StoreFact', 'RecordResult');
       drawArrow('StoreWorking', 'RecordResult');
@@ -357,49 +281,105 @@ export default function FlowchartPDFExport() {
       drawArrow('StoreUnknown', 'RecordResult');
       drawArrow('RecordResult', 'ConfidenceDecay');
       drawArrow('RecordResult', 'EndInquiry');
+      drawArrow('ConfidenceDecay', 'EndInquiry');
       drawArrow('EndInquiry', 'KnowledgeDB');
-      drawArrow('ConsiderAlternatives', 'WeighEvidence');
-      drawArrow('WeighEvidence', 'AdjustConfidence');
 
-      // Draw all positioned nodes
-      Object.entries(nodePositions).forEach(([nodeId, pos]) => {
-        drawNode(nodeId, pos);
-      });
+      // ===== DRAW NODES =====
+      const drawNode = (id: string) => {
+        const pos = positions[id];
+        if (!pos) return;
+        
+        const node = nodes.find(n => n.id === id);
+        if (!node) return;
 
-      // Add legend at bottom
-      const legendY = pageHeight - 8;
+        const nodeTitle = node.title[language as keyof typeof node.title] || node.title.en;
+
+        // Colors by type
+        let fill: [number, number, number];
+        let border: [number, number, number];
+        
+        switch (node.type) {
+          case 'start':
+            fill = [88, 28, 135]; border = [168, 85, 247]; break;
+          case 'decision':
+            fill = [113, 63, 18]; border = [234, 179, 8]; break;
+          case 'end':
+            fill = [20, 83, 45]; border = [34, 197, 94]; break;
+          case 'category':
+          case 'database':
+            fill = [30, 58, 95]; border = [34, 197, 94]; break;
+          default:
+            fill = [30, 58, 95]; border = [59, 130, 246]; break;
+        }
+
+        pdf.setFillColor(...fill);
+        pdf.setDrawColor(...border);
+        pdf.setLineWidth(0.4);
+
+        if (node.type === 'decision') {
+          // Diamond
+          const cx = pos.x + pos.w / 2;
+          const cy = pos.y + pos.h / 2;
+          const hw = pos.w / 2;
+          const hh = pos.h / 2;
+          
+          pdf.triangle(cx, cy - hh, cx + hw, cy, cx, cy + hh, 'F');
+          pdf.triangle(cx, cy - hh, cx - hw, cy, cx, cy + hh, 'F');
+          pdf.line(cx, cy - hh, cx + hw, cy);
+          pdf.line(cx + hw, cy, cx, cy + hh);
+          pdf.line(cx, cy + hh, cx - hw, cy);
+          pdf.line(cx - hw, cy, cx, cy - hh);
+        } else if (node.type === 'start' || node.type === 'end') {
+          pdf.roundedRect(pos.x, pos.y, pos.w, pos.h, 3, 3, 'FD');
+        } else {
+          pdf.roundedRect(pos.x, pos.y, pos.w, pos.h, 1, 1, 'FD');
+        }
+
+        // Text
+        pdf.setTextColor(248, 250, 252);
+        pdf.setFontSize(3.2);
+        pdf.setFont('helvetica', 'bold');
+        
+        const lines = pdf.splitTextToSize(nodeTitle, pos.w - 2);
+        const lh = 2;
+        const th = Math.min(lines.length, 3) * lh;
+        const ty = pos.y + (pos.h - th) / 2 + lh;
+        
+        lines.slice(0, 3).forEach((line: string, i: number) => {
+          pdf.text(line, pos.x + pos.w / 2, ty + i * lh, { align: 'center' });
+        });
+      };
+
+      // Draw all nodes
+      Object.keys(positions).forEach(drawNode);
+
+      // Legend
+      const ly = pageHeight - 10;
       pdf.setFontSize(5);
-      pdf.setTextColor(148, 163, 184);
       
-      const legendItems = [
-        { label: 'Start/End', color: '#a855f7', type: 'rounded' },
-        { label: 'Decision', color: '#eab308', type: 'diamond' },
-        { label: 'Process', color: '#3b82f6', type: 'rect' },
-        { label: 'Category', color: '#22c55e', type: 'rect' }
+      const legend = [
+        { label: 'Start/End', color: [168, 85, 247] },
+        { label: 'Decision', color: [234, 179, 8] },
+        { label: 'Process', color: [59, 130, 246] },
+        { label: 'Category', color: [34, 197, 94] }
       ];
 
-      let legendX = margin;
-      legendItems.forEach(item => {
-        const [r, g, b] = [
-          parseInt(item.color.slice(1, 3), 16),
-          parseInt(item.color.slice(3, 5), 16),
-          parseInt(item.color.slice(5, 7), 16)
-        ];
-        pdf.setFillColor(r, g, b);
-        pdf.rect(legendX, legendY - 2, 4, 3, 'F');
-        pdf.setTextColor(248, 250, 252);
-        pdf.text(item.label, legendX + 5, legendY, { align: 'left' });
-        legendX += 25;
+      let lx = margin;
+      legend.forEach(item => {
+        pdf.setFillColor(item.color[0], item.color[1], item.color[2]);
+        pdf.rect(lx, ly - 2, 4, 3, 'F');
+        pdf.setTextColor(200, 200, 200);
+        pdf.text(item.label, lx + 5, ly, { align: 'left' });
+        lx += 28;
       });
 
-      // Website - CORRECTED URL
+      // Website
       pdf.setTextColor(168, 85, 247);
       pdf.setFontSize(6);
-      pdf.text('www.Objective-Reality.info', pageWidth - margin, legendY, { align: 'right' });
+      pdf.text('www.Objective-Reality.info', pageWidth - margin, ly, { align: 'right' });
 
-      // Download
-      const langCode = language.toUpperCase();
-      pdf.save(`Quest-Flowchart-${langCode}.pdf`);
+      // Save
+      pdf.save(`Quest-Flowchart-${language.toUpperCase()}.pdf`);
 
     } catch (error) {
       console.error('PDF generation failed:', error);
