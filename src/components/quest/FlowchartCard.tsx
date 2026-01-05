@@ -3,15 +3,16 @@ import { useQuestLanguage } from '@/contexts/QuestLanguageContext';
 import { useQuest } from '@/contexts/QuestContext';
 import { FlowchartNode, getSubgraphById } from '@/data/flowchartData';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Lightbulb, BookOpen, ExternalLink, ChevronLeft, Map } from 'lucide-react';
+import { ArrowRight, Lightbulb, BookOpen, ExternalLink, ChevronLeft, Map, RotateCcw } from 'lucide-react';
 import BayesTheorem from './BayesTheorem';
 
 interface FlowchartCardProps {
   node: FlowchartNode;
   onZoomOut?: () => void;
+  onReset?: () => void;
 }
 
-export default function FlowchartCard({ node, onZoomOut }: FlowchartCardProps) {
+export default function FlowchartCard({ node, onZoomOut, onReset }: FlowchartCardProps) {
   const { t, language } = useQuestLanguage();
   const { goToNode, goBack, canGoBack } = useQuest();
   const subgraph = getSubgraphById(node.subgraph);
@@ -219,6 +220,18 @@ export default function FlowchartCard({ node, onZoomOut }: FlowchartCardProps) {
             >
               <Map className="w-4 h-4 mr-2" />
               {t({ en: 'View Map Overview', de: 'Kartenübersicht', fr: 'Aperçu de la carte', es: 'Vista del mapa' })}
+            </Button>
+          )}
+
+          {/* Reset button */}
+          {onReset && (
+            <Button
+              onClick={onReset}
+              variant="ghost"
+              className="w-full mt-1 text-muted-foreground hover:text-foreground"
+            >
+              <RotateCcw className="w-4 h-4 mr-2" />
+              {t({ en: 'Start Over', de: 'Neu starten', fr: 'Recommencer', es: 'Reiniciar' })}
             </Button>
           )}
         </div>
