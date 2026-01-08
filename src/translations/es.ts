@@ -1723,4 +1723,14 @@ export const es = {
   'consciousness.aqal.table.headers.humanAge': 'Edad Humana',
   'consciousness.aqal.table.headers.quest': 'Búsqueda',
   'consciousness.aqal.table.headers.method': 'Método',
+  
+  // AQAL table labels
+  'consciousness.aqal.table.labels.description': 'Descripción',
+  'consciousness.aqal.table.labels.characteristics': 'Características',
+  'consciousness.aqal.table.labels.aqalQuadrants': 'Cuadrantes AQAL',
+  'consciousness.aqal.table.labels.interiorIndividual': 'Interior-Individual (Yo)',
+  'consciousness.aqal.table.labels.exteriorIndividual': 'Exterior-Individual (Ello)',
+  'consciousness.aqal.table.labels.interiorCollective': 'Interior-Colectivo (Nosotros)',
+  'consciousness.aqal.table.labels.exteriorCollective': 'Exterior-Colectivo (Ellos)',
+  'consciousness.aqal.table.labels.commonPitfalls': 'Errores Comunes',
 } as const;
