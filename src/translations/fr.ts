@@ -1695,4 +1695,12 @@ export const fr = {
   'consciousness.aqal.table.labels.interiorCollective': 'Intérieur-Collectif (Nous)',
   'consciousness.aqal.table.labels.exteriorCollective': 'Extérieur-Collectif (Ils)',
   'consciousness.aqal.table.labels.commonPitfalls': 'Pièges Courants',
+  
+  // NotFound page
+  'notFound.message': 'Oups ! Page non trouvée',
+  'notFound.returnHome': 'Retour à l\'accueil',
+  
+  // Home page card descriptions
+  'home.card.learnAbout': 'En savoir plus sur',
+  'home.card.discover': 'Découvrir',
 } as const;

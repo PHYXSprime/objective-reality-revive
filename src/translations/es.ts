@@ -1733,4 +1733,12 @@ export const es = {
   'consciousness.aqal.table.labels.interiorCollective': 'Interior-Colectivo (Nosotros)',
   'consciousness.aqal.table.labels.exteriorCollective': 'Exterior-Colectivo (Ellos)',
   'consciousness.aqal.table.labels.commonPitfalls': 'Errores Comunes',
+  
+  // NotFound page
+  'notFound.message': '¡Ups! Página no encontrada',
+  'notFound.returnHome': 'Volver al inicio',
+  
+  // Home page card descriptions
+  'home.card.learnAbout': 'Aprende sobre',
+  'home.card.discover': 'Descubre',
 } as const;

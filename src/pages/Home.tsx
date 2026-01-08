@@ -24,49 +24,49 @@ export default function Home() {
     },
     {
       icon: Scale,
-      title: 'Scientific Consensus',
+      title: t('challenge.scientificConsensus.title'),
       link: '/consensus',
       color: 'text-indigo-600 dark:text-indigo-400',
     },
     {
       icon: Zap,
-      title: 'Censorship',
+      title: t('challenge.censorship.title'),
       link: '/censorship',
       color: 'text-yellow-600 dark:text-yellow-400',
     },
     {
       icon: Megaphone,
-      title: 'Propaganda',
+      title: t('challenge.propaganda.title'),
       link: '/propaganda',
       color: 'text-orange-600 dark:text-orange-400',
     },
     {
       icon: GraduationCap,
-      title: 'Indoctrination',
+      title: t('challenge.indoctrination.title'),
       link: '/indoctrination',
       color: 'text-pink-600 dark:text-pink-400',
     },
     {
       icon: Church,
-      title: 'Dogmatic Beliefs',
+      title: t('challenge.dogmaticBeliefs.title'),
       link: '/dogmas',
       color: 'text-gray-600 dark:text-gray-400',
     },
     {
       icon: Bed,
-      title: 'Lazy Thinking',
+      title: t('challenge.lazyThinking.title'),
       link: '/lazy-thinking',
       color: 'text-teal-600 dark:text-teal-400',
     },
     {
       icon: Heart,
-      title: 'Psychological Weakness',
+      title: t('challenge.psychologicalWeakness.title'),
       link: '/psychological-weakness',
       color: 'text-rose-600 dark:text-rose-400',
     },
     {
       icon: UserX,
-      title: 'Ego',
+      title: t('challenge.ego.title'),
       link: '/ego',
       color: 'text-amber-600 dark:text-amber-400',
     },
@@ -76,37 +76,37 @@ export default function Home() {
   const solutionPages = [
     {
       icon: MessageCircle,
-      title: 'Street Epistemology',
+      title: t('solution.streetEpistemology.title'),
       link: '/street-epistemology',
       color: 'text-green-600 dark:text-green-400',
     },
     {
       icon: BookOpen,
-      title: 'Socratic Questioning',
+      title: t('solution.socraticQuestioning.title'),
       link: '/socratic-questioning',
       color: 'text-blue-600 dark:text-blue-400',
     },
     {
       icon: Microscope,
-      title: 'Scientific Method',
+      title: t('solution.scientificMethod.title'),
       link: '/scientific-method',
       color: 'text-purple-600 dark:text-purple-400',
     },
     {
       icon: Lightbulb,
-      title: 'Critical Thinking',
+      title: t('solution.criticalThinking.title'),
       link: '/critical-thinking',
       color: 'text-cyan-600 dark:text-cyan-400',
     },
     {
       icon: Smile,
-      title: 'Comedians',
+      title: t('solution.comedians.title'),
       link: '/comedians',
       color: 'text-yellow-600 dark:text-yellow-400',
     },
     {
       icon: UserCheck,
-      title: 'Stefan Molyneux',
+      title: t('solution.stefanMolyneux.title'),
       link: '/stefan-molyneux',
       color: 'text-red-600 dark:text-red-400',
     },
@@ -115,7 +115,7 @@ export default function Home() {
   // Add Co-Evolution to challenges
   challengePages.push({
     icon: TreePine,
-    title: 'Co-Evolution',
+    title: t('challenge.coEvolution.title'),
     link: '/co-evolution',
     color: 'text-emerald-600 dark:text-emerald-400',
   });
@@ -208,7 +208,7 @@ export default function Home() {
           <div className="relative">
             <div className="absolute inset-0 rounded-2xl border border-orange-400/30 bg-transparent"></div>
             <div className="absolute -top-4 left-6 bg-background px-3 py-1 rounded-full border border-orange-400/30">
-              <h2 className="text-xl font-semibold text-orange-600 dark:text-orange-400">Challenges</h2>
+              <h2 className="text-xl font-semibold text-orange-600 dark:text-orange-400">{t('challenges.title')}</h2>
             </div>
             <div className="p-8 pt-12">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
@@ -223,7 +223,7 @@ export default function Home() {
                           <h3 className="text-lg font-semibold text-foreground">{page.title}</h3>
                         </div>
                         <p className="text-sm text-muted-foreground leading-relaxed text-left">
-                          Learn about {page.title.toLowerCase()} and how they affect thinking
+                          {t('home.card.learnAbout')} {page.title.toLowerCase()}
                         </p>
                       </div>
                     </Link>
@@ -237,7 +237,7 @@ export default function Home() {
           <div className="relative">
             <div className="absolute inset-0 rounded-2xl border border-green-400/30 bg-transparent"></div>
             <div className="absolute -top-4 left-6 bg-background px-3 py-1 rounded-full border border-green-400/30">
-              <h2 className="text-xl font-semibold text-green-600 dark:text-green-400">Solutions</h2>
+              <h2 className="text-xl font-semibold text-green-600 dark:text-green-400">{t('solutions.title')}</h2>
             </div>
             <div className="p-8 pt-12">
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -252,7 +252,7 @@ export default function Home() {
                           <h3 className="text-lg font-semibold text-foreground">{page.title}</h3>
                         </div>
                         <p className="text-sm text-muted-foreground leading-relaxed text-left">
-                          Discover {page.title.toLowerCase()} techniques for better reasoning
+                          {t('home.card.discover')} {page.title.toLowerCase()}
                         </p>
                       </div>
                     </Link>
