@@ -1685,4 +1685,14 @@ export const fr = {
   'consciousness.aqal.table.headers.humanAge': 'Âge Humain',
   'consciousness.aqal.table.headers.quest': 'Quête',
   'consciousness.aqal.table.headers.method': 'Méthode',
+  
+  // AQAL table labels
+  'consciousness.aqal.table.labels.description': 'Description',
+  'consciousness.aqal.table.labels.characteristics': 'Caractéristiques',
+  'consciousness.aqal.table.labels.aqalQuadrants': 'Quadrants AQAL',
+  'consciousness.aqal.table.labels.interiorIndividual': 'Intérieur-Individuel (Je)',
+  'consciousness.aqal.table.labels.exteriorIndividual': 'Extérieur-Individuel (Ça)',
+  'consciousness.aqal.table.labels.interiorCollective': 'Intérieur-Collectif (Nous)',
+  'consciousness.aqal.table.labels.exteriorCollective': 'Extérieur-Collectif (Ils)',
+  'consciousness.aqal.table.labels.commonPitfalls': 'Pièges Courants',
 } as const;
