@@ -1852,4 +1852,12 @@ export const en = {
   'lazyThinking.manifestation.surfaceLevelProcessing.example2': 'Sound bite thinking',
   'lazyThinking.manifestation.surfaceLevelProcessing.example3': 'Meme-level understanding',
   'lazyThinking.manifestation.surfaceLevelProcessing.example4': 'Shallow research',
+  
+  // NotFound page
+  'notFound.message': 'Oops! Page not found',
+  'notFound.returnHome': 'Return to Home',
+  
+  // Home page card descriptions
+  'home.card.learnAbout': 'Learn about',
+  'home.card.discover': 'Discover',
 } as const;

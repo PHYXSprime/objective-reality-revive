@@ -1744,4 +1744,12 @@ export const de = {
   'consciousness.aqal.table.labels.interiorCollective': 'Innerlich-Kollektiv (Wir)',
   'consciousness.aqal.table.labels.exteriorCollective': 'Äußerlich-Kollektiv (Sie)',
   'consciousness.aqal.table.labels.commonPitfalls': 'Häufige Fallstricke',
+  
+  // NotFound page
+  'notFound.message': 'Hoppla! Seite nicht gefunden',
+  'notFound.returnHome': 'Zurück zur Startseite',
+  
+  // Home page card descriptions
+  'home.card.learnAbout': 'Erfahren Sie mehr über',
+  'home.card.discover': 'Entdecken Sie',
 } as const;
