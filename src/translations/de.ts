@@ -1734,4 +1734,14 @@ export const de = {
   'consciousness.aqal.table.headers.humanAge': 'Menschliches Alter',
   'consciousness.aqal.table.headers.quest': 'Suche',
   'consciousness.aqal.table.headers.method': 'Methode',
+  
+  // AQAL table labels
+  'consciousness.aqal.table.labels.description': 'Beschreibung',
+  'consciousness.aqal.table.labels.characteristics': 'Eigenschaften',
+  'consciousness.aqal.table.labels.aqalQuadrants': 'AQAL-Quadranten',
+  'consciousness.aqal.table.labels.interiorIndividual': 'Innerlich-Individuell (Ich)',
+  'consciousness.aqal.table.labels.exteriorIndividual': 'Äußerlich-Individuell (Es)',
+  'consciousness.aqal.table.labels.interiorCollective': 'Innerlich-Kollektiv (Wir)',
+  'consciousness.aqal.table.labels.exteriorCollective': 'Äußerlich-Kollektiv (Sie)',
+  'consciousness.aqal.table.labels.commonPitfalls': 'Häufige Fallstricke',
 } as const;
