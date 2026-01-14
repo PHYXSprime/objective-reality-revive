@@ -4,6 +4,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { PageViewCounter } from '@/components/PageViewCounter';
+import { SEO } from '@/components/SEO';
 
 export default function Solutions() {
   const { t } = useLanguage();
@@ -70,6 +71,12 @@ export default function Solutions() {
 
   return (
     <div className="min-h-screen gradient-bg relative overflow-hidden">
+      <SEO 
+        title="Solutions for Clear Thinking"
+        description="Master critical thinking with proven tools: Street Epistemology, Socratic Questioning, Scientific Method, Bayesian Reasoning, and more. Free interactive guides."
+        image="/og-solutions.png"
+        url="/solutions"
+      />
       <PageViewCounter />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />

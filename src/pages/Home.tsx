@@ -4,9 +4,14 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { PageViewCounter } from '@/components/PageViewCounter';
+import { SEO } from '@/components/SEO';
 
 export default function Home() {
   const { t } = useLanguage();
+
+  // SEO meta data
+  const seoTitle = "Objective Reality - Master Critical Thinking & Avoid Cognitive Biases";
+  const seoDescription = "Learn to think clearly with our comprehensive guides on 176+ logical fallacies, 200+ cognitive biases, scientific reasoning, and Bayesian thinking. Free interactive tools.";
 
   // Challenge pages
   const challengePages = [
@@ -149,6 +154,11 @@ export default function Home() {
 
   return (
     <div className="min-h-screen gradient-bg relative overflow-hidden">
+      <SEO 
+        title={seoTitle}
+        description={seoDescription}
+        url="/"
+      />
       <PageViewCounter />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />

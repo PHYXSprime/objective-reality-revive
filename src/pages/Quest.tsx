@@ -4,6 +4,7 @@ import { QuestLanguageProvider } from '@/contexts/QuestLanguageContext';
 import { QuestProvider, useQuest } from '@/contexts/QuestContext';
 import FlowchartCard from '@/components/quest/FlowchartCard';
 import CustomFlowchartOverview from '@/components/quest/CustomFlowchartOverview';
+import { SEO } from '@/components/SEO';
 
 function QuestContent() {
   const { currentNode, resetQuest, goToNode } = useQuest();
@@ -32,6 +33,12 @@ function QuestContent() {
 
   return (
     <>
+      <SEO 
+        title="Critical Thinking Quest - Interactive Flowchart"
+        description="Navigate an interactive decision flowchart to master critical thinking. Learn to evaluate claims, identify biases, and apply Bayesian reasoning step by step."
+        image="/og-quest.png"
+        url="/quest"
+      />
       {/* Use the same global backgrounds as other pages */}
       <div className="starfield-container" />
       <div className="earth-container" />
