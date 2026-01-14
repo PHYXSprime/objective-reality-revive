@@ -15,6 +15,7 @@ import {
 } from '@/components/ui/select';
 import { ChallengeNavigation } from '@/components/ChallengeNavigation';
 import { PageViewCounter } from '@/components/PageViewCounter';
+import { SEO } from '@/components/SEO';
 
 export default function LogicalFallacies() {
   const { t, language, isLoading: translationsLoading } = useLanguage();
@@ -136,6 +137,12 @@ export default function LogicalFallacies() {
 
   return (
     <div className="min-h-screen gradient-bg relative overflow-hidden">
+      <SEO 
+        title="176+ Logical Fallacies Database"
+        description="Master the art of logical reasoning with our comprehensive database of 176+ logical fallacies. Identify flawed arguments and improve your critical thinking skills."
+        image="/og-logical-fallacies.png"
+        url="/logical-fallacies"
+      />
       <PageViewCounter />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />

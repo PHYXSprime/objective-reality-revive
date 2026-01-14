@@ -10,6 +10,7 @@ import { useAQALMapData } from '@/hooks/useAQALMapData';
 import { usePHYXSMapData } from '@/hooks/usePHYXSMapData';
 import linesOfDevelopmentImage from '@/assets/lines-of-development-diagram.jpg';
 import { PageViewCounter } from '@/components/PageViewCounter';
+import { SEO } from '@/components/SEO';
 import 'katex/dist/katex.min.css';
 export default function Consciousness() {
   const {
@@ -18,6 +19,12 @@ export default function Consciousness() {
   const aqalMapData = useAQALMapData();
   const phyxsMapData = usePHYXSMapData();
   return <div className="min-h-screen gradient-bg relative overflow-hidden">
+      <SEO 
+        title="Consciousness Evolution - AQAL & PHYXS Maps"
+        description="Explore the evolution of consciousness through Ken Wilber's AQAL model and David Heggli's PHYXS framework. Discover levels, lines, and stages of human development."
+        image="/og-consciousness.png"
+        url="/consciousness"
+      />
       <PageViewCounter />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />

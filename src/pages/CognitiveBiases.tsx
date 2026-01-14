@@ -15,6 +15,7 @@ import {
 } from '@/components/ui/select';
 import { ChallengeNavigation } from '@/components/ChallengeNavigation';
 import { PageViewCounter } from '@/components/PageViewCounter';
+import { SEO } from '@/components/SEO';
 
 export default function CognitiveBiases() {
   const { t, language, isLoading: translationsLoading } = useLanguage();
@@ -54,6 +55,12 @@ export default function CognitiveBiases() {
 
   return (
     <div className="min-h-screen gradient-bg relative overflow-hidden">
+      <SEO 
+        title="200+ Cognitive Biases Database"
+        description="Comprehensive database of 200+ cognitive biases categorized by type. Learn how your brain tricks you and discover strategies to overcome mental blind spots."
+        image="/og-cognitive-biases.png"
+        url="/cognitive-biases"
+      />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
       <div className="absolute inset-0 bg-grid-pattern opacity-5" />

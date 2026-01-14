@@ -4,6 +4,7 @@ import { useLanguage } from '@/hooks/useLanguage';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { PageViewCounter } from '@/components/PageViewCounter';
+import { SEO } from '@/components/SEO';
 
 export default function Challenges() {
   const { t } = useLanguage();
@@ -90,6 +91,12 @@ export default function Challenges() {
 
   return (
     <div className="min-h-screen gradient-bg relative overflow-hidden">
+      <SEO 
+        title="Challenges to Critical Thinking"
+        description="Discover the obstacles to clear thinking: indoctrination, propaganda, cognitive biases, logical fallacies, and more. Learn to recognize and overcome mental barriers."
+        image="/og-challenges.png"
+        url="/challenges"
+      />
       <PageViewCounter />
       {/* Background Effects */}
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-transparent to-transparent" />
